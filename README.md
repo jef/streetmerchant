@@ -65,6 +65,21 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA |
 | `STORES` | List of stores you want to be scraped; optional, default: `nvidia` |
 
+List of stores supported:
+| **Store name** | **Store name environment variable** |
+|:---:|:---:|
+|Best Buy | `bestbuy`|
+|B&H | `bandh`|
+|Newegg | `newegg`|
+|Nvidia | `nvidia`|
+
+Example of a `.env` file:
+```
+EMAIL_USERNAME="email@gmail.com"
+EMAIL_PASSWORD="password123"
+STORES="bestbuy,bandh,nvidia,newegg"
+```
+
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
 ## FAQ
