@@ -15,13 +15,13 @@ enum carrierAddress {
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: Config.email.username,
-		pass: Config.email.password
+		user: Config.notifications.email.username,
+		pass: Config.notifications.email.password
 	}
 });
 
 const mailOptions: Mail.Options = {
-	from: Config.email.username,
+	from: Config.notifications.email.username,
 	to: generateAddress(),
 	subject
 };
@@ -41,7 +41,7 @@ export default function sendSMS(text: string) {
 
 function generateAddress() {
 	for (const carrier of Object.keys(carrierAddress)) {
-		if (Config.phone.carrier && carrier === Config.phone.carrier.toLowerCase()) {
+		if (Config.notifications.phone.carrier && carrier === Config.notifications.phone.carrier.toLowerCase()) {
 			// @ts-expect-error
 			return [Config.phone.number, carrierAddress[carrier]].join('@');
 		}
