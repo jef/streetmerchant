@@ -8,14 +8,14 @@ const subject = 'NVIDIA - BUY NOW';
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: Config.email.username,
-		pass: Config.email.password
+		user: Config.notifications.email.username,
+		pass: Config.notifications.email.password
 	}
 });
 
 const mailOptions: Mail.Options = {
-	from: Config.email.username,
-	to: Config.email.username,
+	from: Config.notifications.email.username,
+	to: Config.notifications.email.username,
 	subject
 };
 
