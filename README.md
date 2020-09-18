@@ -28,11 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Best Buy** | **B&H** | **Newegg** | **Nvidia** | **EVGA** |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**|  |  |  |  |  |
-| **3080** | `✔` | `✔` | `ℹ` | `✔` | `✔` |
-| **3090** |  |  |  |  |  |
+| | **Best Buy** | **B&H** | **Newegg** | **Nvidia** | **EVGA** | **Amazon** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**|  |  |  |  |  |  |
+| **3080** | `✔` | `✔` | `ℹ` | `✔` | `✔` | `✔` |
+| **3090** |  |  |  |  |  |  |
 
 > :point_right: (`ℹ`) Work in progress. Catchpa problems are intermittent. Use if you'd like, but expect problems.
 
