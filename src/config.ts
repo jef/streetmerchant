@@ -12,6 +12,8 @@ const notifications = {
 	email: email.username && email.password
 };
 
+const navigationTimeout = 60000;
+
 const page = {
 	height: 1920,
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
@@ -25,5 +27,6 @@ export const Config = {
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
-	stores
+	stores,
+	navigationTimeout
 };
