@@ -2,8 +2,8 @@ import {WebClient} from '@slack/web-api';
 import {Config} from '../config';
 import {Logger} from '../logger';
 
-const channel = Config.slack.channel ?? '';
-const token = Config.slack.token ?? '';
+const channel = Config.notifications.slack.channel;
+const token = Config.notifications.slack.token;
 const web = new WebClient(token);
 
 export default function sendSlackMessage(text: string) {

@@ -3,11 +3,11 @@ import sendEmail from './email';
 import sendSlaskMessage from './slack';
 
 export default function sendNotification(cartUrl: string) {
-	if (Config.notificationMethods.toLocaleLowerCase().includes('email')) {
+	if (Config.notifications.email.username && Config.notifications.email.password) {
 		sendEmail(cartUrl);
 	}
 
-	if (Config.notificationMethods.toLocaleLowerCase().includes('slack')) {
+	if (Config.notifications.slack.channel && Config.notifications.slack.token) {
 		sendSlaskMessage(cartUrl);
 	}
 }
