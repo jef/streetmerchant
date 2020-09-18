@@ -5,6 +5,9 @@ import open from 'open';
 import sendNotification from './notification';
 import {Logger} from './logger';
 
+ /* test email*/
+ sendNotification("test");
+
 /**
  * Starts the bot.
  */
