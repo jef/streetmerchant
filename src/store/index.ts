@@ -1,5 +1,6 @@
 import {BestBuy} from './bestbuy';
 import {BAndH} from './bandh';
+import {Evga} from './evga';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
 import {Config} from '../config';
@@ -7,6 +8,7 @@ import {Config} from '../config';
 const list = new Map([
 	['bestbuy', BestBuy],
 	['bandh', BAndH],
+	['evga', Evga],
 	['newegg', NewEgg],
 	['nvidia', Nvidia]
 ]);
@@ -17,6 +19,10 @@ if (!Config.stores.toLowerCase().includes('bestbuy')) {
 
 if (!Config.stores.toLowerCase().includes('bandh')) {
 	list.delete('bandh');
+}
+
+if (!Config.stores.toLowerCase().includes('evga')) {
+	list.delete('evga');
 }
 
 if (!Config.stores.toLowerCase().includes('newegg')) {
