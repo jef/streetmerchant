@@ -8,6 +8,8 @@ const email = {
 	password: process.env.EMAIL_PASSWORD
 };
 
+const emailTest = process.env.EMAIL_TEST ?? 0;
+
 const notifications = {
 	email: email.username && email.password
 };
