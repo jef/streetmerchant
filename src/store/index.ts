@@ -10,7 +10,7 @@ const list = new Map([
 	['bestbuy', BestBuy],
 	['bandh', BAndH],
 	['evga', Evga],
-	['amazon', amazon],
+	['amazon', Amazon],
 	['newegg', NewEgg],
 	['nvidia', Nvidia]
 ]);
