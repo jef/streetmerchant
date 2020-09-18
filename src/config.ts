@@ -16,14 +16,8 @@ const page = {
 	height: 1920,
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
 	width: 1080,
-	navigationTimeout: 0
+	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000
 };
-
-if (process.env.NS_TIMEOUT) {
-	page.navigationTimeout = Number(process.env.TIMEOUT);
-} else {
-	page.navigationTimeout = 0; // Change default Navigation Timeout here or set the environment variable
-}
 
 const stores = process.env.STORES ?? 'nvidia';
 
