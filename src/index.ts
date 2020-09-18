@@ -6,11 +6,6 @@ import sendNotification from './notification';
 import {Logger} from './logger';
 
 /**
- * Send test email
- */
-sendNotification('test');
-
-/**
  * Starts the bot.
  */
 async function main() {
