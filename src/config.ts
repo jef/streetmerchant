@@ -4,8 +4,8 @@ import {config} from 'dotenv';
 config({path: resolve(__dirname, '../.env')});
 
 const email = {
-	username: process.env.NS_EMAIL_USERNAME,
-	password: process.env.NS_EMAIL_PASSWORD
+	username: process.env.EMAIL_USERNAME,
+	password: process.env.EMAIL_PASSWORD
 };
 
 const notifications = {
@@ -20,7 +20,7 @@ const page = {
 };
 
 if (process.env.NS_TIMEOUT) {
-	page.navigationTimeout = Number(process.env.NS_TIMEOUT);
+	page.navigationTimeout = Number(process.env.TIMEOUT);
 } else {
 	page.navigationTimeout = 0; // Change default Navigation Timeout here or set the environment variable
 }
