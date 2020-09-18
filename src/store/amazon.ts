@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const amazon: Store = {
+export const Amazon: Store = {
 	cartUrl: '',
 	links: [
 		{
