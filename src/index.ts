@@ -6,6 +6,13 @@ import sendNotification from './notification';
 import {Logger} from './logger';
 
 /**
+ * Send test email.
+ */
+if (Config.email.test === 'true') {
+	sendNotification('test');
+}
+
+/**
  * Starts the bot.
  */
 async function main() {
@@ -45,6 +52,7 @@ async function lookup(store: Store) {
 			await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+			await browser.close();
 			return;
 		}
 
