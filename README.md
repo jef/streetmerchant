@@ -1,4 +1,4 @@
-# nvidia-snatcher
+# nvidia-snatcher [![cd](https://github.com/jef/nvidia-snatcher/workflows/cd/badge.svg?branch=master)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Acd)
 
 ## Description
 
@@ -39,3 +39,15 @@ You can potentially add more `links` and change the `timeout` if you'd like.
 
 - `timeout` and `waitForTimeout` are in milliseconds.
 - `links` are specific to find the `"out of stock"` verbiage (forced to lowercase).
+
+### Acknowledgements
+
+Thanks to the great contributors that make this project possible
+
+Special shout to initial developers:
+
+- [@andirew](https://github.com/andirew)
+- [@davidlbowman](https://github.com/davidlbowman)
+- [@fuckingrobot](https://github.com/fuckingrobot)
+- [@ioncaza](https://github.com/IonCaza)
+- [@malbert69](https://github.com/malbert69)

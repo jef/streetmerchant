@@ -1,36 +1,27 @@
 const puppeteer = require("puppeteer");
 const opn = require("opn");
-const nodemailer = require("nodemailer");
 
-const timeout = 5000;
-const waitForTimeout = 1000;
-
-const cartLink =
-  "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage";
-
-const emailUsername = process.env.EMAIL_USERNAME;
-const emailPassword = process.env.EMAIL_PASSWORD;
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: emailUsername,
-    pass: emailPassword,
-  },
-});
-
-const mailOptions = {
-  from: emailUsername,
-  to: emailUsername,
-  subject: "NVIDIA - BUY NOW",
-  text: cartLink,
-};
+const timeout = 3000;
 
 async function buy() {
   const links = [
-    "https://www.nvidia.com/en-us/geforce/buy/",
-    "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=9&locale=en-us&search=3080",
-    "https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440",
+    {
+      name: "nvidia.com",
+      url: "https://www.nvidia.com/en-us/geforce/buy/",
+      oosText: "out of stock",
+    },
+    {
+      name: "nvidia.com 2",
+      url:
+        "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=9&locale=en-us&search=3080",
+      oosText: "out of stock",
+    },
+    {
+      name: "bestbuy.com",
+      url:
+        "https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440",
+      oosText: "sold out",
+    },
   ];
   for (const link of links) {
     await goto(link);
@@ -52,8 +43,8 @@ async function goto(link) {
     height: 1080,
   });
 
-  await page.goto(link);
-  await page.waitFor(waitForTimeout);
+  await page.goto(link.url);
+  await page.waitForTimeout(1000);
 
   const dom = await page.evaluate(() => {
     return {
@@ -63,28 +54,21 @@ async function goto(link) {
 
   console.log(dom);
 
-  if (dom.body.toLowerCase().includes("out of stock") || dom.body.toLowerCase().includes("sold out")) {
-    console.log("still out of stock, will try again.");
+  if (
+    dom.body.toLowerCase().includes("out of stock") ||
+    dom.body.toLowerCase().includes(link.oosText.toLowerCase())
+  ) {
+    console.log(link.name + " is still out of stock... Attempting next link.");
   } else {
-    console.log("*** IN STOCK, BUY NOW ***");
-    await page.screenshot({ path: `nvidia-${Date.now()}.png` });
-    opn(cartLink);
-    if (emailUsername && emailPassword) {
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("email sent: " + info.response);
-        }
-      });
-    }
+    console.log(
+      "*** IN STOCK AT " + link.name.toUpperCase() + " , BUY NOW ***"
+    );
+    opn(link);
   }
+
+  await page.screenshot({ path: `nvidia-${Date.now()}.png` });
 
   await browser.close();
 }
 
-try {
-  buy();
-} catch (error) {
-  buy();
-}
+buy().then();
