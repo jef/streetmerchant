@@ -76,6 +76,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 |:---:|:---:|
 | Best Buy | `bestbuy`|
 | B&H | `bandh`|
+| EVGA | `evga`|
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
 
