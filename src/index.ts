@@ -8,7 +8,9 @@ import {Logger} from './logger';
 /**
  * Send test email
  */
-sendNotification('test');
+if (emailTest == 1){
+	sendNotification('test');
+}
 
 /**
  * Starts the bot.
