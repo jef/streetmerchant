@@ -43,8 +43,7 @@ async function buy() {
 	,{ name: "B&H GIGABYTE BLACK", url: "https://www.bhphotovideo.com/c/product/1593333-REG/gigabyte_gv_n3080gaming_oc_10gd_geforce_rtx_3080_gaming.html?SID=s1600391647213ytuua52439", oosText: ["notify when available"] }
 	,{ name: "newegg.com EVGA ARGB LED iCX3", url: "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521", oosText: ["auto notify","out of stock"] }
 	,{ name: "newegg.com EVGA XC3 ULTRA GAMING", url: "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520", oosText: ["auto notify","out of stock"] }
-	,{ name: "newegg.com ASUS TUF", url: "https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453", oosText: ["auto notify","out of stock"] }
-	
+	,{ name: "newegg.com ASUS TUF", url: "https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453", oosText: ["auto notify","out of stock"] }	
   ]
   for (const link of links) {
     await goto(link)
