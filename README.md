@@ -1,4 +1,4 @@
-# nvidia-snatcher [![cd](https://github.com/jef/nvidia-snatcher/workflows/cd/badge.svg?branch=master)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Acd)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg?branch=master)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
 
 The purpose of this bot is to get an Nvidia card. It does multiple things to try to do that.
 
@@ -26,13 +26,13 @@ The purpose of this bot is to get an Nvidia card. It does multiple things to try
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can unknown behavior. Patience is a virtue :)
 
-| | Best Buy | B&H | Newegg | Nvidia |
+| | **Best Buy** | **B&H** | **Newegg** | **Nvidia** |
 |:---:|:---:|:---:|:---:|:---:|
-| 3090 |  |  |  |  |
-| 3080 | ✔ | ✔ | ℹ | ✔ |
-| 3070 |  |  |  |  |
+| **3070**|  |  |  |  |
+| **3080** | `✔` | `✔` | `ℹ` | `✔` |
+| **3090** |  |  |  |  |
 
-> :point_right: (ℹ) In the process of getting working. Catchpa problems are intermittent. Use if you'd like, but expect problems.
+> :point_right: (`ℹ`) In the process of getting working. Catchpa problems are intermittent. Use if you'd like, but expect problems.
 
 [FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues)
 
@@ -58,7 +58,7 @@ There is not much to configure (as of now), but there are some options that you 
 
 First, you're going to need to copy the `.env.example` to `.env`. The current options are:
 
-| Environment variable | Description |
+| **Environment variable** | **Description** |
 |:---:|:---:|
 | `EMAIL_USERNAME` | Gmail address; e.g. `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA |
