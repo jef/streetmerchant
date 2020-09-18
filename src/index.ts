@@ -6,9 +6,9 @@ import sendNotification from './notification';
 import {Logger} from './logger';
 
 /**
- * Send test email
+ * Send test email.
  */
-if (Config.emailTest) {
+if (Config.email.test === "true") {
 	sendNotification('test');
 }
 
