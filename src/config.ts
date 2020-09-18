@@ -27,5 +27,6 @@ export const Config = {
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
-	stores
+	stores,
+      	emailTest
 };
