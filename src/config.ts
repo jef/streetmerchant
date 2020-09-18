@@ -5,10 +5,9 @@ config({path: resolve(__dirname, '../.env')});
 
 const email = {
 	username: process.env.EMAIL_USERNAME,
-	password: process.env.EMAIL_PASSWORD
+	password: process.env.EMAIL_PASSWORD,
+	test: process.env.EMAIL_TEST ?? "false"
 };
-
-const emailTest = process.env.EMAIL_TEST ?? 0;
 
 const notifications = {
 	email: email.username && email.password
@@ -31,7 +30,6 @@ const slack = {
 
 export const Config = {
 	email,
-	emailTest,
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
