@@ -4,6 +4,7 @@ The purpose of this bot is to get an Nvidia card. It does multiple things to try
 
 - Currently, `nvidia-snatcher` is not capable of purchasing a card for you
 - Scrapes multiple websites for patterns of being stocked
+    - API requests are a work in progress (very soon)
 - Opens browser when stock is available
 - Send email to you when away from computer
     - Must have Gmail
