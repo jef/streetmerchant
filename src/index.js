@@ -11,7 +11,7 @@ async function buy() {
 	{ 
 		name: "nvidia.com", 
 		url: "https://www.nvidia.com/en-us/geforce/buy/", 
-		oosText: "out of stock",
+		oosText: ["out of stock"],
 		cartUrl: "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage"
 	}
 	,{ 
