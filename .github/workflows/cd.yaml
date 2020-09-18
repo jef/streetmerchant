@@ -2,7 +2,7 @@ name: cd
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   cd:
     runs-on: ubuntu-latest
