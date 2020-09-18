@@ -16,7 +16,8 @@ const notifications = {
 const page = {
 	height: 1920,
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
-	width: 1080
+	width: 1080,
+	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000
 };
 
 const stores = process.env.STORES ?? 'nvidia';
