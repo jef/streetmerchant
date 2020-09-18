@@ -79,6 +79,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | EVGA | `evga`|
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
+| Amazon | `amazon`|
 
 > :point_right: Look at [`.env.example`](.env.example) for an example for `.env`.
 
