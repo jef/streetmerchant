@@ -110,12 +110,13 @@ async function goto(link) {
 
   console.log(dom);
 
-  if (dom.body.toLowerCase().includes(link.oosText.toLowerCase())) {
-    console.log(link.name + " is still out of stock... Attempting next link.");
+  if (isOutOfStock(dom.body, link.oosText)) {
+    console.log(link.name + " is still out of stock... Attempting next link.")
+
   } else {
     console.log("*** IN STOCK AT " + link.name.toUpperCase() + ", BUY NOW ***");
     await page.screenshot({ path: `nvidia-${Date.now()}.png` });
-    opn(cartLink);
+    opn(link.url);
     if (emailUsername && emailPassword) {
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
@@ -130,8 +131,19 @@ async function goto(link) {
   await browser.close();
 }
 
-try {
-  buy().then();
-} catch (error) {
-  buy();
+function isOutOfStock(domText, oosTextArray) {
+	domText = domText.toLowerCase();
+	var result = false;
+	for(var text of oosTextArray) {
+		result = domText.includes(text.toLowerCase());
+	};
+	return result;
+}
+
+try{
+	buy().then();
+}
+catch(error)
+{
+	buy();
 }
