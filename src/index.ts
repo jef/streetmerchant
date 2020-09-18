@@ -39,14 +39,19 @@ async function lookup(store: Store) {
 			width: Config.page.width
 		});
 
-		await page.goto(link.url, {waitUntil: 'networkidle0'});
+		const graphicsCard = `${link.brand} ${link.model}`;
+
+		try {
+			await page.goto(link.url, {waitUntil: 'networkidle0'});
+		} catch {
+			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+			return;
+		}
 
 		const bodyHandle = await page.$('body');
 		const textContent = await page.evaluate(body => body.textContent, bodyHandle);
 
 		Logger.debug(textContent);
-
-		const graphicsCard = `${link.brand} ${link.model}`;
 
 		if (isOutOfStock(textContent, link.oosLabels)) {
 			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
