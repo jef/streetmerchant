@@ -43,6 +43,8 @@ Linux, macOS, and Windows are all capable operating systems.
 
 You do not need any computer skills, smarts, or anything of that nature. You are very capable as you have made it this far. Some basic understanding how a terminal, git, and or Node.js is a bonus, but that does not limit you to getting `nvidia-snatcher` running!
 
+Quick Overview:
+
 - Download [Node.js 14](https://nodejs.org/en/)
 - Download [git](https://git-scm.com/)
 - Clone this project `https://github.com/jef/nvidia-snatcher.git`
@@ -50,6 +52,19 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 - Edit the `.env` file to your liking
     - More on this in [customization](#Customization)
 - Run `npm run start` to start
+
+Windows Install:
+
+- Download & Install [Node.js 14](https://nodejs.org/en/)
+- Download & Install [git](https://git-scm.com/)
+- Open Windows Comand Prompt
+- Type `CD C:\` to change directory to the root C: drive
+- Type `git clone https://github.com/jef/nvidia-snatcher.git`
+- Navigate to the newly created `C:\nvidia-snatcher\` in Windows Explorer
+- Rename the file `.env.example` to `.env`
+- Edit `.env` file to your liking using notepad or simliar and save
+    - More on this in [customization](#Customization)
+- In Windows Command Prompt type `npm run start` from the `C:\nvidia-snatcher\` directory
 
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
