@@ -8,7 +8,7 @@ import {Logger} from './logger';
 /**
  * Send test email
  */
-if (emailTest){
+if (Config.emailTest) {
 	sendNotification('test');
 }
 
