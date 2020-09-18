@@ -1,7 +1,7 @@
 ---
-name: Feature request
+name: 🚀 Feature request
 about: Suggest a feature for this project
-title: 'Enhancement: '
+title: 'enhancement: '
 labels: 'enhancement'
 assignees: jef
 

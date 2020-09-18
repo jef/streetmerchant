@@ -6,19 +6,17 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    name: Lint
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2.1.1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14
       - uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
       - name: Pull dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm run lint
