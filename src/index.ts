@@ -8,7 +8,7 @@ import {Logger} from './logger';
 /**
  * Send test email
  */
-if (emailTest == 1){
+if (emailTest){
 	sendNotification('test');
 }
 
