@@ -67,6 +67,9 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `EMAIL_USERNAME` | Gmail address; e.g. `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA |
 | `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
+| `PHONE_NUMBER` | 10 digit phone number. ONLY FOR USA. SMS CHARGES APPLY, for example: `123456789` |
+| `CARRIER` | Carrier you have. Only supports `sprint, tmobile, att, verizon` |
+| `SMS` | Wether you want SMS notification or not, default: `false` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 

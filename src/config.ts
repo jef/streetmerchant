@@ -8,6 +8,12 @@ const email = {
 	password: process.env.EMAIL_PASSWORD
 };
 
+const phone = {
+	number: process.env.PHONE_NUMBER,
+	carrier: process.env.CARRIER,
+	enable: process.env.SMS ? process.env.SMS : false
+}
+
 const notifications = {
 	email: email.username && email.password
 };
@@ -20,10 +26,17 @@ const page = {
 
 const stores = process.env.STORES ?? 'nvidia';
 
+/**
+ * This will only work in US! Further info is needed for other carriers/countries
+ */
+const availableCarriers = ['sprint', 'verizon', 'tmobile', 'att']
+
 export const Config = {
 	email,
+	phone,
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
-	stores
+	stores,
+	availableCarriers
 };
