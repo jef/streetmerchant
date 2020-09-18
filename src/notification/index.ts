@@ -13,7 +13,7 @@ export default function sendNotification(cartUrl: string) {
 	}
 
 	if (Config.notifications.phone.number && Config.notifications.phone.carrier) {
-		if (Config.notifications.availableCarriers.includes(Config.notifications.phone.carrier.toLowerCase())) {
+		if (Config.notifications.phone.availableCarriers.includes(Config.notifications.phone.carrier.toLowerCase())) {
 			sendSMS(cartUrl);
 		}
 	}
