@@ -6,8 +6,31 @@
 
 const puppeteer = require("puppeteer")
 const opn = require("opn")
+const nodemailer = require("nodemailer");
 
-const timeout = 3000;
+const timeout = 5000;
+const waitForTimeout = 1000;
+
+const cartLink =
+  "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage";
+  
+const emailUsername = process.env.EMAIL_USERNAME;
+const emailPassword = process.env.EMAIL_PASSWORD;
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: emailUsername,
+    pass: emailPassword,
+  },
+});
+
+const mailOptions = {
+  from: emailUsername,
+  to: emailUsername,
+  subject: "NVIDIA - BUY NOW",
+  text: cartLink,
+};
 
 async function buy() {
   const links = [
@@ -44,16 +67,30 @@ async function goto(link) {
 
   console.log(dom)
 
-  if (dom.body.toLowerCase().includes("out of stock") || dom.body.toLowerCase().includes(link.oosText.toLowerCase()) ) {
+  if (dom.body.toLowerCase().includes(link.oosText.toLowerCase()) ) {
     console.log(link.name + " is still out of stock... Attempting next link.")
   } else {
-    console.log("*** IN STOCK AT " + link.name.toUpperCase() + " , BUY NOW ***")
-    opn(link)
+    console.log("*** IN STOCK AT " + link.name.toUpperCase() + ", BUY NOW ***");
+    await page.screenshot({ path: `nvidia-${Date.now()}.png` });
+    opn(cartLink);
+    if (emailUsername && emailPassword) {
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("email sent: " + info.response);
+        }
+      });
+    }  
   }
-
-  await page.screenshot({ path: `nvidia-${Date.now()}.png` })
 
   await browser.close()
 }
 
-buy().then()
+try{
+	buy().then();
+}
+catch(error)
+{
+	buy();
+}
