@@ -1,27 +1,23 @@
-import { WebClient } from '@slack/web-api';
+import {WebClient} from '@slack/web-api';
 import {Config} from '../config';
 import {Logger} from '../logger';
 
-const channel = Config.slack.channel || '';
-const token = Config.slack.token || '';
+const channel = Config.slack.channel ?? '';
+const token = Config.slack.token ?? '';
 const web = new WebClient(token);
 
 export default function sendSlackMessage(text: string) {
-    (async() => {
+	(async () => {
+		try {
+			const result = await web.chat.postMessage({text, channel});
+			if (!result.ok) {
+				Logger.error(result.error);
+				return;
+			}
 
-        try {
-            const result = await web.chat.postMessage({ text: text, channel: channel });
-            if (result.ok === false) {
-                Logger.error(result.error)
-            } else {
-                Logger.info(`✔ slack message sent to '${result.channel}': ${text}`);
-            }
-        } catch (error) {
-            Logger.error(error)
-            return;
-        }
-    })();
+			Logger.info(`✔ slack message sent to '${channel}': ${text}`);
+		} catch (error) {
+			Logger.error(error);
+		}
+	})();
 }
-
-
-
