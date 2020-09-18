@@ -24,9 +24,9 @@ const stores = process.env.STORES ?? 'nvidia';
 
 export const Config = {
 	email,
+      	emailTest,
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
-	stores,
-      	emailTest
+	stores
 };
