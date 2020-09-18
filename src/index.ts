@@ -50,6 +50,7 @@ async function lookup(store: Store) {
 			await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+			await browser.close();
 			return;
 		}
 
