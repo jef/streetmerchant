@@ -5,7 +5,8 @@ config({path: resolve(__dirname, '../.env')});
 
 const email = {
 	username: process.env.EMAIL_USERNAME,
-	password: process.env.EMAIL_PASSWORD
+	password: process.env.EMAIL_PASSWORD,
+	test: process.env.EMAIL_TEST ?? 'false'
 };
 
 const notifications = {
