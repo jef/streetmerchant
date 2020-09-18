@@ -13,7 +13,7 @@ const phone = {
 	number: process.env.PHONE_NUMBER,
 	carrier: process.env.CARRIER,
 	enable: process.env.SMS ? process.env.SMS : false
-}
+};
 
 const notifications = {
 	email: email.username && email.password
@@ -37,7 +37,7 @@ const slack = {
 /**
  * This will only work in US! Further info is needed for other carriers/countries
  */
-const availableCarriers = ['sprint', 'verizon', 'tmobile', 'att']
+const availableCarriers = ['sprint', 'verizon', 'tmobile', 'att'];
 
 export const Config = {
 	email,
