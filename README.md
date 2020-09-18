@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)(https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
 
 The purpose of this bot is to get an Nvidia card. It does multiple things to try to do that.
 
