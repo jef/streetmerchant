@@ -35,7 +35,7 @@ The purpose of this bot is to get an Nvidia card. It does multiple things to try
 
 > :point_right: (`ℹ`) In the process of getting working. Catchpa problems are intermittent. Use if you'd like, but expect problems.
 
-[FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues)
+[FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
 ## Installation and prerequisites
 
