@@ -16,6 +16,8 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
+      - name: Add problem matcher
+        run: echo "::add-matcher::.github/xo-problem-matcher.json"
       - name: Pull dependencies
         run: |
           npm ci
