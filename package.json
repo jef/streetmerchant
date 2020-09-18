@@ -2,9 +2,12 @@
   "name": "nvidia-snatcher",
   "version": "1.0.0",
   "description": "🔮 For all your Nvidia needs",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "node src/index.js"
+    "build": "rimraf ./build && tsc",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "start": "npm run build && node build/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,18 @@
   },
   "homepage": "https://github.com/jef/nvidia-snatcher#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "nodemailer": "^6.4.11",
-    "opn": "^6.0.0",
-    "puppeteer": "^5.3.0"
+    "open": "^7.2.1",
+    "puppeteer": "^5.3.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.1",
+    "@types/nodemailer": "^6.4.0",
+    "@types/puppeteer": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2",
+    "xo": "^0.33.1"
   }
 }
