@@ -11,8 +11,7 @@ const email = {
 
 const phone = {
 	number: process.env.PHONE_NUMBER,
-	carrier: process.env.CARRIER,
-	enable: process.env.SMS ? process.env.SMS : false
+	carrier: process.env.CARRIER
 };
 
 const notifications = {
@@ -26,8 +25,6 @@ const page = {
 };
 
 const stores = process.env.STORES ?? 'nvidia';
-
-const notificationMethods = process.env.NOTIFICATION_METHODS ?? 'email';
 
 const slack = {
 	channel: process.env.SLACK_CHANNEL,
@@ -47,6 +44,5 @@ export const Config = {
 	rateLimitTimeout: 5000,
 	stores,
 	slack,
-	notificationMethods,
 	availableCarriers
 };

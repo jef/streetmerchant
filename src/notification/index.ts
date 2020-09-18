@@ -4,16 +4,16 @@ import sendSlaskMessage from './slack';
 import sendSMS from './sms';
 
 export default function sendNotification(cartUrl: string) {
-	if (Config.notificationMethods.toLocaleLowerCase().includes('email')) {
+	if (Config.notifications.email) {
 		sendEmail(cartUrl);
 	}
 
-	if (Config.notificationMethods.toLocaleLowerCase().includes('slack')) {
+	if (Config.slack.channel && Config.slack.token) {
 		sendSlaskMessage(cartUrl);
 	}
 
-	if (Config.notificationMethods.toLocaleLowerCase().includes('sms')) {
-		if (Config.phone.number && Config.phone.carrier && Config.availableCarriers.includes(Config.phone.carrier.toLowerCase())) {
+	if (Config.phone.number && Config.phone.carrier) {
+		if (Config.availableCarriers.includes(Config.phone.carrier.toLowerCase())) {
 			sendSMS(cartUrl);
 		}
 	}
