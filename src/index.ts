@@ -8,7 +8,7 @@ import {Logger} from './logger';
 /**
  * Send test email.
  */
-if (Config.email.test === 'true') {
+if (Config.notifications.test === 'true') {
 	sendNotification('test');
 }
 
@@ -25,7 +25,7 @@ async function main() {
 	await Promise.all(results);
 
 	Logger.info('↗ trying stores again');
-	setTimeout(main, Config.rateLimitTimeout);
+	setTimeout(main, Config.page.rateLimitTimeout);
 }
 
 /**
