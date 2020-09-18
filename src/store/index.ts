@@ -3,7 +3,7 @@ import {BAndH} from './bandh';
 import {Evga} from './evga';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
-import {amazon} from './amazon';
+import {Amazon} from './amazon';
 import {Config} from '../config';
 
 const list = new Map([
