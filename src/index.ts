@@ -85,6 +85,7 @@ function isOutOfStock(domText: string, oosLabels: string[]) {
 			return true;
 		}
 	}
+
 	return false;
 }
 
