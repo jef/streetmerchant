@@ -1,10 +1,15 @@
 import {Config} from '../config';
 import sendEmail from './email';
+import sendSlaskMessage from './slack';
 import sendSMS from './sms';
 
 export default function sendNotification(cartUrl: string) {
-	if (Config.notifications.email) {
+	if (Config.notificationMethods.toLocaleLowerCase().includes('email')) {
 		sendEmail(cartUrl);
+	}
+
+	if (Config.notificationMethods.toLocaleLowerCase().includes('slack')) {
+		sendSlaskMessage(cartUrl);
 	}
 
 	if (Config.phone.enable) {

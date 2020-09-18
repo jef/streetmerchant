@@ -5,7 +5,8 @@ config({path: resolve(__dirname, '../.env')});
 
 const email = {
 	username: process.env.EMAIL_USERNAME,
-	password: process.env.EMAIL_PASSWORD
+	password: process.env.EMAIL_PASSWORD,
+	test: process.env.EMAIL_TEST ?? 'false'
 };
 
 const phone = {
@@ -26,6 +27,13 @@ const page = {
 
 const stores = process.env.STORES ?? 'nvidia';
 
+const notificationMethods = process.env.NOTIFICATION_METHODS ?? 'email';
+
+const slack = {
+	channel: process.env.SLACK_CHANNEL,
+	token: process.env.SLACK_TOKEN
+};
+
 /**
  * This will only work in US! Further info is needed for other carriers/countries
  */
@@ -38,5 +46,7 @@ export const Config = {
 	page,
 	rateLimitTimeout: 5000,
 	stores,
+	slack,
+	notificationMethods,
 	availableCarriers
 };
