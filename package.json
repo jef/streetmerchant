@@ -1,0 +1,25 @@
+{
+  "name": "nvidia-snatcher",
+  "version": "1.0.0",
+  "description": "🔮 For all your Nvidia needs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jef/nvidia-snatcher.git"
+  },
+  "keywords": [],
+  "author": "jef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jef/nvidia-snatcher/issues"
+  },
+  "homepage": "https://github.com/jef/nvidia-snatcher#readme",
+  "dependencies": {
+    "nodemailer": "^6.4.11",
+    "opn": "^6.0.0",
+    "puppeteer": "^5.3.0"
+  }
+}
