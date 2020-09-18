@@ -12,7 +12,7 @@ export default function sendNotification(cartUrl: string) {
 		sendSlaskMessage(cartUrl);
 	}
 
-	if (Config.phone.enable) {
+	if (Config.notificationMethods.toLocaleLowerCase().includes('sms')) {
 		if (Config.phone.number && Config.phone.carrier && Config.availableCarriers.includes(Config.phone.carrier.toLowerCase())) {
 			sendSMS(cartUrl);
 		}
