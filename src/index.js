@@ -1,42 +1,24 @@
+const mailer = require("./mailer")
+
 const puppeteer = require("puppeteer");
 const opn = require("opn");
-const nodemailer = require("nodemailer");
 
 const timeout = 5000;
 const waitForTimeout = 1000;
-
-const cartLink =
-  "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage";
-
-const emailUsername = process.env.EMAIL_USERNAME;
-const emailPassword = process.env.EMAIL_PASSWORD;
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: emailUsername,
-    pass: emailPassword,
-  },
-});
-
-const mailOptions = {
-  from: emailUsername,
-  to: emailUsername,
-  subject: "NVIDIA - BUY NOW",
-  text: cartLink,
-};
 
 async function buy() {
   const links = [
 	{ 
 		name: "nvidia.com", 
 		url: "https://www.nvidia.com/en-us/geforce/buy/", 
-		oosText: "out of stock" 
+		oosText: ["out of stock"],
+		cartUrl: "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage"
 	}
 	,{ 
 		name: "nvidia.com 2", 
 		url: "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=9&locale=en-us&search=3080", 
-		oosText: ["out of stock"] 
+		oosText: ["out of stock"],
+		cartUrl: "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage"
 	}
 	,{ 
 		name: "bestbuy.com", 
@@ -116,16 +98,14 @@ async function goto(link) {
   } else {
     console.log("*** IN STOCK AT " + link.name.toUpperCase() + ", BUY NOW ***");
     await page.screenshot({ path: `nvidia-${Date.now()}.png` });
-    opn(link.url);
-    if (emailUsername && emailPassword) {
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("email sent: " + info.response);
-        }
-      });
+    let clickUrl;
+    if (link.cartUrl) {
+      clickUrl = link.cartUrl
+    } else {
+      clickUrl = link.url
     }
+    opn(clickUrl);
+    mailer.send(clickUrl)
   }
 
   await browser.close();
