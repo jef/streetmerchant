@@ -80,13 +80,7 @@ async function lookup(store: Store) {
  */
 function isOutOfStock(domText: string, oosLabels: string[]) {
 	const domTextLowerCase = domText.toLowerCase();
-	for (const oosLabel of oosLabels) {
-		if (domTextLowerCase.includes(oosLabel.toLowerCase())) {
-			return true;
-		}
-	}
-
-	return false;
+	return oosLabels.some(label => domTextLowerCase.includes(label));
 }
 
 /**
