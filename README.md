@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg?branch=master)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)(https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
 
 The purpose of this bot is to get an Nvidia card. It does multiple things to try to do that.
 
@@ -80,7 +80,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 
 **Q: I'd love to contribute, how do I do that?** Make a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All contributions are welcome.
 
-**Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either. See #11.
+**Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either. See [#11](https://github.com/jef/nvidia-snatcher/issues/11).
 
 ### Acknowledgements
 
