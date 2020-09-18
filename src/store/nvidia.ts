@@ -1,7 +1,7 @@
 import {Store} from './store';
 
 export const Nvidia: Store = {
-	cartUrl: 'https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage',
+	cartUrl: '',
 	links: [
 		{
 			brand: 'nvidia',
