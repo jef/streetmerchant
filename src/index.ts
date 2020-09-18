@@ -33,7 +33,7 @@ async function lookup(store: Store) {
 	for (const link of store.links) {
 		const browser = await puppeteer.launch();
 		const page = await browser.newPage();
-		page.setDefaultNavigationTimeout(Config.navigationTimeout);
+		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 		await page.setViewport({
 			height: Config.page.height,
