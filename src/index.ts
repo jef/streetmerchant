@@ -25,7 +25,7 @@ async function main() {
 	await Promise.all(results);
 
 	Logger.info('↗ trying stores again');
-	setTimeout(main, Config.page.rateLimitTimeout);
+	setTimeout(main, Config.rateLimitTimeout);
 }
 
 /**
