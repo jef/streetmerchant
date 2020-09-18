@@ -49,15 +49,20 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 - Run `npm install`
 - Edit the `.env` file to your liking
     - More on this in [customization](#Customization)
-- Run `npm run start`
+- Run `npm run start` to start
 
-Then watch the magic happen!
+At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-Note that to be able to run the program in headless mode on Debian based OS, you will need to install the following libraries:
+### Additional Linux dependencies
+
+<details>
+<summary>Debian based OSes</summary>
 
 ```
-sudo apt install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
+ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
 ```
+
+</details>
 
 ### Customization
 
@@ -69,24 +74,20 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 |:---:|:---:|
 | `EMAIL_USERNAME` | Gmail address; e.g. `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA |
-| `STORES` | List of stores you want to be scraped; optional, default: `nvidia` |
-
-List of stores supported:
-| **Store name** | **Store name environment variable** |
-|:---:|:---:|
-|Best Buy | `bestbuy`|
-|B&H | `bandh`|
-|Newegg | `newegg`|
-|Nvidia | `nvidia`|
-
-Example of a `.env` file:
-```
-EMAIL_USERNAME="email@gmail.com"
-EMAIL_PASSWORD="password123"
-STORES="bestbuy,bandh,nvidia,newegg"
-```
+| `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
+
+#### Supported stores
+
+| **Store name** | **Store name environment variable** |
+|:---:|:---:|
+| Best Buy | `bestbuy`|
+| B&H | `bandh`|
+| Newegg | `newegg`|
+| Nvidia | `nvidia`|
+
+> :point_right: Look at [`.env.example`](.env.example) for an example for `.env`.
 
 ## FAQ
 
