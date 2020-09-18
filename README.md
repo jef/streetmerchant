@@ -68,8 +68,8 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA; optional |
 | `NOTIFICATION_TEST` | Test all the notifications configured; optional, default: `false` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds (`0` for infinite); optional, default: `30000` |
-| `PHONE_NUMBER` | 10 digit phone number, only USA, SMS may apply (e.g., `1234567890`); optional |
-| `PHONE_CARRIER` | Service provider for SMS, supports `sprint, tmobile, att, verizon`; optional |
+| `PHONE_NUMBER` | 10 digit phone number, only USA, SMS may apply (e.g., `1234567890`); optional, email configuration required |
+| `PHONE_CARRIER` | Service provider for SMS, supports `["sprint", "tmobile", "att", "verizon"]`; optional, email configuration required |
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle; optional, default: `5000` |
 | `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
 | `SLACK_TOKEN` | Slack API token; optional
