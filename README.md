@@ -1,13 +1,14 @@
 # nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
 
-The purpose of this bot is to get an Nvidia card. It does multiple things to try to do that.
+[FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
+
+The purpose of this bot is to get an Nvidia card. It tries multiple things to do that.
 
 - Currently, `nvidia-snatcher` is not capable of purchasing a card for you
 - Scrapes multiple websites for patterns of being stocked
     - API requests are a work in progress (very soon)
 - Opens browser when stock is available
-- Send email to you when away from computer
-    - Must have Gmail
+- Sends an email to you when stock is avaiable (must have Gmail)
 
 <details>
 <summary>What you may see if you're lucky</summary>
@@ -25,7 +26,7 @@ The purpose of this bot is to get an Nvidia card. It does multiple things to try
 
 </details>
 
-> :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can unknown behavior. Patience is a virtue :)
+> :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
 | | **Best Buy** | **B&H** | **Newegg** | **Nvidia** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -33,9 +34,7 @@ The purpose of this bot is to get an Nvidia card. It does multiple things to try
 | **3080** | `✔` | `✔` | `ℹ` | `✔` |
 | **3090** |  |  |  |  |
 
-> :point_right: (`ℹ`) In the process of getting working. Catchpa problems are intermittent. Use if you'd like, but expect problems.
-
-[FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
+> :point_right: (`ℹ`) Work in progress. Catchpa problems are intermittent. Use if you'd like, but expect problems.
 
 ## Installation and prerequisites
 
@@ -43,26 +42,19 @@ Linux, macOS, and Windows are all capable operating systems.
 
 You do not need any computer skills, smarts, or anything of that nature. You are very capable as you have made it this far. Some basic understanding how a terminal, git, and or Node.js is a bonus, but that does not limit you to getting `nvidia-snatcher` running!
 
-- Download [Node.js 14](https://nodejs.org/en/)
-- Download [git](https://git-scm.com/)
-- Clone this project `https://github.com/jef/nvidia-snatcher.git`
+### Quick overview
+
+- [Node.js 14](https://nodejs.org/en/)
+- [git](https://git-scm.com/)
+- Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
 - Run `npm install`
-- Edit the `.env` file to your liking
+- Copy `.env.example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
     - More on this in [customization](#Customization)
 - Run `npm run start` to start
 
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-### Additional Linux dependencies
-
-<details>
-<summary>Debian based OSes</summary>
-
-```
-ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
-```
-
-</details>
+> :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
 
 ### Customization
 
