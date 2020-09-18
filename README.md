@@ -53,6 +53,12 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 
 Then watch the magic happen!
 
+Note that to be able to run the program in headless mode on Debian based OS, you will need to install the following libraries:
+
+```
+sudo apt install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
+```
+
 ### Customization
 
 There is not much to configure (as of now), but there are some options that you can choose to utilize.
