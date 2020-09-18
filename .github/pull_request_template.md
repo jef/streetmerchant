@@ -1,3 +1,7 @@
+<!-- Please use Conventional Commits to label your title -->
+<!-- https://www.conventionalcommits.org/en/v1.0.0/ -->
+<!-- Example: feat: allow provided config object to extend other configs  -->
+
 ### Description
 
 <!-- Fixes #(issue) -->
