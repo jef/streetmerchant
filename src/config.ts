@@ -20,10 +20,19 @@ const page = {
 
 const stores = process.env.STORES ?? 'nvidia';
 
+const notificationMethods = process.env.NOTIFICATION_METHODS ?? 'email';
+
+const slack = {
+	channel: process.env.SLACK_CHANNEL,
+	token: process.env.SLACK_TOKEN
+}
+
 export const Config = {
 	email,
 	notifications,
 	page,
 	rateLimitTimeout: 5000,
-	stores
+	stores,
+	slack,
+	notificationMethods
 };
