@@ -3,10 +3,11 @@ interface Link {
 	model: string;
 	url: string;
 	oosLabels: string[];
+	captchaLabels?: string[];
 }
 
 export interface Store {
-	cartUrl: string;
+	cartUrl?: string;
 	links: Link[];
 	name: string;
 }

@@ -6,23 +6,23 @@ import {Amazon} from './amazon';
 import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
 import {Nvidia} from './nvidia';
+import {AmazonCa} from './amazon-ca';
 import {Store} from './store';
 
 const masterList = new Map([
-	['amazon', Amazon],
-	['bestbuy', BestBuy],
-	['bandh', BAndH],
-	['evga', Evga],
-	['microcenter', MicroCenter],
-	['newegg', NewEgg],
-	['nvidia', Nvidia]
+	[Amazon.name, Amazon],
+	[AmazonCa.name, AmazonCa],
+	[BestBuy.name, BestBuy],
+	[BAndH.name, BAndH],
+	[Evga.name, Evga],
+	[MicroCenter.name, MicroCenter],
+	[NewEgg.name, NewEgg],
+	[Nvidia.name, Nvidia]
 ]);
 
 const list = new Map();
 
-const storeArray = Config.stores.split(',');
-
-for (const name of storeArray) {
+for (const name of Config.stores) {
 	list.set(name, masterList.get(name));
 }
 

@@ -12,6 +12,7 @@ const notifications = {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
 			['google', 'msg.fi.google.com'],
+			['mint', 'mailmymobile.net'],
 			['sprint', 'messaging.sprintpcs.com'],
 			['telus', 'msg.telus.com'],
 			['tmobile', 'tmomail.net'],
@@ -20,12 +21,20 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
+	playSound: process.env.PLAY_SOUND === 'true'
+	pushover: {
+		token: process.env.PUSHOVER_TOKEN,
+		user: process.env.PUSHOVER_USER
+	},
 	slack: {
 		channel: process.env.SLACK_CHANNEL ?? '',
 		token: process.env.SLACK_TOKEN ?? ''
 	},
+	telegram: {
+		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
+		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
+	},
 	test: process.env.NOTIFICATION_TEST === 'true',
-	playSound: process.env.PLAY_SOUND === 'true'
 };
 
 const page = {
@@ -44,7 +53,10 @@ const openBrowser = process.env.OPEN_BROWSER === 'true';
 
 const isHeadless = process.env.HEADLESS === 'true';
 
+const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
+
 const logLevel = process.env.LOG_LEVEL ?? 'info';
+
 
 export const Config = {
 	isHeadless,
@@ -53,5 +65,6 @@ export const Config = {
 	openBrowser,
 	page,
 	rateLimitTimeout,
+	showOnlyBrands,
 	stores
 };

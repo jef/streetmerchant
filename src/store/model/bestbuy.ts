@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'asus',
@@ -33,7 +32,6 @@ export const BestBuy: Store = {
 			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621',
 			oosLabels: ['sold out', 'coming soon']
 		},
-
 		{
 			brand: 'msi',
 			model: 'ventus 3x',
