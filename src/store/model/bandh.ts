@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'gigabyte',

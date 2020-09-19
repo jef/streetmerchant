@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'asus',

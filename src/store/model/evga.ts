@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Evga: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'evga',

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Nvidia: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'nvidia',

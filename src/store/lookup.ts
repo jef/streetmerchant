@@ -4,7 +4,7 @@ import {Logger} from '../logger';
 import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
-import {isOutOfStock as includesLabels} from './out-of-stock';
+import {includesLabels} from './out-of-stock';
 
 /**
  * Returns true if the brand should be checked for stock

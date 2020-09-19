@@ -3,8 +3,8 @@ import Mail from 'nodemailer/lib/mailer';
 import {Config} from '../config';
 import {Logger} from '../logger';
 
-const subject = 'NVIDIA - BUY NOW';
 const email = Config.notifications.email;
+const subject = 'NVIDIA - BUY NOW';
 
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
