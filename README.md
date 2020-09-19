@@ -88,6 +88,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 |:---:|:---:|
 | Best Buy | `bestbuy`|
 | Amazon | `amazon`|
+| Amazon Canada | `amazonca`|
 | B&H | `bandh`|
 | EVGA | `evga`|
 | Micro Center | `microcenter`|
