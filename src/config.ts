@@ -21,7 +21,7 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
-	playSound: process.env.PLAY_SOUND === 'true',
+	playSound: process.env.PLAY_SOUND,
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
@@ -34,7 +34,7 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST === 'true',
+	test: process.env.NOTIFICATION_TEST === 'true'
 };
 
 const page = {
@@ -56,7 +56,6 @@ const isHeadless = process.env.HEADLESS === 'true';
 const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';
-
 
 export const Config = {
 	isHeadless,

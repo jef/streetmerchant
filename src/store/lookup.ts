@@ -32,7 +32,7 @@ export async function lookup(browser: Browser, store: Store) {
 		if (!filterBrand(link.brand)) {
 			continue;
 		}
-		
+
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
