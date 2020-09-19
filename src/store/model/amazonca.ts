@@ -21,7 +21,7 @@ export const amazonca: Store = {
 			url: 'https://www.amazon.ca/EVGA-GeForce-Technology-Backplate-10G-P5-3897-KR/dp/B08HR3Y5GQ?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable', 'enter the characters you see below']
 		},
-			{
+		{
 			brand: 'evga',
 			model: 'xc3ultra',
 			url: 'https://www.amazon.ca/EVGA-GeForce-Cooling-Backplate-10G-P5-3885-KR/dp/B08HR55YB5?ref_=ast_sto_dp',
@@ -57,7 +57,7 @@ export const amazonca: Store = {
 			url: 'https://www.amazon.ca/Asus-90YV0FB0-M0AM00-TUF-RTX3080-10G-GAMING/dp/B08HHDP9DW?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable', 'enter the characters you see below']
 		},
-				{
+		{
 			brand: 'asus',
 			model: 'tufoc',
 			url: 'https://www.amazon.ca/Asus-90YV0FB1-M0AM00-TUF-RTX3080-O10G-GAMING/dp/B08HH5WF97?ref_=ast_sto_dp',
