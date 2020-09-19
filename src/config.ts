@@ -21,7 +21,7 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
-	playSound: process.env.PLAY_SOUND === 'true'
+	playSound: process.env.PLAY_SOUND === 'true',
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
