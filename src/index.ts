@@ -68,8 +68,10 @@ async function lookup(store: Store) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
-			Logger.debug('ℹ saving screenshot');
-			await page.screenshot({path: `success-${Date.now()}.png`});
+			if (Config.page.capture === 'true') {
+				Logger.debug('ℹ saving screenshot');
+				await page.screenshot({path: `success-${Date.now()}.png`});
+			}
 
 			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
 			await open(givenUrl);
