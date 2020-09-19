@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const Evga: Store = {
+export const Zotac: Store = {
 	cartUrl: '',
 	links: [
 		{
