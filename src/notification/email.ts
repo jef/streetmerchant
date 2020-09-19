@@ -4,22 +4,23 @@ import {Config} from '../config';
 import {Logger} from '../logger';
 
 const subject = 'NVIDIA - BUY NOW';
+const email = Config.notifications.email;
 
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: Config.notifications.email.username,
-		pass: Config.notifications.email.password
+		user: email.username,
+		pass: email.password
 	}
 });
 
 const mailOptions: Mail.Options = {
-	from: Config.notifications.email.username,
-	to: Config.notifications.email.username,
+	from: email.username,
+	to: email.username,
 	subject
 };
 
-export default function sendEmail(text: string) {
+export function sendEmail(text: string) {
 	mailOptions.text = text;
 
 	transporter.sendMail(mailOptions, (error, info) => {

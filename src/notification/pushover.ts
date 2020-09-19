@@ -1,7 +1,6 @@
-/* eslint @typescript-eslint/no-var-requires: "off" */
 import {Config} from '../config';
 import {Logger} from '../logger';
-const Push = require('pushover-notifications');
+import Push = require('pushover-notifications');
 
 const p = new Push({
 	user: Config.notifications.pushover.user,

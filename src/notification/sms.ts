@@ -4,20 +4,13 @@ import {Config} from '../config';
 import {Logger} from '../logger';
 
 const subject = 'NVIDIA - BUY NOW';
-
-enum carrierAddress {
-	sprint = 'messaging.sprintpcs.com',
-	verizon = 'vtext.com',
-	tmobile = 'tmomail.net',
-	att = 'txt.att.net',
-	google = 'msg.fi.google.com'
-}
+const [email, phone] = [Config.notifications.email, Config.notifications.phone];
 
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: Config.notifications.email.username,
-		pass: Config.notifications.email.password
+		user: email.username,
+		pass: email.password
 	}
 });
 
@@ -27,7 +20,7 @@ const mailOptions: Mail.Options = {
 	subject
 };
 
-export default function sendSMS(text: string) {
+export function sendSMS(text: string) {
 	mailOptions.text = text;
 
 	transporter.sendMail(mailOptions, (error, info) => {
@@ -41,9 +34,8 @@ export default function sendSMS(text: string) {
 }
 
 function generateAddress() {
-	const carrier = Config.notifications.phone.carrier?.toLowerCase();
-	if (carrier && Object.keys(carrierAddress).includes(carrier)) {
-		// @ts-expect-error
-		return [Config.notifications.phone.number, carrierAddress[carrier]].join('@');
+	const carrier = phone.carrier.toLowerCase();
+	if (carrier && phone.availableCarriers.has(carrier)) {
+		return [phone.number, phone.availableCarriers.get(carrier)].join('@');
 	}
 }

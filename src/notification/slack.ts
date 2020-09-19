@@ -6,7 +6,7 @@ const channel = Config.notifications.slack.channel;
 const token = Config.notifications.slack.token;
 const web = new WebClient(token);
 
-export default function sendSlackMessage(text: string) {
+export function sendSlackMessage(text: string) {
 	(async () => {
 		try {
 			const result = await web.chat.postMessage({text, channel});
