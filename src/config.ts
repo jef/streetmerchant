@@ -51,10 +51,13 @@ const stores = process.env.STORES ?? 'nvidia';
 
 const openBrowser = process.env.OPEN_BROWSER ?? 'true';
 
+const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
+
 export const Config = {
 	notifications,
 	rateLimitTimeout,
 	page,
 	stores,
-	openBrowser
+	openBrowser,
+	showOnlyBrands
 };

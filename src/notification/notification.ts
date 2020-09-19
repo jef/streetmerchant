@@ -30,7 +30,7 @@ export function sendNotification(cartUrl: string) {
 		sendPushoverNotification(cartUrl);
 	}
 
-	if (Config.notifications.playSound) {
+	if (Config.notifications.playSound !== 'false') {
 		playSound();
 	}
 }
