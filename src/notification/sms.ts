@@ -9,7 +9,8 @@ enum carrierAddress {
 	sprint = 'messaging.sprintpcs.com',
 	verizon = 'vtext.com',
 	tmobile = 'tmomail.net',
-	att = 'txt.att.net'
+	att = 'txt.att.net',
+	google = 'msg.fi.google.com'
 }
 
 const transporter = nodemailer.createTransport({
@@ -34,16 +35,15 @@ export default function sendSMS(text: string) {
 			Logger.error(error);
 		} else {
 			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`✔ email sent: ${info.response}`);
+			Logger.info(`✔ sms sent: ${info.response}`);
 		}
 	});
 }
 
 function generateAddress() {
-	for (const carrier of Object.keys(carrierAddress)) {
-		if (Config.notifications.phone.carrier && carrier === Config.notifications.phone.carrier.toLowerCase()) {
-			// @ts-expect-error
-			return [Config.phone.number, carrierAddress[carrier]].join('@');
-		}
+	const carrier = Config.notifications.phone.carrier?.toLowerCase();
+	if (carrier && Object.keys(carrierAddress).includes(carrier)) {
+		// @ts-expect-error
+		return [Config.notifications.phone.number, carrierAddress[carrier]].join('@');
 	}
 }

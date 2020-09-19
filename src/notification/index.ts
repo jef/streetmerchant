@@ -13,8 +13,9 @@ export default function sendNotification(cartUrl: string) {
 		sendSlaskMessage(cartUrl);
 	}
 
-	if (Config.notifications.phone.number && Config.notifications.phone.carrier) {
-		if (Config.notifications.phone.availableCarriers.includes(Config.notifications.phone.carrier.toLowerCase())) {
+	if (Config.notifications.phone.number) {
+		const carrier = Config.notifications.phone.carrier?.toLowerCase();
+		if (carrier && Config.notifications.phone.availableCarriers.includes(carrier)) {
 			sendSMS(cartUrl);
 		}
 	}
