@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Amazon: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'pny',
