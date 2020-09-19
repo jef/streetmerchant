@@ -76,6 +76,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
 | `PLAY_SOUND` | Play sound notification if a card is found, default: `false` |
+| `SCREENSHOT` | Capture screenshot of page on successful hit; optional, default `true` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
