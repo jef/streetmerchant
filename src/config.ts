@@ -29,6 +29,10 @@ const notifications = {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
 	},
+	telegram: {
+		botToken: process.env.TELEGRAM_BOT_TOKEN ?? '',
+		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
+	},
 	test: process.env.NOTIFICATION_TEST ?? 'false',
 	playSound: process.env.PLAY_SOUND ?? 'false'
 };
