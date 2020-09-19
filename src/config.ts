@@ -30,7 +30,7 @@ const notifications = {
 		user: process.env.PUSHOVER_USER
 	},
 	telegram: {
-		botToken: process.env.TELEGRAM_BOT_TOKEN ?? '',
+		botToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
 	test: process.env.NOTIFICATION_TEST ?? 'false',

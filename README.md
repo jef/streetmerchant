@@ -77,8 +77,9 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
 | `PLAY_SOUND` | Play this sound notification if a card is found.; optional |
 | `SCREENSHOT` | Capture screenshot of page on successful hit; optional, default `true` |
-| `TELEGRAM_BOT_TOKEN` | Telegram bot token; optional |
+| `TELEGRAM_ACCESS_TOKEN` | Telegram access token; optional |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID; optional |
+| `SHOW_ONLY_BRANDS` | If set, will only show specified brands, seperated by `,` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 

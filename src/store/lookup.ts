@@ -6,7 +6,12 @@ import {Store} from './model';
 import {sendNotification} from '../notification';
 import {isOutOfStock as includesLabels} from './out-of-stock';
 
-function shouldCheckBrand(brand: string) {
+/**
+ * Returns true if the brand should be checked for stock
+ *
+ * @param brand The brand of the GPU
+ */
+function filterBrand(brand: string) {
 	if (Config.showOnlyBrands.length === 0) {
 		return true;
 	}
@@ -24,7 +29,7 @@ function shouldCheckBrand(brand: string) {
 export async function lookup(store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
-		if (!shouldCheckBrand(link.brand)) {
+		if (!filterBrand(link.brand)) {
 			continue;
 		}
 
