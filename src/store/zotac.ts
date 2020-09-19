@@ -1,3 +1,5 @@
+import {Store} from './store';
+
 export const Zotac: Store = {
 	cartUrl: '',
 	links: [
