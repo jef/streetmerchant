@@ -4,7 +4,20 @@ import {Logger} from '../logger';
 import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
-import {isOutOfStock} from './out-of-stock';
+import {isOutOfStock as includesLabels} from './out-of-stock';
+
+/**
+ * Returns true if the brand should be checked for stock
+ *
+ * @param brand The brand of the GPU
+ */
+function filterBrand(brand: string) {
+	if (Config.showOnlyBrands.length === 0) {
+		return true;
+	}
+
+	return Config.showOnlyBrands.includes(brand);
+}
 
 /**
  * Responsible for looking up information about a each product within
@@ -16,6 +29,10 @@ import {isOutOfStock} from './out-of-stock';
 export async function lookup(store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
+		if (!filterBrand(link.brand)) {
+			continue;
+		}
+
 		const browser = await puppeteer.launch();
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
@@ -40,8 +57,10 @@ export async function lookup(store: Store) {
 
 		Logger.debug(textContent);
 
-		if (isOutOfStock(textContent, link.oosLabels)) {
+		if (includesLabels(textContent, link.oosLabels)) {
 			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
+		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
+			Logger.warn(`✖ [${store.name}] ${graphicsCard} gave us a CAPTCHA`);
 		} else {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);

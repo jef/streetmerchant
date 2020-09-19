@@ -4,6 +4,7 @@ import {sendSMS} from './sms';
 import {playSound} from './sound';
 import {sendSlackMessage} from './slack';
 import sendPushoverNotification from './pushover';
+import {sendTelegramMessage} from './telegram';
 
 export function sendNotification(cartUrl: string) {
 	if (Config.notifications.email.username && Config.notifications.email.password) {
@@ -12,6 +13,10 @@ export function sendNotification(cartUrl: string) {
 
 	if (Config.notifications.slack.channel && Config.notifications.slack.token) {
 		sendSlackMessage(cartUrl);
+	}
+
+	if (Config.notifications.telegram.botToken && Config.notifications.telegram.chatId) {
+		sendTelegramMessage(cartUrl);
 	}
 
 	if (Config.notifications.phone.number) {
@@ -25,7 +30,7 @@ export function sendNotification(cartUrl: string) {
 		sendPushoverNotification(cartUrl);
 	}
 
-	if (Config.notifications.playSound) {
+	if (Config.notifications.playSound !== 'false') {
 		playSound();
 	}
 }

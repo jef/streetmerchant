@@ -3,6 +3,7 @@ interface Link {
 	model: string;
 	url: string;
 	oosLabels: string[];
+	captchaLabels?: string[];
 }
 
 export interface Store {

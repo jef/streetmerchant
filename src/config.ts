@@ -29,6 +29,10 @@ const notifications = {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
 	},
+	telegram: {
+		botToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
+		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
+	},
 	test: process.env.NOTIFICATION_TEST ?? 'false',
 	playSound: process.env.PLAY_SOUND ?? 'false'
 };
@@ -47,10 +51,13 @@ const stores = process.env.STORES ?? 'nvidia';
 
 const openBrowser = process.env.OPEN_BROWSER ?? 'true';
 
+const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
+
 export const Config = {
 	notifications,
 	rateLimitTimeout,
 	page,
 	stores,
-	openBrowser
+	openBrowser,
+	showOnlyBrands
 };
