@@ -74,6 +74,8 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
 | `SLACK_TOKEN` | Slack API token; optional
 | `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
+| `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
+| `PLAY_SOUND` | Play sound notification if a card is found, default: `false` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 

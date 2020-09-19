@@ -17,7 +17,8 @@ const notifications = {
 		channel: process.env.SLACK_CHANNEL ?? '',
 		token: process.env.SLACK_TOKEN ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST ?? 'false'
+	test: process.env.NOTIFICATION_TEST ?? 'false',
+	playSound: process.env.PLAY_SOUND ?? 'false'
 };
 
 const page = {
@@ -31,9 +32,12 @@ const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
 
 const stores = process.env.STORES ?? 'nvidia';
 
+const openBrowser = process.env.OPEN_BROWSER ?? 'true';
+
 export const Config = {
 	notifications,
 	rateLimitTimeout,
 	page,
-	stores
+	stores,
+	openBrowser
 };

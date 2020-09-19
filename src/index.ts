@@ -72,7 +72,11 @@ async function lookup(store: Store) {
 			await page.screenshot({path: `success-${Date.now()}.png`});
 
 			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
-			await open(givenUrl);
+
+			if (Config.openBrowser === 'true') {
+				await open(givenUrl);
+			}
+
 			sendNotification(givenUrl);
 		}
 
