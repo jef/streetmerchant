@@ -68,12 +68,12 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA; optional |
 | `NOTIFICATION_TEST` | Test all the notifications configured; optional, default: `false` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds (`0` for infinite); optional, default: `30000` |
-| `PHONE_NUMBER` | 10 digit phone number, only USA, SMS may apply (e.g., `1234567890`); optional, email configuration required |
-| `PHONE_CARRIER` | Service provider for SMS, supports `["sprint", "tmobile", "att", "verizon", "google"]`; optional, email configuration required |
+| `PHONE_NUMBER` | 10 digit phone number (e.g., `1234567890`); optional, email configuration required |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS; optional, email configuration required |
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle; optional, default: `5000` |
 | `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
 | `SLACK_TOKEN` | Slack API token; optional
-| `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
+| `STORES` | [Supported stores](#supported-stores) you want to be scraped; optional, default: `nvidia` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
 | `PLAY_SOUND` | Play this sound notification if a card is found.; optional |
 | `SCREENSHOT` | Capture screenshot of page on successful hit; optional, default `true` |
@@ -84,7 +84,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 
 #### Supported stores
 
-| **Store name** | **Store name environment variable** |
+| **Stores** | **Environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
 | Amazon | `amazon`|
@@ -95,6 +95,17 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | Nvidia | `nvidia`|
 
 > :point_right: Look at [`.env.example`](.env.example) for an example for `.env`.
+
+#### Supported carriers
+
+| **Carrier** | **Environment variable** |
+|:---:|:---:|
+| AT&T | `att`|
+| Google | `google`|
+| Sprint | `sprint`|
+| Telus | `telus`|
+| T-Mobile | `tmobile`|
+| Verizon | `verizone`|
 
 ## FAQ
 

@@ -10,12 +10,13 @@ const notifications = {
 	},
 	phone: {
 		availableCarriers: new Map([
-			['sprint', 'messaging.sprintpcs.com'],
-			['verizon', 'vtext.com'],
-			['tmobile', 'tmomail.net'],
 			['att', 'txt.att.net'],
 			['google', 'msg.fi.google.com'],
-			['mint', 'mailmymobile.net']
+      ['mint', 'mailmymobile.net'],
+			['sprint', 'messaging.sprintpcs.com'],
+			['telus', 'msg.telus.com'],
+			['tmobile', 'tmomail.net'],
+			['verizon', 'vtext.com']
 		]),
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
