@@ -20,7 +20,7 @@ const mailOptions: Mail.Options = {
 	subject
 };
 
-export default function sendSMS(text: string) {
+export function sendSMS(text: string) {
 	mailOptions.text = text;
 
 	transporter.sendMail(mailOptions, (error, info) => {
