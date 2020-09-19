@@ -1,4 +1,4 @@
-interface Link {
+export interface Link {
 	brand: string;
 	model: string;
 	url: string;

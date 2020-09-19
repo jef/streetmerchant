@@ -4,6 +4,7 @@ import {Logger} from './logger';
 import {sendNotification} from './notification';
 import {lookup} from './store';
 import puppeteer from 'puppeteer';
+import {Link} from './store/model';
 
 /**
  * Starts the bot.
@@ -28,7 +29,7 @@ async function main() {
  * Send test email.
  */
 if (Config.notifications.test === 'true') {
-	sendNotification('test');
+	sendNotification('http://test.com/',  { brand: "THE BEST BRAND", model: "VENTUS", oosLabels: [], url: "" } );
 }
 
 /**
