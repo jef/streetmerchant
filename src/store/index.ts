@@ -8,12 +8,13 @@ import {MicroCenter} from './microcenter';
 import {Config} from '../config';
 
 const masterList = new Map([
-    ['bestbuy', BestBuy],
-    ['bandh', BAndH],
-    ['evga', Evga],
-    ['newegg', NewEgg],
-    ['nvidia', Nvidia],
-    ['microcenter', MicroCenter]
+	['amazon', Amazon],
+	['bestbuy', BestBuy],
+	['bandh', BAndH],
+	['evga', Evga],
+	['microcenter', MicroCenter],
+	['newegg', NewEgg],
+	['nvidia', Nvidia]
 ]);
 
 const list = new Map();
@@ -21,7 +22,7 @@ const list = new Map();
 const storeArray = Config.stores.split(',');
 
 for (const name of storeArray) {
-    list.set(name, masterList.get(name));
+	list.set(name, masterList.get(name));
 }
 
 export const Stores = Array.from(list.values());
