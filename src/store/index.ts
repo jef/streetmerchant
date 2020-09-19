@@ -2,10 +2,10 @@ import {BestBuy} from './bestbuy';
 import {BAndH} from './bandh';
 import {Evga} from './evga';
 import {NewEgg} from './newegg';
-import {Zotac} from './zotac';
 import {Nvidia} from './nvidia';
 import {Amazon} from './amazon';
 import {MicroCenter} from './microcenter';
+import {Zotac} from './zotac';
 import {Config} from '../config';
 
 const masterList = new Map([
@@ -15,8 +15,8 @@ const masterList = new Map([
 	['evga', Evga],
 	['microcenter', MicroCenter],
 	['newegg', NewEgg],
-	['zotac', Zotac],
-	['nvidia', Nvidia]
+	['nvidia', Nvidia],
+	['zotac', Zotac]
 ]);
 
 const list = new Map();
