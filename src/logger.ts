@@ -1,11 +1,13 @@
 import winston, {format} from 'winston';
 
 const prettyJson = format.printf(info => {
+	const timestamp = new Date().toLocaleTimeString();
+
 	if (typeof info.message === 'object') {
 		info.message = JSON.stringify(info.message, null, 4);
 	}
 
-	return `${info.level} :: ${info.message}`;
+	return `[${timestamp}] ${info.level} :: ${info.message}`;
 });
 
 export const Logger = winston.createLogger({
