@@ -1,6 +1,6 @@
 {
   "name": "nvidia-snatcher",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "🔮 For all your Nvidia needs",
   "main": "src/index.ts",
   "scripts": {
@@ -28,6 +28,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@slack/web-api": "^5.12.0",
     "@types/node": "^14.11.1",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^3.0.2",

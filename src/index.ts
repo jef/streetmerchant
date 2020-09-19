@@ -6,6 +6,13 @@ import sendNotification from './notification';
 import {Logger} from './logger';
 
 /**
+ * Send test email.
+ */
+if (Config.notifications.test === 'true') {
+	sendNotification('test');
+}
+
+/**
  * Starts the bot.
  */
 async function main() {
@@ -33,6 +40,7 @@ async function lookup(store: Store) {
 	for (const link of store.links) {
 		const browser = await puppeteer.launch();
 		const page = await browser.newPage();
+		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 		await page.setViewport({
 			height: Config.page.height,
@@ -45,6 +53,7 @@ async function lookup(store: Store) {
 			await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+			await browser.close();
 			return;
 		}
 
@@ -80,12 +89,7 @@ async function lookup(store: Store) {
  */
 function isOutOfStock(domText: string, oosLabels: string[]) {
 	const domTextLowerCase = domText.toLowerCase();
-	let result = false;
-	for (const oosLabel of oosLabels) {
-		result = domTextLowerCase.includes(oosLabel.toLowerCase());
-	}
-
-	return result;
+	return oosLabels.some(label => domTextLowerCase.includes(label));
 }
 
 /**

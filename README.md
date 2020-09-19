@@ -64,8 +64,15 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 
 | **Environment variable** | **Description** |
 |:---:|:---:|
-| `EMAIL_USERNAME` | Gmail address; e.g. `jensen.robbed.us@gmail.com` |
-| `EMAIL_PASSWORD` | Gmail password; see below if you have MFA |
+| `EMAIL_USERNAME` | Gmail address (e.g., `jensen.robbed.us@gmail.com`); optional |
+| `EMAIL_PASSWORD` | Gmail password; see below if you have MFA; optional |
+| `NOTIFICATION_TEST` | Test all the notifications configured; optional, default: `false` |
+| `PAGE_TIMEOUT` | Navigation Timeout in milliseconds (`0` for infinite); optional, default: `30000` |
+| `PHONE_NUMBER` | 10 digit phone number, only USA, SMS may apply (e.g., `1234567890`); optional, email configuration required |
+| `PHONE_CARRIER` | Service provider for SMS, supports `["sprint", "tmobile", "att", "verizon", "google"]`; optional, email configuration required |
+| `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle; optional, default: `5000` |
+| `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
+| `SLACK_TOKEN` | Slack API token; optional
 | `STORES` | List of [stores](#Supported-stores) you want to be scraped; optional, default: `nvidia` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
@@ -75,8 +82,10 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | **Store name** | **Store name environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
+| Amazon | `amazon`|
 | B&H | `bandh`|
 | EVGA | `evga`|
+| Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
 | Zotac | `zotac`|

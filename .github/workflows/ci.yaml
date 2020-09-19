@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  lint:
+  build-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -21,4 +21,5 @@ jobs:
       - name: Pull dependencies
         run: |
           npm ci
+          npm run build
           npm run lint

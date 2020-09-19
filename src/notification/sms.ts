@@ -5,6 +5,14 @@ import {Logger} from '../logger';
 
 const subject = 'NVIDIA - BUY NOW';
 
+enum carrierAddress {
+	sprint = 'messaging.sprintpcs.com',
+	verizon = 'vtext.com',
+	tmobile = 'tmomail.net',
+	att = 'txt.att.net',
+	google = 'msg.fi.google.com'
+}
+
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
@@ -15,11 +23,11 @@ const transporter = nodemailer.createTransport({
 
 const mailOptions: Mail.Options = {
 	from: Config.notifications.email.username,
-	to: Config.notifications.email.username,
+	to: generateAddress(),
 	subject
 };
 
-export default function sendEmail(text: string) {
+export default function sendSMS(text: string) {
 	mailOptions.text = text;
 
 	transporter.sendMail(mailOptions, (error, info) => {
@@ -27,7 +35,15 @@ export default function sendEmail(text: string) {
 			Logger.error(error);
 		} else {
 			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`✔ email sent: ${info.response}`);
+			Logger.info(`✔ sms sent: ${info.response}`);
 		}
 	});
+}
+
+function generateAddress() {
+	const carrier = Config.notifications.phone.carrier?.toLowerCase();
+	if (carrier && Object.keys(carrierAddress).includes(carrier)) {
+		// @ts-expect-error
+		return [Config.notifications.phone.number, carrierAddress[carrier]].join('@');
+	}
 }
