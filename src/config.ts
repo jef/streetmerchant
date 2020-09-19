@@ -9,7 +9,7 @@ const notifications = {
 		password: process.env.EMAIL_PASSWORD ?? ''
 	},
 	phone: {
-		availableCarriers: ['sprint', 'verizon', 'tmobile', 'att'],
+		availableCarriers: ['sprint', 'verizon', 'tmobile', 'att', 'google'],
 		carrier: process.env.PHONE_CARRIER,
 		number: process.env.PHONE_NUMBER
 	},
