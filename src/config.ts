@@ -14,7 +14,8 @@ const notifications = {
 			['verizon', 'vtext.com'],
 			['tmobile', 'tmomail.net'],
 			['att', 'txt.att.net'],
-			['google', 'msg.fi.google.com']
+			['google', 'msg.fi.google.com'],
+			['mint', 'mailmymobile.net']
 		]),
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
