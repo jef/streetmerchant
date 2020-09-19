@@ -1,4 +1,4 @@
-import {Webhook,MessageBuilder} from 'discord-webhook-node';
+import {Webhook, MessageBuilder} from 'discord-webhook-node';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import {Link} from '../store/model';
@@ -6,19 +6,19 @@ import {Link} from '../store/model';
 const hook = new Webhook(Config.notifications.discord.webHookUrl);
 const notifyGroup = Config.notifications.discord.notifyGroup;
 
-export function sendDiscordMessage(text: string, link: Link ) {
+export function sendDiscordMessage(text: string, link: Link) {
 	(async () => {
 		try {
 			const embed = new MessageBuilder();
-			embed.setTitle("Stock Notification")
-			embed.addField("URL", text, true)
-			embed.addField("Brand", link.brand, true)
-			embed.addField("Model", link.model, true)
-			if(notifyGroup != ''){
-				embed.addField("Attention",notifyGroup, true)
+			embed.setTitle('Stock Notification');
+			embed.addField('URL', text, true);
+			embed.addField('Brand', link.brand, true);
+			embed.addField('Model', link.model, true);
+			if (notifyGroup != '') {
+				embed.addField('Attention', notifyGroup, true);
 			}
-			embed.setColor(65340)
-			embed.setTimestamp()
+			embed.setColor(65340);
+			embed.setTimestamp();
 			await hook.send(embed);
 			Logger.info(`✔ discord message message sent: ${text}`);
 		} catch (error) {
