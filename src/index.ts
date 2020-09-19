@@ -62,13 +62,10 @@ async function lookup(store: Store) {
 
 		Logger.debug(textContent);
 
-		const dateObject = new Date();
-		const timeOf = dateObject.toLocaleTimeString();
-
 		if (isOutOfStock(textContent, link.oosLabels)) {
-			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock @ ${timeOf}`);
+			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
 		} else {
-			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀 @ ${timeOf}`);
+			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
 			Logger.debug('ℹ saving screenshot');
