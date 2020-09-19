@@ -1,3 +1,4 @@
+import puppeteer from 'puppeteer';
 import {Config} from './config';
 import {Stores} from './store/model';
 import {Logger} from './logger';
@@ -9,12 +10,22 @@ import {lookup} from './store';
  */
 async function main() {
 	const results = [];
+
+	const browser = await puppeteer.launch({
+		headless: Config.isHeadless,
+		defaultViewport: {
+			height: Config.page.height,
+			width: Config.page.width
+		}
+	});
+
 	for (const store of Stores) {
 		Logger.debug(store.links);
-		results.push(lookup(store));
+		results.push(lookup(browser, store));
 	}
 
 	await Promise.all(results);
+	await browser.close();
 
 	Logger.info('↗ trying stores again');
 	setTimeout(main, Config.rateLimitTimeout);

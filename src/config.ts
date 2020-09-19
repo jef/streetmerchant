@@ -42,10 +42,16 @@ const stores = process.env.STORES ?? 'nvidia';
 
 const openBrowser = process.env.OPEN_BROWSER ?? 'true';
 
+const isHeadless = process.env.HEADLESS === 'true';
+
+const logLevel = process.env.LOG_LEVEL ?? 'info';
+
 export const Config = {
+	isHeadless,
+	logLevel,
 	notifications,
-	rateLimitTimeout,
+	openBrowser,
 	page,
-	stores,
-	openBrowser
+	rateLimitTimeout,
+	stores
 };
