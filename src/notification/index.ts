@@ -2,7 +2,7 @@ import {Config} from '../config';
 import sendEmail from './email';
 import sendSlaskMessage from './slack';
 import sendSMS from './sms';
-import sendPushoverNotification from './pushover'
+import sendPushoverNotification from './pushover';
 
 export default function sendNotification(cartUrl: string) {
 	if (Config.notifications.email.username && Config.notifications.email.password) {
@@ -21,6 +21,6 @@ export default function sendNotification(cartUrl: string) {
 	}
 
 	if (Config.notifications.pushover.token && Config.notifications.pushover.user) {
-		sendPushoverNotification(cartUrl)
+		sendPushoverNotification(cartUrl);
 	}
 }

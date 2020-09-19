@@ -1,23 +1,23 @@
+/* eslint @typescript-eslint/no-var-requires: "off" */
 import {Config} from '../config';
 import {Logger} from '../logger';
+const Push = require('pushover-notifications');
 
-var Push = require( 'pushover-notifications' )
-
-var p = new Push( {
-  user: Config.notifications.pushover.user,
-  token: Config.notifications.pushover.token,
-})
+const p = new Push({
+	user: Config.notifications.pushover.user,
+	token: Config.notifications.pushover.token
+});
 
 export default function sendPushoverNotification(text: string) {
-  var msg = {
-    message: text
-  }
+	const message = {
+		message: text
+	};
 
-  p.send( msg, function( err: Error, result: string ) {
-    if ( err ) {
-      Logger.error(err)
-    } else {
-      Logger.info(`✔ Pushover notification sent: ${result}`);
-    }
-  })
+	p.send(message, (err: Error, result: string) => {
+		if (err) {
+			Logger.error(err);
+		} else {
+			Logger.info(`✔ Pushover notification sent: ${result}`);
+		}
+	});
 }
