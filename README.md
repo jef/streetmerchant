@@ -84,7 +84,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 
 #### Supported stores
 
-| **Store name** | **Store name environment variable** |
+| **Stores** | **Environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
 | Amazon | `amazon`|
@@ -96,15 +96,16 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 
 > :point_right: Look at [`.env.example`](.env.example) for an example for `.env`.
 
-
 #### Supported carriers
 
-- AT&T
-- Google
-- Sprint
-- Telus
-- T-Mobile
-- Verizon
+| **Carrier** | **Environment variable** |
+|:---:|:---:|
+| AT&T | `att`|
+| Google | `google`|
+| Sprint | `sprint`|
+| Telus | `telus`|
+| T-Mobile | `tmobile`|
+| Verizon | `verizone`|
 
 ## FAQ
 
