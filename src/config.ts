@@ -21,6 +21,7 @@ const notifications = {
 };
 
 const page = {
+	capture: process.env.SCREENSHOT ?? 'true',
 	width: 1920,
 	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
