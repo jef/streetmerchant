@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.1.0...v1.2.0) (2020-09-19)
+
+
+### Features
+
+* **ci:** add `npm run build` ([faad3e6](https://www.github.com/jef/nvidia-snatcher/commit/faad3e68efafaab135b77080b02af83429b6eca6))
+* **store:** microcenter ([#39](https://www.github.com/jef/nvidia-snatcher/issues/39)) ([edf17e9](https://www.github.com/jef/nvidia-snatcher/commit/edf17e926f3d186e7630da2834d78de3e540a956))
+* add Amazon links ([#26](https://www.github.com/jef/nvidia-snatcher/issues/26)) ([f0560ce](https://www.github.com/jef/nvidia-snatcher/commit/f0560ce72bfbfdd6360b85e23edaa875d58f228f))
+* add email test, fix memory leak ([#24](https://www.github.com/jef/nvidia-snatcher/issues/24)) ([a2fb973](https://www.github.com/jef/nvidia-snatcher/commit/a2fb97333c6eb81250b24ccb6859e9356acded21))
+* more Best Buy AIBs ([#41](https://www.github.com/jef/nvidia-snatcher/issues/41)) ([7d7bd18](https://www.github.com/jef/nvidia-snatcher/commit/7d7bd18b4dd656ec01ef2fb2d8519e2a7f34ef70))
+* page timeout ([#22](https://www.github.com/jef/nvidia-snatcher/issues/22)) ([643045c](https://www.github.com/jef/nvidia-snatcher/commit/643045c7e0158fb6526bd09427b96cce7958bcea))
+* slack integration ([#34](https://www.github.com/jef/nvidia-snatcher/issues/34)) ([c0a881a](https://www.github.com/jef/nvidia-snatcher/commit/c0a881a16ebb573bf35b7f29cb27e5b3c2e1fe78))
+* sms notification for usa carriers ([#40](https://www.github.com/jef/nvidia-snatcher/issues/40)) ([5a3636b](https://www.github.com/jef/nvidia-snatcher/commit/5a3636bcb639bb33bc586af96264f5df2f3a8307))
+* update to check if FE in-stock via Digital River ([#29](https://www.github.com/jef/nvidia-snatcher/issues/29)) ([00ede13](https://www.github.com/jef/nvidia-snatcher/commit/00ede13501082f530ea672a349816be1d31621a8))
+
+
+### Bug Fixes
+
+* small error in `isOutOfStock` logic ([#33](https://www.github.com/jef/nvidia-snatcher/issues/33)) ([c2a210c](https://www.github.com/jef/nvidia-snatcher/commit/c2a210cc815c3aa06f6f14d33954f65577d95954))
+
 ## [1.1.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.0.0...v1.1.0) (2020-09-18)
 
 
