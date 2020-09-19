@@ -22,7 +22,7 @@ export function sendNotification(cartUrl: string) {
 		sendTelegramMessage(cartUrl);
 	}
 
-	if (Config.notifications.discord.webHookUrl) {
+	if (notifications.discord.webHookUrl) {
 		sendDiscordMessage(cartUrl);
 	}
 
