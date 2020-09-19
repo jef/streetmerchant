@@ -1,18 +1,19 @@
+import Push from 'pushover-notifications';
 import {Config} from '../config';
 import {Logger} from '../logger';
-import Push = require('pushover-notifications');
 
-const p = new Push({
-	user: Config.notifications.pushover.user,
-	token: Config.notifications.pushover.token
+const pushover = Config.notifications.pushover;
+const push = new Push({
+	user: pushover.user,
+	token: pushover.token
 });
 
-export default function sendPushoverNotification(text: string) {
+export function sendPushoverNotification(text: string) {
 	const message = {
 		message: text
 	};
 
-	p.send(message, (err: Error, result: string) => {
+	push.send(message, (err: Error, result: string) => {
 		if (err) {
 			Logger.error(err);
 		} else {

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const MicroCenter: Store = {
-	cartUrl: '',
 	links: [
 		{
 			brand: 'evga',

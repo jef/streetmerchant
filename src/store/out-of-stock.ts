@@ -4,7 +4,7 @@
  * @param domText Complete DOM of website.
  * @param oosLabels Out-of-stock labels.
  */
-export function isOutOfStock(domText: string, oosLabels: string[]) {
+export function includesLabels(domText: string, oosLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
 	return oosLabels.some(label => domTextLowerCase.includes(label));
 }

@@ -7,7 +7,7 @@ interface Link {
 }
 
 export interface Store {
-	cartUrl: string;
+	cartUrl?: string;
 	links: Link[];
 	name: string;
 }
