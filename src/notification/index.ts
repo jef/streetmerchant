@@ -20,7 +20,7 @@ export default function sendNotification(cartUrl: string) {
 		}
 	}
 
-	if (Config.notifications.playSound === 'true') {
+	if (Config.notifications.playSound) {
 		playSound();
 	}
 }
