@@ -4,7 +4,7 @@ import {Logger} from '../logger';
 import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
-import {isOutOfStock} from './out-of-stock';
+import {isInStock} from './in-stock';
 
 /**
  * Responsible for looking up information about a each product within
@@ -40,9 +40,7 @@ export async function lookup(store: Store) {
 
 		Logger.debug(textContent);
 
-		if (isOutOfStock(textContent, link.oosLabels)) {
-			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
-		} else {
+		if (isInStock(textContent, link.matchLabels)) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
@@ -58,6 +56,8 @@ export async function lookup(store: Store) {
 			}
 
 			sendNotification(givenUrl);
+		} else {
+			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
 		}
 
 		await browser.close();

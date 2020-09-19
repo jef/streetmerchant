@@ -2,7 +2,7 @@ interface Link {
 	brand: string;
 	model: string;
 	url: string;
-	oosLabels: string[];
+	matchLabels: string[];
 }
 
 export interface Store {
