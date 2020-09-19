@@ -5,12 +5,13 @@ const prettyJson = format.printf(info => {
 		info.message = JSON.stringify(info.message, null, 4);
 	}
 
-	return `${info.level} :: ${info.message}`;
+	return `[${info.timestamp}] ${info.level} :: ${info.message}`;
 });
 
 export const Logger = winston.createLogger({
 	level: process.env.LOG_LEVEL ?? 'info',
 	format: format.combine(
+		format.timestamp({format: 'HH:mm:ss'}),
 		format.colorize(),
 		format.prettyPrint(),
 		format.splat(),
