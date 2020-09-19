@@ -36,7 +36,7 @@ const notifications = {
 	},
 	discord: {
 		webHookUrl: process.env.DISCORD_WEB_HOOK ?? '',
-		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
+		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? ''
 	},
 	test: process.env.NOTIFICATION_TEST ?? 'false'
 };

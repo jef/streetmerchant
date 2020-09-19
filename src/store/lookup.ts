@@ -76,7 +76,7 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 				await open(givenUrl);
 			}
 
-			sendNotification(givenUrl,link);
+			sendNotification(givenUrl, link);
 		}
 
 		await page.close();

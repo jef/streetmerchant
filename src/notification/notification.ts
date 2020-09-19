@@ -24,7 +24,7 @@ export function sendNotification(cartUrl: string, link: Link) {
 	}
 
 	if (notifications.discord.webHookUrl) {
-		sendDiscordMessage(cartUrl,link);
+		sendDiscordMessage(cartUrl, link);
 	}
 
 	if (notifications.phone.number) {
