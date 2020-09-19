@@ -73,6 +73,8 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle; optional, default: `5000` |
 | `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
 | `SLACK_TOKEN` | Slack API token; optional |
+| `DISCORD_WEB_HOOK` | Discord Web Hook URL |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped; optional, default: `nvidia` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
 | `PLAY_SOUND` | Play this sound notification if a card is found.; optional |

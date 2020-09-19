@@ -5,6 +5,7 @@ import {playSound} from './sound';
 import {sendSlackMessage} from './slack';
 import sendPushoverNotification from './pushover';
 import {sendTelegramMessage} from './telegram';
+import {sendDiscordMessage} from './discord';
 
 export function sendNotification(cartUrl: string) {
 	if (Config.notifications.email.username && Config.notifications.email.password) {
@@ -17,6 +18,10 @@ export function sendNotification(cartUrl: string) {
 
 	if (Config.notifications.telegram.botToken && Config.notifications.telegram.chatId) {
 		sendTelegramMessage(cartUrl);
+	}
+
+	if (Config.notifications.discord.webHookUrl) {
+		sendDiscordMessage(cartUrl);
 	}
 
 	if (Config.notifications.phone.number) {
