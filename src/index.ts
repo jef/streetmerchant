@@ -62,8 +62,8 @@ async function lookup(store: Store) {
 
 		Logger.debug(textContent);
 
-		var dateObj = new Date();
-		const timeOf = dateObj.toLocaleTimeString();
+		const dateObject = new Date();
+		const timeOf = dateObject.toLocaleTimeString();
 
 		if (isOutOfStock(textContent, link.oosLabels)) {
 			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock @ ${timeOf}`);
