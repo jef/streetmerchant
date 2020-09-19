@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.2.1](https://www.github.com/jef/nvidia-snatcher/compare/v1.2.0...v1.2.1) (2020-09-19)
+
+
+### Bug Fixes
+
+* evga xc3 ultra link ([#56](https://www.github.com/jef/nvidia-snatcher/issues/56)) ([d907092](https://www.github.com/jef/nvidia-snatcher/commit/d907092b443b056605e09cb2ca3e94e6ca811d9e))
+* screenshot size, add screenshot config setting ([#53](https://www.github.com/jef/nvidia-snatcher/issues/53)) ([7cfc7c7](https://www.github.com/jef/nvidia-snatcher/commit/7cfc7c74429c808fa14468cdd497eb9f9aeb922c))
+* sms carrier config, add google carrier ([#44](https://www.github.com/jef/nvidia-snatcher/issues/44)) ([971fec2](https://www.github.com/jef/nvidia-snatcher/commit/971fec20e441e2b12a38d5c8d17d2d4cb5e64d6b))
+
 ## [1.2.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.1.0...v1.2.0) (2020-09-19)
 
 
