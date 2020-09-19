@@ -12,7 +12,7 @@ const notifications = {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
 			['google', 'msg.fi.google.com'],
-      ['mint', 'mailmymobile.net'],
+			['mint', 'mailmymobile.net'],
 			['sprint', 'messaging.sprintpcs.com'],
 			['telus', 'msg.telus.com'],
 			['tmobile', 'tmomail.net'],
