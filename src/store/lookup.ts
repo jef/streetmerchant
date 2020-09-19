@@ -41,14 +41,14 @@ export async function lookup(browser: Browser, store: Store) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
-			if (Config.page.capture === 'true') {
+			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
 
 			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
 
-			if (Config.openBrowser === 'true') {
+			if (Config.openBrowser) {
 				await open(givenUrl);
 			}
 

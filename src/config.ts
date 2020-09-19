@@ -29,7 +29,7 @@ const notifications = {
 };
 
 const page = {
-	capture: process.env.SCREENSHOT ?? 'true',
+	capture: process.env.SCREENSHOT === 'true',
 	width: 1920,
 	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
@@ -40,7 +40,7 @@ const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
 
 const stores = process.env.STORES ?? 'nvidia';
 
-const openBrowser = process.env.OPEN_BROWSER ?? 'true';
+const openBrowser = process.env.OPEN_BROWSER === 'true';
 
 const isHeadless = process.env.HEADLESS === 'true';
 
