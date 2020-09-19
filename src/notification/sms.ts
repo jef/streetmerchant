@@ -41,7 +41,7 @@ export default function sendSMS(text: string) {
 }
 
 function generateAddress() {
-	let carrier = Config.notifications.phone.carrier?.toLowerCase();
+	const carrier = Config.notifications.phone.carrier?.toLowerCase();
 	if (carrier && Object.keys(carrierAddress).includes(carrier)) {
 		// @ts-expect-error
 		return [Config.notifications.phone.number, carrierAddress[carrier]].join('@');
