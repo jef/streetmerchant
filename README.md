@@ -88,6 +88,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | **Stores** | **Environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
+| Amazon.ca | `amazon-ca`|
 | Amazon | `amazon`|
 | B&H | `bandh`|
 | EVGA | `evga`|

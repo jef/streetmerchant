@@ -9,14 +9,14 @@ import {Nvidia} from './nvidia';
 import {AmazonCa} from './amazon-ca';
 
 const masterList = new Map([
-	['amazon', Amazon],
-	['amazonca', AmazonCa],
-	['bestbuy', BestBuy],
-	['bandh', BAndH],
-	['evga', Evga],
-	['microcenter', MicroCenter],
-	['newegg', NewEgg],
-	['nvidia', Nvidia]
+	[Amazon.name, Amazon],
+	[AmazonCa.name, AmazonCa],
+	[BestBuy.name, BestBuy],
+	[BAndH.name, BAndH],
+	[Evga.name, Evga],
+	[MicroCenter.name, MicroCenter],
+	[NewEgg.name, NewEgg],
+	[Nvidia.name, Nvidia]
 ]);
 
 const list = new Map();

@@ -80,5 +80,5 @@ export const AmazonCa: Store = {
 			captchaLabels: ['enter the characters you see below']
 		}
 	],
-	name: 'amazonCa'
+	name: 'amazon-ca'
 };
