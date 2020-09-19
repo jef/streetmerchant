@@ -4,6 +4,7 @@ const prettyJson = format.printf(info => {
 	if (typeof info.message === 'object') {
 		info.message = JSON.stringify(info.message, null, 4);
 	}
+	
 	const dateObject = new Date();
 	const timeOf = dateObject.toLocaleTimeString();
 	return `${info.level} :: ${info.message} @${timeOf}`;
