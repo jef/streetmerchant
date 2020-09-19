@@ -85,6 +85,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | Amazon | `amazon`|
 | B&H | `bandh`|
 | EVGA | `evga`|
+| Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
 

@@ -4,39 +4,25 @@ import {Evga} from './evga';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
 import {Amazon} from './amazon';
+import {MicroCenter} from './microcenter';
 import {Config} from '../config';
 
-const list = new Map([
+const masterList = new Map([
+	['amazon', Amazon],
 	['bestbuy', BestBuy],
 	['bandh', BAndH],
 	['evga', Evga],
-	['amazon', Amazon],
+	['microcenter', MicroCenter],
 	['newegg', NewEgg],
 	['nvidia', Nvidia]
 ]);
 
-if (!Config.stores.toLowerCase().includes('bestbuy')) {
-	list.delete('bestbuy');
-}
+const list = new Map();
 
-if (!Config.stores.toLowerCase().includes('bandh')) {
-	list.delete('bandh');
-}
+const storeArray = Config.stores.split(',');
 
-if (!Config.stores.toLowerCase().includes('evga')) {
-	list.delete('evga');
-}
-
-if (!Config.stores.toLowerCase().includes('amazon')) {
-	list.delete('amazon');
-}
-
-if (!Config.stores.toLowerCase().includes('newegg')) {
-	list.delete('newegg');
-}
-
-if (!Config.stores.toLowerCase().includes('nvidia')) {
-	list.delete('nvidia');
+for (const name of storeArray) {
+	list.set(name, masterList.get(name));
 }
 
 export const Stores = Array.from(list.values());
