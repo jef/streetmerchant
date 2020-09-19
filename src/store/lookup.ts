@@ -24,16 +24,16 @@ function filterBrand(brand: string) {
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
  *
+ * @param browser Current browser in use.
  * @param store Vendor of graphics cards.
  */
-export async function lookup(store: Store) {
+export async function lookup(browser: puppeteer.Browser, store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterBrand(link.brand)) {
 			continue;
 		}
 
-		const browser = await puppeteer.launch();
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
@@ -48,7 +48,7 @@ export async function lookup(store: Store) {
 			await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
-			await browser.close();
+			await page.close();
 			continue;
 		}
 
@@ -79,7 +79,7 @@ export async function lookup(store: Store) {
 			sendNotification(givenUrl);
 		}
 
-		await browser.close();
+		await page.close();
 	}
 /* eslint-enable no-await-in-loop */
 }
