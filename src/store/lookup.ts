@@ -58,9 +58,9 @@ export async function lookup(store: Store) {
 		Logger.debug(textContent);
 
 		if (includesLabels(textContent, link.oosLabels)) {
-			Logger.info(`✖ [${store.name}] ${graphicsCard} is still out of stock`);
+			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
-			Logger.warn(`✖ [${store.name}] ${graphicsCard} gave us a CAPTCHA`);
+			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
 		} else {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
