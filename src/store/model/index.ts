@@ -6,9 +6,11 @@ import {Amazon} from './amazon';
 import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
 import {Nvidia} from './nvidia';
+import {amazonca} from './amazonca';
 
 const masterList = new Map([
 	['amazon', Amazon],
+	['amazonca', amazonca],
 	['bestbuy', BestBuy],
 	['bandh', BAndH],
 	['evga', Evga],

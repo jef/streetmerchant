@@ -32,7 +32,7 @@ export async function lookup(store: Store) {
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
 			await browser.close();
-			return;
+			continue;
 		}
 
 		const bodyHandle = await page.$('body');
