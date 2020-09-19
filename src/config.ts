@@ -9,9 +9,15 @@ const notifications = {
 		password: process.env.EMAIL_PASSWORD ?? ''
 	},
 	phone: {
-		availableCarriers: ['sprint', 'verizon', 'tmobile', 'att', 'google'],
-		carrier: process.env.PHONE_CARRIER,
-		number: process.env.PHONE_NUMBER
+		availableCarriers: new Map([
+			['sprint', 'messaging.sprintpcs.com'],
+			['verizon', 'vtext.com'],
+			['tmobile', 'tmomail.net'],
+			['att', 'txt.att.net'],
+			['google', 'msg.fi.google.com']
+		]),
+		carrier: process.env.PHONE_CARRIER ?? '',
+		number: process.env.PHONE_NUMBER ?? ''
 	},
 	slack: {
 		channel: process.env.SLACK_CHANNEL ?? '',

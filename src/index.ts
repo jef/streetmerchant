@@ -6,13 +6,6 @@ import sendNotification from './notification';
 import {Logger} from './logger';
 
 /**
- * Send test email.
- */
-if (Config.notifications.test === 'true') {
-	sendNotification('test');
-}
-
-/**
  * Starts the bot.
  */
 async function main() {
@@ -92,6 +85,13 @@ async function lookup(store: Store) {
 function isOutOfStock(domText: string, oosLabels: string[]) {
 	const domTextLowerCase = domText.toLowerCase();
 	return oosLabels.some(label => domTextLowerCase.includes(label));
+}
+
+/**
+ * Send test email.
+ */
+if (Config.notifications.test === 'true') {
+	sendNotification('test');
 }
 
 /**
