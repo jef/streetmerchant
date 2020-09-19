@@ -6,7 +6,7 @@ import * as fs from 'fs';
 const notificationSound = './resources/sounds/' + Config.notifications.playSound;
 const player = playerLib();
 
-export default function playSound() {
+export function playSound() {
 	// Check if file exists
 	fs.access(notificationSound, fs.constants.F_OK, err => {
 		if (err) {
