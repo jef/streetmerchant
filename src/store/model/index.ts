@@ -6,6 +6,7 @@ import {Amazon} from './amazon';
 import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
 import {Nvidia} from './nvidia';
+import {Store} from './store';
 
 const masterList = new Map([
 	['amazon', Amazon],
@@ -25,6 +26,6 @@ for (const name of storeArray) {
 	list.set(name, masterList.get(name));
 }
 
-export const Stores = Array.from(list.values());
+export const Stores = Array.from(list.values()) as Store[];
 
 export * from './store';

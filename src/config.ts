@@ -24,8 +24,8 @@ const notifications = {
 		channel: process.env.SLACK_CHANNEL ?? '',
 		token: process.env.SLACK_TOKEN ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST ?? 'false',
-	playSound: process.env.PLAY_SOUND ?? 'false'
+	test: process.env.NOTIFICATION_TEST === 'true',
+	playSound: process.env.PLAY_SOUND === 'true'
 };
 
 const page = {
