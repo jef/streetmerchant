@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.3.0...v1.4.0) (2020-09-19)
+
+
+### Features
+
+* **notification:** add mint mobile carrier ([#70](https://www.github.com/jef/nvidia-snatcher/issues/70)) ([8aba7ec](https://www.github.com/jef/nvidia-snatcher/commit/8aba7ecbdb0bfce06257b7b9066e8fccbd82e47e))
+* **notification:** add pushover ([#55](https://www.github.com/jef/nvidia-snatcher/issues/55)) ([c85658b](https://www.github.com/jef/nvidia-snatcher/commit/c85658bf82fdf360e5e9d8345eaa846f0572e67c))
+* **notification:** add telegram ([#71](https://www.github.com/jef/nvidia-snatcher/issues/71)) ([393d5f6](https://www.github.com/jef/nvidia-snatcher/commit/393d5f689887bf1d6f30a37eea163b2e6bbd4efa))
+* **notification:** add telus sms ([6be74a1](https://www.github.com/jef/nvidia-snatcher/commit/6be74a19f3d3f999145d17ac8e91c59db2502071))
+* **store:** add amazon.ca, fix timeout ([#75](https://www.github.com/jef/nvidia-snatcher/issues/75)) ([d4de1a4](https://www.github.com/jef/nvidia-snatcher/commit/d4de1a4638e903eb9518354ab6fb2f8c4befc347))
+* webpage toggle, sound notification, fix evga links ([#52](https://www.github.com/jef/nvidia-snatcher/issues/52)) ([a217409](https://www.github.com/jef/nvidia-snatcher/commit/a21740942bbbbe967948062fa06cfc82c31eb755))
+
+
+### Performance Improvements
+
+* browser abstraction ([#68](https://www.github.com/jef/nvidia-snatcher/issues/68)) ([#81](https://www.github.com/jef/nvidia-snatcher/issues/81)) ([ebbdfe3](https://www.github.com/jef/nvidia-snatcher/commit/ebbdfe3f6378516112f4b6e004bbd6ccf13af685))
+
 ## [1.3.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.2.0...v1.3.0) (2020-09-19)
 
 

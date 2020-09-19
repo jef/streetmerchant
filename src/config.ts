@@ -21,24 +21,24 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
-	slack: {
-		channel: process.env.SLACK_CHANNEL ?? '',
-		token: process.env.SLACK_TOKEN ?? ''
-	},
+	playSound: process.env.PLAY_SOUND ?? 'false',
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
 	},
+	slack: {
+		channel: process.env.SLACK_CHANNEL ?? '',
+		token: process.env.SLACK_TOKEN ?? ''
+	},
 	telegram: {
-		botToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
+		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
 	discord: {
 		webHookUrl: process.env.DISCORD_WEB_HOOK ?? '',
 		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
 	},
-	test: process.env.NOTIFICATION_TEST ?? 'false',
-	playSound: process.env.PLAY_SOUND ?? 'false'
+	test: process.env.NOTIFICATION_TEST ?? 'false'
 };
 
 const page = {
@@ -49,12 +49,9 @@ const page = {
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 };
 
-const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
-
-const stores = process.env.STORES ?? 'nvidia';
-
 const openBrowser = process.env.OPEN_BROWSER ?? 'true';
-
+const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
+const stores = process.env.STORES ? process.env.STORES.split(',') : ['nvidia'];
 const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
 
 export const Config = {
