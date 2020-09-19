@@ -6,3 +6,7 @@ node_modules/
 
 .env
 success-*.png
+
+*.wav
+*.mp3
+*.flac

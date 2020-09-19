@@ -67,7 +67,11 @@ async function lookup(store: Store) {
 			}
 
 			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
-			await open(givenUrl);
+
+			if (Config.openBrowser === 'true') {
+				await open(givenUrl);
+			}
+
 			sendNotification(givenUrl);
 		}
 
