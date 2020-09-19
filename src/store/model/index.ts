@@ -5,7 +5,7 @@ import {NewEgg} from './newegg';
 import {Amazon} from './amazon';
 import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
-import {Nvidia} from "./nvidia";
+import {Nvidia} from './nvidia';
 
 const masterList = new Map([
 	['amazon', Amazon],
