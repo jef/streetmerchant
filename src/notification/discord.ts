@@ -14,9 +14,11 @@ export function sendDiscordMessage(text: string, link: Link) {
 			embed.addField('URL', text, true);
 			embed.addField('Brand', link.brand, true);
 			embed.addField('Model', link.model, true);
-			if (notifyGroup != '') {
+
+			if (notifyGroup !== '') {
 				embed.addField('Attention', notifyGroup, true);
 			}
+
 			embed.setColor(65340);
 			embed.setTimestamp();
 			await hook.send(embed);
