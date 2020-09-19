@@ -1,7 +1,7 @@
 ---
 name: 🐛 Bug report
 about: Report a bug for this project
-title: 'bug: '
+title: ''
 labels: 'bug'
 assignees: jef
 
@@ -9,7 +9,9 @@ assignees: jef
 
 ### Description
 
-<!-- Describe the feature here. -->
+<!-- Describe the bug here. -->
+<!-- Please be as detailed as possible. -->
+<!-- Include OS, screenshots and console outputs. -->
 
 ### Possible solution
 
