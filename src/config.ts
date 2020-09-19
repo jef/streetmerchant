@@ -25,6 +25,10 @@ const notifications = {
 		channel: process.env.SLACK_CHANNEL ?? '',
 		token: process.env.SLACK_TOKEN ?? ''
 	},
+	pushover: {
+		token: process.env.PUSHOVER_TOKEN,
+		user: process.env.PUSHOVER_USER
+	},
 	test: process.env.NOTIFICATION_TEST ?? 'false',
 	playSound: process.env.PLAY_SOUND ?? 'false'
 };
