@@ -25,10 +25,11 @@ const notifications = {
 };
 
 const page = {
-	height: 1920,
+	capture: process.env.SCREENSHOT ?? 'true',
+	width: 1920,
+	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
-	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
-	width: 1080
+	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 };
 
 const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
