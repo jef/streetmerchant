@@ -21,7 +21,7 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
-	playSound: process.env.PLAY_SOUND,
+	playSound: process.env.PLAY_SOUND ?? '',
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN,
 		user: process.env.PUSHOVER_USER
@@ -47,7 +47,7 @@ const page = {
 
 const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
 
-const stores = process.env.STORES ?? 'nvidia';
+const stores = process.env.STORES ? process.env.STORES.split(',') : ['nvidia'];
 
 const openBrowser = process.env.OPEN_BROWSER === 'true';
 

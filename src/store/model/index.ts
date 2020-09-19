@@ -9,6 +9,7 @@ import {Nvidia} from './nvidia';
 import {AmazonCa} from './amazon-ca';
 import {Store} from './store';
 
+
 const masterList = new Map([
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
