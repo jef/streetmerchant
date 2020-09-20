@@ -2,30 +2,12 @@ import puppeteer from 'puppeteer-extra';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import adblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 import {Config} from './config';
-import {Store, Stores} from './store/model';
+import {Stores} from './store/model';
 import {Logger} from './logger';
-import {lookup} from './store';
-import {Browser} from 'puppeteer';
+import {getSleepTime, tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
 puppeteer.use(adblockerPlugin({blockTrackers: true}));
-
-function getSleepTime() {
-	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));
-}
-
-async function tryLookupAndLoop(browser: Browser, store: Store) {
-	Logger.debug(`[${store.name}] Starting lookup...`);
-	try {
-		await lookup(browser, store);
-	} catch (error) {
-		Logger.error(error);
-	}
-
-	const sleepTime = getSleepTime();
-	Logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
-	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
-}
 
 /**
  * Starts the bot.

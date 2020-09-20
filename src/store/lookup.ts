@@ -26,7 +26,7 @@ function filterBrand(brand: string) {
  * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
-export async function lookup(browser: Browser, store: Store) {
+async function lookup(browser: Browser, store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterBrand(link.brand)) {
@@ -80,4 +80,21 @@ export async function lookup(browser: Browser, store: Store) {
 		await page.close();
 	}
 /* eslint-enable no-await-in-loop */
+}
+
+export function getSleepTime() {
+	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));
+}
+
+export async function tryLookupAndLoop(browser: Browser, store: Store) {
+	Logger.debug(`[${store.name}] Starting lookup...`);
+	try {
+		await lookup(browser, store);
+	} catch (error) {
+		Logger.error(error);
+	}
+
+	const sleepTime = getSleepTime();
+	Logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }
