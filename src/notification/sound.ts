@@ -1,9 +1,9 @@
-import playerLib = require('play-sound');
+import playerLib from 'play-sound';
 import {Config} from '../config';
 import {Logger} from '../logger';
-import * as fs from 'fs';
+import fs from 'fs';
 
-const notificationSound = `./resources/sounds/${Config.notifications.playSound}`;
+const notificationSound = Config.notifications.playSound;
 const player = playerLib();
 
 export function playSound() {

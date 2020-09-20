@@ -3,12 +3,6 @@ import {Store} from './store';
 export const BAndH: Store = {
 	links: [
 		{
-			brand: 'gigabyte',
-			model: 'black',
-			url: 'https://www.bhphotovideo.com/c/product/1593333-REG/gigabyte_gv_n3080gaming_oc_10gd_geforce_rtx_3080_gaming.html?SID=s1600391647213ytuua52439',
-			oosLabels: ['notify when available']
-		},
-		{
 			brand: 'asus',
 			model: 'tuf',
 			url: 'https://www.bhphotovideo.com/c/product/1593649-REG/asus_tuf_rtx3080_10g_gaming_tuf_gaming_geforce_rtx.html',
@@ -16,7 +10,7 @@ export const BAndH: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'gaming-oc',
+			model: 'gaming oc',
 			url: 'https://www.bhphotovideo.com/c/product/1593333-REG/gigabyte_gv_n3080gaming_oc_10gd_geforce_rtx_3080_gaming.html',
 			oosLabels: ['notify when available']
 		},
@@ -28,31 +22,31 @@ export const BAndH: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf-oc',
+			model: 'tuf oc',
 			url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html',
 			oosLabels: ['notify when available']
 		},
 		{
 			brand: 'msi',
-			model: 'xtrio',
+			model: 'gaming x trio',
 			url: 'https://www.bhphotovideo.com/c/product/1593996-REG/msi_g3080gxt10_geforce_rtx_3080_gaming.html',
 			oosLabels: ['notify when available']
 		},
 		{
 			brand: 'msi',
-			model: 'ventus',
+			model: 'ventus 3x oc',
 			url: 'https://www.bhphotovideo.com/c/product/1593997-REG/msi_g3080v3x10c_geforce_rtx_3080_ventus.html',
 			oosLabels: ['notify when available']
 		},
 		{
 			brand: 'msi',
-			model: 'TRIO2',
+			model: 'gaming x trio - duplicate',
 			url: 'https://www.bhphotovideo.com/c/product/1593645-REG/msi_geforce_rtx_3080_gaming.html',
 			oosLabels: ['notify when available']
 		},
 		{
 			brand: 'msi',
-			model: 'ventus-oc',
+			model: 'ventus 3x oc - duplicate',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html',
 			oosLabels: ['notify when available']
 		}
