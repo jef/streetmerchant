@@ -1,6 +1,6 @@
 import {Browser} from 'puppeteer';
 
-interface Link {
+export interface Link {
 	series: string;
 	brand: string;
 	model: string;
