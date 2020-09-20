@@ -52,6 +52,13 @@ export const Amazon: Store = {
 			captchaLabels: ['enter the characters you see below']
 		},
 		{
+			brand: 'asus',
+			model: 'tuf non-oc',
+			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
 			brand: 'msi',
 			model: 'ventus',
 			url: 'https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp',
