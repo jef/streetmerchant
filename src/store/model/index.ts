@@ -1,3 +1,5 @@
+
+import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {Asus} from './asus';
@@ -11,6 +13,7 @@ import {Nvidia} from './nvidia';
 import {Store} from './store';
 
 const masterList = new Map([
+	[Adorama.name, Adorama],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[Asus.name, Asus],
