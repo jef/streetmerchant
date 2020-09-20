@@ -21,10 +21,10 @@ const notifications = {
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
 	},
-	playSound: process.env.PLAY_SOUND ?? 'false',
+	playSound: process.env.PLAY_SOUND ?? '',
 	pushover: {
-		token: process.env.PUSHOVER_TOKEN,
-		user: process.env.PUSHOVER_USER
+		token: process.env.PUSHOVER_TOKEN ?? '',
+		user: process.env.PUSHOVER_USER ?? ''
 	},
 	slack: {
 		channel: process.env.SLACK_CHANNEL ?? '',
