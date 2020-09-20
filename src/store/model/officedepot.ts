@@ -1,7 +1,7 @@
 import { Store } from './store';
 
 export const OfficeDepot: Store = {
-  cartUrl: '',
+
   links: [
     {
       brand: 'pny',
