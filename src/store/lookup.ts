@@ -67,9 +67,9 @@ async function lookup(browser: Browser, store: Store) {
 		}
 
 		const stockHandle = await page.$(store.labels.inStock.container);
-		const visible = await page.evaluate((e) => e.offsetWidth > 0 && e.offsetHeight > 0, stockHandle);
+		const visible = await page.evaluate(element => element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
 		if (visible) {
-			const stockContent = await page.evaluate((e) => e.textContent, stockHandle);
+			const stockContent = await page.evaluate(element => element.textContent, stockHandle);
 
 			if (includesLabels(stockContent, store.labels.inStock.labels)) {
 				Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
@@ -95,7 +95,7 @@ async function lookup(browser: Browser, store: Store) {
 
 		if (store.labels.captcha) {
 			const captchaHandle = await page.$(store.labels.captcha.container);
-			const captchaContent = await page.evaluate((e) => e.textContent, captchaHandle);
+			const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
 
 			if (includesLabels(captchaContent, store.labels.captcha.labels)) {
 				Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
