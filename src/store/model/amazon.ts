@@ -53,21 +53,21 @@ export const Amazon: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'gaming oc',
+			model: 'gaming-oc',
 			url: 'https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3080GAMING/dp/B08HJTH61J?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable'],
 			captchaLabels: ['enter the characters you see below']
 		},
 		{
 			brand: 'gigabyte',
-			model: 'eagle oc',
+			model: 'eagle-oc',
 			url: 'https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3080EAGLE/dp/B08HJS2JLJ?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable'],
 			captchaLabels: ['enter the characters you see below']
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc',
+			model: 'tuf-oc',
 			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable'],
 			captchaLabels: ['enter the characters you see below']

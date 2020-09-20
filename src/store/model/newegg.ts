@@ -39,7 +39,7 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'ventus oc',
+			model: 'ventus-oc',
 			url: 'https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g-oc/p/N82E16814137598',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
@@ -53,14 +53,14 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'gaming oc',
+			model: 'gaming-oc',
 			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080gaming-oc-10gd/p/N82E16814932329',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
 		},
 		{
 			brand: 'gigabyte',
-			model: 'eagle oc',
+			model: 'eagle-oc',
 			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080eagle-oc-10gd/p/N82E16814932330',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
@@ -81,14 +81,14 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc',
+			model: 'tuf-oc',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
 		},
 		{
 			brand: 'zotac',
-			model: 'trinity oc',
+			model: 'trinity-oc',
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
