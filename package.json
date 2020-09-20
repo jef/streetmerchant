@@ -42,6 +42,7 @@
     "play-sound": "^1.1.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.0.2",
-    "xo": "^0.33.1"
+    "xo": "^0.33.1",
+    "discord-webhook-node": "^1.1.8"
   }
 }

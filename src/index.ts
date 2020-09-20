@@ -55,7 +55,7 @@ async function main() {
  * Send test email.
  */
 if (Config.notifications.test) {
-	sendNotification('test');
+	sendNotification('http://test.com/', {brand: 'THE BEST BRAND', model: 'VENTUS', oosLabels: [], url: '', cartUrl: ''});
 }
 
 /**

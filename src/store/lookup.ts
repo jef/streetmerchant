@@ -74,7 +74,7 @@ export async function lookup(browser: Browser, store: Store) {
 				await open(givenUrl);
 			}
 
-			sendNotification(givenUrl);
+			sendNotification(givenUrl, link);
 		}
 
 		await page.close();
