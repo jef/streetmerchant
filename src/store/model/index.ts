@@ -7,8 +7,10 @@ import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
 import {Nvidia} from './nvidia';
 import {AmazonCa} from './amazon-ca';
+import {Adorama} from './adorama';
 
 const masterList = new Map([
+	[Adorama.name, Adorama],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[BestBuy.name, BestBuy],
