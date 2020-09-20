@@ -88,8 +88,14 @@ export const NewEgg: Store = {
 		}
 	],
 	labels: {
-		captcha: ['are you a human?'],
-		inStock: ['add to cart']
+		captcha: {
+			container: 'body',
+			labels: ['are you a human?']
+		},
+		inStock: {
+			container: 'body',
+			labels: ['add to cart']
+		}
 	},
 	name: 'newegg'
 };

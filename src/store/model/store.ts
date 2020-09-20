@@ -1,3 +1,8 @@
+export interface Element {
+	container: string;
+	labels: string[];
+}
+
 export interface Link {
 	brand: string;
 	cartUrl?: string;
@@ -7,8 +12,8 @@ export interface Link {
 }
 
 export interface Labels {
-	captcha?: string[];
-	inStock: string[];
+	captcha?: Element;
+	inStock: Element;
 }
 
 export interface Store {

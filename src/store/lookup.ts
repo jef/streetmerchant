@@ -66,12 +66,12 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		const bodyHandle = await page.$('body');
-		const textContent = await page.evaluate(body => body.textContent, bodyHandle);
+		const stockHandle = await page.waitForSelector(store.labels.inStock.container, {visible: true});
+		const stockContent = await page.evaluate(container => container.textContent, stockHandle);
 
-		Logger.debug(textContent);
+		Logger.debug(stockContent);
 
-		if (includesLabels(textContent, store.labels.inStock)) {
+		if (includesLabels(stockContent, store.labels.inStock.labels)) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
@@ -87,10 +87,24 @@ async function lookup(browser: Browser, store: Store) {
 			}
 
 			sendNotification(givenUrl, link);
-		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
-			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
-			await delay(getSleepTime());
-		} else if (response && response.status() === 429) {
+
+			await page.close();
+			continue;
+		}
+
+		if (store.labels.captcha) {
+			const captchaHandle = await page.$(store.labels.captcha.container);
+			const captchaContent = await page.evaluate(container => container.textContent, captchaHandle);
+
+			if (includesLabels(captchaContent, store.labels.captcha.labels)) {
+				Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+				await delay(getSleepTime());
+				await page.close();
+				continue;
+			}
+		}
+
+		if (response && response.status() === 429) {
 			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);

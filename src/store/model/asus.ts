@@ -3,6 +3,12 @@ import {Store} from './store';
 export const Asus: Store = {
 	links: [
 		{
+			brand: 'TEST',
+			model: 'CARD',
+			series: 'debug',
+			url: 'https://store.asus.com/us/item/202003AM280000002/'
+		},
+		{
 			brand: 'asus',
 			model: 'tuf oc',
 			series: '3080',
@@ -16,7 +22,10 @@ export const Asus: Store = {
 		}
 	],
 	labels: {
-		inStock: ['add to cart']
+		inStock: {
+			container: '#item_add_cart',
+			labels: ['add to cart']
+		}
 	},
 	name: 'asus'
 };

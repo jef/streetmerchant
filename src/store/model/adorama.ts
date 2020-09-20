@@ -58,8 +58,10 @@ export const Adorama: Store = {
 		}
 	],
 	labels: {
-		captcha: ['please verify you are a human'],
-		inStock: ['add to cart']
+		inStock: {
+			container: 'body',
+			labels: ['add to cart']
+		}
 	},
 	name: 'adorama'
 };

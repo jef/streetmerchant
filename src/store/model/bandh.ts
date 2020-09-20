@@ -56,10 +56,12 @@ export const BAndH: Store = {
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html'
 		}
-
 	],
 	labels: {
-		inStock: ['add to cart']
+		inStock: {
+			container: 'body',
+			labels: ['add to cart']
+		}
 	},
 	name: 'bandh'
 };

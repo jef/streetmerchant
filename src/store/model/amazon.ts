@@ -88,8 +88,14 @@ export const Amazon: Store = {
 		}
 	],
 	labels: {
-		captcha: ['enter the characters you see below'],
-		inStock: ['add to cart', 'buy now']
+		captcha: {
+			container: 'body',
+			labels: ['enter the characters you see below']
+		},
+		inStock: {
+			container: 'body',
+			labels: ['add to cart']
+		}
 	},
 	name: 'amazon'
 };
