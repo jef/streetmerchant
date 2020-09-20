@@ -70,7 +70,7 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
 
-			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
+			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 			if (Config.openBrowser === 'true') {
 				await open(givenUrl);
