@@ -11,14 +11,14 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'black gaming',
+			model: 'xc3 black gaming',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3881-kr/p/N82E16814487522',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
 		},
 		{
 			brand: 'evga',
-			model: 'argb led icx3',
+			model: 'xc3 gaming',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
@@ -74,14 +74,14 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rogue strix',
+			model: 'rog strix gaming',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
 		},
 		{
 			brand: 'asus',
-			model: 'tuf2',
+			model: 'tuf oc,
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
