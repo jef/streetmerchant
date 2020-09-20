@@ -1,6 +1,6 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Cyc7nrz)
 
-[FAQ](#FAQ) | [Discord](https://discord.gg/3duFzwk) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
+[FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
 The purpose of this bot is to get an Nvidia card. It tries multiple things to do that.
 
@@ -28,13 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Best Buy** | **B&H** | **Newegg** | **Nvidia** | **EVGA** | **Amazon** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**|  |  |  |  |  |  |
-| **3080** | `✔` | `✔` | `ℹ` | `✔` | `✔` | `✔` |
-| **3090** |  |  |  |  |  |  |
-
-> :point_right: (`ℹ`) Work in progress. Catchpa problems are intermittent. Use if you'd like, but expect problems.
+| | **Amazon** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | | |
 
 ## Installation and prerequisites
 
@@ -58,12 +56,12 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Customization
 
-There is not much to configure (as of now), but there are some options that you can choose to utilize.
+To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking.
 
-First, you're going to need to copy the `.env.example` to `.env`. The current options are:
+Here is a list of variables that you can use to customize your newly copied `.env` file:
 
 | **Environment variable** | **Description** |
-|:---:|:---:|
+|:---:|---|
 | `EMAIL_USERNAME` | Gmail address (e.g., `jensen.robbed.us@gmail.com`); optional |
 | `EMAIL_PASSWORD` | Gmail password; see below if you have MFA; optional |
 | `NOTIFICATION_TEST` | Test all the notifications configured; optional, default: `false` |
@@ -71,12 +69,15 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | `PHONE_NUMBER` | 10 digit phone number (e.g., `1234567890`); optional, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS; optional, email configuration required |
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle; optional, default: `5000` |
+| `SHOW_ONLY_BRANDS` | If set, will only show specified brands, seperated by `,` |
 | `SLACK_CHANNEL` | Slack channel for posting (e.g., `update`); optional |
-| `SLACK_TOKEN` | Slack API token; optional
+| `SLACK_TOKEN` | Slack API token; optional |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped; optional, default: `nvidia` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found, default: `true` |
 | `PLAY_SOUND` | Play this sound notification if a card is found.; optional |
 | `SCREENSHOT` | Capture screenshot of page on successful hit; optional, default `true` |
+| `TELEGRAM_ACCESS_TOKEN` | Telegram access token; optional |
+| `TELEGRAM_CHAT_ID` | Telegram chat ID; optional |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -87,6 +88,7 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | **Stores** | **Environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
+| Amazon.ca | `amazon-ca`|
 | Amazon | `amazon`|
 | B&H | `bandh`|
 | EVGA | `evga`|
@@ -94,18 +96,17 @@ First, you're going to need to copy the `.env.example` to `.env`. The current op
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
 
-> :point_right: Look at [`.env.example`](.env.example) for an example for `.env`.
-
 #### Supported carriers
 
-| **Carrier** | **Environment variable** |
-|:---:|:---:|
-| AT&T | `att`|
-| Google | `google`|
-| Sprint | `sprint`|
-| Telus | `telus`|
-| T-Mobile | `tmobile`|
-| Verizon | `verizone`|
+| **Carrier** | **Environment variable** | **Notes** |
+|:---:|:---:|:---:|
+| AT&T | `att`| |
+| Google | `google`| |
+| Mint | `mint`| |
+| Sprint | `sprint`| |
+| Telus | `telus`| |
+| T-Mobile | `tmobile`| |
+| Verizon | `verizon`| Works with Visible |
 
 ## FAQ
 

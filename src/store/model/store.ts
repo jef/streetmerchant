@@ -2,11 +2,13 @@ interface Link {
 	brand: string;
 	model: string;
 	url: string;
-	matchLabels: string[];
+	oosLabels: string[];
+	captchaLabels?: string[];
+	elemSelector?: string;
 }
 
 export interface Store {
-	cartUrl: string;
+	cartUrl?: string;
 	links: Link[];
 	name: string;
 }

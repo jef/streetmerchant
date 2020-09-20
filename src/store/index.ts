@@ -1,2 +1,2 @@
 export * from './lookup';
-export * from './in-stock';
+export * from './includes-labels';

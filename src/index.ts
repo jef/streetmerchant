@@ -3,18 +3,22 @@ import {Stores} from './store/model';
 import {Logger} from './logger';
 import {sendNotification} from './notification';
 import {lookup} from './store';
+import puppeteer from 'puppeteer';
 
 /**
  * Starts the bot.
  */
 async function main() {
 	const results = [];
+	const browser = await puppeteer.launch();
+
 	for (const store of Stores) {
 		Logger.debug(store.links);
-		results.push(lookup(store));
+		results.push(lookup(browser, store));
 	}
 
 	await Promise.all(results);
+	await browser.close();
 
 	Logger.info('↗ trying stores again');
 	setTimeout(main, Config.rateLimitTimeout);
