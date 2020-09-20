@@ -71,14 +71,7 @@ async function lookup(browser: Browser, store: Store) {
 
 		Logger.debug(textContent);
 
-		if (includesLabels(textContent, store.labels.outOfStock)) {
-			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
-		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
-			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
-			await delay(getSleepTime());
-		} else if (response && response.status() === 429) {
-			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-		} else {
+		if (includesLabels(textContent, store.labels.inStock)) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
@@ -94,6 +87,13 @@ async function lookup(browser: Browser, store: Store) {
 			}
 
 			sendNotification(givenUrl, link);
+		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
+			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+			await delay(getSleepTime());
+		} else if (response && response.status() === 429) {
+			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		} else {
+			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		}
 
 		await page.close();

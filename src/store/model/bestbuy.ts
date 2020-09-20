@@ -59,7 +59,7 @@ export const BestBuy: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['sold out', 'coming soon']
+		inStock: ['add to cart']
 	},
 	name: 'bestbuy'
 };

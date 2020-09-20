@@ -89,7 +89,7 @@ export const NewEgg: Store = {
 	],
 	labels: {
 		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
+		inStock: ['add to cart']
 	},
 	name: 'newegg'
 };

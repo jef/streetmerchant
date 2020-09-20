@@ -46,7 +46,7 @@ export const MicroCenter: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['sold out']
+		inStock: ['add to cart']
 	},
 	name: 'microcenter'
 };

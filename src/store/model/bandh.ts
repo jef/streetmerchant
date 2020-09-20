@@ -59,7 +59,7 @@ export const BAndH: Store = {
 
 	],
 	labels: {
-		outOfStock: ['notify when available']
+		inStock: ['add to cart']
 	},
 	name: 'bandh'
 };

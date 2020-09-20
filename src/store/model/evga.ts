@@ -34,7 +34,7 @@ export const Evga: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['out of stock']
+		inStock: ['add to cart']
 	},
 	name: 'evga'
 };

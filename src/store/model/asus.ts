@@ -16,7 +16,7 @@ export const Asus: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['coming soon', 'temporarily sold out']
+		inStock: ['add to cart']
 	},
 	name: 'asus'
 };

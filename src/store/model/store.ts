@@ -7,8 +7,8 @@ export interface Link {
 }
 
 export interface Labels {
-	outOfStock: string[];
 	captcha?: string[];
+	inStock: string[];
 }
 
 export interface Store {

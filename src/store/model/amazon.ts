@@ -89,7 +89,7 @@ export const Amazon: Store = {
 	],
 	labels: {
 		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable', 'available from these sellers']
+		inStock: ['add to cart', 'buy now']
 	},
 	name: 'amazon'
 };

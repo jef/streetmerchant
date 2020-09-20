@@ -77,7 +77,7 @@ export const AmazonCa: Store = {
 	],
 	labels: {
 		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable']
+		inStock: ['add to cart', 'buy now']
 	},
 	name: 'amazon-ca'
 };
