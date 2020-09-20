@@ -78,6 +78,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
+| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, E.g.: `3080` |
 | `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |

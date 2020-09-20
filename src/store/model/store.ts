@@ -1,13 +1,18 @@
 export interface Link {
-	cartUrl?: string;
+	series: string;
 	brand: string;
 	model: string;
 	url: string;
-	oosLabels: string[];
-	captchaLabels?: string[];
+	cartUrl?: string;
+}
+
+export interface Labels {
+	oosList: string[];
+	captchaList?: string[];
 }
 
 export interface Store {
 	links: Link[];
+	labels: Labels;
 	name: string;
 }

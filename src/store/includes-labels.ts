@@ -1,10 +1,10 @@
 /**
- * Checks if DOM has any out-of-stock related text.
+ * Checks if DOM has any related text.
  *
  * @param domText Complete DOM of website.
- * @param oosLabels Out-of-stock labels.
+ * @param searchLabels Search labels for a match.
  */
-export function includesLabels(domText: string, oosLabels: string[]): boolean {
+export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
-	return oosLabels.some(label => domTextLowerCase.includes(label));
+	return searchLabels.some(label => domTextLowerCase.includes(label));
 }

@@ -2,11 +2,10 @@ import {Link} from '../store/model';
 import {sendNotification} from '../notification';
 
 const link: Link = {
+	series: 'debug',
 	brand: 'brand',
 	cartUrl: 'http://example.com/',
-	captchaLabels: ['captcha'],
 	model: 'model',
-	oosLabels: ['out of stock'],
 	url: 'http://example.com/'
 };
 
