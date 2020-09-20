@@ -28,11 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Amazon** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | | | | | |
+| | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | | | |
 
 ## Installation and prerequisites
 
@@ -65,13 +65,15 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|---|
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA | 
+| `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
+| `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `NOTIFICATION_TEST` | Test all the notifications configured | Default: `false` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
 | `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
-| `PUSHOVER_TOKEN` | Pushover access token |
+| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
 | `PUSHOVER_USERNAME` | Pushover username |
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle | Default: `5000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
@@ -91,8 +93,9 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | **Stores** | **Environment variable** |
 |:---:|:---:|
 | Best Buy | `bestbuy`|
-| Amazon.ca | `amazon-ca`|
 | Amazon | `amazon`|
+| Amazon.ca | `amazon-ca`|
+| ASUS | `asus` |
 | B&H | `bandh`|
 | EVGA | `evga`|
 | Micro Center | `microcenter`|

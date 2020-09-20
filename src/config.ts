@@ -3,6 +3,14 @@ import {config} from 'dotenv';
 
 config({path: resolve(__dirname, '../.env')});
 
+const browser = {
+	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
+	open: process.env.OPEN_BROWSER === 'true',
+	rateLimitTimeout: process.env.RATE_LIMIT_TIMEOUT ? Number(process.env.RATE_LIMIT_TIMEOUT) : 5000
+};
+
+const logLevel = process.env.LOG_LEVEL ?? 'info';
+
 const notifications = {
 	email: {
 		username: process.env.EMAIL_USERNAME ?? '',
@@ -38,27 +46,26 @@ const notifications = {
 		webHookUrl: process.env.DISCORD_WEB_HOOK ?? '',
 		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST ?? 'false'
+	test: process.env.NOTIFICATION_TEST === 'true'
 };
 
 const page = {
-	capture: process.env.SCREENSHOT ?? 'true',
+	capture: process.env.SCREENSHOT === 'true',
 	width: 1920,
 	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 };
 
-const openBrowser = process.env.OPEN_BROWSER ?? 'true';
-const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
-const stores = process.env.STORES ? process.env.STORES.split(',') : ['nvidia'];
-const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
+const store = {
+	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
+	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia']
+};
 
 export const Config = {
+	browser,
+	logLevel,
 	notifications,
-	rateLimitTimeout,
 	page,
-	stores,
-	openBrowser,
-	showOnlyBrands
+	store
 };

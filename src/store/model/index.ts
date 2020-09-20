@@ -1,16 +1,19 @@
+import {Amazon} from './amazon';
+import {AmazonCa} from './amazon-ca';
+import {Asus} from './asus';
 import {BestBuy} from './bestbuy';
 import {BAndH} from './bandh';
-import {Evga} from './evga';
-import {NewEgg} from './newegg';
-import {Amazon} from './amazon';
-import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
+import {Evga} from './evga';
+import {MicroCenter} from './microcenter';
+import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
-import {AmazonCa} from './amazon-ca';
+import {Store} from './store';
 
 const masterList = new Map([
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
+	[Asus.name, Asus],
 	[BestBuy.name, BestBuy],
 	[BAndH.name, BAndH],
 	[Evga.name, Evga],
@@ -21,10 +24,10 @@ const masterList = new Map([
 
 const list = new Map();
 
-for (const name of Config.stores) {
+for (const name of Config.store.stores) {
 	list.set(name, masterList.get(name));
 }
 
-export const Stores = Array.from(list.values());
+export const Stores = Array.from(list.values()) as Store[];
 
 export * from './store';
