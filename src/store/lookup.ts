@@ -12,11 +12,11 @@ import {includesLabels} from './includes-labels';
  * @param brand The brand of the GPU
  */
 function filterBrand(brand: string) {
-	if (Config.showOnlyBrands.length === 0) {
+	if (Config.store.showOnlyBrands.length === 0) {
 		return true;
 	}
 
-	return Config.showOnlyBrands.includes(brand);
+	return Config.store.showOnlyBrands.includes(brand);
 }
 
 /**
@@ -70,7 +70,7 @@ export async function lookup(browser: Browser, store: Store) {
 
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
-			if (Config.openBrowser) {
+			if (Config.browser.open) {
 				await open(givenUrl);
 			}
 

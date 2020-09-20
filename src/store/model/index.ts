@@ -1,4 +1,3 @@
-
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {Asus} from './asus';
@@ -25,7 +24,7 @@ const masterList = new Map([
 
 const list = new Map();
 
-for (const name of Config.stores) {
+for (const name of Config.store.stores) {
 	list.set(name, masterList.get(name));
 }
 
