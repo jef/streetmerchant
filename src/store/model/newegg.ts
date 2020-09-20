@@ -11,12 +11,6 @@ export const NewEgg: Store = {
 		},
 		{
 			series: '3080',
-			brand: 'evga',
-			model: 'xc3 ultra',
-			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
-		},
-		{
-			series: '3080',
 			brand: 'asus',
 			model: 'tuf',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453'
@@ -32,6 +26,12 @@ export const NewEgg: Store = {
 			brand: 'evga',
 			model: 'xc3',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521'
+		},
+		{
+			series: '3080',
+			brand: 'evga',
+			model: 'xc3 ultra',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
 		},
 		{
 			series: '3080',
