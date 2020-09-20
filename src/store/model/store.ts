@@ -5,13 +5,9 @@ interface Link {
 	brand: string;
 	model: string;
 	url: string;
-	openCartAction?: OpenCartAction;
+	openCartAction?: (page: Page) => void;
 	oosLabels: string[];
 	captchaLabels?: string[];
-}
-
-interface OpenCartAction {
-	(page: Page): void;
 }
 
 export interface Store {
