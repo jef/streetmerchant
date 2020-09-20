@@ -74,7 +74,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
 | `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
-| `PUSHOVER_USERNAME` | Pushover username |
+| `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
