@@ -27,7 +27,7 @@ const masterList = new Map([
 
 const list = new Map();
 
-for (const name of Config.stores) {
+for (const name of Config.store.stores) {
 	list.set(name, masterList.get(name));
 }
 
