@@ -9,7 +9,7 @@ import {Evga} from './evga';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
-
+import {Store} from './store';
 
 const masterList = new Map([
 	[Amazon.name, Amazon],
@@ -29,6 +29,6 @@ for (const name of Config.stores) {
 	list.set(name, masterList.get(name));
 }
 
-export const Stores = Array.from(list.values());
+export const Stores = Array.from(list.values()) as Store[];
 
 export * from './store';

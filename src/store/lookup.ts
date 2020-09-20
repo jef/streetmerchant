@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import {Browser, Response} from 'puppeteer';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import open from 'open';
@@ -23,11 +23,10 @@ function filterBrand(brand: string) {
  * Responsible for looking up information about a each product within
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
- *
- * @param browser Current browser in use.
+ * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
-export async function lookup(browser: puppeteer.Browser, store: Store) {
+export async function lookup(browser: Browser, store: Store) {
 /* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterBrand(link.brand)) {
@@ -37,14 +36,10 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
-		await page.setViewport({
-			height: Config.page.height,
-			width: Config.page.width
-		});
 
 		const graphicsCard = `${link.brand} ${link.model}`;
 
-		let response: puppeteer.Response | null;
+		let response: Response | null;
 		try {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
@@ -68,14 +63,14 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
-			if (Config.page.capture === 'true') {
+			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
 
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
-			if (Config.openBrowser === 'true') {
+			if (Config.openBrowser) {
 				await open(givenUrl);
 			}
 
