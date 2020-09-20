@@ -4,7 +4,8 @@ import adblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 import {Config} from './config';
 import {Stores} from './store/model';
 import {Logger} from './logger';
-import {getSleepTime, tryLookupAndLoop} from './store';
+import {tryLookupAndLoop} from './store';
+import {getSleepTime} from './util';
 
 puppeteer.use(stealthPlugin());
 puppeteer.use(adblockerPlugin({blockTrackers: true}));

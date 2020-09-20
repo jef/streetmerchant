@@ -5,6 +5,7 @@ import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
+import {delay, getSleepTime} from '../util';
 
 /**
  * Returns true if the brand should be checked for stock
@@ -56,7 +57,8 @@ async function lookup(browser: Browser, store: Store) {
 		if (includesLabels(textContent, link.oosLabels)) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
-			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
+			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
 			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
@@ -80,10 +82,6 @@ async function lookup(browser: Browser, store: Store) {
 		await page.close();
 	}
 /* eslint-enable no-await-in-loop */
-}
-
-export function getSleepTime() {
-	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
