@@ -90,7 +90,7 @@ export const NewEgg: Store = {
 	],
 	labels: {
 		captcha: ['are you a human?'],
-		outOfStock: ['auto notify']
+		outOfStock: ['auto notify', 'see similar items below']
 	},
 	name: 'newegg'
 };
