@@ -1,3 +1,5 @@
+import {Page} from 'puppeteer';
+
 interface Link {
 	cartUrl?: string;
 	brand: string;
