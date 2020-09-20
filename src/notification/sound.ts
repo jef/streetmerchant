@@ -15,7 +15,7 @@ export function playSound() {
 		}
 
 		player.play(notificationSound, (err: string) => {
-			Logger.info('✔ playing sound');
+			Logger.info('↗ playing sound');
 
 			if (err) {
 				Logger.error(`error playing sound: ${err}`);

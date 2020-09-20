@@ -4,7 +4,7 @@ import {timestampUrlParam} from "../timestamp-url-param";
 import {Logger} from "../../logger";
 import open from 'open';
 
-// for testing, use in stock 2060 SUPER, ID: 5379432500
+const fe2060SuperId = 5379432500;
 const fe3080Id = 5438481700;
 const locale = 'en_us';
 
@@ -46,10 +46,17 @@ function fallback3080CartUrl(): string {
 export const Nvidia: Store = {
 	links: [
 		{
+			series: 'debug',
+			brand: 'TEST',
+			model: 'CARD',
+			url: digitalRiverStockUrl(fe2060SuperId),
+			cartUrl: 'https://www.nvidia.com/en-us/shop/geforce'
+		},
+		{
+			series: '3080',
 			brand: 'nvidia',
 			model: 'founders edition 3080',
 			url: digitalRiverStockUrl(fe3080Id),
-			oosLabels: ['product_inventory_out_of_stock', 'rate limit exceeded'],
 			openCartAction: async (browser: Browser) => {
 				const page = await browser.newPage();
 				Logger.info('🚀🚀🚀 [nvidia] nvidia founders edition 3080, starting auto add to cart... 🚀🚀🚀');
@@ -77,5 +84,8 @@ export const Nvidia: Store = {
 			}
 		}
 	],
+	labels: {
+		oosList: ['product_inventory_out_of_stock', 'rate limit exceeded']
+	},
 	name: 'nvidia'
 };

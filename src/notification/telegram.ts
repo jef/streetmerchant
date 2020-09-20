@@ -12,7 +12,7 @@ export function sendTelegramMessage(text: string) {
 	(async () => {
 		try {
 			await client.sendMessage(telegram.chatId, text);
-			Logger.info(`✔ telegram message sent to '${telegram.chatId}': ${text}`);
+			Logger.info(`↗ telegram message sent to '${telegram.chatId}': ${text}`);
 		} catch (error) {
 			Logger.error(error);
 		}

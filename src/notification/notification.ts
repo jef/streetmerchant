@@ -5,10 +5,12 @@ import {playSound} from './sound';
 import {sendSlackMessage} from './slack';
 import {sendPushoverNotification} from './pushover';
 import {sendTelegramMessage} from './telegram';
+import {sendDiscordMessage} from './discord';
+import {Link} from '../store/model';
 
 const notifications = Config.notifications;
 
-export function sendNotification(cartUrl: string) {
+export function sendNotification(cartUrl: string, link: Link) {
 	if (notifications.email.username && notifications.email.password) {
 		sendEmail(cartUrl);
 	}
@@ -19,6 +21,10 @@ export function sendNotification(cartUrl: string) {
 
 	if (notifications.telegram.accessToken && notifications.telegram.chatId) {
 		sendTelegramMessage(cartUrl);
+	}
+
+	if (notifications.discord.webHookUrl) {
+		sendDiscordMessage(cartUrl, link);
 	}
 
 	if (notifications.phone.number) {

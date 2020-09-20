@@ -1,16 +1,21 @@
 import {Browser} from 'puppeteer';
 
 interface Link {
-	cartUrl?: string;
+	series: string;
 	brand: string;
 	model: string;
 	url: string;
+	cartUrl?: string;
 	openCartAction?: (browser: Browser) => void;
-	oosLabels: string[];
-	captchaLabels?: string[];
+}
+
+export interface Labels {
+	oosList: string[];
+	captchaList?: string[];
 }
 
 export interface Store {
 	links: Link[];
+	labels: Labels;
 	name: string;
 }
