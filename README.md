@@ -62,7 +62,6 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
-| `USER_AGENT` | Custom User-Agent header for HTTP requests; optional | 
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
@@ -85,6 +84,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
+| `USER_AGENT` | Custom User-Agent header for HTTP requests; optional |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
