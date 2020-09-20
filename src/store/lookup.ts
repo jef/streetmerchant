@@ -44,8 +44,9 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 
 		const graphicsCard = `${link.brand} ${link.model}`;
 
+		let response: puppeteer.Response | null;
 		try {
-			await page.goto(link.url, {waitUntil: 'networkidle0'});
+			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
 			await page.close();
@@ -57,43 +58,47 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 
 		Logger.debug(textContent);
 
-		let inStock = false;
-
-		if (includesLabels(textContent, link.oosLabels)) {
+		if (includesLabels(textContent, store.labels.oosList)) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
-		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
+		} else if (store.labels.captchaList && includesLabels(textContent, store.labels.captchaList)) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
-		} else if (link.elemSelector) {
-			try {
-				await page.waitFor(250);
-				await page.waitForSelector(link.elemSelector, {timeout: 3000});
-				const element = await page.$(link.elemSelector);
-				if (element !== null) {
-					inStock = true;
-				}
-			} catch (error) {
-				Logger.warn(`✖ [${store.name}] 'add to cart' element not found`);
-			}
+		} else if (response && response.status() === 429) {
+			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
-			inStock = true;
-		}
-
-		if (inStock) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
+
+			const givenUrl = link.url;
+
+			if (Config.openBrowser === 'true') {
+				await open(link.url);
+			}
+
+			sendNotification(link.url);
+
+			if (store.elements && store.elements.addToCart) {
+				
+				const navigationPromise = page.waitForNavigation();
+
+				await page.waitForSelector(store.elements.addToCart, {visible: true});
+
+				const element = await page.$(store.elements.addToCart);
+				if (element) {
+					element.click();
+					Logger.info(`✖ [${store.name}] 'addToCart' element clicked`);
+				}
+
+				await navigationPromise;
+			}
+
+			if (store.cartUrl) {
+				await page.goto(store.cartUrl);
+			}
 
 			if (Config.page.capture === 'true') {
 				Logger.debug('ℹ saving screenshot');
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
-
-			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-
-			if (Config.openBrowser === 'true') {
-				await open(givenUrl);
-			}
-
-			sendNotification(givenUrl);
 		}
 
 		await page.close();
