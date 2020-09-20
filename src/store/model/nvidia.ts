@@ -1,7 +1,7 @@
 import {Store} from './store';
 import {Browser, Response} from 'puppeteer';
-import {timestampUrlParam} from "../timestamp-url-param";
-import {Logger} from "../../logger";
+import {timestampUrlParameter} from '../timestamp-url-parameter';
+import {Logger} from '../../logger';
 import open from 'open';
 
 const fe2060SuperId = 5379432500;
@@ -13,7 +13,7 @@ const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 function digitalRiverStockUrl(id: number): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
 		`&apiKey=${nvidiaApiKey}` +
-		timestampUrlParam();
+		timestampUrlParameter();
 }
 
 interface NvidiaSessionTokenJSON {
@@ -23,7 +23,7 @@ interface NvidiaSessionTokenJSON {
 function nvidiaSessionUrl(): string {
 	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${locale}` +
 		`&apiKey=${nvidiaApiKey}` +
-		timestampUrlParam();
+		timestampUrlParameter();
 }
 
 function addToCartUrl(id: number, token: string): string {
@@ -31,7 +31,7 @@ function addToCartUrl(id: number, token: string): string {
 		`&productId=${id}` +
 		`&token=${token}` +
 		'&quantity=1' +
-		timestampUrlParam();
+		timestampUrlParameter();
 }
 
 function checkoutUrl(token: string): string {
@@ -39,10 +39,10 @@ function checkoutUrl(token: string): string {
 }
 
 function fallbackCartUrl(): string {
-	return `https://www.nvidia.com/en-us/shop/geforce?${timestampUrlParam()}`
+	return `https://www.nvidia.com/en-us/shop/geforce?${timestampUrlParameter()}`;
 }
 
-function generateCartAction(id: number, locale: string, cardName: string) {
+function generateCartAction(id: number, cardName: string) {
 	return async (browser: Browser) => {
 		const page = await browser.newPage();
 		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
@@ -50,10 +50,12 @@ function generateCartAction(id: number, locale: string, cardName: string) {
 		try {
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
 			response = await page.goto(nvidiaSessionUrl(), {waitUntil: 'networkidle0'});
-			if (response === null) { throw 'NvidiaAccessTokenUnavailable'; }
+			if (response === null) {
+				throw new Error('NvidiaAccessTokenUnavailable');
+			}
 
-			let data = <NvidiaSessionTokenJSON>await response.json();
-			let accessToken = data.access_token;
+			const data = await response.json() as NvidiaSessionTokenJSON;
+			const accessToken = data.access_token;
 
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart... 🚀🚀🚀`);
 			response = await page.goto(addToCartUrl(id, accessToken), {waitUntil: 'networkidle0'});
@@ -61,13 +63,13 @@ function generateCartAction(id: number, locale: string, cardName: string) {
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page... 🚀🚀🚀`);
 			Logger.info(checkoutUrl(accessToken));
 			await open(checkoutUrl(accessToken));
-		} catch (e) {
-			Logger.error(e);
+		} catch {
 			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`);
 			await open(fallbackCartUrl());
 		}
+
 		await page.close();
-	}
+	};
 }
 
 export const Nvidia: Store = {
@@ -77,14 +79,14 @@ export const Nvidia: Store = {
 			brand: 'TEST',
 			model: 'CARD',
 			url: digitalRiverStockUrl(fe2060SuperId),
-			openCartAction: generateCartAction(fe2060SuperId, locale, 'TEST CARD')
+			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD')
 		},
 		{
 			series: '3080',
 			brand: 'nvidia',
 			model: 'founders edition 3080',
 			url: digitalRiverStockUrl(fe3080Id),
-			openCartAction: generateCartAction(fe3080Id, locale, 'nvidia founders edition 3080')
+			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080')
 		}
 	],
 	labels: {
