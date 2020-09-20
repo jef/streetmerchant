@@ -1,14 +1,14 @@
 export interface Link {
-	series: string;
 	brand: string;
-	model: string;
-	url: string;
 	cartUrl?: string;
+	model: string;
+	series: string;
+	url: string;
 }
 
 export interface Labels {
-	oosList: string[];
-	captchaList?: string[];
+	outOfStock: string[];
+	captcha?: string[];
 }
 
 export interface Store {

@@ -71,9 +71,9 @@ async function lookup(browser: Browser, store: Store) {
 
 		Logger.debug(textContent);
 
-		if (includesLabels(textContent, store.labels.oosList)) {
+		if (includesLabels(textContent, store.labels.outOfStock)) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
-		} else if (store.labels.captchaList && includesLabels(textContent, store.labels.captchaList)) {
+		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
