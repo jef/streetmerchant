@@ -65,15 +65,17 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
 		} else if (link.elemSelector) {
 			try {
+				await page.waitFor(250);
 				await page.waitForSelector(link.elemSelector, {timeout: 3000});
 				const element = await page.$(link.elemSelector);
 				if (element !== null) {
 					inStock = true;
 				}
 			} catch (error) {
-				Logger.warn(`✖ [${store.name}] add to cart not found`);
-				Logger.debug(error);
+				Logger.warn(`✖ [${store.name}] 'add to cart' element not found`);
 			}
+		} else {
+			inStock = true;
 		}
 
 		if (inStock) {
@@ -85,7 +87,7 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
 
-			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
+			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 			if (Config.openBrowser === 'true') {
 				await open(givenUrl);
