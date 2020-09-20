@@ -72,7 +72,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
+| `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
 | `PUSHOVER_USERNAME` | Pushover username |
 | `RATE_LIMIT_TIMEOUT` | Rate limit timeout for each full store cycle | Default: `5000` |
