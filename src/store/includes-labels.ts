@@ -6,11 +6,5 @@
  */
 export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
-	for (const label of searchLabels) {
-		if (domTextLowerCase.includes(label.toLowerCase())) {
-			return true;
-		}
-	}
-
-	return false;
+	return searchLabels.some(label => domTextLowerCase.includes(label));
 }
