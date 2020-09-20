@@ -7,7 +7,7 @@ import {MicroCenter} from './microcenter';
 import {Config} from '../../config';
 import {Nvidia} from './nvidia';
 import {AmazonCa} from './amazon-ca';
-import {Asus} from "./asus";
+import {Asus} from './asus';
 
 const masterList = new Map([
 	[Amazon.name, Amazon],
@@ -18,7 +18,7 @@ const masterList = new Map([
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
 	[Nvidia.name, Nvidia],
-	[Asus.name, Asus],
+	[Asus.name, Asus]
 ]);
 
 const list = new Map();

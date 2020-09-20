@@ -13,7 +13,7 @@ export const Asus: Store = {
 			model: 'tuf',
 			url: 'https://store.asus.com/us/item/202009AM150000004/',
 			oosLabels: ['coming soon', 'temporarily sold out']
-		},
+		}
 	],
 	name: 'asus'
 };
