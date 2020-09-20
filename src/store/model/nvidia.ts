@@ -1,9 +1,10 @@
 import {Store} from './store';
-import {Page, Response} from 'puppeteer';
+import {Browser, Response} from 'puppeteer';
 import {timestampUrlParam} from "../timestamp-url-param";
 import {Logger} from "../../logger";
 import open from 'open';
 
+// for testing, use in stock 2060 SUPER, ID: 5379432500
 const fe3080Id = 5438481700;
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
@@ -24,7 +25,7 @@ function nvidiaSessionUrl(): string {
 }
 
 function addToCartUrl(id: number, token: string): string {
-	return 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items?format=json&method=delete' +
+	return 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items?format=json&method=post' +
 		`&productId=${id}` +
 		`&token=${token}` +
 		'&quantity=1' +
@@ -47,22 +48,30 @@ export const Nvidia: Store = {
 			model: 'founders edition 3080',
 			url: digitalRiverStockUrl(fe3080Id),
 			oosLabels: ['product_inventory_out_of_stock', 'rate limit exceeded'],
-			openCartAction: async (page: Page) => {
+			openCartAction: async (browser: Browser) => {
+				const page = await browser.newPage();
+				Logger.info('🚀🚀🚀 [nvidia] nvidia founders edition 3080, starting auto add to cart... 🚀🚀🚀');
 				let response: Response | null;
 				try {
+					Logger.info('🚀🚀🚀 [nvidia] nvidia founders edition 3080, getting access token... 🚀🚀🚀');
 					response = await page.goto(nvidiaSessionUrl(), {waitUntil: 'networkidle0'});
 					if (response === null) { throw 'NvidiaAccessTokenUnavailable'; }
 
 					let data = <NvidiaSessionTokenJSON>await response.json();
 					let accessToken = data.access_token;
 
+					Logger.info('🚀🚀🚀 [nvidia] nvidia founders edition 3080, adding to cart... 🚀🚀🚀');
 					response = await page.goto(addToCartUrl(fe3080Id, accessToken), {waitUntil: 'networkidle0'});
 
+					Logger.info('🚀🚀🚀 [nvidia] nvidia founders edition 3080, opening checkout page... 🚀🚀🚀');
+					Logger.info(checkoutUrl(accessToken));
 					await open(checkoutUrl(accessToken));
-				} catch {
+				} catch (e) {
+					Logger.error(e);
 					Logger.error(`✖ [nvidia] nvidia founders edition 3080 could not automatically add to cart, opening page`);
 					await open(fallback3080CartUrl());
 				}
+				await page.close();
 			}
 		}
 	],

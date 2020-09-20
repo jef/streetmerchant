@@ -1,11 +1,11 @@
-import {Page} from 'puppeteer';
+import {Browser} from 'puppeteer';
 
 interface Link {
 	cartUrl?: string;
 	brand: string;
 	model: string;
 	url: string;
-	openCartAction?: (page: Page) => void;
+	openCartAction?: (browser: Browser) => void;
 	oosLabels: string[];
 	captchaLabels?: string[];
 }

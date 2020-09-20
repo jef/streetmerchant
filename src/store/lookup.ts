@@ -74,7 +74,7 @@ export async function lookup(browser: Browser, store: Store) {
 				if (link.openCartAction === undefined) {
 					await open(givenUrl);
 				} else {
-					await link.openCartAction(page);
+					await link.openCartAction(browser);
 				}
 			}
 
