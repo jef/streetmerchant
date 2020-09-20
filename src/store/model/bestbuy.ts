@@ -12,7 +12,7 @@ export const BestBuy: Store = {
 			series: '3080',
 			brand: 'asus',
 			model: 'rog strix',
-			url: 'https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445',
+			url: 'https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445'
 		},
 		{
 			series: '3080',
@@ -53,9 +53,6 @@ export const BestBuy: Store = {
 	],
 	labels: {
 		oosList: ['sold out', 'coming soon']
-	},
-	elements: {
-		addToCart: 'button.btn-primary.add-to-cart-button'
 	},
 	cartUrl: 'https://www.bestbuy.com/cart',
 	name: 'bestbuy'

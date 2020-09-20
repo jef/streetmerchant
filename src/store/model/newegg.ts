@@ -11,88 +11,56 @@ export const NewEgg: Store = {
 		{
 			series: '3080',
 			brand: 'asus',
-			model: 'tuf',
-			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453'
-		},
-		{
-			series: '3080',
-			brand: 'evga',
-			model: 'xc3 black',
-			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3881-kr/p/N82E16814487522'
-		},
-		{
-			series: '3080',
-			brand: 'evga',
-			model: 'xc3',
-			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521'
-		},
-		{
-			series: '3080',
-			brand: 'evga',
-			model: 'xc3 ultra',
-			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
-		},
-		{
-			series: '3080',
-			brand: 'msi',
-			model: 'ventus 3x',
-			url: 'https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g/p/N82E16814137600'
-		},
-		{
-			series: '3080',
-			brand: 'msi',
-			model: 'ventus 3x oc',
-			url: 'https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g-oc/p/N82E16814137598'
-		},
-		{
-			series: '3080',
-			brand: 'msi',
-			model: 'gaming x trio',
-			url: 'https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597'
-		},
-		{
-			series: '3080',
-			brand: 'gigabyte',
-			model: 'gaming oc',
-			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080gaming-oc-10gd/p/N82E16814932329'
-		},
-		{
-			series: '3080',
-			brand: 'gigabyte',
-			model: 'eagle oc',
-			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080eagle-oc-10gd/p/N82E16814932330'
-		},
-		{
-			series: '3080',
-			brand: 'zotac',
-			model: 'trinity',
-			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-a30800d-10p/p/N82E16814500502'
-		},
-		{
-			series: '3080',
-			brand: 'asus',
+			cartUrl: 'https://api.bestbuy.com/click/-/6432445/cart',
 			model: 'rog strix',
-			url: 'https://www.newegg.com/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
+			url: 'https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445'
 		},
 		{
 			series: '3080',
-			brand: 'asus',
-			model: 'tuf oc',
-			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452'
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6432399/cart',
+			model: 'xc3 black',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432399.p?skuId=6432399'
 		},
 		{
 			series: '3080',
-			brand: 'zotac',
-			model: 'trinity oc',
-			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6432400/cart',
+			model: 'xc3 ultra',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432400.p?skuId=6432400'
+		},
+		{
+			series: '3080',
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430620/cart',
+			model: 'gaming oc',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430620.p?acampID=0&cmp=RMX&loc=Hatch&ref=198&skuId=6430620'
+		},
+		{
+			series: '3080',
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430621/cart',
+			model: 'eagle oc',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621'
+		},
+		{
+			series: '3080',
+			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430175/cart',
+			model: 'ventus 3x oc',
+			url: 'https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175'
+		},
+		{
+			series: '3080',
+			brand: 'nvidia',
+			cartUrl: 'https://api.bestbuy.com/click/-/6429440/cart',
+			model: 'founders edition',
+			url: 'https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440'
 		}
 	],
 	labels: {
 		oosList: ['auto notify'],
 		captchaList: ['are you a human?']
-	},
-	elements: {
-		addToCart: '#landingpage-cart button.btn-primary'
 	},
 	cartUrl: 'https://secure.newegg.com/Shopping/ShoppingCart.aspx',
 	name: 'newegg'

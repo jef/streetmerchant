@@ -20,6 +20,19 @@ function filterBrand(brand: string) {
 }
 
 /**
+ * Returns true if the series should be checked for stock
+ *
+ * @param series The series of the GPU
+ */
+function filterSeries(series: string) {
+	if (Config.store.showOnlySeries.length === 0) {
+		return true;
+	}
+
+	return Config.store.showOnlySeries.includes(series);
+}
+
+/**
  * Responsible for looking up information about a each product within
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
@@ -29,6 +42,10 @@ function filterBrand(brand: string) {
 export async function lookup(browser: Browser, store: Store) {
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
+		if (!filterSeries(link.series)) {
+			continue;
+		}
+
 		if (!filterBrand(link.brand)) {
 			continue;
 		}
@@ -63,36 +80,18 @@ export async function lookup(browser: Browser, store: Store) {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
 
-			sendNotification(link.url, link);
-
-			if (store.elements && store.elements.addToCart) {
-				
-				const navigationPromise = page.waitForNavigation();
-
-				await page.waitForSelector(store.elements.addToCart, {visible: true});
-
-				const element = await page.$(store.elements.addToCart);
-				if (element) {
-					element.click();
-					Logger.info(`✖ [${store.name}] 'addToCart' element clicked`);
-				}
-
-				await navigationPromise;
-			}
-
-			if (store.cartUrl) {
-				await page.goto(store.cartUrl);
-			}
-
-			if (Config.browser.open) {
-				const openUrl = store.cartUrl ? store.cartUrl : link.url;
-				await open(openUrl);
-			}
-
 			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
+
+			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
+			if (Config.browser.open) {
+				await open(givenUrl);
+			}
+
+			sendNotification(givenUrl, link);
 		}
 
 		await page.close();

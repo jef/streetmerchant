@@ -36,9 +36,6 @@ export const Evga: Store = {
 	labels: {
 		oosList: ['out of stock']
 	},
-	elements: {
-		addToCart: '#LFrame_btnAddToCart'
-	},
 	cartUrl: 'https://www.evga.com/products/shoppingcart.aspx',
 	name: 'evga'
 };

@@ -48,9 +48,6 @@ export const MicroCenter: Store = {
 	labels: {
 		oosList: ['sold out']
 	},
-	elements: {
-		addToCart: 'form.crtfrm input[name="ADDtoCART"]'
-	},
 	cartUrl: 'https://cart.microcenter.com/cart.aspx',
 	name: 'microcenter'
 };

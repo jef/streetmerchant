@@ -6,7 +6,7 @@ export const Adorama: Store = {
 			series: 'debug',
 			brand: 'TEST',
 			model: 'CARD',
-			url: 'https://www.adorama.com/ev08gp43067k.html',
+			url: 'https://www.adorama.com/ev08gp43067k.html'
 		},
 		{
 			series: '3080',
@@ -60,9 +60,6 @@ export const Adorama: Store = {
 	labels: {
 		oosList: ['temporarily not available', 'out of stock'],
 		captchaList: ['please verify you are a human']
-	},
-	elements: {
-		addToCart: 'div.buy-section.purchase button.add-to-cart'
 	},
 	name: 'adorama'
 };

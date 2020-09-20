@@ -91,9 +91,6 @@ export const Amazon: Store = {
 		oosList: ['currently unavailable'],
 		captchaList: ['enter the characters you see below']
 	},
-	elements: {
-		addToCart: '#add-to-cart-button'
-	},
 	cartUrl: 'https://www.amazon.com/gp/cart/view.html',
 	name: 'amazon'
 };

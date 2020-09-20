@@ -6,7 +6,7 @@ export const BAndH: Store = {
 			series: 'debug',
 			brand: 'TEST',
 			model: 'CARD',
-			url: 'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html',
+			url: 'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html'
 		},
 		{
 			series: '3080',
@@ -60,9 +60,6 @@ export const BAndH: Store = {
 	],
 	labels: {
 		oosList: ['notify when available']
-	},
-	elements: {
-		addToCart: 'button[data-selenium="addToCartButton"]'
 	},
 	cartUrl: 'https://www.bhphotovideo.com/find/cart.jsp',
 	name: 'bandh'
