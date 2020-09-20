@@ -16,13 +16,13 @@ export const Evga: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 gaming',
+			model: 'xc3',
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3883-KR',
 			oosLabels: ['out of stock']
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3885-KR',
 			oosLabels: ['out of stock']
 		}
