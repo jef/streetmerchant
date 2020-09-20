@@ -1,24 +1,26 @@
-import {BestBuy} from './bestbuy';
-import {BAndH} from './bandh';
-import {Evga} from './evga';
-import {NewEgg} from './newegg';
+
 import {Amazon} from './amazon';
-import {MicroCenter} from './microcenter';
-import {Config} from '../../config';
-import {Nvidia} from './nvidia';
 import {AmazonCa} from './amazon-ca';
 import {Asus} from './asus';
+import {BestBuy} from './bestbuy';
+import {BAndH} from './bandh';
+import {Config} from '../../config';
+import {Evga} from './evga';
+import {MicroCenter} from './microcenter';
+import {NewEgg} from './newegg';
+import {Nvidia} from './nvidia';
+
 
 const masterList = new Map([
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
+	[Asus.name, Asus],
 	[BestBuy.name, BestBuy],
 	[BAndH.name, BAndH],
 	[Evga.name, Evga],
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
-	[Nvidia.name, Nvidia],
-	[Asus.name, Asus]
+	[Nvidia.name, Nvidia]
 ]);
 
 const list = new Map();

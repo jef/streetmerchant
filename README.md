@@ -28,7 +28,7 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Amazon** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** |
+| | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | |
 | **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
@@ -90,6 +90,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy | `bestbuy`|
 | Amazon.ca | `amazon-ca`|
 | Amazon | `amazon`|
+| ASUS | `asus` |
 | B&H | `bandh`|
 | EVGA | `evga`|
 | Micro Center | `microcenter`|
