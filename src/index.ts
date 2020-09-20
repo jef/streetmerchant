@@ -41,6 +41,9 @@ async function main() {
 	for (const store of Stores) {
 		Logger.debug(store.links);
 		q.push(store);
+		if (Stores.length === 1) {
+			q.push(store);
+		} // Keep from completely draining
 	}
 
 	await q.drain();
