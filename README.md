@@ -62,16 +62,17 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
+| `DISCORD_WEB_HOOK` | Discord Web Hook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA | 
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
-| `NOTIFICATION_TEST` | Test all the notifications configured | Default: `false` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
+| `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
 | `PUSHOVER_USERNAME` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
@@ -83,7 +84,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
+
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
+
+> :point_right: You can test your notification configuration by running `npm run test:notification`.
 
 #### Supported stores
 

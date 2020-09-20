@@ -4,7 +4,6 @@ import adblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 import {Config} from './config';
 import {Store, Stores} from './store/model';
 import {Logger} from './logger';
-import {sendNotification} from './notification';
 import {lookup} from './store';
 import {Browser} from 'puppeteer';
 
@@ -44,13 +43,6 @@ async function main() {
 		Logger.debug(store.links);
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
-}
-
-/**
- * Send test email.
- */
-if (Config.notifications.test) {
-	sendNotification('test');
 }
 
 /**

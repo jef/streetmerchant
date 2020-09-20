@@ -28,7 +28,7 @@ export function sendSMS(text: string) {
 			Logger.error(error);
 		} else {
 			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`✔ sms sent: ${info.response}`);
+			Logger.info(`↗ sms sent: ${info.response}`);
 		}
 	});
 }

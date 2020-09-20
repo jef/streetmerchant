@@ -1,4 +1,4 @@
-interface Link {
+export interface Link {
 	cartUrl?: string;
 	brand: string;
 	model: string;

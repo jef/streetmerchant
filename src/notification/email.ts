@@ -20,15 +20,15 @@ const mailOptions: Mail.Options = {
 	subject
 };
 
-export function sendEmail(text: string) {
-	mailOptions.text = text;
+export function sendEmail(cartUrl: string) {
+	mailOptions.text = cartUrl;
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			Logger.error(error);
 		} else {
 			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`✔ email sent: ${info.response}`);
+			Logger.info(`↗ email sent: ${info.response}`);
 		}
 	});
 }

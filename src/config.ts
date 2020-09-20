@@ -13,6 +13,10 @@ const browser = {
 const logLevel = process.env.LOG_LEVEL ?? 'info';
 
 const notifications = {
+	discord: {
+		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
+		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
+	},
 	email: {
 		username: process.env.EMAIL_USERNAME ?? '',
 		password: process.env.EMAIL_PASSWORD ?? ''
