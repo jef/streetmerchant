@@ -88,7 +88,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
-> :point_right: You can find your computer's user agent by searching google for ["my user agent"](http://google.com/search?q=my+user+agent)
+> :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
 > :point_right: You can test your notification configuration by running `npm run test:notification`.
 
