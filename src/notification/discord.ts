@@ -19,7 +19,7 @@ export function sendDiscordMessage(cartUrl: string, link: Link) {
 				embed.addField('Attention', notifyGroup, true);
 			}
 
-			embed.setColor(0x76b900);
+			embed.setColor(0x76B900);
 			embed.setTimestamp();
 			await hook.send(embed);
 			Logger.info(`✔ discord message sent: ${cartUrl}`);
