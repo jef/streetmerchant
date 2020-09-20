@@ -7,6 +7,7 @@ import {sendPushoverNotification} from './pushover';
 import {sendTelegramMessage} from './telegram';
 import {sendDiscordMessage} from './discord';
 import {Link} from '../store/model';
+import {requestTwilioCall} from './twilio';
 
 const notifications = Config.notifications;
 
@@ -31,6 +32,10 @@ export function sendNotification(cartUrl: string, link: Link) {
 		const carrier = notifications.phone.carrier.toLowerCase();
 		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
 			sendSMS(cartUrl);
+		}
+
+		if (notifications.twilio.sid && notifications.twilio.auth && notifications.twilio.fromNumber) {
+			requestTwilioCall();
 		}
 	}
 

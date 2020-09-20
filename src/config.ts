@@ -47,6 +47,11 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
+	twilio: {
+		sid: process.env.TWILIO_SID ?? '',
+		auth: process.env.TWILIO_AUTH ?? '',
+		fromNumber: process.env.TWILIO_FROM_NUMBER ?? ''
+	},
 	test: process.env.NOTIFICATION_TEST === 'true'
 };
 
