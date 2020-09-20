@@ -1,4 +1,4 @@
-import {Browser} from 'puppeteer';
+import {Browser, Response} from 'puppeteer';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import open from 'open';
@@ -39,7 +39,7 @@ export async function lookup(browser: Browser, store: Store) {
 
 		const graphicsCard = `${link.brand} ${link.model}`;
 
-		let response: puppeteer.Response | null;
+		let response: Response | null;
 		try {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
