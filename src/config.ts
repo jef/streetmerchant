@@ -12,6 +12,10 @@ const browser = {
 const logLevel = process.env.LOG_LEVEL ?? 'info';
 
 const notifications = {
+	discord: {
+		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
+		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
+	},
 	email: {
 		username: process.env.EMAIL_USERNAME ?? '',
 		password: process.env.EMAIL_PASSWORD ?? ''
@@ -41,10 +45,6 @@ const notifications = {
 	telegram: {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
-	},
-	discord: {
-		webHookUrl: process.env.DISCORD_WEB_HOOK ?? '',
-		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? ''
 	},
 	test: process.env.NOTIFICATION_TEST === 'true'
 };
