@@ -16,7 +16,7 @@ puppeteer.use(adblockerPlugin({blockTrackers: true}));
  */
 async function main() {
 	const browser = await puppeteer.launch({
-		headless: Config.isHeadless,
+		headless: Config.browser.isHeadless,
 		defaultViewport: {
 			height: Config.page.height,
 			width: Config.page.width
@@ -26,7 +26,7 @@ async function main() {
 	const q = async.queue<Store>(async (store: Store, cb) => {
 		setTimeout(async () => {
 			try {
-				Logger.debug(`↗ Scraping Initialized - ${store.name}`);
+				Logger.debug(`↗ scraping initialized - ${store.name}`);
 				await lookup(browser, store);
 			} catch (error) {
 				// Ignoring errors; more than likely due to rate limits
@@ -35,7 +35,7 @@ async function main() {
 				cb();
 				q.push(store);
 			}
-		}, Config.rateLimitTimeout);
+		}, Config.browser.rateLimitTimeout);
 	}, Stores.length);
 
 	for (const store of Stores) {
