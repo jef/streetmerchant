@@ -62,7 +62,7 @@ export async function lookup(browser: puppeteer.Browser, store: Store) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
-		} else if (response && response.status() === 429){
+		} else if (response && response.status() === 429) {
 			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
