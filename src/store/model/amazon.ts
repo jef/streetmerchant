@@ -31,6 +31,27 @@ export const Amazon: Store = {
 			captchaLabels: ['enter the characters you see below']
 		},
 		{
+			brand: 'evga',
+			model: 'argbled',
+			url: 'https://www.amazon.com/EVGA-10G-P5-3895-KR-GeForce-Technology-Backplate/dp/B08HR3DPGW?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 gaming',
+			url: 'https://www.amazon.com/EVGA-10G-P5-3883-KR-GeForce-Cooling-Backplate/dp/B08HR4RJ3Q?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black gaming',
+			url: 'https://www.amazon.com/EVGA-10G-P5-3881-KR-GeForce-GAMING-Cooling/dp/B08HR6FMF3?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
 			brand: 'gigabyte',
 			model: 'windforce',
 			url: 'https://www.amazon.com/GIGABYTE-GeForce-Graphics-WINDFORCE-GV-N3080GAMING/dp/B08HJTH61J?ref_=ast_sto_dp',
@@ -52,9 +73,23 @@ export const Amazon: Store = {
 			captchaLabels: ['enter the characters you see below']
 		},
 		{
+			brand: 'asus',
+			model: 'tuf2',
+			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
 			brand: 'msi',
 			model: 'ventus',
 			url: 'https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp',
+			oosLabels: ['currently unavailable'],
+			captchaLabels: ['enter the characters you see below']
+		},
+		{
+			brand: 'zotac',
+			model: 'icestorm',
+			url: 'https://www.amazon.com/ZOTAC-Graphics-IceStorm-Advanced-ZT-A30800D-10P/dp/B08HJNKT3P?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable'],
 			captchaLabels: ['enter the characters you see below']
 		}
