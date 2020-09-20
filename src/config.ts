@@ -34,27 +34,36 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST ?? 'false'
+	test: process.env.NOTIFICATION_TEST === 'true'
 };
 
 const page = {
-	capture: process.env.SCREENSHOT ?? 'true',
+	capture: process.env.SCREENSHOT === 'true',
 	width: 1920,
 	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 };
 
-const openBrowser = process.env.OPEN_BROWSER ?? 'true';
 const rateLimitTimeout = Number(process.env.RATE_LIMIT_TIMEOUT) ?? 5000;
+
 const stores = process.env.STORES ? process.env.STORES.split(',') : ['nvidia'];
+
+const openBrowser = process.env.OPEN_BROWSER === 'true';
+
+const isHeadless = process.env.HEADLESS === 'true';
+
 const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
 
+const logLevel = process.env.LOG_LEVEL ?? 'info';
+
 export const Config = {
+	isHeadless,
+	logLevel,
 	notifications,
-	rateLimitTimeout,
-	page,
-	stores,
 	openBrowser,
-	showOnlyBrands
+	page,
+	rateLimitTimeout,
+	showOnlyBrands,
+	stores
 };
