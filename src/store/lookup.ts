@@ -21,6 +21,19 @@ function filterBrand(brand: string) {
 }
 
 /**
+ * Returns true if the series should be checked for stock
+ *
+ * @param series The series of the GPU
+ */
+function filterSeries(series: string) {
+	if (Config.store.showOnlySeries.length === 0) {
+		return true;
+	}
+
+	return Config.store.showOnlySeries.includes(series);
+}
+
+/**
  * Responsible for looking up information about a each product within
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
@@ -28,8 +41,12 @@ function filterBrand(brand: string) {
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
-/* eslint-disable no-await-in-loop */
+	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
+		if (!filterSeries(link.series)) {
+			continue;
+		}
+
 		if (!filterBrand(link.brand)) {
 			continue;
 		}
@@ -54,9 +71,9 @@ async function lookup(browser: Browser, store: Store) {
 
 		Logger.debug(textContent);
 
-		if (includesLabels(textContent, link.oosLabels)) {
+		if (includesLabels(textContent, store.labels.oosList)) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
-		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
+		} else if (store.labels.captchaList && includesLabels(textContent, store.labels.captchaList)) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
@@ -81,7 +98,7 @@ async function lookup(browser: Browser, store: Store) {
 
 		await page.close();
 	}
-/* eslint-enable no-await-in-loop */
+	/* eslint-enable no-await-in-loop */
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
