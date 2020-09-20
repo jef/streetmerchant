@@ -10,6 +10,7 @@ import {Evga} from './evga';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
+import {NvidiaDe} from './nvidia-de';
 import {Store} from './store';
 
 const masterList = new Map([
@@ -22,7 +23,8 @@ const masterList = new Map([
 	[Evga.name, Evga],
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
-	[Nvidia.name, Nvidia]
+	[Nvidia.name, Nvidia],
+	[NvidiaDe.name, NvidiaDe],
 ]);
 
 const list = new Map();

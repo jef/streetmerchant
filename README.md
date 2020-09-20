@@ -107,6 +107,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Nvidia | `nvidia`|
+| Nvidia.de | `nvidia-de`|
 
 #### Supported carriers
 
