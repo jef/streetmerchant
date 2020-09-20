@@ -6,6 +6,8 @@ import open from 'open';
 
 // for testing, use in stock 2060 SUPER, ID: 5379432500
 const fe3080Id = 5438481700;
+const locale = 'en_us';
+
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
 function digitalRiverStockUrl(id: number): string {
@@ -19,7 +21,7 @@ interface NvidiaSessionTokenJSON {
 }
 
 function nvidiaSessionUrl(): string {
-	return 'https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=en_us&apiKey=9485fa7b159e42edb08a83bde0d83dia' +
+	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${locale}` +
 		`&apiKey=${nvidiaApiKey}` +
 		timestampUrlParam();
 }
