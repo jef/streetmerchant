@@ -66,35 +66,36 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		const stockHandle = await page.waitForSelector(store.labels.inStock.container, {visible: true});
-		const stockContent = await page.evaluate(container => container.textContent, stockHandle);
+		const stockHandle = await page.$(store.labels.inStock.container);
+		const visible = await page.evaluate((e) => e.offsetWidth > 0 && e.offsetHeight > 0, stockHandle);
+		if (visible) {
+			const stockContent = await page.evaluate((e) => e.textContent, stockHandle);
 
-		Logger.debug(stockContent);
+			if (includesLabels(stockContent, store.labels.inStock.labels)) {
+				Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
+				Logger.info(link.url);
 
-		if (includesLabels(stockContent, store.labels.inStock.labels)) {
-			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
-			Logger.info(link.url);
+				if (Config.page.capture) {
+					Logger.debug('ℹ saving screenshot');
+					await page.screenshot({path: `success-${Date.now()}.png`});
+				}
 
-			if (Config.page.capture) {
-				Logger.debug('ℹ saving screenshot');
-				await page.screenshot({path: `success-${Date.now()}.png`});
+				const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
+				if (Config.browser.open) {
+					await open(givenUrl);
+				}
+
+				sendNotification(givenUrl, link);
+
+				await page.close();
+				continue;
 			}
-
-			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-
-			if (Config.browser.open) {
-				await open(givenUrl);
-			}
-
-			sendNotification(givenUrl, link);
-
-			await page.close();
-			continue;
 		}
 
 		if (store.labels.captcha) {
 			const captchaHandle = await page.$(store.labels.captcha.container);
-			const captchaContent = await page.evaluate(container => container.textContent, captchaHandle);
+			const captchaContent = await page.evaluate((e) => e.textContent, captchaHandle);
 
 			if (includesLabels(captchaContent, store.labels.captcha.labels)) {
 				Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
