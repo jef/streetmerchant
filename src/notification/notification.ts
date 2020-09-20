@@ -6,6 +6,8 @@ import {sendSlackMessage} from './slack';
 import {sendPushoverNotification} from './pushover';
 import {sendTelegramMessage} from './telegram';
 import {sendDiscordMessage} from './discord';
+import {sendDesktopNotification} from './desktop';
+
 import {Link} from '../store/model';
 
 const notifications = Config.notifications;
@@ -40,5 +42,9 @@ export function sendNotification(cartUrl: string, link: Link) {
 
 	if (notifications.playSound) {
 		playSound();
+	}
+
+	if (notifications.desktop) {
+		sendDesktopNotification(cartUrl, link);
 	}
 }
