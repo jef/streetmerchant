@@ -22,7 +22,7 @@ export function sendDiscordMessage(text: string, link: Link) {
 			embed.setColor(65340);
 			embed.setTimestamp();
 			await hook.send(embed);
-			Logger.info(`✔ discord message message sent: ${text}`);
+			Logger.info(`✔ discord message sent: ${text}`);
 		} catch (error) {
 			Logger.error(error);
 		}
