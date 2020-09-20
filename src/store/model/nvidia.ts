@@ -18,7 +18,7 @@ export const Nvidia: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded']
+		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
 	},
 	name: 'nvidia'
 };
