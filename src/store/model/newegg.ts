@@ -6,8 +6,7 @@ export const NewEgg: Store = {
 			brand: 'TEST',
 			model: 'CARD',
 			series: 'debug',
-			url: 'https://www.newegg.com/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488',
-			cartUrl: 'https://api.bestbuy.com/click/-/6432445/cart'
+			url: 'https://www.newegg.com/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
 		},
 		{
 			brand: 'asus',
@@ -90,7 +89,7 @@ export const NewEgg: Store = {
 	],
 	labels: {
 		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'see similar items below']
+		outOfStock: ['auto notify', 'item is currently out of stock']
 	},
 	name: 'newegg'
 };
