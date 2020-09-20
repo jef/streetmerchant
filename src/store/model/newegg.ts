@@ -89,7 +89,7 @@ export const NewEgg: Store = {
 		}
 	],
 	labels: {
-		oosList: ['auto notify'],
+		oosList: ['auto notify', 'see similar items below'],
 		captchaList: ['are you a human?']
 	},
 	name: 'newegg'
