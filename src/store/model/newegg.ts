@@ -81,7 +81,7 @@ export const NewEgg: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc,
+			model: 'tuf oc',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452',
 			oosLabels: ['auto notify', 'out of stock'],
 			captchaLabels: ['are you a human?']
