@@ -51,7 +51,7 @@ const stores = process.env.STORES ? process.env.STORES.split(',') : ['nvidia'];
 
 const openBrowser = process.env.OPEN_BROWSER === 'true';
 
-const isHeadless = process.env.HEADLESS === 'true';
+const isHeadless = process.env.HEADLESS ? process.env.HEADLESS === 'true' : true;
 
 const showOnlyBrands = process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [];
 
