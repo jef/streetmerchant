@@ -14,6 +14,5 @@ export interface Labels {
 export interface Store {
 	links: Link[];
 	labels: Labels;
-	cartUrl?: string;
 	name: string;
 }

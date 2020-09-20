@@ -61,6 +61,5 @@ export const BAndH: Store = {
 	labels: {
 		oosList: ['notify when available']
 	},
-	cartUrl: 'https://www.bhphotovideo.com/find/cart.jsp',
 	name: 'bandh'
 };

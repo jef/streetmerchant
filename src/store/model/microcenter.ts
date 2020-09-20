@@ -48,6 +48,5 @@ export const MicroCenter: Store = {
 	labels: {
 		oosList: ['sold out']
 	},
-	cartUrl: 'https://cart.microcenter.com/cart.aspx',
 	name: 'microcenter'
 };

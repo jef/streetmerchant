@@ -79,6 +79,5 @@ export const AmazonCa: Store = {
 		oosList: ['currently unavailable'],
 		captchaList: ['enter the characters you see below']
 	},
-	cartUrl: 'https://www.amazon.ca/gp/cart/view.html',
 	name: 'amazon-ca'
 };
