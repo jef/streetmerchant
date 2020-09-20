@@ -6,12 +6,17 @@ config({path: resolve(__dirname, '../.env')});
 const browser = {
 	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
 	open: process.env.OPEN_BROWSER === 'true',
-	rateLimitTimeout: process.env.RATE_LIMIT_TIMEOUT ? Number(process.env.RATE_LIMIT_TIMEOUT) : 5000
+	minSleep: Number(process.env.PAGE_SLEEP_MIN ?? 5000),
+	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000)
 };
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';
 
 const notifications = {
+	discord: {
+		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
+		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
+	},
 	email: {
 		username: process.env.EMAIL_USERNAME ?? '',
 		password: process.env.EMAIL_PASSWORD ?? ''
@@ -42,10 +47,6 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	discord: {
-		webHookUrl: process.env.DISCORD_WEB_HOOK ?? '',
-		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? ''
-	},
 	test: process.env.NOTIFICATION_TEST === 'true'
 };
 
@@ -53,7 +54,7 @@ const page = {
 	capture: process.env.SCREENSHOT === 'true',
 	width: 1920,
 	height: 1080,
-	navigationTimeout: Number(process.env.PAGE_TIMEOUT) ?? 30000,
+	navigationTimeout: Number(process.env.PAGE_TIMEOUT ?? 30000),
 	userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 };
 

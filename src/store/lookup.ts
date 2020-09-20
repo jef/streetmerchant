@@ -5,6 +5,7 @@ import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
+import {delay, getSleepTime} from '../util';
 
 /**
  * Returns true if the brand should be checked for stock
@@ -39,7 +40,7 @@ function filterSeries(series: string) {
  * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
-export async function lookup(browser: Browser, store: Store) {
+async function lookup(browser: Browser, store: Store) {
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterSeries(link.series)) {
@@ -73,7 +74,8 @@ export async function lookup(browser: Browser, store: Store) {
 		if (includesLabels(textContent, store.labels.oosList)) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		} else if (store.labels.captchaList && includesLabels(textContent, store.labels.captchaList)) {
-			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
+			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
 			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
@@ -97,4 +99,17 @@ export async function lookup(browser: Browser, store: Store) {
 		await page.close();
 	}
 	/* eslint-enable no-await-in-loop */
+}
+
+export async function tryLookupAndLoop(browser: Browser, store: Store) {
+	Logger.debug(`[${store.name}] Starting lookup...`);
+	try {
+		await lookup(browser, store);
+	} catch (error) {
+		Logger.error(error);
+	}
+
+	const sleepTime = getSleepTime();
+	Logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }
