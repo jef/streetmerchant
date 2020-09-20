@@ -39,8 +39,9 @@ export async function lookup(browser: Browser, store: Store) {
 
 		const graphicsCard = `${link.brand} ${link.model}`;
 
+		let response: puppeteer.Response | null;
 		try {
-			await page.goto(link.url, {waitUntil: 'networkidle0'});
+			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
 			await page.close();
@@ -56,6 +57,8 @@ export async function lookup(browser: Browser, store: Store) {
 			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		} else if (link.captchaLabels && includesLabels(textContent, link.captchaLabels)) {
 			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}`);
+		} else if (response && response.status() === 429) {
+			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		} else {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
@@ -65,7 +68,7 @@ export async function lookup(browser: Browser, store: Store) {
 				await page.screenshot({path: `success-${Date.now()}.png`});
 			}
 
-			const givenUrl = store.cartUrl ? store.cartUrl : link.url;
+			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 			if (Config.openBrowser) {
 				await open(givenUrl);

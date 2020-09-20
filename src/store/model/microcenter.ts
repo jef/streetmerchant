@@ -4,19 +4,19 @@ export const MicroCenter: Store = {
 	links: [
 		{
 			brand: 'evga',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			url: 'https://www.microcenter.com/product/628344/evga-geforce-rtx-3080-xc3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card',
 			oosLabels: ['sold out']
 		},
 		{
 			brand: 'msi',
-			model: 'ventus 3x overclocked',
+			model: 'ventus 3x',
 			url: 'https://www.microcenter.com/product/628331/msi-geforce-rtx-3080-ventus-3x-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card',
 			oosLabels: ['sold out']
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			url: 'https://www.microcenter.com/product/628303/asus-geforce-rtx-3080-tuf-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card',
 			oosLabels: ['sold out']
 		},
@@ -34,7 +34,7 @@ export const MicroCenter: Store = {
 		},
 		{
 			brand: 'zotac',
-			model: 'trinity overclocked',
+			model: 'trinity',
 			url: 'https://www.microcenter.com/product/628607/zotac-geforce-rtx-3080-trinity-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card',
 			oosLabels: ['sold out']
 		}
