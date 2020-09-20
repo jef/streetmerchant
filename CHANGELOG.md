@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.4.1](https://www.github.com/jef/nvidia-snatcher/compare/v1.4.0...v1.4.1) (2020-09-20)
+
+
+### Bug Fixes
+
+* **notification:** wrong condition for sounds playing ([#91](https://www.github.com/jef/nvidia-snatcher/issues/91)) ([103d96d](https://www.github.com/jef/nvidia-snatcher/commit/103d96dc81d6fd097fcdbed5bdd7487d7d73bf6e))
+* **store:** false positives for nvidia. ([#85](https://www.github.com/jef/nvidia-snatcher/issues/85)) ([c65fa04](https://www.github.com/jef/nvidia-snatcher/commit/c65fa04666775060532e28076a0b4af50f8dd30b))
+* check response for rate limiting ([#58](https://www.github.com/jef/nvidia-snatcher/issues/58)) ([#98](https://www.github.com/jef/nvidia-snatcher/issues/98)) ([b7d9462](https://www.github.com/jef/nvidia-snatcher/commit/b7d9462e794ef3961fb57c79ef8f66e77d25d20a))
+
 ## [1.4.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.3.0...v1.4.0) (2020-09-19)
 
 
