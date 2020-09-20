@@ -3,6 +3,15 @@ import {Store} from './store';
 export const Adorama: Store = {
 	links: [
 		{
+			series: 'debug',
+			brand: 'pny',
+			model: 'xlr8',
+			url: 'https://www.adorama.com/ev08gp43067k.html',
+			oosLabels: ['temporarily not available', 'out of stock'],
+			captchaLabels: ['please verify you are a human']
+		},
+		{
+			series: '3080',
 			brand: 'pny',
 			model: 'xlr8',
 			url: 'https://www.adorama.com/pnv301tfxmpb.html',
@@ -10,6 +19,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'msi',
 			model: 'gaming x trio',
 			url: 'https://www.adorama.com/msig380gxt1.html',
@@ -17,6 +27,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'evga',
 			model: 'ftw3 ultra',
 			url: 'https://www.adorama.com/ev10g53897kr.html',
@@ -24,6 +35,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'evga',
 			model: 'xc3 ultra',
 			url: 'https://www.adorama.com/ev10g53885kr.html',
@@ -31,6 +43,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'evga',
 			model: 'ftw3',
 			url: 'https://www.adorama.com/ev10g53895kr.html',
@@ -38,6 +51,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'evga',
 			model: 'xc3',
 			url: 'https://www.adorama.com/ev10g53883kr.html',
@@ -45,6 +59,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'evga',
 			model: 'xc3 black',
 			url: 'https://www.adorama.com/ev10g53881kr.html',
@@ -52,6 +67,7 @@ export const Adorama: Store = {
 			captchaLabels: ['please verify you are a human']
 		},
 		{
+			series: '3080',
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			url: 'https://www.adorama.com/msig38v3x10c.html',

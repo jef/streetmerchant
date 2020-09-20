@@ -1,4 +1,5 @@
 export interface Link {
+	series: string;
 	cartUrl?: string;
 	brand: string;
 	model: string;

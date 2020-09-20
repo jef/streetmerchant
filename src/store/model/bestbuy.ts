@@ -3,6 +3,7 @@ import {Store} from './store';
 export const BestBuy: Store = {
 	links: [
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432445/cart',
 			brand: 'asus',
 			model: 'rog strix',
@@ -10,6 +11,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432399/cart',
 			brand: 'evga',
 			model: 'xc3 black',
@@ -17,6 +19,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432400/cart',
 			brand: 'evga',
 			model: 'xc3 ultra',
@@ -24,6 +27,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6430620/cart',
 			brand: 'gigabyte',
 			model: 'gaming oc',
@@ -31,6 +35,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6430621/cart',
 			brand: 'gigabyte',
 			model: 'eagle oc',
@@ -38,6 +43,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6430175/cart',
 			brand: 'msi',
 			model: 'ventus 3x oc',
@@ -45,6 +51,7 @@ export const BestBuy: Store = {
 			oosLabels: ['sold out', 'coming soon']
 		},
 		{
+			series: '3080',
 			cartUrl: 'https://api.bestbuy.com/click/-/6429440/cart',
 			brand: 'nvidia',
 			model: 'founders edition',
