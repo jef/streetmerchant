@@ -88,7 +88,7 @@ async function lookup(browser: Browser, store: Store) {
 
 				sendNotification(givenUrl, link);
 
-				await page.close();
+				await closePage(page);
 				continue;
 			}
 		}
@@ -100,7 +100,7 @@ async function lookup(browser: Browser, store: Store) {
 			if (includesLabels(captchaContent, store.labels.captcha.labels)) {
 				Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 				await delay(getSleepTime());
-				await page.close();
+				await closePage(page);
 				continue;
 			}
 		}
