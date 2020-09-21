@@ -55,6 +55,12 @@ export const Adorama: Store = {
 			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.adorama.com/msig38v3x10c.html'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 rbg',
+			series: '3080',
+			url: 'https://www.adorama.com/png30801tfxb.html'
 		}
 	],
 	labels: {

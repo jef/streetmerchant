@@ -15,6 +15,12 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/PNY-GeForce-Gaming-Epic-X-Graphics/dp/B08HBR7QBM?ref_=ast_sto_dp'
 		},
 		{
+			brand: 'pny',
+			model: 'xlr8 rgb',
+			series: '3080',
+			url: 'https://www.amazon.com/PNY-GeForce-Gaming-Epic-X-Graphics/dp/B08HBTJMLJ?ref_=ast_sto_dp'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',

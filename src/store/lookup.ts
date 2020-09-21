@@ -84,7 +84,11 @@ async function lookup(browser: Browser, store: Store) {
 				const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 				if (Config.browser.open) {
-					await open(givenUrl);
+					if (link.openCartAction === undefined) {
+						await open(givenUrl);
+					} else {
+						link.openCartAction(browser);
+					}
 				}
 
 				sendNotification(givenUrl, link);
