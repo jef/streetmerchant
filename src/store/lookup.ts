@@ -77,7 +77,8 @@ async function lookup(browser: Browser, store: Store) {
 
 				if (Config.page.capture) {
 					Logger.debug('ℹ saving screenshot');
-					await page.screenshot({path: `success-${Date.now()}.png`});
+					link.screenshot = `success-${Date.now()}.png`;
+					await page.screenshot({path: link.screenshot});
 				}
 
 				const givenUrl = link.cartUrl ? link.cartUrl : link.url;
@@ -87,7 +88,6 @@ async function lookup(browser: Browser, store: Store) {
 				}
 
 				sendNotification(givenUrl, link);
-
 				await closePage(page);
 				continue;
 			}
@@ -107,10 +107,11 @@ async function lookup(browser: Browser, store: Store) {
 
 		if (response && response.status() === 429) {
 			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-		} else {
-			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+			await closePage(page);
+			continue;
 		}
 
+		Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		await closePage(page);
 	}
 	/* eslint-enable no-await-in-loop */

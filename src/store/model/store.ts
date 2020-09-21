@@ -9,6 +9,7 @@ export interface Link {
 	model: string;
 	series: string;
 	url: string;
+	screenshot?: string;
 }
 
 export interface Labels {
