@@ -3,21 +3,6 @@ import {Browser, Response} from "puppeteer";
 import {Logger} from "../../../logger";
 import open from "open";
 
-/* FE 2060 SUPER debug IDs
-USA: 5379432500
- */
-export const fe2060SuperId = 5379432500;
-
-/* FE 3080 IDs
-USA: 5379432500
- */
-export const fe3080Id = 5438481700;
-
-/* Locales
-USA: en_us
- */
-const locale = 'en_us';
-
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
 export function digitalRiverStockUrl(id: number): string {
@@ -30,7 +15,7 @@ interface NvidiaSessionTokenJSON {
 	access_token: string;
 }
 
-function nvidiaSessionUrl(): string {
+function nvidiaSessionUrl(locale: string): string {
 	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${locale}` +
 		`&apiKey=${nvidiaApiKey}` +
 		timestampUrlParameter();
@@ -48,18 +33,18 @@ function checkoutUrl(token: string): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/carts/active/web-checkout?token=${token}`;
 }
 
-function fallbackCartUrl(): string {
-	return `https://www.nvidia.com/en-us/shop/geforce?${timestampUrlParameter()}`;
+function fallbackCartUrl(locale: string): string {
+	return `https://www.nvidia.com/${locale}/shop/geforce?${timestampUrlParameter()}`;
 }
 
-export function generateCartAction(id: number, cardName: string) {
+export function generateOpenCartAction(id: number, locale: string, cardName: string) {
 	return async (browser: Browser) => {
 		const page = await browser.newPage();
 		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
 		let response: Response | null;
 		try {
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
-			response = await page.goto(nvidiaSessionUrl(), {waitUntil: 'networkidle0'});
+			response = await page.goto(nvidiaSessionUrl(locale), {waitUntil: 'networkidle0'});
 			if (response === null) {
 				throw new Error('NvidiaAccessTokenUnavailable');
 			}
@@ -76,7 +61,7 @@ export function generateCartAction(id: number, cardName: string) {
 		} catch(error) {
 			Logger.debug(error);
 			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`);
-			await open(fallbackCartUrl());
+			await open(fallbackCartUrl(locale));
 		}
 
 		await page.close();
