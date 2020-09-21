@@ -52,7 +52,7 @@ const notifications = {
 };
 
 const page = {
-	capture: process.env.SCREENSHOT === 'true',
+	capture: process.env.SCREENSHOT ? process.env.SCREENSHOT === 'true' : 'true',
 	height: 1080,
 	inStockWaitTime: Number(process.env.IN_STOCK_WAIT_TIME ?? 0),
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT ?? 30000),

@@ -2,7 +2,7 @@ import {Store} from './store';
 
 export const Evga: Store = {
 	labels: {
-		outOfStock: ['out of stock']
+		outOfStock: ['out of stock', 'error reaching the evga website', 'oops! something broke.']
 	},
 	links: [
 		{

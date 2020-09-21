@@ -15,8 +15,8 @@ export function sendDiscordMessage(cartUrl: string, link: Link) {
 			embed.addField('Brand', link.brand, true);
 			embed.addField('Model', link.model, true);
 
-			if (notifyGroup !== '') {
-				embed.addField('Attention', notifyGroup, true);
+			if (notifyGroup) {
+				embed.setText(notifyGroup);
 			}
 
 			embed.setColor(0x76B900);
