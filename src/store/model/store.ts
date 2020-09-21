@@ -1,9 +1,12 @@
+import {Browser} from 'puppeteer';
+
 export interface Link {
-	brand: string;
-	cartUrl?: string;
-	model: string;
 	series: string;
+	brand: string;
+	model: string;
 	url: string;
+	cartUrl?: string;
+	openCartAction?: (browser: Browser) => void;
 	screenshot?: string;
 }
 
