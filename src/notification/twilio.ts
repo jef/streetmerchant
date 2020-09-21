@@ -5,11 +5,7 @@ import twilio from 'twilio';
 const client = twilio(Config.notifications.twilio.sid, Config.notifications.twilio.auth);
 
 export function requestTwilioCall() {
-	let toNumber = Config.notifications.phone.number;
-
-	if (!toNumber.startsWith('+1')) {
-		toNumber = `+1${toNumber}`;
-	}
+	const toNumber = Config.notifications.twilio.countryCode + Config.notifications.phone.number;
 
 	client.calls
 		.create({

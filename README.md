@@ -91,6 +91,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWILIO_SID ` | Twilio SID for setting up reminder phone call |
 | `TWILIO_AUTH ` | Twilio authentication token | [Click here](https://www.twilio.com/docs/voice/tutorials/how-to-make-outbound-phone-calls-node-js#retrieve-your-twilio-account-credentials) for instructions on how to obtain this. |
 | `TWILIO_FROM_NUMBER ` | Authorized `from number` for Twilio calling. |
+| `TWILIO_COUNTRY_CODE` | Country code of your phone number for use in Twilio. Find your country code [here](https://countrycode.org/). | Default: `+1` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 

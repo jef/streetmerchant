@@ -51,7 +51,8 @@ const notifications = {
 	twilio: {
 		sid: process.env.TWILIO_SID ?? '',
 		auth: process.env.TWILIO_AUTH ?? '',
-		fromNumber: process.env.TWILIO_FROM_NUMBER ?? ''
+		fromNumber: process.env.TWILIO_FROM_NUMBER ?? '',
+		countryCode: process.env.TWILIO_COUNTRY_CODE ?? ''
 	},
 	test: process.env.NOTIFICATION_TEST === 'true'
 };
