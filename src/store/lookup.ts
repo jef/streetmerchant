@@ -1,11 +1,11 @@
 import {Browser, Response} from 'puppeteer';
+import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {Logger} from '../logger';
-import open from 'open';
 import {Store} from './model';
-import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
-import {closePage, delay, getSleepTime} from '../util';
+import open from 'open';
+import {sendNotification} from '../notification';
 
 const inStock: Record<string, boolean> = {};
 

@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const Evga: Store = {
+	labels: {
+		outOfStock: ['out of stock']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -33,9 +36,6 @@ export const Evga: Store = {
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3885-KR'
 		}
 	],
-	labels: {
-		outOfStock: ['out of stock']
-	},
 	name: 'evga'
 };
 

@@ -1,7 +1,7 @@
-import {Webhook, MessageBuilder} from 'discord-webhook-node';
+import {MessageBuilder, Webhook} from 'discord-webhook-node';
 import {Config} from '../config';
-import {Logger} from '../logger';
 import {Link} from '../store/model';
+import {Logger} from '../logger';
 
 const hook = new Webhook(Config.notifications.discord.webHookUrl);
 const notifyGroup = Config.notifications.discord.notifyGroup;

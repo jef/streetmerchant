@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
+	labels: {
+		outOfStock: ['notify when available']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -58,8 +61,5 @@ export const BAndH: Store = {
 		}
 
 	],
-	labels: {
-		outOfStock: ['notify when available']
-	},
 	name: 'bandh'
 };

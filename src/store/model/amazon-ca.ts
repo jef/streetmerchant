@@ -1,6 +1,10 @@
 import {Store} from './store';
 
 export const AmazonCa: Store = {
+	labels: {
+		captcha: ['enter the characters you see below'],
+		outOfStock: ['currently unavailable']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -75,9 +79,5 @@ export const AmazonCa: Store = {
 			url: 'https://www.amazon.ca/MSI-GeForce-RTX-3080-10G/dp/B08HR5SXPS?ref_=ast_sto_dp'
 		}
 	],
-	labels: {
-		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable']
-	},
 	name: 'amazon-ca'
 };

@@ -1,8 +1,8 @@
-import {Store} from './store';
 import {Browser, Response} from 'puppeteer';
-import {timestampUrlParameter} from '../timestamp-url-parameter';
 import {Logger} from '../../logger';
+import {Store} from './store';
 import open from 'open';
+import {timestampUrlParameter} from '../timestamp-url-parameter';
 
 const fe2060SuperId = 5379432500;
 const fe3080Id = 5438481700;
@@ -73,24 +73,24 @@ function generateCartAction(id: number, cardName: string) {
 }
 
 export const Nvidia: Store = {
-	links: [
-		{
-			series: 'debug',
-			brand: 'TEST',
-			model: 'CARD',
-			url: digitalRiverStockUrl(fe2060SuperId),
-			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD')
-		},
-		{
-			series: '3080',
-			brand: 'nvidia',
-			model: 'founders edition',
-			url: digitalRiverStockUrl(fe3080Id),
-			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080')
-		}
-	],
 	labels: {
 		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
 	},
+	links: [
+		{
+			brand: 'TEST',
+			model: 'CARD',
+			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD'),
+			series: 'debug',
+			url: digitalRiverStockUrl(fe2060SuperId)
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080'),
+			series: '3080',
+			url: digitalRiverStockUrl(fe3080Id)
+		}
+	],
 	name: 'nvidia'
 };
