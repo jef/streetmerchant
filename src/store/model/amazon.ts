@@ -54,7 +54,7 @@ export const Amazon: Store = {
 		{
 			brand: 'asus',
 			model: 'tuf non-oc',
-			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97?ref_=ast_sto_dp',
+			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW?ref_=ast_sto_dp',
 			oosLabels: ['currently unavailable'],
 			captchaLabels: ['enter the characters you see below']
 		},
