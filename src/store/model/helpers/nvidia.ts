@@ -68,6 +68,7 @@ export function generateSetupAction() {
 
 			Logger.info(`[nvidia] you can log into your cart now...`);
 			Logger.info(checkoutUrl(drLocale, accessToken));
+			await open(checkoutUrl(drLocale, accessToken));
 		} catch (error) {
 			Logger.debug(error);
 			Logger.error(`✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...`);
