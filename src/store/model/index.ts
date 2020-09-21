@@ -24,7 +24,7 @@ const masterList = new Map([
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
 	[Nvidia.name, Nvidia],
-	[NvidiaDe.name, NvidiaDe],
+	[NvidiaDe.name, NvidiaDe]
 ]);
 
 const list = new Map();
