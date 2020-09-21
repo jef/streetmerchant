@@ -76,7 +76,7 @@ function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: stri
 export function generateLinks(): Link[] {
 	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
 
-	const defaultRegionInfo = { drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500 }
+	const defaultRegionInfo = {drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500}
 	const regionInfo = regionInfos.get(country) ?? defaultRegionInfo;
 
 	const fe2060SuperId = regionInfo.fe2060SuperId;
