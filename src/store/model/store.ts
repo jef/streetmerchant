@@ -1,9 +1,12 @@
+import {Browser} from 'puppeteer';
+
 export interface Link {
 	brand: 'TEST' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
 	series: 'debug' | '3070' | '3080' | '3090';
 	model: string;
 	url: string;
 	cartUrl?: string;
+	openCartAction?: (browser: Browser) => void;
 	screenshot?: string;
 }
 
