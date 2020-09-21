@@ -1,7 +1,7 @@
-import { Store } from './store';
-import { Browser, Response } from 'puppeteer';
-import { timestampUrlParameter } from '../timestamp-url-parameter';
-import { Logger } from '../../logger';
+import {Store} from './store';
+import {Browser, Response} from 'puppeteer';
+import {timestampUrlParameter} from '../timestamp-url-parameter';
+import {Logger} from '../../logger';
 import open from 'open';
 
 const fe2060SuperId = 5394902900;
@@ -60,7 +60,7 @@ function generateCartAction(id: number, cardName: string) {
 				`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`
 			);
 			response = await page.goto(nvidiaSessionUrl(), {
-				waitUntil: 'networkidle0',
+				waitUntil: 'networkidle0'
 			});
 			if (response === null) {
 				throw new Error('NvidiaAccessTokenUnavailable');
@@ -71,7 +71,7 @@ function generateCartAction(id: number, cardName: string) {
 
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart... 🚀🚀🚀`);
 			response = await page.goto(addToCartUrl(id, accessToken), {
-				waitUntil: 'networkidle0',
+				waitUntil: 'networkidle0'
 			});
 
 			Logger.info(
