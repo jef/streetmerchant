@@ -7,7 +7,7 @@ import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
 
-let inStock: Record<string, boolean> = {};
+const inStock: Record<string, boolean> = {};
 
 /**
  * Returns true if the brand should be checked for stock
@@ -85,7 +85,9 @@ async function lookup(browser: Browser, store: Store) {
 			Logger.info(link.url);
 			if (Config.page.inStockWaitTime) {
 				inStock[store.name] = true;
-				setTimeout(() => { inStock[store.name] = false; }, 1000 * Config.page.inStockWaitTime);
+				setTimeout(() => {
+					inStock[store.name] = false;
+				}, 1000 * Config.page.inStockWaitTime);
 			}
 
 			if (Config.page.capture) {
