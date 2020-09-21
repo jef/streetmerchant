@@ -32,14 +32,14 @@ export const Nvidia: Store = {
 			series: 'debug',
 			brand: 'TEST',
 			model: 'CARD',
-			url: digitalRiverStockUrl(fe2060SuperId),
+			url: digitalRiverStockUrl(fe2060SuperId, locale),
 			openCartAction: generateOpenCartAction(fe2060SuperId, locale,'TEST CARD debug')
 		},
 		{
 			series: '3080',
 			brand: 'nvidia',
 			model: 'founders edition',
-			url: digitalRiverStockUrl(fe3080Id),
+			url: digitalRiverStockUrl(fe3080Id, locale),
 			openCartAction: generateOpenCartAction(fe3080Id, locale, 'nvidia founders edition 3080')
 		}
 	],

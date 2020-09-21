@@ -5,9 +5,10 @@ import open from "open";
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
-export function digitalRiverStockUrl(id: number): string {
+export function digitalRiverStockUrl(id: number, locale: string): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
 		`&apiKey=${nvidiaApiKey}` +
+		`&locale=${locale}` +
 		timestampUrlParameter();
 }
 
