@@ -11,7 +11,7 @@ import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {Nvidia} from './nvidia';
 import {Store} from './store';
-import {OfficeDepot} from "./officedepot";
+import {OfficeDepot} from './officedepot';
 
 const masterList = new Map([
 	[Adorama.name, Adorama],
