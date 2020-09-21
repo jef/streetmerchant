@@ -1,11 +1,14 @@
-import {timestampUrlParameter} from "../../timestamp-url-parameter";
-import {Browser, Response} from "puppeteer";
-import {Logger} from "../../../logger";
-import open from "open";
+import {timestampUrlParameter} from '../../timestamp-url-parameter';
+import {Browser, Response} from 'puppeteer';
+import {Logger} from '../../../logger';
+import open from 'open';
+import {Link} from '../store';
+import {Config} from '../../../config';
+import {regionInfos} from '../nvidia';
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
-export function digitalRiverStockUrl(id: number, drLocale: string): string {
+function digitalRiverStockUrl(id: number, drLocale: string): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
 		`&apiKey=${nvidiaApiKey}` +
 		`&locale=${drLocale}` +
@@ -39,7 +42,7 @@ function fallbackCartUrl(nvidiaLocale: string): string {
 	return `https://www.nvidia.com/${nvidiaLocale}/shop/geforce?${timestampUrlParameter()}`;
 }
 
-export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
+function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
 	return async (browser: Browser) => {
 		const page = await browser.newPage();
 		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
@@ -68,4 +71,34 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 
 		await page.close();
 	};
+}
+
+export function generateLinks(): Link[] {
+	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
+
+	const defaultRegionInfo = { drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500 }
+	const regionInfo = regionInfos.get(country) ?? defaultRegionInfo;
+
+	const fe2060SuperId = regionInfo.fe2060SuperId;
+	const fe3080Id = regionInfo.fe3080Id;
+	const nvidiaLocale = regionInfo.nvidiaLocale;
+	const drLocale = regionInfo.drLocale;
+
+	let links: Link[] = [];
+	fe2060SuperId && links.push({
+		series: 'debug',
+		brand: 'TEST',
+		model: 'CARD',
+		url: digitalRiverStockUrl(fe2060SuperId, drLocale),
+		openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug')
+	})
+	fe3080Id && links.push({
+		series: '3080',
+		brand: 'nvidia',
+		model: 'founders edition',
+		url: digitalRiverStockUrl(fe3080Id, drLocale),
+		openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080')
+	})
+
+	return links;
 }
