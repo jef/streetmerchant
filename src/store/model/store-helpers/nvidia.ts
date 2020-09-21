@@ -3,8 +3,19 @@ import {Browser, Response} from "puppeteer";
 import {Logger} from "../../../logger";
 import open from "open";
 
+/* FE 2060 SUPER debug IDs
+USA: 5379432500
+ */
 export const fe2060SuperId = 5379432500;
+
+/* FE 3080 IDs
+USA: 5379432500
+ */
 export const fe3080Id = 5438481700;
+
+/* Locales
+USA: en_us
+ */
 const locale = 'en_us';
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
