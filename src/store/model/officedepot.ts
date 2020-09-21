@@ -3,9 +3,9 @@ import {Store} from './store';
 export const OfficeDepot: Store = {
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.officedepot.com/a/products/7189374/PNY-GeForce-RTX-3080-10GB-GDDR6X/'
 		},
 		{

@@ -3,9 +3,9 @@ import {Store} from './store';
 export const BAndH: Store = {
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html'
 		},
 		{

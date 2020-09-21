@@ -3,9 +3,9 @@ import {Store} from './store';
 export const AmazonCa: Store = {
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.amazon.ca/GeForce-RTX-2060-Architecture-Graphics/dp/B07PBLD2MX/ref=sr_1_2'
 		},
 		{

@@ -3,9 +3,9 @@ import {Store} from './store';
 export const Amazon: Store = {
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.amazon.com/MSI-GeForce-RTX-2060-Architecture/dp/B07MQ36Z6L/ref=sr_1_4'
 		},
 		{

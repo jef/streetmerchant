@@ -75,8 +75,8 @@ function generateCartAction(id: number, cardName: string) {
 export const Nvidia: Store = {
 	links: [
 		{
-			series: 'debug',
-			brand: 'TEST',
+			series: 'test:series',
+			brand: 'test:brand',
 			model: 'CARD',
 			url: digitalRiverStockUrl(fe2060SuperId),
 			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD')

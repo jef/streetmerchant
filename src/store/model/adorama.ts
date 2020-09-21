@@ -3,9 +3,9 @@ import {Store} from './store';
 export const Adorama: Store = {
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.adorama.com/ev08gp43067k.html'
 		},
 		{
@@ -20,24 +20,24 @@ export const Adorama: Store = {
 			series: '3080',
 			url: 'https://www.adorama.com/msig380gxt1.html'
 		},
-		{
-			brand: 'evga',
-			model: 'ftw3 ultra',
-			series: '3080',
-			url: 'https://www.adorama.com/ev10g53897kr.html'
-		},
+		// {
+		// 	brand: 'evga',
+		// 	model: 'ftw3 ultra',
+		// 	series: '3080',
+		// 	url: 'https://www.adorama.com/ev10g53897kr.html'
+		// },
 		{
 			brand: 'evga',
 			model: 'xc3 ultra',
 			series: '3080',
 			url: 'https://www.adorama.com/ev10g53885kr.html'
 		},
-		{
-			brand: 'evga',
-			model: 'ftw3',
-			series: '3080',
-			url: 'https://www.adorama.com/ev10g53895kr.html'
-		},
+		// {
+		// 	brand: 'evga',
+		// 	model: 'ftw3',
+		// 	series: '3080',
+		// 	url: 'https://www.adorama.com/ev10g53895kr.html'
+		// },
 		{
 			brand: 'evga',
 			model: 'xc3',
