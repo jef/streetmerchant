@@ -7,6 +7,8 @@ import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
 
+const inStock: Record<string, boolean> = {};
+
 /**
  * Returns true if the brand should be checked for stock
  *
@@ -81,6 +83,12 @@ async function lookup(browser: Browser, store: Store) {
 		} else {
 			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 			Logger.info(link.url);
+			if (Config.page.inStockWaitTime) {
+				inStock[store.name] = true;
+				setTimeout(() => {
+					inStock[store.name] = false;
+				}, 1000 * Config.page.inStockWaitTime);
+			}
 
 			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
@@ -109,7 +117,11 @@ async function lookup(browser: Browser, store: Store) {
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
 	Logger.debug(`[${store.name}] Starting lookup...`);
 	try {
-		await lookup(browser, store);
+		if (Config.page.inStockWaitTime && inStock[store.name]) {
+			Logger.info(`[${store.name}] Has stock, waiting before trying to lookup again...`);
+		} else {
+			await lookup(browser, store);
+		}
 	} catch (error) {
 		Logger.error(error);
 	}
