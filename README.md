@@ -70,6 +70,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same store if it has cards in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
+| `LOCATION` | [Supported location](#supported-locations) to search for stock | Default: `US` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
@@ -94,6 +95,13 @@ Here is a list of variables that you can use to customize your newly copied `.en
 > :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
 > :point_right: You can test your notification configuration by running `npm run test:notification`.
+
+#### Supported locations
+(currently only implemented on nvidia store, more coming soon)
+| **Locations** | **Environment variable** |
+|:---:|:---:|
+| United States of America | `US`|
+| Great Britain | `GB`|
 
 #### Supported stores
 

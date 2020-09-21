@@ -12,6 +12,8 @@ const browser = {
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';
 
+const location = process.env.LOCATION;
+
 const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
 	discord: {
@@ -69,6 +71,7 @@ const store = {
 export const Config = {
 	browser,
 	logLevel,
+	location,
 	notifications,
 	page,
 	store

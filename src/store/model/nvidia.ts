@@ -2,17 +2,31 @@ import {Store} from './store';
 import {Browser, Response} from 'puppeteer';
 import {timestampUrlParameter} from '../timestamp-url-parameter';
 import {Logger} from '../../logger';
+import {Config} from '../../config';
 import open from 'open';
 
 const fe2060SuperId = 5379432500;
-const fe3080Id = 5438481700;
-const locale = 'en_us';
+let locale: string
+let fe3080Id
+switch (Config.location) {
+	case 'GB':
+		locale = 'en_gb';
+		fe3080Id = 5438792800;
+		Logger.info('checking nvidia gb')
+		break;
+		
+	default:
+		locale = 'en_us';
+		fe3080Id = 5438481700;
+		Logger.info('checking nvidia us')
+		break;
+}
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
-function digitalRiverStockUrl(id: number): string {
+function digitalRiverStockUrl(id: number, locale: string): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
-		`&apiKey=${nvidiaApiKey}` +
+		`&apiKey=${nvidiaApiKey}&locale=${locale}` +
 		timestampUrlParameter();
 }
 
@@ -20,7 +34,7 @@ interface NvidiaSessionTokenJSON {
 	access_token: string;
 }
 
-function nvidiaSessionUrl(): string {
+function nvidiaSessionUrl(locale: string): string {
 	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${locale}` +
 		`&apiKey=${nvidiaApiKey}` +
 		timestampUrlParameter();
@@ -49,7 +63,7 @@ function generateCartAction(id: number, cardName: string) {
 		let response: Response | null;
 		try {
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
-			response = await page.goto(nvidiaSessionUrl(), {waitUntil: 'networkidle0'});
+			response = await page.goto(nvidiaSessionUrl(locale), {waitUntil: 'networkidle0'});
 			if (response === null) {
 				throw new Error('NvidiaAccessTokenUnavailable');
 			}
@@ -78,14 +92,14 @@ export const Nvidia: Store = {
 			series: 'debug',
 			brand: 'TEST',
 			model: 'CARD',
-			url: digitalRiverStockUrl(fe2060SuperId),
+			url: digitalRiverStockUrl(fe2060SuperId, locale),
 			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD')
 		},
 		{
 			series: '3080',
 			brand: 'nvidia',
 			model: 'founders edition',
-			url: digitalRiverStockUrl(fe3080Id),
+			url: digitalRiverStockUrl(fe3080Id, locale),
 			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080')
 		}
 	],
