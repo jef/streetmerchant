@@ -2,7 +2,7 @@ import {Store} from './store';
 
 export const BAndH: Store = {
 	labels: {
-		outOfStock: ['notify when available']
+		outOfStock: ['notify when available', 'try varying your search terms']
 	},
 	links: [
 		{
