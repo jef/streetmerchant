@@ -83,6 +83,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `COUNTRY` | [Supported country](#supported-countries)  you want to be scraped, currently only used by Nvidia | default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
@@ -120,6 +121,27 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Telus | `telus`| |
 | T-Mobile | `tmobile`| |
 | Verizon | `verizon`| Works with Visible |
+
+#### Supported countries
+
+| **Country** | **Nvidia.com (3080 FE)** | **Notes** |
+|:---:|:---:|:---:|
+| canada | `✔` | |
+| usa | `✔` | Nvidia supports debug |
+| france | `✔` | |
+| belgium | `✔` | Nvidia supports debug |
+| luxembourg | `✔` | Nvidia supports debug |
+| germany | `✔` | |
+| austria | `✔` | |
+| italy | `✔` | |
+| spain | `✔` | |
+| portugal | `✔` | |
+| poland | `✔` | |
+| denmark | `✔` | |
+| finland | `✔` | |
+| czechia | `✔` | |
+| russia | `✔` | |
+| sweden | `✔` | |
 
 ## FAQ
 
