@@ -4,20 +4,27 @@ import {
 	generateOpenCartAction
 } from './helpers/nvidia';
 
-/* FE 2060 SUPER debug IDs
-USA: 5379432500
- */
-export const fe2060SuperId = 5379432500;
+const country = 'usa';
 
-/* FE 3080 IDs
-USA: 5379432500
- */
-export const fe3080Id = 5438481700;
+const fe2060SuperIds = {
+	usa: 5379432500
+}
 
-/* Locales
-USA: en_us
- */
-const locale = 'en_us';
+const fe3080Ids = {
+	usa: 5438481700
+}
+
+const locales = {
+	usa: 'en_us'
+}
+
+const outOfStockLabels = {
+	usa: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
+}
+
+const fe2060SuperId = fe2060SuperIds[country];
+const fe3080Id = fe3080Ids[country];
+const locale = locales[country];
 
 export const Nvidia: Store = {
 	links: [
@@ -37,7 +44,7 @@ export const Nvidia: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
+		outOfStock: outOfStockLabels[country]
 	},
 	name: 'nvidia'
 };
