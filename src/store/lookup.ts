@@ -66,13 +66,13 @@ async function lookup(browser: Browser, store: Store) {
 	/* eslint-enable no-await-in-loop */
 }
 
-async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
+async function lookupCard(browser: Browser, store: Store, page: Page, link: Link): Promise<Response | null> {
 	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (response && response.status() === 429) {
 		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-		return;
+		return response;
 	}
 
 	if (await lookupCardInStock(browser, store, page)) {
@@ -96,16 +96,17 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		}
 
 		sendNotification(givenUrl, link);
-		return;
+		return response;
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
 		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 		await delay(getSleepTime());
-		return;
+		return response;
 	}
 
 	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+	return response;
 }
 
 async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
@@ -117,6 +118,7 @@ async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
 	}
 
 	const stockContent = await page.evaluate(element => element.textContent, stockHandle);
+	Logger.debug(stockContent);
 
 	if (includesLabels(stockContent, store.labels.inStock.labels)) {
 		return true;
