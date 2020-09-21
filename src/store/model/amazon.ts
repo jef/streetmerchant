@@ -95,7 +95,8 @@ export const Amazon: Store = {
 	],
 	labels: {
 		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable', 'available from these sellers']
+		outOfStock: ['currently unavailable', 'available from these sellers'],
+		bannedSeller: ['sports authentics', 'raccoon capitalist', 'gigaparts']
 	},
 	name: 'amazon'
 };
