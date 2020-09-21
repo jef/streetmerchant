@@ -56,7 +56,8 @@ const page = {
 	width: 1920,
 	height: 1080,
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT ?? 30000),
-	userAgent: process.env.USER_AGENT ?? 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
+	userAgent: process.env.USER_AGENT ?? 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+	inStockWaitTime: Number(process.env.IN_STOCK_WAIT_TIME ?? 0)
 };
 
 const store = {
