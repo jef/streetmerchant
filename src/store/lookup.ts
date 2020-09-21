@@ -5,7 +5,7 @@ import open from 'open';
 import {Store} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
-import {delay, getSleepTime} from '../util';
+import {closePage, delay, getSleepTime} from '../util';
 
 /**
  * Returns true if the brand should be checked for stock
@@ -62,7 +62,7 @@ async function lookup(browser: Browser, store: Store) {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
-			await page.close();
+			await closePage(page);
 			continue;
 		}
 
@@ -84,7 +84,8 @@ async function lookup(browser: Browser, store: Store) {
 
 			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
-				await page.screenshot({path: `success-${Date.now()}.png`});
+				link.screenshot = `success-${Date.now()}.png`;
+				await page.screenshot({path: link.screenshot});
 			}
 
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
@@ -96,7 +97,7 @@ async function lookup(browser: Browser, store: Store) {
 			sendNotification(givenUrl, link);
 		}
 
-		await page.close();
+		await closePage(page);
 	}
 	/* eslint-enable no-await-in-loop */
 }
