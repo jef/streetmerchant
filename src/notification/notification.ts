@@ -12,7 +12,7 @@ const notifications = Config.notifications;
 
 export function sendNotification(cartUrl: string, link: Link) {
 	if (notifications.email.username && notifications.email.password) {
-		sendEmail(cartUrl);
+		sendEmail(cartUrl, link);
 	}
 
 	if (notifications.slack.channel && notifications.slack.token) {
@@ -30,7 +30,7 @@ export function sendNotification(cartUrl: string, link: Link) {
 	if (notifications.phone.number) {
 		const carrier = notifications.phone.carrier.toLowerCase();
 		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
-			sendSMS(cartUrl);
+			sendSMS(cartUrl, link);
 		}
 	}
 
