@@ -271,3 +271,10 @@ export const config = {
 	proxy,
 	store
 };
+
+export function setConfig(newConfig: any) {
+	const writeConfig = config as any;
+	for (const key of Object.keys(newConfig)) {
+		writeConfig[key] = newConfig[key];
+	}
+}
