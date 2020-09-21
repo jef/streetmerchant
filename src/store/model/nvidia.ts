@@ -8,7 +8,7 @@ export interface NvidiaRegionInfo {
 	nvidiaLocale: string;
 	fe3080Id: number | null;
 	fe3090Id: number | null;
-	fe2060SuperId: number | null
+	fe2060SuperId: number | null;
 }
 
 export const regionInfos = new Map<string, NvidiaRegionInfo>([

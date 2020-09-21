@@ -27,6 +27,7 @@ async function main() {
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
 		}
+
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
 }

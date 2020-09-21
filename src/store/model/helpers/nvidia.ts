@@ -55,7 +55,7 @@ export function generateSetupAction() {
 
 		const page = await browser.newPage();
 
-		Logger.info(`[nvidia] creating cart/session token...`);
+		Logger.info('[nvidia] creating cart/session token...');
 		let response: Response | null;
 		try {
 			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
@@ -66,16 +66,16 @@ export function generateSetupAction() {
 			const data = await response.json() as NvidiaSessionTokenJSON;
 			const accessToken = data.access_token;
 
-			Logger.info(`[nvidia] you can log into your cart now...`);
+			Logger.info('[nvidia] you can log into your cart now...');
 			Logger.info(checkoutUrl(drLocale, accessToken));
 			await open(checkoutUrl(drLocale, accessToken));
 		} catch (error) {
 			Logger.debug(error);
-			Logger.error(`✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...`);
+			Logger.error('✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...');
 		}
 
 		await page.close();
-	}
+	};
 }
 
 export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
