@@ -102,6 +102,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Adorama | `adorama`|
 | Amazon | `amazon`|
 | Amazon.ca | `amazon-ca`|
+| Amazon.de | `amazon-de`|
 | ASUS | `asus` |
 | Best Buy | `bestbuy`|
 | B&H | `bandh`|
