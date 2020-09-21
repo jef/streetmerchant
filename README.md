@@ -107,6 +107,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | EVGA | `evga`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
+| Newegg.ca | `newegg-ca`|
 | Nvidia | `nvidia`|
 
 #### Supported carriers
