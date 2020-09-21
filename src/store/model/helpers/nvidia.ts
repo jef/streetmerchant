@@ -4,9 +4,16 @@ import {Logger} from '../../../logger';
 import open from 'open';
 import {Link} from '../store';
 import {Config} from '../../../config';
-import {regionInfos} from '../nvidia';
+import {NvidiaRegionInfo, regionInfos} from '../nvidia';
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
+
+function getRegionInfo(): NvidiaRegionInfo {
+	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
+
+	const defaultRegionInfo: NvidiaRegionInfo = {drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500};
+	return regionInfos.get(country) ?? defaultRegionInfo;
+}
 
 function digitalRiverStockUrl(id: number, drLocale: string): string {
 	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
@@ -42,7 +49,35 @@ function fallbackCartUrl(nvidiaLocale: string): string {
 	return `https://www.nvidia.com/${nvidiaLocale}/shop/geforce?${timestampUrlParameter()}`;
 }
 
-function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
+export function generateSetupAction() {
+	return async (browser: Browser) => {
+		const {drLocale, nvidiaLocale} = getRegionInfo();
+
+		const page = await browser.newPage();
+
+		Logger.info(`[nvidia] creating cart/session token...`);
+		let response: Response | null;
+		try {
+			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
+			if (response === null) {
+				throw new Error('NvidiaAccessTokenUnavailable');
+			}
+
+			const data = await response.json() as NvidiaSessionTokenJSON;
+			const accessToken = data.access_token;
+
+			Logger.info(`[nvidia] you can log into your cart now...`);
+			Logger.info(checkoutUrl(drLocale, accessToken));
+		} catch (error) {
+			Logger.debug(error);
+			Logger.error(`✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...`);
+		}
+
+		await page.close();
+	}
+}
+
+export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
 	return async (browser: Browser) => {
 		const page = await browser.newPage();
 		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
@@ -74,16 +109,7 @@ function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: stri
 }
 
 export function generateLinks(): Link[] {
-	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
-
-	const defaultRegionInfo = {drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500};
-	const regionInfo = regionInfos.get(country) ?? defaultRegionInfo;
-
-	const fe2060SuperId = regionInfo.fe2060SuperId;
-	const fe3080Id = regionInfo.fe3080Id;
-	const fe3090Id = regionInfo.fe3090Id;
-	const nvidiaLocale = regionInfo.nvidiaLocale;
-	const drLocale = regionInfo.drLocale;
+	const {drLocale, nvidiaLocale, fe3080Id, fe3090Id, fe2060SuperId} = getRegionInfo();
 
 	const links: Link[] = [];
 

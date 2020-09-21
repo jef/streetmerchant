@@ -1,8 +1,17 @@
 import {Store} from './store';
-import {generateLinks} from './helpers/nvidia';
+import {generateLinks, generateSetupAction} from './helpers/nvidia';
 
 // Region/country set by config file, silently ignores null / missing values and defaults to usa
-export const regionInfos = new Map<string, {drLocale: string; nvidiaLocale: string; fe3080Id: number | null; fe3090Id: number | null; fe2060SuperId: number | null}>([
+
+export interface NvidiaRegionInfo {
+	drLocale: string;
+	nvidiaLocale: string;
+	fe3080Id: number | null;
+	fe3090Id: number | null;
+	fe2060SuperId: number | null
+}
+
+export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['austria', {drLocale: 'de_de', nvidiaLocale: 'de_de', fe3080Id: 5440853700, fe3090Id: null, fe2060SuperId: null}],
 	['belgium', {drLocale: 'fr_fr', nvidiaLocale: 'fr_fr', fe3080Id: 5438795700, fe3090Id: null, fe2060SuperId: 5394902700}],
 	['canada', {drLocale: 'en_us', nvidiaLocale: 'en_ca', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: null}],
@@ -27,5 +36,6 @@ export const Nvidia: Store = {
 	labels: {
 		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
 	},
-	name: 'nvidia'
+	name: 'nvidia',
+	setupAction: generateSetupAction()
 };
