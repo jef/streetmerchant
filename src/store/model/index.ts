@@ -9,6 +9,7 @@ import {Config} from '../../config';
 import {Evga} from './evga';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
+import {NewEggCa} from './newegg-ca';
 import {Nvidia} from './nvidia';
 import {Store} from './store';
 
@@ -22,6 +23,7 @@ const masterList = new Map([
 	[Evga.name, Evga],
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
+	[NewEggCa.name, NewEggCa],
 	[Nvidia.name, Nvidia]
 ]);
 
