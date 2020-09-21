@@ -62,6 +62,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
+| `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
@@ -74,7 +75,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
 | `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
-| `PUSHOVER_USERNAME` | Pushover username |
+| `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
@@ -85,8 +86,11 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
+| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
+
+> :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
 > :point_right: You can test your notification configuration by running `npm run test:notification`.
 

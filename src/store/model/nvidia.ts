@@ -84,13 +84,13 @@ export const Nvidia: Store = {
 		{
 			series: '3080',
 			brand: 'nvidia',
-			model: 'founders edition 3080',
+			model: 'founders edition',
 			url: digitalRiverStockUrl(fe3080Id),
 			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080')
 		}
 	],
 	labels: {
-		oosList: ['product_inventory_out_of_stock', 'rate limit exceeded']
+		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
 	},
 	name: 'nvidia'
 };

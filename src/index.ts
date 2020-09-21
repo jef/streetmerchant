@@ -1,14 +1,14 @@
 import puppeteer from 'puppeteer-extra';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
-import adblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 import {Config} from './config';
 import {Stores} from './store/model';
 import {Logger} from './logger';
 import {tryLookupAndLoop} from './store';
 import {getSleepTime} from './util';
+import {adBlocker} from './adblocker';
 
 puppeteer.use(stealthPlugin());
-puppeteer.use(adblockerPlugin({blockTrackers: true}));
+puppeteer.use(adBlocker);
 
 /**
  * Starts the bot.

@@ -7,11 +7,12 @@ export interface Link {
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => void;
+	screenshot?: string;
 }
 
 export interface Labels {
-	oosList: string[];
-	captchaList?: string[];
+	outOfStock: string[];
+	captcha?: string[];
 }
 
 export interface Store {

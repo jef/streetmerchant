@@ -2,6 +2,7 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 import {Config} from '../config';
 import {Logger} from '../logger';
+import {Link} from '../store/model';
 
 const email = Config.notifications.email;
 const subject = 'NVIDIA - BUY NOW';
@@ -20,8 +21,17 @@ const mailOptions: Mail.Options = {
 	subject
 };
 
-export function sendEmail(cartUrl: string) {
+export function sendEmail(cartUrl: string, link: Link) {
 	mailOptions.text = cartUrl;
+
+	if (link.screenshot) {
+		mailOptions.attachments = [
+			{
+				filename: link.screenshot,
+				path: `./${link.screenshot}`
+			}
+		];
+	}
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
