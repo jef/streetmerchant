@@ -13,6 +13,7 @@ const browser = {
 const logLevel = process.env.LOG_LEVEL ?? 'info';
 
 const notifications = {
+	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
 	discord: {
 		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
 		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
