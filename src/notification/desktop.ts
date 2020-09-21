@@ -1,16 +1,14 @@
 import notifier from 'node-notifier';
-import { Config } from '../config';
-import { Logger } from '../logger';
-import { Link } from '../store/model';
+import {Link} from '../store/model';
 
 export function sendDesktopNotification(cartUrl: string, link: Link) {
-    (async () => {
-        const title = link.brand + ' ' + link.model + ' IN STOCK';
-        const message = cartUrl;
+	(async () => {
+		const title = link.brand + ' ' + link.model + ' IN STOCK';
+		const message = cartUrl;
 
-        notifier.notify({
-            title,
-            message
-        });
-    })();
+		notifier.notify({
+			title,
+			message
+		});
+	})();
 }
