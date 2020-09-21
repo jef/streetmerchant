@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    nvidia-snacher:
+        image: IMAGE_TAG_HERE
+        security_opt:
+          - seccomp:chrome.json
+        volumes:
+          - "./.env-example:/usr/src/app/.env"
