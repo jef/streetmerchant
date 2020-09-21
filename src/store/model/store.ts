@@ -1,9 +1,9 @@
 export interface Link {
-	brand: string;
-	cartUrl?: string;
+	brand: 'TEST' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
+	series: 'debug' | '3070' | '3080' | '3090';
 	model: string;
-	series: string;
 	url: string;
+	cartUrl?: string;
 	screenshot?: string;
 }
 

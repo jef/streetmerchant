@@ -3,7 +3,7 @@ import {sendNotification} from '../notification';
 
 const link: Link = {
 	series: 'debug',
-	brand: 'brand',
+	brand: 'TEST',
 	cartUrl: 'http://example.com/',
 	model: 'model',
 	url: 'http://example.com/'
