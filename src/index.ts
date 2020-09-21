@@ -1,34 +1,31 @@
+import puppeteer from 'puppeteer-extra';
+import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {Config} from './config';
 import {Stores} from './store/model';
 import {Logger} from './logger';
-import {sendNotification} from './notification';
-import {lookup} from './store';
-import puppeteer from 'puppeteer';
+import {tryLookupAndLoop} from './store';
+import {getSleepTime} from './util';
+import {adBlocker} from './adblocker';
+
+puppeteer.use(stealthPlugin());
+puppeteer.use(adBlocker);
 
 /**
  * Starts the bot.
  */
 async function main() {
-	const results = [];
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({
+		headless: Config.browser.isHeadless,
+		defaultViewport: {
+			height: Config.page.height,
+			width: Config.page.width
+		}
+	});
 
 	for (const store of Stores) {
 		Logger.debug(store.links);
-		results.push(lookup(browser, store));
+		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
-
-	await Promise.all(results);
-	await browser.close();
-
-	Logger.info('↗ trying stores again');
-	setTimeout(main, Config.rateLimitTimeout);
-}
-
-/**
- * Send test email.
- */
-if (Config.notifications.test === 'true') {
-	sendNotification('test');
 }
 
 /**

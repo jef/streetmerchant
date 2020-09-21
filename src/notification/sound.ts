@@ -1,9 +1,9 @@
-import playerLib = require('play-sound');
+import playerLib from 'play-sound';
 import {Config} from '../config';
 import {Logger} from '../logger';
-import * as fs from 'fs';
+import fs from 'fs';
 
-const notificationSound = './resources/sounds/' + Config.notifications.playSound;
+const notificationSound = Config.notifications.playSound;
 const player = playerLib();
 
 export function playSound() {
@@ -15,7 +15,7 @@ export function playSound() {
 		}
 
 		player.play(notificationSound, (err: string) => {
-			Logger.info('✔ playing sound');
+			Logger.info('↗ playing sound');
 
 			if (err) {
 				Logger.error(`error playing sound: ${err}`);

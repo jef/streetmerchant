@@ -1,4 +1,5 @@
 import winston, {format} from 'winston';
+import {Config} from './config';
 
 const prettyJson = format.printf(info => {
 	const timestamp = new Date().toLocaleTimeString();
@@ -11,7 +12,7 @@ const prettyJson = format.printf(info => {
 });
 
 export const Logger = winston.createLogger({
-	level: process.env.LOG_LEVEL ?? 'info',
+	level: Config.logLevel,
 	format: format.combine(
 		format.colorize(),
 		format.prettyPrint(),

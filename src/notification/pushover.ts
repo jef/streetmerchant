@@ -8,16 +8,16 @@ const push = new Push({
 	token: pushover.token
 });
 
-export function sendPushoverNotification(text: string) {
+export function sendPushoverNotification(cartUrl: string) {
 	const message = {
-		message: text
+		message: cartUrl
 	};
 
 	push.send(message, (err: Error, result: string) => {
 		if (err) {
 			Logger.error(err);
 		} else {
-			Logger.info(`✔ Pushover notification sent: ${result}`);
+			Logger.info(`↗ pushover notification sent: ${result}`);
 		}
 	});
 }
