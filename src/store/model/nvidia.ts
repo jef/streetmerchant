@@ -2,7 +2,7 @@ import {Store} from './store';
 import {generateLinks} from './helpers/nvidia';
 
 // Region/country set by config file, silently ignores null / missing values and defaults to usa
-export const regionInfos = new Map<string, {drLocale: string, nvidiaLocale: string, fe3080Id: number | null, fe3090Id: number | null, fe2060SuperId: number | null}>([
+export const regionInfos = new Map<string, {drLocale: string; nvidiaLocale: string; fe3080Id: number | null; fe3090Id: number | null; fe2060SuperId: number | null}>([
 	['canada', { drLocale: 'en_us', nvidiaLocale: 'en_ca', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: null }],
 	['usa', { drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500 }],
 	['france', { drLocale: 'fr_fr', nvidiaLocale: 'fr_fr', fe3080Id: 5438795200, fe3090Id: null, fe2060SuperId: null }],
@@ -19,7 +19,7 @@ export const regionInfos = new Map<string, {drLocale: string, nvidiaLocale: stri
 	['czechia', { drLocale: 'en_gb', nvidiaLocale: 'en_gb', fe3080Id: 5438793800, fe3090Id: null, fe2060SuperId: null }],
 	['russia', { drLocale: 'ru_ru', nvidiaLocale: 'ru_ru', fe3080Id: null, fe3090Id: null, fe2060SuperId: null }],
 	['sweden', { drLocale: 'sv_SE', nvidiaLocale: 'sv_se', fe3080Id: 5438798100, fe3090Id: null, fe2060SuperId: null }]
-])
+]);
 
 export const Nvidia: Store = {
 	links: generateLinks(),
