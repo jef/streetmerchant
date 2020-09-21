@@ -126,22 +126,23 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
 |:---:|:---:|:---:|:---:|
-| canada | `✔` | | |
-| usa | `✔` | | Nvidia supports debug |
-| france | `✔` | | |
-| belgium | `✔` | | Nvidia supports debug |
-| luxembourg | `✔` | | Nvidia supports debug |
-| germany | `✔` | | |
 | austria | `✔` | | |
-| italy | `✔` | | |
-| spain | `✔` | | |
-| portugal | `✔` | | |
-| poland | `✔` | | |
+| belgium | `✔` | | Nvidia supports debug |
+| canada | `✔` | | |
+| czechia | `✔` | | |
 | denmark | `✔` | | |
 | finland | `✔` | | |
-| czechia | `✔` | | |
+| france | `✔` | | |
+| germany | `✔` | | |
+| great_britain | `✔` | | |
+| italy | `✔` | | |
+| luxembourg | `✔` | | Nvidia supports debug |
+| poland | `✔` | | |
+| portugal | `✔` | | |
 | russia | | | Missing all IDs |
+| spain | `✔` | | |
 | sweden | `✔` | | |
+| usa | `✔` | | Nvidia supports debug |
 
 ## FAQ
 
