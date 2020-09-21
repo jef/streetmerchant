@@ -138,6 +138,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | france | `✔` | | |
 | germany | `✔` | | |
 | great_britain | `✔` | | |
+| ireland | `✔` | | |
 | italy | `✔` | | |
 | luxembourg | `✔` | | Nvidia supports debug |
 | poland | `✔` | | |
