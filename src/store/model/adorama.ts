@@ -61,7 +61,7 @@ export const Adorama: Store = {
 			model: 'xlr8 rbg',
 			series: '3080',
 			url: 'https://www.adorama.com/png30801tfxb.html'
-		},
+		}
 	],
 	labels: {
 		captcha: ['please verify you are a human'],
