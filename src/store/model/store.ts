@@ -13,6 +13,7 @@ export interface Link {
 export interface Labels {
 	outOfStock: string[];
 	captcha?: string[];
+	bannedSeller?: string[];
 }
 
 export interface Store {
