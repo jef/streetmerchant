@@ -15,7 +15,7 @@ export function sendDiscordMessage(cartUrl: string, link: Link) {
 			embed.addField('Brand', link.brand, true);
 			embed.addField('Model', link.model, true);
 
-			if (notifyGroup !== '') {
+			if (notifyGroup) {
 				embed.setText(notifyGroup);
 			}
 
