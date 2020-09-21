@@ -79,12 +79,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
+| `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
 | `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, E.g.: `3080` |
 | `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
-| `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
