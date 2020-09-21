@@ -58,7 +58,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			await lookupCard(browser, store, page, link);
 		} catch (error) {
-			Logger.error(error);
+			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} skipping; timed out`);
 		}
 
 		await closePage(page);
@@ -70,16 +70,12 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
-	if (response === null) {
-		throw new TypeError(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
-	}
-
-	if (response.status() === 429) {
+	if (response && response.status() === 429) {
 		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		return;
 	}
 
-	if (await lookupCardInStock(browser, store, page, link)) {
+	if (await lookupCardInStock(browser, store, page)) {
 		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 		Logger.info(link.url);
 
