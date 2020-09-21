@@ -81,6 +81,7 @@ export function generateLinks(): Link[] {
 
 	const fe2060SuperId = regionInfo.fe2060SuperId;
 	const fe3080Id = regionInfo.fe3080Id;
+	const fe3090Id = regionInfo.fe3090Id;
 	const nvidiaLocale = regionInfo.nvidiaLocale;
 	const drLocale = regionInfo.drLocale;
 
@@ -103,6 +104,16 @@ export function generateLinks(): Link[] {
 			model: 'founders edition',
 			url: digitalRiverStockUrl(fe3080Id, drLocale),
 			openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080')
+		});
+	}
+
+	if (fe3090Id) {
+		links.push({
+			series: '3090',
+			brand: 'nvidia',
+			model: 'founders edition',
+			url: digitalRiverStockUrl(fe3090Id, drLocale),
+			openCartAction: generateOpenCartAction(fe3090Id, nvidiaLocale, drLocale, 'nvidia founders edition 3090')
 		});
 	}
 

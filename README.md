@@ -124,24 +124,24 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported countries
 
-| **Country** | **Nvidia.com (3080 FE)** | **Notes** |
-|:---:|:---:|:---:|
-| canada | `✔` | |
-| usa | `✔` | Nvidia supports debug |
-| france | `✔` | |
-| belgium | `✔` | Nvidia supports debug |
-| luxembourg | `✔` | Nvidia supports debug |
-| germany | `✔` | |
-| austria | `✔` | |
-| italy | `✔` | |
-| spain | `✔` | |
-| portugal | `✔` | |
-| poland | `✔` | |
-| denmark | `✔` | |
-| finland | `✔` | |
-| czechia | `✔` | |
-| russia | | |
-| sweden | `✔` | |
+| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
+|:---:|:---:|:---:|:---:|
+| canada | `✔` | | |
+| usa | `✔` | | Nvidia supports debug |
+| france | `✔` | | |
+| belgium | `✔` | | Nvidia supports debug |
+| luxembourg | `✔` | | Nvidia supports debug |
+| germany | `✔` | | |
+| austria | `✔` | | |
+| italy | `✔` | | |
+| spain | `✔` | | |
+| portugal | `✔` | | |
+| poland | `✔` | | |
+| denmark | `✔` | | |
+| finland | `✔` | | |
+| czechia | `✔` | | |
+| russia | | | Missing all IDs |
+| sweden | `✔` | | |
 
 ## FAQ
 
