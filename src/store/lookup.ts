@@ -1,8 +1,8 @@
-import {Browser, Response} from 'puppeteer';
+import {Browser, Page, Response} from 'puppeteer';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import open from 'open';
-import {Store} from './model';
+import {Store, Link} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
@@ -55,70 +55,93 @@ async function lookup(browser: Browser, store: Store) {
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 
-		const graphicsCard = `${link.brand} ${link.model}`;
-
-		let response: Response | null;
 		try {
-			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
-		} catch {
-			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
-			await closePage(page);
-			continue;
+			await lookupCard(browser, store, page, link);
+		} catch (error) {
+			Logger.error(error);
 		}
 
-		const stockHandle = await page.$(store.labels.inStock.container);
-		const visible = await page.evaluate(element => element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
-		if (visible) {
-			const stockContent = await page.evaluate(element => element.textContent, stockHandle);
-
-			if (includesLabels(stockContent, store.labels.inStock.labels)) {
-				Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
-				Logger.info(link.url);
-
-				if (Config.page.capture) {
-					Logger.debug('ℹ saving screenshot');
-					link.screenshot = `success-${Date.now()}.png`;
-					await page.screenshot({path: link.screenshot});
-				}
-
-				const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-
-				if (Config.browser.open) {
-					if (link.openCartAction === undefined) {
-						await open(givenUrl);
-					} else {
-						link.openCartAction(browser);
-					}
-				}
-
-				sendNotification(givenUrl, link);
-				await closePage(page);
-				continue;
-			}
-		}
-
-		if (store.labels.captcha) {
-			const captchaHandle = await page.$(store.labels.captcha.container);
-			const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
-
-			if (includesLabels(captchaContent, store.labels.captcha.labels)) {
-				Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
-				await delay(getSleepTime());
-				await closePage(page);
-				continue;
-			}
-		}
-
-		if (response && response.status() === 429) {
-			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-			await closePage(page);
-			continue;
-		}
-
-		Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
 		await closePage(page);
 	}
 	/* eslint-enable no-await-in-loop */
+}
+
+async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
+	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
+	const graphicsCard = `${link.brand} ${link.model}`;
+
+	if (response === null) {
+		throw new TypeError(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+	}
+
+	if (response.status() === 429) {
+		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		return;
+	}
+
+	if (await lookupCardInStock(browser, store, page, link)) {
+		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
+		Logger.info(link.url);
+
+		if (Config.page.capture) {
+			Logger.debug('ℹ saving screenshot');
+			link.screenshot = `success-${Date.now()}.png`;
+			await page.screenshot({path: link.screenshot});
+		}
+
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
+		if (Config.browser.open) {
+			if (link.openCartAction === undefined) {
+				await open(givenUrl);
+			} else {
+				link.openCartAction(browser);
+			}
+		}
+
+		sendNotification(givenUrl, link);
+		return;
+	}
+
+	if (await lookupPageHasCaptcha(store, page)) {
+		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+		await delay(getSleepTime());
+		return;
+	}
+
+	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+}
+
+async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
+	const stockHandle = await page.$(store.labels.inStock.container);
+
+	const visible = await page.evaluate(element => element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
+	if (!visible) {
+		return false;
+	}
+
+	const stockContent = await page.evaluate(element => element.textContent, stockHandle);
+
+	if (includesLabels(stockContent, store.labels.inStock.labels)) {
+		return true;
+	}
+
+	return false;
+}
+
+async function lookupPageHasCaptcha(store: Store, page: Page) {
+	if (!store.labels.captcha) {
+		return false;
+	}
+
+	const captchaHandle = await page.$(store.labels.captcha.container);
+	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
+
+	if (includesLabels(captchaContent, store.labels.captcha.labels)) {
+		return true;
+	}
+
+	return false;
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
