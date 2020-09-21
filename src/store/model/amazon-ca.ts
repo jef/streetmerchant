@@ -6,7 +6,7 @@ export const AmazonCa: Store = {
 			brand: 'TEST',
 			model: 'CARD',
 			series: 'debug',
-			url: 'https://www.amazon.ca/GeForce-RTX-2060-Architecture-Graphics/dp/B07PBLD2MX
+			url: 'https://www.amazon.ca/GeForce-RTX-2060-Architecture-Graphics/dp/B07PBLD2MX'
 		},
 		{
 			brand: 'msi',
