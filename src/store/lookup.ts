@@ -84,7 +84,8 @@ async function lookup(browser: Browser, store: Store) {
 
 			if (Config.page.capture) {
 				Logger.debug('ℹ saving screenshot');
-				await page.screenshot({path: `success-${Date.now()}.png`});
+				link.screenshot = `success-${Date.now()}.png`;
+				await page.screenshot({path: link.screenshot});
 			}
 
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
