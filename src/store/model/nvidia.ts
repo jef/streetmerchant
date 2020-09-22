@@ -1,96 +1,42 @@
-import {Browser, Response} from 'puppeteer';
-import {Logger} from '../../logger';
+import {generateLinks, generateSetupAction} from './helpers/nvidia';
 import {Store} from './store';
-import open from 'open';
-import {timestampUrlParameter} from '../timestamp-url-parameter';
 
-const fe2060SuperId = 5379432500;
-const fe3080Id = 5438481700;
-const locale = 'en_us';
+// Region/country set by config file, silently ignores null / missing values and defaults to usa
 
-const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
-
-function digitalRiverStockUrl(id: number): string {
-	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
-		`&apiKey=${nvidiaApiKey}` +
-		timestampUrlParameter();
+export interface NvidiaRegionInfo {
+	drLocale: string;
+	fe3080Id: number | null;
+	fe3090Id: number | null;
+	fe2060SuperId: number | null;
+	nvidiaLocale: string;
 }
 
-interface NvidiaSessionTokenJSON {
-	access_token: string;
-}
-
-function nvidiaSessionUrl(): string {
-	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${locale}` +
-		`&apiKey=${nvidiaApiKey}` +
-		timestampUrlParameter();
-}
-
-function addToCartUrl(id: number, token: string): string {
-	return 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items?format=json&method=post' +
-		`&productId=${id}` +
-		`&token=${token}` +
-		'&quantity=1' +
-		timestampUrlParameter();
-}
-
-function checkoutUrl(token: string): string {
-	return `https://api.digitalriver.com/v1/shoppers/me/carts/active/web-checkout?token=${token}`;
-}
-
-function fallbackCartUrl(): string {
-	return `https://www.nvidia.com/en-us/shop/geforce?${timestampUrlParameter()}`;
-}
-
-function generateCartAction(id: number, cardName: string) {
-	return async (browser: Browser) => {
-		const page = await browser.newPage();
-		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
-		let response: Response | null;
-		try {
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
-			response = await page.goto(nvidiaSessionUrl(), {waitUntil: 'networkidle0'});
-			if (response === null) {
-				throw new Error('NvidiaAccessTokenUnavailable');
-			}
-
-			const data = await response.json() as NvidiaSessionTokenJSON;
-			const accessToken = data.access_token;
-
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart... 🚀🚀🚀`);
-			response = await page.goto(addToCartUrl(id, accessToken), {waitUntil: 'networkidle0'});
-
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page... 🚀🚀🚀`);
-			Logger.info(checkoutUrl(accessToken));
-			await open(checkoutUrl(accessToken));
-		} catch {
-			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`);
-			await open(fallbackCartUrl());
-		}
-
-		await page.close();
-	};
-}
+export const regionInfos = new Map<string, NvidiaRegionInfo>([
+	['austria', {drLocale: 'de_de', fe2060SuperId: null, fe3080Id: 5440853700, fe3090Id: null, nvidiaLocale: 'de_de'}],
+	['belgium', {drLocale: 'fr_fr', fe2060SuperId: 5394902700, fe3080Id: 5438795700, fe3090Id: null, nvidiaLocale: 'fr_fr'}],
+	['canada', {drLocale: 'en_us', fe2060SuperId: null, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_ca'}],
+	['czechia', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['denmark', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['finland', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['france', {drLocale: 'fr_fr', fe2060SuperId: null, fe3080Id: 5438795200, fe3090Id: null, nvidiaLocale: 'fr_fr'}],
+	['germany', {drLocale: 'de_de', fe2060SuperId: null, fe3080Id: 5438792300, fe3090Id: null, nvidiaLocale: 'de_de'}],
+	['great_britain', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438792800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['ireland', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438792800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['italy', {drLocale: 'it_it', fe2060SuperId: null, fe3080Id: 5438796200, fe3090Id: null, nvidiaLocale: 'it_it'}],
+	['luxembourg', {drLocale: 'fr_fr', fe2060SuperId: 5394902700, fe3080Id: 5438795700, fe3090Id: null, nvidiaLocale: 'fr_fr'}],
+	['poland', {drLocale: 'pl_pl', fe2060SuperId: null, fe3080Id: 5438797700, fe3090Id: null, nvidiaLocale: 'pl_pSl'}],
+	['portugal', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438794300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
+	['russia', {drLocale: 'ru_ru', fe2060SuperId: null, fe3080Id: null, fe3090Id: null, nvidiaLocale: 'ru_ru'}],
+	['spain', {drLocale: 'es_es', fe2060SuperId: null, fe3080Id: 5438794800, fe3090Id: null, nvidiaLocale: 'es_es'}],
+	['sweden', {drLocale: 'sv_SE', fe2060SuperId: null, fe3080Id: 5438798100, fe3090Id: null, nvidiaLocale: 'sv_se'}],
+	['usa', {drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_us'}]
+]);
 
 export const Nvidia: Store = {
 	labels: {
 		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
 	},
-	links: [
-		{
-			brand: 'TEST',
-			model: 'CARD',
-			openCartAction: generateCartAction(fe2060SuperId, 'TEST CARD'),
-			series: 'debug',
-			url: digitalRiverStockUrl(fe2060SuperId)
-		},
-		{
-			brand: 'nvidia',
-			model: 'founders edition',
-			openCartAction: generateCartAction(fe3080Id, 'nvidia founders edition 3080'),
-			series: '3080',
-			url: digitalRiverStockUrl(fe3080Id)
-		}
-	],
-	name: 'nvidia'
+	links: generateLinks(),
+	name: 'nvidia',
+	setupAction: generateSetupAction()
 };

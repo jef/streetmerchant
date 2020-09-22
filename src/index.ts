@@ -24,6 +24,10 @@ async function main() {
 
 	for (const store of Stores) {
 		Logger.debug(store.links);
+		if (store.setupAction !== undefined) {
+			store.setupAction(browser);
+		}
+
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
 }

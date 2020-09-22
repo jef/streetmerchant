@@ -85,6 +85,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `COUNTRY` | [Supported country](#supported-countries)  you want to be scraped, currently only used by Nvidia | default: `usa` |
+| `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
@@ -124,6 +126,29 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | T-Mobile | `tmobile`| |
 | Verizon | `verizon`| Works with Visible |
 
+#### Supported countries
+
+| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
+|:---:|:---:|:---:|:---:|
+| austria | `✔` | | |
+| belgium | `✔` | | Nvidia supports debug |
+| canada | `✔` | | |
+| czechia | `✔` | | |
+| denmark | `✔` | | |
+| finland | `✔` | | |
+| france | `✔` | | |
+| germany | `✔` | | |
+| great_britain | `✔` | | |
+| ireland | `✔` | | |
+| italy | `✔` | | |
+| luxembourg | `✔` | | Nvidia supports debug |
+| poland | `✔` | | |
+| portugal | `✔` | | |
+| russia | | | Missing all IDs |
+| spain | `✔` | | |
+| sweden | `✔` | | |
+| usa | `✔` | | Nvidia supports debug |
+
 ## FAQ
 
 **Q: What's Node.js and how do I install it?** Visit [their website](https://nodejs.org/en/) and download and install it. Very straight forward. Otherwise, Google more information related to your system needs.
@@ -147,7 +172,6 @@ Thanks to the great contributors that make this project possible
 Special shout to initial developers:
 
 - [@andirew](https://github.com/andirew)
-- [@davidlbowman](https://github.com/davidlbowman)
 - [@fuckingrobot](https://github.com/fuckingrobot)
 - [@ioncaza](https://github.com/IonCaza)
 - [@malbert69](https://github.com/malbert69)
