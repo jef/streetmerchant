@@ -6,7 +6,6 @@ import {Store} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
-import {Color} from 'colors';
 
 const inStock: Record<string, boolean> = {};
 const colors = require('colors');
