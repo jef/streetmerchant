@@ -88,7 +88,7 @@ export const AmazonDe: Store = {
 		}
 	],
 	labels: {
-		captcha: ['enter the characters you see below', 'geben Sie die unten angezeigten Zeichen ein'],
+		captcha: ['enter the characters you see below', 'geben Sie die unten angezeigten zeichen ein'],
 		outOfStock: ['derzeit nicht verfügbar', 'erhältlich bei diesen verkäufern', 'momentan nicht verfügbar', 'currently unavailable', 'available from these sellers']
 	},
 	name: 'amazon-de'
