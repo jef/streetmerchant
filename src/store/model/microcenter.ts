@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const MicroCenter: Store = {
+	labels: {
+		outOfStock: ['sold out']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -45,8 +48,5 @@ export const MicroCenter: Store = {
 			url: 'https://www.microcenter.com/product/628607/zotac-geforce-rtx-3080-trinity-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card'
 		}
 	],
-	labels: {
-		outOfStock: ['sold out']
-	},
 	name: 'microcenter'
 };
