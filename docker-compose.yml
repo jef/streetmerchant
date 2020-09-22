@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-    nvidia-snacher:
+    nvidia-snatcher:
         image: IMAGE_TAG_HERE
         security_opt:
           - seccomp:chrome.json
