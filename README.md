@@ -28,11 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | | | | | | | | |
+| | **Adorama** | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | | | | | | |
 
 ## Installation and prerequisites
 
@@ -103,16 +103,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|:---:|
 | Adorama | `adorama`|
 | Amazon | `amazon`|
-| Amazon.ca | `amazon-ca`|
+| Amazon (CA) | `amazon-ca`|
 | ASUS | `asus` |
 | Best Buy | `bestbuy`|
 | B&H | `bandh`|
 | EVGA | `evga`|
+| EVGA (EU) | `evga-eu`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
-| Newegg.ca | `newegg-ca`|
+| Newegg (CA) | `newegg-ca`|
 | Nvidia | `nvidia`|
 | Office Depot | `officedepot`|
+| Zotac | `zotac`|
 
 #### Supported carriers
 
@@ -160,6 +162,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
 **Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
+
+**Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
+
+**Q: Why don't my notifications work?** There are probably an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) [that] has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155)
 
 **Q: I'd love to contribute, how do I do that?** Make a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All contributions are welcome.
 
