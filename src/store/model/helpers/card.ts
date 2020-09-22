@@ -14,7 +14,7 @@ interface LinksBuilderOptions {
 	urlSelector?: string;
 }
 
-const isPartialUrlRegExp = /^\/[a-z]/i;
+const isPartialUrlRegExp = /^\/[^/]/i;
 
 export function getProductLinksBuilder(options: LinksBuilderOptions) {
 	/* eslint-disable unicorn/no-fn-reference-in-iterator */
