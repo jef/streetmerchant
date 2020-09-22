@@ -172,7 +172,6 @@ Thanks to the great contributors that make this project possible
 Special shout to initial developers:
 
 - [@andirew](https://github.com/andirew)
-- [@davidlbowman](https://github.com/davidlbowman)
 - [@fuckingrobot](https://github.com/fuckingrobot)
 - [@ioncaza](https://github.com/IonCaza)
 - [@malbert69](https://github.com/malbert69)
