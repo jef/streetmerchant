@@ -96,15 +96,15 @@ export const Amazon: Store = {
 	labels: {
 		bannedSeller: {
 			container: '#all-offers-display',
-			labels: ['sports authentics', 'raccoon capitalist', 'gigaparts']
+			text: ['sports authentics', 'raccoon capitalist', 'gigaparts']
 		},
 		captcha: {
 			container: 'body',
-			labels: ['enter the characters you see below']
+			text: ['enter the characters you see below']
 		},
 		inStock: {
 			container: '#addToCart_feature_div',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'amazon'

@@ -60,8 +60,8 @@ export const BestBuy: Store = {
 	],
 	labels: {
 		inStock: {
-			container: 'div.v-m-top-m',
-			labels: ['add to cart']
+			container: '.v-m-bottom-g',
+			text: ['add to cart']
 		}
 	},
 	name: 'bestbuy'

@@ -37,7 +37,7 @@ export const Nvidia: Store = {
 	labels: {
 		inStock: {
 			container: 'body',
-			labels: ['product_inventory_in_stock']
+			text: ['product_inventory_in_stock']
 		}
 	},
 	name: 'nvidia',

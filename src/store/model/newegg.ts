@@ -103,11 +103,11 @@ export const NewEgg: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
-			labels: ['are you a human?']
+			text: ['are you a human?']
 		},
 		inStock: {
 			container: '#landingpage-cart',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'newegg'

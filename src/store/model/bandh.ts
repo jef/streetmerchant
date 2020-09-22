@@ -60,7 +60,7 @@ export const BAndH: Store = {
 	labels: {
 		inStock: {
 			container: 'div[data-selenium="addToCartSection"]',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'bandh'

@@ -70,8 +70,14 @@ export const NewEggCa: Store = {
 		}
 	],
 	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
+		captcha: {
+			container: 'body',
+			text: ['are you a human?']
+		},
+		inStock: {
+			container: '#landingpage-cart',
+			text: ['add to cart']
+		}
 	},
 	name: 'newegg-ca'
 };

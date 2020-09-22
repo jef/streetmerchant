@@ -78,11 +78,11 @@ export const AmazonCa: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
-			labels: ['enter the characters you see below']
+			text: ['enter the characters you see below']
 		},
 		inStock: {
 			container: '#addToCart_feature_div',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'amazon-ca'

@@ -2,7 +2,7 @@ import {Browser} from 'puppeteer';
 
 export interface Element {
 	container: string;
-	labels: string[];
+	text: string[];
 }
 
 export interface Link {

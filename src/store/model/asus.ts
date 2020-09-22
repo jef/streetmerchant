@@ -24,7 +24,7 @@ export const Asus: Store = {
 	labels: {
 		inStock: {
 			container: '#item_add_cart',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'asus'

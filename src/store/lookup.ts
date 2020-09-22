@@ -130,11 +130,11 @@ async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
 		return false;
 	}
 
-	const stockContent = await page.evaluate(element => element.textContent, stockHandle);
+	const stockContent = await page.evaluate(element => element.outerHTML, stockHandle);
 
 	Logger.debug(stockContent);
 
-	if (includesLabels(stockContent, store.labels.inStock.labels)) {
+	if (includesLabels(stockContent, store.labels.inStock.text)) {
 		return true;
 	}
 
@@ -149,7 +149,7 @@ async function lookupPageHasBannedSeller(store: Store, page: Page) {
 	const sellerHandle = await page.$(store.labels.bannedSeller.container);
 	const sellerContent = await page.evaluate(element => element.textContent, sellerHandle);
 
-	if (includesLabels(sellerContent, store.labels.bannedSeller.labels)) {
+	if (includesLabels(sellerContent, store.labels.bannedSeller.text)) {
 		return true;
 	}
 
@@ -164,7 +164,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 	const captchaHandle = await page.$(store.labels.captcha.container);
 	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
 
-	if (includesLabels(captchaContent, store.labels.captcha.labels)) {
+	if (includesLabels(captchaContent, store.labels.captcha.text)) {
 		return true;
 	}
 

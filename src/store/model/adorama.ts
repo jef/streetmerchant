@@ -66,7 +66,7 @@ export const Adorama: Store = {
 	labels: {
 		inStock: {
 			container: '.buy-section.purchase',
-			labels: ['add to cart']
+			text: ['add to cart']
 		}
 	},
 	name: 'adorama'
