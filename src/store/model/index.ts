@@ -20,6 +20,7 @@ import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Overclockers} from './overclockers';
 import {Pny} from './pny';
 import {Scan} from './scan';
 import {Store} from './store';
@@ -50,6 +51,7 @@ const masterList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Overclockers.name, Overclockers],
 	[Pny.name, Pny],
 	[Scan.name, Scan],
 	[Zotac.name, Zotac]
