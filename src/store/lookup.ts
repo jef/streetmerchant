@@ -3,6 +3,7 @@ import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
+import {disableBlockerInPage} from '../adblocker';
 import {filterStoreLink} from './filter';
 import {includesLabels} from './includes-labels';
 import open from 'open';
@@ -28,6 +29,14 @@ async function lookup(browser: Browser, store: Store) {
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
+
+		if (store.disableAdBlocker) {
+			try {
+				await disableBlockerInPage(page);
+			} catch {
+				// Ignore the error
+			}
+		}
 
 		try {
 			await lookupCard(browser, store, page, link);

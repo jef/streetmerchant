@@ -21,6 +21,7 @@ export type Labels = {
 };
 
 export type Store = {
+	disableAdBlocker?: boolean;
 	links: Link[];
 	labels: Labels;
 	name: string;
