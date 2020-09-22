@@ -59,7 +59,7 @@ export const BAndH: Store = {
 
 	],
 	labels: {
-		outOfStock: ['notify when available', 'try varying your search terms', 'Sorry, An unexpected error has occurred.']
+		outOfStock: ['notify when available', 'try varying your search terms', 'sorry, an unexpected error has occurred.']
 	},
 	name: 'bandh'
 };
