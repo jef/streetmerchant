@@ -64,7 +64,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
-			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
+			Logger.error(colors.cyan(`✖ [${store.name}]`) + colors.magenta(` ${graphicsCard}`) + colors.red(` skipping; timed out`));
 			await closePage(page);
 			continue;
 		}
