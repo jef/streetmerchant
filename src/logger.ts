@@ -26,6 +26,13 @@ export const Logger = winston.createLogger({
 });
 
 export const Print = {
+	bannedSeller(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('BANNED SELLER');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: BANNED SELLER`;
+	},
 	captcha(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('CAPTCHA');
@@ -39,6 +46,13 @@ export const Print = {
 		}
 
 		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
+	},
+	noResponse(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('NO RESPONSE');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: NO RESPONSE`;
 	},
 	outOfStock(link: Link, store: Store, color?: boolean): string {
 		if (color) {

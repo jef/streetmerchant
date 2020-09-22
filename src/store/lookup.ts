@@ -1,11 +1,11 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
+import {Selector, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {filterStoreLink} from './filter';
-import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
 
@@ -53,7 +53,17 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
-	if (await lookupCardInStock(store, page)) {
+	if (!response) {
+		Logger.warn(Print.noResponse(link, store, true));
+		return;
+	}
+
+	if (response.status() === 429) {
+		Logger.warn(Print.rateLimit(link, store, true));
+		return;
+	}
+
+	if (await lookupCardInStock(store, page, link)) {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 		Logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
@@ -81,48 +91,48 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			link.screenshot = `success-${Date.now()}.png`;
 			await page.screenshot({path: link.screenshot});
 		}
-
-		return;
 	}
-
-	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(Print.captcha(link, store, true));
-		await delay(getSleepTime());
-		return;
-	}
-
-	if (response && response.status() === 429) {
-		Logger.warn(Print.rateLimit(link, store, true));
-		return;
-	}
-
-	Logger.info(Print.outOfStock(link, store, true));
 }
 
-async function lookupCardInStock(store: Store, page: Page) {
-	const stockHandle = await page.$(store.labels.inStock.container);
+async function lookupCardInStock(store: Store, page: Page, link: Link) {
+	const baseOptions: Selector = {
+		requireVisible: false,
+		selector: store.labels.container ?? 'body',
+		type: 'textContent'
+	};
 
-	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
-	if (!visible) {
-		return false;
+	if (store.labels.inStock) {
+		const options = {...baseOptions, requireVisible: true, type: 'outerHTML' as const};
+
+		if (!await pageIncludesLabels(page, store.labels.inStock, options)) {
+			Logger.info(Print.outOfStock(link, store, true));
+			return false;
+		}
 	}
 
-	const stockContent = await page.evaluate(element => element.outerHTML, stockHandle);
-
-	Logger.debug(stockContent);
-
-	return includesLabels(stockContent, store.labels.inStock.text);
-}
-
-async function lookupPageHasCaptcha(store: Store, page: Page) {
-	if (!store.labels.captcha) {
-		return false;
+	if (store.labels.outOfStock) {
+		if (await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)) {
+			Logger.info(Print.outOfStock(link, store, true));
+			return false;
+		}
 	}
 
-	const captchaHandle = await page.$(store.labels.captcha.container);
-	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
+	if (store.labels.bannedSeller) {
+		if (await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)) {
+			Logger.warn(Print.bannedSeller(link, store, true));
+			return false;
+		}
+	}
 
-	return includesLabels(captchaContent, store.labels.captcha.text);
+	if (store.labels.captcha) {
+		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
+			Logger.warn(Print.captcha(link, store, true));
+			await delay(getSleepTime());
+			return false;
+		}
+	}
+
+	return true;
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
