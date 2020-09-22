@@ -1,5 +1,4 @@
 import {Store} from './store';
-import {Config} from '../../config';
 
 export const Amazon: Store = {
 	links: [
