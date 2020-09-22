@@ -7,6 +7,7 @@ import {BestBuy} from './bestbuy';
 import {BAndH} from './bandh';
 import {Config} from '../../config';
 import {Evga} from './evga';
+import {EvgaEu} from './evga-eu';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {NewEggCa} from './newegg-ca';
@@ -23,6 +24,7 @@ const masterList = new Map([
 	[BestBuy.name, BestBuy],
 	[BAndH.name, BAndH],
 	[Evga.name, Evga],
+	[EvgaEu.name, EvgaEu],
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
 	[NewEggCa.name, NewEggCa],
