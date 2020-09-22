@@ -26,7 +26,7 @@ export const BAndH: Store = {
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1592969-REG/zotac_zt_a30800d_10p_gaming_geforce_rtx_3080.html'
 		},
-		//TUF was removed from BH, not sure why so commenting out listing for now
+		// TUF was removed from BH, not sure why so commenting out listing for now
 		// {
 		// 	brand: 'asus',
 		// 	model: 'tuf oc',
