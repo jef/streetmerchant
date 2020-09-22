@@ -147,6 +147,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
+| Novatech | `novatech`|
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
