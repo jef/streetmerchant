@@ -28,8 +28,7 @@ export const EvgaEu: Store = {
 		}
 	],
 	labels: {
-		outOfStock: ['tbd', 'out of stock']
+		outOfStock: ['tbd', 'out of stock', 'error reaching the evga website', 'oops! something broke.']
 	},
 	name: 'evga-eu'
 };
-
