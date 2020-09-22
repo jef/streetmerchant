@@ -116,8 +116,8 @@ export function generateLinks(): Link[] {
 
 	if (fe2060SuperId) {
 		links.push({
-			series: 'debug',
-			brand: 'TEST',
+			series: 'test:series',
+			brand: 'test:brand',
 			model: 'CARD',
 			url: digitalRiverStockUrl(fe2060SuperId, drLocale),
 			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug')
