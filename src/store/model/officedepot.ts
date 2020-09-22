@@ -23,7 +23,7 @@ export const OfficeDepot: Store = {
 	],
 	labels: {
 		captcha: ['please verify you are a human'],
-		outOfStock: ['out of stock for delivery', 'out of stock']
+		outOfStock: ['out of stock for delivery', 'out of stock', 'we are unable to process your last request']
 	},
 	name: 'officedepot'
 };
