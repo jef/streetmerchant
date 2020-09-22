@@ -64,7 +64,8 @@ const store = {
 	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
 	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
 	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia'],
-	country: process.env.COUNTRY ?? 'usa'
+	country: process.env.COUNTRY ?? 'usa',
+	microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase(): 'WEB'
 };
 
 export const Config = {
