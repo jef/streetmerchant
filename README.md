@@ -104,14 +104,15 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|:---:|
 | Adorama | `adorama`|
 | Amazon | `amazon`|
-| Amazon.ca | `amazon-ca`|
+| Amazon (CA) | `amazon-ca`|
 | ASUS | `asus` |
 | Best Buy | `bestbuy`|
 | B&H | `bandh`|
 | EVGA | `evga`|
+| EVGA (EU) | `evga-eu`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
-| Newegg.ca | `newegg-ca`|
+| Newegg (CA) | `newegg-ca`|
 | Nvidia | `nvidia`|
 | Office Depot | `officedepot`|
 | Zotac | `zotac`|
