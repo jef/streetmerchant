@@ -25,4 +25,5 @@ export interface Store {
 	links: Link[];
 	labels: Labels;
 	name: string;
+	setupAction?: (browser: Browser) => void;
 }
