@@ -1,24 +1,24 @@
-import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
 import {Config} from '../config';
-import {Logger} from '../logger';
 import {Link} from '../store/model';
+import {Logger} from '../logger';
+import Mail from 'nodemailer/lib/mailer';
+import nodemailer from 'nodemailer';
 
 const email = Config.notifications.email;
 const subject = 'NVIDIA - BUY NOW';
 
 const transporter = nodemailer.createTransport({
-	service: 'gmail',
 	auth: {
-		user: email.username,
-		pass: email.password
-	}
+		pass: email.password,
+		user: email.username
+	},
+	service: 'gmail'
 });
 
 const mailOptions: Mail.Options = {
 	from: email.username,
-	to: email.username,
-	subject
+	subject,
+	to: email.username
 };
 
 export function sendEmail(cartUrl: string, link: Link) {

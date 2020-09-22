@@ -1,11 +1,11 @@
-import Push from 'pushover-notifications';
 import {Config} from '../config';
 import {Logger} from '../logger';
+import Push from 'pushover-notifications';
 
 const pushover = Config.notifications.pushover;
 const push = new Push({
-	user: pushover.user,
-	token: pushover.token
+	token: pushover.token,
+	user: pushover.username
 });
 
 export function sendPushoverNotification(cartUrl: string) {

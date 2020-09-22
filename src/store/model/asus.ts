@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const Asus: Store = {
+	labels: {
+		outOfStock: ['coming soon', 'temporarily sold out']
+	},
 	links: [
 		{
 			brand: 'asus',
@@ -15,9 +18,6 @@ export const Asus: Store = {
 			url: 'https://store.asus.com/us/item/202009AM150000004/'
 		}
 	],
-	labels: {
-		outOfStock: ['coming soon', 'temporarily sold out']
-	},
 	name: 'asus'
 };
 
