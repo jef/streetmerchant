@@ -64,7 +64,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
-			Logger.error(colors.cyan(`✖ [${store.name}]`) + colors.magenta(` ${graphicsCard}`) + colors.red(` skipping; timed out`));
+			Logger.error(colors.cyan(`✖ [${store.name}]`) + colors.magenta(` ${graphicsCard}`) + colors.red(' skipping; timed out'));
 			await closePage(page);
 			continue;
 		}
@@ -77,14 +77,14 @@ async function lookup(browser: Browser, store: Store) {
 		if (includesLabels(textContent, store.labels.outOfStock)) {
 			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
 		} else if (store.labels.bannedSeller && includesLabels(textContent, store.labels.bannedSeller)) {
-			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red.strikethrough(` banned seller detected:`) + colors.magenta(` ${graphicsCard}. skipping...`));
+			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red.strikethrough(' banned seller detected:') + colors.magenta(` ${graphicsCard}. skipping...`));
 		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
 			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
 			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
-			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(` Rate limit exceeded:`) + colors.magenta(` ${graphicsCard}`));
+			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(' Rate limit exceeded:') + colors.magenta(` ${graphicsCard}`));
 		} else {
-			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(` 🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
+			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
 			Logger.info(link.url);
 			if (Config.page.inStockWaitTime) {
 				inStock[store.name] = true;
