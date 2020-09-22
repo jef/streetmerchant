@@ -94,10 +94,6 @@ export const Amazon: Store = {
 		}
 	],
 	labels: {
-		bannedSeller: {
-			container: '#all-offers-display',
-			text: ['sports authentics', 'raccoon capitalist', 'gigaparts']
-		},
 		captcha: {
 			container: 'body',
 			text: ['enter the characters you see below']

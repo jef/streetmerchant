@@ -59,8 +59,8 @@ async function lookup(browser: Browser, store: Store) {
 
 		try {
 			await lookupCard(browser, store, page, link);
-		} catch {
-			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} skipping; timed out`);
+		} catch (error) {
+			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
 		}
 
 		await closePage(page);
@@ -68,11 +68,11 @@ async function lookup(browser: Browser, store: Store) {
 	/* eslint-enable no-await-in-loop */
 }
 
-async function lookupCard(browser: Browser, store: Store, page: Page, link: Link): Promise<Response | null> {
+async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
 	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
-	if (await lookupCardInStock(browser, store, page)) {
+	if (await lookupCardInStock(store, page)) {
 		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 		Logger.info(link.url);
 		if (Config.page.inStockWaitTime) {
@@ -99,33 +99,27 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		}
 
 		sendNotification(givenUrl, link);
-		return response;
-	}
-
-	if (await lookupPageHasBannedSeller(store, page)) {
-		Logger.warn(`✖ [${store.name}] banned seller detected: ${graphicsCard}. skipping...`);
-		return response;
+		return;
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
 		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 		await delay(getSleepTime());
-		return response;
+		return;
 	}
 
 	if (response && response.status() === 429) {
 		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-		return response;
+		return;
 	}
 
 	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
-	return response;
 }
 
-async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
+async function lookupCardInStock(store: Store, page: Page) {
 	const stockHandle = await page.$(store.labels.inStock.container);
 
-	const visible = await page.evaluate(element => element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
+	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
 	if (!visible) {
 		return false;
 	}
@@ -135,21 +129,6 @@ async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
 	Logger.debug(stockContent);
 
 	if (includesLabels(stockContent, store.labels.inStock.text)) {
-		return true;
-	}
-
-	return false;
-}
-
-async function lookupPageHasBannedSeller(store: Store, page: Page) {
-	if (!store.labels.bannedSeller) {
-		return false;
-	}
-
-	const sellerHandle = await page.$(store.labels.bannedSeller.container);
-	const sellerContent = await page.evaluate(element => element.textContent, sellerHandle);
-
-	if (includesLabels(sellerContent, store.labels.bannedSeller.text)) {
 		return true;
 	}
 
