@@ -6,9 +6,10 @@ import {Store} from './model';
 import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
+import colors from 'colors';
 
 const inStock: Record<string, boolean> = {};
-const colors = require('colors');
+
 
 /**
  * Returns true if the brand should be checked for stock
