@@ -57,7 +57,7 @@ async function lookup(browser: Browser, store: Store) {
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 
-		const graphicsCard = `${link.brand} ${link.model}`;
+		const graphicsCard = `${link.brand} ${link.model} ${link.series}`;
 
 		let response: Response | null;
 		try {

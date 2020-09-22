@@ -23,7 +23,7 @@
   "homepage": "https://github.com/jef/nvidia-snatcher#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "messaging-api-telegram": "^1.0.0",
+    "messaging-api-telegram": "^1.0.1",
     "node-notifier": "^8.0.0",
     "nodemailer": "^6.4.11",
     "open": "^7.2.1",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@slack/web-api": "^5.12.0",
     "@types/async": "^3.2.3",
-    "@types/node": "^14.11.1",
+    "@types/node": "^14.11.2",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^3.0.2",
     "@types/twilio": "^2.11.0",
