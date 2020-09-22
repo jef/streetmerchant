@@ -1,5 +1,5 @@
 import notifier from 'node-notifier';
-import {Link} from '../store/model';
+import {Link} from '../store';
 
 export function sendDesktopNotification(cartUrl: string, link: Link) {
 	(async () => {

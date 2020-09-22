@@ -1,11 +1,8 @@
 import puppeteer from 'puppeteer-extra';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {Config} from './config';
-import {Stores} from './store/model';
-import {Logger} from './logger';
-import {tryLookupAndLoop} from './store';
-import {getSleepTime} from './util';
-import {adBlocker} from './adblocker';
+import {tryLookupAndLoop, Stores} from './store';
+import {adBlocker, getSleepTime, Logger} from './util';
 
 puppeteer.use(stealthPlugin());
 puppeteer.use(adBlocker);

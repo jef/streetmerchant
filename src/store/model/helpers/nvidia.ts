@@ -1,6 +1,6 @@
 import {timestampUrlParameter} from '../../timestamp-url-parameter';
 import {Browser, Response} from 'puppeteer';
-import {Logger} from '../../../logger';
+import {Logger} from '../../../util';
 import open from 'open';
 import {Link} from '../store';
 import {Config} from '../../../config';

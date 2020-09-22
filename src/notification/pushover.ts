@@ -1,6 +1,6 @@
 import Push from 'pushover-notifications';
 import {Config} from '../config';
-import {Logger} from '../logger';
+import {Logger} from '../util';
 
 const pushover = Config.notifications.pushover;
 const push = new Push({

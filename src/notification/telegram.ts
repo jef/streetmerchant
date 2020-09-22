@@ -1,5 +1,5 @@
 import {Config} from '../config';
-import {Logger} from '../logger';
+import {Logger} from '../util';
 import {TelegramClient} from 'messaging-api-telegram';
 
 const telegram = Config.notifications.telegram;

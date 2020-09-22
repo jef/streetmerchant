@@ -1,4 +1,3 @@
-
 import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
@@ -11,7 +10,7 @@ import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {NewEggCa} from './newegg-ca';
 import {Nvidia} from './nvidia';
-import {Store} from './store';
+import {Store} from '.';
 import {OfficeDepot} from './officedepot';
 
 const masterList = new Map([

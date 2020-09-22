@@ -1,6 +1,15 @@
 import {Page} from 'puppeteer';
-import {Config} from './config';
-import {disableBlockerInPage} from './adblocker';
+import {PuppeteerExtraPluginAdblocker} from 'puppeteer-extra-plugin-adblocker';
+import {Config} from '../config';
+
+export const adBlocker = new PuppeteerExtraPluginAdblocker({
+	blockTrackers: true
+});
+
+export async function disableBlockerInPage(page: Page) {
+	const blockerObject = await adBlocker.getBlocker();
+	await blockerObject.disableBlockingInPage(page);
+}
 
 export function getSleepTime() {
 	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));

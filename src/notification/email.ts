@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 import {Config} from '../config';
-import {Logger} from '../logger';
-import {Link} from '../store/model';
+import {Logger} from '../util';
+import {Link} from '../store';
 
 const email = Config.notifications.email;
 const subject = 'NVIDIA - BUY NOW';

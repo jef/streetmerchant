@@ -1,6 +1,6 @@
 import {WebClient} from '@slack/web-api';
 import {Config} from '../config';
-import {Logger} from '../logger';
+import {Logger} from '../util';
 
 const channel = Config.notifications.slack.channel;
 const token = Config.notifications.slack.token;

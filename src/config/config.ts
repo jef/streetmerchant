@@ -1,7 +1,7 @@
-import {resolve} from 'path';
+import path from 'path';
 import {config} from 'dotenv';
 
-config({path: resolve(__dirname, '../.env')});
+config({path: path.resolve(__dirname, '../.env')});
 
 const browser = {
 	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
