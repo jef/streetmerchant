@@ -93,7 +93,7 @@ export const NewEgg: Store = {
 			labels: ['are you a human?']
 		},
 		inStock: {
-			container: 'body',
+			container: '#landingpage-cart',
 			labels: ['add to cart']
 		}
 	},

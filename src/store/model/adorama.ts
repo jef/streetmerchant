@@ -65,7 +65,7 @@ export const Adorama: Store = {
 	],
 	labels: {
 		inStock: {
-			container: 'body',
+			container: '.buy-section.purchase',
 			labels: ['add to cart']
 		}
 	},

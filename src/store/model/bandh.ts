@@ -59,7 +59,7 @@ export const BAndH: Store = {
 	],
 	labels: {
 		inStock: {
-			container: 'body',
+			container: 'div[data-selenium="addToCartSection"]',
 			labels: ['add to cart']
 		}
 	},

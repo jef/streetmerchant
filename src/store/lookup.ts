@@ -118,7 +118,6 @@ async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
 	}
 
 	const stockContent = await page.evaluate(element => element.textContent, stockHandle);
-	Logger.debug(stockContent);
 
 	if (includesLabels(stockContent, store.labels.inStock.labels)) {
 		return true;

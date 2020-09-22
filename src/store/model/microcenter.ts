@@ -47,7 +47,7 @@ export const MicroCenter: Store = {
 	],
 	labels: {
 		inStock: {
-			container: 'body',
+			container: '#cart-options',
 			labels: ['(in stock)']
 		}
 	},

@@ -99,7 +99,7 @@ export const Amazon: Store = {
 			labels: ['enter the characters you see below']
 		},
 		inStock: {
-			container: 'body',
+			container: '#addToCart_feature_div',
 			labels: ['add to cart']
 		}
 	},
