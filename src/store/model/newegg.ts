@@ -106,7 +106,7 @@ export const NewEgg: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '#landingpage-cart',
+			container: '#landingpage-cart .btn-primary span',
 			text: ['add to cart']
 		}
 	},

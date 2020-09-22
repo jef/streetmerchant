@@ -27,7 +27,7 @@ export const OfficeDepot: Store = {
 			text: ['please verify you are a human']
 		},
 		inStock: {
-			container: '.callToActionButtons',
+			container: '#productPurchase',
 			text: ['add to cart']
 		}
 	},

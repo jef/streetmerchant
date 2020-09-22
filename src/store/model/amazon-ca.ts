@@ -81,7 +81,7 @@ export const AmazonCa: Store = {
 			text: ['enter the characters you see below']
 		},
 		inStock: {
-			container: '#addToCart_feature_div',
+			container: '#desktop_buybox',
 			text: ['add to cart']
 		}
 	},
