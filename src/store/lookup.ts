@@ -8,6 +8,7 @@ import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
 
 const inStock: Record<string, boolean> = {};
+const colors = require('colors');
 
 /**
  * Returns true if the brand should be checked for stock
@@ -74,16 +75,16 @@ async function lookup(browser: Browser, store: Store) {
 		Logger.debug(textContent);
 
 		if (includesLabels(textContent, store.labels.outOfStock)) {
-			Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(` still out of stock:`) + colors.magenta(` ${graphicsCard}`));
 		} else if (store.labels.bannedSeller && includesLabels(textContent, store.labels.bannedSeller)) {
-			Logger.warn(`✖ [${store.name}] banned seller detected: ${graphicsCard}. skipping...`);
+			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red.strikethrough(` banned seller detected:`) + colors.magenta(` ${graphicsCard}. skipping...`));
 		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
-			Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
 			await delay(getSleepTime());
 		} else if (response && response.status() === 429) {
-			Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(` Rate limit exceeded:`) + colors.magenta(` ${graphicsCard}`));
 		} else {
-			Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
+			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(` ${graphicsCard} IN STOCK 🚀🚀🚀`));
 			Logger.info(link.url);
 			if (Config.page.inStockWaitTime) {
 				inStock[store.name] = true;
