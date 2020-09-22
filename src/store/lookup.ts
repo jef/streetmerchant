@@ -58,7 +58,7 @@ async function lookup(browser: Browser, store: Store) {
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 
-		const graphicsCard = `${link.brand} ${link.model}`;
+		const graphicsCard = `${link.brand} ${link.model} ${link.series}`;
 
 		let response: Response | null;
 		try {
@@ -84,7 +84,7 @@ async function lookup(browser: Browser, store: Store) {
 		} else if (response && response.status() === 429) {
 			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(` Rate limit exceeded:`) + colors.magenta(` ${graphicsCard}`));
 		} else {
-			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(` ${graphicsCard} IN STOCK 🚀🚀🚀`));
+			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
 			Logger.info(link.url);
 			if (Config.page.inStockWaitTime) {
 				inStock[store.name] = true;
