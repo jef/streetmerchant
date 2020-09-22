@@ -10,7 +10,6 @@ import colors from 'colors';
 
 const inStock: Record<string, boolean> = {};
 
-
 /**
  * Returns true if the brand should be checked for stock
  *
