@@ -75,7 +75,7 @@ async function lookup(browser: Browser, store: Store) {
 		Logger.debug(textContent);
 
 		if (includesLabels(textContent, store.labels.outOfStock)) {
-			Logger.info(colors.cyan('✖ [' + `${store.name}`+ ']') + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
+			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
 		} else if (store.labels.bannedSeller && includesLabels(textContent, store.labels.bannedSeller)) {
 			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red.strikethrough(` banned seller detected:`) + colors.magenta(` ${graphicsCard}. skipping...`));
 		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
