@@ -1,5 +1,5 @@
 import {Store} from './store';
-import { Config } from '../../config';
+import {Config} from '../../config';
 
 const MicroCenterLocation = Config.store.microCenterLocation;
 const MicroCenterLocationToID: Map<string, string> = new Map([
@@ -28,7 +28,7 @@ const MicroCenterLocationToID: Map<string, string> = new Map([
 	['ST. DAVIDS', '061'],
 	['HOUSTON', '155'],
 	['DALLAS', '131'],
-	['FAIRFAX', '081'],
+	['FAIRFAX', '081']
 ]);
 
 let mcID: string;
@@ -37,6 +37,7 @@ if (MicroCenterLocationToID.get(MicroCenterLocation) === undefined) {
 } else {
 	mcID = MicroCenterLocationToID.get(MicroCenterLocation)!;
 }
+
 export const MicroCenter: Store = {
 	links: [
 		{

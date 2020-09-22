@@ -65,7 +65,7 @@ const store = {
 	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
 	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia'],
 	country: process.env.COUNTRY ?? 'usa',
-	microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase(): 'WEB'
+	microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase() : 'WEB'
 };
 
 export const Config = {
