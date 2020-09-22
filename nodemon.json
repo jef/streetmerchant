@@ -1,0 +1,8 @@
+{
+  "exec": "TS_NODE_FILES=true ts-node ./src/index",
+  "ext": "ts",
+  "watch": [
+    "src/",
+    ".env"
+  ]
+}

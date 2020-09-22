@@ -7,7 +7,7 @@
     "build": "rimraf ./build && tsc",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "start": "npm run build && node build/index.js",
+    "start": "nodemon --config nodemon.json",
     "test:notification": "npm run build && node build/__test__/notification-test.js"
   },
   "repository": {
@@ -48,7 +48,9 @@
     "@types/puppeteer": "^3.0.2",
     "@types/twitter": "^1.7.0",
     "husky": "^4.3.0",
+    "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.2",
     "xo": "^0.33.1"
   },
