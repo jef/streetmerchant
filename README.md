@@ -79,11 +79,13 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
+| `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
 | `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, E.g.: `3080` |
 | `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `COUNTRY` | [Supported country](#supported-countries)  you want to be scraped, currently only used by Nvidia | default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
@@ -125,6 +127,29 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | T-Mobile | `tmobile`| |
 | Verizon | `verizon`| Works with Visible |
 
+#### Supported countries
+
+| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
+|:---:|:---:|:---:|:---:|
+| austria | `✔` | | |
+| belgium | `✔` | | Nvidia supports debug |
+| canada | `✔` | | |
+| czechia | `✔` | | |
+| denmark | `✔` | | |
+| finland | `✔` | | |
+| france | `✔` | | |
+| germany | `✔` | | |
+| great_britain | `✔` | | |
+| ireland | `✔` | | |
+| italy | `✔` | | |
+| luxembourg | `✔` | | Nvidia supports debug |
+| poland | `✔` | | |
+| portugal | `✔` | | |
+| russia | | | Missing all IDs |
+| spain | `✔` | | |
+| sweden | `✔` | | |
+| usa | `✔` | | Nvidia supports debug |
+
 ## FAQ
 
 **Q: What's Node.js and how do I install it?** Visit [their website](https://nodejs.org/en/) and download and install it. Very straight forward. Otherwise, Google more information related to your system needs.
@@ -137,6 +162,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 **Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
+**Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
+
+**Q: Why don't my notifications work?** There are probably an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) [that] has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155)
+
 **Q: I'd love to contribute, how do I do that?** Make a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All contributions are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either. See [#11](https://github.com/jef/nvidia-snatcher/issues/11).
@@ -148,7 +177,6 @@ Thanks to the great contributors that make this project possible
 Special shout to initial developers:
 
 - [@andirew](https://github.com/andirew)
-- [@davidlbowman](https://github.com/davidlbowman)
 - [@fuckingrobot](https://github.com/fuckingrobot)
 - [@ioncaza](https://github.com/IonCaza)
 - [@malbert69](https://github.com/malbert69)
