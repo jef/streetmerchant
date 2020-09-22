@@ -20,6 +20,7 @@ import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Pny} from './pny';
+import {Scan} from './scan';
 import {Store} from './store';
 import {Zotac} from './zotac';
 import {config} from '../../config';
@@ -48,6 +49,7 @@ const masterList = new Map([
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Pny.name, Pny],
+	[Scan.name, Scan],
 	[Zotac.name, Zotac]
 ]);
 
