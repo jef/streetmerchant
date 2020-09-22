@@ -7,6 +7,8 @@ import {sendNotification} from '../notification';
 import {includesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime} from '../util';
 
+const inStock: Record<string, boolean> = {};
+
 /**
  * Returns true if the brand should be checked for stock
  *
@@ -57,7 +59,7 @@ async function lookup(browser: Browser, store: Store) {
 
 		try {
 			await lookupCard(browser, store, page, link);
-		} catch (error) {
+		} catch {
 			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} skipping; timed out`);
 		}
 
@@ -70,14 +72,15 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
-	if (response && response.status() === 429) {
-		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
-		return response;
-	}
-
 	if (await lookupCardInStock(browser, store, page)) {
 		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
 		Logger.info(link.url);
+		if (Config.page.inStockWaitTime) {
+			inStock[store.name] = true;
+			setTimeout(() => {
+				inStock[store.name] = false;
+			}, 1000 * Config.page.inStockWaitTime);
+		}
 
 		if (Config.page.capture) {
 			Logger.debug('ℹ saving screenshot');
@@ -99,9 +102,19 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		return response;
 	}
 
+	if (await lookupPageHasBannedSeller(store, page)) {
+		Logger.warn(`✖ [${store.name}] banned seller detected: ${graphicsCard}. skipping...`);
+		return response;
+	}
+
 	if (await lookupPageHasCaptcha(store, page)) {
 		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
 		await delay(getSleepTime());
+		return response;
+	}
+
+	if (response && response.status() === 429) {
+		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
 		return response;
 	}
 
@@ -119,7 +132,24 @@ async function lookupCardInStock(browser: Browser, store: Store, page: Page) {
 
 	const stockContent = await page.evaluate(element => element.textContent, stockHandle);
 
+	Logger.debug(stockContent);
+
 	if (includesLabels(stockContent, store.labels.inStock.labels)) {
+		return true;
+	}
+
+	return false;
+}
+
+async function lookupPageHasBannedSeller(store: Store, page: Page) {
+	if (!store.labels.bannedSeller) {
+		return false;
+	}
+
+	const sellerHandle = await page.$(store.labels.bannedSeller.container);
+	const sellerContent = await page.evaluate(element => element.textContent, sellerHandle);
+
+	if (includesLabels(sellerContent, store.labels.bannedSeller.labels)) {
 		return true;
 	}
 
@@ -144,7 +174,11 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
 	Logger.debug(`[${store.name}] Starting lookup...`);
 	try {
-		await lookup(browser, store);
+		if (Config.page.inStockWaitTime && inStock[store.name]) {
+			Logger.info(`[${store.name}] Has stock, waiting before trying to lookup again...`);
+		} else {
+			await lookup(browser, store);
+		}
 	} catch (error) {
 		Logger.error(error);
 	}

@@ -16,6 +16,7 @@ export interface Link {
 }
 
 export interface Labels {
+	bannedSeller?: Element;
 	captcha?: Element;
 	inStock: Element;
 }
