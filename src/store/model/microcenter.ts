@@ -1,5 +1,5 @@
-import {Store} from './store';
 import {Config} from '../../config';
+import {Store} from './store';
 
 const MicroCenterLocation = Config.store.microCenterLocation;
 const MicroCenterLocationToID: Map<string, string> = new Map([

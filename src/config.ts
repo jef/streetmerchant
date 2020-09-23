@@ -62,10 +62,10 @@ const page = {
 
 const store = {
 	country: process.env.COUNTRY ?? 'usa',
+	microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase() : 'WEB',
 	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
 	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
-	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia'],
-  microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase() : 'WEB'
+	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia']
 };
 
 export const Config = {
