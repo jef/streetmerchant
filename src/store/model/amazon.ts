@@ -86,6 +86,12 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HHDP9DW'
 		},
 		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3080',
+			url: 'https://www.amazon.com/dp/B08J6F174Z'
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
