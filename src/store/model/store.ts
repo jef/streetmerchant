@@ -1,4 +1,4 @@
-import {Browser} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
 
 export interface Link {
 	series: string;
@@ -21,4 +21,5 @@ export interface Store {
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
+	customWaitFor?: LoadEvent;
 }

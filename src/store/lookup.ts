@@ -61,7 +61,8 @@ async function lookup(browser: Browser, store: Store) {
 
 		let response: Response | null;
 		try {
-			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
+			const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+			response = await page.goto(link.url, {waitUntil: givenWaitFor});
 		} catch {
 			Logger.error(`✖ [${store.name}] ${graphicsCard} skipping; timed out`);
 			await closePage(page);
