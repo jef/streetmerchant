@@ -1,11 +1,17 @@
 import {Store} from './store';
 
 export const MicroCenter: Store = {
+	labels: {
+		inStock: {
+			container: '#cart-options',
+			text: ['(in stock)']
+		}
+	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.microcenter.com/product/618433/evga-geforce-rtx-2060-ko-ultra-overclocked-dual-fan-6gb-gddr6-pcie-30-graphics-card'
 		},
 		{
@@ -45,8 +51,5 @@ export const MicroCenter: Store = {
 			url: 'https://www.microcenter.com/product/628607/zotac-geforce-rtx-3080-trinity-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card'
 		}
 	],
-	labels: {
-		outOfStock: ['sold out']
-	},
 	name: 'microcenter'
 };

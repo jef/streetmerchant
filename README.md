@@ -28,11 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | | | | | | | | |
+| | **Adorama** | **Amazon** | **ASUS** | **B&H** | **Best Buy** | **EVGA** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | | | | | | |
 
 ## Installation and prerequisites
 
@@ -62,11 +62,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
+| `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `EMAIL_PASSWORD` | Gmail password | See below if you have MFA | 
+| `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same store if it has cards in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
@@ -75,6 +76,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
 | `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
+| `PUSHBULLET` | PushBullet API key | Get at https://www.pushbullet.com/#settings/account |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
 | `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
@@ -90,6 +92,11 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
+| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
+| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
+| `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key |
+| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret |
+| `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | Eg: "`#NVIDIA` `#NVIDIAINSTOCK`" |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -103,17 +110,20 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|:---:|
 | Adorama | `adorama`|
 | Amazon | `amazon`|
-| Amazon.ca | `amazon-ca`|
-| Amazon.de | `amazon-de`|
+| Amazon (CA) | `amazon-ca`|
+| Amazon (DE) | `amazon-de`|
 | ASUS | `asus` |
-| Best Buy | `bestbuy`|
 | B&H | `bandh`|
+| Best Buy | `bestbuy`|
+| Best Buy (CA) | `bestbuy-ca`|
 | EVGA | `evga`|
+| EVGA (EU) | `evga-eu`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
-| Newegg.ca | `newegg-ca`|
+| Newegg (CA) | `newegg-ca`|
 | Nvidia | `nvidia`|
 | Office Depot | `officedepot`|
+| Zotac | `zotac`|
 
 #### Supported carriers
 
@@ -143,6 +153,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | ireland | `✔` | | |
 | italy | `✔` | | |
 | luxembourg | `✔` | | Nvidia supports debug |
+| netherlands | `✔` | | Nvidia supports debug |
 | poland | `✔` | | |
 | portugal | `✔` | | |
 | russia | | | Missing all IDs |

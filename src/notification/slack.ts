@@ -1,23 +1,30 @@
-import {WebClient} from '@slack/web-api';
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Logger} from '../logger';
+import {WebClient} from '@slack/web-api';
 
 const channel = Config.notifications.slack.channel;
 const token = Config.notifications.slack.token;
 const web = new WebClient(token);
 
-export function sendSlackMessage(cartUrl: string) {
+export function sendSlackMessage(link: Link, store: Store) {
 	(async () => {
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
 		try {
-			const result = await web.chat.postMessage({text: cartUrl, channel});
+			const result = await web.chat.postMessage({
+				channel,
+				text: `${Print.inStock(link, store)}\n${givenUrl}`
+			});
+
 			if (!result.ok) {
-				Logger.error(result.error);
+				Logger.error('✖ couldn\'t send slack message', result);
 				return;
 			}
 
-			Logger.info(`↗ slack message sent to '${channel}': ${cartUrl}`);
+			Logger.info('✔ slack message sent');
 		} catch (error) {
-			Logger.error(error);
+			Logger.error('✖ couldn\'t send slack message', error);
 		}
 	})();
 }

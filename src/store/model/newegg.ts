@@ -1,11 +1,21 @@
 import {Store} from './store';
 
 export const NewEgg: Store = {
+	labels: {
+		captcha: {
+			container: 'body',
+			text: ['are you a human?']
+		},
+		inStock: {
+			container: '#landingpage-cart .btn-primary span',
+			text: ['add to cart']
+		}
+	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.newegg.com/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
 		},
 		{
@@ -100,9 +110,5 @@ export const NewEgg: Store = {
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		}
 	],
-	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
-	},
 	name: 'newegg'
 };

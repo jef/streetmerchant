@@ -4,16 +4,20 @@ import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
 import {Asus} from './asus';
-import {BestBuy} from './bestbuy';
 import {BAndH} from './bandh';
+import {BestBuy} from './bestbuy';
+import {BestBuyCa} from './bestbuy-ca';
 import {Config} from '../../config';
 import {Evga} from './evga';
+import {EvgaEu} from './evga-eu';
+import {Logger} from '../../logger';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {NewEggCa} from './newegg-ca';
 import {Nvidia} from './nvidia';
-import {Store} from './store';
 import {OfficeDepot} from './officedepot';
+import {Store} from './store';
+import {Zotac} from './zotac';
 
 const masterList = new Map([
 	[Adorama.name, Adorama],
@@ -21,21 +25,31 @@ const masterList = new Map([
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
 	[Asus.name, Asus],
-	[BestBuy.name, BestBuy],
 	[BAndH.name, BAndH],
+	[BestBuy.name, BestBuy],
+	[BestBuyCa.name, BestBuyCa],
 	[Evga.name, Evga],
+	[EvgaEu.name, EvgaEu],
 	[MicroCenter.name, MicroCenter],
 	[NewEgg.name, NewEgg],
 	[NewEggCa.name, NewEggCa],
 	[Nvidia.name, Nvidia],
-	[OfficeDepot.name, OfficeDepot]
+	[OfficeDepot.name, OfficeDepot],
+	[Zotac.name, Zotac]
 ]);
 
 const list = new Map();
 
 for (const name of Config.store.stores) {
-	list.set(name, masterList.get(name));
+	if (masterList.has(name)) {
+		list.set(name, masterList.get(name));
+	} else {
+		const logString = `No store named ${name}, skipping.`;
+		Logger.warn(logString);
+	}
 }
+
+Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
 
 export const Stores = Array.from(list.values()) as Store[];
 
