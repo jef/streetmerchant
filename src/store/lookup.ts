@@ -1,12 +1,12 @@
 import {Browser, Response} from 'puppeteer';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
+import colors from 'colors'; // eslint-disable-line no-restricted-imports
 import {Logger} from '../logger';
 import {Store} from './model';
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
-import colors from 'colors';
 
 const inStock: Record<string, boolean> = {};
 
