@@ -69,7 +69,8 @@ async function lookup(browser: Browser, store: Store) {
 }
 
 async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
-	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
+	const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
@@ -88,13 +89,13 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			await page.screenshot({path: link.screenshot});
 		}
 
-		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 		if (Config.browser.open) {
 			if (link.openCartAction === undefined) {
 				await open(givenUrl);
 			} else {
-				link.openCartAction(browser);
+				givenUrl = await link.openCartAction(browser);
 			}
 		}
 

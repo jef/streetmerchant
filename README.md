@@ -76,6 +76,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
 | `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
+| `PUSHBULLET` | PushBullet API key | Get at https://www.pushbullet.com/#settings/account |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
 | `PUSHOVER_USER` | Pushover username |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
@@ -117,6 +118,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (CA) | `amazon-ca`|
 | ASUS | `asus` |
 | Best Buy | `bestbuy`|
+| Best Buy (CA) | `bestbuy-ca`|
 | B&H | `bandh`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
