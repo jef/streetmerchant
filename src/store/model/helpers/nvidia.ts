@@ -125,9 +125,9 @@ export function generateLinks(): Link[] {
 	if (fe2060SuperId) {
 		links.push({
 			brand: 'test:brand',
-			series: 'test:series',
 			model: 'CARD',
 			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug'),
+			series: 'test:series',
 			url: digitalRiverStockUrl(fe2060SuperId, drLocale)
 		});
 	}
@@ -135,9 +135,9 @@ export function generateLinks(): Link[] {
 	if (fe3080Id) {
 		links.push({
 			brand: 'nvidia',
-			series: '3080',
 			model: 'founders edition',
 			openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080'),
+			series: '3080',
 			url: digitalRiverStockUrl(fe3080Id, drLocale)
 		});
 	}
@@ -145,9 +145,9 @@ export function generateLinks(): Link[] {
 	if (fe3090Id) {
 		links.push({
 			brand: 'nvidia',
-			series: '3090',
 			model: 'founders edition',
 			openCartAction: generateOpenCartAction(fe3090Id, nvidiaLocale, drLocale, 'nvidia founders edition 3090'),
+			series: '3090',
 			url: digitalRiverStockUrl(fe3090Id, drLocale)
 		});
 	}

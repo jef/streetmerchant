@@ -3,10 +3,10 @@ import {sendNotification} from '../notification';
 
 const link: Link = {
 	brand: 'test:brand',
-	series: 'test:series',
+	cartUrl: 'http://example.com/',
 	model: 'model',
-	url: 'http://example.com/',
-	cartUrl: 'http://example.com/'
+	series: 'test:series',
+	url: 'http://example.com/'
 };
 
 /**

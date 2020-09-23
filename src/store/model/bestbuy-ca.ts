@@ -10,9 +10,9 @@ export const BestBuyCa: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-2060-super-gaming-x-8gb-gddr6-video-card/14419420?intl=nosplash'
 		},
 		{
