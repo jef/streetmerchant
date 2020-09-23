@@ -140,6 +140,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box | `box`|
+| Currys | `currys`|
 | eBuyer | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|

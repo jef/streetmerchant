@@ -9,6 +9,7 @@ import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
+import {Currys} from './currys';
 import {Ebuyer} from './ebuyer';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
@@ -40,6 +41,7 @@ const masterList = new Map([
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
+	[Currys.name, Currys],
 	[Ebuyer.name, Ebuyer],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
