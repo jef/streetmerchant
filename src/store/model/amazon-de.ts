@@ -16,7 +16,7 @@ export const AmazonDe: Store = {
 			brand: 'TEST',
 			model: 'CARD',
 			series: 'debug',
-			url: 'https://www.amazon.com/MSI-GeForce-RTX-2060-Architecture/dp/B07MQ36Z6L/ref=sr_1_4'
+			url: 'https://www.amazon.com/MSI-GeForce-RTX-2060-Architecture/dp/B07MQ36Z6L/language=en_GB'
 		},
 		{
 			brand: 'pny',
