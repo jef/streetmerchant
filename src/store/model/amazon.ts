@@ -1,6 +1,11 @@
 import {Store} from './store';
 
 export const Amazon: Store = {
+	labels: {
+		bannedSeller: ['sports authentics', 'raccoon capitalist', 'gigaparts'],
+		captcha: ['enter the characters you see below'],
+		outOfStock: ['currently unavailable', 'available from these sellers']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -99,10 +104,5 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/ZOTAC-Graphics-IceStorm-Advanced-ZT-A30800D-10P/dp/B08HJNKT3P'
 		}
 	],
-	labels: {
-		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable', 'available from these sellers'],
-		bannedSeller: ['sports authentics', 'raccoon capitalist', 'gigaparts']
-	},
 	name: 'amazon'
 };

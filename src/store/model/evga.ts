@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const Evga: Store = {
+	labels: {
+		outOfStock: ['out of stock', 'error reaching the evga website', 'oops! something broke.']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -16,9 +19,15 @@ export const Evga: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'ftw3',
+			model: 'ftw3 ultra',
 			series: '3080',
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3895-KR'
 		},
 		{
 			brand: 'evga',
@@ -33,9 +42,6 @@ export const Evga: Store = {
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3885-KR'
 		}
 	],
-	labels: {
-		outOfStock: ['out of stock', 'error reaching the evga website', 'oops! something broke.']
-	},
 	name: 'evga'
 };
 
