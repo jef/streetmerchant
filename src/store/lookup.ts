@@ -82,6 +82,12 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}, 1000 * Config.page.inStockWaitTime);
 		}
 
+		if (Config.page.capture) {
+			Logger.debug('ℹ saving screenshot');
+			link.screenshot = `success-${Date.now()}.png`;
+			await page.screenshot({path: link.screenshot});
+		}
+
 		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 		if (Config.browser.open) {
