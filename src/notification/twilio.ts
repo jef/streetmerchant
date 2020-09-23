@@ -9,11 +9,27 @@ export function requestTwilioCall() {
 
 	client.calls
 		.create({
-			twiml: '<Response><Say>Card now available. Please check other notification methods for details.</Say></Response>',
+			from: Config.notifications.twilio.fromNumber,
 			to: toNumber,
-			from: Config.notifications.twilio.fromNumber
+			twiml: '<Response><Say>Card now available. Please check other notification methods for details.</Say></Response>'
 		})
 		.then(call => Logger.info(`↗ queued up number to call: ${call.toFormatted}`))
+		.catch(error => {
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+			Logger.error(`twilio error: ${error.message}`);
+		});
+}
+
+export function sendTwilioMessage(text: string) {
+	const toNumber = Config.notifications.twilio.countryCode + Config.notifications.phone.number;
+
+	client.messages
+		.create({
+			body: text,
+			from: Config.notifications.twilio.fromNumber,
+			to: toNumber
+		})
+		.then(message => Logger.info(`↗ queued up twilio message sender to: ${message.to}`))
 		.catch(error => {
 			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			Logger.error(`twilio error: ${error.message}`);

@@ -28,11 +28,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | | | | | | | | |
+| | **Adorama** | **Amazon** | **ASUS** | **EVGA** | **Best Buy** | **B&H** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | | | | | | |
 
 ## Installation and prerequisites
 
@@ -66,7 +66,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `EMAIL_PASSWORD` | Gmail password | See below if you have MFA | 
+| `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same store if it has cards in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
@@ -94,6 +94,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWILIO_AUTH ` | Twilio authentication token | [Click here](https://www.twilio.com/docs/voice/tutorials/how-to-make-outbound-phone-calls-node-js#retrieve-your-twilio-account-credentials) for instructions on how to obtain this. |
 | `TWILIO_FROM_NUMBER ` | Authorized `from number` for Twilio calling. |
 | `TWILIO_COUNTRY_CODE` | Country code of your phone number for use in Twilio. Find your country code [here](https://countrycode.org/). | Default: `+1` |
+| `TWILIO_MODE` | Which twilio services do you want to use (separated with comma)? Options: `phone`, `sms` | Default: `phone` |
+| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
+| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
+| `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key |
+| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret |
+| `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | Eg: "`#NVIDIA` `#NVIDIAINSTOCK`" |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -107,16 +113,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|:---:|
 | Adorama | `adorama`|
 | Amazon | `amazon`|
-| Amazon.ca | `amazon-ca`|
+| Amazon (CA) | `amazon-ca`|
 | ASUS | `asus` |
 | Best Buy | `bestbuy`|
 | B&H | `bandh`|
 | EVGA | `evga`|
+| EVGA (EU) | `evga-eu`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
-| Newegg.ca | `newegg-ca`|
+| Newegg (CA) | `newegg-ca`|
 | Nvidia | `nvidia`|
 | Office Depot | `officedepot`|
+| Zotac | `zotac`|
 
 #### Supported carriers
 

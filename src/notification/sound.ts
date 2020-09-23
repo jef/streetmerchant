@@ -1,7 +1,7 @@
-import playerLib from 'play-sound';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import fs from 'fs';
+import playerLib from 'play-sound';
 
 const notificationSound = Config.notifications.playSound;
 const player = playerLib();
