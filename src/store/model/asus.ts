@@ -10,7 +10,7 @@ export const Asus: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://store.asus.com/us/item/202003AM280000002/'
 		},

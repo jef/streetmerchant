@@ -10,7 +10,7 @@ export const Adorama: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.adorama.com/ev08gp43067k.html'
 		},
