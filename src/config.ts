@@ -49,7 +49,14 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST === 'true'
+	test: process.env.NOTIFICATION_TEST === 'true',
+	twitter: {
+		accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY ?? '',
+		accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET ?? '',
+		consumerKey: process.env.TWITTER_CONSUMER_KEY ?? '',
+		consumerSecret: process.env.TWITTER_CONSUMER_SECRET ?? '',
+		tweetTags: process.env.TWITTER_TWEET_TAGS ?? ''
+	}
 };
 
 const page = {
