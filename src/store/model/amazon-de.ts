@@ -1,12 +1,22 @@
 import {Store} from './store';
 
 export const AmazonDe: Store = {
+	labels: {
+		captcha: {
+			container: 'body',
+			text: ['geben sie die unten angezeigten zeichen ein']
+		},
+				inStock: {
+			container: '#desktop_buybox',
+			text: ['add to cart']
+		}	
+	},
 	links: [
 		{
 			brand: 'TEST',
 			model: 'CARD',
 			series: 'debug',
-			url: 'https://www.amazon.com/MSI-GeForce-RTX-2060-Architecture/dp/B07MQ36Z6L/'
+			url: 'https://www.amazon.com/MSI-GeForce-RTX-2060-Architecture/dp/B07MQ36Z6L/ref=sr_1_4'
 		},
 		{
 			brand: 'pny',
@@ -87,9 +97,5 @@ export const AmazonDe: Store = {
 			url: 'https://www.amazon.de/ZOTAC-Gaming-GeForce-3080-Trinity/dp/B08HR1NPPQ?language=en_GB'
 		}
 	],
-	labels: {
-		captcha: ['enter the characters you see below', 'geben Sie die unten angezeigten zeichen ein'],
-		outOfStock: ['derzeit nicht verfügbar', 'erhältlich bei diesen verkäufern', 'momentan nicht verfügbar', 'currently unavailable', 'available from these sellers']
-	},
 	name: 'amazon-de'
 };
