@@ -15,7 +15,7 @@ puppeteer.use(adBlocker);
  */
 async function main() {
 	if (Stores.length === 0) {
-		Logger.error('No stores selected.');
+		Logger.error('✖ no stores selected', Stores);
 		return;
 	}
 
@@ -53,7 +53,6 @@ async function main() {
 try {
 	void main();
 } catch (error) {
-	// Ignoring errors; more than likely due to rate limits
-	Logger.error(error);
+	Logger.error('✖ something bad happened, resetting nvidia-snatcher', error);
 	void main();
 }

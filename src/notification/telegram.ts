@@ -1,5 +1,6 @@
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Logger} from '../logger';
 import {TelegramClient} from 'messaging-api-telegram';
 
 const telegram = Config.notifications.telegram;
@@ -8,13 +9,15 @@ const client = new TelegramClient({
 	accessToken: telegram.accessToken
 });
 
-export function sendTelegramMessage(text: string) {
+export function sendTelegramMessage(link: Link, store: Store) {
 	(async () => {
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
 		try {
-			await client.sendMessage(telegram.chatId, text);
-			Logger.info(`↗ telegram message sent to '${telegram.chatId}': ${text}`);
+			await client.sendMessage(telegram.chatId, `${Print.inStock(link, store)}\n${givenUrl}`);
+			Logger.info('✔ telegram message sent');
 		} catch (error) {
-			Logger.error(error);
+			Logger.error('✖ couldn\'t send telegram message', error);
 		}
 	})();
 }

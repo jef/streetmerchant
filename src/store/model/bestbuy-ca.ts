@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
-	customWaitFor: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#root',
@@ -10,9 +9,9 @@ export const BestBuyCa: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-2060-super-gaming-x-8gb-gddr6-video-card/14419420?intl=nosplash'
 		},
 		{
@@ -22,5 +21,6 @@ export const BestBuyCa: Store = {
 			url: 'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3080-trinity-10gb-gddr6x-video-card/14953249?intl=nosplash'
 		}
 	],
-	name: 'bestbuy-ca'
+	name: 'bestbuy-ca',
+	waitUntil: 'domcontentloaded'
 };

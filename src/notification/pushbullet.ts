@@ -1,19 +1,22 @@
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Link} from '../store/model';
-import {Logger} from '../logger';
 import PushBullet from 'pushbullet';
 
 const pushBulletApiKey = Config.notifications.pushBulletApiKey;
 
-export function sendPushBulletNotification(cartUrl: string, link: Link) {
+export function sendPushBulletNotification(link: Link, store: Store) {
 	const pusher = new PushBullet(pushBulletApiKey);
-	const title = `🚨 ${link.brand} ${link.model} ${link.series} 👀`;
 
-	pusher.note({}, title, cartUrl, (err: Error, result: string) => {
-		if (err) {
-			Logger.error(err);
-		} else {
-			Logger.info(`↗ pushbullet notification sent: ${result}`);
-		}
-	});
+	pusher.note(
+		{},
+		Print.inStock(link, store),
+		link.cartUrl ? link.cartUrl : link.url,
+		(error: Error) => {
+			if (error) {
+				Logger.error('✖ couldn\'t send pushbullet message', error);
+			} else {
+				Logger.info('✔ pushbullet message sent');
+			}
+		});
 }

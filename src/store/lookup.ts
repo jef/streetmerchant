@@ -1,5 +1,6 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
+import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {Logger} from '../logger';
@@ -15,7 +16,7 @@ const inStock: Record<string, boolean> = {};
  *
  * @param brand The brand of the GPU
  */
-function filterBrand(brand: string) {
+function filterBrand(brand: Link['brand']) {
 	if (Config.store.showOnlyBrands.length === 0) {
 		return true;
 	}
@@ -28,7 +29,7 @@ function filterBrand(brand: string) {
  *
  * @param series The series of the GPU
  */
-function filterSeries(series: string) {
+function filterSeries(series: Link['series']) {
 	if (Config.store.showOnlySeries.length === 0) {
 		return true;
 	}
@@ -70,27 +71,14 @@ async function lookup(browser: Browser, store: Store) {
 }
 
 async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
-	const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+	const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
-	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
 		Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
 		Logger.info(link.url);
-		if (Config.page.inStockWaitTime) {
-			inStock[store.name] = true;
-			setTimeout(() => {
-				inStock[store.name] = false;
-			}, 1000 * Config.page.inStockWaitTime);
-		}
-
-		if (Config.page.capture) {
-			Logger.debug('ℹ saving screenshot');
-			link.screenshot = `success-${Date.now()}.png`;
-			await page.screenshot({path: link.screenshot});
-		}
-
 		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		Logger.info(`${Print.inStock(link, store)}\n${givenUrl}`);
 
 		if (Config.browser.open) {
 			if (link.openCartAction === undefined) {
@@ -100,12 +88,29 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}
 		}
 
-		sendNotification(givenUrl, link);
+		sendNotification(link, store);
+
+		if (Config.page.inStockWaitTime) {
+			inStock[store.name] = true;
+
+			setTimeout(() => {
+				inStock[store.name] = false;
+			}, 1000 * Config.page.inStockWaitTime);
+		}
+
+		if (Config.page.capture) {
+			Logger.debug('ℹ saving screenshot');
+
+			link.screenshot = `success-${Date.now()}.png`;
+			await page.screenshot({path: link.screenshot});
+		}
+
 		return;
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
 		Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
+		Logger.warn(Print.captcha(link, store));
 		await delay(getSleepTime());
 		return;
 	}
@@ -116,6 +121,11 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	}
 
 	Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
+		Logger.warn(Print.rateLimit(link, store));
+		return;
+	}
+
+	Logger.info(Print.outOfStock(link, store));
 }
 
 async function lookupCardInStock(store: Store, page: Page) {
