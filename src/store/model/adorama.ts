@@ -2,6 +2,10 @@ import {Store} from './store';
 
 export const Adorama: Store = {
 	labels: {
+		captcha: {
+			container: 'body',
+			text: ['please verify you are a human']
+		},
 		inStock: {
 			container: '.buy-section.purchase',
 			text: ['add to cart']
