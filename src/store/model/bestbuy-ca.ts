@@ -4,7 +4,7 @@ export const BestBuyCa: Store = {
 	customWaitFor: 'domcontentloaded',
 	labels: {
 		inStock: {
-			container: 'body',
+			container: '#root',
 			text: ['available online']
 		}
 	},
