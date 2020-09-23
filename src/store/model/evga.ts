@@ -10,7 +10,7 @@ export const Evga: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.evga.com/products/product.aspx?pn=06G-P4-2065-KR'
 		},
