@@ -2,6 +2,8 @@
 
 [FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
+![nvidia-snatcher](media/screenshot.png)
+
 The purpose of this bot is to get an Nvidia card. It tries multiple things to do that.
 
 - Currently, `nvidia-snatcher` is not capable of purchasing a card for you
