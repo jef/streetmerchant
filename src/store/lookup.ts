@@ -14,7 +14,7 @@ const inStock: Record<string, boolean> = {};
  *
  * @param brand The brand of the GPU
  */
-function filterBrand(brand: Link['brand']) {
+function filterBrand(brand: string) {
 	if (Config.store.showOnlyBrands.length === 0) {
 		return true;
 	}
@@ -27,7 +27,7 @@ function filterBrand(brand: Link['brand']) {
  *
  * @param series The series of the GPU
  */
-function filterSeries(series: Link['series']) {
+function filterSeries(series: string) {
 	if (Config.store.showOnlySeries.length === 0) {
 		return true;
 	}
