@@ -4,6 +4,7 @@ import {playSound} from './sound';
 import {sendDesktopNotification} from './desktop';
 import {sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
+import {sendPushBulletNotification} from './pushbullet';
 import {sendPushoverNotification} from './pushover';
 import {sendSMS} from './sms';
 import {sendSlackMessage} from './slack';
@@ -34,6 +35,10 @@ export function sendNotification(cartUrl: string, link: Link) {
 		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
 			sendSMS(cartUrl, link);
 		}
+	}
+
+	if (notifications.pushBulletApiKey) {
+		sendPushBulletNotification(cartUrl, link);
 	}
 
 	if (notifications.pushover.token && notifications.pushover.username) {

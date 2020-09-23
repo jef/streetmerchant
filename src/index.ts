@@ -14,7 +14,22 @@ puppeteer.use(adBlocker);
  * Starts the bot.
  */
 async function main() {
+	if (Stores.length === 0) {
+		Logger.error('No stores selected.');
+		return;
+	}
+
+	const args: string[] = [];
+
+	// Skip Chromium Linux Sandbox
+	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
+	if (Config.browser.isTrusted) {
+		args.push('--no-sandbox');
+		args.push('--disable-setuid-sandbox');
+	}
+
 	const browser = await puppeteer.launch({
+		args,
 		defaultViewport: {
 			height: Config.page.height,
 			width: Config.page.width
