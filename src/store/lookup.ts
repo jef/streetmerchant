@@ -1,9 +1,9 @@
 import {Browser, Response} from 'puppeteer';
-import colors from 'colors'; // eslint-disable-line no-restricted-imports
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import {Store} from './model';
+import colors from 'colors'; // eslint-disable-line no-restricted-imports
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
