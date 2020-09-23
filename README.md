@@ -112,10 +112,9 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | ASUS | `asus` |
-| Best Buy | `bestbuy`|
-| Best Buy (CA) | `bestbuy-ca`|
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
+| Best Buy (CA) | `bestbuy-ca`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Micro Center | `microcenter`|
