@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
-	customWaitFor: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#root',
@@ -22,5 +21,6 @@ export const BestBuyCa: Store = {
 			url: 'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3080-trinity-10gb-gddr6x-video-card/14953249?intl=nosplash'
 		}
 	],
-	name: 'bestbuy-ca'
+	name: 'bestbuy-ca',
+	waitUntil: 'domcontentloaded'
 };

@@ -1,10 +1,9 @@
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Link} from '../store/model';
-import {Logger} from '../logger';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 
-const subject = 'NVIDIA - BUY NOW';
 const [email, phone] = [Config.notifications.email, Config.notifications.phone];
 
 const transporter = nodemailer.createTransport({
@@ -15,37 +14,35 @@ const transporter = nodemailer.createTransport({
 	service: 'gmail'
 });
 
-const mailOptions: Mail.Options = {
-	from: Config.notifications.email.username,
-	subject,
-	to: generateAddress()
-};
-
-export function sendSMS(text: string, link: Link) {
-	mailOptions.text = text;
-
-	if (link.screenshot) {
-		mailOptions.attachments = [
+export function sendSMS(link: Link, store: Store) {
+	const mailOptions: Mail.Options = {
+		attachments: link.screenshot ? [
 			{
 				filename: link.screenshot,
 				path: `./${link.screenshot}`
 			}
-		];
-	}
+		] : undefined,
+		from: email.username,
+		subject: Print.inStock(link, store),
+		text: link.cartUrl ? link.cartUrl : link.url,
+		to: generateAddress()
+	};
 
-	transporter.sendMail(mailOptions, (error, info) => {
+	transporter.sendMail(mailOptions, error => {
 		if (error) {
-			Logger.error(error);
+			Logger.error('✖ couldn\'t send sms', error);
 		} else {
-			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`↗ sms sent: ${info.response}`);
+			Logger.info('✔ sms sent');
 		}
 	});
 }
 
 function generateAddress() {
 	const carrier = phone.carrier.toLowerCase();
+
 	if (carrier && phone.availableCarriers.has(carrier)) {
 		return [phone.number, phone.availableCarriers.get(carrier)].join('@');
 	}
+
+	Logger.error('✖ unknown carrier', carrier);
 }

@@ -1,8 +1,8 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
+import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
-import {Logger} from '../logger';
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
@@ -69,27 +69,12 @@ async function lookup(browser: Browser, store: Store) {
 }
 
 async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
-	const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+	const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
-	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
-		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
-		Logger.info(link.url);
-		if (Config.page.inStockWaitTime) {
-			inStock[store.name] = true;
-			setTimeout(() => {
-				inStock[store.name] = false;
-			}, 1000 * Config.page.inStockWaitTime);
-		}
-
-		if (Config.page.capture) {
-			Logger.debug('ℹ saving screenshot');
-			link.screenshot = `success-${Date.now()}.png`;
-			await page.screenshot({path: link.screenshot});
-		}
-
 		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		Logger.info(`${Print.inStock(link, store)}\n${givenUrl}`);
 
 		if (Config.browser.open) {
 			if (link.openCartAction === undefined) {
@@ -99,22 +84,38 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}
 		}
 
-		sendNotification(givenUrl, link);
+		sendNotification(link, store);
+
+		if (Config.page.inStockWaitTime) {
+			inStock[store.name] = true;
+
+			setTimeout(() => {
+				inStock[store.name] = false;
+			}, 1000 * Config.page.inStockWaitTime);
+		}
+
+		if (Config.page.capture) {
+			Logger.debug('ℹ saving screenshot');
+
+			link.screenshot = `success-${Date.now()}.png`;
+			await page.screenshot({path: link.screenshot});
+		}
+
 		return;
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+		Logger.warn(Print.captcha(link, store));
 		await delay(getSleepTime());
 		return;
 	}
 
 	if (response && response.status() === 429) {
-		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		Logger.warn(Print.rateLimit(link, store));
 		return;
 	}
 
-	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+	Logger.info(Print.outOfStock(link, store));
 }
 
 async function lookupCardInStock(store: Store, page: Page) {

@@ -47,8 +47,7 @@ for (const name of Config.store.stores) {
 	}
 }
 
-const logString = `Selected stores: ${Array.from(list.keys()).join(', ')}`;
-Logger.info(logString);
+Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
 
 export const Stores = Array.from(list.values()) as Store[];
 
