@@ -63,6 +63,11 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		return;
 	}
 
+	if (response.status() >= 400) {
+		Logger.warn(Print.badStatusCode(link, store, response.status(), true));
+		return;
+	}
+
 	if (await lookupCardInStock(store, page, link)) {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 		Logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);

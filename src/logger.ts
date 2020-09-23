@@ -26,6 +26,13 @@ export const Logger = winston.createLogger({
 });
 
 export const Print = {
+	badStatusCode(link: Link, store: Store, statusCode: number, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow(`STATUS CODE ERROR ${statusCode}`);
+		}
+
+		return `✖ ${buildProductString(link, store)} :: STATUS CODE ERROR ${statusCode}`;
+	},
 	bannedSeller(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('BANNED SELLER');
