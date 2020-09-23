@@ -6,8 +6,8 @@ export type Element = {
 };
 
 export type Link = {
-	series: string;
-	brand: string;
+	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
+	series: 'test:series' | '3070' | '3080' | '3090';
 	model: string;
 	url: string;
 	cartUrl?: string;

@@ -9,9 +9,9 @@ export const Zotac: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://store.zotac.com/zotac-gaming-geforce-rtx-2060-twin-fan-zt-t20600f-10m'
 		},
 		{

@@ -13,9 +13,9 @@ export const Amazon: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
+			brand: 'test:brand',
 			model: 'CARD',
-			series: 'debug',
+			series: 'test:series',
 			url: 'https://www.amazon.com/dp/B07MQ36Z6L'
 		},
 		{
