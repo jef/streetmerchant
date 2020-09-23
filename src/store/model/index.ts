@@ -1,4 +1,3 @@
-
 import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
