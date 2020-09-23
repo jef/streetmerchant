@@ -2,7 +2,10 @@ import {Store} from './store';
 
 export const BestBuy: Store = {
 	labels: {
-		outOfStock: ['sold out', 'coming soon']
+		inStock: {
+			container: '.v-m-bottom-g',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
