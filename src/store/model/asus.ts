@@ -1,6 +1,12 @@
 import {Store} from './store';
 
 export const Asus: Store = {
+	labels: {
+		inStock: {
+			container: '#item_add_cart',
+			text: ['add to cart']
+		}
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -21,12 +27,6 @@ export const Asus: Store = {
 			url: 'https://store.asus.com/us/item/202009AM150000004/'
 		}
 	],
-	labels: {
-		inStock: {
-			container: '#item_add_cart',
-			text: ['add to cart']
-		}
-	},
 	name: 'asus'
 };
 
