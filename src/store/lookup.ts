@@ -3,7 +3,6 @@ import {Link, Store} from './model';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {Logger} from '../logger';
-import {Store} from './model';
 import colors from 'colors'; // eslint-disable-line no-restricted-imports
 import {includesLabels} from './includes-labels';
 import open from 'open';
@@ -60,11 +59,6 @@ async function lookup(browser: Browser, store: Store) {
 		await page.setUserAgent(Config.page.userAgent);
 
 		try {
-			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
-		} catch {
-			Logger.error(colors.cyan(`✖ [${store.name}]`) + colors.magenta(` ${graphicsCard}`) + colors.red(' skipping; timed out'));
-			await closePage(page);
-			continue;
 			await lookupCard(browser, store, page, link);
 		} catch (error) {
 			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
@@ -80,7 +74,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
-		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
+		Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
 		Logger.info(link.url);
 		if (Config.page.inStockWaitTime) {
 			inStock[store.name] = true;
@@ -89,24 +83,6 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}, 1000 * Config.page.inStockWaitTime);
 		}
 
-		if (includesLabels(textContent, store.labels.outOfStock)) {
-			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
-		} else if (store.labels.bannedSeller && includesLabels(textContent, store.labels.bannedSeller)) {
-			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red.strikethrough(' banned seller detected:') + colors.magenta(` ${graphicsCard}. skipping...`));
-		} else if (store.labels.captcha && includesLabels(textContent, store.labels.captcha)) {
-			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
-			await delay(getSleepTime());
-		} else if (response && response.status() === 429) {
-			Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(' Rate limit exceeded:') + colors.magenta(` ${graphicsCard}`));
-		} else {
-			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
-			Logger.info(link.url);
-			if (Config.page.inStockWaitTime) {
-				inStock[store.name] = true;
-				setTimeout(() => {
-					inStock[store.name] = false;
-				}, 1000 * Config.page.inStockWaitTime);
-			}
 		if (Config.page.capture) {
 			Logger.debug('ℹ saving screenshot');
 			link.screenshot = `success-${Date.now()}.png`;
@@ -128,17 +104,17 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+		Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
 		await delay(getSleepTime());
 		return;
 	}
 
 	if (response && response.status() === 429) {
-		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(' Rate limit exceeded:') + colors.magenta(` ${graphicsCard}`));
 		return;
 	}
 
-	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+	Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
 }
 
 async function lookupCardInStock(store: Store, page: Page) {
