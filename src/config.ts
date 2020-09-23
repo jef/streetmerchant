@@ -36,7 +36,7 @@ const notifications = {
 			['fido', 'fido.ca'],
 			['rogers', 'pcs.rogers.com'],
 			['kudo', 'msg.koodomobile.com'],
-			['virgin', 'vmobile.ca'] 
+			['virgin', 'vmobile.ca']
 		]),
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
