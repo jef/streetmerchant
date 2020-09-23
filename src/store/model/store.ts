@@ -5,7 +5,7 @@ export type Element = {
 	text: string[];
 };
 
-export type Link {
+export type Link = {
 	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
 	series: 'test:series' | '3070' | '3080' | '3090';
 	model: string;
