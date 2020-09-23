@@ -6,7 +6,7 @@ export type Element = {
 };
 
 export type Link = {
-	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
+	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'inno3d' | 'kfa2' | 'palit' | 'pny' | 'msi' | 'nvidia' | 'zotac';
 	series: 'test:series' | '3070' | '3080' | '3090';
 	model: string;
 	url: string;
