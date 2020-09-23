@@ -1,17 +1,17 @@
-import {timestampUrlParameter} from '../../timestamp-url-parameter';
 import {Browser, Response} from 'puppeteer';
+import {NvidiaRegionInfo, regionInfos} from '../nvidia';
+import {Config} from '../../../config';
+import {Link} from '../store';
 import {Logger} from '../../../logger';
 import open from 'open';
-import {Link} from '../store';
-import {Config} from '../../../config';
-import {NvidiaRegionInfo, regionInfos} from '../nvidia';
+import {timestampUrlParameter} from '../../timestamp-url-parameter';
 
 const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
 
 function getRegionInfo(): NvidiaRegionInfo {
 	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
 
-	const defaultRegionInfo: NvidiaRegionInfo = {drLocale: 'en_us', nvidiaLocale: 'en_us', fe3080Id: 5438481700, fe3090Id: null, fe2060SuperId: 5379432500};
+	const defaultRegionInfo: NvidiaRegionInfo = {drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_us'};
 	return regionInfos.get(country) ?? defaultRegionInfo;
 }
 
@@ -67,8 +67,11 @@ export function generateSetupAction() {
 			const accessToken = data.access_token;
 
 			Logger.info('[nvidia] you can log into your cart now...');
-			Logger.info(checkoutUrl(drLocale, accessToken));
-			await open(checkoutUrl(drLocale, accessToken));
+			const cartUrl = checkoutUrl(drLocale, accessToken);
+			Logger.info(cartUrl);
+			if (Config.browser.open) {
+				await open(cartUrl);
+			}
 		} catch (error) {
 			Logger.debug(error);
 			Logger.error('✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...');
@@ -83,6 +86,7 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 		const page = await browser.newPage();
 		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
 		let response: Response | null;
+		let cartUrl: string;
 		try {
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
 			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
@@ -97,15 +101,19 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 			response = await page.goto(addToCartUrl(id, drLocale, accessToken), {waitUntil: 'networkidle0'});
 
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page... 🚀🚀🚀`);
-			Logger.info(checkoutUrl(drLocale, accessToken));
-			await open(checkoutUrl(drLocale, accessToken));
+			cartUrl = checkoutUrl(drLocale, accessToken);
+			Logger.info(cartUrl);
+			await open(cartUrl);
 		} catch (error) {
 			Logger.debug(error);
 			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`);
-			await open(fallbackCartUrl(nvidiaLocale));
+			cartUrl = fallbackCartUrl(nvidiaLocale);
+			await open(cartUrl);
 		}
 
 		await page.close();
+
+		return cartUrl;
 	};
 }
 
@@ -116,31 +124,31 @@ export function generateLinks(): Link[] {
 
 	if (fe2060SuperId) {
 		links.push({
-			series: 'test:series',
 			brand: 'test:brand',
+			series: 'test:series',
 			model: 'CARD',
-			url: digitalRiverStockUrl(fe2060SuperId, drLocale),
-			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug')
+			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug'),
+			url: digitalRiverStockUrl(fe2060SuperId, drLocale)
 		});
 	}
 
 	if (fe3080Id) {
 		links.push({
-			series: '3080',
 			brand: 'nvidia',
+			series: '3080',
 			model: 'founders edition',
-			url: digitalRiverStockUrl(fe3080Id, drLocale),
-			openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080')
+			openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080'),
+			url: digitalRiverStockUrl(fe3080Id, drLocale)
 		});
 	}
 
 	if (fe3090Id) {
 		links.push({
-			series: '3090',
 			brand: 'nvidia',
+			series: '3090',
 			model: 'founders edition',
-			url: digitalRiverStockUrl(fe3090Id, drLocale),
-			openCartAction: generateOpenCartAction(fe3090Id, nvidiaLocale, drLocale, 'nvidia founders edition 3090')
+			openCartAction: generateOpenCartAction(fe3090Id, nvidiaLocale, drLocale, 'nvidia founders edition 3090'),
+			url: digitalRiverStockUrl(fe3090Id, drLocale)
 		});
 	}
 

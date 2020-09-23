@@ -2,11 +2,11 @@ import {Link} from '../store/model';
 import {sendNotification} from '../notification';
 
 const link: Link = {
-	series: 'test:series',
 	brand: 'test:brand',
-	cartUrl: 'http://example.com/',
+	series: 'test:series',
 	model: 'model',
-	url: 'http://example.com/'
+	url: 'http://example.com/',
+	cartUrl: 'http://example.com/'
 };
 
 /**

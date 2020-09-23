@@ -1,6 +1,16 @@
 import {Store} from './store';
 
 export const NewEgg: Store = {
+	labels: {
+		captcha: {
+			container: 'body',
+			text: ['are you a human?']
+		},
+		inStock: {
+			container: '#landingpage-cart .btn-primary span',
+			text: ['add to cart']
+		}
+	},
 	links: [
 		{
 			brand: 'test:brand',
@@ -100,9 +110,5 @@ export const NewEgg: Store = {
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		}
 	],
-	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
-	},
 	name: 'newegg'
 };

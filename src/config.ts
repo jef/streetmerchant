@@ -1,13 +1,14 @@
-import {resolve} from 'path';
 import {config} from 'dotenv';
+import path from 'path';
 
-config({path: resolve(__dirname, '../.env')});
+config({path: path.resolve(__dirname, '../.env')});
 
 const browser = {
 	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
-	open: process.env.OPEN_BROWSER === 'true',
+	isTrusted: process.env.BROWSER_TRUSTED ? process.env.BROWSER_TRUSTED === 'true' : false,
+	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000),
 	minSleep: Number(process.env.PAGE_SLEEP_MIN ?? 5000),
-	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000)
+	open: process.env.OPEN_BROWSER === 'true'
 };
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';
@@ -19,8 +20,8 @@ const notifications = {
 		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
 	},
 	email: {
-		username: process.env.EMAIL_USERNAME ?? '',
-		password: process.env.EMAIL_PASSWORD ?? ''
+		password: process.env.EMAIL_PASSWORD ?? '',
+		username: process.env.EMAIL_USERNAME ?? ''
 	},
 	phone: {
 		availableCarriers: new Map([
@@ -36,9 +37,10 @@ const notifications = {
 		number: process.env.PHONE_NUMBER ?? ''
 	},
 	playSound: process.env.PLAY_SOUND ?? '',
+	pushBulletApiKey: process.env.PUSHBULLET ?? '',
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN ?? '',
-		user: process.env.PUSHOVER_USER ?? ''
+		username: process.env.PUSHOVER_USER ?? ''
 	},
 	slack: {
 		channel: process.env.SLACK_CHANNEL ?? '',
@@ -48,23 +50,30 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST === 'true'
+	test: process.env.NOTIFICATION_TEST === 'true',
+	twitter: {
+		accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY ?? '',
+		accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET ?? '',
+		consumerKey: process.env.TWITTER_CONSUMER_KEY ?? '',
+		consumerSecret: process.env.TWITTER_CONSUMER_SECRET ?? '',
+		tweetTags: process.env.TWITTER_TWEET_TAGS ?? ''
+	}
 };
 
 const page = {
 	capture: process.env.SCREENSHOT ? process.env.SCREENSHOT === 'true' : 'true',
-	width: 1920,
 	height: 1080,
+	inStockWaitTime: Number(process.env.IN_STOCK_WAIT_TIME ?? 0),
 	navigationTimeout: Number(process.env.PAGE_TIMEOUT ?? 30000),
 	userAgent: process.env.USER_AGENT ?? 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
-	inStockWaitTime: Number(process.env.IN_STOCK_WAIT_TIME ?? 0)
+	width: 1920
 };
 
 const store = {
-	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
+	country: process.env.COUNTRY ?? 'usa',
 	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
-	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia'],
-	country: process.env.COUNTRY ?? 'usa'
+	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
+	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia']
 };
 
 export const Config = {

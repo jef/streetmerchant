@@ -1,4 +1,9 @@
-import {Browser} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
+
+export interface Element {
+	container: string;
+	text: string[];
+}
 
 export interface Link {
 	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
@@ -6,14 +11,13 @@ export interface Link {
 	model: string;
 	url: string;
 	cartUrl?: string;
-	openCartAction?: (browser: Browser) => void;
+	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;
 }
 
 export interface Labels {
-	outOfStock: string[];
-	captcha?: string[];
-	bannedSeller?: string[];
+	captcha?: Element;
+	inStock: Element;
 }
 
 export interface Store {
@@ -21,4 +25,5 @@ export interface Store {
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
+	customWaitFor?: LoadEvent;
 }
