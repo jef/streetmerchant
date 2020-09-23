@@ -13,9 +13,9 @@ export const AmazonCa: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.amazon.ca/dp/B07PBLD2MX'
 		},
 		{

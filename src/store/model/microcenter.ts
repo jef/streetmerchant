@@ -9,9 +9,9 @@ export const MicroCenter: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.microcenter.com/product/618433/evga-geforce-rtx-2060-ko-ultra-overclocked-dual-fan-6gb-gddr6-pcie-30-graphics-card'
 		},
 		{

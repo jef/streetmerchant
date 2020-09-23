@@ -9,6 +9,7 @@ import {BestBuyCa} from './bestbuy-ca';
 import {Config} from '../../config';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
+import {Logger} from '../../logger';
 import {MicroCenter} from './microcenter';
 import {NewEgg} from './newegg';
 import {NewEggCa} from './newegg-ca';
@@ -38,8 +39,15 @@ const masterList = new Map([
 const list = new Map();
 
 for (const name of Config.store.stores) {
-	list.set(name, masterList.get(name));
+	if (masterList.has(name)) {
+		list.set(name, masterList.get(name));
+	} else {
+		const logString = `No store named ${name}, skipping.`;
+		Logger.warn(logString);
+	}
 }
+
+Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
 
 export const Stores = Array.from(list.values()) as Store[];
 

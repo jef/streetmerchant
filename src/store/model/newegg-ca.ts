@@ -13,9 +13,9 @@ export const NewEggCa: Store = {
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.newegg.ca/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
 		},
 		{

@@ -14,6 +14,11 @@ puppeteer.use(adBlocker);
  * Starts the bot.
  */
 async function main() {
+	if (Stores.length === 0) {
+		Logger.error('✖ no stores selected', Stores);
+		return;
+	}
+
 	const args: string[] = [];
 
 	// Skip Chromium Linux Sandbox
@@ -48,7 +53,6 @@ async function main() {
 try {
 	void main();
 } catch (error) {
-	// Ignoring errors; more than likely due to rate limits
-	Logger.error(error);
+	Logger.error('✖ something bad happened, resetting nvidia-snatcher', error);
 	void main();
 }

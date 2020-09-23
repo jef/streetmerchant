@@ -1,15 +1,26 @@
-import {Link} from '../store/model';
+import {Link, Store} from '../store/model';
 import {sendNotification} from '../notification';
 
 const link: Link = {
-	brand: 'brand',
-	cartUrl: 'http://example.com/',
-	model: 'model',
-	series: 'debug',
-	url: 'http://example.com/'
+	brand: 'test:brand',
+	cartUrl: 'https://www.example.com/cartUrl',
+	model: 'test:model',
+	series: 'test:series',
+	url: 'https://www.example.com/url'
+};
+
+const store: Store = {
+	labels: {
+		inStock: {
+			container: 'test:container',
+			text: ['test:text']
+		}
+	},
+	links: [link],
+	name: 'test:name'
 };
 
 /**
  * Send test email.
  */
-sendNotification(link.cartUrl ?? link.url, link);
+sendNotification(link, store);
