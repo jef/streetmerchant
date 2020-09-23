@@ -1,4 +1,4 @@
-import {Browser} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
 
 export interface Element {
 	container: string;
@@ -11,7 +11,7 @@ export interface Link {
 	model: string;
 	url: string;
 	cartUrl?: string;
-	openCartAction?: (browser: Browser) => void;
+	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;
 }
 
@@ -25,4 +25,5 @@ export interface Store {
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
+	customWaitFor?: LoadEvent;
 }

@@ -37,6 +37,7 @@ const notifications = {
 		number: process.env.PHONE_NUMBER ?? ''
 	},
 	playSound: process.env.PLAY_SOUND ?? '',
+	pushBulletApiKey: process.env.PUSHBULLET ?? '',
 	pushover: {
 		token: process.env.PUSHOVER_TOKEN ?? '',
 		username: process.env.PUSHOVER_USER ?? ''
