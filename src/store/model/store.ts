@@ -1,4 +1,4 @@
-import {Browser} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
 
 export interface Element {
 	container: string;
@@ -25,4 +25,5 @@ export interface Store {
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
+	customWaitFor?: LoadEvent;
 }

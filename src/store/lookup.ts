@@ -69,7 +69,8 @@ async function lookup(browser: Browser, store: Store) {
 }
 
 async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
-	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
+	const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
