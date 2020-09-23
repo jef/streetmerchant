@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
+	labels: {
+		outOfStock: ['notify when available', 'try varying your search terms', 'sorry, an unexpected error has occurred']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -8,12 +11,13 @@ export const BAndH: Store = {
 			series: 'debug',
 			url: 'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html'
 		},
-		{
-			brand: 'asus',
-			model: 'tuf',
-			series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1593649-REG/asus_tuf_rtx3080_10g_gaming_tuf_gaming_geforce_rtx.html'
-		},
+		// TUF was removed from BH, not sure why so commenting out listing for now
+		// {
+		// 	brand: 'asus',
+		// 	model: 'tuf',
+		// 	series: '3080',
+		// 	url: 'https://www.bhphotovideo.com/c/product/1593649-REG/asus_tuf_rtx3080_10g_gaming_tuf_gaming_geforce_rtx.html'
+		// },
 		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
@@ -26,12 +30,13 @@ export const BAndH: Store = {
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1592969-REG/zotac_zt_a30800d_10p_gaming_geforce_rtx_3080.html'
 		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
-		},
+		// TUF was removed from BH, not sure why so commenting out listing for now
+		// {
+		// 	brand: 'asus',
+		// 	model: 'tuf oc',
+		// 	series: '3080',
+		// 	url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
+		// },
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -58,8 +63,5 @@ export const BAndH: Store = {
 		}
 
 	],
-	labels: {
-		outOfStock: ['notify when available', 'try varying your search terms']
-	},
 	name: 'bandh'
 };

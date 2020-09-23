@@ -1,14 +1,14 @@
 import {Config} from '../config';
-import {sendEmail} from './email';
-import {sendSMS} from './sms';
-import {playSound} from './sound';
-import {sendSlackMessage} from './slack';
-import {sendPushoverNotification} from './pushover';
-import {sendTelegramMessage} from './telegram';
-import {sendDiscordMessage} from './discord';
-import {sendDesktopNotification} from './desktop';
-
 import {Link} from '../store/model';
+import {playSound} from './sound';
+import {sendDesktopNotification} from './desktop';
+import {sendDiscordMessage} from './discord';
+import {sendEmail} from './email';
+import {sendPushoverNotification} from './pushover';
+import {sendSMS} from './sms';
+import {sendSlackMessage} from './slack';
+import {sendTelegramMessage} from './telegram';
+import {sendTweet} from './twitter';
 
 const notifications = Config.notifications;
 
@@ -36,7 +36,7 @@ export function sendNotification(cartUrl: string, link: Link) {
 		}
 	}
 
-	if (notifications.pushover.token && notifications.pushover.user) {
+	if (notifications.pushover.token && notifications.pushover.username) {
 		sendPushoverNotification(cartUrl);
 	}
 
@@ -46,5 +46,14 @@ export function sendNotification(cartUrl: string, link: Link) {
 
 	if (notifications.desktop) {
 		sendDesktopNotification(cartUrl, link);
+	}
+
+	if (
+		notifications.twitter.accessTokenKey &&
+		notifications.twitter.accessTokenSecret &&
+		notifications.twitter.consumerKey &&
+		notifications.twitter.consumerSecret
+	) {
+		sendTweet(cartUrl, link);
 	}
 }

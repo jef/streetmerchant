@@ -1,6 +1,10 @@
 import {Store} from './store';
 
 export const NewEgg: Store = {
+	labels: {
+		captcha: ['are you a human?'],
+		outOfStock: ['auto notify', 'item is currently out of stock', 'service unavailable', 'we are currently experiencing problems on our server']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -100,9 +104,5 @@ export const NewEgg: Store = {
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		}
 	],
-	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
-	},
 	name: 'newegg'
 };

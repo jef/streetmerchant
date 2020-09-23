@@ -1,6 +1,10 @@
 import {Store} from './store';
 
 export const OfficeDepot: Store = {
+	labels: {
+		captcha: ['please verify you are a human'],
+		outOfStock: ['out of stock for delivery', 'out of stock', 'we are unable to process your last request']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -21,9 +25,5 @@ export const OfficeDepot: Store = {
 			url: 'https://www.officedepot.com/a/products/7791294/PNY-GeForce-RTX-3080-10GB-GDDR6X/'
 		}
 	],
-	labels: {
-		captcha: ['please verify you are a human'],
-		outOfStock: ['out of stock for delivery', 'out of stock', 'we are unable to process your last request']
-	},
 	name: 'officedepot'
 };

@@ -1,6 +1,10 @@
 import {Store} from './store';
 
 export const NewEggCa: Store = {
+	labels: {
+		captcha: ['are you a human?'],
+		outOfStock: ['auto notify', 'item is currently out of stock', 'service unavailable']
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -69,9 +73,5 @@ export const NewEggCa: Store = {
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452'
 		}
 	],
-	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock']
-	},
 	name: 'newegg-ca'
 };
