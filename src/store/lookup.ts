@@ -74,7 +74,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 	if (await lookupCardInStock(store, page)) {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-		Logger.info(`${Print.inStock(link, store)}\n${givenUrl}`);
+		Logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
 		if (Config.browser.open) {
 			if (link.openCartAction === undefined) {
@@ -105,17 +105,17 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(Print.captcha(link, store));
+		Logger.warn(Print.captcha(link, store, true));
 		await delay(getSleepTime());
 		return;
 	}
 
 	if (response && response.status() === 429) {
-		Logger.warn(Print.rateLimit(link, store));
+		Logger.warn(Print.rateLimit(link, store, true));
 		return;
 	}
 
-	Logger.info(Print.outOfStock(link, store));
+	Logger.info(Print.outOfStock(link, store, true));
 }
 
 async function lookupCardInStock(store: Store, page: Page) {
