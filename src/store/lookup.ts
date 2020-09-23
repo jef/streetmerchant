@@ -1,4 +1,5 @@
-import {Browser, Response} from 'puppeteer';
+import {Browser, Page, Response} from 'puppeteer';
+import {Link, Store} from './model';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
 import {Logger} from '../logger';
@@ -58,21 +59,35 @@ async function lookup(browser: Browser, store: Store) {
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
 
-		const graphicsCard = `${link.brand} ${link.model} ${link.series}`;
-
-		let response: Response | null;
 		try {
 			response = await page.goto(link.url, {waitUntil: 'networkidle0'});
 		} catch {
 			Logger.error(colors.cyan(`✖ [${store.name}]`) + colors.magenta(` ${graphicsCard}`) + colors.red(' skipping; timed out'));
 			await closePage(page);
 			continue;
+			await lookupCard(browser, store, page, link);
+		} catch (error) {
+			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
 		}
 
-		const bodyHandle = await page.$('body');
-		const textContent = await page.evaluate(body => body.textContent, bodyHandle);
+		await closePage(page);
+	}
+	/* eslint-enable no-await-in-loop */
+}
 
-		Logger.debug(textContent);
+async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
+	const response: Response | null = await page.goto(link.url, {waitUntil: 'networkidle0'});
+	const graphicsCard = `${link.brand} ${link.model}`;
+
+	if (await lookupCardInStock(store, page)) {
+		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
+		Logger.info(link.url);
+		if (Config.page.inStockWaitTime) {
+			inStock[store.name] = true;
+			setTimeout(() => {
+				inStock[store.name] = false;
+			}, 1000 * Config.page.inStockWaitTime);
+		}
 
 		if (includesLabels(textContent, store.labels.outOfStock)) {
 			Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
@@ -92,29 +107,72 @@ async function lookup(browser: Browser, store: Store) {
 					inStock[store.name] = false;
 				}, 1000 * Config.page.inStockWaitTime);
 			}
-
-			if (Config.page.capture) {
-				Logger.debug('ℹ saving screenshot');
-				link.screenshot = `success-${Date.now()}.png`;
-				await page.screenshot({path: link.screenshot});
-			}
-
-			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-
-			if (Config.browser.open) {
-				if (link.openCartAction === undefined) {
-					await open(givenUrl);
-				} else {
-					link.openCartAction(browser);
-				}
-			}
-
-			sendNotification(givenUrl, link);
+		if (Config.page.capture) {
+			Logger.debug('ℹ saving screenshot');
+			link.screenshot = `success-${Date.now()}.png`;
+			await page.screenshot({path: link.screenshot});
 		}
 
-		await closePage(page);
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+
+		if (Config.browser.open) {
+			if (link.openCartAction === undefined) {
+				await open(givenUrl);
+			} else {
+				link.openCartAction(browser);
+			}
+		}
+
+		sendNotification(givenUrl, link);
+		return;
 	}
-	/* eslint-enable no-await-in-loop */
+
+	if (await lookupPageHasCaptcha(store, page)) {
+		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+		await delay(getSleepTime());
+		return;
+	}
+
+	if (response && response.status() === 429) {
+		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		return;
+	}
+
+	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+}
+
+async function lookupCardInStock(store: Store, page: Page) {
+	const stockHandle = await page.$(store.labels.inStock.container);
+
+	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
+	if (!visible) {
+		return false;
+	}
+
+	const stockContent = await page.evaluate(element => element.outerHTML, stockHandle);
+
+	Logger.debug(stockContent);
+
+	if (includesLabels(stockContent, store.labels.inStock.text)) {
+		return true;
+	}
+
+	return false;
+}
+
+async function lookupPageHasCaptcha(store: Store, page: Page) {
+	if (!store.labels.captcha) {
+		return false;
+	}
+
+	const captchaHandle = await page.$(store.labels.captcha.container);
+	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
+
+	if (includesLabels(captchaContent, store.labels.captcha.text)) {
+		return true;
+	}
+
+	return false;
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
