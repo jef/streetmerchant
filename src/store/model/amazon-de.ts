@@ -6,7 +6,7 @@ export const AmazonDe: Store = {
 			container: 'body',
 			text: ['geben sie die unten angezeigten zeichen ein']
 		},
-				inStock: {
+		inStock: {
 			container: '#desktop_buybox',
 			text: ['add to cart']
 		}	
