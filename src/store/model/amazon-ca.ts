@@ -2,8 +2,14 @@ import {Store} from './store';
 
 export const AmazonCa: Store = {
 	labels: {
-		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable']
+		captcha: {
+			container: 'body',
+			text: ['enter the characters you see below']
+		},
+		inStock: {
+			container: '#desktop_buybox',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{

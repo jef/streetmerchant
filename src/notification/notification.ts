@@ -9,6 +9,7 @@ import {sendPushoverNotification} from './pushover';
 import {sendSMS} from './sms';
 import {sendSlackMessage} from './slack';
 import {sendTelegramMessage} from './telegram';
+import {sendTweet} from './twitter';
 
 const notifications = Config.notifications;
 
@@ -50,5 +51,14 @@ export function sendNotification(cartUrl: string, link: Link) {
 
 	if (notifications.desktop) {
 		sendDesktopNotification(cartUrl, link);
+	}
+
+	if (
+		notifications.twitter.accessTokenKey &&
+		notifications.twitter.accessTokenSecret &&
+		notifications.twitter.consumerKey &&
+		notifications.twitter.consumerSecret
+	) {
+		sendTweet(cartUrl, link);
 	}
 }

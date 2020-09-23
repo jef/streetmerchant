@@ -31,8 +31,9 @@
     "puppeteer-extra": "^3.1.15",
     "puppeteer-extra-plugin-adblocker": "^2.11.6",
     "puppeteer-extra-plugin-stealth": "^2.6.1",
-    "pushover-notifications": "^1.2.2",
     "pushbullet": "^2.4.0",
+    "pushover-notifications": "^1.2.2",
+    "twitter": "^1.7.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^3.0.2",
+    "@types/twitter": "^1.7.0",
     "discord-webhook-node": "^1.1.8",
     "husky": "^4.3.0",
     "play-sound": "^1.1.3",

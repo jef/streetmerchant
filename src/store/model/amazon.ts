@@ -2,9 +2,14 @@ import {Store} from './store';
 
 export const Amazon: Store = {
 	labels: {
-		bannedSeller: ['sports authentics', 'raccoon capitalist', 'gigaparts'],
-		captcha: ['enter the characters you see below'],
-		outOfStock: ['currently unavailable', 'available from these sellers']
+		captcha: {
+			container: 'body',
+			text: ['enter the characters you see below']
+		},
+		inStock: {
+			container: '#desktop_buybox',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
