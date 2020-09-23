@@ -64,8 +64,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|---|
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
-| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
-| `DISCORD_WEB_HOOK` | Discord Web Hook URL |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: `<@2834729847239842>` |
+| `DISCORD_WEB_HOOK` | Discord Web Hook URL | |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
@@ -75,28 +75,28 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
 | `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PLAY_SOUND` | Play this sound notification if a card is found | E.g.: `path/to/notification.wav`, relative path accepted, valid formats: wav, mp3, flac, [free sounds available](https://notificationsounds.com/) |
-| `PUSHBULLET` | PushBullet API key | Get at https://www.pushbullet.com/#settings/account |
-| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build |
-| `PUSHOVER_USER` | Pushover username |
-| `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | Default: `5000` |
-| `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | Default: `10000` |
+| `PLAY_SOUND` | Play this sound notification if a card is found | Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
+| `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
+| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
+| `PUSHOVER_USER` | Pushover username | |
+| `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
+| `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
-| `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, E.g.: `evga,zotac` |
-| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, E.g.: `3080` |
-| `SLACK_CHANNEL` | Slack channel for posting | E.g., `update`, no need for `#` |
-| `SLACK_TOKEN` | Slack API token |
+| `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
+| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
+| `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
+| `SLACK_TOKEN` | Slack API token | |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
-| `COUNTRY` | [Supported country](#supported-countries)  you want to be scraped, currently only used by Nvidia | default: `usa` |
+| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Currently only used by Nvidia, default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
-| `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID |
+| `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
+| `TELEGRAM_CHAT_ID` | Telegram chat ID | |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
-| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
-| `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key |
-| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret |
-| `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | Eg: "`#NVIDIA` `#NVIDIAINSTOCK`" |
+| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
+| `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key | |
+| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret | |
+| `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
