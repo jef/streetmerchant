@@ -1,11 +1,11 @@
 import {Browser, LoadEvent} from 'puppeteer';
 
-export interface Element {
+export type Element = {
 	container: string;
 	text: string[];
-}
+};
 
-export interface Link {
+export type Link {
 	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
 	series: 'test:series' | '3070' | '3080' | '3090';
 	model: string;
@@ -13,17 +13,17 @@ export interface Link {
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;
-}
+};
 
-export interface Labels {
+export type Labels = {
 	captcha?: Element;
 	inStock: Element;
-}
+};
 
-export interface Store {
+export type Store = {
 	links: Link[];
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
-	customWaitFor?: LoadEvent;
-}
+	waitUntil?: LoadEvent;
+};
