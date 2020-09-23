@@ -1,7 +1,7 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
-	customWaitFor: 'networkidle2',
+	customWaitFor: 'domcontentloaded',
 	labels: {
 		outOfStock: ['sold and shipped by best buysold out online', 'sold and shipped by best buycoming soon']
 	},
