@@ -1,11 +1,10 @@
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Link} from '../store/model';
-import {Logger} from '../logger';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 
 const email = Config.notifications.email;
-const subject = 'NVIDIA - BUY NOW';
 
 const transporter = nodemailer.createTransport({
 	auth: {
@@ -15,30 +14,25 @@ const transporter = nodemailer.createTransport({
 	service: 'gmail'
 });
 
-const mailOptions: Mail.Options = {
-	from: email.username,
-	subject,
-	to: email.username
-};
-
-export function sendEmail(cartUrl: string, link: Link) {
-	mailOptions.text = cartUrl;
-
-	if (link.screenshot) {
-		mailOptions.attachments = [
+export function sendEmail(link: Link, store: Store) {
+	const mailOptions: Mail.Options = {
+		attachments: link.screenshot ? [
 			{
 				filename: link.screenshot,
 				path: `./${link.screenshot}`
 			}
-		];
-	}
+		] : undefined,
+		from: email.username,
+		subject: Print.inStock(link, store),
+		text: link.cartUrl ? link.cartUrl : link.url,
+		to: email.username
+	};
 
-	transporter.sendMail(mailOptions, (error, info) => {
+	transporter.sendMail(mailOptions, error => {
 		if (error) {
-			Logger.error(error);
+			Logger.error('✖ couldn\'t send email', error);
 		} else {
-			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-			Logger.info(`↗ email sent: ${info.response}`);
+			Logger.info('✔ email sent');
 		}
 	});
 }
