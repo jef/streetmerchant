@@ -73,14 +73,14 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
 	if (await lookupCardInStock(store, page)) {
-		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 		Logger.info(`${Print.inStock(link, store)}\n${givenUrl}`);
 
 		if (Config.browser.open) {
 			if (link.openCartAction === undefined) {
 				await open(givenUrl);
 			} else {
-				givenUrl = await link.openCartAction(browser);
+				await link.openCartAction(browser);
 			}
 		}
 
@@ -130,11 +130,7 @@ async function lookupCardInStock(store: Store, page: Page) {
 
 	Logger.debug(stockContent);
 
-	if (includesLabels(stockContent, store.labels.inStock.text)) {
-		return true;
-	}
-
-	return false;
+	return includesLabels(stockContent, store.labels.inStock.text);
 }
 
 async function lookupPageHasCaptcha(store: Store, page: Page) {
@@ -145,11 +141,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 	const captchaHandle = await page.$(store.labels.captcha.container);
 	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
 
-	if (includesLabels(captchaContent, store.labels.captcha.text)) {
-		return true;
-	}
-
-	return false;
+	return includesLabels(captchaContent, store.labels.captcha.text);
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
