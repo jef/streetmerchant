@@ -17,9 +17,9 @@ async function main() {
 	if (Stores.length === 0) {
 		Logger.error('No stores selected.');
 		return;
-  }
+	}
 
-  const args: string[] = [];
+	const args: string[] = [];
 
 	// Skip Chromium Linux Sandbox
 	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
