@@ -3,7 +3,7 @@ import {Store} from './store';
 export const NewEgg: Store = {
 	labels: {
 		captcha: ['are you a human?'],
-		outOfStock: ['Http/1.1 Service Unavailable', 'problems on our server', 'auto notify', 'item is currently out of stock']
+		outOfStock: ['auto notify', 'item is currently out of stock', 'service unavailable', 'we are currently experiencing problems on our server']
 	},
 	links: [
 		{
