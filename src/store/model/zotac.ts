@@ -2,9 +2,18 @@ import {Store} from './store';
 
 export const Zotac: Store = {
 	labels: {
-		outOfStock: ['out of stock', 'this process is automatic']
+		inStock: {
+			container: '.add-to-cart-wrapper',
+			text: ['add to cart']
+		}
 	},
 	links: [
+		{
+			brand: 'TEST',
+			model: 'CARD',
+			series: 'debug',
+			url: 'https://store.zotac.com/zotac-gaming-geforce-rtx-2060-twin-fan-zt-t20600f-10m'
+		},
 		{
 			brand: 'zotac',
 			model: 'trinity',

@@ -2,7 +2,10 @@ import {Store} from './store';
 
 export const MicroCenter: Store = {
 	labels: {
-		outOfStock: ['sold out']
+		inStock: {
+			container: '#cart-options',
+			text: ['(in stock)']
+		}
 	},
 	links: [
 		{

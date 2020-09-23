@@ -35,7 +35,10 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 
 export const Nvidia: Store = {
 	labels: {
-		outOfStock: ['product_inventory_out_of_stock', 'rate limit exceeded', 'request timeout']
+		inStock: {
+			container: 'body',
+			text: ['product_inventory_in_stock']
+		}
 	},
 	links: generateLinks(),
 	name: 'nvidia',
