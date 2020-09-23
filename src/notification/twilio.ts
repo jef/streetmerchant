@@ -1,3 +1,4 @@
+import {Link, Store} from '../store/model';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import twilio from 'twilio';
@@ -20,12 +21,12 @@ export function requestTwilioCall() {
 		});
 }
 
-export function sendTwilioMessage(text: string) {
+export function sendTwilioMessage(link: Link) {
 	const toNumber = Config.notifications.twilio.countryCode + Config.notifications.phone.number;
 
 	client.messages
 		.create({
-			body: text,
+			body: link.url,
 			from: Config.notifications.twilio.fromNumber,
 			to: toNumber
 		})

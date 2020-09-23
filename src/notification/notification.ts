@@ -21,14 +21,6 @@ export function sendNotification(link: Link, store: Store) {
 		sendEmail(link, store);
 	}
 
-	if (notifications.phone.number) {
-		Logger.debug('↗ sending sms');
-		const carrier = notifications.phone.carrier.toLowerCase();
-		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
-			sendSMS(link, store);
-		}
-	}
-
 	if (notifications.playSound) {
 		Logger.debug('↗ playing sound');
 		playSound();
@@ -39,27 +31,29 @@ export function sendNotification(link: Link, store: Store) {
 		sendDesktopNotification(link, store);
 	}
 
-<<<<<<< HEAD
 	if (notifications.phone.number) {
 		const carrier = notifications.phone.carrier.toLowerCase();
 		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
-			sendSMS(cartUrl, link);
+			Logger.debug('↗ sending sms');
+			sendSMS(link, store);
 		}
 
 		if (notifications.twilio.sid && notifications.twilio.auth && notifications.twilio.fromNumber) {
 			if (notifications.twilio.mode.includes('phone')) {
+				Logger.debug('↗ calling twilio phone');
 				requestTwilioCall();
 			}
 
 			if (notifications.twilio.mode.includes('sms')) {
-				sendTwilioMessage(cartUrl);
+				Logger.debug('↗ sending twilio sms');
+				sendTwilioMessage(link);
 			}
 		}
-=======
+	}
+	
 	if (notifications.discord.webHookUrl) {
 		Logger.debug('↗ sending discord message');
 		sendDiscordMessage(link, store);
->>>>>>> 76b28a6dbdf5480c12a8c82b031c3f2880d17b11
 	}
 
 	if (notifications.slack.channel && notifications.slack.token) {
