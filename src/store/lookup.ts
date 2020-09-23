@@ -3,8 +3,6 @@ import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
-import {Logger} from '../logger';
-import colors from 'colors'; // eslint-disable-line no-restricted-imports
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
@@ -75,8 +73,6 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
 	if (await lookupCardInStock(store, page)) {
-		Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.green.bold(`🚀🚀🚀 ${graphicsCard} IN STOCK 🚀🚀🚀`));
-		Logger.info(link.url);
 		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
 		Logger.info(`${Print.inStock(link, store)}\n${givenUrl}`);
 
@@ -109,18 +105,12 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.yellow(` CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`));
 		Logger.warn(Print.captcha(link, store));
 		await delay(getSleepTime());
 		return;
 	}
 
 	if (response && response.status() === 429) {
-		Logger.warn(colors.cyan(`✖ [${store.name}]`) + colors.red(' Rate limit exceeded:') + colors.magenta(` ${graphicsCard}`));
-		return;
-	}
-
-	Logger.info(colors.cyan(`✖ [${store.name}]`) + colors.red(' still out of stock:') + colors.magenta(` ${graphicsCard}`));
 		Logger.warn(Print.rateLimit(link, store));
 		return;
 	}
