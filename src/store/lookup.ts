@@ -98,13 +98,13 @@ async function lookup(browser: Browser, store: Store) {
 				await page.screenshot({path: link.screenshot});
 			}
 
-			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+			let givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
 			if (Config.browser.open) {
 				if (link.openCartAction === undefined) {
 					await open(givenUrl);
 				} else {
-					link.openCartAction(browser);
+					givenUrl = await link.openCartAction(browser);
 				}
 			}
 

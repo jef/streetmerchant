@@ -6,7 +6,7 @@ export interface Link {
 	model: string;
 	url: string;
 	cartUrl?: string;
-	openCartAction?: (browser: Browser) => void;
+	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;
 }
 

@@ -32,6 +32,7 @@
     "puppeteer-extra-plugin-adblocker": "^2.11.6",
     "puppeteer-extra-plugin-stealth": "^2.6.1",
     "pushover-notifications": "^1.2.2",
+    "pushbullet": "^2.4.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
