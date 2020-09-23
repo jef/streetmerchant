@@ -1,6 +1,7 @@
 import {Link, Store} from './store/model';
 import winston, {format} from 'winston';
 import {Config} from './config';
+import colors from 'colors'; // eslint-disable-line no-restricted-imports
 
 const prettyJson = format.printf(info => {
 	const timestamp = new Date().toLocaleTimeString();
@@ -26,15 +27,15 @@ export const Logger = winston.createLogger({
 
 export const Print = {
 	captcha(link: Link, store: Store): string {
-		return `✖ [${store.name}] [${link.brand} (${link.series})] ${link.model} :: CAPTCHA`;
+		return colors.cyan(`✖ [${store.name}]`) + colors.grey(` [${link.brand} (${link.series})] ${link.model}`) + colors.yellow(' :: CAPTCHA');
 	},
 	inStock(link: Link, store: Store): string {
-		return `🚀🚨 [${store.name}] [${link.brand} (${link.series})] ${link.model} :: IN STOCK 🚨🚀`;
+		return colors.cyan(`✖ [${store.name}]`) + colors.grey(` [${link.brand} (${link.series})] ${link.model}`) + colors.green.bold(' :: IN STOCK 🚨🚀');
 	},
 	outOfStock(link: Link, store: Store): string {
-		return `✖ [${store.name}] [${link.brand} (${link.series})] ${link.model} :: OUT OF STOCK`;
+		return colors.cyan(`✖ [${store.name}]`) + colors.grey(` [${link.brand} (${link.series})] ${link.model}`) + colors.red(' :: OUT OF STOCK');
 	},
 	rateLimit(link: Link, store: Store): string {
-		return `✖ [${store.name}] [${link.brand} (${link.series})] ${link.model} :: RATE LIMIT EXCEEDED`;
+		return colors.cyan(`✖ [${store.name}]`) + colors.grey(` [${link.brand} (${link.series})] ${link.model}`) + colors.yellow(' :: RATE LIMIT EXCEEDED');
 	}
 };
