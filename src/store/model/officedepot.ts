@@ -2,15 +2,21 @@ import {Store} from './store';
 
 export const OfficeDepot: Store = {
 	labels: {
-		captcha: ['please verify you are a human'],
-		outOfStock: ['out of stock for delivery', 'out of stock', 'we are unable to process your last request']
+		captcha: {
+			container: 'body',
+			text: ['please verify you are a human']
+		},
+		inStock: {
+			container: '#productPurchase',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
 			brand: 'TEST',
 			model: 'CARD',
 			series: 'debug',
-			url: 'https://www.officedepot.com/a/products/7189374/PNY-GeForce-RTX-3080-10GB-GDDR6X/'
+			url: 'https://www.officedepot.com/a/products/4652239/EVGA-GeForce-RTX-2060-Graphic-Card/'
 		},
 		{
 			brand: 'pny',
