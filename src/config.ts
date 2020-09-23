@@ -31,7 +31,12 @@ const notifications = {
 			['sprint', 'messaging.sprintpcs.com'],
 			['telus', 'msg.telus.com'],
 			['tmobile', 'tmomail.net'],
-			['verizon', 'vtext.com']
+			['verizon', 'vtext.com'],
+			['bell', 'txt.bell.ca'],
+			['fido', 'fido.ca'],
+			['rogers', 'pcs.rogers.com'],
+			['kudo', 'msg.koodomobile.com'],
+			['virgin', 'vmobile.ca'] 
 		]),
 		carrier: process.env.PHONE_CARRIER ?? '',
 		number: process.env.PHONE_NUMBER ?? ''
