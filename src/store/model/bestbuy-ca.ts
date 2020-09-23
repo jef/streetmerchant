@@ -3,7 +3,10 @@ import {Store} from './store';
 export const BestBuyCa: Store = {
 	customWaitFor: 'domcontentloaded',
 	labels: {
-		outOfStock: ['sold and shipped by best buysold out online', 'sold and shipped by best buycoming soon']
+		inStock: {
+			container: 'body',
+			text: ['available online']
+		}
 	},
 	links: [
 		{

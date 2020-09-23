@@ -5,6 +5,7 @@ config({path: path.resolve(__dirname, '../.env')});
 
 const browser = {
 	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
+	isTrusted: process.env.BROWSER_TRUSTED ? process.env.BROWSER_TRUSTED === 'true' : false,
 	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000),
 	minSleep: Number(process.env.PAGE_SLEEP_MIN ?? 5000),
 	open: process.env.OPEN_BROWSER === 'true'
@@ -48,7 +49,14 @@ const notifications = {
 		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
 		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
 	},
-	test: process.env.NOTIFICATION_TEST === 'true'
+	test: process.env.NOTIFICATION_TEST === 'true',
+	twitter: {
+		accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY ?? '',
+		accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET ?? '',
+		consumerKey: process.env.TWITTER_CONSUMER_KEY ?? '',
+		consumerSecret: process.env.TWITTER_CONSUMER_SECRET ?? '',
+		tweetTags: process.env.TWITTER_TWEET_TAGS ?? ''
+	}
 };
 
 const page = {

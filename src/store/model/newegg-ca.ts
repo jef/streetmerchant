@@ -2,8 +2,14 @@ import {Store} from './store';
 
 export const NewEggCa: Store = {
 	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock', 'service unavailable']
+		captcha: {
+			container: 'body',
+			text: ['are you a human?']
+		},
+		inStock: {
+			container: '#landingpage-cart .btn-primary span',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
