@@ -154,6 +154,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | ireland | `✔` | | |
 | italy | `✔` | | |
 | luxembourg | `✔` | | Nvidia supports debug |
+| netherlands | `✔` | | Nvidia supports debug |
 | poland | `✔` | | |
 | portugal | `✔` | | |
 | russia | | | Missing all IDs |
