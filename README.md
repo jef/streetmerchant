@@ -62,6 +62,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
+| `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: @here |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL |
@@ -89,7 +90,6 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID |
-| `TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
