@@ -9,7 +9,14 @@ import {filterStoreLink} from './filter';
 import open from 'open';
 import {sendNotification} from '../notification';
 
+type Backoff = {
+	count: number;
+	time: number;
+};
+
 const inStock: Record<string, boolean> = {};
+
+const storeBackoff: Record<string, Backoff> = {};
 
 /**
  * Responsible for looking up information about a each product within
@@ -58,6 +65,21 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		return;
 	}
 
+	let backoff = storeBackoff[store.name];
+
+	if (!backoff) {
+		backoff = {count: 0, time: Config.browser.minBackoff};
+		storeBackoff[store.name] = backoff;
+	}
+
+	if (response.status() === 403) {
+		Logger.warn(Print.backoff(link, store, backoff.time, true));
+		await delay(backoff.time);
+		backoff.count++;
+		backoff.time = Math.min(backoff.time * 2, Config.browser.maxBackoff);
+		return;
+	}
+
 	if (response.status() === 429) {
 		Logger.warn(Print.rateLimit(link, store, true));
 		return;
@@ -66,6 +88,11 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	if (response.status() >= 400) {
 		Logger.warn(Print.badStatusCode(link, store, response.status(), true));
 		return;
+	}
+
+	if (backoff.count > 0) {
+		backoff.count--;
+		backoff.time = Math.max(backoff.time / 2, Config.browser.minBackoff);
 	}
 
 	if (await lookupCardInStock(store, page, link)) {

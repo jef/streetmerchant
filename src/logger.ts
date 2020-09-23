@@ -26,6 +26,13 @@ export const Logger = winston.createLogger({
 });
 
 export const Print = {
+	backoff(link: Link, store: Store, delay: number, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow(`REQUEST FORBIDDEN - BACKOFF DELAY ${delay}`);
+		}
+
+		return `✖ ${buildProductString(link, store)} :: REQUEST FORBIDDEN - BACKOFF DELAY ${delay}`;
+	},
 	badStatusCode(link: Link, store: Store, statusCode: number, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow(`STATUS CODE ERROR ${statusCode}`);
