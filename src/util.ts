@@ -1,5 +1,5 @@
-import {Page} from 'puppeteer';
 import {Config} from './config';
+import {Page} from 'puppeteer';
 import {disableBlockerInPage} from './adblocker';
 
 export function getSleepTime() {
