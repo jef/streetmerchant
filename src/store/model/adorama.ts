@@ -1,6 +1,12 @@
 import {Store} from './store';
 
 export const Adorama: Store = {
+	labels: {
+		inStock: {
+			container: '.buy-section.purchase',
+			text: ['add to cart']
+		}
+	},
 	links: [
 		{
 			brand: 'TEST',
@@ -63,9 +69,5 @@ export const Adorama: Store = {
 			url: 'https://www.adorama.com/png30801tfxb.html'
 		}
 	],
-	labels: {
-		captcha: ['please verify you are a human'],
-		outOfStock: ['temporarily not available', 'out of stock']
-	},
 	name: 'adorama'
 };

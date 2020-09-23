@@ -1,5 +1,5 @@
-import notifier from 'node-notifier';
 import {Link} from '../store/model';
+import notifier from 'node-notifier';
 
 export function sendDesktopNotification(cartUrl: string, link: Link) {
 	(async () => {
@@ -7,8 +7,8 @@ export function sendDesktopNotification(cartUrl: string, link: Link) {
 		const message = cartUrl;
 
 		notifier.notify({
-			title,
-			message
+			message,
+			title
 		});
 	})();
 }

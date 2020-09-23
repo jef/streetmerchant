@@ -1,6 +1,13 @@
 import {Store} from './store';
 
 export const EvgaEu: Store = {
+
+	labels: {
+		inStock: {
+			container: '.product-buy-specs',
+			text: ['add to cart']
+		}
+	},
 	links: [
 		{
 			brand: 'evga',
@@ -27,8 +34,5 @@ export const EvgaEu: Store = {
 			url: 'https://eu.evga.com/products/product.aspx?pn=10G-P5-3885-KR'
 		}
 	],
-	labels: {
-		outOfStock: ['tbd', 'out of stock']
-	},
 	name: 'evga-eu'
 };
