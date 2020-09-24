@@ -62,6 +62,42 @@ export const BestBuy: Store = {
 			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175&intl=nosplash'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/nvidia-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429434.p?skuId=6429434'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/asus-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432447.p?skuId=6432447'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/asus-tuf-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-black/6432446.p?skuId=6432446'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/msi-geforce-rtx-3090-ventus-3x-24g-oc-bv-24gb-gddr6x-pci-express-4-0-graphics-card-black-silver/6430215.p?skuId=6430215'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3090-24g-gddr6x-pci-express-4-0-graphics-card-black/6430623.p?skuId=6430623'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3090-24g-gddr6x-pci-express-4-0-graphics-card-black/6430624.p?skuId=6430624'
 		}
 	],
 	name: 'bestbuy'
