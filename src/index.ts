@@ -2,6 +2,7 @@ import {Config} from './config';
 import {Logger} from './logger';
 import {Stores} from './store/model';
 import {adBlocker} from './adblocker';
+import {fetchLinks} from './store/fetch-links';
 import {getSleepTime} from './util';
 import puppeteer from 'puppeteer-extra';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
@@ -37,14 +38,20 @@ async function main() {
 		headless: Config.browser.isHeadless
 	});
 
+	/* eslint-disable no-await-in-loop */
 	for (const store of Stores) {
 		Logger.debug(store.links);
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
 		}
 
+		if (store.linksBuilder) {
+			await fetchLinks(store, browser);
+		}
+
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
+	/* eslint-enable no-await-in-loop */
 }
 
 /**

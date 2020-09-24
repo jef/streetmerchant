@@ -61,6 +61,13 @@ export const Print = {
 
 		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
 	},
+	message(message: string, topic: string, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildSetupString(topic, store, true) + ' :: ' + chalk.yellow(message);
+		}
+
+		return `✖ ${buildSetupString(topic, store)} :: ${message}`;
+	},
 	noResponse(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('NO RESPONSE');
@@ -83,6 +90,14 @@ export const Print = {
 		return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
 	}
 };
+
+function buildSetupString(topic: string, store: Store, color?: boolean): string {
+	if (color) {
+		return chalk.cyan(`[${store.name}]`) + chalk.grey(` [setup (${topic})]`);
+	}
+
+	return `[${store.name}] [setup (${topic})]`;
+}
 
 function buildProductString(link: Link, store: Store, color?: boolean): string {
 	if (color) {
