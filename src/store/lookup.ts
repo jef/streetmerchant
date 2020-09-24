@@ -61,8 +61,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
 	if (!response) {
-		Logger.warn(Print.noResponse(link, store, true));
-		return;
+		Logger.debug(Print.noResponse(link, store, true));
 	}
 
 	let backoff = storeBackoff[store.name];
@@ -72,7 +71,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		storeBackoff[store.name] = backoff;
 	}
 
-	if (response.status() === 403) {
+	if (response?.status() === 403) {
 		Logger.warn(Print.backoff(link, store, backoff.time, true));
 		await delay(backoff.time);
 		backoff.count++;
@@ -80,13 +79,13 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		return;
 	}
 
-	if (response.status() === 429) {
+	if (response?.status() === 429) {
 		Logger.warn(Print.rateLimit(link, store, true));
 		return;
 	}
 
-	if (response.status() >= 400) {
-		Logger.warn(Print.badStatusCode(link, store, response.status(), true));
+	if ((response?.status() || 200) >= 400) {
+		Logger.warn(Print.badStatusCode(link, store, response!.status(), true));
 		return;
 	}
 
