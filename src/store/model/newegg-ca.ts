@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const NewEggCa: Store = {
+export const NeweggCa: Store = {
 	labels: {
 		captcha: {
 			container: 'body',

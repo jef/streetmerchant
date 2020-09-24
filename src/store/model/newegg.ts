@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const NewEgg: Store = {
+export const Newegg: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
@@ -39,13 +39,14 @@ export const NewEgg: Store = {
 			series: '3080',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521'
 		},
-		{
-			brand: 'evga',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487520',
-			model: 'xc3 ultra',
-			series: '3080',
-			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
-		},
+		// Removed from Newegg currently not available in US
+		// {
+		// 	brand: 'evga',
+		// 	cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487520',
+		// 	model: 'xc3 ultra',
+		// 	series: '3080',
+		// 	url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
+		// },
 		{
 			brand: 'msi',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137600',

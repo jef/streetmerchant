@@ -1,3 +1,6 @@
+import {banner} from './banner';
+console.log(banner);
+
 import {config} from 'dotenv';
 import path from 'path';
 
