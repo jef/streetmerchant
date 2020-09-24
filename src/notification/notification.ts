@@ -38,7 +38,7 @@ export function sendNotification(link: Link, store: Store) {
 		sendDesktopNotification(link, store);
 	}
 
-	if (notifications.discord.webHookUrl) {
+	if (notifications.discord.webHookUrl.length > 0) {
 		Logger.debug('↗ sending discord message');
 		sendDiscordMessage(link, store);
 	}
