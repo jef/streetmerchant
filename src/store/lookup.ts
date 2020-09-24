@@ -1,5 +1,5 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Link, Element, Store} from './model';
+import {Element, Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
@@ -92,8 +92,8 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 async function lookupCardInStock(store: Store, page: Page) {
 	/* eslint-disable no-await-in-loop */
-	for (const element of store.labels.inStock) {
-		if (await lookupPageHasContent(page, element)) {
+	for (const search of store.labels.inStock) {
+		if (await lookupPageHasContent(page, search)) {
 			return true;
 		}
 	}
@@ -107,19 +107,15 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 		return false;
 	}
 
-	/* eslint-disable no-await-in-loop */
-	for (const container of store.labels.captcha.containers) {
-		if (await lookupPageHasContent(page, container, store.labels.captcha.text)) {
-			return true;
-		}
+	if (await lookupPageHasContent(page, store.labels.captcha)) {
+		return true;
 	}
-	/* eslint-enable no-await-in-loop */
 
 	return false;
 }
 
-async function lookupPageHasContent(page: Page, element: Element) {
-	const handle = await page.$(container);
+async function lookupPageHasContent(page: Page, search: Element) {
+	const handle = await page.$(search.container);
 
 	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, handle);
 	if (!visible) {
@@ -130,7 +126,7 @@ async function lookupPageHasContent(page: Page, element: Element) {
 
 	Logger.debug(content);
 
-	return includesLabels(content, text);
+	return includesLabels(content, search.text);
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
