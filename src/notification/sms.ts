@@ -42,7 +42,7 @@ export function sendSMS(link: Link, store: Store) {
 }
 
 function generateAddress() {
-	const carrier = phone.carrier.toLowerCase();
+	const carrier = phone.carrier;
 
 	if (carrier && phone.availableCarriers.has(carrier)) {
 		return [phone.number, phone.availableCarriers.get(carrier)].join('@');
