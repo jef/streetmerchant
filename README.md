@@ -30,11 +30,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **ASUS** | **B&H** | **Best Buy** | **EVGA** | **Micro Center** | **Newegg** | **Nvidia** | **Office Depot** | **Zotac** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | | | | | | | `✔` | | |
+| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | | | | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | | | | | | `✔` | `✔` | | | `✔` | `✔` | `✔` | | |
 
 ## Installation and prerequisites
 
@@ -58,16 +58,16 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Customization
 
-To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _Note that all environment variables are **optional**._
+To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All environment variables are **optional**._
 
 Here is a list of variables that you can use to customize your newly copied `.env` file:
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
-| `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
-| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: `<@2834729847239842>` |
-| `DISCORD_WEB_HOOK` | Discord Web Hook URL | |
+| `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier) | Default: `false` |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@2834729847239842>` |
+| `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
@@ -133,12 +133,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | **Carrier** | **Environment variable** | **Notes** |
 |:---:|:---:|:---:|
 | AT&T | `att`| |
+| Bell | `bell` | |
+| Fido | `fido` | |
 | Google | `google`| |
+| Koodo | `koodo` | |
 | Mint | `mint`| |
+| Rogers | `rogers` | |
 | Sprint | `sprint`| |
 | Telus | `telus`| |
 | T-Mobile | `tmobile`| |
 | Verizon | `verizon`| Works with Visible |
+| Virgin | `virgin`| |
+| Virgin (CA) | `virgin-ca`| |
 
 #### Supported countries
 
