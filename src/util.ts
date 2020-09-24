@@ -13,6 +13,9 @@ export async function delay(ms: number) {
 }
 
 export async function closePage(page: Page) {
-	await disableBlockerInPage(page);
+	if (!Config.browser.lowBandwidth) {
+		await disableBlockerInPage(page);
+	}
+
 	await page.close();
 }

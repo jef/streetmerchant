@@ -49,6 +49,7 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
+	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
 	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
 	minSleep: envOrNumber(process.env.PAGE_SLEEP_MIN, 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
