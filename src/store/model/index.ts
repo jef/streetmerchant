@@ -52,6 +52,18 @@ for (const name of Config.store.stores) {
 
 Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
 
+if (Config.store.showOnlyBrands.length > 0) {
+	Logger.info(`ℹ selected brands: ${Config.store.showOnlyBrands.join(', ')}`);
+}
+
+if (Config.store.showOnlyModels.length > 0) {
+	Logger.info(`ℹ selected models: ${Config.store.showOnlyModels.join(', ')}`);
+}
+
+if (Config.store.showOnlySeries.length > 0) {
+	Logger.info(`ℹ selected series: ${Config.store.showOnlySeries.join(', ')}`);
+}
+
 export const Stores = Array.from(list.values()) as Store[];
 
 export * from './store';

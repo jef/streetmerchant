@@ -86,6 +86,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
+| `SHOW_ONLY_MODELS` | Filter to show specified models | Comma separated, e.g.: `founders edition,rog strix` |
 | `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
