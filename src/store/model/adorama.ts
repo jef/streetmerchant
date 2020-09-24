@@ -71,6 +71,54 @@ export const Adorama: Store = {
 			model: 'xlr8 rbg',
 			series: '3080',
 			url: 'https://www.adorama.com/png30801tfxb.html'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://www.adorama.com/asrx3080o10g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.adorama.com/astr3080o10g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.adorama.com/astrx308010g.html'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.adorama.com/msig390gxt24.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.adorama.com/msig39v3x24c.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.adorama.com/asrtx309024g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.adorama.com/ast3090o24g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3090',
+			url: 'https://www.adorama.com/asrx3090o24g.html'
 		}
 	],
 	name: 'adorama'
