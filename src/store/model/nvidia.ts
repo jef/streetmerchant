@@ -7,7 +7,7 @@ export const Nvidia: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			containers: ['#herobanner .content-table', '.main-container'],
+			containers: ['.js-product-item .btn-cart', '.main-container'],
 			text: ['add to cart']
 		}
 	},
