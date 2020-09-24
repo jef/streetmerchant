@@ -1,5 +1,5 @@
-import {Link, Store} from '../store/model';
 import {Config} from '../config';
+import {Link} from '../store/model';
 import {Logger} from '../logger';
 import twilio from 'twilio';
 

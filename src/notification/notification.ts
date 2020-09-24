@@ -1,5 +1,5 @@
-import {requestTwilioCall, sendTwilioMessage} from './twilio';
 import {Link, Store} from '../store/model';
+import {requestTwilioCall, sendTwilioMessage} from './twilio';
 import {Config} from '../config';
 import {Logger} from '../logger';
 import {playSound} from './sound';
@@ -50,7 +50,7 @@ export function sendNotification(link: Link, store: Store) {
 			}
 		}
 	}
-	
+
 	if (notifications.discord.webHookUrl) {
 		Logger.debug('↗ sending discord message');
 		sendDiscordMessage(link, store);
