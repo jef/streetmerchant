@@ -3,7 +3,7 @@ import {MessageBuilder, Webhook} from 'discord-webhook-node';
 import {Config} from '../config';
 import {Logger} from '../logger';
 
-const hook = new Webhook(Config.notifications.discord.webHookUrl);
+const hooks = Config.notifications.discord.webHookUrl;
 const notifyGroup = Config.notifications.discord.notifyGroup;
 
 export function sendDiscordMessage(link: Link, store: Store) {
@@ -17,12 +17,18 @@ export function sendDiscordMessage(link: Link, store: Store) {
 			embed.addField('Model', link.model, true);
 
 			if (notifyGroup) {
-				embed.setText(notifyGroup);
+				embed.setText(notifyGroup.join(' '));
 			}
 
 			embed.setColor(0x76B900);
 			embed.setTimestamp();
-			await hook.send(embed);
+
+			const promises = [];
+			for (const hook of hooks) {
+				promises.push(new Webhook(hook).send(embed));
+			}
+
+			await Promise.all(promises);
 
 			Logger.info('✔ discord message sent');
 		} catch (error) {

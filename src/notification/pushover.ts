@@ -12,6 +12,7 @@ const push = new Push({
 export function sendPushoverNotification(link: Link, store: Store) {
 	const message = {
 		message: link.cartUrl ? link.cartUrl : link.url,
+		priority: pushover.priority,
 		title: Print.inStock(link, store)
 	};
 
