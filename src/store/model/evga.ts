@@ -2,13 +2,16 @@ import {Store} from './store';
 
 export const Evga: Store = {
 	labels: {
-		outOfStock: ['out of stock', 'error reaching the evga website', 'oops! something broke.']
+		inStock: {
+			container: '.product-buy-specs',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.evga.com/products/product.aspx?pn=06G-P4-2065-KR'
 		},
 		{

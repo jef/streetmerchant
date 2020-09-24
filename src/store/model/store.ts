@@ -1,24 +1,29 @@
-import {Browser} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
 
-export interface Link {
-	series: string;
-	brand: string;
+export type Element = {
+	container: string;
+	text: string[];
+};
+
+export type Link = {
+	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'pny' | 'msi' | 'nvidia' | 'zotac';
+	series: 'test:series' | '3070' | '3080' | '3090';
 	model: string;
 	url: string;
 	cartUrl?: string;
-	openCartAction?: (browser: Browser) => void;
+	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;
-}
+};
 
-export interface Labels {
-	outOfStock: string[];
-	captcha?: string[];
-	bannedSeller?: string[];
-}
+export type Labels = {
+	captcha?: Element;
+	inStock: Element;
+};
 
-export interface Store {
+export type Store = {
 	links: Link[];
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
-}
+	waitUntil?: LoadEvent;
+};

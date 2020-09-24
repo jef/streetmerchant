@@ -2,14 +2,20 @@ import {Store} from './store';
 
 export const Adorama: Store = {
 	labels: {
-		captcha: ['please verify you are a human'],
-		outOfStock: ['temporarily not available', 'out of stock']
+		captcha: {
+			container: 'body',
+			text: ['please verify you are a human']
+		},
+		inStock: {
+			container: '.buy-section.purchase',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.adorama.com/ev08gp43067k.html'
 		},
 		{

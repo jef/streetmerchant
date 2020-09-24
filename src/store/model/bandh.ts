@@ -2,13 +2,16 @@ import {Store} from './store';
 
 export const BAndH: Store = {
 	labels: {
-		outOfStock: ['notify when available', 'try varying your search terms', 'sorry, an unexpected error has occurred']
+		inStock: {
+			container: 'div[data-selenium="addToCartSection"]',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html'
 		},
 		// TUF was removed from BH, not sure why so commenting out listing for now
@@ -61,7 +64,6 @@ export const BAndH: Store = {
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html'
 		}
-
 	],
 	name: 'bandh'
 };

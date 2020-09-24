@@ -1,15 +1,21 @@
 import {Store} from './store';
 
-export const NewEggCa: Store = {
+export const NeweggCa: Store = {
 	labels: {
-		captcha: ['are you a human?'],
-		outOfStock: ['auto notify', 'item is currently out of stock', 'service unavailable']
+		captcha: {
+			container: 'body',
+			text: ['are you a human?']
+		},
+		inStock: {
+			container: '#landingpage-cart .btn-primary span',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
-			brand: 'TEST',
-			model: 'CARD',
-			series: 'debug',
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
 			url: 'https://www.newegg.ca/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
 		},
 		{
@@ -71,6 +77,42 @@ export const NewEggCa: Store = {
 			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.newegg.ca/msi-geforce-rtx-3090-rtx-3090-gaming-x-trio-24g/p/N82E16814137595'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090gaming-oc-24gd/p/N82E16814932327'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x',
+			series: '3090',
+			url: 'https://www.newegg.ca/msi-geforce-rtx-3090-rtx-3090-ventus-3x-24g-oc/p/N82E16814137596'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://www.newegg.ca/zotac-geforce-rtx-3090-zt-a30900d-10p/p/N82E16814500503'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.newegg.ca/asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
 		}
 	],
 	name: 'newegg-ca'

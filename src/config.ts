@@ -1,13 +1,57 @@
+import {banner} from './banner';
+console.log(banner);
+
 import {config} from 'dotenv';
 import path from 'path';
 
 config({path: path.resolve(__dirname, '../.env')});
 
+/**
+ * Returns environment variable, given array, or default array.
+ *
+ * @param environment Interested environment variable.
+ * @param array Default array. If not set, is `[]`.
+ */
+function envOrArray(environment: string | undefined, array?: string[]): string[] {
+	return environment ? environment.split(',') : (array ?? []);
+}
+
+/**
+ * Returns environment variable, given boolean, or default boolean.
+ *
+ * @param environment Interested environment variable.
+ * @param boolean Default boolean. If not set, is `true`.
+ */
+function envOrBoolean(environment: string | undefined, boolean?: boolean): boolean {
+	return environment ? environment === 'true' : (boolean ?? true);
+}
+
+/**
+ * Returns environment variable, given string, or default string.
+ *
+ * @param environment Interested environment variable.
+ * @param string Default string. If not set, is `''`.
+ */
+function envOrString(environment: string | undefined, string?: string): string {
+	return environment ? environment : (string ?? '');
+}
+
+/**
+ * Returns environment variable, given number, or default number.
+ *
+ * @param environment Interested environment variable.
+ * @param number Default number. If not set, is `0`.
+ */
+function envOrNumber(environment: string | undefined, number?: number): number {
+	return Number(environment ?? (number ?? 0));
+}
+
 const browser = {
-	isHeadless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
-	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000),
-	minSleep: Number(process.env.PAGE_SLEEP_MIN ?? 5000),
-	open: process.env.OPEN_BROWSER === 'true'
+	isHeadless: envOrBoolean(process.env.HEADLESS),
+	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
+	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
+	minSleep: envOrNumber(process.env.PAGE_SLEEP_MIN, 5000),
+	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';
@@ -15,57 +59,70 @@ const logLevel = process.env.LOG_LEVEL ?? 'info';
 const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
 	discord: {
-		notifyGroup: process.env.DISCORD_NOTIFY_GROUP ?? '',
-		webHookUrl: process.env.DISCORD_WEB_HOOK ?? ''
+		notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
+		webHookUrl: envOrArray(process.env.DISCORD_WEB_HOOK)
 	},
 	email: {
-		password: process.env.EMAIL_PASSWORD ?? '',
-		username: process.env.EMAIL_USERNAME ?? ''
+		password: envOrString(process.env.EMAIL_PASSWORD),
+		username: envOrString(process.env.EMAIL_USERNAME)
 	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
+			['bell', 'txt.bell.ca'],
+			['fido', 'fido.ca'],
 			['google', 'msg.fi.google.com'],
+			['koodo', 'msg.koodomobile.com'],
 			['mint', 'mailmymobile.net'],
+			['rogers', 'pcs.rogers.com'],
 			['sprint', 'messaging.sprintpcs.com'],
 			['telus', 'msg.telus.com'],
 			['tmobile', 'tmomail.net'],
-			['verizon', 'vtext.com']
+			['verizon', 'vtext.com'],
+			['virgin', 'vmobl.com'],
+			['virgin-ca', 'vmobile.ca']
 		]),
-		carrier: process.env.PHONE_CARRIER ?? '',
-		number: process.env.PHONE_NUMBER ?? ''
+		carrier: envOrString(process.env.PHONE_CARRIER),
+		number: envOrString(process.env.PHONE_NUMBER)
 	},
-	playSound: process.env.PLAY_SOUND ?? '',
+	playSound: envOrString(process.env.PLAY_SOUND),
+	pushBulletApiKey: envOrString(process.env.PUSHBULLET),
 	pushover: {
-		token: process.env.PUSHOVER_TOKEN ?? '',
-		username: process.env.PUSHOVER_USER ?? ''
+		token: envOrString(process.env.PUSHOVER_TOKEN),
+		username: envOrString(process.env.PUSHOVER_USER)
 	},
 	slack: {
-		channel: process.env.SLACK_CHANNEL ?? '',
-		token: process.env.SLACK_TOKEN ?? ''
+		channel: envOrString(process.env.SLACK_CHANNEL),
+		token: envOrString(process.env.SLACK_TOKEN)
 	},
 	telegram: {
-		accessToken: process.env.TELEGRAM_ACCESS_TOKEN ?? '',
-		chatId: process.env.TELEGRAM_CHAT_ID ?? ''
+		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
+		chatId: envOrString(process.env.TELEGRAM_CHAT_ID)
 	},
-	test: process.env.NOTIFICATION_TEST === 'true'
+	twitter: {
+		accessTokenKey: envOrString(process.env.TWITTER_ACCESS_TOKEN_KEY),
+		accessTokenSecret: envOrString(process.env.TWITTER_ACCESS_TOKEN_SECRET),
+		consumerKey: envOrString(process.env.TWITTER_CONSUMER_KEY),
+		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
+		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
+	}
 };
 
 const page = {
-	capture: process.env.SCREENSHOT ? process.env.SCREENSHOT === 'true' : 'true',
 	height: 1080,
-	inStockWaitTime: Number(process.env.IN_STOCK_WAIT_TIME ?? 0),
-	navigationTimeout: Number(process.env.PAGE_TIMEOUT ?? 30000),
-	userAgent: process.env.USER_AGENT ?? 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
+	navigationTimeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
+	screenshot: envOrBoolean(process.env.SCREENSHOT),
+	userAgent: envOrString(process.env.USER_AGENT, 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'),
 	width: 1920
 };
 
 const store = {
-	country: process.env.COUNTRY ?? 'usa',
-	microCenterLocation: process.env.MICROCENTER_LOCATION ? process.env.MICROCENTER_LOCATION.toUpperCase() : 'WEB',
-	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
-	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
-	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia']
+	country: envOrString(process.env.COUNTRY, 'usa'),
+	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
+	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
+	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
+	stores: envOrArray(process.env.STORES, ['nvidia'])
 };
 
 export const Config = {
