@@ -111,7 +111,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported stores
 
-| **Stores** | **Environment variable** |
+| Stores | Environment variable |
 |:---:|:---:|
 | Adorama | `adorama`|
 | Amazon | `amazon`|
@@ -130,6 +130,39 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
 | Zotac | `zotac`|
+
+<details>
+<summary>Micro Center stores</summary>
+
+| **Store name** |
+|:---:|
+| `brooklyn` |
+| `brentwood` |
+| `cambridge` |
+| `chicago` |
+| `columbus` |
+| `dallas` |
+| `devin` |
+| `duluth` |
+| `fairfax` |
+| `flushing` |
+| `houston` |
+| `madison-heights` |
+| `marietta` |
+| `mayfield-heights` |
+| `north-jersey` |
+| `overland-park` |
+| `parkville` |
+| `rockville` |
+| `sharonville` |
+| `st-davids` |
+| `st-louis-park` |
+| `tustin` |
+| `westbury` |
+| `westmont` |
+| `yonkers` |
+
+</details>
 
 #### Supported carriers
 
