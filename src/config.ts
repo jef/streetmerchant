@@ -119,6 +119,7 @@ const page = {
 
 const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
+	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
 	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
 	stores: envOrArray(process.env.STORES, ['nvidia'])

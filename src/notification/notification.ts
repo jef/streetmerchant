@@ -22,7 +22,7 @@ export function sendNotification(link: Link, store: Store) {
 
 	if (notifications.phone.number) {
 		Logger.debug('↗ sending sms');
-		const carrier = notifications.phone.carrier.toLowerCase();
+		const carrier = notifications.phone.carrier;
 		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
 			sendSMS(link, store);
 		}
