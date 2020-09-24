@@ -91,18 +91,15 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 }
 
 async function lookupCardInStock(store: Store, page: Page) {
-	const stockHandle = await page.$(store.labels.inStock.container);
-
-	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, stockHandle);
-	if (!visible) {
-		return false;
+	/* eslint-disable no-await-in-loop */
+	for (const container of store.labels.inStock.containers) {
+		if (await lookupCardHasContent(page, container, store.labels.inStock.text)) {
+			return true;
+		}
 	}
+	/* eslint-enable no-await-in-loop */
 
-	const stockContent = await page.evaluate(element => element.outerHTML, stockHandle);
-
-	Logger.debug(stockContent);
-
-	return includesLabels(stockContent, store.labels.inStock.text);
+	return false;
 }
 
 async function lookupPageHasCaptcha(store: Store, page: Page) {
@@ -110,10 +107,30 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 		return false;
 	}
 
-	const captchaHandle = await page.$(store.labels.captcha.container);
-	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
+	/* eslint-disable no-await-in-loop */
+	for (const container of store.labels.captcha.containers) {
+		if (await lookupCardHasContent(page, container, store.labels.captcha.text)) {
+			return true;
+		}
+	}
+	/* eslint-enable no-await-in-loop */
 
-	return includesLabels(captchaContent, store.labels.captcha.text);
+	return false;
+}
+
+async function lookupCardHasContent(page: Page, container: string, text: string[]) {
+	const handle = await page.$(container);
+
+	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, handle);
+	if (!visible) {
+		return false;
+	}
+
+	const content = await page.evaluate(element => element.outerHTML, handle);
+
+	Logger.debug(content);
+
+	return includesLabels(content, text);
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {

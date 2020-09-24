@@ -3,11 +3,11 @@ import {Store} from './store';
 export const Nvidia: Store = {
 	labels: {
 		captcha: {
-			container: 'body',
+			containers: ['body'],
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '.main-container',
+			containers: ['#herobanner .content-table', '.main-container'],
 			text: ['add to cart']
 		}
 	},
@@ -17,6 +17,12 @@ export const Nvidia: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.nvidia.com/en-us/shop/geforce/gpu/'
+		},
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2060-super/'
 		},
 		{
 			brand: 'nvidia',

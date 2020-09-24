@@ -36,7 +36,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 export const NvidiaApi: Store = {
 	labels: {
 		inStock: {
-			container: 'body',
+			containers: ['body'],
 			text: ['product_inventory_in_stock']
 		}
 	},

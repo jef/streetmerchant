@@ -1,7 +1,7 @@
 import {Browser, LoadEvent} from 'puppeteer';
 
 export type Element = {
-	container: string;
+	containers: string[];
 	text: string[];
 };
 

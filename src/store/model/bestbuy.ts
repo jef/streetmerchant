@@ -3,7 +3,7 @@ import {Store} from './store';
 export const BestBuy: Store = {
 	labels: {
 		inStock: {
-			container: '.v-m-bottom-g',
+			containers: ['.v-m-bottom-g'],
 			text: ['add to cart']
 		}
 	},

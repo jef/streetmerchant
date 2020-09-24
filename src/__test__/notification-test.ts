@@ -12,7 +12,7 @@ const link: Link = {
 const store: Store = {
 	labels: {
 		inStock: {
-			container: 'test:container',
+			containers: ['test:container'],
 			text: ['test:text']
 		}
 	},

@@ -3,7 +3,7 @@ import {Store} from './store';
 export const BAndH: Store = {
 	labels: {
 		inStock: {
-			container: 'div[data-selenium="addToCartSection"]',
+			containers: ['div[data-selenium="addToCartSection"]'],
 			text: ['add to cart']
 		}
 	},

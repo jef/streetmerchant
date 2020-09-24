@@ -3,7 +3,7 @@ import {Store} from './store';
 export const Asus: Store = {
 	labels: {
 		inStock: {
-			container: '#item_add_cart',
+			containers: ['#item_add_cart'],
 			text: ['add to cart']
 		}
 	},

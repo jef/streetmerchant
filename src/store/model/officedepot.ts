@@ -3,11 +3,11 @@ import {Store} from './store';
 export const OfficeDepot: Store = {
 	labels: {
 		captcha: {
-			container: 'body',
+			containers: ['body'],
 			text: ['please verify you are a human']
 		},
 		inStock: {
-			container: '#productPurchase',
+			containers: ['#productPurchase'],
 			text: ['add to cart']
 		}
 	},

@@ -3,11 +3,11 @@ import {Store} from './store';
 export const NeweggCa: Store = {
 	labels: {
 		captcha: {
-			container: 'body',
+			containers: ['body'],
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '#landingpage-cart .btn-primary span',
+			containers: ['#landingpage-cart .btn-primary span'],
 			text: ['add to cart']
 		}
 	},

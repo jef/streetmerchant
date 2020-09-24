@@ -3,7 +3,7 @@ import {Store} from './store';
 export const EvgaEu: Store = {
 	labels: {
 		inStock: {
-			container: '.product-buy-specs',
+			containers: ['.product-buy-specs'],
 			text: ['add to cart']
 		}
 	},
