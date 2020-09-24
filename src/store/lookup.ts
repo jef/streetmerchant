@@ -93,7 +93,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 async function lookupCardInStock(store: Store, page: Page) {
 	/* eslint-disable no-await-in-loop */
 	for (const container of store.labels.inStock.containers) {
-		if (await lookupCardHasContent(page, container, store.labels.inStock.text)) {
+		if (await lookupPageHasContent(page, container, store.labels.inStock.text)) {
 			return true;
 		}
 	}
@@ -109,7 +109,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 
 	/* eslint-disable no-await-in-loop */
 	for (const container of store.labels.captcha.containers) {
-		if (await lookupCardHasContent(page, container, store.labels.captcha.text)) {
+		if (await lookupPageHasContent(page, container, store.labels.captcha.text)) {
 			return true;
 		}
 	}
@@ -118,7 +118,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 	return false;
 }
 
-async function lookupCardHasContent(page: Page, container: string, text: string[]) {
+async function lookupPageHasContent(page: Page, container: string, text: string[]) {
 	const handle = await page.$(container);
 
 	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, handle);
