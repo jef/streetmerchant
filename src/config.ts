@@ -75,6 +75,7 @@ const page = {
 const store = {
 	country: process.env.COUNTRY ?? 'usa',
 	showOnlyBrands: process.env.SHOW_ONLY_BRANDS ? process.env.SHOW_ONLY_BRANDS.split(',') : [],
+	showOnlyModels: process.env.SHOW_ONLY_MODELS ? process.env.SHOW_ONLY_MODELS.split(',') : [],
 	showOnlySeries: process.env.SHOW_ONLY_SERIES ? process.env.SHOW_ONLY_SERIES.split(',') : ['3070', '3080', '3090'],
 	stores: process.env.STORES ? process.env.STORES.split(',') : ['nvidia']
 };
