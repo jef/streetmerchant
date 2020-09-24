@@ -117,6 +117,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
+| Amazon (NL) | `amazon-nl`|
 | ASUS | `asus` |
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
