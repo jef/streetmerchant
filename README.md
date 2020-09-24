@@ -58,16 +58,16 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Customization
 
-To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _Note that all environment variables are **optional**._
+To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All environment variables are **optional**._
 
 Here is a list of variables that you can use to customize your newly copied `.env` file:
 
 | **Environment variable** | **Description** | **Notes** |
 |:---:|---|---|
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
-| `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier); optional | Default: `false` |
-| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify; optional | E.g.: `<@2834729847239842>` |
-| `DISCORD_WEB_HOOK` | Discord Web Hook URL | |
+| `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier) | Default: `false` |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@2834729847239842>` |
+| `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |

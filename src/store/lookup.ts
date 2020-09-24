@@ -39,6 +39,7 @@ function filterSeries(series: Link['series']) {
  * Responsible for looking up information about a each product within
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
+ *
  * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
@@ -94,7 +95,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}, 1000 * Config.page.inStockWaitTime);
 		}
 
-		if (Config.page.capture) {
+		if (Config.page.screenshot) {
 			Logger.debug('ℹ saving screenshot');
 
 			link.screenshot = `success-${Date.now()}.png`;
