@@ -111,11 +111,25 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		},
 		{
+			brand: 'pny',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814133809',
+			model: 'xlr8 rgb',
+			series: '3080',
+			url: 'https://www.newegg.com/pny-geforce-rtx-3080-vcg308010tfxppb/p/N82E16814133809'
+		},
+		{
 			brand: 'asus',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126455',
 			model: 'tuf',
 			series: '3090',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3090-tuf-rtx3090-24g-gaming/p/N82E16814126455'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126456',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
 		},
 		{
 			brand: 'msi',
@@ -165,6 +179,20 @@ export const Newegg: Store = {
 			model: 'ftw3 ultra gaming',
 			series: '3090',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3987-kr/p/N82E16814487526'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487527',
+			model: 'xc3 black',
+			series: '3090',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3971-kr/p/N82E16814487527'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487523',
+			model: 'xc3',
+			series: '3090',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3973-kr/p/N82E16814487523'
 		},
 		{
 			brand: 'gigabyte',

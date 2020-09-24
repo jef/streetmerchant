@@ -25,6 +25,12 @@ export const Asus: Store = {
 			model: 'tuf',
 			series: '3080',
 			url: 'https://store.asus.com/us/item/202009AM150000004/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://store.asus.com/us/item/202009AM150000003/'
 		}
 	],
 	name: 'asus'

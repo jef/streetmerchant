@@ -25,6 +25,12 @@ export const Zotac: Store = {
 			model: 'trinity OC',
 			series: '3080',
 			url: 'https://store.zotac.com/zotac-gaming-geforce-rtx-3080-trinity-oc-zt-a30800j-10p'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://store.zotac.com/zotac-gaming-geforce-rtx-3090-trinity-zt-a30900d-10p'
 		}
 	],
 	name: 'zotac'
