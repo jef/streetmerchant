@@ -4,8 +4,10 @@ export interface Card {
 }
 
 export function parseCard(name: string): Card | null {
+	name = name.replace(/[^\w ]+/g, '').trim();
 	name = name.replace(/\bgraphics card\b/gi, '').trim();
 	name = name.replace(/\b\w+ fan\b/gi, '').trim();
+	name = name.replace(/\s{2,}/g, ' ');
 
 	let model = name.split(' ');
 	const brand = model.shift();
@@ -14,18 +16,26 @@ export function parseCard(name: string): Card | null {
 		return null;
 	}
 
+	// Some vendors have oc at the beginning of the product name,
+	// store whether the card contains the term "oc" and remove
+	// it during filtering, then add it to the end of the name.
+	let isOC = false;
+
 	/* eslint-disable @typescript-eslint/prefer-regexp-exec */
 	model = model.filter(word => {
-		return !word.match(/^geforce$/i) &&
-			!word.match(/^rtx$/i) &&
-			!word.match(/^\d+$/i) &&
-			!word.match(/^\d+gb$/i) &&
-			!word.match(/^g?ddr(?:\d+x?)?$/i) &&
-			!word.match(/^amp[ae]re$/i) &&
-			!word.match(/^graphics$/i) &&
-			!word.match(/^card$/i);
+		if (word.toLowerCase() === 'oc') {
+			isOC = true;
+			return false;
+		}
+
+		return !word.match(/^(nvidia|geforce|rtx|amp[ae]re|graphics|card|gpu|pci-?e(xpress)?|ray-?tracing|ray|tracing|core|boost)$/i) &&
+			!word.match(/^(\d+(?:gb?|mhz)?|gb|mhz|g?ddr(\d+x?)?)$/i);
 	});
 	/* eslint-enable @typescript-eslint/prefer-regexp-exec */
+
+	if (isOC) {
+		model.push('OC');
+	}
 
 	if (model.length === 0) {
 		return null;
