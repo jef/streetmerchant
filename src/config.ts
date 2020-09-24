@@ -105,7 +105,7 @@ const notifications = {
 		auth: envOrString(process.env.TWILIO_AUTH),
 		countryCode: envOrString(process.env.TWILIO_COUNTRY_CODE),
 		fromNumber: envOrString(process.env.TWILIO_FROM_NUMBER),
-		mode:envOrString(process.env.TWILIO_MODE),
+		mode: envOrString(process.env.TWILIO_MODE),
 		sid: envOrString(process.env.TWILIO_SID)
 	},
 	twitter: {
