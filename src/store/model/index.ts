@@ -1,6 +1,7 @@
 import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
+import {AmazonDe} from './amazon-de';
 import {Asus} from './asus';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
@@ -22,6 +23,7 @@ const masterList = new Map([
 	[Adorama.name, Adorama],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
+	[AmazonDe.name, AmazonDe],
 	[Asus.name, Asus],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
@@ -49,6 +51,18 @@ for (const name of Config.store.stores) {
 }
 
 Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
+
+if (Config.store.showOnlyBrands.length > 0) {
+	Logger.info(`ℹ selected brands: ${Config.store.showOnlyBrands.join(', ')}`);
+}
+
+if (Config.store.showOnlyModels.length > 0) {
+	Logger.info(`ℹ selected models: ${Config.store.showOnlyModels.join(', ')}`);
+}
+
+if (Config.store.showOnlySeries.length > 0) {
+	Logger.info(`ℹ selected series: ${Config.store.showOnlySeries.join(', ')}`);
+}
 
 export const Stores = Array.from(list.values()) as Store[];
 
