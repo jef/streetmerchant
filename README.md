@@ -162,7 +162,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `westmont` |
 | `yonkers` |
 
-</summary>
+</details>
 
 #### Supported carriers
 
