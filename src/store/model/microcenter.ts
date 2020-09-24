@@ -17,7 +17,7 @@ const microCenterLocationToId: Map<string, string> = new Map([
 	['houston', '155'],
 	['madison-heights', '055'],
 	['marietta', '041'],
-	['mayfiend-heights', '051'],
+	['mayfield-heights', '051'],
 	['north-jersey', '075'],
 	['overland-park', '191'],
 	['parkville', '125'],
