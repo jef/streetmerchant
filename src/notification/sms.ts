@@ -4,6 +4,10 @@ import {Config} from '../config';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 
+if (Config.notifications.phone.number && !Config.notifications.email.username) {
+	Logger.warn('✖ in order to recieve sms alerts, email notifications must also be configured');
+}
+
 const [email, phone] = [Config.notifications.email, Config.notifications.phone];
 
 const transporter = nodemailer.createTransport({
