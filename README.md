@@ -132,12 +132,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | **Carrier** | **Environment variable** | **Notes** |
 |:---:|:---:|:---:|
 | AT&T | `att`| |
+| Bell | `bell` | |
+| Fido | `fido` | |
 | Google | `google`| |
+| Koodo | `koodo` | |
 | Mint | `mint`| |
+| Rogers | `rogers` | |
 | Sprint | `sprint`| |
 | Telus | `telus`| |
 | T-Mobile | `tmobile`| |
 | Verizon | `verizon`| Works with Visible |
+| Virgin | `virgin`| |
+| Virgin (CA) | `virgin-ca`| |
 
 #### Supported countries
 
