@@ -82,6 +82,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
 | `PUSHOVER_USER` | Pushover username | |
+| `PUSHOVER_PRIORITY` | Pushover message priority |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
