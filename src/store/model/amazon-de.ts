@@ -9,7 +9,7 @@ export const AmazonDe: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['add to cart']
-		}	
+		}
 	},
 	links: [
 		{
