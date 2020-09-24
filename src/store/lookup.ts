@@ -32,7 +32,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			await lookupCard(browser, store, page, link);
 		} catch (error) {
-			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
+			Logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
 		}
 
 		await closePage(page);
