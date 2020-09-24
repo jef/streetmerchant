@@ -1,5 +1,5 @@
 import {Browser, Response} from 'puppeteer';
-import {NvidiaRegionInfo, regionInfos} from '../nvidia';
+import {NvidiaRegionInfo, regionInfos} from '../nvidia-api';
 import {Config} from '../../../config';
 import {Link} from '../store';
 import {Logger} from '../../../logger';
@@ -55,26 +55,29 @@ export function generateSetupAction() {
 
 		const page = await browser.newPage();
 
-		Logger.info('[nvidia] creating cart/session token...');
 		let response: Response | null;
 		try {
+			Logger.debug('creating cart/session token...');
+
 			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
+
 			if (response === null) {
 				throw new Error('NvidiaAccessTokenUnavailable');
 			}
 
 			const data = await response.json() as NvidiaSessionTokenJSON;
 			const accessToken = data.access_token;
-
-			Logger.info('[nvidia] you can log into your cart now...');
 			const cartUrl = checkoutUrl(drLocale, accessToken);
-			Logger.info(cartUrl);
+
+			Logger.debug(cartUrl);
+
 			if (Config.browser.open) {
+				Logger.info('ℹ opening browser for user to login');
+
 				await open(cartUrl);
 			}
 		} catch (error) {
-			Logger.debug(error);
-			Logger.error('✖ [nvidia] cannot generate cart/session token, continuing without, auto-"add to cart" may not work...');
+			Logger.error('✖ [nvidia] cannot generate cart/session token, continuing without; auto "add to cart" may not work', error);
 		}
 
 		await page.close();
@@ -84,11 +87,14 @@ export function generateSetupAction() {
 export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
 	return async (browser: Browser) => {
 		const page = await browser.newPage();
-		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart... 🚀🚀🚀`);
+
+		Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, starting auto add to cart 🚀🚀🚀`);
+
 		let response: Response | null;
 		let cartUrl: string;
 		try {
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token... 🚀🚀🚀`);
+			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, getting access token 🚀🚀🚀`);
+
 			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
 			if (response === null) {
 				throw new Error('NvidiaAccessTokenUnavailable');
@@ -97,16 +103,21 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 			const data = await response.json() as NvidiaSessionTokenJSON;
 			const accessToken = data.access_token;
 
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart... 🚀🚀🚀`);
+			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart 🚀🚀🚀`);
+
 			response = await page.goto(addToCartUrl(id, drLocale, accessToken), {waitUntil: 'networkidle0'});
 
-			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page... 🚀🚀🚀`);
+			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page 🚀🚀🚀`);
+
 			cartUrl = checkoutUrl(drLocale, accessToken);
+
 			Logger.info(cartUrl);
+
 			await open(cartUrl);
 		} catch (error) {
 			Logger.debug(error);
-			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`);
+			Logger.error(`✖ [nvidia] ${cardName} could not automatically add to cart, opening page`, error);
+
 			cartUrl = fallbackCartUrl(nvidiaLocale);
 			await open(cartUrl);
 		}
@@ -124,10 +135,10 @@ export function generateLinks(): Link[] {
 
 	if (fe2060SuperId) {
 		links.push({
-			brand: 'TEST',
-			model: 'CARD',
+			brand: 'test:brand',
+			model: 'test:model',
 			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug'),
-			series: 'debug',
+			series: 'test:series',
 			url: digitalRiverStockUrl(fe2060SuperId, drLocale)
 		});
 	}

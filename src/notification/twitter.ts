@@ -1,6 +1,6 @@
+import {Link, Store} from '../store/model';
+import {Logger, Print} from '../logger';
 import {Config} from '../config';
-import {Link} from '../store/model';
-import {Logger} from '../logger';
 import Twitter from 'twitter';
 
 const twitter = Config.notifications.twitter;
@@ -12,18 +12,18 @@ const client = new Twitter({
 	consumer_secret: twitter.consumerSecret
 });
 
-export function sendTweet(cartUrl: string, link: Link) {
-	let status = `🛎️ Stock Notification: ${link.brand} ${link.model}\n${cartUrl}`;
+export function sendTweet(link: Link, store: Store) {
+	let status = `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`;
 
 	if (twitter.tweetTags) {
 		status += `\n\n${twitter.tweetTags}`;
 	}
 
-	client.post('statuses/update', {status}, err => {
-		if (err) {
-			Logger.error(err);
+	client.post('statuses/update', {status}, error => {
+		if (error) {
+			Logger.error('✖ couldn\'t send twitter notification', error);
 		} else {
-			Logger.info(`↗ twitter notification sent: ${cartUrl}`);
+			Logger.info('✔ twitter notification sent');
 		}
 	});
 }

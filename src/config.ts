@@ -1,3 +1,6 @@
+import {banner} from './banner';
+console.log(banner);
+
 import {config} from 'dotenv';
 import path from 'path';
 
@@ -8,7 +11,7 @@ const browser = {
 	isTrusted: process.env.BROWSER_TRUSTED ? process.env.BROWSER_TRUSTED === 'true' : false,
 	maxSleep: Number(process.env.PAGE_SLEEP_MAX ?? 10000),
 	minSleep: Number(process.env.PAGE_SLEEP_MIN ?? 5000),
-	open: process.env.OPEN_BROWSER === 'true'
+	open: process.env.OPEN_BROWSER ? process.env.OPEN_BROWSER === 'true' : true
 };
 
 const logLevel = process.env.LOG_LEVEL ?? 'info';

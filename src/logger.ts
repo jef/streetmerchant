@@ -1,5 +1,7 @@
+import {Link, Store} from './store/model';
 import winston, {format} from 'winston';
 import {Config} from './config';
+import chalk from 'chalk';
 
 const prettyJson = format.printf(info => {
 	const timestamp = new Date().toLocaleTimeString();
@@ -8,7 +10,7 @@ const prettyJson = format.printf(info => {
 		info.message = JSON.stringify(info.message, null, 4);
 	}
 
-	return `[${timestamp}] ${info.level} :: ${info.message}`;
+	return chalk.grey(`[${timestamp}]`) + ` ${info.level} ` + chalk.grey('::') + ` ${info.message}`;
 });
 
 export const Logger = winston.createLogger({
@@ -22,3 +24,42 @@ export const Logger = winston.createLogger({
 	level: Config.logLevel,
 	transports: [new winston.transports.Console({})]
 });
+
+export const Print = {
+	captcha(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('CAPTCHA');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: CAPTCHA`;
+	},
+	inStock(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return chalk.green.bold(`🚀🚨 ${buildProductString(link, store, true)} :: IN STOCK 🚨🚀`);
+		}
+
+		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
+	},
+	outOfStock(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.red('OUT OF STOCK');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: OUT OF STOCK`;
+	},
+	rateLimit(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('RATE LIMIT EXCEEDED');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
+	}
+};
+
+function buildProductString(link: Link, store: Store, color?: boolean): string {
+	if (color) {
+		return chalk.cyan(`[${store.name}]`) + chalk.grey(` [${link.brand} (${link.series})] ${link.model}`);
+	}
+
+	return `[${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+}

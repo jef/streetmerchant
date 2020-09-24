@@ -1,8 +1,8 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
+import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
-import {Logger} from '../logger';
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
@@ -14,7 +14,7 @@ const inStock: Record<string, boolean> = {};
  *
  * @param brand The brand of the GPU
  */
-function filterBrand(brand: string) {
+function filterBrand(brand: Link['brand']) {
 	if (Config.store.showOnlyBrands.length === 0) {
 		return true;
 	}
@@ -27,7 +27,7 @@ function filterBrand(brand: string) {
  *
  * @param series The series of the GPU
  */
-function filterSeries(series: string) {
+function filterSeries(series: Link['series']) {
 	if (Config.store.showOnlySeries.length === 0) {
 		return true;
 	}
@@ -69,15 +69,26 @@ async function lookup(browser: Browser, store: Store) {
 }
 
 async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
-	const givenWaitFor = store.customWaitFor ? store.customWaitFor : 'networkidle0';
+	const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
-	const graphicsCard = `${link.brand} ${link.model}`;
 
 	if (await lookupCardInStock(store, page)) {
-		Logger.info(`🚀🚀🚀 [${store.name}] ${graphicsCard} IN STOCK 🚀🚀🚀`);
-		Logger.info(link.url);
+		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		Logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
+
+		if (Config.browser.open) {
+			if (link.openCartAction === undefined) {
+				await open(givenUrl);
+			} else {
+				await link.openCartAction(browser);
+			}
+		}
+
+		sendNotification(link, store);
+
 		if (Config.page.inStockWaitTime) {
 			inStock[store.name] = true;
+
 			setTimeout(() => {
 				inStock[store.name] = false;
 			}, 1000 * Config.page.inStockWaitTime);
@@ -85,36 +96,26 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 		if (Config.page.capture) {
 			Logger.debug('ℹ saving screenshot');
+
 			link.screenshot = `success-${Date.now()}.png`;
 			await page.screenshot({path: link.screenshot});
 		}
 
-		let givenUrl = link.cartUrl ? link.cartUrl : link.url;
-
-		if (Config.browser.open) {
-			if (link.openCartAction === undefined) {
-				await open(givenUrl);
-			} else {
-				givenUrl = await link.openCartAction(browser);
-			}
-		}
-
-		sendNotification(givenUrl, link);
 		return;
 	}
 
 	if (await lookupPageHasCaptcha(store, page)) {
-		Logger.warn(`✖ [${store.name}] CAPTCHA from: ${graphicsCard}. Waiting for a bit with this store...`);
+		Logger.warn(Print.captcha(link, store, true));
 		await delay(getSleepTime());
 		return;
 	}
 
 	if (response && response.status() === 429) {
-		Logger.warn(`✖ [${store.name}] Rate limit exceeded: ${graphicsCard}`);
+		Logger.warn(Print.rateLimit(link, store, true));
 		return;
 	}
 
-	Logger.info(`✖ [${store.name}] still out of stock: ${graphicsCard}`);
+	Logger.info(Print.outOfStock(link, store, true));
 }
 
 async function lookupCardInStock(store: Store, page: Page) {
@@ -129,11 +130,7 @@ async function lookupCardInStock(store: Store, page: Page) {
 
 	Logger.debug(stockContent);
 
-	if (includesLabels(stockContent, store.labels.inStock.text)) {
-		return true;
-	}
-
-	return false;
+	return includesLabels(stockContent, store.labels.inStock.text);
 }
 
 async function lookupPageHasCaptcha(store: Store, page: Page) {
@@ -144,11 +141,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 	const captchaHandle = await page.$(store.labels.captcha.container);
 	const captchaContent = await page.evaluate(element => element.textContent, captchaHandle);
 
-	if (includesLabels(captchaContent, store.labels.captcha.text)) {
-		return true;
-	}
-
-	return false;
+	return includesLabels(captchaContent, store.labels.captcha.text);
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
