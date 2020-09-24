@@ -24,7 +24,15 @@ function filterModel(model: Link['model']): boolean {
 		return true;
 	}
 
-	return Config.store.showOnlyModels.includes(model);
+	const sanitizedModel = model.replace(/\s/g, '');
+	for (const configModel of Config.store.showOnlyModels) {
+		const sanitizedConfigModel = configModel.replace(/\s/g, '');
+		if (sanitizedModel === sanitizedConfigModel) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
