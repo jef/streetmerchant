@@ -11,10 +11,10 @@ const link: Link = {
 
 const store: Store = {
 	labels: {
-		inStock: {
-			containers: ['test:container'],
+		inStock: [{
+			container: 'test:container',
 			text: ['test:text']
-		}
+		}]
 	},
 	links: [link],
 	name: 'test:name'

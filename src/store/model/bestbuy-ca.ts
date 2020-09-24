@@ -2,10 +2,10 @@ import {Store} from './store';
 
 export const BestBuyCa: Store = {
 	labels: {
-		inStock: {
-			containers: ['#root'],
+		inStock: [{
+			container: '#root',
 			text: ['available online']
-		}
+		}]
 	},
 	links: [
 		{

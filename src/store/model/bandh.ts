@@ -2,10 +2,10 @@ import {Store} from './store';
 
 export const BAndH: Store = {
 	labels: {
-		inStock: {
-			containers: ['div[data-selenium="addToCartSection"]'],
+		inStock: [{
+			container: 'div[data-selenium="addToCartSection"]',
 			text: ['add to cart']
-		}
+		}]
 	},
 	links: [
 		{

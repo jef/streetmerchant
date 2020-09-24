@@ -3,13 +3,13 @@ import {Store} from './store';
 export const Adorama: Store = {
 	labels: {
 		captcha: {
-			containers: ['body'],
+			container: 'body',
 			text: ['please verify you are a human']
 		},
-		inStock: {
-			containers: ['.buy-section.purchase'],
+		inStock: [{
+			container: '.buy-section.purchase',
 			text: ['add to cart']
-		}
+		}]
 	},
 	links: [
 		{

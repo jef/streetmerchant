@@ -3,13 +3,13 @@ import {Store} from './store';
 export const AmazonDe: Store = {
 	labels: {
 		captcha: {
-			containers: ['body'],
+			container: 'body',
 			text: ['geben sie die unten angezeigten zeichen ein']
 		},
-		inStock: {
-			containers: ['#desktop_buybox'],
+		inStock: [{
+			container: '#desktop_buybox',
 			text: ['in den einkaufswagen']
-		}
+		}]
 	},
 	links: [
 		{

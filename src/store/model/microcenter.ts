@@ -40,10 +40,10 @@ if (microCenterLocationToId.get(MicroCenterLocation) === undefined) {
 
 export const MicroCenter: Store = {
 	labels: {
-		inStock: {
-			containers: ['#cart-options'],
+		inStock: [{
+			container: '#cart-options',
 			text: ['in stock']
-		}
+		}]
 	},
 	links: [
 		{

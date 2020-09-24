@@ -2,10 +2,10 @@ import {Store} from './store';
 
 export const Zotac: Store = {
 	labels: {
-		inStock: {
-			containers: ['.add-to-cart-wrapper'],
+		inStock: [{
+			container: '.add-to-cart-wrapper',
 			text: ['add to cart']
-		}
+		}]
 	},
 	links: [
 		{

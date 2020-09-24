@@ -2,10 +2,10 @@ import {Store} from './store';
 
 export const BestBuy: Store = {
 	labels: {
-		inStock: {
-			containers: ['.v-m-bottom-g'],
+		inStock: [{
+			container: '.v-m-bottom-g',
 			text: ['add to cart']
-		}
+		}]
 	},
 	links: [
 		{

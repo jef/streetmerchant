@@ -1,5 +1,5 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Link, Store} from './model';
+import {Link, Element, Store} from './model';
 import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
@@ -92,8 +92,8 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 async function lookupCardInStock(store: Store, page: Page) {
 	/* eslint-disable no-await-in-loop */
-	for (const container of store.labels.inStock.containers) {
-		if (await lookupPageHasContent(page, container, store.labels.inStock.text)) {
+	for (const element of store.labels.inStock) {
+		if (await lookupPageHasContent(page, element)) {
 			return true;
 		}
 	}
@@ -118,7 +118,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 	return false;
 }
 
-async function lookupPageHasContent(page: Page, container: string, text: string[]) {
+async function lookupPageHasContent(page: Page, element: Element) {
 	const handle = await page.$(container);
 
 	const visible = await page.evaluate(element => element && element.offsetWidth > 0 && element.offsetHeight > 0, handle);

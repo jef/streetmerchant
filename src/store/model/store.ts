@@ -1,7 +1,7 @@
 import {Browser, LoadEvent} from 'puppeteer';
 
 export type Element = {
-	containers: string[];
+	container: string;
 	text: string[];
 };
 
@@ -17,7 +17,7 @@ export type Link = {
 
 export type Labels = {
 	captcha?: Element;
-	inStock: Element;
+	inStock: Element[];
 };
 
 export type Store = {

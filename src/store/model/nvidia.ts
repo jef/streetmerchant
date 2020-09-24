@@ -3,13 +3,19 @@ import {Store} from './store';
 export const Nvidia: Store = {
 	labels: {
 		captcha: {
-			containers: ['body'],
+			container: 'body',
 			text: ['are you a human?']
 		},
-		inStock: {
-			containers: ['.js-product-item .btn-cart', '.main-container'],
-			text: ['add to cart']
-		}
+		inStock: [
+			{
+				container: '.js-product-item .btn-cart',
+				text: ['add to cart']
+			},
+			{
+				container: '.main-container',
+				text: ['add to cart']
+			}
+		]
 	},
 	links: [
 		{

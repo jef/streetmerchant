@@ -2,10 +2,10 @@ import {Store} from './store';
 
 export const EvgaEu: Store = {
 	labels: {
-		inStock: {
-			containers: ['.product-buy-specs'],
+		inStock: [{
+			container: '.product-buy-specs',
 			text: ['add to cart']
-		}
+		}]
 	},
 	links: [
 		{
