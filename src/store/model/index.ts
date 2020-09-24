@@ -1,7 +1,7 @@
-
 import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
+import {AmazonDe} from './amazon-de';
 import {Asus} from './asus';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
@@ -11,9 +11,10 @@ import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Logger} from '../../logger';
 import {MicroCenter} from './microcenter';
-import {NewEgg} from './newegg';
-import {NewEggCa} from './newegg-ca';
+import {Newegg} from './newegg';
+import {NeweggCa} from './newegg-ca';
 import {Nvidia} from './nvidia';
+import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Store} from './store';
 import {Zotac} from './zotac';
@@ -22,6 +23,7 @@ const masterList = new Map([
 	[Adorama.name, Adorama],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
+	[AmazonDe.name, AmazonDe],
 	[Asus.name, Asus],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
@@ -29,9 +31,10 @@ const masterList = new Map([
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[MicroCenter.name, MicroCenter],
-	[NewEgg.name, NewEgg],
-	[NewEggCa.name, NewEggCa],
+	[Newegg.name, Newegg],
+	[NeweggCa.name, NeweggCa],
 	[Nvidia.name, Nvidia],
+	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Zotac.name, Zotac]
 ]);
@@ -48,6 +51,18 @@ for (const name of Config.store.stores) {
 }
 
 Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
+
+if (Config.store.showOnlyBrands.length > 0) {
+	Logger.info(`ℹ selected brands: ${Config.store.showOnlyBrands.join(', ')}`);
+}
+
+if (Config.store.showOnlyModels.length > 0) {
+	Logger.info(`ℹ selected models: ${Config.store.showOnlyModels.join(', ')}`);
+}
+
+if (Config.store.showOnlySeries.length > 0) {
+	Logger.info(`ℹ selected series: ${Config.store.showOnlySeries.join(', ')}`);
+}
 
 export const Stores = Array.from(list.values()) as Store[];
 

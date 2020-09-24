@@ -3,6 +3,7 @@ import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {closePage, delay, getSleepTime} from '../util';
 import {Config} from '../config';
+import {filterStoreLink} from './filter';
 import {includesLabels} from './includes-labels';
 import open from 'open';
 import {sendNotification} from '../notification';
@@ -10,46 +11,17 @@ import {sendNotification} from '../notification';
 const inStock: Record<string, boolean> = {};
 
 /**
- * Returns true if the brand should be checked for stock
- *
- * @param brand The brand of the GPU
- */
-function filterBrand(brand: Link['brand']) {
-	if (Config.store.showOnlyBrands.length === 0) {
-		return true;
-	}
-
-	return Config.store.showOnlyBrands.includes(brand);
-}
-
-/**
- * Returns true if the series should be checked for stock
- *
- * @param series The series of the GPU
- */
-function filterSeries(series: Link['series']) {
-	if (Config.store.showOnlySeries.length === 0) {
-		return true;
-	}
-
-	return Config.store.showOnlySeries.includes(series);
-}
-
-/**
  * Responsible for looking up information about a each product within
  * a `Store`. It's important that we ignore `no-await-in-loop` here
  * because we don't want to get rate limited within the same store.
+ *
  * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
-		if (!filterSeries(link.series)) {
-			continue;
-		}
-
-		if (!filterBrand(link.brand)) {
+		if (!filterStoreLink(link)) {
 			continue;
 		}
 
@@ -94,7 +66,7 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			}, 1000 * Config.page.inStockWaitTime);
 		}
 
-		if (Config.page.capture) {
+		if (Config.page.screenshot) {
 			Logger.debug('ℹ saving screenshot');
 
 			link.screenshot = `success-${Date.now()}.png`;

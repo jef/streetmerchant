@@ -3,26 +3,28 @@ import {Logger} from '../logger';
 import fs from 'fs';
 import playerLib from 'play-sound';
 
-const notificationSound = Config.notifications.playSound;
+let player: any;
 
-const player = playerLib();
+if (Config.notifications.playSound) {
+	player = playerLib();
 
-if (player.player === null) {
-	Logger.warn('✖ couldn\'t find sound player');
-} else {
-	const playerName: string = player.player;
-	Logger.info(`✔ sound player found: ${playerName}`);
+	if (player.player === null) {
+		Logger.warn('✖ couldn\'t find sound player');
+	} else {
+		const playerName: string = player.player;
+		Logger.info(`✔ sound player found: ${playerName}`);
+	}
 }
 
 export function playSound() {
 	if (player.player !== null) {
-		fs.access(notificationSound, fs.constants.F_OK, error => {
+		fs.access(Config.notifications.playSound, fs.constants.F_OK, error => {
 			if (error) {
 				Logger.error(`✖ error opening sound file: ${error.message}`);
 				return;
 			}
 
-			player.play(notificationSound, (error: Error) => {
+			player.play(Config.notifications.playSound, (error: Error) => {
 				if (error) {
 					Logger.error('✖ couldn\'t play sound', error);
 				}
