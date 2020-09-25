@@ -56,7 +56,7 @@ const browser = {
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
-const logLevel = process.env.LOG_LEVEL ?? 'info';
+const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
 const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
