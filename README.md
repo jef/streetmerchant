@@ -56,6 +56,10 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 > :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
 
+### Developer notes
+
+The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `.env` file.
+
 ### Customization
 
 To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All environment variables are **optional**._
@@ -83,6 +87,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
 | `PUSHOVER_USER` | Pushover username | |
 | `PUSHOVER_PRIORITY` | Pushover message priority |
+| `PAGE_BACKOFF_MIN` | Minimum backoff time between retrying requests for the same store when a forbidden response is received | Default: `10000` |
+| `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
