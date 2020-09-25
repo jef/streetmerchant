@@ -58,7 +58,7 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Developer notes
 
-The command `npm run dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `.env` file.
+The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `.env` file.
 
 ### Customization
 
