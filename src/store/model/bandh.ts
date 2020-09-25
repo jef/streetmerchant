@@ -63,6 +63,60 @@ export const BAndH: Store = {
 			model: 'ventus 3x oc - duplicate',
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1592970-REG/zotac_zt_a30900d_10p_gaming_geforce_rtx_3090.html'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593647-REG/msi_geforce_rtx_3090_gaming.html'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593994-REG/msi_g3090gxt24_geforce_rtx_3090_gaming.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593648-REG/msi_geforce_rtx_3090_ventus.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593995-REG/msi_g3090v3x24c_geforce_rtx_3090_ventus.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593334-REG/gigabyte_gv_n3090eagle_oc_24gd_geforce_rtx_3090_eagle.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1593335-REG/gigabyte_gv_n3090gaming_oc_24gd_geforce_rtx3090_gaming_oc.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1594454-REG/asus_90yv0fd0_m0am00_tuf_gaming_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.bhphotovideo.com/c/product/1594451-REG/asus_90yv0fd1_m0am00_tuf_gaming_geforce_rtx.html'
 		}
 	],
 	name: 'bandh'

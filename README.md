@@ -34,7 +34,7 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | | | | | | | | |
 | **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | | | `✔` | | | `✔` | `✔` | | | `✔` | `✔` | `✔` | | |
+| **3090** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | | `✔` | `✔` | `✔` | | `✔` |
 
 ## Installation and prerequisites
 
@@ -75,7 +75,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
-| `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same store if it has cards in stock | In seconds, default: `0` |
+| `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
@@ -210,7 +210,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | russia | | | Missing all IDs |
 | spain | `✔` | | |
 | sweden | `✔` | | |
-| usa | `✔` | | Nvidia supports debug |
+| usa | `✔` | `✔` | Nvidia supports debug |
 
 ## FAQ
 

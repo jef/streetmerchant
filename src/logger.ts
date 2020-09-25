@@ -56,10 +56,17 @@ export const Print = {
 	},
 	inStock(link: Link, store: Store, color?: boolean): string {
 		if (color) {
-			return chalk.green.bold(`🚀🚨 ${buildProductString(link, store, true)} :: IN STOCK 🚨🚀`);
+			return chalk.bgGreen.white.bold(`🚀🚨 ${buildProductString(link, store, false)} :: IN STOCK 🚨🚀`);
 		}
 
 		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
+	},
+	inStockWaiting(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return 'ℹ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('IN STOCK, WAITING');
+		}
+
+		return `ℹ ${buildProductString(link, store)} :: IN STOCK, WAITING`;
 	},
 	message(message: string, topic: string, store: Store, color?: boolean): string {
 		if (color) {
