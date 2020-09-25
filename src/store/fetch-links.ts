@@ -10,14 +10,14 @@ export async function fetchLinks(store: Store, browser: Browser) {
 		return;
 	}
 
-	/* eslint-disable no-await-in-loop */
+	const promises = [];
 	for (const {series, url} of store.linksBuilder.urls) {
 		if (!filterSeries(series)) {
 			continue;
 		}
 
 		Logger.info(Print.message('DETECTING STORE LINKS', series, store, true));
-		await usingResponse(browser, url, async response => {
+		promises.push(usingResponse(browser, url, async response => {
 			if (!response) {
 				Logger.error(Print.message('REQUEST FAILED', series, store, true));
 				return;
@@ -34,7 +34,8 @@ export async function fetchLinks(store: Store, browser: Browser) {
 			Logger.info(Print.message(`FOUND ${links.length} ITEMS`, series, store, true));
 			Logger.debug(JSON.stringify(links, null, 2));
 			store.links = store.links.concat(links);
-		});
+		}));
 	}
-	/* eslint-enable no-await-in-loop */
+
+	await Promise.all(promises);
 }
