@@ -38,11 +38,11 @@ export const Print = {
 			return chalk.green.bold(`🚀🚨 ${buildProductString(link, store, true)} :: IN STOCK 🚨🚀`);
 		}
 
-		let productString = `${buildProductString(link, store)} :: IN STOCK`;
+		const productString = `${buildProductString(link, store)} :: IN STOCK`;
 		if (sms) {
 			return productString;
 		}
-		
+
 		return `🚀🚨 ${productString} 🚨🚀`;
 	},
 	outOfStock(link: Link, store: Store, color?: boolean): string {
