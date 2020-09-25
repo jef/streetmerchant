@@ -18,7 +18,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['czechia', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
 	['denmark', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
 	['finland', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438793300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
-	['france', {drLocale: 'fr_fr', fe2060SuperId: null, fe3080Id: 5438795200, fe3090Id: null, nvidiaLocale: 'fr_fr'}],
+	['france', {drLocale: 'fr_fr', fe2060SuperId: null, fe3080Id: 5438795200, fe3090Id: 5438761500, nvidiaLocale: 'fr_fr'}],
 	['germany', {drLocale: 'de_de', fe2060SuperId: null, fe3080Id: 5438792300, fe3090Id: null, nvidiaLocale: 'de_de'}],
 	['great_britain', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438792800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
 	['ireland', {drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438792800, fe3090Id: null, nvidiaLocale: 'en_gb'}],
