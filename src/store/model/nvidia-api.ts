@@ -30,7 +30,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['portugal', {currency: 'GBP', drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438794300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
 	['russia', {currency: 'RUB', drLocale: 'ru_ru', fe2060SuperId: null, fe3080Id: null, fe3090Id: null, nvidiaLocale: 'ru_ru'}],
 	['spain', {currency: 'EUR', drLocale: 'es_es', fe2060SuperId: null, fe3080Id: 5438794800, fe3090Id: null, nvidiaLocale: 'es_es'}],
-	['sweden', {currency: 'EUR', drLocale: 'sv_SE', fe2060SuperId: null, fe3080Id: 5438798100, fe3090Id: null, nvidiaLocale: 'sv_se'}],
+	['sweden', {currency: 'SEK', drLocale: 'sv_se', fe2060SuperId: null, fe3080Id: 5438798100, fe3090Id: null, nvidiaLocale: 'sv_se'}],
 	['usa', {currency: 'USD', drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: 5438481600, nvidiaLocale: 'en_us'}]
 ]);
 
