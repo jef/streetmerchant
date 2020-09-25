@@ -2,6 +2,7 @@ import {Adorama} from './adorama';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
+import {AmazonNl} from './amazon-nl';
 import {Asus} from './asus';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
@@ -24,6 +25,7 @@ const masterList = new Map([
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
+	[AmazonNl.name, AmazonNl],
 	[Asus.name, Asus],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
