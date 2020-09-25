@@ -1,5 +1,6 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Config} from './config';
+import {Logger} from './logger';
 import {disableBlockerInPage} from './adblocker';
 
 export function getSleepTime() {
@@ -34,8 +35,8 @@ export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: B
 	} finally {
 		try {
 			await closePage(page);
-		} finally {
-			// Ignore the error
+		} catch (error) {
+			Logger.error(error);
 		}
 	}
 }

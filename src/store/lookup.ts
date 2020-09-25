@@ -40,8 +40,8 @@ async function lookup(browser: Browser, store: Store) {
 		if (store.disableAdBlocker) {
 			try {
 				await disableBlockerInPage(page);
-			} catch {
-				// Ignore the error
+			} catch (error) {
+				Logger.error(error);
 			}
 		}
 
