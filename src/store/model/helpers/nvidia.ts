@@ -1,4 +1,4 @@
-import {Browser, Response} from 'puppeteer';
+import {Browser, Page, Response} from 'puppeteer';
 import {NvidiaRegionInfo, regionInfos} from '../nvidia-api';
 import {Config} from '../../../config';
 import {Link} from '../store';
@@ -6,82 +6,66 @@ import {Logger} from '../../../logger';
 import open from 'open';
 import {timestampUrlParameter} from '../../timestamp-url-parameter';
 
-const nvidiaApiKey = '9485fa7b159e42edb08a83bde0d83dia';
-
 function getRegionInfo(): NvidiaRegionInfo {
 	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
 
-	const defaultRegionInfo: NvidiaRegionInfo = {drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_us'};
+	const defaultRegionInfo: NvidiaRegionInfo = {currency: 'USD', drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_us'};
 	return regionInfos.get(country) ?? defaultRegionInfo;
 }
 
-function digitalRiverStockUrl(id: number, drLocale: string): string {
-	return `https://api.digitalriver.com/v1/shoppers/me/products/${id}/inventory-status?` +
-		`&apiKey=${nvidiaApiKey}` +
-		`&locale=${drLocale}` +
-		timestampUrlParameter();
+function nvidiaStockUrl(id: number, drLocale: string, currency: string): string {
+	return `https://api-prod.nvidia.com/direct-sales-shop/DR/products/${drLocale}/${currency}/${id}?` +
+		timestampUrlParameter().slice(1);
 }
 
 interface NvidiaSessionTokenJSON {
-	access_token: string;
+	session_token: string;
+}
+
+interface NvidiaAddToCardJSON {
+	location: string;
 }
 
 function nvidiaSessionUrl(nvidiaLocale: string): string {
 	return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${nvidiaLocale}` +
-		`&apiKey=${nvidiaApiKey}` +
 		timestampUrlParameter();
 }
 
-function addToCartUrl(id: number, drLocale: string, token: string): string {
-	return 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items?format=json&method=post' +
-		`&productId=${id}` +
-		`&token=${token}` +
-		'&quantity=1' +
-		`&locale=${drLocale}` +
-		timestampUrlParameter();
-}
+async function addToCartAndGetLocationRedirect(page: Page, sessionToken: string, productId: number): Promise<string> {
+	const url = 'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
 
-function checkoutUrl(drLocale: string, token: string): string {
-	return `https://api.digitalriver.com/v1/shoppers/me/carts/active/web-checkout?token=${token}&locale=${drLocale}`;
+	page.removeAllListeners('request');
+
+	await page.setRequestInterception(true);
+
+	page.on('request', interceptedRequest => {
+		void interceptedRequest.continue({
+			headers: {
+				...interceptedRequest.headers(),
+				'content-type': 'application/json',
+				nvidia_shop_id: sessionToken
+			},
+			method: 'POST',
+			postData: JSON.stringify({
+				products: [
+					{productId, quantity: 1}
+				]
+			})
+		});
+	});
+
+	const response = await page.goto(url, {waitUntil: 'networkidle0'});
+	if (response === null) {
+		throw new Error('NvidiaAddToCartUnavailable');
+	}
+
+	const locationData = await response.json() as NvidiaAddToCardJSON;
+
+	return locationData.location;
 }
 
 function fallbackCartUrl(nvidiaLocale: string): string {
 	return `https://www.nvidia.com/${nvidiaLocale}/shop/geforce?${timestampUrlParameter()}`;
-}
-
-export function generateSetupAction() {
-	return async (browser: Browser) => {
-		const {drLocale, nvidiaLocale} = getRegionInfo();
-
-		const page = await browser.newPage();
-
-		let response: Response | null;
-		try {
-			Logger.debug('creating cart/session token...');
-
-			response = await page.goto(nvidiaSessionUrl(nvidiaLocale), {waitUntil: 'networkidle0'});
-
-			if (response === null) {
-				throw new Error('NvidiaAccessTokenUnavailable');
-			}
-
-			const data = await response.json() as NvidiaSessionTokenJSON;
-			const accessToken = data.access_token;
-			const cartUrl = checkoutUrl(drLocale, accessToken);
-
-			Logger.debug(cartUrl);
-
-			if (Config.browser.open) {
-				Logger.info('ℹ opening browser for user to login');
-
-				await open(cartUrl);
-			}
-		} catch (error) {
-			Logger.error('✖ [nvidia] cannot generate cart/session token, continuing without; auto "add to cart" may not work', error);
-		}
-
-		await page.close();
-	};
 }
 
 export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocale: string, cardName: string) {
@@ -101,16 +85,13 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 			}
 
 			const data = await response.json() as NvidiaSessionTokenJSON;
-			const accessToken = data.access_token;
+			const sessionToken = data.session_token;
 
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, adding to cart 🚀🚀🚀`);
 
-			response = await page.goto(addToCartUrl(id, drLocale, accessToken), {waitUntil: 'networkidle0'});
+			cartUrl = await addToCartAndGetLocationRedirect(page, sessionToken, id);
 
 			Logger.info(`🚀🚀🚀 [nvidia] ${cardName}, opening checkout page 🚀🚀🚀`);
-
-			cartUrl = checkoutUrl(drLocale, accessToken);
-
 			Logger.info(cartUrl);
 
 			await open(cartUrl);
@@ -129,7 +110,7 @@ export function generateOpenCartAction(id: number, nvidiaLocale: string, drLocal
 }
 
 export function generateLinks(): Link[] {
-	const {drLocale, nvidiaLocale, fe3080Id, fe3090Id, fe2060SuperId} = getRegionInfo();
+	const {drLocale, nvidiaLocale, fe3080Id, fe3090Id, fe2060SuperId, currency} = getRegionInfo();
 
 	const links: Link[] = [];
 
@@ -139,7 +120,7 @@ export function generateLinks(): Link[] {
 			model: 'test:model',
 			openCartAction: generateOpenCartAction(fe2060SuperId, nvidiaLocale, drLocale, 'TEST CARD debug'),
 			series: 'test:series',
-			url: digitalRiverStockUrl(fe2060SuperId, drLocale)
+			url: nvidiaStockUrl(fe2060SuperId, drLocale, currency)
 		});
 	}
 
@@ -149,7 +130,7 @@ export function generateLinks(): Link[] {
 			model: 'founders edition',
 			openCartAction: generateOpenCartAction(fe3080Id, nvidiaLocale, drLocale, 'nvidia founders edition 3080'),
 			series: '3080',
-			url: digitalRiverStockUrl(fe3080Id, drLocale)
+			url: nvidiaStockUrl(fe3080Id, drLocale, currency)
 		});
 	}
 
@@ -159,7 +140,7 @@ export function generateLinks(): Link[] {
 			model: 'founders edition',
 			openCartAction: generateOpenCartAction(fe3090Id, nvidiaLocale, drLocale, 'nvidia founders edition 3090'),
 			series: '3090',
-			url: digitalRiverStockUrl(fe3090Id, drLocale)
+			url: nvidiaStockUrl(fe3090Id, drLocale, currency)
 		});
 	}
 
