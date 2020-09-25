@@ -4,7 +4,7 @@ export const AmazonDe: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
-			text: ['geben sie die unten angezeigten zeichen ein']
+			text: ['geben sie die unten angezeigten zeichen ein', 'geben sie die zeichen unten ein']
 		},
 		inStock: {
 			container: '#desktop_buybox',

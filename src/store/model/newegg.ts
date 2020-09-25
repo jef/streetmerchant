@@ -27,6 +27,20 @@ export const Newegg: Store = {
 		},
 		{
 			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487518',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3897-kr/p/N82E16814487518'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487519',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519'
+		},
+		{
+			brand: 'evga',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487522',
 			model: 'xc3 black',
 			series: '3080',
