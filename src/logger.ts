@@ -26,6 +26,27 @@ export const Logger = winston.createLogger({
 });
 
 export const Print = {
+	backoff(link: Link, store: Store, delay: number, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow(`REQUEST FORBIDDEN - BACKOFF DELAY ${delay}`);
+		}
+
+		return `✖ ${buildProductString(link, store)} :: REQUEST FORBIDDEN - BACKOFF DELAY ${delay}`;
+	},
+	badStatusCode(link: Link, store: Store, statusCode: number, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow(`STATUS CODE ERROR ${statusCode}`);
+		}
+
+		return `✖ ${buildProductString(link, store)} :: STATUS CODE ERROR ${statusCode}`;
+	},
+	bannedSeller(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('BANNED SELLER');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: BANNED SELLER`;
+	},
 	captcha(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('CAPTCHA');
@@ -47,6 +68,20 @@ export const Print = {
 
 		return `ℹ ${buildProductString(link, store)} :: IN STOCK, WAITING`;
 	},
+	message(message: string, topic: string, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildSetupString(topic, store, true) + ' :: ' + chalk.yellow(message);
+		}
+
+		return `✖ ${buildSetupString(topic, store)} :: ${message}`;
+	},
+	noResponse(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('NO RESPONSE');
+		}
+
+		return `✖ ${buildProductString(link, store)} :: NO RESPONSE`;
+	},
 	outOfStock(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.red('OUT OF STOCK');
@@ -62,6 +97,14 @@ export const Print = {
 		return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
 	}
 };
+
+function buildSetupString(topic: string, store: Store, color?: boolean): string {
+	if (color) {
+		return chalk.cyan(`[${store.name}]`) + chalk.grey(` [setup (${topic})]`);
+	}
+
+	return `[${store.name}] [setup (${topic})]`;
+}
 
 function buildProductString(link: Link, store: Store, color?: boolean): string {
 	if (color) {

@@ -40,7 +40,7 @@ function filterModel(model: Link['model']): boolean {
  *
  * @param series The series of the GPU
  */
-function filterSeries(series: Link['series']): boolean {
+export function filterSeries(series: Link['series']): boolean {
 	if (Config.store.showOnlySeries.length === 0) {
 		return true;
 	}
