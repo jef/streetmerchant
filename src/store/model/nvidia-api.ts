@@ -26,7 +26,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['italy', {currency: 'EUR', drLocale: 'it_it', fe2060SuperId: null, fe3080Id: 5438796200, fe3090Id: null, nvidiaLocale: 'it_it'}],
 	['luxembourg', {currency: 'EUR', drLocale: 'fr_fr', fe2060SuperId: 5394902700, fe3080Id: 5438795700, fe3090Id: null, nvidiaLocale: 'fr_fr'}],
 	['netherlands', {currency: 'EUR', drLocale: 'nl_nl', fe2060SuperId: 5394903500, fe3080Id: 5438796700, fe3090Id: null, nvidiaLocale: 'nl_nl'}],
-	['poland', {currency: 'EUR', drLocale: 'pl_pl', fe2060SuperId: null, fe3080Id: 5438797700, fe3090Id: null, nvidiaLocale: 'pl_pSl'}],
+	['poland', {currency: 'PLN', drLocale: 'pl_pl', fe2060SuperId: null, fe3080Id: 5438797700, fe3090Id: null, nvidiaLocale: 'pl_pSl'}],
 	['portugal', {currency: 'GBP', drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438794300, fe3090Id: null, nvidiaLocale: 'en_gb'}],
 	['russia', {currency: 'RUB', drLocale: 'ru_ru', fe2060SuperId: null, fe3080Id: null, fe3090Id: null, nvidiaLocale: 'ru_ru'}],
 	['spain', {currency: 'EUR', drLocale: 'es_es', fe2060SuperId: null, fe3080Id: 5438794800, fe3090Id: null, nvidiaLocale: 'es_es'}],
