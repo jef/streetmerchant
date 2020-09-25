@@ -7,10 +7,17 @@ import open from 'open';
 import {timestampUrlParameter} from '../../timestamp-url-parameter';
 
 function getRegionInfo(): NvidiaRegionInfo {
-	const country = Array.from(regionInfos.keys()).includes(Config.store.country) ? Config.store.country : 'usa';
+	let country = Config.store.country;
+	if (!regionInfos.has(country)) {
+		country = 'usa';
+	}
 
-	const defaultRegionInfo: NvidiaRegionInfo = {currency: 'USD', drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: null, nvidiaLocale: 'en_us'};
-	return regionInfos.get(country) ?? defaultRegionInfo;
+	const regionInfo = regionInfos.get(country);
+	if (!regionInfo) {
+		throw new Error(`LogicException could not retrieve region info for ${country}`);
+	}
+
+	return regionInfo;
 }
 
 function nvidiaStockUrl(id: number, drLocale: string, currency: string): string {
