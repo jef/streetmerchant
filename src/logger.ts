@@ -33,12 +33,17 @@ export const Print = {
 
 		return `✖ ${buildProductString(link, store)} :: CAPTCHA`;
 	},
-	inStock(link: Link, store: Store, color?: boolean): string {
+	inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
 		if (color) {
 			return chalk.green.bold(`🚀🚨 ${buildProductString(link, store, true)} :: IN STOCK 🚨🚀`);
 		}
 
-		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
+		let productString = `${buildProductString(link, store)} :: IN STOCK`;
+		if (sms) {
+			return productString;
+		}
+		
+		return `🚀🚨 ${productString} 🚨🚀`;
 	},
 	outOfStock(link: Link, store: Store, color?: boolean): string {
 		if (color) {
