@@ -7,5 +7,7 @@ export const adBlocker = new PuppeteerExtraPluginAdblocker({
 
 export async function disableBlockerInPage(page: Page) {
 	const blockerObject = await adBlocker.getBlocker();
-	await blockerObject.disableBlockingInPage(page);
+	if (blockerObject.isBlockingEnabled(page)) {
+		await blockerObject.disableBlockingInPage(page);
+	}
 }

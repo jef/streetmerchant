@@ -50,12 +50,14 @@ const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
+	maxBackoff: envOrNumber(process.env.PAGE_BACKOFF_MAX, 3600000),
 	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
+	minBackoff: envOrNumber(process.env.PAGE_BACKOFF_MIN, 10000),
 	minSleep: envOrNumber(process.env.PAGE_SLEEP_MIN, 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
-const logLevel = process.env.LOG_LEVEL ?? 'info';
+const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
 const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
