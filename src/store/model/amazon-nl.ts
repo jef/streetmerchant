@@ -8,7 +8,7 @@ export const AmazonNl: Store = {
 		},
 		inStock: {
 			container: '#desktop_buybox',
-			text: ['In winkelwagen plaatsen']
+			text: ['in winkelwagen plaatsen']
 		}
 	},
 	links: [
