@@ -25,6 +25,11 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
+		if (Config.page.inStockWaitTime && inStock[store.name]) {
+			Logger.info(Print.inStockWaiting(link, store, true));
+			continue;
+		}
+
 		const page = await browser.newPage();
 		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
 		await page.setUserAgent(Config.page.userAgent);
@@ -59,10 +64,10 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		sendNotification(link, store);
 
 		if (Config.page.inStockWaitTime) {
-			inStock[store.name] = true;
+			inStock[link.url] = true;
 
 			setTimeout(() => {
-				inStock[store.name] = false;
+				inStock[link.url] = false;
 			}, 1000 * Config.page.inStockWaitTime);
 		}
 
@@ -119,11 +124,7 @@ async function lookupPageHasCaptcha(store: Store, page: Page) {
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
 	Logger.debug(`[${store.name}] Starting lookup...`);
 	try {
-		if (Config.page.inStockWaitTime && inStock[store.name]) {
-			Logger.info(`[${store.name}] Has stock, waiting before trying to lookup again...`);
-		} else {
-			await lookup(browser, store);
-		}
+		await lookup(browser, store);
 	} catch (error) {
 		Logger.error(error);
 	}
