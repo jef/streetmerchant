@@ -17,6 +17,7 @@ import {NeweggCa} from './newegg-ca';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Pny} from './pny';
 import {Store} from './store';
 import {Zotac} from './zotac';
 
@@ -38,6 +39,7 @@ const masterList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Pny.name, Pny],
 	[Zotac.name, Zotac]
 ]);
 
