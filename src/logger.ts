@@ -35,7 +35,7 @@ export const Print = {
 	},
 	inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
 		if (color) {
-			return chalk.green.bold(`🚀🚨 ${buildProductString(link, store, true)} :: IN STOCK 🚨🚀`);
+			return chalk.bgGreen.white.bold(`🚀🚨 ${buildProductString(link, store, false)} :: IN STOCK 🚨🚀`);
 		}
 
 		const productString = `${buildProductString(link, store)} :: IN STOCK`;
@@ -44,6 +44,13 @@ export const Print = {
 		}
 
 		return `🚀🚨 ${productString} 🚨🚀`;
+	},
+	inStockWaiting(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return 'ℹ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('IN STOCK, WAITING');
+		}
+
+		return `ℹ ${buildProductString(link, store)} :: IN STOCK, WAITING`;
 	},
 	outOfStock(link: Link, store: Store, color?: boolean): string {
 		if (color) {
