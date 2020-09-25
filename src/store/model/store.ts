@@ -47,7 +47,7 @@ export type Store = {
 	linksBuilder?: {
 		builder: (docElement: cheerio.Cheerio, series: Series) => Link[];
 		ttl?: number;
-		urls: Array<{series: Series; url: string}>;
+		urls: Array<{series: Series; url: string | string[]}>;
 	};
 	labels: Labels;
 	name: string;
