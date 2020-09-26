@@ -27,7 +27,15 @@ export type Labels = {
 	outOfStock?: LabelQuery;
 };
 
+export type StatusCodeRangeArray = Array<(number | [number, number])>;
+
 export type Store = {
+	/**
+	 * The range of status codes which will trigger backoff, i.e. an increasing
+	 * delay between requests. Setting an empty array will disable the feature.
+	 * If not defined, the default range will be used: 403.
+	 */
+	backoffStatusCodes?: StatusCodeRangeArray;
 	disableAdBlocker?: boolean;
 	links: Link[];
 	linksBuilder?: {
