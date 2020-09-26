@@ -66,8 +66,8 @@ const notifications = {
 		webHookUrl: envOrArray(process.env.DISCORD_WEB_HOOK)
 	},
 	email: {
-		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		password: envOrString(process.env.EMAIL_PASSWORD),
+		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
 	},
 	phone: {
