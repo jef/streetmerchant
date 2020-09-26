@@ -113,6 +113,11 @@ const notifications = {
 	}
 };
 
+const nvidia = {
+	addToCardAttempts: envOrNumber(process.env.NVIDIA_ADD_TO_CART_ATTEMPTS, 10),
+	sessionTtl: envOrNumber(process.env.NVIDIA_SESSION_TTL, 60000)
+};
+
 const page = {
 	height: 1080,
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
@@ -135,6 +140,7 @@ export const Config = {
 	browser,
 	logLevel,
 	notifications,
+	nvidia,
 	page,
 	store
 };
