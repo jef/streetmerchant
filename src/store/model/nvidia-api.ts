@@ -25,6 +25,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['italy', {currency: 'EUR', drLocale: 'it_it', fe2060SuperId: null, fe3080Id: 5438796200, fe3090Id: null}],
 	['luxembourg', {currency: 'EUR', drLocale: 'fr_fr', fe2060SuperId: 5394902700, fe3080Id: 5438795700, fe3090Id: null}],
 	['netherlands', {currency: 'EUR', drLocale: 'nl_nl', fe2060SuperId: 5394903500, fe3080Id: 5438796700, fe3090Id: null}],
+	['norway', {currency: 'EUR', drLocale: 'nb_no', fe2060SuperId: null, fe3080Id: 5438797200, fe3090Id: 5438797100}],
 	['poland', {currency: 'PLN', drLocale: 'pl_pl', fe2060SuperId: null, fe3080Id: 5438797700, fe3090Id: null}],
 	['portugal', {currency: 'EUR', drLocale: 'en_gb', fe2060SuperId: null, fe3080Id: 5438794300, fe3090Id: null}],
 	['russia', {currency: 'RUB', drLocale: 'ru_ru', fe2060SuperId: null, fe3080Id: null, fe3090Id: null}],
