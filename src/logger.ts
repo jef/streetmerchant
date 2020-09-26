@@ -54,12 +54,17 @@ export const Print = {
 
 		return `✖ ${buildProductString(link, store)} :: CAPTCHA`;
 	},
-	inStock(link: Link, store: Store, color?: boolean): string {
+	inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
 		if (color) {
 			return chalk.bgGreen.white.bold(`🚀🚨 ${buildProductString(link, store, false)} :: IN STOCK 🚨🚀`);
 		}
 
-		return `🚀🚨 ${buildProductString(link, store)} :: IN STOCK 🚨🚀`;
+		const productString = `${buildProductString(link, store)} :: IN STOCK`;
+		if (sms) {
+			return productString;
+		}
+
+		return `🚀🚨 ${productString} 🚨🚀`;
 	},
 	inStockWaiting(link: Link, store: Store, color?: boolean): string {
 		if (color) {

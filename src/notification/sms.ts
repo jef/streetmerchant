@@ -27,7 +27,7 @@ export function sendSMS(link: Link, store: Store) {
 			}
 		] : undefined,
 		from: email.username,
-		subject: Print.inStock(link, store),
+		subject: Print.inStock(link, store, false, true),
 		text: link.cartUrl ? link.cartUrl : link.url,
 		to: generateAddress()
 	};
