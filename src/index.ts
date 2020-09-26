@@ -5,11 +5,18 @@ import {adBlocker} from './adblocker';
 import {fetchLinks} from './store/fetch-links';
 import {getSleepTime} from './util';
 import puppeteer from 'puppeteer-extra';
+import resourceBlock from 'puppeteer-extra-plugin-block-resources';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
-puppeteer.use(adBlocker);
+if (Config.browser.lowBandwidth) {
+	puppeteer.use(resourceBlock({
+		blockedTypes: new Set(['image', 'font'])
+	}));
+} else {
+	puppeteer.use(adBlocker);
+}
 
 /**
  * Starts the bot.

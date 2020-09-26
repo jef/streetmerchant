@@ -42,6 +42,9 @@ export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: B
 }
 
 export async function closePage(page: Page) {
-	await disableBlockerInPage(page);
+	if (!Config.browser.lowBandwidth) {
+		await disableBlockerInPage(page);
+	}
+
 	await page.close();
 }
