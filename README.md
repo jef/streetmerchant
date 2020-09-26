@@ -30,11 +30,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **Zotac** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | | `✔` | `✔` | `✔` | | `✔` |
+| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **PNY** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | | | | `✔` | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | | `✔` | `✔` | `✔` | | `✔` | `✔` |
 
 ## Installation and prerequisites
 
@@ -56,6 +56,10 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 > :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
 
+### Developer notes
+
+The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `.env` file.
+
 ### Customization
 
 To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All environment variables are **optional**._
@@ -71,7 +75,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
-| `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same store if it has cards in stock | In seconds, default: `0` |
+| `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
@@ -83,6 +87,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
 | `PUSHOVER_USER` | Pushover username | |
 | `PUSHOVER_PRIORITY` | Pushover message priority |
+| `PAGE_BACKOFF_MIN` | Minimum backoff time between retrying requests for the same store when a forbidden response is received | Default: `10000` |
+| `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
@@ -117,6 +123,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
+| Amazon (NL) | `amazon-nl`|
 | ASUS | `asus` |
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
@@ -129,6 +136,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| PNY | `pny`|
 | Zotac | `zotac`|
 
 <details>

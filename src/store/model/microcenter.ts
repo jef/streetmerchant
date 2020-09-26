@@ -10,7 +10,7 @@ const microCenterLocationToId: Map<string, string> = new Map([
 	['chicago', '151'],
 	['columbus', '141'],
 	['dallas', '131'],
-	['devin', '181'],
+	['denver', '181'],
 	['duluth', '065'],
 	['fairfax', '081'],
 	['flushing', '145'],
