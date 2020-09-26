@@ -33,7 +33,7 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		if (Config.page.inStockWaitTime && inStock[store.name]) {
+		if (Config.page.inStockWaitTime && inStock[link.url]) {
 			Logger.info(Print.inStockWaiting(link, store, true));
 			continue;
 		}
