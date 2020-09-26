@@ -25,7 +25,7 @@ export function sendEmail(link: Link, store: Store) {
 		from: email.username,
 		subject: Print.inStock(link, store),
 		text: link.cartUrl ? link.cartUrl : link.url,
-		to: email.username
+		to: email.to
 	};
 
 	transporter.sendMail(mailOptions, error => {

@@ -67,7 +67,8 @@ const notifications = {
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
-		username: envOrString(process.env.EMAIL_USERNAME)
+		username: envOrString(process.env.EMAIL_USERNAME),
+		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME))
 	},
 	phone: {
 		availableCarriers: new Map([
