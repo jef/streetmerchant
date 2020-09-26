@@ -3,6 +3,7 @@ import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
 import {AmazonNl} from './amazon-nl';
+import {AmazonUk} from './amazon-uk';
 import {Asus} from './asus';
 import {AsusDe} from './asus-de';
 import {BAndH} from './bandh';
@@ -29,6 +30,7 @@ const masterList = new Map([
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
 	[AmazonNl.name, AmazonNl],
+	[AmazonUk.name, AmazonUk],
 	[Asus.name, Asus],
 	[AsusDe.name, AsusDe],
 	[BAndH.name, BAndH],
