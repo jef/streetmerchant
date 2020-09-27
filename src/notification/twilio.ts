@@ -13,12 +13,12 @@ export function sendTwilioMessage(link: Link, store: Store) {
 		const message = `${Print.inStock(link, store)}\n${givenUrl}`;
 
 		try {
-			const message_ = await client.messages.create({
+			await client.messages.create({
 				body: message,
 				from: config.from,
 				to: config.to
 			});
-			Logger.info(`✔ twilio message sent ${(message_.sid)}`);
+			Logger.info('✔ twilio message sent');
 		} catch (error) {
 			Logger.error('✖ couldn\'t send twilio message', error);
 		}
