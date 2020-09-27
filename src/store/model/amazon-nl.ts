@@ -16,7 +16,7 @@ export const AmazonNl: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07MQ36Z6L'
+			url: 'https://www.amazon.nl/dp/B083GGYNQ6/'
 		},
 		{
 			brand: 'msi',
