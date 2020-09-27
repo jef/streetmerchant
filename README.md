@@ -104,6 +104,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID | |
+| `TWILIO_ACCOUNT_SID` | Twilio Account SID | Can be found on twilio.com/console |
+| `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
+| `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
+| `TWILIO_TO_NUMBER` | Mobile number to send SMS to | Include country code e.g +4401234567890 |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |

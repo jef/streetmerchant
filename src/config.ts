@@ -104,6 +104,12 @@ const notifications = {
 		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
 		chatId: envOrString(process.env.TELEGRAM_CHAT_ID)
 	},
+	twilio: {
+		accountSid: envOrString(process.env.TWILIO_ACCOUNT_SID),
+		authToken: envOrString(process.env.TWILIO_AUTH_TOKEN),
+		from: envOrString(process.env.TWILIO_FROM_NUMBER),
+		to: envOrString(process.env.TWILIO_TO_NUMBER)
+	},
 	twitter: {
 		accessTokenKey: envOrString(process.env.TWITTER_ACCESS_TOKEN_KEY),
 		accessTokenSecret: envOrString(process.env.TWITTER_ACCESS_TOKEN_SECRET),
