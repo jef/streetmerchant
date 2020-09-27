@@ -5,10 +5,9 @@ import twilio from 'twilio';
 
 const config = Config.notifications.twilio;
 
-const client = twilio(config.accountSid, config.authToken);
-
 export function sendTwilioMessage(link: Link, store: Store) {
 	(async () => {
+		const client = twilio(config.accountSid, config.authToken);
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 		const message = `${Print.inStock(link, store)}\n${givenUrl}`;
 
