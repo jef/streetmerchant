@@ -2,7 +2,7 @@ import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {Selector, pageIncludesLabels} from './includes-labels';
-import {closePage, delay, getSleepTime} from '../util';
+import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {filterStoreLink} from './filter';
@@ -66,15 +66,15 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		Logger.debug(Print.noResponse(link, store, true));
 	}
 
+	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
 	const statusCode = response?.status() ?? 0;
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+		if (statusCode === 429) {
+			Logger.warn(Print.rateLimit(link, store, true));
+		} else {
+			Logger.warn(Print.badStatusCode(link, store, statusCode, true));
+		}
 
-	if (statusCode === 429) {
-		Logger.warn(Print.rateLimit(link, store, true));
-		return statusCode;
-	}
-
-	if (statusCode >= 400) {
-		Logger.warn(Print.badStatusCode(link, store, response!.status(), true));
 		return statusCode;
 	}
 

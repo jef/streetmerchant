@@ -45,5 +45,12 @@ export type Store = {
 	labels: Labels;
 	name: string;
 	setupAction?: (browser: Browser) => void;
+	/**
+	 * The range of status codes which considered successful, i.e. without error
+	 * allowing request parsing to continue. Setting an empty array will cause
+	 * all requests to fail. If not defined, the default range will be used:
+	 * 0 -> 399 inclusive.
+	 */
+	successStatusCodes?: StatusCodeRangeArray;
 	waitUntil?: LoadEvent;
 };
