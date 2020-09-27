@@ -194,27 +194,29 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported countries
 
-| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
-|:---:|:---:|:---:|:---:|
-| austria | `✔` | | |
-| belgium | `✔` | | Nvidia supports debug |
-| canada | `✔` | | |
-| czechia | `✔` | | |
-| denmark | `✔` | | |
-| finland | `✔` | | |
-| france | `✔` | | |
-| germany | `✔` | | |
-| great_britain | `✔` | | |
-| ireland | `✔` | | |
-| italy | `✔` | | |
-| luxembourg | `✔` | | Nvidia supports debug |
-| netherlands | `✔` | | Nvidia supports debug |
-| poland | `✔` | | |
-| portugal | `✔` | | |
-| russia | | | Missing all IDs |
-| spain | `✔` | | |
-| sweden | `✔` | | |
-| usa | `✔` | `✔` | Nvidia supports debug |
+`COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
+
+| **Country** | **3080 FE** | **3090 FE** | **Test Card** | **Notes** |
+|:---:|:---:|:---:|:---:|:---:|
+| austria | `✔` | `✔` | `✔` | |
+| belgium | `✔` | `✔` | `✔` | |
+| canada | `✔` | `✔` | `✔` | |
+| czechia | `✔` | `✔` | `✔` | |
+| denmark | `✔` | `✔` | `✔` | |
+| finland | `✔` | `✔` | `✔` | |
+| france | `✔` | `✔` | `✔` | |
+| germany | `✔` | `✔` | `✔` | |
+| great_britain | `✔` | `✔` | `✔` | |
+| ireland | `✔` | `✔` | `✔` | |
+| italy | `✔` | `✔` | `✔` | |
+| luxembourg | `✔` | `✔` | `✔` | |
+| netherlands | `✔` | `✔` | `✔` | |
+| norway | `✔` | `✔` | `✔` | |
+| poland | `✔` | `✔` | `✔` | |
+| portugal | `✔` | | | RTX 3080 only |
+| spain | `✔` | `✔` | `✔` | |
+| sweden | `✔` | `✔` | `✔` | |
+| usa | `✔` | `✔` | `✔` | |
 
 ## FAQ
 
