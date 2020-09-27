@@ -6,16 +6,10 @@ export const Nvidia: Store = {
 			container: 'body',
 			text: ['are you a human?']
 		},
-		inStock: [
-			{
-				container: '.js-product-item .btn-cart',
-				text: ['add to cart']
-			},
-			{
-				container: '.main-container',
-				text: ['add to cart']
-			}
-		]
+		inStock: {
+			container: '.main-container',
+			text: ['add to cart']
+		}
 	},
 	links: [
 		{
