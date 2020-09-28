@@ -80,6 +80,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
+| `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
+| `NVIDIA_SESSION_TTL` | The time in seconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
@@ -104,6 +106,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID | |
+| `TWILIO_ACCOUNT_SID` | Twilio Account SID | Can be found on twilio.com/console |
+| `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
+| `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
+| `TWILIO_TO_NUMBER` | Mobile number to send SMS to | Include country code e.g +4401234567890 |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
