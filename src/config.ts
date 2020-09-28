@@ -43,7 +43,7 @@ function envOrString(environment: string | undefined, string?: string): string {
  * @param number Default number. If not set, is `0`.
  */
 function envOrNumber(environment: string | undefined, number?: number): number {
-	return Number(environment ?? (number ?? 0));
+	return environment ? Number(environment) : (number ?? 0);
 }
 
 const browser = {
