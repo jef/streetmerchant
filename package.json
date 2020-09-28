@@ -7,7 +7,7 @@
     "build": "rimraf ./build && tsc",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "start": "npm run build && node build/index.js",
+    "start": "npm run build && node -r dotenv/config build/index.js",
     "start:dev": "nodemon --config nodemon.json",
     "test:notification": "npm run build && node build/__test__/notification-test.js"
   },
