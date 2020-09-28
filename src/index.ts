@@ -36,6 +36,11 @@ async function main() {
 		args.push('--disable-setuid-sandbox');
 	}
 
+	// Add the address of the proxy server if defined
+	if (Config.proxy.address) {
+		args.push(`--proxy-server=http://${Config.proxy.address}:${Config.proxy.port}`);
+	}
+
 	const browser = await puppeteer.launch({
 		args,
 		defaultViewport: {

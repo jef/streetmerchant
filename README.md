@@ -95,6 +95,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
+| `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
+| `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models | Comma separated, e.g.: `founders edition,rog strix` |
@@ -200,27 +202,29 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported countries
 
-| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
-|:---:|:---:|:---:|:---:|
-| austria | `✔` | | |
-| belgium | `✔` | | Nvidia supports debug |
-| canada | `✔` | | |
-| czechia | `✔` | | |
-| denmark | `✔` | | |
-| finland | `✔` | | |
-| france | `✔` | | |
-| germany | `✔` | | |
-| great_britain | `✔` | | |
-| ireland | `✔` | | |
-| italy | `✔` | | |
-| luxembourg | `✔` | | Nvidia supports debug |
-| netherlands | `✔` | | Nvidia supports debug |
-| poland | `✔` | | |
-| portugal | `✔` | | |
-| russia | | | Missing all IDs |
-| spain | `✔` | | |
-| sweden | `✔` | | |
-| usa | `✔` | `✔` | Nvidia supports debug |
+`COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
+
+| **Country** | **3080 FE** | **3090 FE** | **Test Card** | **Notes** |
+|:---:|:---:|:---:|:---:|:---:|
+| austria | `✔` | `✔` | `✔` | |
+| belgium | `✔` | `✔` | `✔` | |
+| canada | `✔` | `✔` | `✔` | |
+| czechia | `✔` | `✔` | `✔` | |
+| denmark | `✔` | `✔` | `✔` | |
+| finland | `✔` | `✔` | `✔` | |
+| france | `✔` | `✔` | `✔` | |
+| germany | `✔` | `✔` | `✔` | |
+| great_britain | `✔` | `✔` | `✔` | |
+| ireland | `✔` | `✔` | `✔` | |
+| italy | `✔` | `✔` | `✔` | |
+| luxembourg | `✔` | `✔` | `✔` | |
+| netherlands | `✔` | `✔` | `✔` | |
+| norway | `✔` | `✔` | `✔` | |
+| poland | `✔` | `✔` | `✔` | |
+| portugal | `✔` | | | RTX 3080 only |
+| spain | `✔` | `✔` | `✔` | |
+| sweden | `✔` | `✔` | `✔` | |
+| usa | `✔` | `✔` | `✔` | |
 
 ## FAQ
 

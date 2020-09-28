@@ -43,7 +43,7 @@ function envOrString(environment: string | undefined, string?: string): string {
  * @param number Default number. If not set, is `0`.
  */
 function envOrNumber(environment: string | undefined, number?: number): number {
-	return Number(environment ?? (number ?? 0));
+	return environment ? Number(environment) : (number ?? 0);
 }
 
 const browser = {
@@ -133,6 +133,11 @@ const page = {
 	width: 1920
 };
 
+const proxy = {
+	address: envOrString(process.env.PROXY_ADDRESS, ''),
+	port: envOrNumber(process.env.PROXY_PORT, 80)
+};
+
 const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
@@ -148,5 +153,6 @@ export const Config = {
 	notifications,
 	nvidia,
 	page,
+	proxy,
 	store
 };
