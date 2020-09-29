@@ -104,6 +104,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `MAX_PRICE` | The max price acceptable for any card (helps avoid price gouging sellers).  No currency conversion. Store model must have maxPrice container defined (see amazon model example)| Default: no limit, e.g.: `1000` - cards above this are skipped. |
 | `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Currently only used by Nvidia, default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
