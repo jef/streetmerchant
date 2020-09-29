@@ -160,21 +160,21 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
-	if (store.labels.maxPrice) {
+	if (store.labels.maxPrice && Config.store.maxPrice) {
 		const cardPriceContainer = await page.$(
-			store.labels.maxPrice.container ?? "body"
+			store.labels.maxPrice.container ?? 'body'
 		);
 
 		const cardPrice = await page.evaluate(
-			(element) => element.innerHTML,
+			element => element.innerHTML,
 			cardPriceContainer
 		);
 
-		const limit = parseFloat(
-			store.labels.maxPrice.text[0].toString().replace(/\,/g, "")
-		);
-		const cardpriceNumber = parseFloat(cardPrice.replace(/\,/g, ""));
-		Logger.debug("Card Price: " + cardpriceNumber + " | Limit: " + limit);
+		/* Const limit = parseFloat(store.labels.maxPrice.text[0].toString().replace(/\,/g, '')); */
+
+		const limit = Config.store.maxPrice;
+		const cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, ''));
+		Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
 
 		if (cardpriceNumber > limit) {
 			Logger.info(
