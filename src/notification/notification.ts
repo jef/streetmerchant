@@ -21,12 +21,22 @@ export function sendNotification(link: Link, store: Store) {
 		sendEmail(link, store);
 	}
 
-	if (notifications.phone.number) {
+	if (notifications.phone.numbers) {
 		Logger.debug('↗ sending sms');
-		const carrier = notifications.phone.carrier;
-		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
-			sendSMS(link, store);
+
+		const carriers: any[] = notifications.phone.carriers.split(',');
+		const numbers: any[] = notifications.phone.numbers.split(',');
+
+		if (carriers.length !== numbers.length) {
+			Logger.error(`✖ couldn't send sms. The amount of numbers(${numbers.length}) does not match the amount of carriers(${carriers.length}). \n PHONE_NUMBER="9998887777,6665554444"\n PHONE_CARRIER="att,verizon".`);
 		}
+
+		carriers.forEach((carrier, i) => {
+			const number: string = numbers[i];
+			if (carrier && notifications.phone.availableCarriers.has(carrier)) {
+				sendSMS(link, store, carrier, number);
+			}
+		});
 	}
 
 	if (notifications.playSound) {

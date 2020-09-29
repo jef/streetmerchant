@@ -4,7 +4,7 @@ import {Config} from '../config';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 
-if (Config.notifications.phone.number && !Config.notifications.email.username) {
+if (Config.notifications.phone.numbers && !Config.notifications.email.username) {
 	Logger.warn('✖ in order to recieve sms alerts, email notifications must also be configured');
 }
 
@@ -17,8 +17,8 @@ const transporter = nodemailer.createTransport({
 	},
 	service: 'gmail'
 });
-
-export function sendSMS(link: Link, store: Store) {
+export function sendSMS(link: Link, store: Store, carrier: string, number: string) {
+	const toAddress: string = generateAddress(carrier, number);
 	const mailOptions: Mail.Options = {
 		attachments: link.screenshot ? [
 			{
@@ -29,23 +29,21 @@ export function sendSMS(link: Link, store: Store) {
 		from: email.username,
 		subject: Print.inStock(link, store, false, true),
 		text: link.cartUrl ? link.cartUrl : link.url,
-		to: generateAddress()
+		to: toAddress
 	};
-
 	transporter.sendMail(mailOptions, error => {
 		if (error) {
 			Logger.error('✖ couldn\'t send sms', error);
 		} else {
-			Logger.info('✔ sms sent');
+			Logger.info(`✔ sms sent to: ${toAddress}`);
 		}
 	});
 }
 
-function generateAddress() {
-	const carrier = phone.carrier;
-
+function generateAddress(carrier: string, number: string) {
 	if (carrier && phone.availableCarriers.has(carrier)) {
-		return [phone.number, phone.availableCarriers.get(carrier)].join('@');
+		Logger.info([number, phone.availableCarriers.get(carrier)].join('@').concat(';'));
+		return [number, phone.availableCarriers.get(carrier)].join('@').concat(';');
 	}
 
 	Logger.error('✖ unknown carrier', carrier);
