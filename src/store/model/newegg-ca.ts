@@ -10,20 +10,8 @@ export const NeweggCa: Store = {
 			container: '#landingpage-cart .btn-primary span',
 			text: ['add to cart']
 		},
-		/* Examples of multiple container checks, multiple text matching - this example is using incorrect cotainers for 'bannedSeller' - for reference only
-		bannedSeller: [{
-				container:
-					'#landingpage-price > div > div > ul > li.price-current > strong',
-				text: ['440', '448'],
-			},
-			{
-				container:
-					'#landingpage-price > div > div > ul > li.price-current > sup',	// cents - this is not a seller but example of second container entry
-				text: ['95'],
-			},
-		], */
 		maxPrice: {
-			// Max price set in .env - but Element type currently requires a 'text' field.  set empty string here (has no effect).
+			// Max price value set in .env - but Element type currently requires a 'text' field.  set empty string in text: for now... (has no effect).
 			container:
 				'#landingpage-price > div > div > ul > li.price-current > strong',
 			text: ['']
