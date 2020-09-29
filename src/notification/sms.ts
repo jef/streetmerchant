@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 	service: 'gmail'
 });
 export function sendSMS(link: Link, store: Store, carrier: string, number: string) {
-	const toAddress: string = generateAddress(carrier, number);
+	const address = generateAddress(carrier, number);
 	const mailOptions: Mail.Options = {
 		attachments: link.screenshot ? [
 			{
@@ -29,22 +29,20 @@ export function sendSMS(link: Link, store: Store, carrier: string, number: strin
 		from: email.username,
 		subject: Print.inStock(link, store, false, true),
 		text: link.cartUrl ? link.cartUrl : link.url,
-		to: toAddress
+		to: address
 	};
 	transporter.sendMail(mailOptions, error => {
 		if (error) {
 			Logger.error('✖ couldn\'t send sms', error);
 		} else {
-			Logger.info(`✔ sms sent to: ${toAddress}`);
+			Logger.info(`✔ sms sent to: ${address}`);
 		}
 	});
 }
 
 function generateAddress(carrier: string, number: string) {
 	if (carrier && phone.availableCarriers.has(carrier)) {
-		Logger.info([number, phone.availableCarriers.get(carrier)].join('@').concat(';'));
 		return [number, phone.availableCarriers.get(carrier)].join('@').concat(';');
 	}
-
 	Logger.error('✖ unknown carrier', carrier);
 }
