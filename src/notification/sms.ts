@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 	service: 'gmail'
 });
 export function sendSMS(link: Link, store: Store, carrier: string, number: string) {
-	const address = generateAddress(carrier, number);
+	const address: string = generateAddress(carrier, number);
 	const mailOptions: Mail.Options = {
 		attachments: link.screenshot ? [
 			{
@@ -40,9 +40,11 @@ export function sendSMS(link: Link, store: Store, carrier: string, number: strin
 	});
 }
 
-function generateAddress(carrier: string, number: string) {
+function generateAddress(carrier: string, number: string): string {
 	if (carrier && phone.availableCarriers.has(carrier)) {
 		return [number, phone.availableCarriers.get(carrier)].join('@').concat(';');
 	}
+
 	Logger.error('✖ unknown carrier', carrier);
+	return '';
 }
