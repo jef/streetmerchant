@@ -44,6 +44,8 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 
 ### Quick overview
 
+#### Native installation (recommended)
+
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
@@ -55,6 +57,12 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 > :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
+
+#### Docker image (for serverlike systems)
+
+If you are familiar with docker and want to run nvidia-snatcher inside of a container, thare is a [docker image](https://hub.docker.com/r/tom300z/nvidia-snatcher-docker) available. The image automatically downloads and runs the latest nvidia-snatcher.
+
+Please post all issues regarding the docker image on the [maintainers github](https://github.com/tom300z/nvidia-snatcher-docker).
 
 ### Developer notes
 
