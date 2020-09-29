@@ -25,6 +25,7 @@ export type Labels = {
 	container?: string;
 	inStock?: LabelQuery;
 	outOfStock?: LabelQuery;
+	maxPrice?: Element;
 };
 
 export type Store = {

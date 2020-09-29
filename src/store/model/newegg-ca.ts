@@ -9,7 +9,27 @@ export const NeweggCa: Store = {
 		inStock: {
 			container: '#landingpage-cart .btn-primary span',
 			text: ['add to cart']
-		}
+		},
+		 /*
+		bannedSeller: [
+			//example of multiple container checks, multiple text matching
+			{
+				container:
+					"#landingpage-price > div > div > ul > li.price-current > strong",	// dollars
+				text: ["440", "448"], // - this is not a seller but example of multiple  text entries
+			},
+			{
+				container:
+					"#landingpage-price > div > div > ul > li.price-current > sup",	// cents - this is not a seller but example of second container entry
+				text: ["95"],
+			},
+		],*/
+		maxPrice: {
+			//set max price in whole dollar amounts, do not include deciaml or "cents"
+			container:
+				"#landingpage-price > div > div > ul > li.price-current > strong", // dollars
+			text: ["400"],
+		},
 	},
 	links: [
 		{

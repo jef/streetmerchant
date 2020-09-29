@@ -47,6 +47,27 @@ export const Print = {
 
 		return `✖ ${buildProductString(link, store)} :: BANNED SELLER`;
 	},
+	maxPrice(
+		link: Link,
+		store: Store,
+		limit: string,
+		price: string,
+		color?: boolean
+	): string {
+		if (color) {
+			return (
+				"✖ " +
+				buildProductString(link, store, true) +
+				" :: " +
+				chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${limit}`)
+			);
+		}
+
+		return `✖ ${buildProductString(
+			link,
+			store
+		)} :: PRICE ${price} EXCEEDS LIMIT ${limit}`;
+	},
 	captcha(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' + chalk.yellow('CAPTCHA');

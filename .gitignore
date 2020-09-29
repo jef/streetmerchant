@@ -4,10 +4,12 @@
 build/
 node_modules/
 
-.env
+.env*
+.*env
 success-*.png
 
 *.wav
 *.mp3
 *.flac
 *.exe
+desktop.ini

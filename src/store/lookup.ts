@@ -160,6 +160,36 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
+	if (store.labels.maxPrice) {
+		const cardPriceContainer = await page.$(
+			store.labels.maxPrice.container ?? "body"
+		);
+
+		const cardPrice = await page.evaluate(
+			(element) => element.innerHTML,
+			cardPriceContainer
+		);
+
+		const limit = parseFloat(
+			store.labels.maxPrice.text[0].toString().replace(/\,/g, "")
+		);
+		const cardpriceNumber = parseFloat(cardPrice.replace(/\,/g, ""));
+		Logger.debug("Card Price: " + cardpriceNumber + " | Limit: " + limit);
+
+		if (cardpriceNumber > limit) {
+			Logger.info(
+				Print.maxPrice(
+					link,
+					store,
+					limit.toString(),
+					cardpriceNumber.toString(),
+					true
+				)
+			);
+			return false;
+		}
+	}
+
 	if (store.labels.captcha) {
 		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
 			Logger.warn(Print.captcha(link, store, true));
