@@ -33,6 +33,7 @@ export const Asus: Store = {
 			url: 'https://store.asus.com/us/item/202009AM150000003/'
 		}
 	],
-	name: 'asus'
+	name: 'asus',
+	successStatusCodes: [[0, 399], 404]
 };
 
