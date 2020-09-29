@@ -9,6 +9,12 @@ export const Amazon: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			// Max price set in .env - but Element type currently requires a 'text' field.  set empty string here (has no effect).
+			container:
+				'#priceblock_ourprice',
+			text: ['']
 		}
 	},
 	links: [

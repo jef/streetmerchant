@@ -155,10 +155,8 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			cardPriceContainer
 		);
 
-		/* Const limit = parseFloat(store.labels.maxPrice.text[0].toString().replace(/\,/g, '')); */
-
 		const limit = Config.store.maxPrice;
-		const cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, ''));
+		const cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, '').match(/\d+/g).join('.'));
 		Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
 
 		if (cardpriceNumber > limit) {
