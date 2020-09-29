@@ -1,6 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Config} from './config';
 import {Logger} from './logger';
+import {StatusCodeRangeArray} from './store/model';
 import {disableBlockerInPage} from './adblocker';
 
 export function getSleepTime() {
@@ -11,6 +12,25 @@ export async function delay(ms: number) {
 	return new Promise(resolve => {
 		setTimeout(resolve, ms);
 	});
+}
+
+export function isStatusCodeInRange(statusCode: number, range: StatusCodeRangeArray) {
+	for (const value of range) {
+		let min: number;
+		let max: number;
+		if (typeof value === 'number') {
+			min = value;
+			max = value;
+		} else {
+			[min, max] = value;
+		}
+
+		if (min <= statusCode && statusCode <= max) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 export async function usingResponse<T>(

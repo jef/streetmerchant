@@ -2,21 +2,15 @@ import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
 import {Selector, pageIncludesLabels} from './includes-labels';
-import {closePage, delay, getSleepTime} from '../util';
+import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {filterStoreLink} from './filter';
 import open from 'open';
+import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
 
-type Backoff = {
-	count: number;
-	time: number;
-};
-
 const inStock: Record<string, boolean> = {};
-
-const storeBackoff: Record<string, Backoff> = {};
 
 /**
  * Responsible for looking up information about a each product within
@@ -50,18 +44,25 @@ async function lookup(browser: Browser, store: Store) {
 			}
 		}
 
+		let statusCode = 0;
+
 		try {
-			await lookupCard(browser, store, page, link);
+			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
 			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
 		}
+
+		// Must apply backoff before closing the page, e.g. if CloudFlare is
+		// used to detect bot traffic, it introduces a 5 second page delay
+		// before redirecting to the next page
+		await processBackoffDelay(store, link, statusCode);
 
 		await closePage(page);
 	}
 	/* eslint-enable no-await-in-loop */
 }
 
-async function lookupCard(browser: Browser, store: Store, page: Page, link: Link) {
+async function lookupCard(browser: Browser, store: Store, page: Page, link: Link): Promise<number> {
 	const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
@@ -69,34 +70,16 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 		Logger.debug(Print.noResponse(link, store, true));
 	}
 
-	let backoff = storeBackoff[store.name];
+	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
+	const statusCode = response?.status() ?? 0;
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+		if (statusCode === 429) {
+			Logger.warn(Print.rateLimit(link, store, true));
+		} else {
+			Logger.warn(Print.badStatusCode(link, store, statusCode, true));
+		}
 
-	if (!backoff) {
-		backoff = {count: 0, time: Config.browser.minBackoff};
-		storeBackoff[store.name] = backoff;
-	}
-
-	if (response?.status() === 403) {
-		Logger.warn(Print.backoff(link, store, backoff.time, true));
-		await delay(backoff.time);
-		backoff.count++;
-		backoff.time = Math.min(backoff.time * 2, Config.browser.maxBackoff);
-		return;
-	}
-
-	if (response?.status() === 429) {
-		Logger.warn(Print.rateLimit(link, store, true));
-		return;
-	}
-
-	if ((response?.status() || 200) >= 400) {
-		Logger.warn(Print.badStatusCode(link, store, response!.status(), true));
-		return;
-	}
-
-	if (backoff.count > 0) {
-		backoff.count--;
-		backoff.time = Math.max(backoff.time / 2, Config.browser.minBackoff);
+		return statusCode;
 	}
 
 	if (await lookupCardInStock(store, page, link)) {
@@ -128,6 +111,8 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 			await page.screenshot({path: link.screenshot});
 		}
 	}
+
+	return statusCode;
 }
 
 async function lookupCardInStock(store: Store, page: Page, link: Link) {
