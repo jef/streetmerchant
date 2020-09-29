@@ -1,6 +1,74 @@
+import {Link, Series} from '../store';
+import {logger} from '../../../logger';
+
 export interface Card {
 	brand: string;
 	model: string;
+}
+
+interface LinksBuilderOptions {
+	productsSelector: string;
+	sitePrefix: string;
+	titleAttribute?: string;
+	titleSelector: string;
+	urlSelector?: string;
+}
+
+const isPartialUrlRegExp = /^\/[a-z]/i;
+
+export function getProductLinksBuilder(options: LinksBuilderOptions) {
+	/* eslint-disable unicorn/no-fn-reference-in-iterator */
+	return (docElement: cheerio.Cheerio, series: Series): Link[] => {
+		const productElements = docElement.find(options.productsSelector);
+		const links: Link[] = [];
+		for (let i = 0; i < productElements.length; i++) {
+			const productElement = productElements.eq(i);
+			const titleElement = productElement.find(options.titleSelector).first();
+			let title: string;
+
+			if (options.titleAttribute) {
+				title = titleElement.attr()?.[options.titleAttribute];
+			} else {
+				title = titleElement.text()?.replace(/\n/g, ' ').trim();
+			}
+
+			if (!title) {
+				continue;
+			}
+
+			let urlElement = titleElement;
+
+			if (options.urlSelector) {
+				urlElement = urlElement.find(options.urlSelector).first();
+			}
+
+			let url = urlElement.attr()?.href;
+
+			if (!url) {
+				continue;
+			}
+
+			if (isPartialUrlRegExp.exec(url)) {
+				url = options.sitePrefix + url;
+			}
+
+			const card = parseCard(title);
+
+			if (card) {
+				links.push({
+					brand: card.brand as any,
+					model: card.model,
+					series,
+					url
+				});
+			} else {
+				logger.error(`Failed to parse card: ${title}`);
+			}
+		}
+
+		return links;
+	};
+	/* eslint-enable unicorn/no-fn-reference-in-iterator */
 }
 
 export function parseCard(name: string): Card | null {
