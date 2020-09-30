@@ -222,8 +222,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | belgium | `✔` | `✔` | `✔` | |
 | canada | `✔` | `✔` | `✔` | |
 | czechia | `✔` | `✔` | `✔` | |
-| denmark | `✔` | `✔` | `✔` | |
-| finland | `✔` | `✔` | `✔` | |
+| denmark | `✔` | | `✔` | Missing RTX 3090 |
+| finland | `✔` | | `✔` | Missing RTX 3090 |
 | france | `✔` | `✔` | `✔` | |
 | germany | `✔` | `✔` | `✔` | |
 | great_britain | `✔` | `✔` | `✔` | |
