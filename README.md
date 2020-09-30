@@ -150,15 +150,15 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Zotac | `zotac`|
 
 #### Supported Brands and Models
-| **Brand** | **Model 1** | **Model 2** | **Model 3** | **Model 4** | **Model 5** | **Model 6** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| asus | rog strix | rog strix oc | strix | tuf | tuf oc | |
-| evga | ftw3 | ftw3 ultra | xc3 black | xc3 | xc3 ultra | |
-| gigabyte | eagle | eagle oc | gaming | gaming oc | | |
-| msi | gaming x trio | ventus 3x | ventus 3x oc | | | |
-| nvidia | founders edition | | | | | |
-| pny | dual fan | xlr8 | xlr8 rgb | | | |
-| zotac | trinity | trinity oc | | | | |
+| **Brand** | **Model** |
+|:---:|---|
+| asus | rog strix, rog strix oc, strix, tuf, tuf oc |
+| evga | ftw3, ftw3 ultra, xc3 black, xc3, xc3 ultra |
+| gigabyte | eagle, eagle oc, gaming, gaming oc |
+| msi | gaming x trio, ventus 3x, ventus 3x oc |
+| nvidia | founders edition |
+| pny | dual fan, xlr8, xlr8 rgb |
+| zotac | trinity, trinity oc |
 
 <details>
 <summary>Micro Center stores</summary>
