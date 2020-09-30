@@ -19,6 +19,7 @@ import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Pny} from './pny';
 import {Store} from './store';
+import {TopAchat} from './topachat';
 import {Zotac} from './zotac';
 
 const masterList = new Map([
@@ -40,7 +41,8 @@ const masterList = new Map([
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Pny.name, Pny],
-	[Zotac.name, Zotac]
+	[Zotac.name, Zotac],
+	[TopAchat.name, TopAchat]
 ]);
 
 const list = new Map();

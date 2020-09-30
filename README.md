@@ -148,6 +148,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Office Depot | `officedepot`|
 | PNY | `pny`|
 | Zotac | `zotac`|
+| TopAchat | `topachat`|
 
 <details>
 <summary>Micro Center stores</summary>
@@ -193,6 +194,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | nvidia | founders edition |
 | pny | dual fan, xlr8, xlr8 rgb |
 | zotac | trinity, trinity oc |
+| kfa2 | sg |
+| gainward | phoenix, phoenix gs |
 
 #### Supported carriers
 
