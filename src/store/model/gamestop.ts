@@ -5,6 +5,10 @@ export const Gamestop: Store = {
 		inStock: {
 			container: '.add-to-cart',
 			text: ['add to cart']
+		},
+		outOfStock: {
+			container: '.add-to-cart',
+			text: ['not available']
 		}
 	},
 	links: [
