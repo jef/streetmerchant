@@ -3,7 +3,7 @@ import {Store} from './store';
 export const Gamestop: Store = {
 	labels: {
 		inStock: {
-			container: '#item_add_cart',
+			container: '.add-to-cart',
 			text: ['add to cart']
 		}
 	},
@@ -24,4 +24,3 @@ export const Gamestop: Store = {
 	name: 'gamestop',
 	successStatusCodes: [[0, 399], 404]
 };
-
