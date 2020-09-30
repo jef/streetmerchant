@@ -244,7 +244,14 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 **Q: Will this harm my computer?** No.
 
-**Q: Have you gotten a card yet?** No. :cry:
+**Q: Have you gotten a card yet?** YES! :tada: :rocket:
+
+<details>
+<summary>Screenshot</summary>
+
+![screenshot](https://i.imgur.com/59CRzGq.png)
+
+</details>
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
