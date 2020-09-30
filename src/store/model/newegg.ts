@@ -9,6 +9,10 @@ export const Newegg: Store = {
 		inStock: {
 			container: '#landingpage-cart .btn-primary span',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: '#landingpage-price > div > div > ul > li.price-current > strong',
+			euroFormat: false
 		}
 	},
 	links: [

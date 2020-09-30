@@ -151,24 +151,25 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		);
 
 		const cardPrice = await page.evaluate(
-			element => element.innerHTML,
+			element => element.textContent,
 			cardPriceContainer
 		);
 
+		let cardpriceNumber;
+		if (store.labels.maxPrice.euroFormat) {
+			Logger.debug('Euro format conversion');
+			// Parse for price format D.DDD,cc -> converted to DDDD.cc
+			cardpriceNumber = Number.parseFloat(cardPrice.replace(/\./g, '').match(/\d+/g).join('.'));
+		} else {
+			// Parse for price format D,DDD.cc -> converted to DDDD.cc
+			cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, '').match(/\d+/g).join('.'));
+		}
+
 		const limit = Config.store.maxPrice;
-		const cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, '').match(/\d+/g).join('.'));
 		Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
 
 		if (cardpriceNumber > limit) {
-			Logger.info(
-				Print.maxPrice(
-					link,
-					store,
-					limit.toString(),
-					cardpriceNumber.toString(),
-					true
-				)
-			);
+			Logger.info(Print.maxPrice(link, store,	limit.toString(), cardpriceNumber.toString(), true));
 			return false;
 		}
 	}

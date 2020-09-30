@@ -11,10 +11,7 @@ export const Amazon: Store = {
 			text: ['add to cart']
 		},
 		maxPrice: {
-			// Max price set in .env - but Element type currently requires a 'text' field.  set empty string here (has no effect).
-			container:
-				'#priceblock_ourprice',
-			text: ['']
+			container: 'span[class*="PriceString"]'
 		}
 	},
 	links: [

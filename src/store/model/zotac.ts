@@ -6,6 +6,10 @@ export const Zotac: Store = {
 		inStock: {
 			container: '.add-to-cart-wrapper',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div[class="product-shop"] span[class="price"]',
+			euroFormat: false
 		}
 	},
 	links: [

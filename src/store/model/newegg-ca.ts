@@ -11,10 +11,8 @@ export const NeweggCa: Store = {
 			text: ['add to cart']
 		},
 		maxPrice: {
-			// Max price value set in .env - but Element type currently requires a 'text' field.  set empty string in text: for now... (has no effect).
-			container:
-				'#landingpage-price > div > div > ul > li.price-current > strong',
-			text: ['']
+			container: '#landingpage-price > div > div > ul > li.price-current > strong',
+			euroFormat: false
 		}
 	},
 	links: [
