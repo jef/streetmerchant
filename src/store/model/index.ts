@@ -28,6 +28,7 @@ import {Overclockers} from './overclockers';
 import {Pny} from './pny';
 import {Scan} from './scan';
 import {Store} from './store';
+import {Very} from './very';
 import {Zotac} from './zotac';
 import {config} from '../../config';
 import {logger} from '../../logger';
@@ -62,6 +63,7 @@ const masterList = new Map([
 	[Overclockers.name, Overclockers],
 	[Pny.name, Pny],
 	[Scan.name, Scan],
+	[Very.name, Very],
 	[Zotac.name, Zotac]
 ]);
 
