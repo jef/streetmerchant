@@ -183,6 +183,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 </details>
 
+#### Supported Brands and Models
+
+| **Brand** | **Model** |
+|:---:|---|
+| asus | rog strix, rog strix oc, strix, tuf, tuf oc |
+| evga | ftw3, ftw3 ultra, xc3 black, xc3, xc3 ultra |
+| gigabyte | eagle, eagle oc, gaming, gaming oc |
+| msi | gaming x trio, ventus 3x, ventus 3x oc |
+| nvidia | founders edition |
+| pny | dual fan, xlr8, xlr8 rgb |
+| zotac | trinity, trinity oc |
+
 #### Supported carriers
 
 | **Carrier** | **Environment variable** | **Notes** |
@@ -211,8 +223,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | belgium | `✔` | `✔` | `✔` | |
 | canada | `✔` | `✔` | `✔` | |
 | czechia | `✔` | `✔` | `✔` | |
-| denmark | `✔` | `✔` | `✔` | |
-| finland | `✔` | `✔` | `✔` | |
+| denmark | `✔` | | `✔` | Missing RTX 3090 |
+| finland | `✔` | | `✔` | Missing RTX 3090 |
 | france | `✔` | `✔` | `✔` | |
 | germany | `✔` | `✔` | `✔` | |
 | great_britain | `✔` | `✔` | `✔` | |
