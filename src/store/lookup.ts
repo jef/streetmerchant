@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
-import {Selector, pageIncludesLabels} from './includes-labels';
+import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -145,31 +145,10 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
-	if (store.labels.maxPrice && Config.store.maxPrice) {
-		const cardPriceContainer = await page.$(
-			store.labels.maxPrice.container ?? 'body'
-		);
-
-		const cardPrice = await page.evaluate(
-			element => element.textContent,
-			cardPriceContainer
-		);
-
-		let cardpriceNumber;
-		if (store.labels.maxPrice.euroFormat) {
-			Logger.debug('Euro format conversion');
-			// Parse for price format D.DDD,cc -> converted to DDDD.cc
-			cardpriceNumber = Number.parseFloat(cardPrice.replace(/\./g, '').match(/\d+/g).join('.'));
-		} else {
-			// Parse for price format D,DDD.cc -> converted to DDDD.cc
-			cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, '').match(/\d+/g).join('.'));
-		}
-
-		const limit = Config.store.maxPrice;
-		Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
-
-		if (cardpriceNumber > limit) {
-			Logger.info(Print.maxPrice(link, store,	limit.toString(), cardpriceNumber.toString(), true));
+	if (store.labels.maxPrice) {
+		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, Config.store.maxPrice, baseOptions);
+		if (priceLimit) {
+			Logger.info(Print.maxPrice(link, store,	priceLimit, true));
 			return false;
 		}
 	}
