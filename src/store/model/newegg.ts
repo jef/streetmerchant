@@ -96,7 +96,7 @@ export const Newegg: Store = {
 			series: '3080',
 			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080eagle-oc-10gd/p/N82E16814932330'
 		},
-				{
+		{
 			brand: 'gigabyte',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137336',
 			model: 'aorus master',
