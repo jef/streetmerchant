@@ -189,7 +189,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|
 | `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
-| `gigabyte` | `eagle`, `eagle oc`, `gaming`, `gaming oc` |
+| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
