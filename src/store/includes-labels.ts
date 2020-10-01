@@ -1,4 +1,4 @@
-import {Element, LabelQuery} from './model';
+import {Element, LabelQuery, Pricing} from './model';
 import {Logger} from '../logger';
 import {Page} from 'puppeteer';
 
@@ -89,4 +89,23 @@ export async function extractPageContents(page: Page, selector: Selector): Promi
 export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
 	return searchLabels.some(label => domTextLowerCase.includes(label));
+}
+
+export async function cardPriceLimit(page: Page, query: Pricing, max: number, options: Selector) {
+	if (!max) { 
+		return null;
+	}
+
+	const selector = {...options, selector: query.container};
+	const cardPrice = await extractPageContents(page, selector);
+	
+	if (cardPrice) {
+		const priceSeperator = query.euroFormat ? '/[.]/g' : '/,/g';
+		const cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
+
+		Logger.debug(`Card Price: '${cardpriceNumber} + | Limit: ${max}`);
+		return cardpriceNumber > max ? cardpriceNumber : null;
+	}
+
+	return null;
 }

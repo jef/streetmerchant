@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
-import {Selector, extractPageContents, pageIncludesLabels} from './includes-labels'; // Remove extractPageContents after price check helper func implemented
+import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -146,26 +146,9 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		//  MOVE THE FOLLOWING INTO NEW HELPER FUNCTION
-		let priceExceeded; // Temporary
-		let cardpriceNumber = 0; // Temporary
-		const cardPrice = await extractPageContents(page, {...baseOptions, selector: store.labels.maxPrice.container});
-		if (cardPrice) {
-			Logger.debug(cardPrice);
-
-			const priceSeperator = store.labels.maxPrice.euroFormat ? '/[.]/g' : '/,/g';
-			cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
-
-			const limit = Config.store.maxPrice;
-			Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
-
-			priceExceeded = Config.store.maxPrice ? cardpriceNumber > Config.store.maxPrice : false;
-		}
-		//  END HELPER FUNCTION
-
-		if (priceExceeded) {
-			// Logger.info(Print.maxPrice(link, store,	limit.toString(), cardpriceNumber.toString(), true));
-			Logger.info(Print.maxPrice(link, store,	Config.store.maxPrice.toString(), cardpriceNumber.toString(), true));
+		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, Config.store.maxPrice, baseOptions);
+		if (priceLimit) {
+			Logger.info(Print.maxPrice(link, store,	priceLimit, true));
 			return false;
 		}
 	}
