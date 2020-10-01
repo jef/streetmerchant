@@ -3,6 +3,8 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
 jobs:
   build-lint:
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Cyc7nrz)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8)](https://discord.gg/Cyc7nrz)
 
 [FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
@@ -30,7 +30,7 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **PNY** | **Zotac** |
+| | Adorama | Amazon | Amazon (CA) | ASUS | B&H | Best Buy | Best Buy (CA) | EVGA | Micro Center | Newegg | Newegg (CA) | Nvidia | Office Depot | PNY | Zotac |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | | | | | | | | `✔` | |
 | **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
@@ -66,7 +66,7 @@ To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make
 
 Here is a list of variables that you can use to customize your newly copied `.env` file:
 
-| **Environment variable** | **Description** | **Notes** |
+| Environment variable | Description | Notes |
 |:---:|---|---|
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier) | Default: `false` |
@@ -112,12 +112,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
 | `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
 | `TWILIO_TO_NUMBER` | Mobile number to send SMS to | Include country code e.g +4401234567890 |
-| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key | |
 | `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret | |
 | `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
+| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -140,6 +140,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy (CA) | `bestbuy-ca`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
+| Gamestop | `gamestop`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
@@ -152,7 +153,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 <details>
 <summary>Micro Center stores</summary>
 
-| **Store name** |
+| Store name |
 |:---:|
 | `brooklyn` |
 | `brentwood` |
@@ -184,19 +185,19 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported Brands and Models
 
-| **Brand** | **Model** |
+| Brand | Model |
 |:---:|---|
-| asus | rog strix, rog strix oc, strix, tuf, tuf oc |
-| evga | ftw3, ftw3 ultra, xc3 black, xc3, xc3 ultra |
-| gigabyte | eagle, eagle oc, gaming, gaming oc |
-| msi | gaming x trio, ventus 3x, ventus 3x oc |
-| nvidia | founders edition |
-| pny | dual fan, xlr8, xlr8 rgb |
-| zotac | trinity, trinity oc |
+| `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
+| `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
+| `gigabyte` | `eagle`, `eagle oc`, `gaming`, `gaming oc` |
+| `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
+| `nvidia` | `founders edition` |
+| `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
+| `zotac` | `trinity`, `trinity oc` |
 
 #### Supported carriers
 
-| **Carrier** | **Environment variable** | **Notes** |
+| Carrier | Environment variable | Notes |
 |:---:|:---:|:---:|
 | AT&T | `att`| |
 | Bell | `bell` | |
@@ -216,7 +217,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 `COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
 
-| **Country** | **3080 FE** | **3090 FE** | **Test Card** | **Notes** |
+| Country | 3080 FE | 3090 FE | Test Card | Notes |
 |:---:|:---:|:---:|:---:|:---:|
 | austria | `✔` | `✔` | `✔` | |
 | belgium | `✔` | `✔` | `✔` | |
@@ -255,7 +256,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
-**Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
+**Q: I got a problem and need help!** Join the [Discord](https://discord.gg/Cyc7nrz) or file an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
 **Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
 
