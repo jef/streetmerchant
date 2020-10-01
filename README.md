@@ -44,6 +44,8 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 
 ### Quick overview
 
+#### Native installation
+
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
@@ -55,6 +57,17 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 > :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
+
+#### Docker image (To run inside containers)
+
+Available via GitHub Container Registry. 
+
+| Tag | Note |
+|:---:|---|
+| latest | Latest stable build |
+| nightly | Latest HEAD build, could be unstable |
+
+Use `docker run -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
 
 ### Developer notes
 
