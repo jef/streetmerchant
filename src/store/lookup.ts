@@ -33,7 +33,7 @@ async function lookup(browser: Browser, store: Store) {
 		}
 
 		const page = await browser.newPage();
-		page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
+		page.setDefaultTimeout(Config.page.timeout);
 		await page.setUserAgent(Config.page.userAgent);
 
 		if (store.disableAdBlocker) {

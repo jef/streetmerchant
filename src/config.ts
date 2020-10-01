@@ -127,8 +127,8 @@ const nvidia = {
 const page = {
 	height: 1080,
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
-	navigationTimeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
 	screenshot: envOrBoolean(process.env.SCREENSHOT),
+	timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
 	userAgent: envOrString(process.env.USER_AGENT, 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'),
 	width: 1920
 };
