@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
+	backoffStatusCodes: [403, 429],
 	labels: {
 		inStock: {
 			container: 'div[data-selenium="addToCartSection"]',
