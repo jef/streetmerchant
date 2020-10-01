@@ -1,10 +1,10 @@
 import {banner} from './banner';
 console.log(banner);
 
-import {config} from 'dotenv';
+import {config as config_} from 'dotenv';
 import path from 'path';
 
-config({path: path.resolve(__dirname, '../.env')});
+config_({path: path.resolve(__dirname, '../.env')});
 
 /**
  * Returns environment variable, given array, or default array.
@@ -90,7 +90,7 @@ const notifications = {
 		number: envOrString(process.env.PHONE_NUMBER)
 	},
 	playSound: envOrString(process.env.PLAY_SOUND),
-	pushBulletApiKey: envOrString(process.env.PUSHBULLET),
+	pushbullet: envOrString(process.env.PUSHBULLET),
 	pushover: {
 		priority: envOrString(process.env.PUSHOVER_PRIORITY),
 		token: envOrString(process.env.PUSHOVER_TOKEN),
@@ -147,7 +147,7 @@ const store = {
 	stores: envOrArray(process.env.STORES, ['nvidia'])
 };
 
-export const Config = {
+export const config = {
 	browser,
 	logLevel,
 	notifications,

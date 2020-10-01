@@ -1,9 +1,9 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
-import {Logger, Print} from '../logger';
+import {Print, logger} from '../logger';
 import {Selector, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
-import {Config} from '../config';
+import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {filterStoreLink} from './filter';
 import open from 'open';
@@ -27,20 +27,20 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		if (Config.page.inStockWaitTime && inStock[link.url]) {
-			Logger.info(Print.inStockWaiting(link, store, true));
+		if (config.page.inStockWaitTime && inStock[link.url]) {
+			logger.info(Print.inStockWaiting(link, store, true));
 			continue;
 		}
 
 		const page = await browser.newPage();
-		page.setDefaultTimeout(Config.page.timeout);
-		await page.setUserAgent(Config.page.userAgent);
+		page.setDefaultTimeout(config.page.timeout);
+		await page.setUserAgent(config.page.userAgent);
 
 		if (store.disableAdBlocker) {
 			try {
 				await disableBlockerInPage(page);
 			} catch (error) {
-				Logger.error(error);
+				logger.error(error);
 			}
 		}
 
@@ -49,7 +49,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
-			Logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
+			logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -67,16 +67,16 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 	const response: Response | null = await page.goto(link.url, {waitUntil: givenWaitFor});
 
 	if (!response) {
-		Logger.debug(Print.noResponse(link, store, true));
+		logger.debug(Print.noResponse(link, store, true));
 	}
 
 	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
 	const statusCode = response?.status() ?? 0;
 	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
 		if (statusCode === 429) {
-			Logger.warn(Print.rateLimit(link, store, true));
+			logger.warn(Print.rateLimit(link, store, true));
 		} else {
-			Logger.warn(Print.badStatusCode(link, store, statusCode, true));
+			logger.warn(Print.badStatusCode(link, store, statusCode, true));
 		}
 
 		return statusCode;
@@ -84,9 +84,9 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 	if (await lookupCardInStock(store, page, link)) {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-		Logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
+		logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
-		if (Config.browser.open) {
+		if (config.browser.open) {
 			if (link.openCartAction === undefined) {
 				await open(givenUrl);
 			} else {
@@ -96,16 +96,16 @@ async function lookupCard(browser: Browser, store: Store, page: Page, link: Link
 
 		sendNotification(link, store);
 
-		if (Config.page.inStockWaitTime) {
+		if (config.page.inStockWaitTime) {
 			inStock[link.url] = true;
 
 			setTimeout(() => {
 				inStock[link.url] = false;
-			}, 1000 * Config.page.inStockWaitTime);
+			}, 1000 * config.page.inStockWaitTime);
 		}
 
-		if (Config.page.screenshot) {
-			Logger.debug('ℹ saving screenshot');
+		if (config.page.screenshot) {
+			logger.debug('ℹ saving screenshot');
 
 			link.screenshot = `success-${Date.now()}.png`;
 			await page.screenshot({path: link.screenshot});
@@ -126,28 +126,28 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		const options = {...baseOptions, requireVisible: true, type: 'outerHTML' as const};
 
 		if (!await pageIncludesLabels(page, store.labels.inStock, options)) {
-			Logger.info(Print.outOfStock(link, store, true));
+			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
 	}
 
 	if (store.labels.outOfStock) {
 		if (await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)) {
-			Logger.info(Print.outOfStock(link, store, true));
+			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
 	}
 
 	if (store.labels.bannedSeller) {
 		if (await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)) {
-			Logger.warn(Print.bannedSeller(link, store, true));
+			logger.warn(Print.bannedSeller(link, store, true));
 			return false;
 		}
 	}
 
 	if (store.labels.captcha) {
 		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
-			Logger.warn(Print.captcha(link, store, true));
+			logger.warn(Print.captcha(link, store, true));
 			await delay(getSleepTime());
 			return false;
 		}
@@ -157,14 +157,14 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
-	Logger.debug(`[${store.name}] Starting lookup...`);
+	logger.debug(`[${store.name}] Starting lookup...`);
 	try {
 		await lookup(browser, store);
 	} catch (error) {
-		Logger.error(error);
+		logger.error(error);
 	}
 
 	const sleepTime = getSleepTime();
-	Logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+	logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
 	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }

@@ -7,11 +7,9 @@ import {Asus} from './asus';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
-import {Config} from '../../config';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
-import {Logger} from '../../logger';
 import {MicroCenter} from './microcenter';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
@@ -21,6 +19,8 @@ import {OfficeDepot} from './officedepot';
 import {Pny} from './pny';
 import {Store} from './store';
 import {Zotac} from './zotac';
+import {config} from '../../config';
+import {logger} from '../../logger';
 
 const masterList = new Map([
 	[Adorama.name, Adorama],
@@ -47,27 +47,27 @@ const masterList = new Map([
 
 const list = new Map();
 
-for (const name of Config.store.stores) {
+for (const name of config.store.stores) {
 	if (masterList.has(name)) {
 		list.set(name, masterList.get(name));
 	} else {
 		const logString = `No store named ${name}, skipping.`;
-		Logger.warn(logString);
+		logger.warn(logString);
 	}
 }
 
-Logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
+logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
 
-if (Config.store.showOnlyBrands.length > 0) {
-	Logger.info(`ℹ selected brands: ${Config.store.showOnlyBrands.join(', ')}`);
+if (config.store.showOnlyBrands.length > 0) {
+	logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
 }
 
-if (Config.store.showOnlyModels.length > 0) {
-	Logger.info(`ℹ selected models: ${Config.store.showOnlyModels.join(', ')}`);
+if (config.store.showOnlyModels.length > 0) {
+	logger.info(`ℹ selected models: ${config.store.showOnlyModels.join(', ')}`);
 }
 
-if (Config.store.showOnlySeries.length > 0) {
-	Logger.info(`ℹ selected series: ${Config.store.showOnlySeries.join(', ')}`);
+if (config.store.showOnlySeries.length > 0) {
+	logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
 }
 
 export const Stores = Array.from(list.values()) as Store[];

@@ -1,10 +1,10 @@
 import {Link, Store} from '../store/model';
-import {Logger, Print} from '../logger';
-import {Config} from '../config';
+import {Print, logger} from '../logger';
 import Mail from 'nodemailer/lib/mailer';
+import {config} from '../config';
 import nodemailer from 'nodemailer';
 
-const email = Config.notifications.email;
+const email = config.notifications.email;
 
 const transporter = nodemailer.createTransport({
 	auth: {
@@ -15,24 +15,28 @@ const transporter = nodemailer.createTransport({
 });
 
 export function sendEmail(link: Link, store: Store) {
-	const mailOptions: Mail.Options = {
-		attachments: link.screenshot ? [
-			{
-				filename: link.screenshot,
-				path: `./${link.screenshot}`
-			}
-		] : undefined,
-		from: email.username,
-		subject: Print.inStock(link, store),
-		text: link.cartUrl ? link.cartUrl : link.url,
-		to: email.to
-	};
+	if (email.username && email.password) {
+		logger.debug('↗ sending email');
 
-	transporter.sendMail(mailOptions, error => {
-		if (error) {
-			Logger.error('✖ couldn\'t send email', error);
-		} else {
-			Logger.info('✔ email sent');
-		}
-	});
+		const mailOptions: Mail.Options = {
+			attachments: link.screenshot ? [
+				{
+					filename: link.screenshot,
+					path: `./${link.screenshot}`
+				}
+			] : undefined,
+			from: email.username,
+			subject: Print.inStock(link, store),
+			text: link.cartUrl ? link.cartUrl : link.url,
+			to: email.to
+		};
+
+		transporter.sendMail(mailOptions, error => {
+			if (error) {
+				logger.error('✖ couldn\'t send email', error);
+			} else {
+				logger.info('✔ email sent');
+			}
+		});
+	}
 }

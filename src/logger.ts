@@ -1,7 +1,7 @@
 import {Link, Store} from './store/model';
 import winston, {format} from 'winston';
-import {Config} from './config';
 import chalk from 'chalk';
+import {config} from './config';
 
 const prettyJson = format.printf(info => {
 	const timestamp = new Date().toLocaleTimeString();
@@ -13,7 +13,7 @@ const prettyJson = format.printf(info => {
 	return chalk.grey(`[${timestamp}]`) + ` ${info.level} ` + chalk.grey('::') + ` ${info.message}`;
 });
 
-export const Logger = winston.createLogger({
+export const logger = winston.createLogger({
 	format: format.combine(
 		format.colorize(),
 		format.prettyPrint(),
@@ -21,7 +21,7 @@ export const Logger = winston.createLogger({
 		format.simple(),
 		prettyJson
 	),
-	level: Config.logLevel,
+	level: config.logLevel,
 	transports: [new winston.transports.Console({})]
 });
 

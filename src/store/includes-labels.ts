@@ -1,6 +1,6 @@
 import {Element, LabelQuery} from './model';
-import {Logger} from '../logger';
 import {Page} from 'puppeteer';
+import {logger} from '../logger';
 
 export type Selector = {
 	requireVisible: boolean;
@@ -44,7 +44,7 @@ export async function pageIncludesLabels(page: Page, query: LabelQuery, options:
 			return false;
 		}
 
-		Logger.debug(contents);
+		logger.debug(contents);
 
 		return includesLabels(contents, query.text);
 	}));
