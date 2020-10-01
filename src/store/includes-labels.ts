@@ -92,13 +92,13 @@ export function includesLabels(domText: string, searchLabels: string[]): boolean
 }
 
 export async function cardPriceLimit(page: Page, query: Pricing, max: number, options: Selector) {
-	if (!max) { 
+	if (!max) {
 		return null;
 	}
 
 	const selector = {...options, selector: query.container};
 	const cardPrice = await extractPageContents(page, selector);
-	
+
 	if (cardPrice) {
 		const priceSeperator = query.euroFormat ? '/[.]/g' : '/,/g';
 		const cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
