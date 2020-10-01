@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
 jobs:
   cd:
     runs-on: ubuntu-latest
