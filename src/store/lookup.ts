@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Logger, Print} from '../logger';
-import {Selector, pageIncludesLabels} from './includes-labels';
+import {Selector, extractPageContents, pageIncludesLabels} from './includes-labels'; // Remove extractPageContents after price check helper func implemented
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {Config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -145,31 +145,27 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
-	if (store.labels.maxPrice && Config.store.maxPrice) {
-		const cardPriceContainer = await page.$(
-			store.labels.maxPrice.container ?? 'body'
-		);
+	if (store.labels.maxPrice) {
+		//  MOVE THE FOLLOWING INTO NEW HELPER FUNCTION
+		let priceExceeded; // Temporary
+		let cardpriceNumber = 0; // Temporary
+		const cardPrice = await extractPageContents(page, {...baseOptions, selector: store.labels.maxPrice.container});
+		if (cardPrice) {
+			Logger.debug(cardPrice);
 
-		const cardPrice = await page.evaluate(
-			element => element.textContent,
-			cardPriceContainer
-		);
+			const priceSeperator = store.labels.maxPrice.euroFormat ? '/[.]/g' : '/,/g';
+			cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
 
-		let cardpriceNumber;
-		if (store.labels.maxPrice.euroFormat) {
-			Logger.debug('Euro format conversion');
-			// Parse for price format D.DDD,cc -> converted to DDDD.cc
-			cardpriceNumber = Number.parseFloat(cardPrice.replace(/\./g, '').match(/\d+/g).join('.'));
-		} else {
-			// Parse for price format D,DDD.cc -> converted to DDDD.cc
-			cardpriceNumber = Number.parseFloat(cardPrice.replace(/,/g, '').match(/\d+/g).join('.'));
+			const limit = Config.store.maxPrice;
+			Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
+
+			priceExceeded = Config.store.maxPrice ? cardpriceNumber > Config.store.maxPrice : false;
 		}
+		//  END HELPER FUNCTION
 
-		const limit = Config.store.maxPrice;
-		Logger.debug('Card Price: ' + cardpriceNumber.toString() + ' | Limit: ' + limit.toString());
-
-		if (cardpriceNumber > limit) {
-			Logger.info(Print.maxPrice(link, store,	limit.toString(), cardpriceNumber.toString(), true));
+		if (priceExceeded) {
+			// Logger.info(Print.maxPrice(link, store,	limit.toString(), cardpriceNumber.toString(), true));
+			Logger.info(Print.maxPrice(link, store,	Config.store.maxPrice.toString(), cardpriceNumber.toString(), true));
 			return false;
 		}
 	}
