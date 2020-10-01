@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Cyc7nrz)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8)](https://discord.gg/Cyc7nrz)
 
 [FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
@@ -256,7 +256,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
-**Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
+**Q: I got a problem and need help!** Join the [Discord](https://discord.gg/Cyc7nrz) or file an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
 **Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
 
