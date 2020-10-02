@@ -5,7 +5,12 @@ export const Pny: Store = {
 		inStock: {
 			container: '#ctl01_lbtnAddToCart',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'span[itemprop="price"]',
+			euroFormat: false
 		}
+
 	},
 	links: [
 		{

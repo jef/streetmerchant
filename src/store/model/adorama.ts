@@ -9,6 +9,10 @@ export const Adorama: Store = {
 		inStock: {
 			container: '.buy-section.purchase',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: '.your-price',
+			euroFormat: false
 		}
 	},
 	links: [
