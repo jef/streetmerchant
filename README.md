@@ -81,7 +81,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
-| `NVIDIA_SESSION_TTL` | The time in seconds to keep the cart active while using `nvidia-api` | Default: `60000` |
+| `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
@@ -104,6 +104,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `MAX_PRICE` | Maximum price allowed for a match, applies to all cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Currently only used by Nvidia, default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |

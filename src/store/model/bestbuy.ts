@@ -5,6 +5,10 @@ export const BestBuy: Store = {
 		inStock: {
 			container: '.v-m-bottom-g',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div[class="priceView-hero-price priceView-customer-price"] > span',
+			euroFormat: false
 		}
 	},
 	links: [

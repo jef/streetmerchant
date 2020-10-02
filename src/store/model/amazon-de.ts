@@ -9,6 +9,10 @@ export const AmazonDe: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['in den einkaufswagen']
+		},
+		maxPrice: {
+			container: 'span[class*="PriceString"]',
+			euroFormat: true
 		}
 	},
 	links: [

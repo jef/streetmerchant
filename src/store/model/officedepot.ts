@@ -9,6 +9,10 @@ export const OfficeDepot: Store = {
 		inStock: {
 			container: '#productPurchase',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'span[class^="price_column right"]',
+			euroFormat: false
 		}
 	},
 	links: [
