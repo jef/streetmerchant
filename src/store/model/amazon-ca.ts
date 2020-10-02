@@ -9,6 +9,10 @@ export const AmazonCa: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'span[class*="PriceString"]',
+			euroFormat: false
 		}
 	},
 	links: [

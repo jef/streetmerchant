@@ -9,6 +9,10 @@ export const AmazonDe: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['in den einkaufswagen']
+		},
+		maxPrice: {
+			container: 'span[class*="PriceString"]',
+			euroFormat: true
 		}
 	},
 	links: [
@@ -16,7 +20,7 @@ export const AmazonDe: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07MQ36Z6L'
+			url: 'https://www.amazon.de/dp/B083JX52VG/'
 		},
 		{
 			brand: 'pny',

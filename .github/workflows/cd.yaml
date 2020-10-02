@@ -3,12 +3,14 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
 jobs:
   cd:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: GoogleCloudPlatform/release-please-action@v2.4.1
+      - uses: GoogleCloudPlatform/release-please-action@v2.4.2
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
