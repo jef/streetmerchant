@@ -100,10 +100,10 @@ export async function cardPriceLimit(page: Page, query: Pricing, max: number, op
 	const cardPrice = await extractPageContents(page, selector);
 
 	if (cardPrice) {
-		const priceSeperator = query.euroFormat ? '/[.]/g' : '/,/g';
+		const priceSeperator = query.euroFormat ? /\./g : /,/g;
 		const cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
 
-		Logger.debug(`Card Price: '${cardpriceNumber} + | Limit: ${max}`);
+		Logger.debug(`Raw card price: ${cardPrice} | Limit: ${max}`);
 		return cardpriceNumber > max ? cardpriceNumber : null;
 	}
 
