@@ -53,7 +53,7 @@ for (const name of Config.store.stores) {
 	if (masterList.has(name)) {
 		list.set(name, masterList.get(name));
 	} else {
-		const logString = ` ${name}, skipping.`;
+		const logString = `No store named ${name}, skipping.`;
 		Logger.warn(logString);
 	}
 }
