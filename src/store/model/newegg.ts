@@ -102,10 +102,10 @@ export const Newegg: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137336',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932336',
 			model: 'aorus master',
 			series: '3080',
-			url: 'https://www.newegg.com/p/N82E16814137336'
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336'
 		},
 		{
 			brand: 'zotac',
