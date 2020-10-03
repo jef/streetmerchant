@@ -1,6 +1,6 @@
 import {Element, LabelQuery, Pricing} from './model';
-import {Logger} from '../logger';
 import {Page} from 'puppeteer';
+import {logger} from '../logger';
 
 export type Selector = {
 	requireVisible: boolean;
@@ -44,7 +44,7 @@ export async function pageIncludesLabels(page: Page, query: LabelQuery, options:
 			return false;
 		}
 
-		Logger.debug(contents);
+		logger.debug(contents);
 
 		return includesLabels(contents, query.text);
 	}));
@@ -103,7 +103,7 @@ export async function cardPriceLimit(page: Page, query: Pricing, max: number, op
 		const priceSeperator = query.euroFormat ? /\./g : /,/g;
 		const cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
 
-		Logger.debug(`Raw card price: ${cardPrice} | Limit: ${max}`);
+		logger.debug(`Raw card price: ${cardPrice} | Limit: ${max}`);
 		return cardpriceNumber > max ? cardpriceNumber : null;
 	}
 
