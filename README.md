@@ -200,8 +200,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | Carrier | Environment variable | Notes |
 |:---:|:---:|:---:|
-| AT&T | `att`| |
-| AT&T Prepaid | 'attgo'| |
+| AT&T | `att` | |
+| AT&T Prepaid | `attgo` | |
 | Bell | `bell` | |
 | Fido | `fido` | |
 | Google | `google`| |
