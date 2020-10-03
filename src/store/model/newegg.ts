@@ -7,11 +7,11 @@ export const Newegg: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '#landingpage-cart .btn-primary span',
+			container: 'div#ProductBuy .btn-primary',
 			text: ['add to cart']
 		},
 		maxPrice: {
-			container: '#landingpage-price > div > div > ul > li.price-current > strong',
+			container: 'div#app div.product-price > ul > li.price-current > strong',
 			euroFormat: false
 		}
 	},
