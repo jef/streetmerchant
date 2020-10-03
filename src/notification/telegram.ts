@@ -13,11 +13,14 @@ export function sendTelegramMessage(link: Link, store: Store) {
 	(async () => {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 
-		try {
-			await client.sendMessage(telegram.chatId, `${Print.inStock(link, store)}\n${givenUrl}`);
-			Logger.info('✔ telegram message sent');
-		} catch (error) {
-			Logger.error('✖ couldn\'t send telegram message', error);
+		for (const chatId of telegram.chatId.split(','))
+		{
+			try {
+				await client.sendMessage(chatId, `${Print.inStock(link, store)}\n${givenUrl}`);
+				Logger.info('✔ telegram message sent');
+			} catch (error) {
+				Logger.error('✖ couldn\'t send telegram message', error);
+			}
 		}
 	})();
 }
