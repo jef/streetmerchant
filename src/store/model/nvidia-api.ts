@@ -32,7 +32,8 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 	['russia', {currency: 'RUB', drLocale: 'ru_ru', fe2060SuperId: null, fe3080Id: null, fe3090Id: null, siteLocale: 'ru-ru'}],
 	['spain', {currency: 'EUR', drLocale: 'es_es', fe2060SuperId: 5394903000, fe3080Id: 5438794800, fe3090Id: 5438794700, siteLocale: 'es-es'}],
 	['sweden', {currency: 'SEK', drLocale: 'sv_se', fe2060SuperId: 5394903900, fe3080Id: 5438798100, fe3090Id: 5438761600, siteLocale: 'sv-se'}],
-	['usa', {currency: 'USD', drLocale: 'en_us', fe2060SuperId: 5379432500, fe3080Id: 5438481700, fe3090Id: 5438481600, siteLocale: 'en-us'}]
+	// https://github.com/jef/nvidia-snatcher/issues/407 This fe2080SuperID is for the Shield TV which is out of stock in the US
+	['usa', {currency: 'USD', drLocale: 'en_us', fe2060SuperId: 5355772500, fe3080Id: 5438481700, fe3090Id: 5438481600, siteLocale: 'en-us'}]
 ]);
 
 export const NvidiaApi: Store = {

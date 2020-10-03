@@ -73,6 +73,7 @@ const notifications = {
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
+			['attgo', 'mms.att.net'],
 			['bell', 'txt.bell.ca'],
 			['fido', 'fido.ca'],
 			['google', 'msg.fi.google.com'],
