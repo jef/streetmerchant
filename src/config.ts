@@ -1,10 +1,10 @@
 import {banner} from './banner';
 console.log(banner);
 
-import {config} from 'dotenv';
+import {config as config_} from 'dotenv';
 import path from 'path';
 
-config({path: path.resolve(__dirname, '../.env')});
+config_({path: path.resolve(__dirname, '../.env')});
 
 /**
  * Returns environment variable, given array, or default array.
@@ -91,7 +91,7 @@ const notifications = {
 		number: envOrString(process.env.PHONE_NUMBER)
 	},
 	playSound: envOrString(process.env.PLAY_SOUND),
-	pushBulletApiKey: envOrString(process.env.PUSHBULLET),
+	pushbullet: envOrString(process.env.PUSHBULLET),
 	pushover: {
 		priority: envOrString(process.env.PUSHOVER_PRIORITY),
 		token: envOrString(process.env.PUSHOVER_TOKEN),
@@ -128,8 +128,8 @@ const nvidia = {
 const page = {
 	height: 1080,
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
-	navigationTimeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
 	screenshot: envOrBoolean(process.env.SCREENSHOT),
+	timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
 	userAgent: envOrString(process.env.USER_AGENT, 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'),
 	width: 1920
 };
@@ -149,7 +149,7 @@ const store = {
 	stores: envOrArray(process.env.STORES, ['nvidia'])
 };
 
-export const Config = {
+export const config = {
 	browser,
 	logLevel,
 	notifications,
