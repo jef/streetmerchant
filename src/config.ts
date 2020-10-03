@@ -140,6 +140,7 @@ const proxy = {
 
 const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
+	maxPrice: envOrNumber(process.env.MAX_PRICE),
 	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
 	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS),

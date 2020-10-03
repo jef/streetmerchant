@@ -6,6 +6,10 @@ export const BAndH: Store = {
 		inStock: {
 			container: 'div[data-selenium="addToCartSection"]',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div[data-selenium="pricingPrice"]',
+			euroFormat: false
 		}
 	},
 	links: [

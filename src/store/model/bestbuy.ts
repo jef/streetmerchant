@@ -5,6 +5,10 @@ export const BestBuy: Store = {
 		inStock: {
 			container: '.v-m-bottom-g',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div[class="priceView-hero-price priceView-customer-price"] > span',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -37,10 +41,31 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436194/cart',
+			model: 'xc3',
+			series: '3080',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6436194.p?skuId=6436194&intl=nosplash'
+		},
+		{
+			brand: 'evga',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432400/cart',
 			model: 'xc3 ultra',
 			series: '3080',
 			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6432400.p?skuId=6432400&intl=nosplash'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436196/cart',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6436196.p?skuId=6436196&intl=nosplash'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436191/cart',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card/6436191.p?skuId=6436191&intl=nosplash'
 		},
 		{
 			brand: 'gigabyte',
@@ -55,6 +80,20 @@ export const BestBuy: Store = {
 			model: 'eagle oc',
 			series: '3080',
 			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6430621.p?skuId=6430621&intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436219/cart',
+			model: 'vision',
+			series: '3080',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-white/6436219.p?skuId=6436219&intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436223/cart',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-black/6436223.p?skuId=6436223&intl=nosplash'
 		},
 		{
 			brand: 'msi',
@@ -125,6 +164,20 @@ export const BestBuy: Store = {
 			model: 'xc3',
 			series: '3090',
 			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card/6434363.p?skuId=6434363&intl=nosplash'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436193/cart',
+			model: 'ftw3',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card/6436193.p?skuId=6436193&intl=nosplash'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436192/cart',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.bestbuy.com/site/evga-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card/6436192.p?skuId=6436192&intl=nosplash'
 		},
 		{
 			brand: 'pny',

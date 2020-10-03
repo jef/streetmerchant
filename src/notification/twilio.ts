@@ -4,9 +4,14 @@ import {Twilio} from 'twilio';
 import {config} from '../config';
 
 const twilio = config.notifications.twilio;
+let client: Twilio;
+
+if (twilio.accountSid && twilio.authToken) {
+	client = new Twilio(twilio.accountSid, twilio.authToken);
+}
 
 export function sendTwilioMessage(link: Link, store: Store) {
-	if (twilio.accountSid && twilio.authToken) {
+	if (client) {
 		logger.debug('↗ sending twilio message');
 
 		(async () => {
@@ -14,7 +19,6 @@ export function sendTwilioMessage(link: Link, store: Store) {
 			const message = `${Print.inStock(link, store)}\n${givenUrl}`;
 
 			try {
-				const client = new Twilio(twilio.accountSid, twilio.authToken);
 				await client.messages.create({
 					body: message,
 					from: twilio.from,

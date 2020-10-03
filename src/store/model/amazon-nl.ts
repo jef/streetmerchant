@@ -9,6 +9,10 @@ export const AmazonNl: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['in winkelwagen plaatsen']
+		},
+		maxPrice: {
+			container: 'span[class*="PriceString"]',
+			euroFormat: true
 		}
 	},
 	links: [

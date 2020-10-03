@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Print, logger} from '../logger';
-import {Selector, pageIncludesLabels} from './includes-labels';
+import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -141,6 +141,14 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	if (store.labels.bannedSeller) {
 		if (await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)) {
 			logger.warn(Print.bannedSeller(link, store, true));
+			return false;
+		}
+	}
+
+	if (store.labels.maxPrice) {
+		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
+		if (priceLimit) {
+			logger.info(Print.maxPrice(link, store,	priceLimit, true));
 			return false;
 		}
 	}

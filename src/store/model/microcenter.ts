@@ -44,6 +44,10 @@ export const MicroCenter: Store = {
 		inStock: {
 			container: '#cart-options',
 			text: ['in stock']
+		},
+		maxPrice: {
+			container: 'span[id="pricing"]',
+			euroFormat: false
 		}
 	},
 	links: [
