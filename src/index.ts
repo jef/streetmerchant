@@ -52,7 +52,8 @@ async function main() {
 
 	const promises = [];
 	for (const store of Stores) {
-		Logger.debug(store.links);
+		Logger.debug('store links', {meta: {links: store.links}});
+
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
 		}
