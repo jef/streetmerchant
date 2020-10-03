@@ -12,15 +12,17 @@ const client = new TelegramClient({
 export function sendTelegramMessage(link: Link, store: Store) {
 	(async () => {
 		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		const results = [];
 
-		for (const chatId of telegram.chatId.split(','))
-		{
+		for (const chatId of telegram.chatId.split(',')) {
 			try {
-				await client.sendMessage(chatId, `${Print.inStock(link, store)}\n${givenUrl}`);
+				results.push(client.sendMessage(chatId, `${Print.inStock(link, store)}\n${givenUrl}`));
 				Logger.info('✔ telegram message sent');
 			} catch (error) {
 				Logger.error('✖ couldn\'t send telegram message', error);
 			}
 		}
+
+		await Promise.all(results);
 	})();
 }
