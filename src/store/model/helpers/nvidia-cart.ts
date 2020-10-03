@@ -1,8 +1,8 @@
 import {NvidiaRegionInfo, regionInfos} from '../nvidia-api';
 import {usingPage, usingResponse} from '../../../util';
 import {Browser} from 'puppeteer';
-import {Config} from '../../../config';
-import {Logger} from '../../../logger';
+import {config} from '../../../config';
+import {logger} from '../../../logger';
 import open from 'open';
 
 interface NvidiaSessionTokenJSON {
@@ -34,7 +34,7 @@ export class NvidiaCart {
 
 			await this.refreshSessionToken();
 
-			setTimeout(callback, Config.nvidia.sessionTtl);
+			setTimeout(callback, config.nvidia.sessionTtl);
 		};
 
 		this.isKeepAlive = true;
@@ -47,7 +47,7 @@ export class NvidiaCart {
 	}
 
 	public get regionInfo(): NvidiaRegionInfo {
-		const country = Config.store.country;
+		const country = config.store.country;
 		const regionInfo = regionInfos.get(country);
 		if (!regionInfo) {
 			throw new Error(`Unknown country ${country}`);
@@ -62,20 +62,20 @@ export class NvidiaCart {
 
 	public async addToCard(productId: number, name: string): Promise<string> {
 		let cartUrl: string | undefined;
-		Logger.info(`🚀🚀🚀 [nvidia] ${name}, starting auto add to cart 🚀🚀🚀`);
+		logger.info(`🚀🚀🚀 [nvidia] ${name}, starting auto add to cart 🚀🚀🚀`);
 		try {
-			Logger.info(`🚀🚀🚀 [nvidia] ${name}, adding to cart 🚀🚀🚀`);
+			logger.info(`🚀🚀🚀 [nvidia] ${name}, adding to cart 🚀🚀🚀`);
 			let lastError: Error | string | undefined;
 
 			/* eslint-disable no-await-in-loop */
-			for (let i = 0; i < Config.nvidia.addToCardAttempts; i++) {
+			for (let i = 0; i < config.nvidia.addToCardAttempts; i++) {
 				try {
 					cartUrl = await this.addToCartAndGetLocationRedirect(productId);
 
 					break;
 				} catch (error) {
-					Logger.error(`✖ [nvidia] ${name} could not automatically add to cart, attempt ${i + 1} of ${Config.nvidia.addToCardAttempts}`, error);
-					Logger.debug(error);
+					logger.error(`✖ [nvidia] ${name} could not automatically add to cart, attempt ${i + 1} of ${config.nvidia.addToCardAttempts}`, error);
+					logger.debug(error);
 
 					lastError = error;
 				}
@@ -87,13 +87,13 @@ export class NvidiaCart {
 				throw lastError;
 			}
 
-			Logger.info(`🚀🚀🚀 [nvidia] ${name}, opening checkout page 🚀🚀🚀`);
-			Logger.info(cartUrl);
+			logger.info(`🚀🚀🚀 [nvidia] ${name}, opening checkout page 🚀🚀🚀`);
+			logger.info(cartUrl);
 
 			await open(cartUrl);
 		} catch (error) {
-			Logger.error(`✖ [nvidia] ${name} could not automatically add to cart, opening page`);
-			Logger.debug(error);
+			logger.error(`✖ [nvidia] ${name} could not automatically add to cart, opening page`);
+			logger.debug(error);
 
 			cartUrl = this.fallbackCartUrl;
 
@@ -116,7 +116,7 @@ export class NvidiaCart {
 	}
 
 	public async refreshSessionToken(): Promise<void> {
-		Logger.debug('ℹ [nvidia] refreshing session token');
+		logger.debug('ℹ [nvidia] refreshing session token');
 		try {
 			const result = await usingResponse(this.browser, this.sessionUrl, async response => {
 				return response?.json() as NvidiaSessionTokenJSON | undefined;
@@ -126,10 +126,10 @@ export class NvidiaCart {
 			}
 
 			this.sessionToken = result.session_token;
-			Logger.debug(`ℹ [nvidia] session_token=${result.session_token}`);
+			logger.debug(`ℹ [nvidia] session_token=${result.session_token}`);
 		} catch (error) {
 			const message: string = typeof error === 'object' ? error.message : error;
-			Logger.error(`✖ [nvidia] ${message}`);
+			logger.error(`✖ [nvidia] ${message}`);
 		}
 	}
 
@@ -137,7 +137,7 @@ export class NvidiaCart {
 		const url = 'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
 		const sessionToken = await this.getSessionToken();
 
-		Logger.info(`ℹ [nvidia] session_token=${sessionToken}`);
+		logger.info(`ℹ [nvidia] session_token=${sessionToken}`);
 
 		const locationData = await usingPage(this.browser, async page => {
 			page.removeAllListeners('request');

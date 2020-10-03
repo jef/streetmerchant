@@ -1,14 +1,20 @@
 import {Link, Store} from '../store/model';
-import {Logger, Print} from '../logger';
+import {Print, logger} from '../logger';
+import {config} from '../config';
 import notifier from 'node-notifier';
 
-export function sendDesktopNotification(link: Link, store: Store) {
-	(async () => {
-		notifier.notify({
-			message: link.cartUrl ? link.cartUrl : link.url,
-			title: Print.inStock(link, store)
-		});
+const desktop = config.notifications.desktop;
 
-		Logger.info('✔ desktop notification sent');
-	})();
+export function sendDesktopNotification(link: Link, store: Store) {
+	if (desktop) {
+		logger.debug('↗ sending desktop notification');
+		(async () => {
+			notifier.notify({
+				message: link.cartUrl ? link.cartUrl : link.url,
+				title: Print.inStock(link, store)
+			});
+
+			logger.info('✔ desktop notification sent');
+		})();
+	}
 }

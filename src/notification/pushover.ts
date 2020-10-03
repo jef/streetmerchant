@@ -1,26 +1,30 @@
 import {Link, Store} from '../store/model';
-import {Logger, Print} from '../logger';
-import {Config} from '../config';
+import {Print, logger} from '../logger';
 import Push from 'pushover-notifications';
+import {config} from '../config';
 
-const pushover = Config.notifications.pushover;
+const pushover = config.notifications.pushover;
 const push = new Push({
 	token: pushover.token,
 	user: pushover.username
 });
 
 export function sendPushoverNotification(link: Link, store: Store) {
-	const message = {
-		message: link.cartUrl ? link.cartUrl : link.url,
-		priority: pushover.priority,
-		title: Print.inStock(link, store)
-	};
+	if (pushover.token && pushover.username) {
+		logger.debug('↗ sending pushover message');
 
-	push.send(message, (error: Error) => {
-		if (error) {
-			Logger.error('✖ couldn\'t send pushover message', error);
-		} else {
-			Logger.info('✔ pushover message sent');
-		}
-	});
+		const message = {
+			message: link.cartUrl ? link.cartUrl : link.url,
+			priority: pushover.priority,
+			title: Print.inStock(link, store)
+		};
+
+		push.send(message, (error: Error) => {
+			if (error) {
+				logger.error('✖ couldn\'t send pushover message', error);
+			} else {
+				logger.info('✔ pushover message sent');
+			}
+		});
+	}
 }

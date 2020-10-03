@@ -1,27 +1,31 @@
 import {Link, Store} from './store/model';
-import winston, {format} from 'winston';
-import {Config} from './config';
 import chalk from 'chalk';
+import {config} from './config';
+import winston from 'winston';
 
-const prettyJson = format.printf(info => {
+const prettyJson = winston.format.printf(info => {
 	const timestamp = new Date().toLocaleTimeString();
 
 	if (typeof info.message === 'object') {
 		info.message = JSON.stringify(info.message, null, 4);
 	}
 
+	if (info.meta) {
+		return chalk.grey(`[${timestamp}]`) + ` ${info.level} ` + chalk.grey('::') + ` ${info.message} ${chalk.magenta(JSON.stringify(info.meta, null, 2))}`;
+	}
+
 	return chalk.grey(`[${timestamp}]`) + ` ${info.level} ` + chalk.grey('::') + ` ${info.message}`;
 });
 
-export const Logger = winston.createLogger({
-	format: format.combine(
-		format.colorize(),
-		format.prettyPrint(),
-		format.splat(),
-		format.simple(),
+export const logger = winston.createLogger({
+	format: winston.format.combine(
+		winston.format.colorize(),
+		winston.format.prettyPrint(),
+		winston.format.splat(),
+		winston.format.simple(),
 		prettyJson
 	),
-	level: Config.logLevel,
+	level: config.logLevel,
 	transports: [new winston.transports.Console({})]
 });
 
@@ -76,10 +80,10 @@ export const Print = {
 	},
 	maxPrice(link: Link, store: Store, price: number, color?: boolean): string {
 		if (color) {
-			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${Config.store.maxPrice}`);
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${config.store.maxPrice}`);
 		}
 
-		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${Config.store.maxPrice}`;
+		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${config.store.maxPrice}`;
 	},
 	message(message: string, topic: string, store: Store, color?: boolean): string {
 		if (color) {
