@@ -1,11 +1,11 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Config} from './config';
-import {Logger} from './logger';
 import {StatusCodeRangeArray} from './store/model';
+import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
+import {logger} from './logger';
 
 export function getSleepTime() {
-	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));
+	return config.browser.minSleep + (Math.random() * (config.browser.maxSleep - config.browser.minSleep));
 }
 
 export async function delay(ms: number) {
@@ -47,8 +47,8 @@ export async function usingResponse<T>(
 
 export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: Browser) => Promise<T>): Promise<T> {
 	const page = await browser.newPage();
-	page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
-	await page.setUserAgent(Config.page.userAgent);
+	page.setDefaultNavigationTimeout(config.page.timeout);
+	await page.setUserAgent(config.page.userAgent);
 
 	try {
 		return await cb(page, browser);
@@ -56,13 +56,13 @@ export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: B
 		try {
 			await closePage(page);
 		} catch (error) {
-			Logger.error(error);
+			logger.error(error);
 		}
 	}
 }
 
 export async function closePage(page: Page) {
-	if (!Config.browser.lowBandwidth) {
+	if (!config.browser.lowBandwidth) {
 		await disableBlockerInPage(page);
 	}
 

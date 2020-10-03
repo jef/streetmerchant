@@ -1,9 +1,9 @@
 import {Link, Store} from '../store/model';
-import {Logger, Print} from '../logger';
-import {Config} from '../config';
+import {Print, logger} from '../logger';
 import Twitter from 'twitter';
+import {config} from '../config';
 
-const twitter = Config.notifications.twitter;
+const twitter = config.notifications.twitter;
 
 const client = new Twitter({
 	access_token_key: twitter.accessTokenKey,
@@ -13,17 +13,21 @@ const client = new Twitter({
 });
 
 export function sendTweet(link: Link, store: Store) {
-	let status = `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`;
+	if (twitter.accessTokenKey && twitter.accessTokenSecret && twitter.consumerKey && twitter.consumerSecret) {
+		logger.debug('↗ sending twitter message');
 
-	if (twitter.tweetTags) {
-		status += `\n\n${twitter.tweetTags}`;
-	}
+		let status = `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`;
 
-	client.post('statuses/update', {status}, error => {
-		if (error) {
-			Logger.error('✖ couldn\'t send twitter notification', error);
-		} else {
-			Logger.info('✔ twitter notification sent');
+		if (twitter.tweetTags) {
+			status += `\n\n${twitter.tweetTags}`;
 		}
-	});
+
+		client.post('statuses/update', {status}, error => {
+			if (error) {
+				logger.error('✖ couldn\'t send twitter notification', error);
+			} else {
+				logger.info('✔ twitter notification sent');
+			}
+		});
+	}
 }
