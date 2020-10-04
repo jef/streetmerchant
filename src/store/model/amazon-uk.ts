@@ -34,62 +34,91 @@ export const AmazonUk: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.amazon.co.uk/dp/B081265T5Z/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HN37VQK'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HN4DSTC'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HGYXP4C'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HJ9XFNM'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HGBYWQ6'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HGLN78Q'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HH1BMQQ'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HLZXHZY'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HHZVZ3N'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HM4V2DH'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HM4M621'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HBTJMLJ'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8-rgb',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HBR7QBM'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.amazon.co.uk/dp/B08HR1NPPQ'
 		}
 	],
-	linksBuilder: {
-		builder: (docElement, series) => {
-			const productElements = docElement.find('.s-result-list .s-result-item[data-asin]');
-			const links: Link[] = [];
-			for (let i = 0; i < productElements.length; i++) {
-				const productElement = productElements.eq(i);
-				const asin = productElement.attr()['data-asin'];
-
-				if (!asin) {
-					continue;
-				}
-
-				const url = `https://www.amazon.co.uk/dp/${asin}/`;
-				const titleElement = productElement.find('.sg-col-inner h2 a.a-text-normal[href] span').first();
-				const title = titleElement.text().trim();
-
-				if (!title || !new RegExp(`RTX ?${series}`, 'i').exec(title)) {
-					continue;
-				}
-
-				const card = parseCard(title);
-
-				if (card) {
-					links.push({
-						brand: card.brand as any,
-						cartUrl: `https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=${asin}&Quantity.1=1`,
-						model: card.model,
-						series,
-						url
-					});
-				} else {
-					logger.error(`Failed to parse card: ${title}`);
-				}
-			}
-
-			return links;
-		},
-		ttl: 300000,
-		urls: [
-			{
-				series: '3080',
-				url: [
-					'https://www.amazon.co.uk/s?k=%2B%22RTX+3080%22+-2080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675291',
-					'https://www.amazon.co.uk/s?k=%2B%22RTX+3080%22+-2080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675594&page=2'
-				]
-			},
-			{
-				series: '3090',
-				url: [
-					'https://www.amazon.co.uk/s?k=%2B%22RTX+3090%22+-3080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675291',
-					'https://www.amazon.co.uk/s?k=%2B%22RTX+3090%22+-3080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675594&page=2'
-				]
-			}
-		]
-	},
 	name: 'amazon-uk'
 };
