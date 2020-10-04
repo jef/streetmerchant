@@ -86,8 +86,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
-| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
-| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
+| `PHONE_NUMBER` | 10 digit phone numbers | E.g.: `1234567890` or `1234567890,0987654321,1235556666`, email configuration required |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required. Either one carrier or the carriers in same order as phone numbers |
 | `PLAY_SOUND` | Play this sound notification if a card is found | Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
 | `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
