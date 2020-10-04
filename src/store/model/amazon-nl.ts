@@ -24,7 +24,7 @@ export const AmazonNl: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'ventus',
+			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.amazon.nl/3080-VENTUS-3X-10G-OC/dp/B08HM4M621'
 		},

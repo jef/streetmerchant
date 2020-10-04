@@ -72,7 +72,7 @@ export const Adorama: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rbg',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.adorama.com/png30801tfxb.html'
 		},
