@@ -1,6 +1,4 @@
-import {Link, Store} from './store';
-import {logger} from '../../logger';
-import {parseCard} from './helpers/card';
+import {Store} from './store';
 
 export const AmazonUk: Store = {
 	backoffStatusCodes: [403, 429, 503],
