@@ -1,4 +1,5 @@
 import {Adorama} from './adorama';
+import {Alternate} from './alternate';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
@@ -8,6 +9,7 @@ import {AsusDe} from './asus-de';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
+import {Computeruniverse} from './computeruniverse';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
@@ -24,6 +26,7 @@ import {config} from '../../config';
 import {logger} from '../../logger';
 
 const masterList = new Map([
+	[Alternate.name, Alternate],
 	[Adorama.name, Adorama],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
@@ -34,6 +37,7 @@ const masterList = new Map([
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
+	[Computeruniverse.name, Computeruniverse],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Gamestop.name, Gamestop],
