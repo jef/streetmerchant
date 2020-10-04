@@ -154,6 +154,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 <details>
 <summary>Micro Center stores</summary>
 
+> :point_right: Before using `web`, please review [this issue comment](https://github.com/jef/nvidia-snatcher/issues/442#issuecomment-703297393).
+
 | Store name |
 |:---:|
 | `brooklyn` |
