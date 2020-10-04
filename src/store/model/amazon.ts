@@ -109,14 +109,14 @@ export const Amazon: Store = {
 		{
 			brand: 'asus',
 			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6F174Z&Quantity.1=1',
-			model: 'strix',
+			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.amazon.com/dp/B08J6F174Z'
 		},
 		{
 			brand: 'asus',
 			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6GMWCQ&Quantity.1=1',
-			model: 'strix',
+			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08J6GMWCQ'
 		},

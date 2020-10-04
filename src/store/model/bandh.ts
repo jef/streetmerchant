@@ -59,13 +59,13 @@ export const BAndH: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'gaming x trio - duplicate',
+			model: 'gaming x trio',
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593645-REG/msi_geforce_rtx_3080_gaming.html'
 		},
 		{
 			brand: 'msi',
-			model: 'ventus 3x oc - duplicate',
+			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html'
 		},
