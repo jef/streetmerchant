@@ -16,7 +16,7 @@ if (email.username && (email.password || email.smtpAddress)) {
 
 if (email.smtpAddress) {
 	transportOptions.host = email.smtpAddress;
-	transportOptions.port = (email.smtpPort ? email.smtpPort : 25);
+	transportOptions.port = email.smtpPort;
 } else {
 	transportOptions.service = 'gmail';
 }
