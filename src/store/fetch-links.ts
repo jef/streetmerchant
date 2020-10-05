@@ -7,7 +7,7 @@ import {usingResponse} from '../util';
 
 function addNewLinks(store: Store, links: Link[], series: Series) {
 	if (links.length === 0) {
-		logger.error(Print.message('NO STORE LINKS FOUND', series, store, true));
+		logger.warn(Print.message('NO STORE LINKS FOUND', series, store, true));
 
 		return;
 	}
@@ -37,7 +37,7 @@ export async function fetchLinks(store: Store, browser: Browser) {
 			continue;
 		}
 
-		logger.info(Print.message('DETECTING STORE LINKS', series, store, true));
+		logger.debug(Print.message('DETECTING STORE LINKS', series, store, true));
 
 		if (!Array.isArray(url)) {
 			url = [url];
