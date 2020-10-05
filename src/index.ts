@@ -42,7 +42,9 @@ async function main() {
 	}
 
 	// Check for deprecated configuration values
-	if (process.env.MAX_PRICE) logger.warn('ℹ MAX_PRICE is deprecated, please use MAX_PRICE_${series}')
+	if (process.env.MAX_PRICE) {
+		logger.warn('ℹ MAX_PRICE is deprecated, please use MAX_PRICE_${series}');
+	}
 
 	const browser = await puppeteer.launch({
 		args,
