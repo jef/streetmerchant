@@ -64,6 +64,12 @@ export const MicroCenter: Store = {
 			url: `https://www.microcenter.com/product/628344/evga-geforce-rtx-3080-xc3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
 		},
 		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: `https://www.microcenter.com/product/628346/evga-geforce-rtx-3080-ftw3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 3x',
 			series: '3080',

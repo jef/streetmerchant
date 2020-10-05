@@ -84,7 +84,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'gigabyte',
 			cartUrl: 'https://api.bestbuy.com/click/-/6436219/cart',
-			model: 'vision',
+			model: 'vision oc',
 			series: '3080',
 			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-white/6436219.p?skuId=6436219&intl=nosplash'
 		},
