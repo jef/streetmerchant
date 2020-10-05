@@ -153,15 +153,15 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			case '3070':
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3070, baseOptions);
 				maxPrice = config.store.maxPrice3070;
-				end
+				break;
 			case '3080':
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3080, baseOptions);
 				maxPrice = config.store.maxPrice3080;
-				end
+				break;
 			case '3090':
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3090, baseOptions);
 				maxPrice = config.store.maxPrice3090;
-				end
+				break;
 		}
 		//const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
 		if (priceLimit) {
