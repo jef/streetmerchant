@@ -147,7 +147,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.maxPrice) {
 		var priceLimit;
-		string maxPrice;
+		var maxPrice = 0;
 		switch (link.series)
 		{
 			case '3070':
