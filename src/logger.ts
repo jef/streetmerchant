@@ -83,7 +83,7 @@ export const Print = {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${setPrice}`);
 		}
 
-		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${config.store.maxPrice}`;
+		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${setPrice}`;
 	},
 	message(message: string, topic: string, store: Store, color?: boolean): string {
 		if (color) {
