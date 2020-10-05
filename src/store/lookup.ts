@@ -147,7 +147,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.maxPrice) {
 		let priceLimit;
-		let maxPrice;
+		let maxPrice = 0;
 		switch (link.series) {
 			case '3070':
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3070, baseOptions);
