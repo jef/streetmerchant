@@ -146,10 +146,9 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		var priceLimit;
-		var maxPrice = 0;
-		switch (link.series)
-		{
+		let priceLimit;
+		let maxPrice;
+		switch (link.series) {
 			case '3070':
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3070, baseOptions);
 				maxPrice = config.store.maxPrice3070;
@@ -162,8 +161,10 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3090, baseOptions);
 				maxPrice = config.store.maxPrice3090;
 				break;
+			default:
+				break;
 		}
-		//const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
+		
 		if (priceLimit) {
 			logger.info(Print.maxPrice(link, store,	priceLimit, maxPrice, true));
 			return false;
