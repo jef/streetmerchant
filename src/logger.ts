@@ -78,7 +78,7 @@ export const Print = {
 
 		return `ℹ ${buildProductString(link, store)} :: IN STOCK, WAITING`;
 	},
-	maxPrice(link: Link, store: Store, price: number, setPrice: string, color?: boolean): string {
+	maxPrice(link: Link, store: Store, price: number, setPrice: number, color?: boolean): string {
 		if (color) {
 			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${setPrice}`);
 		}
