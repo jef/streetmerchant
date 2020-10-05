@@ -16,7 +16,7 @@ import {sendTwilioMessage} from './twilio';
 const notifications = Config.notifications;
 
 export function sendNotification(link: Link, store: Store) {
-	if (notifications.email.username && notifications.email.password) {
+	if (notifications.email.username && (notifications.email.password || notifications.email.smtpAddress)) {
 		Logger.debug('↗ sending email');
 		sendEmail(link, store);
 	}
