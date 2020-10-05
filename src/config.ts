@@ -136,7 +136,7 @@ const page = {
 };
 
 const proxy = {
-	address: envOrString(process.env.PROXY_ADDRESS, ''),
+	address: envOrString(process.env.PROXY_ADDRESS),
 	port: envOrNumber(process.env.PROXY_PORT, 80)
 };
 
