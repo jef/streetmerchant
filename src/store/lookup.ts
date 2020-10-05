@@ -164,7 +164,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			default:
 				break;
 		}
-		
+
 		if (priceLimit) {
 			logger.info(Print.maxPrice(link, store,	priceLimit, maxPrice, true));
 			return false;
