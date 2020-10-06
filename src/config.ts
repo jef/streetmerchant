@@ -51,7 +51,7 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 /**
  * Returns environment variable, given number, or default number,
  * while handling .env input errors for a Min/Max pair.
- * Errors handled:
+ * .env errors handled:
  * - Min/Max swapped (Min larger than Max, Max smaller than Min)
  * - Min larger than default Max when no Max defined
  * - Max smaller than default Min when no Min defined
@@ -62,21 +62,24 @@ function envOrNumber(environment: string | undefined, number?: number): number {
  * @param number Default number. If not set, is `0`.
  */
 function envOrNumberMinMax(enviromentMin: string | undefined, enviromentMax: string | undefined, minOrMax: minMax, number?: number): number {
-	return enviromentMin || enviromentMax ?											// Is at least one Min or Max defined?
-		enviromentMin && enviromentMax ?											//   Yes! Okay, are both defined?
-			Number(enviromentMin) < Number(enviromentMax) ?							//   |   Yes! Lets check if Min is smaller than the Max.
-				Number(minOrMax === 'min' ? enviromentMin : enviromentMax) :		//   |   |   Yes, min is smaller! Return the Min or Max .env as requested. [EXIT]
-				Number(minOrMax === 'max' ? enviromentMin : enviromentMax) :		//   |   |   No , we need to swap Min and Max, then return Min or Max .env as requested. [EXIT]
-			enviromentMin ?															//   |   No, only one of Min or Max are defined! Is it Min that's defined?
-				minOrMax === 'min' ? 												//   |   |   Yes, Min is defined! And was it the Min that was requested?
-					Number(enviromentMin) : 										//   |   |   |   Yes! Return the Min .env as requested  [EXIT]
-					Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) :	//   |   |   |   No ! Min exists but Max was requested, Return the Larger of the two: Min .env
-						(number ?? 0) : 											//   |   |   |	      ... or the default  [EXIT]
-				minOrMax === 'max' ?												//   |   |   No, Max is defined!  And was it the Max that was requested?
-					Number(enviromentMax) :											//   |   |   |   Yes! Return the Max .env as requested [EXIT]
-					Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) :	//   |   |   |   No ! Max exists but Min was requested, Return the smaller of the two: Max .env
-						(number ?? 0) :												//   |   |   |        ... or the default  [EXIT]
-		number ?? 0;																//   No! Neither Min or Max are defined, so just return the default already!  [EXIT]
+	if (enviromentMin || enviromentMax) {
+		switch (minOrMax) {
+			case 'min':
+				if (enviromentMin && enviromentMax) return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMin : enviromentMax);
+				if (enviromentMax) return Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) : (number ?? 0);
+				if (enviromentMin) return Number(enviromentMin);
+				break;
+			case 'max':
+				if (enviromentMin && enviromentMax) return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMax : enviromentMin);
+				if (enviromentMin) return Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) : (number ?? 0);
+				if (enviromentMax) return Number(enviromentMax);
+				break;
+			default:
+				break;
+		}
+	}
+
+	return number ?? 0;
 }
 
 const browser = {
@@ -84,8 +87,8 @@ const browser = {
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
 	maxBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 3600000),
-	maxSleep: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 10000),
-	minBackoff: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 10000),
+	maxSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'max', 10000),
+	minBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'min', 10000),
 	minSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
