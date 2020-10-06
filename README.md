@@ -135,20 +135,30 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (NL) | `amazon-nl`|
+| Amazon (UK) | `amazon-uk`|
+| Aria PC | `aria`|
 | ASUS | `asus` |
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
+| Box | `box`|
+| CCL | `ccl`|
+| Currys | `currys`|
+| eBuyer | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Gamestop | `gamestop`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
+| Novatech | `novatech`|
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| Overclockers | `overclockers`|
 | PNY | `pny`|
+| Scan | `scan`|
+| Very | `very`|
 | Zotac | `zotac`|
 
 <details>
