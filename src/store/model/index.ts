@@ -1,4 +1,5 @@
 import {Adorama} from './adorama';
+import {Alternate} from './alternate';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
@@ -11,9 +12,11 @@ import {BestBuyCa} from './bestbuy-ca';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
+import {Mediamarkt} from './mediamarkt';
 import {MicroCenter} from './microcenter';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
+import {Notebooksbilliger} from './notebooksbilliger';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
@@ -25,6 +28,7 @@ import {logger} from '../../logger';
 
 const masterList = new Map([
 	[Adorama.name, Adorama],
+	[Alternate.name, Alternate],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
@@ -37,9 +41,11 @@ const masterList = new Map([
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Gamestop.name, Gamestop],
+	[Mediamarkt.name, Mediamarkt],
 	[MicroCenter.name, MicroCenter],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
+	[Notebooksbilliger.name, Notebooksbilliger],
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
