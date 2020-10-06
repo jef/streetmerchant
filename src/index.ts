@@ -1,7 +1,6 @@
 import {Stores} from './store/model';
 import {adBlocker} from './adblocker';
 import {config} from './config';
-import {fetchLinks} from './store/fetch-links';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
@@ -50,21 +49,14 @@ async function main() {
 		headless: config.browser.isHeadless
 	});
 
-	const promises = [];
 	for (const store of Stores) {
 		logger.debug('store links', {meta: {links: store.links}});
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
 		}
 
-		if (store.linksBuilder) {
-			promises.push(fetchLinks(store, browser));
-		}
-
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
-
-	await Promise.all(promises);
 }
 
 /**
