@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Cyc7nrz)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![discord](https://img.shields.io/discord/756303724095471617.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8)](https://discord.gg/Cyc7nrz)
 
 [FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues) | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
 
@@ -30,7 +30,7 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **PNY** | **Zotac** |
+| | Adorama | Amazon | Amazon (CA) | ASUS | B&H | Best Buy | Best Buy (CA) | EVGA | Micro Center | Newegg | Newegg (CA) | Nvidia | Office Depot | PNY | Zotac |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | | | | | | | | `✔` | |
 | **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
@@ -66,18 +66,24 @@ To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make
 
 Here is a list of variables that you can use to customize your newly copied `.env` file:
 
-| **Environment variable** | **Description** | **Notes** |
+| Environment variable | Description | Notes |
 |:---:|---|---|
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
+| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Currently only used by Nvidia, default: `usa` |
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier) | Default: `false` |
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@2834729847239842>` |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
+| `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
+| `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
+| `MAX_PRICE` | Maximum price allowed for a match, applies to all cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
+| `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
+| `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
 | `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
@@ -91,6 +97,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
+| `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
+| `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models | Comma separated, e.g.: `founders edition,rog strix` |
@@ -98,16 +106,19 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
-| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Currently only used by Nvidia, default: `usa` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID | |
-| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
+| `TWILIO_ACCOUNT_SID` | Twilio Account SID | Can be found on twilio.com/console |
+| `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
+| `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
+| `TWILIO_TO_NUMBER` | Mobile number to send SMS to | Include country code e.g +4401234567890 |
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key | |
 | `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret | |
 | `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
+| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -124,25 +135,38 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (NL) | `amazon-nl`|
+| Amazon (UK) | `amazon-uk`|
+| Aria PC | `aria`|
 | ASUS | `asus` |
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
+| Box | `box`|
+| CCL | `ccl`|
+| Currys | `currys`|
+| eBuyer | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
+| Gamestop | `gamestop`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
+| Novatech | `novatech`|
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| Overclockers | `overclockers`|
 | PNY | `pny`|
+| Scan | `scan`|
+| Very | `very`|
 | Zotac | `zotac`|
 
 <details>
 <summary>Micro Center stores</summary>
 
-| **Store name** |
+> :point_right: Before using `web`, please review [this issue comment](https://github.com/jef/nvidia-snatcher/issues/442#issuecomment-703297393).
+
+| Store name |
 |:---:|
 | `brooklyn` |
 | `brentwood` |
@@ -172,11 +196,24 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 </details>
 
+#### Supported Brands and Models
+
+| Brand | Model |
+|:---:|---|
+| `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
+| `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
+| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision` |
+| `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
+| `nvidia` | `founders edition` |
+| `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
+| `zotac` | `trinity`, `trinity oc` |
+
 #### Supported carriers
 
-| **Carrier** | **Environment variable** | **Notes** |
+| Carrier | Environment variable | Notes |
 |:---:|:---:|:---:|
-| AT&T | `att`| |
+| AT&T | `att` | |
+| AT&T Prepaid | `attgo` | |
 | Bell | `bell` | |
 | Fido | `fido` | |
 | Google | `google`| |
@@ -192,27 +229,29 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 #### Supported countries
 
-| **Country** | **Nvidia.com (3080 FE)** | **Nvidia.com (3090 FE)** | **Notes** |
-|:---:|:---:|:---:|:---:|
-| austria | `✔` | | |
-| belgium | `✔` | | Nvidia supports debug |
-| canada | `✔` | | |
-| czechia | `✔` | | |
-| denmark | `✔` | | |
-| finland | `✔` | | |
-| france | `✔` | | |
-| germany | `✔` | | |
-| great_britain | `✔` | | |
-| ireland | `✔` | | |
-| italy | `✔` | | |
-| luxembourg | `✔` | | Nvidia supports debug |
-| netherlands | `✔` | | Nvidia supports debug |
-| poland | `✔` | | |
-| portugal | `✔` | | |
-| russia | | | Missing all IDs |
-| spain | `✔` | | |
-| sweden | `✔` | | |
-| usa | `✔` | `✔` | Nvidia supports debug |
+`COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
+
+| Country | 3080 FE | 3090 FE | Test Card | Notes |
+|:---:|:---:|:---:|:---:|:---:|
+| austria | `✔` | `✔` | `✔` | |
+| belgium | `✔` | `✔` | `✔` | |
+| canada | `✔` | `✔` | `✔` | |
+| czechia | `✔` | `✔` | `✔` | |
+| denmark | `✔` | | `✔` | Missing RTX 3090 |
+| finland | `✔` | | `✔` | Missing RTX 3090 |
+| france | `✔` | `✔` | `✔` | |
+| germany | `✔` | `✔` | `✔` | |
+| great_britain | `✔` | `✔` | `✔` | |
+| ireland | `✔` | `✔` | `✔` | |
+| italy | `✔` | `✔` | `✔` | |
+| luxembourg | `✔` | `✔` | `✔` | |
+| netherlands | `✔` | `✔` | `✔` | |
+| norway | `✔` | `✔` | `✔` | |
+| poland | `✔` | `✔` | `✔` | |
+| portugal | `✔` | | | RTX 3080 only |
+| spain | `✔` | `✔` | `✔` | |
+| sweden | `✔` | `✔` | `✔` | |
+| usa | `✔` | `✔` | `✔` | |
 
 ## FAQ
 
@@ -220,11 +259,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 **Q: Will this harm my computer?** No.
 
-**Q: Have you gotten a card yet?** No. :cry:
+**Q: Have you gotten a card yet?** YES! :tada: :rocket:
+
+<details>
+<summary>Screenshot</summary>
+
+![screenshot](https://i.imgur.com/59CRzGq.png)
+
+</details>
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
-**Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
+**Q: I got a problem and need help!** Join the [Discord](https://discord.gg/Cyc7nrz) or file an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
 **Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
 

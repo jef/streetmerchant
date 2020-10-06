@@ -1,10 +1,15 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
+	backoffStatusCodes: [403, 429],
 	labels: {
 		inStock: {
 			container: 'div[data-selenium="addToCartSection"]',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div[data-selenium="pricingPrice"]',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -54,13 +59,13 @@ export const BAndH: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'gaming x trio - duplicate',
+			model: 'gaming x trio',
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593645-REG/msi_geforce_rtx_3080_gaming.html'
 		},
 		{
 			brand: 'msi',
-			model: 'ventus 3x oc - duplicate',
+			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.bhphotovideo.com/c/product/1593646-REG/msi_geforce_rtx_3080_ventus.html'
 		},

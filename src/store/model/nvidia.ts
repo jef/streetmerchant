@@ -6,10 +6,16 @@ export const Nvidia: Store = {
 			container: 'body',
 			text: ['are you a human?']
 		},
-		inStock: {
-			container: '.main-container',
-			text: ['add to cart']
-		}
+		inStock: [
+			{
+				container: '.main-container',
+				text: ['add to cart']
+			},
+			{
+				container: '.inner',
+				text: ['add to cart']
+			}
+		]
 	},
 	links: [
 		{
@@ -17,6 +23,12 @@ export const Nvidia: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.nvidia.com/en-us/shop/geforce/gpu/'
+		},
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2060-super/'
 		},
 		{
 			brand: 'nvidia',

@@ -1,7 +1,8 @@
-import {Config} from '../../config';
 import {Store} from './store';
+import {config} from '../../config';
 
-const MicroCenterLocation = Config.store.microCenterLocation;
+const microCenterLocation = config.store.microCenterLocation;
+
 const microCenterLocationToId: Map<string, string> = new Map([
 	['web', '029'],
 	['brooklyn', '115'],
@@ -32,10 +33,10 @@ const microCenterLocationToId: Map<string, string> = new Map([
 ]);
 
 let storeId: string;
-if (microCenterLocationToId.get(MicroCenterLocation) === undefined) {
+if (microCenterLocationToId.get(microCenterLocation) === undefined) {
 	storeId = '029';
 } else {
-	storeId = microCenterLocationToId.get(MicroCenterLocation)!;
+	storeId = microCenterLocationToId.get(microCenterLocation)!;
 }
 
 export const MicroCenter: Store = {
@@ -43,6 +44,10 @@ export const MicroCenter: Store = {
 		inStock: {
 			container: '#cart-options',
 			text: ['in stock']
+		},
+		maxPrice: {
+			container: 'span[id="pricing"]',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -57,6 +62,12 @@ export const MicroCenter: Store = {
 			model: 'xc3 ultra',
 			series: '3080',
 			url: `https://www.microcenter.com/product/628344/evga-geforce-rtx-3080-xc3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: `https://www.microcenter.com/product/628346/evga-geforce-rtx-3080-ftw3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
 		},
 		{
 			brand: 'msi',

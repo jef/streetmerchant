@@ -31,8 +31,15 @@ export const Asus: Store = {
 			model: 'tuf',
 			series: '3090',
 			url: 'https://store.asus.com/us/item/202009AM150000003/'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://store.asus.com/us/item/202009AM290000002/'
 		}
 	],
-	name: 'asus'
+	name: 'asus',
+	successStatusCodes: [[0, 399], 404]
 };
 

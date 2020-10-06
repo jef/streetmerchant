@@ -9,6 +9,10 @@ export const AmazonNl: Store = {
 		inStock: {
 			container: '#desktop_buybox',
 			text: ['in winkelwagen plaatsen']
+		},
+		maxPrice: {
+			container: 'span[class*="PriceString"]',
+			euroFormat: true
 		}
 	},
 	links: [
@@ -16,11 +20,11 @@ export const AmazonNl: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07MQ36Z6L'
+			url: 'https://www.amazon.nl/dp/B083GGYNQ6/'
 		},
 		{
 			brand: 'msi',
-			model: 'ventus',
+			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.amazon.nl/3080-VENTUS-3X-10G-OC/dp/B08HM4M621'
 		},

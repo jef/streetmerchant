@@ -3,12 +3,14 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
 jobs:
   build-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v2.1.1
+      - uses: actions/setup-node@v2.1.2
         with:
           node-version: 14
       - uses: actions/cache@v2

@@ -1,6 +1,6 @@
-import {Element, LabelQuery} from './model';
-import {Logger} from '../logger';
+import {Element, LabelQuery, Pricing} from './model';
 import {Page} from 'puppeteer';
+import {logger} from '../logger';
 
 export type Selector = {
 	requireVisible: boolean;
@@ -44,7 +44,7 @@ export async function pageIncludesLabels(page: Page, query: LabelQuery, options:
 			return false;
 		}
 
-		Logger.debug(contents);
+		logger.debug(contents);
 
 		return includesLabels(contents, query.text);
 	}));
@@ -89,4 +89,23 @@ export async function extractPageContents(page: Page, selector: Selector): Promi
 export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
 	return searchLabels.some(label => domTextLowerCase.includes(label));
+}
+
+export async function cardPriceLimit(page: Page, query: Pricing, max: number, options: Selector) {
+	if (!max) {
+		return null;
+	}
+
+	const selector = {...options, selector: query.container};
+	const cardPrice = await extractPageContents(page, selector);
+
+	if (cardPrice) {
+		const priceSeperator = query.euroFormat ? /\./g : /,/g;
+		const cardpriceNumber = Number.parseFloat(cardPrice.replace(priceSeperator, '').match(/\d+/g)!.join('.'));
+
+		logger.debug(`Raw card price: ${cardPrice} | Limit: ${max}`);
+		return cardpriceNumber > max ? cardpriceNumber : null;
+	}
+
+	return null;
 }

@@ -1,1 +1,1 @@
-declare module 'pushbullet';
+declare module '@hijef/pushbullet';
