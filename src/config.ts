@@ -4,6 +4,8 @@ console.log(banner);
 import {config as config_} from 'dotenv';
 import path from 'path';
 
+type minMax = 'min' | 'max';
+
 config_({path: path.resolve(__dirname, '../.env')});
 
 /**
@@ -46,14 +48,45 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 	return environment ? Number(environment) : (number ?? 0);
 }
 
+/**
+ * Returns environment variable, given number, or default number,
+ * while handling .env input errors for a Min/Max pair.
+ * Errors handled:
+ * - Min/Max swapped (Min larger than Max, Max smaller than Min)
+ * - Min larger than default Max when no Max defined
+ * - Max smaller than default Min when no Min defined
+ *
+ * @param environmentMin Min environment variable of Min/Max pair.
+ * @param environmentMax Max environment variable of Min/Max pair.
+ * @param minOrMax Interested enviroment variable to be returned. 'min' | 'max'
+ * @param number Default number. If not set, is `0`.
+ */
+function envOrNumberMinMax(enviromentMin: string | undefined, enviromentMax: string | undefined, minOrMax: minMax, number?: number): number {
+	return enviromentMin || enviromentMax ?											// Is at least one Min or Max defined?
+		enviromentMin && enviromentMax ?											//   Yes! Okay, are both defined?
+			Number(enviromentMin) < Number(enviromentMax) ?							//   |   Yes! Lets check if Min is smaller than the Max.
+				Number(minOrMax === 'min' ? enviromentMin : enviromentMax) :		//   |   |   Yes, min is smaller! Return the Min or Max .env as requested. [EXIT]
+				Number(minOrMax === 'max' ? enviromentMin : enviromentMax) :		//   |   |   No , we need to swap Min and Max, then return Min or Max .env as requested. [EXIT]
+			enviromentMin ?															//   |   No, only one of Min or Max are defined! Is it Min that's defined?
+				minOrMax === 'min' ? 												//   |   |   Yes, Min is defined! And was it the Min that was requested?
+					Number(enviromentMin) : 										//   |   |   |   Yes! Return the Min .env as requested  [EXIT]
+					Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) :	//   |   |   |   No ! Min exists but Max was requested, Return the Larger of the two: Min .env
+						(number ?? 0) : 											//   |   |   |	      ... or the default  [EXIT]
+				minOrMax === 'max' ?												//   |   |   No, Max is defined!  And was it the Max that was requested?
+					Number(enviromentMax) :											//   |   |   |   Yes! Return the Max .env as requested [EXIT]
+					Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) :	//   |   |   |   No ! Max exists but Min was requested, Return the smaller of the two: Max .env
+						(number ?? 0) :												//   |   |   |        ... or the default  [EXIT]
+		number ?? 0;																//   No! Neither Min or Max are defined, so just return the default already!  [EXIT]
+}
+
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
-	maxBackoff: envOrNumber(process.env.PAGE_BACKOFF_MAX, 3600000),
-	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
-	minBackoff: envOrNumber(process.env.PAGE_BACKOFF_MIN, 10000),
-	minSleep: envOrNumber(process.env.PAGE_SLEEP_MIN, 5000),
+	maxBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 3600000),
+	maxSleep: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 10000),
+	minBackoff: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 10000),
+	minSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
