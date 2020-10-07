@@ -131,6 +131,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Stores | Environment variable |
 |:---:|:---:|
 | Adorama | `adorama`|
+| Alternate (DE) | `alternate`|
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
@@ -148,9 +149,11 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Gamestop | `gamestop`|
+| Mediamarkt (DE) | `mediamarkt`|
 | Micro Center | `microcenter`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
+| Notebooksbilliger (DE) |`notebooksbilliger`|
 | Novatech | `novatech`|
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
