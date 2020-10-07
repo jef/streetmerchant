@@ -105,6 +105,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
+| `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
+| `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |

@@ -67,6 +67,8 @@ const notifications = {
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
+		smtpAddress: envOrString(process.env.SMTP_ADDRESS),
+		smtpPort: envOrNumber(process.env.SMTP_PORT, 25),
 		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
 	},
@@ -135,7 +137,7 @@ const page = {
 };
 
 const proxy = {
-	address: envOrString(process.env.PROXY_ADDRESS, ''),
+	address: envOrString(process.env.PROXY_ADDRESS),
 	port: envOrNumber(process.env.PROXY_PORT, 80)
 };
 
