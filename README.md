@@ -60,14 +60,14 @@ At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 #### Docker image (To run inside containers)
 
-Available via GitHub Container Registry. 
+Available via GitHub Container Registry.
 
 | Tag | Note |
 |:---:|---|
-| latest | Latest stable build |
-| nightly | Latest HEAD build, could be unstable |
+| `latest` | Latest stable build |
+| `nightly` | Latest HEAD build, could be unstable |
 
-Use `docker run -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
+Use `docker run --privileged -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
 
 ### Developer notes
 

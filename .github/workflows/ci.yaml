@@ -9,7 +9,7 @@ jobs:
   build-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.2
         with:
           node-version: 14
@@ -25,3 +25,15 @@ jobs:
           npm ci
           npm run build
           npm run lint
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - 'Dockerfile'
+      - name: Build image
+        run: docker build .
