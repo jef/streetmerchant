@@ -52,7 +52,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
-			logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
+			logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
