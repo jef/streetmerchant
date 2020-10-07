@@ -6,8 +6,6 @@ import {config as config_} from 'dotenv';
 import {logger} from './logger';
 import path from 'path';
 
-type minMax = 'min' | 'max';
-
 config_({path: path.resolve(__dirname, '../.env')});
 
 /**
@@ -60,42 +58,50 @@ function envOrNumber(environment: string | undefined, number?: number): number {
  *
  * @param environmentMin Min environment variable of Min/Max pair.
  * @param environmentMax Max environment variable of Min/Max pair.
- * @param minOrMax Interested enviroment variable to be returned. 'min' | 'max'
  * @param number Default number. If not set, is `0`.
  */
-function envOrNumberMinMax(enviromentMin: string | undefined, enviromentMax: string | undefined, minOrMax: minMax, number?: number): number {
-	if (enviromentMin || enviromentMax) {
-		switch (minOrMax) {
-			case 'min':
-				if (enviromentMin && enviromentMax) {
-					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMin : enviromentMax);
-				}
+function envOrNumberMin(environmentMin: string | undefined, environmentMax: string | undefined, number?: number) {
+	if (environmentMin || environmentMax) {
+		if (environmentMin && environmentMax) {
+			return Number(Number(environmentMin) < Number(environmentMax) ? environmentMin : environmentMax);
+		}
 
-				if (enviromentMax) {
-					return Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) : (number ?? 0);
-				}
+		if (environmentMax) {
+			return Number(environmentMax) < (number ?? 0) ? Number(environmentMax) : (number ?? 0);
+		}
 
-				if (enviromentMin) {
-					return Number(enviromentMin);
-				}
+		if (environmentMin) {
+			return Number(environmentMin);
+		}
+	}
 
-				break;
-			case 'max':
-				if (enviromentMin && enviromentMax) {
-					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMax : enviromentMin);
-				}
+	return number ?? 0;
+}
 
-				if (enviromentMin) {
-					return Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) : (number ?? 0);
-				}
+/**
+ * Returns environment variable, given number, or default number,
+ * while handling .env input errors for a Min/Max pair.
+ * .env errors handled:
+ * - Min/Max swapped (Min larger than Max, Max smaller than Min)
+ * - Min larger than default Max when no Max defined
+ * - Max smaller than default Min when no Min defined
+ *
+ * @param environmentMin Min environment variable of Min/Max pair.
+ * @param environmentMax Max environment variable of Min/Max pair.
+ * @param number Default number. If not set, is `0`.
+ */
+function envOrNumberMax(environmentMin: string | undefined, environmentMax: string | undefined, number?: number) {
+	if (environmentMin || environmentMax) {
+		if (environmentMin && environmentMax) {
+			return Number(Number(environmentMin) < Number(environmentMax) ? environmentMax : environmentMax);
+		}
 
-				if (enviromentMax) {
-					return Number(enviromentMax);
-				}
+		if (environmentMin) {
+			return Number(environmentMin) > (number ?? 0) ? Number(environmentMin) : (number ?? 0);
+		}
 
-				break;
-			default:
-				break;
+		if (environmentMax) {
+			return Number(environmentMax);
 		}
 	}
 
@@ -106,10 +112,10 @@ const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
-	maxBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 3600000),
-	maxSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'max', 10000),
-	minBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'min', 10000),
-	minSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 5000),
+	maxBackoff: envOrNumberMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 3600000),
+	maxSleep: envOrNumberMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 10000),
+	minBackoff: envOrNumberMin(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 10000),
+	minSleep: envOrNumberMin(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
