@@ -149,9 +149,27 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
+		let priceLimit;
+		let maxPrice = 0;
+		switch (link.series) {
+			case '3070':
+				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3070, baseOptions);
+				maxPrice = config.store.maxPrice3070;
+				break;
+			case '3080':
+				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3080, baseOptions);
+				maxPrice = config.store.maxPrice3080;
+				break;
+			case '3090':
+				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3090, baseOptions);
+				maxPrice = config.store.maxPrice3090;
+				break;
+			default:
+				break;
+		}
+
 		if (priceLimit) {
-			logger.info(Print.maxPrice(link, store,	priceLimit, true));
+			logger.info(Print.maxPrice(link, store,	priceLimit, maxPrice, true));
 			return false;
 		}
 	}
