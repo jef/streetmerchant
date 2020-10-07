@@ -6,6 +6,8 @@ import {config as config_} from 'dotenv';
 import {logger} from './logger';
 import path from 'path';
 
+type minMax = 'min' | 'max';
+
 config_({path: path.resolve(__dirname, '../.env')});
 
 /**
@@ -48,14 +50,66 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 	return environment ? Number(environment) : (number ?? 0);
 }
 
+/**
+ * Returns environment variable, given number, or default number,
+ * while handling .env input errors for a Min/Max pair.
+ * .env errors handled:
+ * - Min/Max swapped (Min larger than Max, Max smaller than Min)
+ * - Min larger than default Max when no Max defined
+ * - Max smaller than default Min when no Min defined
+ *
+ * @param environmentMin Min environment variable of Min/Max pair.
+ * @param environmentMax Max environment variable of Min/Max pair.
+ * @param minOrMax Interested enviroment variable to be returned. 'min' | 'max'
+ * @param number Default number. If not set, is `0`.
+ */
+function envOrNumberMinMax(enviromentMin: string | undefined, enviromentMax: string | undefined, minOrMax: minMax, number?: number): number {
+	if (enviromentMin || enviromentMax) {
+		switch (minOrMax) {
+			case 'min':
+				if (enviromentMin && enviromentMax) {
+					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMin : enviromentMax);
+				}
+
+				if (enviromentMax) {
+					return Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) : (number ?? 0);
+				}
+
+				if (enviromentMin) {
+					return Number(enviromentMin);
+				}
+
+				break;
+			case 'max':
+				if (enviromentMin && enviromentMax) {
+					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMax : enviromentMin);
+				}
+
+				if (enviromentMin) {
+					return Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) : (number ?? 0);
+				}
+
+				if (enviromentMax) {
+					return Number(enviromentMax);
+				}
+
+				break;
+			default:
+				break;
+		}
+	}
+
+	return number ?? 0;
+}
+
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
-	maxBackoff: envOrNumber(process.env.PAGE_BACKOFF_MAX, 3600000),
-	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
-	minBackoff: envOrNumber(process.env.PAGE_BACKOFF_MIN, 10000),
-	minSleep: envOrNumber(process.env.PAGE_SLEEP_MIN, 5000),
+	maxBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'max', 3600000),
+	maxSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'max', 10000),
+	minBackoff: envOrNumberMinMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 'min', 10000),
+	minSleep: envOrNumberMinMax(process.env.PAGE_SLEEP_MIN, process.env.PAGE_SLEEP_MAX, 'min', 5000),
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
