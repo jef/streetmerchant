@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Print, logger} from '../logger';
-import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
+import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -149,27 +149,27 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		let priceLimit;
+		let price;
 		let maxPrice = 0;
 		switch (link.series) {
 			case '3070':
-				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3070, baseOptions);
-				maxPrice = config.store.maxPrice3070;
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3070'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3070'];
 				break;
 			case '3080':
-				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3080, baseOptions);
-				maxPrice = config.store.maxPrice3080;
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3080'];
 				break;
 			case '3090':
-				priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice3090, baseOptions);
-				maxPrice = config.store.maxPrice3090;
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3090'];
 				break;
 			default:
 				break;
 		}
 
-		if (priceLimit) {
-			logger.info(Print.maxPrice(link, store,	priceLimit, maxPrice, true));
+		if (price) {
+			logger.info(Print.maxPrice(link, store,	price, maxPrice, true));
 			return false;
 		}
 	}
