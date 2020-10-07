@@ -65,14 +65,32 @@ function envOrNumberMinMax(enviromentMin: string | undefined, enviromentMax: str
 	if (enviromentMin || enviromentMax) {
 		switch (minOrMax) {
 			case 'min':
-				if (enviromentMin && enviromentMax) return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMin : enviromentMax);
-				if (enviromentMax) return Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) : (number ?? 0);
-				if (enviromentMin) return Number(enviromentMin);
+				if (enviromentMin && enviromentMax) {
+					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMin : enviromentMax);
+				}
+
+				if (enviromentMax) {
+					return Number(enviromentMax) < (number ?? 0) ? Number(enviromentMax) : (number ?? 0);
+				}
+
+				if (enviromentMin) {
+					return Number(enviromentMin);
+				}
+
 				break;
 			case 'max':
-				if (enviromentMin && enviromentMax) return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMax : enviromentMin);
-				if (enviromentMin) return Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) : (number ?? 0);
-				if (enviromentMax) return Number(enviromentMax);
+				if (enviromentMin && enviromentMax) {
+					return Number(Number(enviromentMin) < Number(enviromentMax) ? enviromentMax : enviromentMin);
+				}
+
+				if (enviromentMin) {
+					return Number(enviromentMin) > (number ?? 0) ? Number(enviromentMin) : (number ?? 0);
+				}
+
+				if (enviromentMax) {
+					return Number(enviromentMax);
+				}
+
 				break;
 			default:
 				break;
