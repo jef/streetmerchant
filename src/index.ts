@@ -28,11 +28,9 @@ async function main() {
 
 	const args: string[] = [];
 
-	// Skip Chromium Linux Sandbox
-	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
-	if (config.browser.isTrusted) {
-		args.push('--no-sandbox');
-		args.push('--disable-setuid-sandbox');
+	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	if (config.docker) {
+		args.push('--disable-dev-shm-usage');
 	}
 
 	// Add the address of the proxy server if defined

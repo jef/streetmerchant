@@ -1,19 +1,34 @@
 # Build the source code
 FROM node:14.11.0-alpine3.12 AS builder
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
 WORKDIR /build
 
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 COPY tsconfig.json tsconfig.json
-COPY src/ src/
-
 RUN npm ci
+
+COPY src/ src/
 RUN npm run build
 RUN npm prune --production
 
-FROM buildkite/puppeteer:5.2.1
+FROM node:14.11.0-alpine3.12
 
-WORKDIR /opt/nvidia-snatcher/
+RUN apk add --no-cache chromium
+
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
+	DOCKER=true
+
+RUN addgroup -S appuser && adduser -S -g appuser appuser \
+	&& mkdir -p /home/appuser/Downloads /app \
+	&& chown -R appuser:appuser /home/appuser \
+	&& chown -R appuser:appuser /app
+
+USER appuser
+
+WORKDIR /app
 
 COPY --from=builder /build/node_modules/ node_modules/
 COPY --from=builder /build/build/ build/
