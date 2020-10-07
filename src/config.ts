@@ -15,7 +15,7 @@ config_({path: path.resolve(__dirname, '../.env')});
  * @param array Default array. If not set, is `[]`.
  */
 function envOrArray(environment: string | undefined, array?: string[]): string[] {
-	return environment ? environment.split(',') : (array ?? []);
+	return (environment ? environment.split(',') : (array ?? [])).map(s => s.trim());
 }
 
 /**
