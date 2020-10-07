@@ -1,7 +1,7 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Print, logger} from '../logger';
-import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
+import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
@@ -52,7 +52,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
-			logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
+			logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -149,9 +149,27 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
-		if (priceLimit) {
-			logger.info(Print.maxPrice(link, store,	priceLimit, true));
+		let price;
+		let maxPrice = 0;
+		switch (link.series) {
+			case '3070':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3070'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3070'];
+				break;
+			case '3080':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3080'];
+				break;
+			case '3090':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3090'];
+				break;
+			default:
+				break;
+		}
+
+		if (price) {
+			logger.info(Print.maxPrice(link, store,	price, maxPrice, true));
 			return false;
 		}
 	}

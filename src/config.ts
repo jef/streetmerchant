@@ -1,7 +1,9 @@
 import {banner} from './banner';
+
 console.log(banner);
 
 import {config as config_} from 'dotenv';
+import {logger} from './logger';
 import path from 'path';
 
 type minMax = 'min' | 'max';
@@ -121,6 +123,8 @@ const notifications = {
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
+		smtpAddress: envOrString(process.env.SMTP_ADDRESS),
+		smtpPort: envOrNumber(process.env.SMTP_PORT, 25),
 		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
 	},
@@ -189,13 +193,24 @@ const page = {
 };
 
 const proxy = {
-	address: envOrString(process.env.PROXY_ADDRESS, ''),
+	address: envOrString(process.env.PROXY_ADDRESS),
 	port: envOrNumber(process.env.PROXY_PORT, 80)
 };
 
+// Check for deprecated configuration values
+if (process.env.MAX_PRICE) {
+	logger.warn('ℹ MAX_PRICE is deprecated, please use MAX_PRICE_SERIES_{{series}}');
+}
+
 const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
-	maxPrice: envOrNumber(process.env.MAX_PRICE),
+	maxPrice: {
+		series: {
+			3070: envOrNumber(process.env.MAX_PRICE_3070),
+			3080: envOrNumber(process.env.MAX_PRICE_3080),
+			3090: envOrNumber(process.env.MAX_PRICE_3090)
+		}
+	},
 	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
 	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS),
