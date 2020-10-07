@@ -6,16 +6,27 @@ import nodemailer from 'nodemailer';
 
 const email = config.notifications.email;
 
-const transporter = nodemailer.createTransport({
-	auth: {
-		pass: email.password,
-		user: email.username
-	},
-	service: 'gmail'
+const transportOptions: any = {};
+
+if (email.username && (email.password || email.smtpAddress)) {
+	transportOptions.auth = {};
+	transportOptions.auth.user = email.username;
+	transportOptions.auth.pass = email.password;
+}
+
+if (email.smtpAddress) {
+	transportOptions.host = email.smtpAddress;
+	transportOptions.port = email.smtpPort;
+} else {
+	transportOptions.service = 'gmail';
+}
+
+export const transporter = nodemailer.createTransport({
+	...transportOptions
 });
 
 export function sendEmail(link: Link, store: Store) {
-	if (email.username && email.password) {
+	if (email.username && (email.password || email.smtpAddress)) {
 		logger.debug('↗ sending email');
 
 		const mailOptions: Mail.Options = {
