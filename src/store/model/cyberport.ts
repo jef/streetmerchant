@@ -5,6 +5,10 @@ export const Cyberport: Store = {
 		inStock: {
 			container: '.tooltipAvailabilityParent',
 			text: ['sofort verfügbar']
+		},
+		outOfStock: {
+			container: '.tooltipAvailabilityParent',
+			text: ['noch nicht verfügbar']
 		}
 	},
 	links: [
@@ -64,21 +68,21 @@ export const Cyberport: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'https://www.cyberport.de?DEEP=2E12-3L7',
+			model: 'ventus 3x o',
 			series: '3080',
-			url: 'ventus 3x oc'
+			url: 'https://www.cyberport.de?DEEP=2E12-3L7c'
 		},
 		{
 			brand: 'zotac',
-			model: 'https://www.cyberport.de?DEEP=2E13-1H4',
+			model: 'trinity',
 			series: '3080',
-			url: 'trinity'
+			url: 'https://www.cyberport.de?DEEP=2E13-1H4'
 		},
 		{
 			brand: 'zotac',
-			model: 'https://www.cyberport.de?DEEP=2E13-1H7',
+			model: 'trinity oc',
 			series: '3080',
-			url: 'trinity oc'
+			url: 'https://www.cyberport.de?DEEP=2E13-1H7'
 		}
 	],
 	name: 'cyberport'
