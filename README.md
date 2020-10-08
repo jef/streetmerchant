@@ -150,6 +150,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Box | `box`|
 | CCL | `ccl`|
 | Currys | `currys`|
+| Cyberport (DE) | `cyberport` |
 | eBuyer | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
@@ -208,7 +209,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | Brand | Model |
 |:---:|---|
-| `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
+| `asus` | `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
 | `gainward` | `phoenix gs` |
 | `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision`, `vision oc` |
