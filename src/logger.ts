@@ -78,12 +78,12 @@ export const Print = {
 
 		return `ℹ ${buildProductString(link, store)} :: IN STOCK, WAITING`;
 	},
-	maxPrice(link: Link, store: Store, price: number, color?: boolean): string {
+	maxPrice(link: Link, store: Store, price: number, maxPrice: number, color?: boolean): string {
 		if (color) {
-			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${config.store.maxPrice}`);
+			return '✖ ' + buildProductString(link, store, true) + ' :: ' +	chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${maxPrice}`);
 		}
 
-		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${config.store.maxPrice}`;
+		return `✖ ${buildProductString(link, store)} :: PRICE ${price} EXCEEDS LIMIT ${maxPrice}`;
 	},
 	message(message: string, topic: string, store: Store, color?: boolean): string {
 		if (color) {
