@@ -1,0 +1,162 @@
+import {Store} from './store';
+
+export const Saturn: Store = {
+	labels: {
+		inStock: {
+			container: '#root',
+			text: ['lieferung']
+		},
+		outOfStock: {
+			container: '#root',
+			text: ['dieser artikel ist aktuell nicht verfügbar.']
+		}
+	},
+	links: [
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://www.saturn.de/de/product/-2621744.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf gaming',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2681859.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf gaming oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2681861.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix gaming',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2681869.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix gaming oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2681871.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2683243.html'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2683227.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2683229.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill 4x',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2684238.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill 3x',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2684241.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2683937.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2683942.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'amp extreme holo',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2689452.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'amp holo',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2689452.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin 2x oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2689452.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2689452.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.saturn.de/de/product/-2689452.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf gaming',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2681855.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf gaming oc',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2681857.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix gaming',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2681863.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix gaming oc',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2681866.html'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2683226.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2691441.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2691440.html'
+		}
+	],
+	name: 'saturn'
+};
+
