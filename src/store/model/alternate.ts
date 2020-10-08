@@ -19,22 +19,76 @@ export const Alternate: Store = {
 			url: 'https://www.alternate.de/product/1516616'
 		},
 		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672251'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672634'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672868'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672867'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673517'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673524'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673512'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673520'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1674164'
+		},
+		{
+			brand: 'gainward',
+			model: 'phoenix gs',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673442'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1680168'
+		},
+		{
 			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672756'
-		},
-		{
-			brand: 'msi',
-			model: 'ventus 3x oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672345'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672251'
 		},
 		{
 			brand: 'gigabyte',
@@ -43,46 +97,40 @@ export const Alternate: Store = {
 			url: 'https://www.alternate.de/product/1672753'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1681134'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673137'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673136'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x4',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673134'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672343'
 		},
 		{
-			brand: 'asus',
-			model: 'tuf oc gaming',
+			brand: 'msi',
+			model: 'ventus 3x oc',
 			series: '3080',
-			url: 'https://www.alternate.de/product/1672634'
-		},
-		{
-			brand: 'asus',
-			model: 'rog strix oc gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672867'
-		},
-		{
-			brand: 'evga',
-			model: 'xc3 black gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673512'
-		},
-		{
-			brand: 'zotac',
-			model: 'trinity',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672612'
-		},
-		{
-			brand: 'evga',
-			model: 'xc3 ultra gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1674164'
-		},
-		{
-			brand: 'asus',
-			model: 'rog strix gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672868'
+			url: 'https://www.alternate.de/product/1672345'
 		},
 		{
 			brand: 'palit',
@@ -92,51 +140,15 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672612'
+		},
+		{
+			brand: 'zotac',
 			model: 'trinity oc',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1677989'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'vision oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1681134'
-		},
-		{
-			brand: 'evga',
-			model: 'xc3 gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673520'
-		},
-		{
-			brand: 'gainward',
-			model: 'phoenix gs',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673442'
-		},
-		{
-			brand: 'inno3d',
-			model: 'ichill x3',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673136'
-		},
-		{
-			brand: 'evga',
-			model: 'ftw3 ultra gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673524'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'aorus master',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1680168'
-		},
-		{
-			brand: 'evga',
-			model: 'ftw3 gaming',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673517'
 		},
 		{
 			brand: 'zotac',
@@ -149,20 +161,7 @@ export const Alternate: Store = {
 			model: 'amp extreme holo',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1677982'
-		},
-		{
-			brand: 'inno3d',
-			model: 'twin x2 oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673137'
-		},
-		{
-			brand: 'inno3d',
-			model: 'ichill x4',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673134'
 		}
 	],
 	name: 'alternate'
 };
-

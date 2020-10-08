@@ -143,6 +143,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (UK) | `amazon-uk`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
+| ASUS (DE) | `asus-de` |
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
@@ -209,11 +210,14 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|
 | `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
-| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision` |
+| `gainward` | `phoenix gs` |
+| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision`, `vision oc` |
+| `inno3d` | `twin x2 oc`, `ichill x3`, `ichill x4` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
-| `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
-| `zotac` | `trinity`, `trinity oc` |
+| `palit` | `gaming pro`, `gaming pro oc` |
+| `pny` | `dual fan`, `xlr8`, `xlr8 rgb`, `xlr8 revel epic-x` |
+| `zotac` | `trinity`, `trinity oc`, `amp holo`, `amp extreme holo` |
 
 #### Supported carriers
 
