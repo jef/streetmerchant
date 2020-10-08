@@ -161,7 +161,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 				maxPrice = config.store.maxPrice.series['3080'];
 				break;
 			case '3090':
-				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3090'], baseOptions);
 				maxPrice = config.store.maxPrice.series['3090'];
 				break;
 			default:
