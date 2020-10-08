@@ -14,12 +14,6 @@ export const Notebooksbilliger: Store = {
 			series: 'test:series',
 			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+2060+6gb+twin+x2+420215'
 		},
-//		{
-//			brand: 'asus',
-//			model: 'rog strix',
-//			series: '3080',
-//			url: 'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3080+10gb+gddr6x+grafikkarte+677363'
-//		},
 		{
 			brand: 'gainward',
 			model: 'phoenix gs',
@@ -44,18 +38,6 @@ export const Notebooksbilliger: Store = {
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+3080+twin+x2+oc+grafikkarte+679190'
 		},
-//		{
-//			brand: 'inno3d',
-//			model: 'ichill x3',
-//			series: '3080',
-//			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+3080+ichill+x3+grafikkarte+678588'
-//		},
-//		{
-//			brand: 'msi',
-//			model: 'ventus 3x oc',
-//			series: '3080',
-//			url: 'https://www.notebooksbilliger.de/msi+geforce+rtx+3080+ventus+3x+10g+oc+grafikkarte+678549'
-//		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -76,15 +58,15 @@ export const Notebooksbilliger: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 revel epic-x',
-			series: '3080',
-			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
-		},
-		{
-			brand: 'pny',
 			model: 'xlr8',
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+xlr8+gaming+10gb+gddr6x+grafikkarte+677407'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 rgb',
+			series: '3080',
+			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
 		}
 	],
 	name: 'notebooksbilliger'
