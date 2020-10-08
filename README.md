@@ -67,7 +67,7 @@ Available via GitHub Container Registry.
 | `latest` | Latest stable build |
 | `nightly` | Latest HEAD build, could be unstable |
 
-Use `docker run --privileged -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
+Use `docker run --cap-add=SYS_ADMIN -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
 
 ### Developer notes
 
