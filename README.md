@@ -212,8 +212,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `asus` | `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
 | `gainward` | `phoenix gs` |
-| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision`, `vision oc` |
-| `inno3d` | `twin x2 oc`, `ichill x3`, `ichill x4` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision`, `vision oc` |
+| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gaming pro`, `gaming pro oc` |

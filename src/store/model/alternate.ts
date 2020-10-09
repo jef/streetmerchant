@@ -20,18 +20,6 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672251'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1672634'
-		},
-		{
-			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672868'
@@ -41,6 +29,18 @@ export const Alternate: Store = {
 			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672867'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672251'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672634'
 		},
 		{
 			brand: 'evga',
@@ -104,12 +104,6 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'inno3d',
-			model: 'twin x2 oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1673137'
-		},
-		{
-			brand: 'inno3d',
 			model: 'ichill x3',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1673136'
@@ -119,6 +113,12 @@ export const Alternate: Store = {
 			model: 'ichill x4',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1673134'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1673137'
 		},
 		{
 			brand: 'msi',
@@ -140,15 +140,9 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'zotac',
-			model: 'trinity',
+			model: 'amp extreme holo',
 			series: '3080',
-			url: 'https://www.alternate.de/product/1672612'
-		},
-		{
-			brand: 'zotac',
-			model: 'trinity oc',
-			series: '3080',
-			url: 'https://www.alternate.de/product/1677989'
+			url: 'https://www.alternate.de/product/1677982'
 		},
 		{
 			brand: 'zotac',
@@ -158,9 +152,135 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'zotac',
-			model: 'amp extreme holo',
+			model: 'trinity oc',
 			series: '3080',
-			url: 'https://www.alternate.de/product/1677982'
+			url: 'https://www.alternate.de/product/1677989'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1672612'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672870'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672872'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672259'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672629'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673530'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673531'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673521'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673525'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673529'
+		},
+		{
+			brand: 'gainward',
+			model: 'phoenix gs',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673440'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1680670'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672744'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672749'
+		},
+		{
+			brand: 'inno3d',
+			model: 'gaming x3',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673131'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673135'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x4',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673129'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672341'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672346'
+		},
+		{
+			brand: 'palit',
+			model: 'gaming pro oc',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1673434'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1672611'
 		}
 	],
 	name: 'alternate'
