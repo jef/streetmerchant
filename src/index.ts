@@ -35,6 +35,11 @@ async function main() {
 		args.push('--disable-setuid-sandbox');
 	}
 
+	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	if (config.docker) {
+		args.push('--disable-dev-shm-usage');
+	}
+
 	// Add the address of the proxy server if defined
 	if (config.proxy.address) {
 		args.push(`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`);

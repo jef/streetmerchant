@@ -118,6 +118,8 @@ const browser = {
 	open: envOrBoolean(process.env.OPEN_BROWSER)
 };
 
+const docker = envOrBoolean(process.env.DOCKER);
+
 const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
 const notifications = {
@@ -225,6 +227,7 @@ const store = {
 
 export const config = {
 	browser,
+	docker,
 	logLevel,
 	notifications,
 	nvidia,
