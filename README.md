@@ -217,7 +217,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gaming pro`, `gaming pro oc` |
-| `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
+| `pny` | `dual fan`, `xlr8`, `xlr8 rgb`, `xlr8 revel epic-x` |
 | `zotac` | `trinity`, `trinity oc`, `amp holo`, `amp extreme holo` |
 
 #### Supported carriers
