@@ -60,7 +60,7 @@ export class NvidiaCart {
 		return `https://store.nvidia.com/store/nvidia/SessionToken?format=json&locale=${this.regionInfo.drLocale}`;
 	}
 
-	public async addToCard(productId: number, name: string): Promise<string> {
+	public async addToCart(productId: number, name: string): Promise<string> {
 		let cartUrl: string | undefined;
 		logger.info(`🚀🚀🚀 [nvidia] ${name}, starting auto add to cart 🚀🚀🚀`);
 		try {

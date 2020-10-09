@@ -38,7 +38,7 @@ export function generateSetupAction() {
 
 export function generateOpenCartAction(id: number, cardName: string) {
 	return async () => {
-		const url = await cart.addToCard(id, cardName);
+		const url = await cart.addToCart(id, cardName);
 
 		return url;
 	};
