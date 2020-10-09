@@ -194,7 +194,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `chicago` |
 | `columbus` |
 | `dallas` |
-| `devin` |
+| `denver` |
 | `duluth` |
 | `fairfax` |
 | `flushing` |
