@@ -28,8 +28,6 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 </details>
 
-> :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
-
 | | Adorama | Amazon | Amazon (CA) | ASUS | B&H | Best Buy | Best Buy (CA) | EVGA | Micro Center | Newegg | Newegg (CA) | Nvidia | Office Depot | PNY | Zotac |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | | | | | | | | `✔` | |
@@ -129,6 +127,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 > :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
 > :point_right: You can test your notification configuration by running `npm run test:notification`.
+
+> :point_right: Data usage is [known to be high](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.
 
 #### Supported stores
 
