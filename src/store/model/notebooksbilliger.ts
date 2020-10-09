@@ -67,6 +67,24 @@ export const Notebooksbilliger: Store = {
 			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3090+24gb+gddr6x+grafikkarte+677343'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3090+oc+24gb+gddr6x+grafikkarte+677308'
+		},
+		{
+			brand: 'palit',
+			model: 'gaming pro oc',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/palit+geforce+rtx+3090+gamingpro+oc+24gb+gddr6x+grafikkarte+677599'
 		}
 	],
 	name: 'notebooksbilliger'
