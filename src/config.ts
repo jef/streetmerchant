@@ -1,9 +1,8 @@
 import {banner} from './banner';
 
-console.log(banner);
+console.info(banner);
 
 import {config as config_} from 'dotenv';
-import {logger} from './logger';
 import path from 'path';
 
 config_({path: path.resolve(__dirname, '../.env')});
@@ -205,7 +204,7 @@ const proxy = {
 
 // Check for deprecated configuration values
 if (process.env.MAX_PRICE) {
-	logger.warn('ℹ MAX_PRICE is deprecated, please use MAX_PRICE_SERIES_{{series}}');
+	console.warn('ℹ MAX_PRICE is deprecated, please use MAX_PRICE_SERIES_{{series}}');
 }
 
 const store = {
