@@ -1,6 +1,6 @@
 import {Link, Store} from '../store/model';
-import {playSound} from './sound';
 import {sendDesktopNotification} from './desktop';
+import {playSound} from './sound';
 import {sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
 import {sendPushbulletNotification} from './pushbullet';
