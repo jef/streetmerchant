@@ -10,7 +10,7 @@ if (config.notifications.phone.number && !config.notifications.email.username) {
 
 const [email, phone] = [config.notifications.email, config.notifications.phone];
 
-export function sendSMS(link: Link, store: Store) {
+export function sendSms(link: Link, store: Store) {
 	if (phone.number) {
 		logger.debug('↗ sending sms');
 		const carrier = phone.carrier;
