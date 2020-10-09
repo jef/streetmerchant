@@ -44,18 +44,6 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'aorus master',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'vision oc',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
-		},
-		{
-			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2683942.html'
@@ -65,12 +53,6 @@ export const Mediamarkt: Store = {
 			model: 'gaming oc',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2683937.html'
-		},
-		{
-			brand: 'inno3d',
-			model: 'twin 2x oc',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
 		},
 		{
 			brand: 'inno3d',
@@ -101,12 +83,6 @@ export const Mediamarkt: Store = {
 			model: 'trinity',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2683243.html'
-		},
-		{
-			brand: 'zotac',
-			model: 'amp holo',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
 		},
 		{
 			brand: 'zotac',

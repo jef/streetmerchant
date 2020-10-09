@@ -68,7 +68,7 @@ export const Cyberport: Store = {
 		},
 		{
 			brand: 'msi',
-			model: 'ventus 3x o',
+			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E12-3L7c'
 		},
