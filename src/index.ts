@@ -11,7 +11,7 @@ import {tryLookupAndLoop} from './store';
 puppeteer.use(stealthPlugin());
 if (config.browser.lowBandwidth) {
 	puppeteer.use(resourceBlock({
-		blockedTypes: new Set(['image', 'font'])
+		blockedTypes: new Set(['image', 'font'] as const)
 	}));
 } else {
 	puppeteer.use(adBlocker);

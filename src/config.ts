@@ -158,7 +158,7 @@ const notifications = {
 	playSound: envOrString(process.env.PLAY_SOUND),
 	pushbullet: envOrString(process.env.PUSHBULLET),
 	pushover: {
-		priority: envOrString(process.env.PUSHOVER_PRIORITY),
+		priority: envOrNumber(process.env.PUSHOVER_PRIORITY),
 		token: envOrString(process.env.PUSHOVER_TOKEN),
 		username: envOrString(process.env.PUSHOVER_USER)
 	},
