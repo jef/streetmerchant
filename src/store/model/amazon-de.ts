@@ -95,6 +95,12 @@ export const AmazonDe: Store = {
 			url: 'https://www.amazon.de/dp/B08HN4DSTC'
 		},
 		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08HN6KYS3'
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
