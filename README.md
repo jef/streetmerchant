@@ -161,6 +161,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy (CA) | `bestbuy-ca`|
 | Box | `box`|
 | CCL | `ccl`|
+| Coolblue | `coolblue`|
 | Currys | `currys`|
 | eBuyer | `ebuyer`|
 | EVGA | `evga`|
