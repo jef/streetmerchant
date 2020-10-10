@@ -22,49 +22,49 @@ export const Coolblue: Store = {
 			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868737/gigabyte-geforce-rtx-3080-eagle-oc-10g.html'
+			url: 'https://www.coolblue.nl/product/868737/'
 		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868741/msi-geforce-rtx-3080-ventus-3x-oc-10g.html'
+			url: 'https://www.coolblue.nl/product/868741/'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf gaming',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868726/asus-geforce-rtx-3080-tuf-gaming-10g.html'
+			url: 'https://www.coolblue.nl/product/868726/'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868736/gigabyte-geforce-rtx-3080-gaming-oc-10g.html'
+			url: 'https://www.coolblue.nl/product/868736/'
 		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868740/msi-geforce-rtx-3080-gaming-x-trio-10g.html'
+			url: 'https://www.coolblue.nl/product/868740/'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf oc gaming',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868733/asus-geforce-rtx-3080-tuf-gaming-oc-10g.html'
+			url: 'https://www.coolblue.nl/product/868733/'
 		},
 		{
 			brand: 'asus',
 			model: 'rog strix oc gaming',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868731/asus-geforce-rtx-3080-rog-strix-gaming-oc-10g.html'
+			url: 'https://www.coolblue.nl/product/868731/'
 		},
 		{
 			brand: 'asus',
 			model: 'rog strix gaming',
 			series: '3080',
-			url: 'https://www.coolblue.nl/product/868732/asus-geforce-rtx-3080-rog-strix-gaming-10g.html'
+			url: 'https://www.coolblue.nl/product/868732/'
 		}
 	],
 	name: 'coolblue'
