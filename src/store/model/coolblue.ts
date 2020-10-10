@@ -4,11 +4,11 @@ export const Coolblue: Store = {
 	labels: {
 		inStock: {
 			container: '.product-order',
-			text: ['bestel snel', 'Morgen in huis']
+			text: ['bestel snel', 'morgen in huis']
 		},
 		outOfStock: {
 			container: '.product-order',
-			text: ['Binnenkort leverbaar', 'Tijdelijk uitverkocht']
+			text: ['binnenkort leverbaar', 'tijdelijk uitverkocht']
 		}
 	},
 	links: [
@@ -69,4 +69,3 @@ export const Coolblue: Store = {
 	],
 	name: 'coolblue'
 };
-
