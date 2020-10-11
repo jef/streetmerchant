@@ -41,8 +41,13 @@ async function main() {
 	}
 
 	// Add the address of the proxy server if defined
-	if (config.proxy.address) {
+	if (config.proxy.address && !config.proxy.username) {
 		args.push(`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`);
+	}
+	
+	// Add the address of the proxy server if defined with username and password
+	if (config.proxy.address && config.proxy.username) {
+		args.push(`--puppeteer-proxy=http://${config.proxy.username}:${config.proxy.password}@${config.proxy.address}:${config.proxy.port}`);
 	}
 
 	const browser = await puppeteer.launch({

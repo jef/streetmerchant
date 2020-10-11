@@ -108,6 +108,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `PLAY_SOUND` | Play this sound notification if a card is found | Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
+| `PROXY_USERNAME` | Authentication username of the proxy server |
+| `PROXY_PASSWORD` | Authentication password of the proxy server |
 | `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
 | `PUSHOVER_USER` | Pushover username | |
