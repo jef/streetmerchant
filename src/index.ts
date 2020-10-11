@@ -11,7 +11,7 @@ import {tryLookupAndLoop} from './store';
 puppeteer.use(stealthPlugin());
 if (config.browser.lowBandwidth) {
 	puppeteer.use(resourceBlock({
-		blockedTypes: new Set(['image', 'font'])
+		blockedTypes: new Set(['image', 'font'] as const)
 	}));
 } else {
 	puppeteer.use(adBlocker);
@@ -33,6 +33,11 @@ async function main() {
 	if (config.browser.isTrusted) {
 		args.push('--no-sandbox');
 		args.push('--disable-setuid-sandbox');
+	}
+
+	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	if (config.docker) {
+		args.push('--disable-dev-shm-usage');
 	}
 
 	// Add the address of the proxy server if defined

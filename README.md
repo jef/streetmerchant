@@ -28,8 +28,6 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 </details>
 
-> :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
-
 | | Adorama | Amazon | Amazon (CA) | ASUS | B&H | Best Buy | Best Buy (CA) | EVGA | Micro Center | Newegg | Newegg (CA) | Nvidia | Office Depot | PNY | Zotac |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **3070**| | | | | | | | | | | | | | `✔` | |
@@ -44,6 +42,8 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 
 ### Quick overview
 
+#### Native installation
+
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
@@ -55,6 +55,17 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 > :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
+
+#### Docker image (To run inside containers)
+
+Available via GitHub Container Registry.
+
+| Tag | Note |
+|:---:|---|
+| `latest` | Latest stable build |
+| `nightly` | Latest HEAD build, could be unstable |
+
+Use `docker run --cap-add=SYS_ADMIN -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
 
 ### Developer notes
 
@@ -73,9 +84,9 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier) | Default: `false` |
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@2834729847239842>` |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
-| `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
+| `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
+| `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
@@ -87,20 +98,20 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
-| `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
-| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
-| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PLAY_SOUND` | Play this sound notification if a card is found | Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
-| `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
-| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
-| `PUSHOVER_USER` | Pushover username | |
-| `PUSHOVER_PRIORITY` | Pushover message priority |
 | `PAGE_BACKOFF_MIN` | Minimum backoff time between retrying requests for the same store when a forbidden response is received | Default: `10000` |
 | `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same store | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same store | In milliseconds, default: `10000` |
+| `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
+| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
+| `PLAY_SOUND` | Play this sound notification if a card is found | Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
+| `PUSHBULLET` | PushBullet API key | Generate at https://www.pushbullet.com/#settings/account | |
+| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
+| `PUSHOVER_USER` | Pushover username | |
+| `PUSHOVER_PRIORITY` | Pushover message priority |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models | Comma separated, e.g.: `founders edition,rog strix` |
@@ -117,10 +128,10 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
 | `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
 | `TWILIO_TO_NUMBER` | Mobile number to send SMS to | Include country code e.g +4401234567890 |
-| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
-| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_ACCESS_TOKEN_KEY` | Twitter Token Key | |
 | `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Token Secret | |
+| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
+| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
 | `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
@@ -129,6 +140,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 > :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
 > :point_right: You can test your notification configuration by running `npm run test:notification`.
+
+> :point_right: Data usage is [known to be high](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.
 
 #### Supported stores
 
@@ -148,6 +161,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy (CA) | `bestbuy-ca`|
 | Box | `box`|
 | CCL | `ccl`|
+| Coolblue | `coolblue`|
 | Currys | `currys`|
 | eBuyer | `ebuyer`|
 | EVGA | `evga`|
@@ -181,7 +195,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `chicago` |
 | `columbus` |
 | `dallas` |
-| `devin` |
+| `denver` |
 | `duluth` |
 | `fairfax` |
 | `flushing` |

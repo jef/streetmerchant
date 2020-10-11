@@ -13,6 +13,7 @@ import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Ccl} from './ccl';
+import {Coolblue} from './coolblue';
 import {Currys} from './currys';
 import {Ebuyer} from './ebuyer';
 import {Evga} from './evga';
@@ -52,6 +53,7 @@ const masterList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Ccl.name, Ccl],
+	[Coolblue.name, Coolblue],
 	[Currys.name, Currys],
 	[Ebuyer.name, Ebuyer],
 	[Evga.name, Evga],
