@@ -152,8 +152,8 @@ const notifications = {
 			['virgin', 'vmobl.com'],
 			['virgin-ca', 'vmobile.ca']
 		]),
-		carrier: envOrString(process.env.PHONE_CARRIER),
-		number: envOrString(process.env.PHONE_NUMBER)
+		carrier: envOrArray(process.env.PHONE_CARRIER),
+		number: envOrArray(process.env.PHONE_NUMBER)
 	},
 	playSound: envOrString(process.env.PLAY_SOUND),
 	pushbullet: envOrString(process.env.PUSHBULLET),
