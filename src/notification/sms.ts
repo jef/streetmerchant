@@ -33,8 +33,8 @@ export function sendSms(link: Link, store: Store) {
 
 		if (phone.carrier.length === 1) {
 			if (carrier && phone.availableCarriers.has(carrier)) {
-				for (const phoneNumber of phone.number) {
-					mailOptions.to = generateAddress(phone.carrier[0], phoneNumber);
+				for (const number of phone.number) {
+					mailOptions.to = generateAddress(phone.carrier[0], number);
 					sendMail(mailOptions);
 				}
 			}
