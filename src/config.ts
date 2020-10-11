@@ -201,9 +201,7 @@ const page = {
 
 const proxy = {
 	address: envOrString(process.env.PROXY_ADDRESS),
-	port: envOrNumber(process.env.PROXY_PORT, 80),
-	username: envOrString(process.env.PROXY_USERNAME),
-	password: envOrString(process.env.PROXY_PASSWORD)
+	port: envOrNumber(process.env.PROXY_PORT, 80)
 };
 
 // Check for deprecated configuration values
