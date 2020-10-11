@@ -1,6 +1,6 @@
 import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
-import Push from 'pushover-notifications';
+import Push, {PushoverMessage} from 'pushover-notifications';
 import {config} from '../config';
 
 const pushover = config.notifications.pushover;
@@ -13,7 +13,7 @@ export function sendPushoverNotification(link: Link, store: Store) {
 	if (pushover.token && pushover.username) {
 		logger.debug('↗ sending pushover message');
 
-		const message = {
+		const message: PushoverMessage = {
 			message: link.cartUrl ? link.cartUrl : link.url,
 			priority: pushover.priority,
 			title: Print.inStock(link, store)

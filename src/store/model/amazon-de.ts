@@ -35,6 +35,18 @@ export const AmazonDe: Store = {
 			url: 'https://www.amazon.de/dp/B08HN4DSTC'
 		},
 		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08HN7VVLJ'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08HN6KYS3'
+		},
+		{
 			brand: 'evga',
 			model: 'ftw3 ultra',
 			series: '3080',
