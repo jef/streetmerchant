@@ -218,7 +218,7 @@ const store = {
 			3090: envOrNumber(process.env.MAX_PRICE_3090)
 		}
 	},
-	microCenterLocation: envOrString(process.env.MICROCENTER_LOCATION, 'web'),
+	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
 	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS),
 	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
