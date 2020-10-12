@@ -180,6 +180,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Office Depot | `officedepot`|
 | Overclockers | `overclockers`|
 | PNY | `pny`|
+| Saturn (DE) | `saturn`|
 | Scan | `scan`|
 | Very | `very`|
 | Zotac | `zotac`|
