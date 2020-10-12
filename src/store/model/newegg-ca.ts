@@ -83,6 +83,12 @@ export const NeweggCa: Store = {
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452'
 		},
 		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3090',
