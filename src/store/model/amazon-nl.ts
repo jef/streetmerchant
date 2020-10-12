@@ -7,13 +7,27 @@ export const AmazonNl: Store = {
 			text: ['voer de karakters in die u hieronder ziet']
 		},
 		inStock: {
-			container: '#desktop_buybox',
-			text: ['in winkelwagen plaatsen']
+			container: '#availability',
+			text: ['op voorraad', 'verkrijgbaar vanaf', 'wordt gewoonlijk verzonden binnen', 'nog slechts']
 		},
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
 			euroFormat: true
-		}
+		},
+		outOfStock: [
+			{
+				container: '#availability',
+				text: ['tijdelijk niet op voorraad', 'unavailable']
+			},
+			{
+				container: '#backInStock',
+				text: ['unavailable']
+			},
+			{
+				container: '#outOfStock',
+				text: ['we weten niet of en wanneer dit item weer op voorraad is']
+			}
+		]
 	},
 	links: [
 		{
