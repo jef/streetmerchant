@@ -3,11 +3,11 @@ import {Store} from './store';
 export const BestBuy: Store = {
 	labels: {
 		inStock: {
-			container: '.v-m-bottom-g',
+			container: '[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
 			text: ['add to cart']
 		},
 		maxPrice: {
-			container: 'div[class="priceView-hero-price priceView-customer-price"] > span',
+			container: '[data-sticky-media-gallery] .priceView-price .priceView-hero-price span',
 			euroFormat: false
 		}
 	},
