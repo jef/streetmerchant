@@ -3,11 +3,11 @@ import {Store} from './store';
 export const BestBuy: Store = {
 	labels: {
 		inStock: {
-			container: '.v-m-bottom-g',
+			container: '[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
 			text: ['add to cart']
 		},
 		maxPrice: {
-			container: 'div[class="priceView-hero-price priceView-customer-price"] > span',
+			container: '[data-sticky-media-gallery] .priceView-price .priceView-hero-price span',
 			euroFormat: false
 		}
 	},
@@ -84,7 +84,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'gigabyte',
 			cartUrl: 'https://api.bestbuy.com/click/-/6436219/cart',
-			model: 'vision',
+			model: 'vision oc',
 			series: '3080',
 			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-10g-gddr6x-pci-express-4-0-graphics-card-white/6436219.p?skuId=6436219&intl=nosplash'
 		},

@@ -1,16 +1,19 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Print, logger} from '../logger';
-import {Selector, cardPriceLimit, pageIncludesLabels} from './includes-labels';
+import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
 import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
+import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
 
 const inStock: Record<string, boolean> = {};
+
+const linkBuilderLastRunTimes: Record<string, number> = {};
 
 /**
  * Responsible for looking up information about a each product within
@@ -49,7 +52,7 @@ async function lookup(browser: Browser, store: Store) {
 		try {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
-			logger.error(`✖ [${store.name}] ${link.brand} ${link.model} - ${error.message as string}`);
+			logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -146,9 +149,27 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		const priceLimit = await cardPriceLimit(page, store.labels.maxPrice, config.store.maxPrice, baseOptions);
-		if (priceLimit) {
-			logger.info(Print.maxPrice(link, store,	priceLimit, true));
+		let price;
+		let maxPrice = 0;
+		switch (link.series) {
+			case '3070':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3070'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3070'];
+				break;
+			case '3080':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3080'];
+				break;
+			case '3090':
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				maxPrice = config.store.maxPrice.series['3090'];
+				break;
+			default:
+				break;
+		}
+
+		if (price) {
+			logger.info(Print.maxPrice(link, store,	price, maxPrice, true));
 			return false;
 		}
 	}
@@ -165,6 +186,19 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
+	if (store.linksBuilder) {
+		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
+		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
+		if (lastRunTime === -1 || (Date.now() - lastRunTime) > ttl) {
+			try {
+				await fetchLinks(store, browser);
+				linkBuilderLastRunTimes[store.name] = Date.now();
+			} catch (error) {
+				logger.error(error.message);
+			}
+		}
+	}
+
 	logger.debug(`[${store.name}] Starting lookup...`);
 	try {
 		await lookup(browser, store);

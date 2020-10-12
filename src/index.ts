@@ -1,7 +1,6 @@
 import {Stores} from './store/model';
 import {adBlocker} from './adblocker';
 import {config} from './config';
-import {fetchLinks} from './store/fetch-links';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
@@ -12,7 +11,7 @@ import {tryLookupAndLoop} from './store';
 puppeteer.use(stealthPlugin());
 if (config.browser.lowBandwidth) {
 	puppeteer.use(resourceBlock({
-		blockedTypes: new Set(['image', 'font'])
+		blockedTypes: new Set(['image', 'font'] as const)
 	}));
 } else {
 	puppeteer.use(adBlocker);
@@ -36,6 +35,11 @@ async function main() {
 		args.push('--disable-setuid-sandbox');
 	}
 
+	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	if (config.docker) {
+		args.push('--disable-dev-shm-usage');
+	}
+
 	// Add the address of the proxy server if defined
 	if (config.proxy.address) {
 		args.push(`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`);
@@ -50,21 +54,14 @@ async function main() {
 		headless: config.browser.isHeadless
 	});
 
-	const promises = [];
 	for (const store of Stores) {
 		logger.debug('store links', {meta: {links: store.links}});
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
 		}
 
-		if (store.linksBuilder) {
-			promises.push(fetchLinks(store, browser));
-		}
-
 		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
 	}
-
-	await Promise.all(promises);
 }
 
 /**

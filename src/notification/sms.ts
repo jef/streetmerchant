@@ -2,23 +2,15 @@ import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
 import Mail from 'nodemailer/lib/mailer';
 import {config} from '../config';
-import nodemailer from 'nodemailer';
+import {transporter} from './email';
 
 if (config.notifications.phone.number && !config.notifications.email.username) {
-	logger.warn('✖ in order to recieve sms alerts, email notifications must also be configured');
+	logger.warn('✖ in order to receive sms alerts, email notifications must also be configured');
 }
 
 const [email, phone] = [config.notifications.email, config.notifications.phone];
 
-const transporter = nodemailer.createTransport({
-	auth: {
-		pass: email.password,
-		user: email.username
-	},
-	service: 'gmail'
-});
-
-export function sendSMS(link: Link, store: Store) {
+export function sendSms(link: Link, store: Store) {
 	if (phone.number) {
 		logger.debug('↗ sending sms');
 		const carrier = phone.carrier;

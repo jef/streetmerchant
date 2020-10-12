@@ -7,7 +7,7 @@ import {usingResponse} from '../util';
 
 function addNewLinks(store: Store, links: Link[], series: Series) {
 	if (links.length === 0) {
-		logger.error(Print.message('NO STORE LINKS FOUND', series, store, true));
+		logger.warn(Print.message('NO STORE LINKS FOUND', series, store, true));
 
 		return;
 	}
@@ -30,16 +30,20 @@ export async function fetchLinks(store: Store, browser: Browser) {
 		return;
 	}
 
-	const promises = [];
+	const promises: Array<Promise<void>> = [];
 
-	for (const {series, url} of store.linksBuilder.urls) {
+	for (let {series, url} of store.linksBuilder.urls) {
 		if (!filterSeries(series)) {
 			continue;
 		}
 
-		logger.info(Print.message('DETECTING STORE LINKS', series, store, true));
+		logger.debug(Print.message('DETECTING STORE LINKS', series, store, true));
 
-		promises.push(usingResponse(browser, url, async response => {
+		if (!Array.isArray(url)) {
+			url = [url];
+		}
+
+		url.map(x => promises.push(usingResponse(browser, x, async response => {
 			const text = await response?.text();
 
 			if (!text) {
@@ -51,7 +55,7 @@ export async function fetchLinks(store: Store, browser: Browser) {
 			const links = store.linksBuilder!.builder(docElement, series);
 
 			addNewLinks(store, links, series);
-		}));
+		})));
 	}
 
 	await Promise.all(promises);
