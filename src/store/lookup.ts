@@ -53,6 +53,9 @@ async function lookup(browser: Browser, store: Store) {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
 			logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
+			const client = await page.target().createCDPSession();
+			await client.send('Network.clearBrowserCookies');
+			await client.send('Network.clearBrowserCache');
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -161,7 +164,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 				maxPrice = config.store.maxPrice.series['3080'];
 				break;
 			case '3090':
-				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3080'], baseOptions);
+				price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series['3090'], baseOptions);
 				maxPrice = config.store.maxPrice.series['3090'];
 				break;
 			default:
