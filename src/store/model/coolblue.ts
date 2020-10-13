@@ -32,7 +32,7 @@ export const Coolblue: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3080',
 			url: 'https://www.coolblue.nl/product/868726/'
 		},
@@ -50,7 +50,7 @@ export const Coolblue: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc gaming',
+			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.coolblue.nl/product/868733/'
 		},
@@ -65,6 +65,54 @@ export const Coolblue: Store = {
 			model: 'rog strix gaming',
 			series: '3080',
 			url: 'https://www.coolblue.nl/product/868732/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868738/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868739/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868730/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868727/'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc gaming',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868728/'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix gaming',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868729/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868734/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090',
+			url: 'https://www.coolblue.nl/product/868735/'
 		}
 	],
 	name: 'coolblue'

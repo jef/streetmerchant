@@ -2,10 +2,6 @@ import {Store} from './store';
 
 export const Cyberport: Store = {
 	labels: {
-		inStock: {
-			container: '.tooltipAvailabilityParent',
-			text: ['sofort verfügbar']
-		},
 		outOfStock: {
 			container: '.tooltipAvailabilityParent',
 			text: ['noch nicht verfügbar']

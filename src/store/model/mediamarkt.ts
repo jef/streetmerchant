@@ -2,10 +2,6 @@ import {Store} from './store';
 
 export const Mediamarkt: Store = {
 	labels: {
-		inStock: {
-			container: '#root',
-			text: ['lieferung']
-		},
 		outOfStock: {
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']

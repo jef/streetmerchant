@@ -53,6 +53,9 @@ async function lookup(browser: Browser, store: Store) {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error) {
 			logger.error(`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${error.message as string}`);
+			const client = await page.target().createCDPSession();
+			await client.send('Network.clearBrowserCookies');
+			await client.send('Network.clearBrowserCache');
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
