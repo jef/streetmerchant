@@ -1,6 +1,5 @@
 {
   "name": "nvidia-snatcher",
-  "version": "1.5.0",
   "description": "🔮 For all your Nvidia needs",
   "main": "src/index.ts",
   "scripts": {
