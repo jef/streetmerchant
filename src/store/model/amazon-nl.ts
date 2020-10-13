@@ -17,11 +17,7 @@ export const AmazonNl: Store = {
 		outOfStock: [
 			{
 				container: '#availability',
-				text: ['tijdelijk niet op voorraad', 'unavailable']
-			},
-			{
-				container: '#backInStock',
-				text: ['unavailable']
+				text: ['tijdelijk niet']
 			},
 			{
 				container: '#outOfStock',
@@ -47,6 +43,24 @@ export const AmazonNl: Store = {
 			model: 'gaming x trio',
 			series: '3080',
 			url: 'https://www.amazon.nl/3080-GAMING-TRIO-10G-grafische/dp/B08HM4V2DH'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3080',
+			url: 'https://www.amazon.nl/dp/B08HJ9XFNM'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3080',
+			url: 'https://www.amazon.nl/dp/B08HH1BMQQ'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.amazon.nl/dp/B08HN7VVLJ'
 		}
 	],
 	name: 'amazon-nl'
