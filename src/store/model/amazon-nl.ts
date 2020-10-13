@@ -30,19 +30,19 @@ export const AmazonNl: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.nl/dp/B083GGYNQ6/'
+			url: 'https://www.amazon.nl/dp/B083GGYNQ6'
 		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
-			url: 'https://www.amazon.nl/3080-VENTUS-3X-10G-OC/dp/B08HM4M621'
+			url: 'https://www.amazon.nl/dp/B08HM4M621'
 		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',
-			url: 'https://www.amazon.nl/3080-GAMING-TRIO-10G-grafische/dp/B08HM4V2DH'
+			url: 'https://www.amazon.nl/dp/B08HM4V2DH'
 		},
 		{
 			brand: 'evga',
