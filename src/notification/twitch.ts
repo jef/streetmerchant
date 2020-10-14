@@ -39,7 +39,7 @@ const chatClient: ChatClient = new ChatClient(
 	}
 );
 
-chatClient.connect();
+void chatClient.connect();
 
 export function sendTwitchMessage(link: Link, store: Store) {
 	if (twitch.clientId && twitch.accessToken) {
