@@ -39,28 +39,19 @@ const chatClient: ChatClient = new ChatClient(
 	}
 );
 
+chatClient.connect();
+
 export function sendTwitchMessage(link: Link, store: Store) {
 	if (twitch.clientId && twitch.accessToken) {
 		logger.debug('↗ sending twitch message');
 
-		const message = `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`;
-		chatClient.onJoin((channel: string, user: string) => {
-			if (channel === `#${twitch.channel}` && user === chatClient.currentNick) {
-				try {
-					chatClient.say(channel, message);
-					logger.info('✔ twitch message sent');
-				} catch (error) {
-					logger.error('✖ couldn\'t send twitch message', error);
-				}
-			}
-
-			(async () => {
-				await chatClient.quit();
-			})();
-		});
-
 		(async () => {
-			await chatClient.connect();
+			try {
+				chatClient.say(`#${twitch.channel}`, `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`);
+				logger.info('✔ twitch message sent');
+			} catch (error) {
+				logger.error('✖ couldn\'t send twitch message', error);
+			}
 		})();
 	}
 }
