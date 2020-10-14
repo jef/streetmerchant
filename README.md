@@ -166,6 +166,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box | `box`|
+| Caseking (DE) | `caseking`|
 | CCL | `ccl`|
 | Coolblue | `coolblue`|
 | Currys | `currys`|
@@ -185,6 +186,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Office Depot | `officedepot`|
 | Overclockers | `overclockers`|
 | PNY | `pny`|
+| Proshop (DE) | `proshop-de`|
 | Saturn (DE) | `saturn`|
 | Scan | `scan`|
 | Very | `very`|
@@ -238,7 +240,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `nvidia` | `founders edition` |
 | `palit` | `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb`, `xlr8 revel epic-x` |
-| `zotac` | `trinity`, `trinity oc`, `amp holo`, `amp extreme holo` |
+| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc` |
 
 #### Supported carriers
 
