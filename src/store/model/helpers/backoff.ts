@@ -20,7 +20,7 @@ export async function processBackoffDelay(store: Store, link: Link, statusCode: 
 	let backoffStatusCodes = store.backoffStatusCodes;
 
 	if (!backoffStatusCodes) {
-		backoffStatusCodes = [403];
+		backoffStatusCodes = [403, 503];
 	}
 
 	const isBackoff = isStatusCodeInRange(statusCode, backoffStatusCodes);
