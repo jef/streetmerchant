@@ -55,7 +55,7 @@ export function sendTwitchMessage(link: Link, store: Store) {
 			}
 
 			(async () => {
-				await chatClient.connect();
+				await chatClient.quit();
 			})();
 		});
 
