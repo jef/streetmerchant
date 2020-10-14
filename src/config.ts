@@ -176,6 +176,13 @@ const notifications = {
 		from: envOrString(process.env.TWILIO_FROM_NUMBER),
 		to: envOrString(process.env.TWILIO_TO_NUMBER)
 	},
+	twitch: {
+		accessToken: envOrString(process.env.TWITCH_ACCESS_TOKEN),
+		channel: envOrString(process.env.TWITCH_CHANNEL),
+		clientId: envOrString(process.env.TWITCH_CLIENT_ID),
+		clientSecret: envOrString(process.env.TWITCH_CLIENT_SECRET),
+		refreshToken: envOrString(process.env.TWITCH_REFRESH_TOKEN)
+	},
 	twitter: {
 		accessTokenKey: envOrString(process.env.TWITTER_ACCESS_TOKEN_KEY),
 		accessTokenSecret: envOrString(process.env.TWITTER_ACCESS_TOKEN_SECRET),
