@@ -2,9 +2,9 @@ import {Store} from './store';
 
 export const Notebooksbilliger: Store = {
 	labels: {
-		outOfStock: {
-			container: '.availability_widget',
-			text: ['', 'liefertermin noch unbestimmt']
+		inStock: {
+			container: '.warehouse',
+			text: ['sofort ab lager']
 		}
 	},
 	links: [
@@ -12,7 +12,7 @@ export const Notebooksbilliger: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+2060+6gb+twin+x2+420215'
+			url: 'https://www.notebooksbilliger.de/gainward+geforce+rtx+2070+super+phoenix+v1+grafikkarte+656238'
 		},
 		{
 			brand: 'gainward',
