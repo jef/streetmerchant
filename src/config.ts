@@ -213,9 +213,9 @@ const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	maxPrice: {
 		series: {
-			3070: envOrNumber(process.env.MAX_PRICE_3070),
-			3080: envOrNumber(process.env.MAX_PRICE_3080),
-			3090: envOrNumber(process.env.MAX_PRICE_3090)
+			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
+			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
+			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090)
 		}
 	},
 	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
