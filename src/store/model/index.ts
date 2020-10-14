@@ -12,6 +12,7 @@ import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
+import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Coolblue} from './coolblue';
 import {Currys} from './currys';
@@ -30,6 +31,7 @@ import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
 import {Pny} from './pny';
+import {ProshopDE} from './proshop-de';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Very} from './very';
@@ -52,6 +54,7 @@ const masterList = new Map([
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
+	[Caseking.name, Caseking],
 	[Ccl.name, Ccl],
 	[Coolblue.name, Coolblue],
 	[Currys.name, Currys],
@@ -69,6 +72,7 @@ const masterList = new Map([
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
+	[ProshopDE.name, ProshopDE],
 	[Pny.name, Pny],
 	[Scan.name, Scan],
 	[Very.name, Very],
