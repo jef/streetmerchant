@@ -180,6 +180,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Overclockers | `overclockers`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
+| Proshop (DK) | `proshop-dk`|
 | Scan | `scan`|
 | Very | `very`|
 | Zotac | `zotac`|
