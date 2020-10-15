@@ -39,7 +39,7 @@
     "puppeteer-extra-plugin-block-resources": "^2.2.7",
     "puppeteer-extra-plugin-stealth": "^2.6.2",
     "pushover-notifications": "^1.2.2",
-    "twilio": "^3.49.4",
+    "twilio": "^3.50.0",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
   },
