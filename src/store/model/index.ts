@@ -32,6 +32,7 @@ import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
+import {ProshopDK} from './proshop-dk';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Very} from './very';
@@ -73,6 +74,7 @@ const masterList = new Map([
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
 	[ProshopDE.name, ProshopDE],
+	[ProshopDK.name, ProshopDK],
 	[Pny.name, Pny],
 	[Scan.name, Scan],
 	[Very.name, Very],
