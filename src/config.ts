@@ -168,7 +168,7 @@ const notifications = {
 	},
 	telegram: {
 		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
-		chatId: envOrString(process.env.TELEGRAM_CHAT_ID)
+		chatId: envOrArray(process.env.TELEGRAM_CHAT_ID)
 	},
 	twilio: {
 		accountSid: envOrString(process.env.TWILIO_ACCOUNT_SID),
