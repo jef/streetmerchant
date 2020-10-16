@@ -17,31 +17,34 @@ if (existsSync('./twitch.json')) {
 	tokenData = {...JSON.parse(readFileSync('./twitch.json', 'utf-8')), ...tokenData};
 }
 
-const chatClient: ChatClient = new ChatClient(
-	new RefreshableAuthProvider(
-		new StaticAuthProvider(twitch.clientId, tokenData.accessToken),
+let chatClient: ChatClient;
+if (tokenData.accessToken && twitch.channel && twitch.clientId && twitch.clientSecret && tokenData.refreshToken) {
+	chatClient = new ChatClient(
+		new RefreshableAuthProvider(
+			new StaticAuthProvider(twitch.clientId, tokenData.accessToken),
+			{
+				clientSecret: twitch.clientSecret,
+				expiry: tokenData.expiryTimestamp === null ? null : new Date(tokenData.expiryTimestamp),
+				onRefresh: async ({accessToken, refreshToken, expiryDate}) => {
+					return promises.writeFile('./twitch.json', JSON.stringify({
+						accessToken,
+						expiryTimestamp: expiryDate === null ? null : expiryDate.getTime(),
+						refreshToken
+					}, null, 4), 'utf-8');
+				},
+				refreshToken: tokenData.refreshToken
+			}
+		),
 		{
-			clientSecret: twitch.clientSecret,
-			expiry: tokenData.expiryTimestamp === null ? null : new Date(tokenData.expiryTimestamp),
-			onRefresh: async ({accessToken, refreshToken, expiryDate}) => {
-				return promises.writeFile('./twitch.json', JSON.stringify({
-					accessToken,
-					expiryTimestamp: expiryDate === null ? null : expiryDate.getTime(),
-					refreshToken
-				}, null, 4), 'utf-8');
-			},
-			refreshToken: tokenData.refreshToken
+			channels: [twitch.channel]
 		}
-	),
-	{
-		channels: [twitch.channel]
-	}
-);
+	);
 
-void chatClient.connect();
+	void chatClient.connect();
+}
 
 export function sendTwitchMessage(link: Link, store: Store) {
-	if (twitch.clientId && twitch.accessToken) {
+	if (tokenData.accessToken && twitch.channel && twitch.clientId && twitch.clientSecret && tokenData.refreshToken) {
 		logger.debug('↗ sending twitch message');
 
 		try {
