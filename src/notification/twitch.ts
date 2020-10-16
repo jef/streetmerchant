@@ -7,15 +7,14 @@ import {config} from '../config';
 
 const twitch = config.notifications.twitch;
 
-let tokenData;
+let tokenData = {
+	accessToken: twitch.accessToken,
+	expiryTimestamp: 0,
+	refreshToken: twitch.refreshToken
+};
+
 if (existsSync('./twitch.json')) {
-	tokenData = JSON.parse(readFileSync('./twitch.json', 'utf-8'));
-} else {
-	tokenData = {
-		accessToken: twitch.accessToken,
-		expiryTimestamp: 0,
-		refreshToken: twitch.refreshToken
-	};
+	tokenData = {...JSON.parse(readFileSync('./twitch.json', 'utf-8')), ...tokenData};
 }
 
 const chatClient: ChatClient = new ChatClient(
@@ -45,13 +44,11 @@ export function sendTwitchMessage(link: Link, store: Store) {
 	if (twitch.clientId && twitch.accessToken) {
 		logger.debug('↗ sending twitch message');
 
-		(async () => {
-			try {
-				chatClient.say(`#${twitch.channel}`, `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`);
-				logger.info('✔ twitch message sent');
-			} catch (error) {
-				logger.error('✖ couldn\'t send twitch message', error);
-			}
-		})();
+		try {
+			chatClient.say(`#${twitch.channel}`, `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`);
+			logger.info('✔ twitch message sent');
+		} catch (error) {
+			logger.error('✖ couldn\'t send twitch message', error);
+		}
 	}
 }
