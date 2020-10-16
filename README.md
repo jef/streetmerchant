@@ -123,7 +123,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID | |
+| `TELEGRAM_CHAT_ID` | Telegram chat ID | Comma seperated, e.g.: `123456789`, `123456789,987654321` |
 | `TWILIO_ACCOUNT_SID` | Twilio Account SID | Can be found on twilio.com/console |
 | `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
 | `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
