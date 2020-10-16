@@ -17,7 +17,7 @@ export function sendTelegramMessage(link: Link, store: Store) {
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 			const results = [];
 
-			for (const chatId of telegram.chatId.split(',')) {
+			for (const chatId of telegram.chatId) {
 				try {
 					results.push(client.sendMessage(chatId, `${Print.inStock(link, store)}\n${givenUrl}`));
 					logger.info('✔ telegram message sent');
