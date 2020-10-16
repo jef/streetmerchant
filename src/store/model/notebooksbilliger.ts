@@ -2,10 +2,14 @@ import {Store} from './store';
 
 export const Notebooksbilliger: Store = {
 	labels: {
-		inStock: {
+		outOfStock: [{
+			container: '.just_inStore',
+			text: ['dieses produkt kann nur in unseren unten genannten stores gekauft werden.']
+		},
+		{
 			container: '.warehouse',
-			text: ['sofort ab lager']
-		}
+			text: ['liefertermin noch unbestimmt']
+		}]
 	},
 	links: [
 		{
