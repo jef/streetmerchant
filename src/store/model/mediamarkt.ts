@@ -16,6 +16,18 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.mediamarkt.de/de/product/-2681869.html'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3080',
+			url: 'https://www.mediamarkt.de/de/product/-2681871.html'
+		},
+		{
+			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2681859.html'
@@ -25,18 +37,6 @@ export const Mediamarkt: Store = {
 			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2681861.html'
-		},
-		{
-			brand: 'asus',
-			model: 'rog strix gaming',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2681869.html'
-		},
-		{
-			brand: 'asus',
-			model: 'rog strix oc',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2681871.html'
 		},
 		{
 			brand: 'gigabyte',
@@ -52,13 +52,13 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'inno3d',
-			model: 'ichill 3x',
+			model: 'ichill x3',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2684241.html'
 		},
 		{
 			brand: 'inno3d',
-			model: 'ichill 4x',
+			model: 'ichill x4',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2684238.html'
 		},
@@ -76,27 +76,15 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'zotac',
-			model: 'trinity',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2683243.html'
-		},
-		{
-			brand: 'zotac',
 			model: 'amp extreme holo',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
 		},
 		{
-			brand: 'asus',
-			model: 'tuf',
-			series: '3090',
-			url: 'https://www.mediamarkt.de/de/product/-2681855.html'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3090',
-			url: 'https://www.mediamarkt.de/de/product/-2681857.html'
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.mediamarkt.de/de/product/-2683243.html'
 		},
 		{
 			brand: 'asus',
@@ -109,6 +97,18 @@ export const Mediamarkt: Store = {
 			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.mediamarkt.de/de/product/-2681866.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.mediamarkt.de/de/product/-2681855.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.mediamarkt.de/de/product/-2681857.html'
 		},
 		{
 			brand: 'gigabyte',

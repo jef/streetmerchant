@@ -20,18 +20,6 @@ export const Cyberport: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
-			series: '3080',
-			url: 'https://www.cyberport.de?DEEP=2E07-51L'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3080',
-			url: 'https://www.cyberport.de?DEEP=2E07-51N'
-		},
-		{
-			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E07-51S'
@@ -41,6 +29,18 @@ export const Cyberport: Store = {
 			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E07-51T'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.cyberport.de?DEEP=2E07-51L'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.cyberport.de?DEEP=2E07-51N'
 		},
 		{
 			brand: 'gigabyte',

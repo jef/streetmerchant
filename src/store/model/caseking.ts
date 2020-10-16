@@ -53,15 +53,15 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 black',
-			series: '3080',
-			url: 'https://www.caseking.de/evga-geforce-rtx-3080-xc3-black-gaming-10240-mb-gddr6x-gcev-414.html'
-		},
-		{
-			brand: 'evga',
 			model: 'xc3',
 			series: '3080',
 			url: 'https://www.caseking.de/evga-geforce-rtx-3080-xc3-gaming-10240-mb-gddr6x-gcev-415.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3080',
+			url: 'https://www.caseking.de/evga-geforce-rtx-3080-xc3-black-gaming-10240-mb-gddr6x-gcev-414.html'
 		},
 		{
 			brand: 'evga',
@@ -155,18 +155,6 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
-			series: '3090',
-			url: 'https://www.caseking.de/asus-geforce-rtx-3090-tuf-gaming-24g-24576-mb-gddr6x-gcas-393.html'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3090',
-			url: 'https://www.caseking.de/asus-geforce-rtx-3090-tuf-gaming-o24g-24576-mb-gddr6x-gcas-395.html'
-		},
-		{
-			brand: 'asus',
 			model: 'rog strix',
 			series: '3090',
 			url: 'https://www.caseking.de/asus-geforce-rtx-3090-rog-strix-24g-24576-mb-gddr6x-gcas-397.html'
@@ -176,6 +164,18 @@ export const Caseking: Store = {
 			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.caseking.de/asus-geforce-rtx-3090-rog-strix-o24g-24576-mb-gddr6x-gcas-398.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.caseking.de/asus-geforce-rtx-3090-tuf-gaming-24g-24576-mb-gddr6x-gcas-393.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.caseking.de/asus-geforce-rtx-3090-tuf-gaming-o24g-24576-mb-gddr6x-gcas-395.html'
 		},
 		{
 			brand: 'evga',
@@ -191,15 +191,15 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 black',
-			series: '3090',
-			url: 'https://www.caseking.de/evga-geforce-rtx-3090-xc3-black-gaming-24576-mb-gddr6x-gcev-418.html'
-		},
-		{
-			brand: 'evga',
 			model: 'xc3',
 			series: '3090',
 			url: 'https://www.caseking.de/evga-geforce-rtx-3090-xc3-gaming-24576-mb-gddr6x-gcev-419.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3090',
+			url: 'https://www.caseking.de/evga-geforce-rtx-3090-xc3-black-gaming-24576-mb-gddr6x-gcev-418.html'
 		},
 		{
 			brand: 'evga',

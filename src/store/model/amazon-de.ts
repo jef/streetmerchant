@@ -25,18 +25,6 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
-			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HN37VQK'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf oc',
-			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HN4DSTC'
-		},
-		{
-			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HN7VVLJ'
@@ -48,10 +36,16 @@ export const AmazonDe: Store = {
 			url: 'https://www.amazon.de/dp/B08HN6KYS3'
 		},
 		{
-			brand: 'evga',
-			model: 'ftw3 ultra',
+			brand: 'asus',
+			model: 'tuf',
 			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HGYXP4C'
+			url: 'https://www.amazon.de/dp/B08HN37VQK'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08HN4DSTC'
 		},
 		{
 			brand: 'evga',
@@ -61,9 +55,15 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 ultra',
+			model: 'ftw3 ultra',
 			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HJ9XFNM'
+			url: 'https://www.amazon.de/dp/B08HGYXP4C'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08HGLN78Q'
 		},
 		{
 			brand: 'evga',
@@ -73,9 +73,9 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3',
+			model: 'xc3 ultra',
 			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HGLN78Q'
+			url: 'https://www.amazon.de/dp/B08HJ9XFNM'
 		},
 		{
 			brand: 'gigabyte',
