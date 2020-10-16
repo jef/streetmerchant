@@ -1,7 +1,7 @@
 import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
 import {RefreshableAuthProvider, StaticAuthProvider} from 'twitch-auth';
-import {existsSync, readFileSync, writeFileSync} from 'fs';
+import {existsSync, promises, readFileSync} from 'fs';
 import {ChatClient} from 'twitch-chat-client';
 import {config} from '../config';
 
@@ -25,7 +25,7 @@ const chatClient: ChatClient = new ChatClient(
 			clientSecret: twitch.clientSecret,
 			expiry: tokenData.expiryTimestamp === null ? null : new Date(tokenData.expiryTimestamp),
 			onRefresh: async ({accessToken, refreshToken, expiryDate}) => {
-				writeFileSync('./twitch.json', JSON.stringify({
+				return promises.writeFile('./twitch.json', JSON.stringify({
 					accessToken,
 					expiryTimestamp: expiryDate === null ? null : expiryDate.getTime(),
 					refreshToken
