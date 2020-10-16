@@ -233,14 +233,14 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Brand | Model |
 |:---:|---|
 | `asus` | `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
-| `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
+| `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phoenix gs` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision`, `vision oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gaming pro`, `gaming pro oc` |
-| `pny` | `dual fan`, `xlr8`, `xlr8 rgb`, `xlr8 revel epic-x` |
+| `pny` | `dual fan`, `xlr8`, `xlr8 revel epic-x`, `xlr8 rgb` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc` |
 
 #### Supported carriers
