@@ -123,6 +123,12 @@ export const Saturn: Store = {
 			url: 'https://www.saturn.de/de/product/-2691440.html'
 		},
 		{
+			brand: 'inno3d',
+			model: 'ichill x4',
+			series: '3090',
+			url: 'https://www.saturn.de/de/product/-2684235.html'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3090',
