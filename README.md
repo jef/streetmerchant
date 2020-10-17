@@ -88,6 +88,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
+| `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
