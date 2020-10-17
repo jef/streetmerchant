@@ -177,6 +177,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Gamestop | `gamestop`|
 | Mediamarkt (DE) | `mediamarkt`|
 | Micro Center | `microcenter`|
+| Mindfactory (DE) | `mindfactory` |
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
 | Notebooksbilliger (DE) |`notebooksbilliger`|

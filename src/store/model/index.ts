@@ -23,6 +23,7 @@ import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
 import {Mediamarkt} from './mediamarkt';
 import {MicroCenter} from './microcenter';
+import {Mindfactory} from './mindfactory';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {Notebooksbilliger} from './notebooksbilliger';
@@ -68,6 +69,7 @@ const masterList = new Map([
 	[Gamestop.name, Gamestop],
 	[Mediamarkt.name, Mediamarkt],
 	[MicroCenter.name, MicroCenter],
+	[Mindfactory.name, Mindfactory],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
 	[Notebooksbilliger.name, Notebooksbilliger],
