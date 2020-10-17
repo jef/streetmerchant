@@ -125,13 +125,13 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.caseking.de/pny-geforce-rtx-3080-xlr8-gaming-epic-x-rgb-10240-mb-gddr6x-gcpn-075.html'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 revel epic-x',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.caseking.de/pny-geforce-rtx-3080-xlr8-gaming-revel-epic-x-rgb-10240-mb-gddr6x-gcpn-076.html'
 		},
@@ -245,13 +245,13 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 rgb',
 			series: '3090',
 			url: 'https://www.caseking.de/pny-geforce-rtx-3090-xlr8-gaming-epic-x-rgb-24576-mb-gddr6x-gcpn-073.html'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 revel epic-x',
+			model: 'xlr8 rgb',
 			series: '3090',
 			url: 'https://www.caseking.de/pny-geforce-rtx-3090-xlr8-gaming-revel-epic-x-rgb-24576-mb-gddr6x-gcpn-074.html'
 		},

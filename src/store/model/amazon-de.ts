@@ -103,7 +103,7 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HBTJMLJ'
 		},

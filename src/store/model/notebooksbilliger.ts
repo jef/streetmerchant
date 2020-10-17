@@ -68,13 +68,13 @@ export const Notebooksbilliger: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+xlr8+gaming+10gb+gddr6x+grafikkarte+677407'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 revel epic-x',
+			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
 		},
