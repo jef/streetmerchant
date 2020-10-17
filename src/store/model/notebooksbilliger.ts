@@ -38,6 +38,12 @@ export const Notebooksbilliger: Store = {
 		},
 		{
 			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3080',
+			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+3080+ichill+x3+grafikkarte+678588'
+		},
+		{
+			brand: 'inno3d',
 			model: 'twin x2 oc',
 			series: '3080',
 			url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+3080+twin+x2+oc+grafikkarte+679190'
@@ -89,6 +95,12 @@ export const Notebooksbilliger: Store = {
 			model: 'gaming pro oc',
 			series: '3090',
 			url: 'https://www.notebooksbilliger.de/palit+geforce+rtx+3090+gamingpro+oc+24gb+gddr6x+grafikkarte+677599'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/zotac+gaming+geforce+rtx+3090+trinity+24gb+gddr6x+grafikkarte+677550'
 		}
 	],
 	name: 'notebooksbilliger'
