@@ -135,6 +135,15 @@ const notifications = {
 		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
 	},
+	mqtt: {
+		broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
+		clientId: envOrString(process.env.MQTT_CLIENT_ID, 'nvidia-snatcher'),
+		password: envOrString(process.env.MQTT_PASSWORD),
+		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
+		qos: envOrNumber(process.env.MQTT_QOS, 0),
+		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
+		username: envOrString(process.env.MQTT_USERNAME)
+	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
