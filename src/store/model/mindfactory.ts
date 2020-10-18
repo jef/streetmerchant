@@ -45,6 +45,12 @@ export const Mindfactory: Store = {
 			url: 'https://www.mindfactory.de/product_info.php/10GB-Zotac-GeForce-RTX-3080-TRINITY-OC--GDDR6X-_1377143.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.mindfactory.de/product_info.php/24GB-Gigabyte-GeForce-3090-Gaming-OC--Retail-_1377265.html'
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 3x',
 			series: '3090',
