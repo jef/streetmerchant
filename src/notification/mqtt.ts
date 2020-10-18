@@ -7,11 +7,12 @@ const mqtt = config.notifications.mqtt;
 let client: MqttClient.Client;
 
 if (mqtt.broker) {
-	if (checkInsecureUsage()) {
-		logger.warn('✖ Insecure transport of password - Only use credentials with local MQTT Brokers.');
+	if (checkInsecureUsage(mqtt.password, mqtt.broker)) {
+		logger.warn('✖ Insecure transport of password - Only use credentials with MQTT brokers on private networks.');
 	} else {
 		const clientOptions: IClientOptions = {
-			clientId: mqtt.clientId,
+			clean: (mqtt.clientId === ''),
+			clientId: mqtt.clientId === '' ? undefined : mqtt.clientId,
 			password: mqtt.password === '' ? undefined : mqtt.password,
 			username: mqtt.username === '' ? undefined : mqtt.username
 		};
@@ -26,6 +27,7 @@ export function sendMqttMessage(link: Link, store: Store) {
 		(async () => {
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 			const message = `{"msg":"${Print.inStock(link, store)}", "url":"${givenUrl}"}`;
+			const topic = generateTopic(link, store, mqtt.topic);
 			const pubOptions: IClientPublishOptions = {
 				qos: mqtt.qos as 0 | 1 | 2,
 				retain: false
@@ -33,7 +35,7 @@ export function sendMqttMessage(link: Link, store: Store) {
 
 			try {
 				client.publish(
-					mqtt.topic,
+					topic,
 					message,
 					pubOptions
 				);
@@ -45,24 +47,61 @@ export function sendMqttMessage(link: Link, store: Store) {
 	}
 }
 
+function generateTopic(link: Link, store: Store, topic: string): string {
+	topic.trim();
+	topic = topic.replace(/^\//, '');
+	topic = topic.replace(/%series%/g, link.series)
+		.replace(/%brand%/g, link.brand)
+		.replace(/%model%/g, link.model)
+		.replace(/%store%/g, store.name);
+
+	return topic;
+}
+
 /**
- * Basic protection against sending credentials in the clear over the internet.
- *   - Returns 'true' if a password is supplied in .env and address is a URL (not an IP address).
- *		^^^	Assumption is that a URL indicates 'cloud' based MQTT Service, IP indicates local network MQTT Broker. (this is NOT fool-proof).
- *   - TLS could be implemented, however, the majority of MQTT brokers on the internet do not require user authentication.
- *   - IF you find a 'cloud' MQTT Broker requiring authentication, consider using another MQTT service (for now).
+ * Basic protection against sending credentials in the clear over public networks.
+ *	- Returns 'true' if password is supplied in .env but address/URL is not part of a private network
+ *	- Private networks evaluated:	Class A, B, or C private IP's or linklocal URL ("*.local")
+ *	- TLS could be implemented, however, the majority of MQTT services on the internet do not require user authentication.
+ *	- If you find a 'cloud' MQTT broker requiring authentication for publishing alerts, consider using another MQTT service (for now).
  *
  */
-function checkInsecureUsage(): boolean {
-	if (mqtt.password) {
-		return !validateIPaddress(mqtt.broker);
+function checkInsecureUsage(pass: string, address: string): boolean {
+	if (pass !== '') {
+		if (isClassANet(address) ||
+			isClassBNet(address) ||
+			isClassCNet(address) ||
+			isLinkLocal(address)) {
+			logger.debug(`MQTT using private network broker: ${address}`);
+		} else {
+			logger.debug(`MQTT using public network broker: ${address}`);
+			return true;
+		}
 	}
 
 	return false;
 }
 
-function validateIPaddress(address: string): boolean {
-	const ipformat = /^(25[0-5]|2[0-4]\d|[01]?\d{1,2})\.(25[0-5]|2[0-4]\d|[01]?\d{1,2})\.(25[0-5]|2[0-4]\d|[01]?\d{1,2})\.(25[0-5]|2[0-4]\d|[01]?\d{1,2})$/;
+function isClassANet(address: string): boolean {
+	const classA = /^(10\.(\d|[1-9]\d|[12][0-5]{2})\.(\d|[1-9]\d|[12][0-5]{2})\.(\d|[1-9]\d|[12][0-5]{2}))$/;
 
-	return Boolean(ipformat.exec(address));
+	return Boolean(classA.exec(address));
+}
+
+function isClassBNet(address: string): boolean {
+	const classA = /^(172\.(1[6-9]|2\d|3[01])\.(\d|[1-9]\d|[12][0-5]{2})\.(\d|[1-9]\d|[12][0-5]{2}))$/;
+
+	return Boolean(classA.exec(address));
+}
+
+function isClassCNet(address: string): boolean {
+	const classA = /^(192\.168\.(\d|[1-9]\d|[12][0-5]{2})\.(\d|[1-9]\d|[12][0-5]{2}))$/;
+
+	return Boolean(classA.exec(address));
+}
+
+function isLinkLocal(address: string): boolean {
+	const linkLocal = /.+\.local$/;
+
+	return Boolean(linkLocal.exec(address));
 }

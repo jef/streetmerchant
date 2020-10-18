@@ -137,7 +137,7 @@ const notifications = {
 	},
 	mqtt: {
 		broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
-		clientId: envOrString(process.env.MQTT_CLIENT_ID, 'nvidia-snatcher'),
+		clientId: envOrString(process.env.MQTT_CLIENT_ID),
 		password: envOrString(process.env.MQTT_PASSWORD),
 		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
 		qos: envOrNumber(process.env.MQTT_QOS, 0),
