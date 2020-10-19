@@ -5,6 +5,10 @@ export const Mindfactory: Store = {
 		inStock: {
 			container: '.pshipping',
 			text: ['lagernd', 'verfügbar']
+		},
+		outOfStock: {
+			container: '.pshipping',
+			text: ['ohne liefertermin']
 		}
 	},
 	links: [
