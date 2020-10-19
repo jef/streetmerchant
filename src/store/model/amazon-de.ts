@@ -79,6 +79,12 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08KHLDS72'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HHZVZ3N'
@@ -88,6 +94,18 @@ export const AmazonDe: Store = {
 			model: 'gaming oc',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HLZXHZY'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08KH7RL89'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3080',
+			url: 'https://www.amazon.de/dp/B08JD6QPXD'
 		},
 		{
 			brand: 'msi',
@@ -102,16 +120,16 @@ export const AmazonDe: Store = {
 			url: 'https://www.amazon.de/dp/B08HM4M621'
 		},
 		{
-			brand: 'pny',
-			model: 'xlr8 rgb',
+			brand: 'palit',
+			model: 'gaming pro',
 			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HBTJMLJ'
+			url: 'https://www.amazon.de/dp/B08JCVWTQY'
 		},
 		{
-			brand: 'pny',
-			model: 'xlr8 rgb',
+			brand: 'palit',
+			model: 'gaming pro oc',
 			series: '3080',
-			url: 'https://www.amazon.de/dp/B08HBR7QBM'
+			url: 'https://www.amazon.de/dp/B08JCKYYL8'
 		},
 		{
 			brand: 'zotac',
@@ -130,6 +148,108 @@ export const AmazonDe: Store = {
 			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HN51T8Q'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HN4FLFJ'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HN5B8FJ'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HGFNPJQ'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08J5NMDP7'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HGS1SXH'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HGZ4XSZ'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HGKQ527'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HGTNDL4'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08KH7R4FQ'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HJPDJTY'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08KHKDTSJ'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HJRF2CN'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HRBW6VB'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HM661YM'
+		},
+		{
+			brand: 'palit',
+			model: 'gaming pro',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08JQQ1VD1'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HR6ZBYJ'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090',
+			url: 'https://www.amazon.de/dp/B08HJQ182D'
 		}
 	],
 	name: 'amazon-de'
