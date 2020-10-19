@@ -3,6 +3,10 @@ import {Store} from './store';
 export const Caseking: Store = {
 	backoffStatusCodes: [403, 429],
 	labels: {
+		inStock: {
+			container: '.delivery_container',
+			text: ['lagernd', 'im zulauf', 'ab']
+		},
 		outOfStock: {
 			container: '.delivery_container',
 			text: ['unbekannt']
