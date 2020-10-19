@@ -2,6 +2,10 @@ import {Store} from './store';
 
 export const Alternate: Store = {
 	labels: {
+		inStock: {
+			container: '.stockStatus',
+			text: ['auf lager', 'ware neu eingetroffen, in Kürze versandfertig', 'ware im zulauf']
+		},
 		outOfStock: {
 			container: '.stockStatus',
 			text: ['liefertermin unbekannt']
