@@ -35,8 +35,8 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		const context = (config.browser.isIncognito ? await browser.createIncognitoBrowserContext() : browser.defaultBrowserContext();)
-		const page = (config.browser.isIncognito ? await context.newPage() : await browser.newPage();)
+		const context = (config.browser.isIncognito ? await browser.createIncognitoBrowserContext() : browser.defaultBrowserContext());
+		const page = (config.browser.isIncognito ? await context.newPage() : await browser.newPage());
 		page.setDefaultNavigationTimeout(config.page.timeout);
 		await page.setUserAgent(config.page.userAgent);
 
