@@ -86,7 +86,7 @@ export async function extractPageContents(page: Page, selector: Selector): Promi
  */
 export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
-	return searchLabels.some(label => domTextLowerCase.includes(label));
+	return searchLabels.some(label => domTextLowerCase.includes(label.toLowerCase()));
 }
 
 export async function cardPrice(page: Page, query: Pricing, max: number, options: Selector) {
