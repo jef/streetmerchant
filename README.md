@@ -161,10 +161,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
+| Amazon (ES) | `amazon-es`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
+| Azerty | `azerty`|
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
@@ -187,6 +189,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
 | Overclockers | `overclockers`|
+| PCComponentes | `pccomponentes`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
@@ -235,7 +238,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|
 | `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
-| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
