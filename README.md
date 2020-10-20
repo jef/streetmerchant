@@ -163,6 +163,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (DE) | `amazon-de`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
+| Amazon (ES) | `amazon-es`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
 | B&H | `bandh`|
