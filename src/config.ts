@@ -15,7 +15,7 @@ config_({path: path.resolve(__dirname, '../.env')});
  */
 function envOrArray(environment: string | undefined, array?: string[]): string[] {
 	return (environment ? (
-		environment.includes('\n') ? environment.split(',') : environment.split('\n')
+		environment.includes('\n') ? environment.split('\n') : environment.split(',')
 	) : (array ?? [])).map(s => s.trim());
 }
 
