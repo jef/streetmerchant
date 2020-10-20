@@ -35,7 +35,8 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		const page = await browser.newPage();
+		const context = (config.browser.isIncognito ? await browser.createIncognitoBrowserContext() : browser.defaultBrowserContext());
+		const page = (config.browser.isIncognito ? await context.newPage() : await browser.newPage());
 		page.setDefaultNavigationTimeout(config.page.timeout);
 		await page.setUserAgent(config.page.userAgent);
 
@@ -62,8 +63,10 @@ async function lookup(browser: Browser, store: Store) {
 		// used to detect bot traffic, it introduces a 5 second page delay
 		// before redirecting to the next page
 		await processBackoffDelay(store, link, statusCode);
-
 		await closePage(page);
+		if (config.browser.isIncognito) {
+			await context.close();
+		}
 	}
 	/* eslint-enable no-await-in-loop */
 }
