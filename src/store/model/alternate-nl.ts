@@ -8,7 +8,7 @@ export const AlternateNL: Store = {
 		},
 		outOfStock: {
 			container: '.stockStatus',
-			text: ['Levertermijn onbekend', 'pre-order'],
+			text: ['Levertermijn onbekend', 'pre-order']
 		}
 	},
 	links: [
