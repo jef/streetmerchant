@@ -32,6 +32,7 @@ import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
+import {PCComponentes} from './pccomponentes';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
@@ -77,6 +78,7 @@ const masterList = new Map([
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
+	[PCComponentes.name, PCComponentes],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
 	[Pny.name, Pny],
