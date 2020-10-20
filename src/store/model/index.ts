@@ -9,6 +9,7 @@ import {AmazonUk} from './amazon-uk';
 import {Aria} from './aria';
 import {Asus} from './asus';
 import {AsusDe} from './asus-de';
+import {Azerty} from './azerty';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
@@ -53,6 +54,7 @@ const masterList = new Map([
 	[Aria.name, Aria],
 	[Asus.name, Asus],
 	[AsusDe.name, AsusDe],
+	[Azerty.name, Azerty],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],

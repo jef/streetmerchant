@@ -165,6 +165,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (UK) | `amazon-uk`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
+| Azerty | `azerty`|
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
