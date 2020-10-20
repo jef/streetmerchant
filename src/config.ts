@@ -109,6 +109,7 @@ function envOrNumberMax(environmentMin: string | undefined, environmentMax: stri
 
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
+	isIncognito: envOrBoolean(process.env.INCOGNITO, false),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
 	maxBackoff: envOrNumberMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 3600000),
@@ -134,6 +135,15 @@ const notifications = {
 		smtpPort: envOrNumber(process.env.SMTP_PORT, 25),
 		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
+	},
+	mqtt: {
+		broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
+		clientId: envOrString(process.env.MQTT_CLIENT_ID),
+		password: envOrString(process.env.MQTT_PASSWORD),
+		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
+		qos: envOrNumber(process.env.MQTT_QOS, 0),
+		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
+		username: envOrString(process.env.MQTT_USERNAME)
 	},
 	phone: {
 		availableCarriers: new Map([

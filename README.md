@@ -88,6 +88,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
+| `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
 | `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
@@ -95,6 +96,13 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search | Comma separated, e.g.: `marietta,duluth`, default: `web` |
+| `MQTT_BROKER_ADDRESS` | IP address or URL of MQTT Broker | e.g 192.168.1.xxx or broker.hivemq.com
+| `MQTT_BROKER_PORT` | Network port of MQTT Broker | Default: 1883
+| `MQTT_CLIENT_ID` | Unique ClientID (only if required by MQTT Broker), typically not required when only publishing alerts | eg. client-123456
+| `MQTT_PASSWORD` | MQTT password - only use with MQTT brokers on private networks, if required.  Will not be sent over public networks for safety. | e.g mysecret
+| `MQTT_QOS` | QoS level for published alerts to broker (https://www.npmjs.com/package/mqtt#about-qos) | Default: 0, Can be 0, 1, or 2
+| `MQTT_TOPIC` | Topic to publish alerts to.  Can include %store%, %series%, %brand%, %model% for dynamic topics | Default: nvidia-snatcher/alert e.g nv-alert/%store%/%series%/%brand%/%model%/alert
+| `MQTT_USERNAME` | MQTT username - (only if required by MQTT Broker) | e.g myusername
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
@@ -227,7 +235,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|---|
 | `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
-| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision` |
+| `gigabyte` | `aorus master`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
