@@ -1,5 +1,6 @@
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
+import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
@@ -43,6 +44,7 @@ import {logger} from '../../logger';
 const masterList = new Map([
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
+	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
