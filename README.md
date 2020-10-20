@@ -149,6 +149,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 |:---:|:---:|
 | Adorama | `adorama`|
 | Alternate (DE) | `alternate`|
+| Alternate (NL) | `alternate-nl`|
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
