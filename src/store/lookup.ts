@@ -2,7 +2,7 @@ import {Browser, Page, Response} from 'puppeteer';
 import {Link, Store} from './model';
 import {Print, logger} from '../logger';
 import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
-import {closePage, delay, getSleepTime, isStatusCodeInRange} from '../util';
+import {closePage, delay, getRandomUserAgent, getSleepTime, isStatusCodeInRange} from '../util';
 import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {fetchLinks} from './fetch-links';
@@ -38,7 +38,7 @@ async function lookup(browser: Browser, store: Store) {
 		const context = (config.browser.isIncognito ? await browser.createIncognitoBrowserContext() : browser.defaultBrowserContext());
 		const page = (config.browser.isIncognito ? await context.newPage() : await browser.newPage());
 		page.setDefaultNavigationTimeout(config.page.timeout);
-		await page.setUserAgent(config.page.userAgent);
+		await page.setUserAgent(getRandomUserAgent());
 
 		if (store.disableAdBlocker) {
 			try {
