@@ -161,9 +161,9 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
+| Amazon (ES) | `amazon-es`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
-| Amazon (ES) | `amazon-es`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
 | B&H | `bandh`|
