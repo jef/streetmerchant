@@ -3,6 +3,7 @@ import {playSound} from './sound';
 import {sendDesktopNotification} from './desktop';
 import {sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
+import {sendMqttMessage} from './mqtt';
 import {sendPushbulletNotification} from './pushbullet';
 import {sendPushoverNotification} from './pushover';
 import {sendSlackMessage} from './slack';
@@ -20,6 +21,7 @@ export function sendNotification(link: Link, store: Store) {
 	sendDesktopNotification(link, store);
 	// Non-priority
 	sendDiscordMessage(link, store);
+	sendMqttMessage(link, store);
 	sendPushbulletNotification(link, store);
 	sendPushoverNotification(link, store);
 	sendSlackMessage(link, store);

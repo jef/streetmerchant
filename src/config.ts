@@ -14,7 +14,9 @@ config_({path: path.resolve(__dirname, '../.env')});
  * @param array Default array. If not set, is `[]`.
  */
 function envOrArray(environment: string | undefined, array?: string[]): string[] {
-	return (environment ? environment.split(',') : (array ?? [])).map(s => s.trim());
+	return (environment ? (
+		environment.includes('\n') ? environment.split('\n') : environment.split(',')
+	) : (array ?? [])).map(s => s.trim());
 }
 
 /**
@@ -109,6 +111,7 @@ function envOrNumberMax(environmentMin: string | undefined, environmentMax: stri
 
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
+	isIncognito: envOrBoolean(process.env.INCOGNITO, false),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
 	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
 	maxBackoff: envOrNumberMax(process.env.PAGE_BACKOFF_MIN, process.env.PAGE_BACKOFF_MAX, 3600000),
@@ -134,6 +137,15 @@ const notifications = {
 		smtpPort: envOrNumber(process.env.SMTP_PORT, 25),
 		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
+	},
+	mqtt: {
+		broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
+		clientId: envOrString(process.env.MQTT_CLIENT_ID),
+		password: envOrString(process.env.MQTT_PASSWORD),
+		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
+		qos: envOrNumber(process.env.MQTT_QOS, 0),
+		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
+		username: envOrString(process.env.MQTT_USERNAME)
 	},
 	phone: {
 		availableCarriers: new Map([
@@ -202,7 +214,7 @@ const page = {
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
 	screenshot: envOrBoolean(process.env.SCREENSHOT),
 	timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
-	userAgent: envOrString(process.env.USER_AGENT, 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'),
+	userAgents: envOrArray(process.env.USER_AGENT, ['Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36']),
 	width: 1920
 };
 

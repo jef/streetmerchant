@@ -48,7 +48,7 @@ export async function usingResponse<T>(
 export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: Browser) => Promise<T>): Promise<T> {
 	const page = await browser.newPage();
 	page.setDefaultNavigationTimeout(config.page.timeout);
-	await page.setUserAgent(config.page.userAgent);
+	await page.setUserAgent(getRandomUserAgent());
 
 	try {
 		return await cb(page, browser);
@@ -67,4 +67,8 @@ export async function closePage(page: Page) {
 	}
 
 	await page.close();
+}
+
+export function getRandomUserAgent(): string {
+	return config.page.userAgents[Math.floor(Math.random() * config.page.userAgents.length)];
 }

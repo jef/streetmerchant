@@ -1,13 +1,16 @@
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
+import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
+import {AmazonEs} from './amazon-es';
 import {AmazonNl} from './amazon-nl';
 import {AmazonUk} from './amazon-uk';
 import {Aria} from './aria';
 import {Asus} from './asus';
 import {AsusDe} from './asus-de';
+import {Azerty} from './azerty';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
@@ -33,6 +36,7 @@ import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
+import {PCComponentes} from './pccomponentes';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
@@ -47,14 +51,17 @@ import {logger} from '../../logger';
 const masterList = new Map([
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
+	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
+	[AmazonEs.name, AmazonEs],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
 	[Aria.name, Aria],
 	[Asus.name, Asus],
 	[AsusDe.name, AsusDe],
+	[Azerty.name, Azerty],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
@@ -80,6 +87,7 @@ const masterList = new Map([
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
+	[PCComponentes.name, PCComponentes],
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
