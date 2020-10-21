@@ -141,16 +141,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
-<<<<<<< HEAD
 | `TWITCH_CLIENT_ID` | Twitch client ID | |
 | `TWITCH_CLIENT_SECRET`| Twitch client secret | |
 | `TWITCH_ACCESS_TOKEN` | Twitch access token | |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token | |
 | `TWITCH_CHANNEL` | Twitch channel | |
-| `USER_AGENT` | Custom User-Agent header for HTTP requests | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
-=======
-| `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, E.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
->>>>>>> 58416e1994006cc2e4055937c675e0f9191f6339
+| `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -175,11 +171,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (UK) | `amazon-uk`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
-<<<<<<< HEAD
 | ASUS (DE) | `asus-de` |
-=======
 | Azerty | `azerty`|
->>>>>>> 58416e1994006cc2e4055937c675e0f9191f6339
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
