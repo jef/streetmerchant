@@ -12,7 +12,7 @@ export const ProshopDE: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.proshop.de/2797959'
+			url: 'https://www.proshop.de/2797958'
 		},
 		{
 			brand: 'asus',

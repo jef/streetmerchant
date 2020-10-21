@@ -16,7 +16,7 @@ export const Mindfactory: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.mindfactory.de/product_info.php/8GB-MSI-GeForce-RTX-2080-SUPER-Gaming-X-Trio--GDDR6--HDMI--3x-DP--USB-C_1322590.html'
+			url: 'https://www.mindfactory.de/product_info.php/8GB-MSI-GeForce-RTX2070Super-GAMING-X-DDR6--Retail-_1329683.html'
 		},
 		{
 			brand: 'gigabyte',

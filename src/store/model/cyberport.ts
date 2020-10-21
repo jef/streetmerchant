@@ -16,7 +16,7 @@ export const Cyberport: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.cyberport.de?DEEP=2E21-525'
+			url: 'https://www.cyberport.de?DEEP=2E12-3KL'
 		},
 		{
 			brand: 'asus',
