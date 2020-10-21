@@ -2,13 +2,21 @@ import {Store} from './store';
 
 export const Notebooksbilliger: Store = {
 	labels: {
-		outOfStock: [{
-			container: '.just_inStore',
-			text: ['dieses produkt kann nur in unseren unten genannten stores gekauft werden.']
+		inStock: {
+			container: '.warehouse',
+			text: ['sofort ab lager', 'verfügbarkeit: ca. 2-4 werktage', 'verfügbarkeit: ca. 5-10 werktage']
 		},
-		{
+		outOfStock: [{
 			container: '.warehouse',
 			text: ['liefertermin noch unbestimmt']
+		},
+		{
+			container: '.soldOut',
+			text: ['dieses produkt ist leider ausverkauft.']
+		},
+		{
+			container: '#product_error_text',
+			text: ['leider ist dieser artikel nicht mehr verfügbar.']
 		}]
 	},
 	links: [
@@ -89,6 +97,12 @@ export const Notebooksbilliger: Store = {
 			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3090+oc+24gb+gddr6x+grafikkarte+677308'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/gigabyte+geforce+rtx+3090+master+24gb+gddr6x+grafikkarte+683868'
 		},
 		{
 			brand: 'palit',
