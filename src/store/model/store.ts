@@ -13,7 +13,7 @@ export type Pricing = {
 export type Series = 'test:series' | '3070' | '3080' | '3090';
 
 export type Link = {
-	brand: 'test:brand' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'palit' | 'pny' | 'msi' | 'nvidia' | 'zotac';
+	brand: 'test:brand' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'msi' | 'nvidia' | 'palit' | 'pny' | 'zotac';
 	series: Series;
 	model: string;
 	url: string;

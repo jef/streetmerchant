@@ -16,18 +16,6 @@ export const AsusDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc',
-			series: '3080',
-			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2825/asus-tuf-rtx3080-o10g-gaming'
-		},
-		{
-			brand: 'asus',
-			model: 'tuf',
-			series: '3080',
-			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2824/asus-tuf-rtx3080-10g-gaming'
-		},
-		{
-			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
 			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2828/asus-rog-strix-rtx3080-10g-gaming'
@@ -40,15 +28,15 @@ export const AsusDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc',
-			series: '3090',
-			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2823/asus-tuf-rtx3090-o24g-gaming'
+			model: 'tuf',
+			series: '3080',
+			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2824/asus-tuf-rtx3080-10g-gaming'
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
-			series: '3090',
-			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2822/asus-tuf-rtx3090-24g-gaming'
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2825/asus-tuf-rtx3080-o10g-gaming'
 		},
 		{
 			brand: 'asus',
@@ -61,8 +49,19 @@ export const AsusDe: Store = {
 			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2827/asus-rog-strix-rtx3090-o24g-gaming'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2822/asus-tuf-rtx3090-24g-gaming'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090',
+			url: 'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2823/asus-tuf-rtx3090-o24g-gaming'
 		}
 	],
 	name: 'asus-de'
 };
-

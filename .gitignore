@@ -14,3 +14,5 @@ success-*.png
 *.flac
 *.exe
 desktop.ini
+
+twitch.json

@@ -131,7 +131,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID | |
+| `TELEGRAM_CHAT_ID` | Telegram chat ID | Comma seperated, e.g.: `123456789`, `123456789,987654321` |
 | `TWILIO_ACCOUNT_SID` | Twilio Account SID | Can be found on twilio.com/console |
 | `TWILIO_AUTH_TOKEN` | Twilio Auth Token | Can be found on twilio.com/console |
 | `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from | Include country code e.g +4401234567890 |
@@ -141,7 +141,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | Generate all Twitter keys at: https://developer.twitter.com/ |
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | |
 | `TWITTER_TWEET_TAGS` | Optional list of hashtags to append to the tweet message | E.g.: `#nvidia #nvidiastock` |
-| `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, E.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
+| `TWITCH_CLIENT_ID` | Twitch client ID | |
+| `TWITCH_CLIENT_SECRET`| Twitch client secret | |
+| `TWITCH_ACCESS_TOKEN` | Twitch access token | |
+| `TWITCH_REFRESH_TOKEN` | Twitch refresh token | |
+| `TWITCH_CHANNEL` | Twitch channel | |
+| `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
@@ -166,21 +171,25 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (UK) | `amazon-uk`|
 | Aria PC | `aria`|
 | ASUS | `asus` |
+| ASUS (DE) | `asus-de` |
 | Azerty | `azerty`|
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box | `box`|
-| Caseking | `caseking`|
+| Caseking (DE) | `caseking`|
 | CCL | `ccl`|
+| Computeruniverse (DE) | `computeruniverse` |
 | Coolblue | `coolblue`|
 | Currys | `currys`|
+| Cyberport (DE) | `cyberport` |
 | eBuyer | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Gamestop | `gamestop`|
 | Mediamarkt (DE) | `mediamarkt`|
 | Micro Center | `microcenter`|
+| Mindfactory (DE) | `mindfactory` |
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
 | Notebooksbilliger (DE) |`notebooksbilliger`|
@@ -193,6 +202,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
+| Saturn (DE) | `saturn`|
 | Scan | `scan`|
 | Very | `very`|
 | Zotac | `zotac`|
@@ -236,13 +246,17 @@ Here is a list of variables that you can use to customize your newly copied `.en
 
 | Brand | Model |
 |:---:|---|
-| `asus` | `rog strix`, `rog strix oc`, `strix`, `tuf`, `tuf oc` |
-| `evga` | `ftw3`, `ftw3 ultra`, `xc3 black`, `xc3`, `xc3 ultra` |
-| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `vision oc` |
+| `asus` | `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
+| `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
+| `gainward` | `phoenix`, `phoenix gs`, `phoenix gs oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
+| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
+| `kfa2` | `sg oc` |
 | `msi` | `gaming x trio`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
+| `palit` | `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
-| `zotac` | `trinity`, `trinity oc` |
+| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc` |
 
 #### Supported carriers
 

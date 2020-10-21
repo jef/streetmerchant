@@ -180,13 +180,20 @@ const notifications = {
 	},
 	telegram: {
 		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
-		chatId: envOrString(process.env.TELEGRAM_CHAT_ID)
+		chatId: envOrArray(process.env.TELEGRAM_CHAT_ID)
 	},
 	twilio: {
 		accountSid: envOrString(process.env.TWILIO_ACCOUNT_SID),
 		authToken: envOrString(process.env.TWILIO_AUTH_TOKEN),
 		from: envOrString(process.env.TWILIO_FROM_NUMBER),
 		to: envOrString(process.env.TWILIO_TO_NUMBER)
+	},
+	twitch: {
+		accessToken: envOrString(process.env.TWITCH_ACCESS_TOKEN),
+		channel: envOrString(process.env.TWITCH_CHANNEL),
+		clientId: envOrString(process.env.TWITCH_CLIENT_ID),
+		clientSecret: envOrString(process.env.TWITCH_CLIENT_SECRET),
+		refreshToken: envOrString(process.env.TWITCH_REFRESH_TOKEN)
 	},
 	twitter: {
 		accessTokenKey: envOrString(process.env.TWITTER_ACCESS_TOKEN_KEY),

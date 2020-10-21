@@ -17,14 +17,17 @@ import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
+import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
 import {Currys} from './currys';
+import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
 import {Mediamarkt} from './mediamarkt';
 import {MicroCenter} from './microcenter';
+import {Mindfactory} from './mindfactory';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {Notebooksbilliger} from './notebooksbilliger';
@@ -37,6 +40,7 @@ import {PCComponentes} from './pccomponentes';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
+import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Very} from './very';
@@ -64,14 +68,17 @@ const masterList = new Map([
 	[Box.name, Box],
 	[Caseking.name, Caseking],
 	[Ccl.name, Ccl],
+	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
 	[Currys.name, Currys],
+	[Cyberport.name, Cyberport],
 	[Ebuyer.name, Ebuyer],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Gamestop.name, Gamestop],
 	[Mediamarkt.name, Mediamarkt],
 	[MicroCenter.name, MicroCenter],
+	[Mindfactory.name, Mindfactory],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
 	[Notebooksbilliger.name, Notebooksbilliger],
@@ -81,9 +88,10 @@ const masterList = new Map([
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
+	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
-	[Pny.name, Pny],
+	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Very.name, Very],
 	[Zotac.name, Zotac]

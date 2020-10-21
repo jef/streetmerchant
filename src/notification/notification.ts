@@ -11,6 +11,7 @@ import {sendSms} from './sms';
 import {sendTelegramMessage} from './telegram';
 import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
+import {sendTwitchMessage} from './twitch';
 
 export function sendNotification(link: Link, store: Store) {
 	// Priority
@@ -20,11 +21,12 @@ export function sendNotification(link: Link, store: Store) {
 	sendDesktopNotification(link, store);
 	// Non-priority
 	sendDiscordMessage(link, store);
+	sendMqttMessage(link, store);
 	sendPushbulletNotification(link, store);
 	sendPushoverNotification(link, store);
 	sendSlackMessage(link, store);
 	sendTelegramMessage(link, store);
 	sendTweet(link, store);
 	sendTwilioMessage(link, store);
-	sendMqttMessage(link, store);
+	sendTwitchMessage(link, store);
 }
