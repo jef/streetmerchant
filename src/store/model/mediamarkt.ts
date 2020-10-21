@@ -76,12 +76,6 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'zotac',
-			model: 'amp extreme holo',
-			series: '3080',
-			url: 'https://www.mediamarkt.de/de/product/-2689452.html'
-		},
-		{
-			brand: 'zotac',
 			model: 'trinity',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2683243.html'
