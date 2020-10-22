@@ -32,7 +32,7 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/asus-tuf-geforce-rtx-3080-10gb-gddr6x'
 		},
@@ -50,19 +50,19 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc gaming',
+			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/asus-tuf-geforce-rtx-3080-oc-10gb-gddr6x'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc gaming',
+			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/asus-rog-strix-geforce-rtx-3080-10g-gaming-oc-10gb-gddr6x'
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 black gaming',
+			model: 'xc3 black',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/evga-geforce-rtx-3080-xc3-black-gaming-10gb-gddr6x'
 		},
@@ -74,13 +74,13 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix gaming',
+			model: 'rog strix',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/asus-rog-strix-geforce-rtx-3080-gaming-10gb-gddr6x'
 		},
@@ -98,13 +98,13 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 gaming',
+			model: 'xc3',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/evga-geforce-rtx-3080-xc3-gaming-10gb-gddr6x'
 		},
 		{
 			brand: 'evga',
-			model: 'ftw3 ultra gaming',
+			model: 'ftw3 ultra',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/evga-geforce-rtx-3080-ftw3-ultra-gaming-10gb-gddr6x'
 		},
@@ -122,7 +122,7 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'ftw3 gaming',
+			model: 'ftw3',
 			series: '3080',
 			url: 'https://www.pccomponentes.com/evga-geforce-rtx-3080-ftw3-gaming-10gb-gddr6x'
 		},
