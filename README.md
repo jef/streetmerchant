@@ -106,6 +106,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
+| `PAGERDUTY_SEVERITY` | PagerDuty Events API v2 Integration Key. Obtain one in PagerDuty - <Service you want to use> - Integrations | |
+| `PAGERDUTY_SEVERITY` | Severity of PagerDuty events | Default: `info` |
 | `PAGE_BACKOFF_MIN` | Minimum backoff time between retrying requests for the same store when a forbidden response is received | Default: `10000` |
 | `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same product page | In milliseconds, default: `5000` |
