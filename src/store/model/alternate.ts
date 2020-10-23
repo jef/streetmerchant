@@ -230,6 +230,12 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1687793'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3090',
 			url: 'https://www.alternate.de/product/1672744'
@@ -239,6 +245,12 @@ export const Alternate: Store = {
 			model: 'gaming oc',
 			series: '3090',
 			url: 'https://www.alternate.de/product/1672749'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090',
+			url: 'https://www.alternate.de/product/1687703'
 		},
 		{
 			brand: 'inno3d',
