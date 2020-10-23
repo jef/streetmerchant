@@ -48,7 +48,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
 - Run `npm install`
-- Copy `.env.example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
+- Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
     - More on this in [customization](#Customization)
 - Run `npm run start` to start
 

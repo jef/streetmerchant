@@ -32,6 +32,7 @@ export const Scan: Store = {
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
 		}),
+		ttl: 300000,
 		urls: [
 			{
 				series: '3070',
