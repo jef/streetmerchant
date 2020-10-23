@@ -74,6 +74,12 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'gainward',
+			model: 'phantom gs',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1688597'
+		},
+		{
+			brand: 'gainward',
 			model: 'phoenix gs',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1673442'
@@ -81,6 +87,12 @@ export const Alternate: Store = {
 		{
 			brand: 'gigabyte',
 			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1680168'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1680168'
 		},
@@ -131,6 +143,12 @@ export const Alternate: Store = {
 			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672345'
+		},
+		{
+			brand: 'palit',
+			model: 'gamerock oc',
+			series: '3080',
+			url: 'https://www.alternate.de/product/1688594'
 		},
 		{
 			brand: 'palit',
