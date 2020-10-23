@@ -23,7 +23,7 @@
   "homepage": "https://github.com/jef/nvidia-snatcher#readme",
   "dependencies": {
     "@hijef/pushbullet": "^2.4.2",
-    "@slack/web-api": "^5.12.0",
+    "@slack/web-api": "^5.13.0",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "discord-webhook-node": "^1.1.8",
@@ -42,7 +42,7 @@
     "pushover-notifications": "^1.2.2",
     "twilio": "^3.50.0",
     "twitch": "^4.2.6",
-    "twitch-auth": "^4.2.6",
+    "twitch-auth": "^4.2.7",
     "twitch-chat-client": "^4.2.6",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
@@ -50,7 +50,7 @@
   "devDependencies": {
     "@types/async": "^3.2.3",
     "@types/cheerio": "^0.22.22",
-    "@types/node": "^14.11.10",
+    "@types/node": "^14.14.2",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^3.0.2",
