@@ -6,6 +6,10 @@ export const Cyberport: Store = {
 			container: '.tooltipAvailabilityParent',
 			text: ['sofort verfügbar']
 		},
+		maxPrice: {
+			container: '#productDetailOverview .price',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.tooltipAvailabilityParent',
 			text: ['noch nicht verfügbar']

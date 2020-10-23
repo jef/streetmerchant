@@ -7,6 +7,10 @@ export const Novatech: Store = {
 			container: '.newspec-specprice',
 			text: ['add to basket']
 		},
+		maxPrice: {
+			container: 'p[class="newspec-price"]',
+			euroFormat: false // Note: Novatech uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '.newspec-pricesection',
 			text: [
@@ -20,7 +24,7 @@ export const Novatech: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.novatech.co.uk/products/gigabyte-geforce-rtx-2060-oc-v2-6g-graphics-card/gv-n2060oc-6gdv2.html'
 		}
