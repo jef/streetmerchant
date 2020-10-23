@@ -130,7 +130,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_TOKEN` | Slack API token | |
 | `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
 | `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
-| `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID | Comma seperated, e.g.: `123456789`, `123456789,987654321` |
