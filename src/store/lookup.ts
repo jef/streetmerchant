@@ -183,7 +183,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	if (store.labels.captcha) {
 		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
 			logger.warn(Print.captcha(link, store, true));
-			await delay(getSleepTime());
+			await delay(getSleepTime(store));
 			return false;
 		}
 	}
@@ -212,7 +212,7 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
 		logger.error(error);
 	}
 
-	const sleepTime = getSleepTime();
+	const sleepTime = getSleepTime(store);
 	logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
 	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }
