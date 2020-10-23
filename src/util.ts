@@ -1,11 +1,12 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {StatusCodeRangeArray} from './store/model';
+import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
 import {logger} from './logger';
 
-export function getSleepTime() {
-	return config.browser.minSleep + (Math.random() * (config.browser.maxSleep - config.browser.minSleep));
+export function getSleepTime(store: Store) {
+	const minSleep = store.minPageSleep as number;
+	return minSleep + (Math.random() * ((store.maxPageSleep as number) - minSleep));
 }
 
 export async function delay(ms: number) {

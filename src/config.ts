@@ -241,7 +241,14 @@ const store = {
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
 	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS),
 	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
-	stores: envOrArray(process.env.STORES, ['nvidia'])
+	stores: envOrArray(process.env.STORES, ['nvidia']).map(entry => {
+		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
+		return {
+			maxPageSleep: envOrNumberMax(minPageSleep, maxPageSleep, browser.maxSleep),
+			minPageSleep: envOrNumberMin(minPageSleep, maxPageSleep, browser.minSleep),
+			name: envOrString(name)
+		};
+	})
 };
 
 export const config = {
