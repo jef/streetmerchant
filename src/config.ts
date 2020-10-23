@@ -147,6 +147,10 @@ const notifications = {
 		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
 		username: envOrString(process.env.MQTT_USERNAME)
 	},
+	pagerduty: {
+		integrationKey: envOrString(process.env.PAGERDUTY_INTEGRATION_KEY),
+		severity: envOrString(process.env.PAGERDUTY_SEVERITY, 'info')
+	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
