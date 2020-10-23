@@ -5,8 +5,14 @@ import {disableBlockerInPage} from './adblocker';
 import {logger} from './logger';
 
 export function getSleepTime(store: Store) {
-	const minSleep = store.minPageSleep as number;
-	return minSleep + (Math.random() * ((store.maxPageSleep as number) - minSleep));
+	let minSleep = config.browser.minSleep;
+	let maxSleep = config.browser.maxSleep;
+	if (store.storeData) {
+		minSleep = store.storeData.minPageSleep as number;
+		maxSleep = store.storeData.maxPageSleep as number;
+	}
+
+	return minSleep + (Math.random() * (maxSleep - minSleep));
 }
 
 export async function delay(ms: number) {

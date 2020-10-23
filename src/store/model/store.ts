@@ -60,6 +60,9 @@ export type Store = {
 	 */
 	successStatusCodes?: StatusCodeRangeArray;
 	waitUntil?: LoadEvent;
-	minPageSleep?: number;
-	maxPageSleep?: number;
+	storeData?: {
+		minPageSleep?: number;
+		maxPageSleep?: number;
+		name?: string;
+	};
 };
