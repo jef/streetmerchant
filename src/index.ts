@@ -60,7 +60,7 @@ async function main() {
 			store.setupAction(browser);
 		}
 
-		setTimeout(tryLookupAndLoop, getSleepTime(), browser, store);
+		setTimeout(tryLookupAndLoop, getSleepTime(store), browser, store);
 	}
 }
 

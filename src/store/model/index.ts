@@ -99,11 +99,11 @@ const masterList = new Map([
 
 const list = new Map();
 
-for (const name of config.store.stores) {
-	if (masterList.has(name)) {
-		list.set(name, masterList.get(name));
+for (const storeData of config.store.stores) {
+	if (masterList.has(storeData.name)) {
+		list.set(storeData.name, {...masterList.get(storeData.name), storeData});
 	} else {
-		const logString = `No store named ${name}, skipping.`;
+		const logString = `No store named ${storeData.name}, skipping.`;
 		logger.warn(logString);
 	}
 }

@@ -48,7 +48,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
 - Run `npm install`
-- Copy `.env.example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
+- Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using your [favorite text editor](https://code.visualstudio.com/)
     - More on this in [customization](#Customization)
 - Run `npm run start` to start
 
@@ -106,6 +106,8 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
+| `PAGERDUTY_INTEGRATION_KEY` | PagerDuty Events API v2 Integration Key. Obtain one in PagerDuty - <Service you want to use> - Integrations | |
+| `PAGERDUTY_SEVERITY` | Severity of PagerDuty events | Default: `info` |
 | `PAGE_BACKOFF_MIN` | Minimum backoff time between retrying requests for the same store when a forbidden response is received | Default: `10000` |
 | `PAGE_BACKOFF_MAX` | Maximum backoff time between retrying requests for the same store when a forbidden response is received | Default: `3600000` |
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same product page | In milliseconds, default: `5000` |
@@ -128,7 +130,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `SLACK_TOKEN` | Slack API token | |
 | `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
 | `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
-| `STORES` | [Supported stores](#supported-stores) you want to be scraped | Comma separated, default: `nvidia` |
+| `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
 | `TELEGRAM_CHAT_ID` | Telegram chat ID | Comma seperated, e.g.: `123456789`, `123456789,987654321` |

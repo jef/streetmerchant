@@ -12,31 +12,31 @@ export const Asus: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://store.asus.com/us/item/202003AM280000002/'
+			url: 'https://store.asus.com/us/item/202003AM280000002'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf oc',
 			series: '3080',
-			url: 'https://store.asus.com/us/item/202009AM160000001/'
+			url: 'https://store.asus.com/us/item/202009AM160000001'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
-			url: 'https://store.asus.com/us/item/202009AM150000004/'
+			url: 'https://store.asus.com/us/item/202009AM150000004'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf',
 			series: '3090',
-			url: 'https://store.asus.com/us/item/202009AM150000003/'
+			url: 'https://store.asus.com/us/item/202009AM150000003'
 		},
 		{
 			brand: 'asus',
 			model: 'rog strix oc',
 			series: '3080',
-			url: 'https://store.asus.com/us/item/202009AM290000002/'
+			url: 'https://store.asus.com/us/item/202009AM290000002'
 		}
 	],
 	name: 'asus',
