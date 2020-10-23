@@ -6,6 +6,10 @@ export const Alternate: Store = {
 			container: '.stockStatus',
 			text: ['auf lager', 'ware neu eingetroffen', 'in kürze versandfertig', 'ware im zulauf']
 		},
+		maxPrice: {
+			container: 'div.price > span',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.stockStatus',
 			text: ['liefertermin unbekannt']

@@ -8,6 +8,10 @@ export const Very: Store = {
 			container: '.stockMessaging .indicator',
 			text: ['available', 'low stock']
 		},
+		maxPrice: {
+			container: '.priceNow',
+			euroFormat: false // Note: Very uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '.stockMessaging .indicator',
 			text: ['pre-order']
@@ -16,9 +20,9 @@ export const Very: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.very.co.uk/msi-geforce-rtx-2060-super-ventus-gp-oc/1600463772.prd'
+			url: 'https://www.very.co.uk/msi-geforce-gtx-1660-ti-gaming-x-6g-graphics-card/1600350984.prd'
 		}
 	],
 	linksBuilder: {

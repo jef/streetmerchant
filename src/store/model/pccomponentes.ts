@@ -6,6 +6,10 @@ export const PCComponentes: Store = {
 			container: '#btnsWishAddBuy',
 			text: ['Comprar']
 		},
+		maxPrice: {
+			container: '#precio-main',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '#btnsWishAddBuy',
 			text: ['Avísame']

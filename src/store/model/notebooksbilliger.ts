@@ -6,6 +6,10 @@ export const Notebooksbilliger: Store = {
 			container: '.warehouse',
 			text: ['sofort ab lager', 'verfügbarkeit: ca. 2-4 werktage', 'verfügbarkeit: ca. 5-10 werktage']
 		},
+		maxPrice: {
+			container: 'form[name="cart_quantity"]  span[class*="product-price__regular"]',
+			euroFormat: true
+		},
 		outOfStock: [{
 			container: '.warehouse',
 			text: ['liefertermin noch unbestimmt']

@@ -7,6 +7,10 @@ export const Ebuyer: Store = {
 			container: '.purchase-info',
 			text: ['add to basket', 'in stock']
 		},
+		maxPrice: {
+			container: '.purchase-info__price .price',
+			euroFormat: false // Note: ebuyer uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '.purchase-info',
 			text: ['coming soon', 'we are expecting this item on']
@@ -15,7 +19,7 @@ export const Ebuyer: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.ebuyer.com/874209-gigabyte-geforce-rtx-2060-windforce-6gb-oc-graphics-card-gv-n2060wf2oc-6gd-v2'
 		}

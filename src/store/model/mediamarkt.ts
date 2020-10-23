@@ -2,6 +2,10 @@ import {Store} from './store';
 
 export const Mediamarkt: Store = {
 	labels: {
+		maxPrice: {
+			container: 'span[font-family="price"]',
+			euroFormat: false
+		},
 		outOfStock: {
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']
