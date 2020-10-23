@@ -6,6 +6,10 @@ export const Gamestop: Store = {
 			container: '.add-to-cart',
 			text: ['add to cart']
 		},
+		maxPrice: {
+			container: '.primary-details-row .actual-price',
+			euroFormat: false
+		},
 		outOfStock: {
 			container: '.add-to-cart',
 			text: ['not available']
@@ -16,7 +20,7 @@ export const Gamestop: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.gamestop.com/video-games/pc/components/graphics-cards/products/tuf-gaming-geforce-rtx-3080-graphics-card/11109446.html'
+			url: 'https://www.gamestop.com/nav-pc-hardware-desktops/products/clx-set-tgmsetgxe9600bm-gaming-desktop/11096665'
 		},
 		{
 			brand: 'asus',

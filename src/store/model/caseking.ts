@@ -7,6 +7,10 @@ export const Caseking: Store = {
 			container: '.delivery_container',
 			text: ['lagernd', 'im zulauf', 'ab']
 		},
+		maxPrice: {
+			container: '#buybox .article_details_price',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.delivery_container',
 			text: ['unbekannt']

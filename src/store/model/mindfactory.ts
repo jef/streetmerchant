@@ -6,6 +6,10 @@ export const Mindfactory: Store = {
 			container: '.pshipping',
 			text: ['lagernd', 'verfügbar']
 		},
+		maxPrice: {
+			container: 'div[class="pprice"]',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.pshipping',
 			text: ['ohne liefertermin']

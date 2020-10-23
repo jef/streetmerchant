@@ -7,6 +7,10 @@ export const Ccl: Store = {
 			container: '#pnlAddToBasket',
 			text: ['add to basket']
 		},
+		maxPrice: {
+			container: '#pnlPriceText > p',
+			euroFormat: false // Note: CCL uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '#pnlSoldOut',
 			text: ['sold out', 'coming soon']
@@ -15,7 +19,7 @@ export const Ccl: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.cclonline.com/product/296443/RTX-2060-SUPER-VENTUS-GP-OC/Graphics-Cards/MSI-GeForce-RTX-2060-SUPER-VENTUS-GP-OC-8GB-Overclocked-Graphics-Card/VGA5671/'
 		}

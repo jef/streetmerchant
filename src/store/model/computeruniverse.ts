@@ -5,6 +5,10 @@ export const Computeruniverse: Store = {
 		inStock: {
 			container: '.availability',
 			text: ['bestellartikel', 'auf lager und sofort lieferbar', 'kurzfristig verfügbar']
+		},
+		maxPrice: {
+			container: '.product-price',
+			euroFormat: true
 		}
 	},
 	links: [
