@@ -30,6 +30,12 @@ export const Mindfactory: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3080',
+			url: 'https://www.mindfactory.de/product_info.php/10GB-Gigabyte-RTX3080-AORUS-XTREME-GDDR6X-3xHDMI-3xDP--Retail-_1380484.html'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: '3080',
 			url: 'https://www.mindfactory.de/product_info.php/10GB-Gigabyte-GeForce-RTX-3080-Gaming-OC-3xDP-2x-HDMI--Retail-_1376263.html'
