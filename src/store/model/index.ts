@@ -101,7 +101,7 @@ const list = new Map();
 
 for (const storeData of config.store.stores) {
 	if (masterList.has(storeData.name)) {
-		list.set(storeData.name, {...masterList.get(storeData.name), storeData});
+		list.set(storeData.name, {...masterList.get(storeData.name), ...storeData});
 	} else {
 		const logString = `No store named ${storeData.name}, skipping.`;
 		logger.warn(logString);
