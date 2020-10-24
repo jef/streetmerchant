@@ -196,6 +196,13 @@ export const Amazon: Store = {
 			model: 'tuf oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HJLLF7G'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J5F3G18&Quantity.1=1',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.amazon.com/dp/B08J5F3G18'
 		}
 	],
 	name: 'amazon'
