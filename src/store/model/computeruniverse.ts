@@ -260,6 +260,12 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.computeruniverse.net/de/gigabyte-aorus-geforce-rtx3090-master-24gb'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3090',
 			url: 'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3090-eagle-oc-24-gb-oc-enthusiast-grafikkarte'
@@ -269,12 +275,6 @@ export const Computeruniverse: Store = {
 			model: 'gaming oc',
 			series: '3090',
 			url: 'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3090-gaming-oc-24-gb-oc'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'aorus master',
-			series: '3090',
-			url: 'https://www.computeruniverse.net/de/gigabyte-aorus-geforce-rtx3090-master-24gb'
 		},
 		{
 			brand: 'inno3d',
