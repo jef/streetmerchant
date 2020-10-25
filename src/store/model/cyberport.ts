@@ -60,6 +60,12 @@ export const Cyberport: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.cyberport.de?DEEP=2e21-532'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E21-52Z'
