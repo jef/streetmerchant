@@ -115,7 +115,9 @@ if (config.store.showOnlyBrands.length > 0) {
 }
 
 if (config.store.showOnlyModels.length > 0) {
-	logger.info(`ℹ selected models: ${config.store.showOnlyModels.join(', ')}`);
+	logger.info(`ℹ selected models: ${config.store.showOnlyModels.map(entry => {
+		return entry.series ? entry.name + ' (' + entry.series + ')' : entry.name;
+	}).join(', ')}`);
 }
 
 if (config.store.showOnlySeries.length > 0) {
