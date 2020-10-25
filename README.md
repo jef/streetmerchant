@@ -149,6 +149,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token | |
 | `TWITCH_CHANNEL` | Twitch channel | |
 | `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
+| `WEB_PORT` | Starts a webserver to be able to control the bot while it is running; optional | Default: disabled |
 
 > :point_right: If you have multi-factor authentication (MFA), you will need to create an [app password](https://myaccount.google.com/apppasswords) and use this instead of your Gmail password.
 
