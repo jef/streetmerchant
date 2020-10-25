@@ -139,6 +139,12 @@ export const ProshopDE: Store = {
 			url: 'https://www.proshop.de/2876839'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090',
+			url: 'https://www.proshop.de/2878410'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3090',

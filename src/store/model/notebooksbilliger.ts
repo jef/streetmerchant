@@ -31,12 +31,6 @@ export const Notebooksbilliger: Store = {
 			url: 'https://www.notebooksbilliger.de/gainward+geforce+rtx+2070+super+phoenix+v1+grafikkarte+656238'
 		},
 		{
-			brand: 'nvidia',
-			model: 'founders edition',
-			series: '3080',
-			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+683301'
-		},
-		{
 			brand: 'gainward',
 			model: 'phoenix gs',
 			series: '3080',
@@ -73,6 +67,12 @@ export const Notebooksbilliger: Store = {
 			url: 'https://www.notebooksbilliger.de/msi+geforce+rtx+3080+gaming+x+trio+10g+grafikkarte+678527'
 		},
 		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3080',
+			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+683301'
+		},
+		{
 			brand: 'palit',
 			model: 'gaming pro',
 			series: '3080',
@@ -97,12 +97,6 @@ export const Notebooksbilliger: Store = {
 			url: 'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
 		},
 		{
-			brand: 'nvidia',
-			model: 'founders edition',
-			series: '3090',
-			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+founders+edition+683300'
-		},
-		{
 			brand: 'asus',
 			model: 'rog strix',
 			series: '3090',
@@ -119,6 +113,12 @@ export const Notebooksbilliger: Store = {
 			model: 'aorus master',
 			series: '3090',
 			url: 'https://www.notebooksbilliger.de/gigabyte+geforce+rtx+3090+master+24gb+gddr6x+grafikkarte+683868'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+founders+edition+683300'
 		},
 		{
 			brand: 'palit',
