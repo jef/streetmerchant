@@ -24,6 +24,10 @@ const linkBuilderLastRunTimes: Record<string, number> = {};
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
+	if (config.store.stores.length > 0 && !config.store.stores.find(foundStore => foundStore.name === store.name)) {
+		return;
+	}
+
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterStoreLink(link)) {
@@ -192,6 +196,11 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
+	if (!browser.isConnected()) {
+		logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
+		return;
+	}
+
 	if (store.linksBuilder) {
 		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
 		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
