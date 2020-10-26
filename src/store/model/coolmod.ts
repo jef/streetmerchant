@@ -161,7 +161,7 @@ export const Coolmod: Store = {
 			model: 'twin x2 oc',
 			series: '3080',
 			url: 'https://www.coolmod.com/inno3d-geforce-rtx-3080-twin-x2-oc-10gb-gddr6x-tarjeta-grafica-precio'
-		},
+		}
 	],
 	name: 'coolmod'
 };
