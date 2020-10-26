@@ -172,22 +172,22 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Amazon (ES) | `amazon-es`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
-| Aria PC | `aria`|
+| Aria PC (UK) | `aria`|
 | ASUS | `asus` |
 | ASUS (DE) | `asus-de` |
-| Azerty | `azerty`|
+| Azerty (NL) | `azerty`|
 | B&H | `bandh`|
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
-| Box | `box`|
+| Box (UK) | `box`|
 | Caseking (DE) | `caseking`|
-| CCL | `ccl`|
+| CCL (UK) | `ccl`|
 | Computeruniverse (DE) | `computeruniverse` |
-| Coolblue | `coolblue`|
-| Coolmod | `coolmod`|
-| Currys | `currys`|
+| Coolblue (NL) | `coolblue`|
+| Coolmod (ES) | `coolmod`|
+| Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
-| eBuyer | `ebuyer`|
+| eBuyer (UK) | `ebuyer`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Gamestop | `gamestop`|
@@ -197,18 +197,18 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
 | Notebooksbilliger (DE) |`notebooksbilliger`|
-| Novatech | `novatech`|
+| Novatech (UK) | `novatech`|
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
-| Overclockers | `overclockers`|
-| PCComponentes | `pccomponentes`|
+| Overclockers (UK) | `overclockers`|
+| PCComponentes (ES) | `pccomponentes`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
 | Saturn (DE) | `saturn`|
-| Scan | `scan`|
-| Very | `very`|
+| Scan (UK) | `scan`|
+| Very (UK) | `very`|
 | Zotac | `zotac`|
 
 <details>
