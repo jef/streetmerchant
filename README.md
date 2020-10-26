@@ -184,6 +184,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | CCL | `ccl`|
 | Computeruniverse (DE) | `computeruniverse` |
 | Coolblue | `coolblue`|
+| Coolmod | `coolmod`|
 | Currys | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer | `ebuyer`|

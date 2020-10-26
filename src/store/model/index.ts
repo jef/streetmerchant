@@ -20,6 +20,7 @@ import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
+import {Coolmod} from './coolmod';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
@@ -69,6 +70,7 @@ export const storeList = new Map([
 	[Ccl.name, Ccl],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
+	[Coolmod.name, Coolmod],
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
 	[Ebuyer.name, Ebuyer],
