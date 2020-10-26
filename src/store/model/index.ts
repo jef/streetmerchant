@@ -43,13 +43,10 @@ import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
-import {Store} from './store';
 import {Very} from './very';
 import {Zotac} from './zotac';
-import {config} from '../../config';
-import {logger} from '../../logger';
 
-const masterList = new Map([
+export const storeList = new Map([
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
@@ -99,31 +96,27 @@ const masterList = new Map([
 	[Zotac.name, Zotac]
 ]);
 
-const list = new Map();
-
-for (const name of config.store.stores) {
-	if (masterList.has(name)) {
-		list.set(name, masterList.get(name));
-	} else {
-		const logString = `No store named ${name}, skipping.`;
-		logger.warn(logString);
+const brands = new Set();
+const series = new Set();
+const models = new Set();
+for (const store of storeList.values()) {
+	for (const link of store.links) {
+		brands.add(link.brand);
+		series.add(link.series);
+		models.add(link.model);
 	}
 }
 
-logger.info(`ℹ selected stores: ${Array.from(list.keys()).join(', ')}`);
-
-if (config.store.showOnlyBrands.length > 0) {
-	logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
+export function getAllBrands() {
+	return Array.from(brands);
 }
 
-if (config.store.showOnlyModels.length > 0) {
-	logger.info(`ℹ selected models: ${config.store.showOnlyModels.join(', ')}`);
+export function getAllSeries() {
+	return Array.from(series);
 }
 
-if (config.store.showOnlySeries.length > 0) {
-	logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
+export function getAllModels() {
+	return Array.from(models);
 }
-
-export const Stores = Array.from(list.values()) as Store[];
 
 export * from './store';

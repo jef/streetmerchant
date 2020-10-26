@@ -2,6 +2,10 @@ import {Store} from './store';
 
 export const Saturn: Store = {
 	labels: {
+		maxPrice: {
+			container: 'span[font-family="price"]',
+			euroFormat: false // Note: Saturn uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']

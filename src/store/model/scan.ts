@@ -12,6 +12,10 @@ export const Scan: Store = {
 			container: '.buyPanel .priceAvailability',
 			text: ['add to basket', 'in stock']
 		},
+		maxPrice: {
+			container: '.buyPanel .price',
+			euroFormat: false // Note: Scan uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '.buyPanel .priceAvailability',
 			text: ['pre order']
@@ -20,7 +24,7 @@ export const Scan: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.scan.co.uk/products/msi-geforce-rtx-2060-ventus-xs-oc-6gb-gddr6-vr-ready-graphics-card-1920-core-1710mhz-boost'
 		}
@@ -32,6 +36,7 @@ export const Scan: Store = {
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
 		}),
+		ttl: 300000,
 		urls: [
 			{
 				series: '3070',

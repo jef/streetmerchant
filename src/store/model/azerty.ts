@@ -6,6 +6,10 @@ export const Azerty: Store = {
 			container: '.orderdelay',
 			text: ['Volgende werkdag in huis', '1 werkdag', '2-3 werkdagen']
 		},
+		maxPrice: {
+			container: '.mod_article .price',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.orderdelay',
 			text: ['Onbekend', 'meer dan 10 werkdagen', 'Pre-order']

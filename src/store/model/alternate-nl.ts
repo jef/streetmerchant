@@ -6,6 +6,10 @@ export const AlternateNL: Store = {
 			container: '.stockStatus',
 			text: ['Direct leverbaar']
 		},
+		maxPrice: {
+			container: 'div.price > span',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.stockStatus',
 			text: ['Levertermijn onbekend', 'pre-order']

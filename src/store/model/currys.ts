@@ -7,6 +7,10 @@ export const Currys: Store = {
 			container: '#product-actions button',
 			text: ['add to basket']
 		},
+		maxPrice: {
+			container: '#product-actions span[class*="ProductPriceBlock__Price"]',
+			euroFormat: false // Note: Currys uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '#product-actions .unavailable',
 			text: ['not available for delivery']
@@ -15,7 +19,7 @@ export const Currys: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.currys.co.uk/gbuk/computing-accessories/components-upgrades/graphics-cards/msi-geforce-rtx-2060-8-gb-super-ventus-gp-oc-graphics-card-10196803-pdt.html'
 		}

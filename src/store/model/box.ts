@@ -7,6 +7,10 @@ export const Box: Store = {
 			container: '#divBuyButton',
 			text: ['add to basket']
 		},
+		maxPrice: {
+			container: '.p-right-wrapper .pq-price',
+			euroFormat: false // Note: Box uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			text: ['request stock alert', 'coming soon']
 		}
@@ -14,9 +18,9 @@ export const Box: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.box.co.uk/ASUS-TUF-GeForce-RTX-2060-6GB-Gaming-Gra_2669497.html'
+			url: 'https://www.box.co.uk/Gigabyte-GeForce-RTX-2080-Super-8GB-Wind_2724554.html'
 		}
 	],
 	linksBuilder: {

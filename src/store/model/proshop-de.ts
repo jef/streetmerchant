@@ -2,6 +2,10 @@ import {Store} from './store';
 
 export const ProshopDE: Store = {
 	labels: {
+		maxPrice: {
+			container: '.site-currency-wrapper > span[class="site-currency-attention"]',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.site-currency-attention',
 			text: ['die ware ist leider nicht mehr verfügbar.']
@@ -133,6 +137,12 @@ export const ProshopDE: Store = {
 			model: 'aorus xtreme',
 			series: '3090',
 			url: 'https://www.proshop.de/2876839'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090',
+			url: 'https://www.proshop.de/2878410'
 		},
 		{
 			brand: 'msi',

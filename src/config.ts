@@ -147,6 +147,10 @@ const notifications = {
 		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
 		username: envOrString(process.env.MQTT_USERNAME)
 	},
+	pagerduty: {
+		integrationKey: envOrString(process.env.PAGERDUTY_INTEGRATION_KEY),
+		severity: envOrString(process.env.PAGERDUTY_SEVERITY, 'info')
+	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
@@ -239,9 +243,22 @@ const store = {
 	},
 	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
 	showOnlyBrands: envOrArray(process.env.SHOW_ONLY_BRANDS),
-	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS),
+	showOnlyModels: envOrArray(process.env.SHOW_ONLY_MODELS).map(entry => {
+		const [name, series] = entry.match(/[^:]+/g) ?? [];
+		return {
+			name: envOrString(name),
+			series: envOrString(series)
+		};
+	}),
 	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
-	stores: envOrArray(process.env.STORES, ['nvidia'])
+	stores: envOrArray(process.env.STORES, ['nvidia']).map(entry => {
+		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
+		return {
+			maxPageSleep: envOrNumberMax(minPageSleep, maxPageSleep, browser.maxSleep),
+			minPageSleep: envOrNumberMin(minPageSleep, maxPageSleep, browser.minSleep),
+			name: envOrString(name)
+		};
+	})
 };
 
 export const config = {
@@ -254,3 +271,10 @@ export const config = {
 	proxy,
 	store
 };
+
+export function setConfig(newConfig: any) {
+	const writeConfig = config as any;
+	for (const key of Object.keys(newConfig)) {
+		writeConfig[key] = newConfig[key];
+	}
+}
