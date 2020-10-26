@@ -6,6 +6,10 @@ export const Cyberport: Store = {
 			container: '.tooltipAvailabilityParent',
 			text: ['sofort verfügbar']
 		},
+		maxPrice: {
+			container: '#productDetailOverview .price',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.tooltipAvailabilityParent',
 			text: ['noch nicht verfügbar']
@@ -53,6 +57,12 @@ export const Cyberport: Store = {
 			model: 'eagle oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E21-52Y'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.cyberport.de?DEEP=2e21-532'
 		},
 		{
 			brand: 'gigabyte',

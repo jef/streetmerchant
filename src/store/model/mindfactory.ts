@@ -6,6 +6,10 @@ export const Mindfactory: Store = {
 			container: '.pshipping',
 			text: ['lagernd', 'verfügbar']
 		},
+		maxPrice: {
+			container: 'div[class="pprice"]',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.pshipping',
 			text: ['ohne liefertermin']
@@ -17,6 +21,18 @@ export const Mindfactory: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.mindfactory.de/product_info.php/8GB-MSI-GeForce-RTX2070Super-GAMING-X-DDR6--Retail-_1329683.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.mindfactory.de/product_info.php/10GB-Gigabyte-RTX3080-AORUS-MASTER-GDDR6X-3xHDMI-3xDP--Retail-_1378681.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3080',
+			url: 'https://www.mindfactory.de/product_info.php/10GB-Gigabyte-RTX3080-AORUS-XTREME-GDDR6X-3xHDMI-3xDP--Retail-_1380484.html'
 		},
 		{
 			brand: 'gigabyte',

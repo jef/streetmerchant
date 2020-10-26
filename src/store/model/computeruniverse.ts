@@ -5,6 +5,10 @@ export const Computeruniverse: Store = {
 		inStock: {
 			container: '.availability',
 			text: ['bestellartikel', 'auf lager und sofort lieferbar', 'kurzfristig verfügbar']
+		},
+		maxPrice: {
+			container: '.product-price',
+			euroFormat: true
 		}
 	},
 	links: [
@@ -253,6 +257,12 @@ export const Computeruniverse: Store = {
 			model: 'phoenix gs oc',
 			series: '3090',
 			url: 'https://www.computeruniverse.net/de/gainward-geforce-rtx3090-phoenix-gs-24-gb-oc-enthusiast-grafikkarte'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url: 'https://www.computeruniverse.net/de/gigabyte-aorus-geforce-rtx3090-master-24gb'
 		},
 		{
 			brand: 'gigabyte',

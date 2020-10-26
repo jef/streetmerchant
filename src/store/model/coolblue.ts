@@ -6,6 +6,10 @@ export const Coolblue: Store = {
 			container: '.product-order',
 			text: ['bestel snel', 'morgen in huis']
 		},
+		maxPrice: {
+			container: '.js-order-block .sales-price__current',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.product-order',
 			text: ['binnenkort leverbaar', 'tijdelijk uitverkocht']

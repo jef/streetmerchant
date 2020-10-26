@@ -7,6 +7,10 @@ export const Overclockers: Store = {
 			container: '#detailbox',
 			text: ['add to basket', 'in stock']
 		},
+		maxPrice: {
+			container: 'div[class="article_details_price"]',
+			euroFormat: false // Note: Overclockers uses non-euroFromat as price seperator
+		},
 		outOfStock: {
 			container: '#detailbox',
 			text: ['out of stock', 'pre order', 'bought to order']
@@ -15,7 +19,7 @@ export const Overclockers: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			model: 'CARD',
+			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.overclockers.co.uk/gigabyte-geforce-rtx-2060-oc-rev2-6144mb-gddr6-pci-express-graphics-card-gx-1bj-gi.html'
 		}

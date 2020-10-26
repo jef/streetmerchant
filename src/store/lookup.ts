@@ -24,6 +24,10 @@ const linkBuilderLastRunTimes: Record<string, number> = {};
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
+	if (config.store.stores.length > 0 && !config.store.stores.find(foundStore => foundStore.name === store.name)) {
+		return;
+	}
+
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterStoreLink(link)) {
@@ -183,7 +187,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	if (store.labels.captcha) {
 		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
 			logger.warn(Print.captcha(link, store, true));
-			await delay(getSleepTime());
+			await delay(getSleepTime(store));
 			return false;
 		}
 	}
@@ -192,6 +196,11 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
+	if (!browser.isConnected()) {
+		logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
+		return;
+	}
+
 	if (store.linksBuilder) {
 		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
 		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
@@ -212,7 +221,7 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
 		logger.error(error);
 	}
 
-	const sleepTime = getSleepTime();
+	const sleepTime = getSleepTime(store);
 	logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
 	setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }

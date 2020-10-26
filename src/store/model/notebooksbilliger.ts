@@ -6,6 +6,10 @@ export const Notebooksbilliger: Store = {
 			container: '.warehouse',
 			text: ['sofort ab lager', 'verfügbarkeit: ca. 2-4 werktage', 'verfügbarkeit: ca. 5-10 werktage']
 		},
+		maxPrice: {
+			container: 'form[name="cart_quantity"]  span[class*="product-price__regular"]',
+			euroFormat: true
+		},
 		outOfStock: [{
 			container: '.warehouse',
 			text: ['liefertermin noch unbestimmt']
@@ -63,6 +67,12 @@ export const Notebooksbilliger: Store = {
 			url: 'https://www.notebooksbilliger.de/msi+geforce+rtx+3080+gaming+x+trio+10g+grafikkarte+678527'
 		},
 		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3080',
+			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+683301'
+		},
+		{
 			brand: 'palit',
 			model: 'gaming pro',
 			series: '3080',
@@ -103,6 +113,12 @@ export const Notebooksbilliger: Store = {
 			model: 'aorus master',
 			series: '3090',
 			url: 'https://www.notebooksbilliger.de/gigabyte+geforce+rtx+3090+master+24gb+gddr6x+grafikkarte+683868'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3090',
+			url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+founders+edition+683300'
 		},
 		{
 			brand: 'palit',
