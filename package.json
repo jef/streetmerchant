@@ -3,6 +3,7 @@
   "description": "🔮 For all your Nvidia needs",
   "main": "src/index.ts",
   "scripts": {
+    "all": "npm run build && npm run lint",
     "build": "tsc",
     "lint": "xo",
     "lint:fix": "xo --fix",
@@ -72,7 +73,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run all"
     }
   }
 }
