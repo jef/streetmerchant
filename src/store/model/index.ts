@@ -104,11 +104,10 @@ const series = new Set();
 const stores = new Map();
 
 for (const storeData of config.store.stores) {
-	stores.set(storeData.name, storeList.get(storeData.name));
-
 	const store = storeList.get(storeData.name);
 
 	if (store) {
+		stores.set(storeData.name, store);
 		store.minPageSleep = storeData.minPageSleep;
 		store.maxPageSleep = storeData.maxPageSleep;
 	} else {
