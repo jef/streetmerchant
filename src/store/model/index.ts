@@ -99,11 +99,15 @@ export const storeList = new Map([
 ]);
 
 const brands = new Set();
-const series = new Set();
 const models = new Set();
+const series = new Set();
+const stores = new Map();
 
 for (const storeData of config.store.stores) {
+	stores.set(storeData.name, storeList.get(storeData.name));
+
 	const store = storeList.get(storeData.name);
+
 	if (store) {
 		store.minPageSleep = storeData.minPageSleep;
 		store.maxPageSleep = storeData.maxPageSleep;
@@ -138,6 +142,10 @@ export function getAllSeries() {
 
 export function getAllModels() {
 	return Array.from(models);
+}
+
+export function getStores() {
+	return stores;
 }
 
 if (config.store.stores.length > 0) {
