@@ -51,7 +51,7 @@
   "devDependencies": {
     "@types/async": "^3.2.3",
     "@types/cheerio": "^0.22.22",
-    "@types/node": "^14.14.3",
+    "@types/node": "^14.14.5",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^3.0.2",
