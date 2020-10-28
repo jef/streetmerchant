@@ -7,9 +7,6 @@
 <!-- Fixes #(issue) -->
 <!-- Please also include relevant motivation and context. -->
 
-<!-- Feel free to include your Discord tag here and we'll consider making you a ringer! -->
-<!-- Continuous improvements may also grant you contributor access. -->
-
 ### Testing
 
 <!-- Please describe the tests that you ran to verify your changes. -->
