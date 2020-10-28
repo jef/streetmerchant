@@ -27,7 +27,7 @@ export function sendSlackMessage(link: Link, store: Store) {
 				}
 
 				logger.info('✔ slack message sent');
-			} catch (error) {
+			} catch (error: unknown) {
 				logger.error('✖ couldn\'t send slack message', error);
 			}
 		})();

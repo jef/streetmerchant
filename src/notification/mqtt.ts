@@ -40,7 +40,7 @@ export function sendMqttMessage(link: Link, store: Store) {
 					pubOptions
 				);
 				logger.info('✔ mqtt message sent');
-			} catch (error) {
+			} catch (error: unknown) {
 				logger.error('✖ couldn\'t send mqtt message', error);
 			}
 		})();

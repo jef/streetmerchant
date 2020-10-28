@@ -1,5 +1,5 @@
 declare module '@hijef/pushbullet' {
-	export type DeviceParams = string | number | Record<string, any>;
+	export type DeviceParameters = string | number | Record<string, any>;
 
 	export type PushBulletCallback = ((error: Error) => void) | ((error?: null, response: any) => void);
 
@@ -27,11 +27,11 @@ declare module '@hijef/pushbullet' {
 		createDevice(options: Record<string, any>, callback: PushBulletCallback);
 		updateDevice(deviceIden: string, deviceOptions: Record<string, any>, callback: PushBulletCallback);
 		deleteDevice(deviceIden: string, callback: PushBulletCallback);
-		note(deviceParams: DeviceParams, title: string, body: string, callback: PushBulletCallback);
-		link(deviceParams: DeviceParams, name: string, url: string, body: string, callback: PushBulletCallback);
-		file(deviceParams: DeviceParams, filePath: string, message: string, callback: PushBulletCallback);
-		dismissPush(pushIden: DeviceParams, callback: PushBulletCallback);
-		deletePush(pushIden: DeviceParams, callback: PushBulletCallback);
+		note(deviceParameters: DeviceParameters, title: string, body: string, callback: PushBulletCallback);
+		link(deviceParameters: DeviceParameters, name: string, url: string, body: string, callback: PushBulletCallback);
+		file(deviceParameters: DeviceParameters, filePath: string, message: string, callback: PushBulletCallback);
+		dismissPush(pushIden: DeviceParameters, callback: PushBulletCallback);
+		deletePush(pushIden: DeviceParameters, callback: PushBulletCallback);
 		deleteAllPushes(callback: PushBulletCallback);
 		history(options: HistoryOptions, callback: PushBulletCallback);
 		history(callback: PushBulletCallback);

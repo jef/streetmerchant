@@ -56,7 +56,7 @@ export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: B
 	} finally {
 		try {
 			await closePage(page);
-		} catch (error) {
+		} catch (error: unknown) {
 			logger.error(error);
 		}
 	}

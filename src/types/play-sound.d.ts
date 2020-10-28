@@ -4,9 +4,7 @@ declare module 'play-sound' {
 		player?: string;
 	}
 
-	export interface PlayOptions {
-		[key: string]: any;
-	}
+	export type PlayOptions = Record<string, any>;
 
 	export interface PlaySound {
 		player: string;

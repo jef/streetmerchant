@@ -50,7 +50,7 @@ chatClient.onJoin((channel: string, user: string) => {
 				try {
 					chatClient.say(channel, message);
 					logger.info('✔ twitch message sent');
-				} catch (error) {
+				} catch (error: unknown) {
 					logger.error('✖ couldn\'t send twitch message', error);
 				}
 			}

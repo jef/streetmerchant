@@ -24,13 +24,7 @@ export function getProductLinksBuilder(options: LinksBuilderOptions) {
 		for (let i = 0; i < productElements.length; i++) {
 			const productElement = productElements.eq(i);
 			const titleElement = productElement.find(options.titleSelector).first();
-			let title: string;
-
-			if (options.titleAttribute) {
-				title = titleElement.attr()?.[options.titleAttribute];
-			} else {
-				title = titleElement.text()?.replace(/\n/g, ' ').trim();
-			}
+			const title = options.titleAttribute ? titleElement.attr()?.[options.titleAttribute] : titleElement.text()?.replace(/\n/g, ' ').trim();
 
 			if (!title) {
 				continue;
