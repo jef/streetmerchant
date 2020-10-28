@@ -9,7 +9,7 @@
 			let series;
 			let models;
 
-			function renderList(id, elements, selectionArray) {
+			function renderList(id, elements, selectionArray, subfield) {
 				const list = document.getElementById(id);
 				list.innerHTML = '';
 				for (const element of elements) {
@@ -20,7 +20,11 @@
 					htmlElement.innerHTML = element;
 					htmlElement.name = name;
 					htmlElement.id = name;
-					if (selectionArray.length === 0 || selectionArray.includes(element)) {
+					if (selectionArray.length === 0) {
+						htmlElement.checked = true;
+					} else if (subfield && selectionArray.find(obj => element === obj[subfield])) {
+						htmlElement.checked = true;
+					} else if (selectionArray.includes(element)) {
 						htmlElement.checked = true;
 					}
 					list.appendChild(htmlElement);
@@ -32,13 +36,20 @@
 				}
 			}
 
-			function listToArray(id, selectionArray) {
+			function listToArray(id, subfield) {
 				const list = document.getElementById(id);
 				const resArray = [];
 				let allSelected = true;
 				for (const htmlElement of list.childNodes) {
 					if (htmlElement.checked) {
-						resArray.push(htmlElement.value);
+						let obj;
+						if (subfield) {
+							obj = {};
+							obj[subfield] = htmlElement.value;
+						} else {
+							obj = htmlElement.value
+						}
+						resArray.push(obj);
 					} else {
 						allSelected = false;
 					}
@@ -53,10 +64,10 @@
 			async function onReceiveConfig(resp) {
 				config = await resp.json();
 
-				renderList('storeList', stores, config.store.stores);
+				renderList('storeList', stores, config.store.stores, 'name');
 				renderList('brandList', brands, config.store.showOnlyBrands);
 				renderList('seriesList', series, config.store.showOnlySeries);
-				renderList('modelList', models, config.store.showOnlyModels);
+				renderList('modelList', models, config.store.showOnlyModels, 'name');
 			}
 
 			async function setConfig() {
@@ -64,10 +75,10 @@
 					throw new Error('Config not loaded yet');
 				}
 
-				config.store.stores = listToArray('storeList');
+				config.store.stores = listToArray('storeList', 'name');
 				config.store.showOnlyBrands = listToArray('brandList');
 				config.store.showOnlySeries = listToArray('seriesList');
-				config.store.showOnlyModels = listToArray('modelList');
+				config.store.showOnlyModels = listToArray('modelList', 'name');
 
 				const resp = await fetch('/api/config', {
 					method: 'PUT',
