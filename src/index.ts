@@ -3,11 +3,11 @@ import {Browser} from 'puppeteer';
 import {adBlocker} from './adblocker';
 import {config} from './config';
 import {getSleepTime} from './util';
-import {getStores} from './store/model';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
 import resourceBlock from 'puppeteer-extra-plugin-block-resources';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
+import {storeList} from './store/model';
 import {tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
@@ -55,7 +55,7 @@ async function main() {
 		headless: config.browser.isHeadless
 	});
 
-	for (const store of getStores().values()) {
+	for (const store of storeList.values()) {
 		logger.debug('store links', {meta: {links: store.links}});
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
