@@ -1,7 +1,7 @@
 import {IncomingMessage, Server, ServerResponse, createServer} from 'http';
 import {config, setConfig} from '../config';
 import {createReadStream, readdir} from 'fs';
-import {getAllBrands, getAllModels, getAllSeries, storeList} from '../store/model';
+import {getAllBrands, getAllModels, getAllSeries, storeList, updateStores} from '../store/model';
 import {join, normalize} from 'path';
 
 const approot = join(__dirname, '../../');
@@ -75,6 +75,7 @@ function handleAPI(request: IncomingMessage, response: ServerResponse, urlCompon
 					// We ignore errors, client just sent wrong data...
 					try {
 						setConfig(JSON.parse(data.join('')));
+						updateStores();
 					} catch { }
 
 					sendConfig(response);

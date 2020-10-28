@@ -103,17 +103,21 @@ const models = new Set();
 const series = new Set();
 const stores = new Map();
 
-for (const storeData of config.store.stores) {
-	const store = storeList.get(storeData.name);
+export function updateStores() {
+	for (const storeData of config.store.stores) {
+		const store = storeList.get(storeData.name);
 
-	if (store) {
-		stores.set(storeData.name, store);
-		store.minPageSleep = storeData.minPageSleep;
-		store.maxPageSleep = storeData.maxPageSleep;
-	} else {
-		logger.warn(`No store named ${storeData.name}, skipping.`);
+		if (store) {
+			stores.set(storeData.name, store);
+			store.minPageSleep = storeData.minPageSleep;
+			store.maxPageSleep = storeData.maxPageSleep;
+		} else {
+			logger.warn(`No store named ${storeData.name}, skipping.`);
+		}
 	}
 }
+
+updateStores();
 
 for (const store of storeList.values()) {
 	for (const link of store.links) {
