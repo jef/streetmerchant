@@ -18,6 +18,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				embed.addField('URL', link.cartUrl ? link.cartUrl : link.url, true);
 				embed.addField('Store', store.name, true);
 				embed.addField('Brand', link.brand, true);
+				embed.addField('Series', link.series, true);
 				embed.addField('Model', link.model, true);
 
 				if (notifyGroup) {
