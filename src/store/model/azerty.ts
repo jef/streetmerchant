@@ -143,7 +143,7 @@ export const Azerty: Store = {
 			url: 'https://azerty.nl/product/evga/4377247/geforce-rtx-3070-ftw3-videokaart-8-gb-gddr6'
 		},
 		{
-			brand: 'evha',
+			brand: 'evga',
 			model: 'xc3',
 			series: '3070',
 			url: 'https://azerty.nl/product/evga/4377248/xc3-geforce-rtx-3070-xc3-videokaart-8-gb-gddr6'
