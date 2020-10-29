@@ -25,6 +25,12 @@ export const Saturn: Store = {
 			url: 'https://www.saturn.de/de/product/-2691244.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.saturn.de/de/product/-2691439.html'
+		},
+		{
 			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',

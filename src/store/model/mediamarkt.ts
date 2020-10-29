@@ -25,6 +25,12 @@ export const Mediamarkt: Store = {
 			url: 'https://www.mediamarkt.de/de/product/-2691244.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.mediamarkt.de/de/product/-2691439.html'
+		},
+		{
 			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
