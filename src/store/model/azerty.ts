@@ -93,13 +93,13 @@ export const Azerty: Store = {
 			model: 'tuf oc',
 			series: '3070',
 			url: 'https://azerty.nl/product/asus/4363910/tuf-gaming-geforce-rtx-3070-oc-videokaart-8-gb-gddr6'
-		},		
+		},
 		{
 			brand: 'asus',
 			model: 'tuf',
 			series: '3070',
 			url: 'https://azerty.nl/product/asus/4373099/tuf-gaming-geforce-rtx-3070-videokaart-8-gb-gddr6'
-		},		
+		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x4',
@@ -159,7 +159,7 @@ export const Azerty: Store = {
 			model: 'xc3 black',
 			series: '3070',
 			url: 'https://azerty.nl/product/evga/4377252/xc3-black-geforce-rtx-3070-videokaart-8-gb-gddr6'
-		}		
+		}
 	],
 	name: 'azerty'
 };
