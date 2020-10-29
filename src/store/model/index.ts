@@ -44,6 +44,7 @@ import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
+import {Store} from './store';
 import {Very} from './very';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
@@ -99,34 +100,72 @@ export const storeList = new Map([
 ]);
 
 const brands = new Set();
-const series = new Set();
 const models = new Set();
+const series = new Set();
+const stores = new Map();
 
-for (const storeData of config.store.stores) {
-	const store = storeList.get(storeData.name);
-	if (store) {
-		store.minPageSleep = storeData.minPageSleep;
-		store.maxPageSleep = storeData.maxPageSleep;
-	} else {
-		logger.warn(`No store named ${storeData.name}, skipping.`);
+function filterBrandsSeriesModels(stores: Map<string, Store>) {
+	brands.clear();
+	series.clear();
+	models.clear();
+
+	for (const store of stores.values()) {
+		for (const link of store.links) {
+			brands.add(link.brand);
+			series.add(link.series);
+			models.add(link.model);
+		}
+
+		if (store.minPageSleep === undefined) {
+			store.minPageSleep = defaultStoreData.minPageSleep;
+		}
+
+		if (store.maxPageSleep === undefined) {
+			store.maxPageSleep = defaultStoreData.maxPageSleep;
+		}
 	}
 }
 
-for (const store of storeList.values()) {
-	for (const link of store.links) {
-		brands.add(link.brand);
-		series.add(link.series);
-		models.add(link.model);
+function printConfig() {
+	if (config.store.stores.length > 0) {
+		logger.info(`ℹ selected stores: ${config.store.stores.map(store => store.name).join(', ')}`);
 	}
 
-	if (store.minPageSleep === undefined) {
-		store.minPageSleep = defaultStoreData.minPageSleep;
+	if (config.store.showOnlyBrands.length > 0) {
+		logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
 	}
 
-	if (store.maxPageSleep === undefined) {
-		store.maxPageSleep = defaultStoreData.maxPageSleep;
+	if (config.store.showOnlyModels.length > 0) {
+		logger.info(`ℹ selected models: ${config.store.showOnlyModels.map(entry => {
+			return entry.series ? entry.name + ' (' + entry.series + ')' : entry.name;
+		}).join(', ')}`);
+	}
+
+	if (config.store.showOnlySeries.length > 0) {
+		logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
 	}
 }
+
+export function updateStores() {
+	stores.clear();
+
+	for (const storeData of config.store.stores) {
+		const store = storeList.get(storeData.name);
+
+		if (store) {
+			stores.set(storeData.name, store);
+			store.minPageSleep = storeData.minPageSleep;
+			store.maxPageSleep = storeData.maxPageSleep;
+		} else {
+			logger.warn(`No store named ${storeData.name}, skipping.`);
+		}
+	}
+
+	filterBrandsSeriesModels(stores);
+	printConfig();
+}
+
+updateStores();
 
 export function getAllBrands() {
 	return Array.from(brands);
@@ -140,22 +179,8 @@ export function getAllModels() {
 	return Array.from(models);
 }
 
-if (config.store.stores.length > 0) {
-	logger.info(`ℹ selected stores: ${config.store.stores.map(store => store.name).join(', ')}`);
-}
-
-if (config.store.showOnlyBrands.length > 0) {
-	logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
-}
-
-if (config.store.showOnlyModels.length > 0) {
-	logger.info(`ℹ selected models: ${config.store.showOnlyModels.map(entry => {
-		return entry.series ? entry.name + ' (' + entry.series + ')' : entry.name;
-	}).join(', ')}`);
-}
-
-if (config.store.showOnlySeries.length > 0) {
-	logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
+export function getStores() {
+	return stores;
 }
 
 export * from './store';

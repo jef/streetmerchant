@@ -46,6 +46,9 @@
 						if (subfield) {
 							obj = {};
 							obj[subfield] = htmlElement.value;
+							if (id === 'modelList') {
+								obj['series'] = '';
+							}
 						} else {
 							obj = htmlElement.value
 						}
