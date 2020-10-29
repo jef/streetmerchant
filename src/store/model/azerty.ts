@@ -75,7 +75,7 @@ export const Azerty: Store = {
 			model: 'xlr8 rgb',
 			series: '3080',
 			url: 'https://azerty.nl/product/pny/4342269/geforce-rtx-3080-xlr8-gaming-revel-epic-x-rgb-triple-fan-gaming-edition-grafische-kaart-gf-rtx-3080'
-		}
+		},
 		{
 			brand: 'asus',
 			model: 'rog strix oc',
@@ -159,8 +159,7 @@ export const Azerty: Store = {
 			model: 'xc3 black',
 			series: '3070',
 			url: 'https://azerty.nl/product/evga/4377252/xc3-black-geforce-rtx-3070-videokaart-8-gb-gddr6'
-		},
-		
+		}		
 	],
 	name: 'azerty'
 };
