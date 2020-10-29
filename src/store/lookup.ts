@@ -1,5 +1,5 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Link, Store} from './model';
+import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
 import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
 import {closePage, delay, getRandomUserAgent, getSleepTime, isStatusCodeInRange} from '../util';
@@ -24,7 +24,7 @@ const linkBuilderLastRunTimes: Record<string, number> = {};
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
-	if (config.store.stores.length > 0 && !config.store.stores.find(foundStore => foundStore.name === store.name)) {
+	if (!getStores().has(store.name)) {
 		return;
 	}
 

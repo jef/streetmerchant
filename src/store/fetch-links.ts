@@ -7,7 +7,7 @@ import {usingResponse} from '../util';
 
 function addNewLinks(store: Store, links: Link[], series: Series) {
 	if (links.length === 0) {
-		logger.warn(Print.message('NO STORE LINKS FOUND', series, store, true));
+		logger.debug(Print.message('NO STORE LINKS FOUND', series, store, true));
 
 		return;
 	}
@@ -19,7 +19,7 @@ function addNewLinks(store: Store, links: Link[], series: Series) {
 		return;
 	}
 
-	logger.info(Print.message(`FOUND ${newLinks.length} STORE LINKS`, series, store, true));
+	logger.debug(Print.message(`FOUND ${newLinks.length} STORE LINKS`, series, store, true));
 	logger.debug(JSON.stringify(newLinks, null, 2));
 
 	store.links = store.links.concat(newLinks);
