@@ -53,6 +53,18 @@ export const Nvidia: Store = {
 			model: 'founders edition',
 			series: '3090',
 			url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3070',
+			url: 'https://www.nvidia.com/en-us/shop/geforce/gpu/?page=1&limit=9&locale=en-us&category=GPU&gpu=RTX%203070'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3070',
+			url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070'
 		}
 	],
 	name: 'nvidia'
