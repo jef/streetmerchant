@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/jef/nvidia-snatcher#readme",
   "dependencies": {
-    "@hijef/pushbullet": "^2.4.2",
+    "@jef/pushbullet": "^2.4.3",
     "@slack/web-api": "^5.13.0",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
