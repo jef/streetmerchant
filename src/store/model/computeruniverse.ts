@@ -26,6 +26,12 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'gainward',
+			model: 'phoenix',
+			series: '3070',
+			url: 'https://www.computeruniverse.net/de/gainward-geforce-rtx3070-phoenix-8-gb-enthusiast-grafikkarte'
+		},
+		{
+			brand: 'gainward',
 			model: 'phoenix gs',
 			series: '3070',
 			url: 'https://www.computeruniverse.net/de/gainward-geforce-rtx3070-phoenix-gs-8-gb-enthusiast-grafikkarte'
