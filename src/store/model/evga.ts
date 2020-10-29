@@ -31,7 +31,7 @@ export const Evga: Store = {
 			model: 'ftw3 ultra',
 			series: '3070',
 			url: 'https://www.evga.com/products/product.aspx?pn=08G-P5-3767-KR'
-		},		
+		},
 		{
 			brand: 'evga',
 			model: 'xc3 black',
@@ -95,4 +95,3 @@ export const Evga: Store = {
 	],
 	name: 'evga'
 };
-
