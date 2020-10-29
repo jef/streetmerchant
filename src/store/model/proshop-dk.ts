@@ -90,7 +90,7 @@ export const ProshopDK: Store = {
 		},
 		{
 			brand: 'inno3d',
-			model: 'twin 2x oc',
+			model: 'twin x2 oc',
 			series: '3080',
 			url: 'https://www.proshop.dk/Grafikkort/Inno3D-GeForce-RTX-3080-Twin-X2-OC-10GB-GDDR6X-SDRAM-Grafikkort/2878968'
 		},
