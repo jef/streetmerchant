@@ -31,6 +31,12 @@ export const Saturn: Store = {
 			url: 'https://www.saturn.de/de/product/-2691439.html'
 		},
 		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3070',
+			url: 'https://www.saturn.de/de/product/-2695942.html'
+		},
+		{
 			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
