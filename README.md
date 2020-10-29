@@ -260,7 +260,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
-| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc` |
+| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge` |
 
 #### Supported carriers
 

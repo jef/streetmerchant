@@ -37,6 +37,12 @@ export const Mediamarkt: Store = {
 			url: 'https://www.mediamarkt.de/de/product/-2695942.html'
 		},
 		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3070',
+			url: 'https://www.mediamarkt.de/de/product/-2691365.html'
+		},
+		{
 			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
