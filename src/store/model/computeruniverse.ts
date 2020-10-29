@@ -62,6 +62,12 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3070',
+			url: 'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3070-eagle-8-gb-enthusiast-grafikkarte'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3070',
 			url: 'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3070-eagle-oc-8-gb-enthusiast-grafikkarte'
