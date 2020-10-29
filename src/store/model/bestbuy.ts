@@ -87,7 +87,7 @@ export const BestBuy: Store = {
 			model: 'eagle',
 			series: '3070',
 			url: 'https://www.bestbuy.com/site/gigabyte-geforce-rtx-3070-8g-gddr6-pci-express-4-0-graphics-card-black/6437912.p?skuId=6437912&intl=nosplash'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			cartUrl: 'https://api.bestbuy.com/click/-/6437909/cart',
