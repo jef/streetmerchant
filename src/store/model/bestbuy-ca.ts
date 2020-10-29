@@ -89,6 +89,12 @@ export const BestBuyCa: Store = {
 			model: 'twin edge',
 			series: '3070',
 			url: 'https://www.bestbuy.ca/en-ca/product/zotac-nvidia-geforce-rtx-3070-twin-edge-8gb-gddr6x-video-card/15000079?intl=nosplash'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3070',
+			url: 'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3070-8gb-gddr6-video-card-only-at-best-buy/15078017?intl=nosplash'
 		}
 	],
 	name: 'bestbuy-ca',
