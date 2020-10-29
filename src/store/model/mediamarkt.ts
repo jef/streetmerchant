@@ -20,6 +20,12 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3070',
+			url: 'https://www.mediamarkt.de/de/product/-2691244.html'
+		},
+		{
+			brand: 'asus',
 			model: 'rog strix',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2681869.html'
