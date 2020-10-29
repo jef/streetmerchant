@@ -1,75 +1,34 @@
 import {Link, Store} from '../store/model';
-import {Config} from '../config';
-import {Logger} from '../logger';
 import {playSound} from './sound';
 import {sendDesktopNotification} from './desktop';
 import {sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
-import {sendPushBulletNotification} from './pushbullet';
+import {sendMqttMessage} from './mqtt';
+import {sendPagerDutyNotification} from './pagerduty';
+import {sendPushbulletNotification} from './pushbullet';
 import {sendPushoverNotification} from './pushover';
-import {sendSMS} from './sms';
 import {sendSlackMessage} from './slack';
+import {sendSms} from './sms';
 import {sendTelegramMessage} from './telegram';
 import {sendTweet} from './twitter';
-
-const notifications = Config.notifications;
+import {sendTwilioMessage} from './twilio';
+import {sendTwitchMessage} from './twitch';
 
 export function sendNotification(link: Link, store: Store) {
-	if (notifications.email.username && notifications.email.password) {
-		Logger.debug('↗ sending email');
-		sendEmail(link, store);
-	}
-
-	if (notifications.phone.number) {
-		Logger.debug('↗ sending sms');
-		const carrier = notifications.phone.carrier;
-		if (carrier && notifications.phone.availableCarriers.has(carrier)) {
-			sendSMS(link, store);
-		}
-	}
-
-	if (notifications.playSound) {
-		Logger.debug('↗ playing sound');
-		playSound();
-	}
-
-	if (notifications.desktop) {
-		Logger.debug('↗ sending desktop notification');
-		sendDesktopNotification(link, store);
-	}
-
-	if (notifications.discord.webHookUrl) {
-		Logger.debug('↗ sending discord message');
-		sendDiscordMessage(link, store);
-	}
-
-	if (notifications.slack.channel && notifications.slack.token) {
-		Logger.debug('↗ sending slack message');
-		sendSlackMessage(link, store);
-	}
-
-	if (notifications.telegram.accessToken && notifications.telegram.chatId) {
-		Logger.debug('↗ sending telegram message');
-		sendTelegramMessage(link, store);
-	}
-
-	if (notifications.pushBulletApiKey) {
-		Logger.debug('↗ sending pushbullet message');
-		sendPushBulletNotification(link, store);
-	}
-
-	if (notifications.pushover.token && notifications.pushover.username) {
-		Logger.debug('↗ sending pushover message');
-		sendPushoverNotification(link, store);
-	}
-
-	if (
-		notifications.twitter.accessTokenKey &&
-		notifications.twitter.accessTokenSecret &&
-		notifications.twitter.consumerKey &&
-		notifications.twitter.consumerSecret
-	) {
-		Logger.debug('↗ sending twitter message');
-		sendTweet(link, store);
-	}
+	// Priority
+	playSound();
+	sendEmail(link, store);
+	sendSms(link, store);
+	sendDesktopNotification(link, store);
+	// Non-priority
+	sendDiscordMessage(link, store);
+	sendMqttMessage(link, store);
+	sendPagerDutyNotification(link, store);
+	sendPushbulletNotification(link, store);
+	sendPushoverNotification(link, store);
+	sendSlackMessage(link, store);
+	sendTelegramMessage(link, store);
+	sendTweet(link, store);
+	sendTwilioMessage(link, store);
+	sendTwitchMessage(link, store);
 }

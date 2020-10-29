@@ -7,8 +7,12 @@ export const Newegg: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '#landingpage-cart .btn-primary span',
+			container: 'div#ProductBuy .btn-primary',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div#app div.product-price > ul > li.price-current > strong',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -24,6 +28,20 @@ export const Newegg: Store = {
 			model: 'tuf',
 			series: '3080',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487518',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3897-kr/p/N82E16814487518'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487519',
+			model: 'ftw3',
+			series: '3080',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519'
 		},
 		{
 			brand: 'evga',
@@ -83,6 +101,13 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080eagle-oc-10gd/p/N82E16814932330'
 		},
 		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932336',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336'
+		},
+		{
 			brand: 'zotac',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500502',
 			model: 'trinity',
@@ -111,11 +136,25 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		},
 		{
+			brand: 'pny',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814133809',
+			model: 'xlr8 rgb',
+			series: '3080',
+			url: 'https://www.newegg.com/pny-geforce-rtx-3080-vcg308010tfxppb/p/N82E16814133809'
+		},
+		{
 			brand: 'asus',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126455',
 			model: 'tuf',
 			series: '3090',
 			url: 'https://www.newegg.com/asus-geforce-rtx-3090-tuf-rtx3090-24g-gaming/p/N82E16814126455'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126456',
+			model: 'rog strix',
+			series: '3090',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
 		},
 		{
 			brand: 'msi',
@@ -148,23 +187,37 @@ export const Newegg: Store = {
 		{
 			brand: 'evga',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487525',
-			model: 'ftw3 gaming',
+			model: 'ftw3',
 			series: '3090',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3985-kr/p/N82E16814487525'
 		},
 		{
 			brand: 'evga',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487524',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			series: '3090',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3975-kr/p/N82E16814487524'
 		},
 		{
 			brand: 'evga',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487526',
-			model: 'ftw3 ultra gaming',
+			model: 'ftw3 ultra',
 			series: '3090',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3987-kr/p/N82E16814487526'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487527',
+			model: 'xc3 black',
+			series: '3090',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3971-kr/p/N82E16814487527'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487523',
+			model: 'xc3',
+			series: '3090',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3973-kr/p/N82E16814487523'
 		},
 		{
 			brand: 'gigabyte',

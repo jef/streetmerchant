@@ -5,6 +5,10 @@ export const BestBuyCa: Store = {
 		inStock: {
 			container: '#root',
 			text: ['available online']
+		},
+		maxPrice: {
+			container: 'div[class^="productPricingContainer"] span[class^="screenReaderOnly_"',
+			euroFormat: false
 		}
 	},
 	links: [

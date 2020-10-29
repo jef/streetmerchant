@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>nvidia-snatcher control</title>
+		<script type="text/javascript">
+			let config;
+			let brands;
+			let stores;
+			let series;
+			let models;
+
+			function renderList(id, elements, selectionArray, subfield) {
+				const list = document.getElementById(id);
+				list.innerHTML = '';
+				for (const element of elements) {
+					const name = `${id}_${element}`;
+					const htmlElement = document.createElement('input');
+					htmlElement.type = 'checkbox';
+					htmlElement.value = element;
+					htmlElement.innerHTML = element;
+					htmlElement.name = name;
+					htmlElement.id = name;
+					if (selectionArray.length === 0) {
+						htmlElement.checked = true;
+					} else if (subfield && selectionArray.find(obj => element === obj[subfield])) {
+						htmlElement.checked = true;
+					} else if (selectionArray.includes(element)) {
+						htmlElement.checked = true;
+					}
+					list.appendChild(htmlElement);
+					const htmlLabelElement = document.createElement('label');
+					htmlLabelElement.for = name;
+					htmlLabelElement.innerText = element;
+					list.appendChild(htmlLabelElement);
+					list.appendChild(document.createElement('br'));
+				}
+			}
+
+			function listToArray(id, subfield) {
+				const list = document.getElementById(id);
+				const resArray = [];
+				let allSelected = true;
+				for (const htmlElement of list.childNodes) {
+					if (htmlElement.checked) {
+						let obj;
+						if (subfield) {
+							obj = {};
+							obj[subfield] = htmlElement.value;
+						} else {
+							obj = htmlElement.value
+						}
+						resArray.push(obj);
+					} else {
+						allSelected = false;
+					}
+				}
+
+				if (allSelected) {
+					return [];
+				}
+				return resArray;
+			}
+
+			async function onReceiveConfig(resp) {
+				config = await resp.json();
+
+				renderList('storeList', stores, config.store.stores, 'name');
+				renderList('brandList', brands, config.store.showOnlyBrands);
+				renderList('seriesList', series, config.store.showOnlySeries);
+				renderList('modelList', models, config.store.showOnlyModels, 'name');
+			}
+
+			async function setConfig() {
+				if (!config) {
+					throw new Error('Config not loaded yet');
+				}
+
+				config.store.stores = listToArray('storeList', 'name');
+				config.store.showOnlyBrands = listToArray('brandList');
+				config.store.showOnlySeries = listToArray('seriesList');
+				config.store.showOnlyModels = listToArray('modelList', 'name');
+
+				const resp = await fetch('/api/config', {
+					method: 'PUT',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(config)
+				});
+
+				await onReceiveConfig(resp);
+
+				alert('Saved!');
+			}
+
+			async function loadScreenshots() {
+				const respScreenshots = await fetch('/api/screenshots');
+				const screenshots = await respScreenshots.json();
+
+				const screenshotContainer = document.getElementById('screenshots');
+				screenshotContainer.innerHTML = '';
+
+				for (const screenshot of screenshots) {
+					const htmlElement = document.createElement('a');
+					htmlElement.href = `/api/screenshots/${screenshot}`;
+					htmlElement.target = '_blank';
+					htmlElement.innerText = screenshot;
+					screenshotContainer.appendChild(htmlElement);
+					screenshotContainer.appendChild(document.createElement('br'));
+				}
+			}
+
+			async function loadConfig() {
+				const resp = await fetch('/api/config');
+				await onReceiveConfig(resp);
+			}
+
+			async function loadInitial() {
+				const respStores = await fetch('/api/stores');
+				stores = await respStores.json();
+
+				const respBrands = await fetch('/api/brands');
+				brands = await respBrands.json();
+
+				const respSeries = await fetch('/api/series');
+				series = await respSeries.json();
+
+				const respModels = await fetch('/api/models');
+				models = await respModels.json();
+
+				await loadConfig();
+
+				await loadScreenshots();
+			}
+		</script>
+	</head>
+	<body onload="loadInitial();">
+		<table>
+			<tr>
+				<th>Stores</th>
+				<th>Brands</th>
+				<th>Series</th>
+				<th>Models</th>
+			</tr>
+			<tr>
+				<td valign="top" id="storeList"></td>
+				<td valign="top" id="brandList"></td>
+				<td valign="top" id="seriesList"></td>
+				<td valign="top" id="modelList"></td>
+			</tr>
+		</table>
+
+		<br />
+		<input type="button" onclick="setConfig();" value="Save" />
+
+		<br /><br /><br /><br />
+		<b>Screenshots (<a href="javascript:loadScreenshots();">Refresh</a>)</b>
+		<div id="screenshots"></div>
+	</body>
+</html>

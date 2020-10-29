@@ -7,8 +7,12 @@ export const NeweggCa: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: '#landingpage-cart .btn-primary span',
+			container: 'div#ProductBuy .btn-primary',
 			text: ['add to cart']
+		},
+		maxPrice: {
+			container: 'div#app div.product-price > ul > li.price-current > strong',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -79,6 +83,12 @@ export const NeweggCa: Store = {
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452'
 		},
 		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3080',
+			url: 'https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3090',
@@ -113,6 +123,30 @@ export const NeweggCa: Store = {
 			model: 'rog strix',
 			series: '3090',
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3090',
+			url: 'https://www.newegg.ca/evga-geforce-rtx-3090-24g-p5-3975-kr/p/N82E16814487524'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3090',
+			url: 'https://www.newegg.ca/evga-geforce-rtx-3090-24g-p5-3973-kr/p/N82E16814487523'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.newegg.ca/evga-geforce-rtx-3090-24g-p5-3987-kr/p/N82E16814487526'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3090',
+			url: 'https://www.newegg.ca/evga-geforce-rtx-3090-24g-p5-3985-kr/p/N82E16814487525'
 		}
 	],
 	name: 'newegg-ca'
