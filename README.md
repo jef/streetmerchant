@@ -105,6 +105,8 @@ environment variables are **optional**._
 <details>
 <summary>Supported stores</summary>
 
+> :point_right: Used with the `STORES` variable.
+
 | Stores | Environment variable |
 |:---:|:---:|
 | Adorama | `adorama`|
@@ -158,6 +160,8 @@ environment variables are **optional**._
 <details>
 <summary>Micro Center stores</summary>
 
+> :point_right: Used with the `MICROCENTER_LOCATION` variable.
+
 > :point_right: Before using `web`, please review [this issue comment](https://github.com/jef/nvidia-snatcher/issues/442#issuecomment-703297393).
 
 | Store name |
@@ -195,6 +199,8 @@ environment variables are **optional**._
 <details>
 <summary>Supported brands and models</summary>
 
+> :point_right: Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
+
 | Brand | Model |
 |:---:|---|
 | `asus` | `dual`, `dual oc`, `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
@@ -212,9 +218,9 @@ environment variables are **optional**._
 </details>
 
 <details>
-<summary>Supported countries</summary>
+<summary>Supported countries (used with nvidia and nvidia-api)</summary>
 
-`COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
+> :point_right: Used with the `COUNTRY` variable.
 
 | Country | 3080 FE | 3090 FE | Test Card | Notes |
 |:---:|:---:|:---:|:---:|:---:|
