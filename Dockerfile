@@ -32,5 +32,6 @@ WORKDIR /app
 
 COPY --from=builder /build/node_modules/ node_modules/
 COPY --from=builder /build/build/ build/
+COPY version.txt version.txt
 
 CMD [ "node", "./build/index.js" ]
