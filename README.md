@@ -429,16 +429,15 @@ it. Very straight forward. Otherwise, Google more information related to your sy
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
-**Q: I got a problem and need help!** Join the [Discord](https://discord.gg/Cyc7nrz) or file
-an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose), I'll do my best to get to you. I work a full time
-job and this is only a hobby of mine.
+**Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose). I'll do
+my best to get to you. I work a full time job and this is only a hobby of mine.
 
 **Q: How do I get the latest code?** Take look at
-this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code)
+this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code).
 
-**Q: Why don't my notifications work?** There are probably
-an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) [that]
-has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155)
+**Q: Why don't my notifications work?** There is probably
+an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that
+has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155).
 
 **Q: I'd love to contribute, how do I do that?** Make
 a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All
@@ -446,7 +445,3 @@ contributions are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
 See [#11](https://github.com/jef/nvidia-snatcher/issues/11).
-
-### Acknowledgements
-
-Thanks to the great contributors that make this project possible!
