@@ -79,7 +79,6 @@ environment variables are **optional**._
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
-| `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
 | `USER_AGENT` | Custom User-Agents headers for HTTP requests | Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2` | | Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `WEB_PORT` | Starts a webserver to be able to control the bot while it is running; optional | Default: disabled |
 
@@ -103,7 +102,8 @@ environment variables are **optional**._
 | `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
 
-#### Supported stores
+<details>
+<summary>Supported stores</summary>
 
 | Stores | Environment variable |
 |:---:|:---:|
@@ -190,7 +190,10 @@ environment variables are **optional**._
 
 </details>
 
-#### Supported Brands and Models
+</details>
+
+<details>
+<summary>Supported brands and models</summary>
 
 | Brand | Model |
 |:---:|---|
@@ -206,7 +209,10 @@ environment variables are **optional**._
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
 
-#### Supported countries
+</details>
+
+<details>
+<summary>Supported countries</summary>
 
 `COUNTRY` is only used by the `nvidia` and `nvidia-api` stores.
 
@@ -231,6 +237,8 @@ environment variables are **optional**._
 | spain | `✔` | `✔` | `✔` | |
 | sweden | `✔` | `✔` | `✔` | |
 | usa | `✔` | `✔` | `✔` | |
+
+</details>
 
 ### Notifications
 
