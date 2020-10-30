@@ -57,14 +57,6 @@ export const Newegg: Store = {
 			series: '3080',
 			url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521'
 		},
-		// Removed from Newegg currently not available in US
-		// {
-		// 	brand: 'evga',
-		// 	cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487520',
-		// 	model: 'xc3 ultra',
-		// 	series: '3080',
-		// 	url: 'https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520'
-		// },
 		{
 			brand: 'msi',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137600',
@@ -232,6 +224,139 @@ export const Newegg: Store = {
 			model: 'eagle',
 			series: '3090',
 			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090eagle-oc-24gd/p/N82E16814932328'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137601',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url: 'https://www.newegg.com/msi-geforce-rtx-3070-rtx-3070-ventus-3x-oc/p/N82E16814137601'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137602',
+			model: 'ventus 2x oc',
+			series: '3070',
+			url: 'https://www.newegg.com/msi-geforce-rtx-3070-rtx-3070-ventus-2x-oc/p/N82E16814137602'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137603',
+			model: 'gaming x trio',
+			series: '3070',
+			url: 'https://www.newegg.com/msi-geforce-rtx-3070-rtx-3070-gaming-x-trio/p/N82E16814137603'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932360',
+			model: 'vision oc',
+			series: '3070',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070vision-oc-8gd/p/N82E16814932360'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126459',
+			model: 'dual oc',
+			series: '3070',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3070-dual-rtx3070-o8g/p/N82E16814126459'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126458',
+			model: 'rog strix',
+			series: '3070',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3070-rog-strix-rtx3070-o8g-gaming/p/N82E16814126458'
+		},
+		{
+			brand: 'zotac',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500501',
+			model: 'twin edge',
+			series: '3070',
+			url: 'https://www.newegg.com/zotac-geforce-rtx-3070-zt-a30700e-10p/p/N82E16814500501'
+		},
+		{
+			brand: 'zotac',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500505',
+			model: 'twin edge oc',
+			series: '3070',
+			url: 'https://www.newegg.com/zotac-geforce-rtx-3070-zt-a30700h-10p/p/N82E16814500505'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932342',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070gaming-oc-8gd/p/N82E16814932342'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487532',
+			model: 'ftw3 ultra',
+			series: '3070',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3070-08g-p5-3767-kr/p/N82E16814487532'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487530',
+			model: 'xc3 ultra',
+			series: '3070',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3070-08g-p5-3755-kr/p/N82E16814487530'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487528',
+			model: 'xc3 black',
+			series: '3070',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3070-08g-p5-3751-kr/p/N82E16814487528'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932343',
+			model: 'eagle oc',
+			series: '3070',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070eagle-oc-8gd/p/N82E16814932343'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932344',
+			model: 'eagle',
+			series: '3070',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070eagle-8gd/p/N82E16814932344'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487529',
+			model: 'xc3',
+			series: '3070',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3070-08g-p5-3753-kr/p/N82E16814487529'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126460',
+			model: 'dual',
+			series: '3070',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3070-dual-rtx3070-8g/p/N82E16814126460'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932359',
+			model: 'aorus master',
+			series: '3070',
+			url: 'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070aorus-m-8gd/p/N82E16814932359'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487531',
+			model: 'ftw3',
+			series: '3070',
+			url: 'https://www.newegg.com/evga-geforce-rtx-3070-08g-p5-3765-kr/p/N82E16814487531'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126461',
+			model: 'tuf oc',
+			series: '3070',
+			url: 'https://www.newegg.com/asus-geforce-rtx-3070-tuf-rtx3070-o8g-gaming/p/N82E16814126461'
 		}
 	],
 	name: 'newegg'
