@@ -333,16 +333,6 @@ environment variables are **optional**._
 |:---:|---|---|
 | `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
 | `PUSHOVER_USER` | Pushover username | |
-
-</details>
-
-<details>
-<summary>Pushover</summary>
-
-| Environment variable | Description | Notes |
-|:---:|---|---|
-| `PUSHOVER_TOKEN` | Pushover access token | Generate at https://pushover.net/apps/build | |
-| `PUSHOVER_USER` | Pushover username | |
 | `PUSHOVER_PRIORITY` | Pushover message priority |
 
 </details>
@@ -354,16 +344,6 @@ environment variables are **optional**._
 |:---:|---|---|
 | `SLACK_CHANNEL` | Slack channel for posting | E.g.: `update`, no need for `#` |
 | `SLACK_TOKEN` | Slack API token | |
-
-</details>
-
-<details>
-<summary>Telegram</summary>
-
-| Environment variable | Description | Notes |
-|:---:|---|---|
-| `TELEGRAM_ACCESS_TOKEN` | Telegram access token | |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID | Comma seperated, e.g.: `123456789`, `123456789,987654321` |
 
 </details>
 
