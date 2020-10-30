@@ -250,6 +250,108 @@ export const AmazonDe: Store = {
 			model: 'trinity',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HJQ182D'
+		},
+		{
+			brand: 'asus',
+			model: 'dual',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08HSJ1622'
+		},
+		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08KHFZN9P'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08HT7PR9Y'
+		},
+		{
+			brand: 'asus',
+			model: 'rog strix oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08L8JNTXQ'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08KWPDXJZ'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08L6PCZTR'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08KWN2LZG'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08M13DXSZ'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08KHL21CV'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08KHL2J5X'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08L3QCZKZ'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08L3QZP7W'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08L3Q41SM'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08HRBR7K9'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08LBVNKT1'
+		},
+		{
+			brand: 'pny',
+			model: 'dual fan',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08HBF5L3K'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 rgb',
+			series: '3070',
+			url: 'https://www.amazon.de/dp/B08HBJB7YD'
 		}
 	],
 	name: 'amazon-de'
