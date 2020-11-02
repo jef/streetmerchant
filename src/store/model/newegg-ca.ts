@@ -215,6 +215,12 @@ export const NeweggCa: Store = {
 			url: 'https://www.newegg.ca/gigabyte-geforce-rtx-3070-gv-n3070vision-oc-8gd/p/N82E16814932360'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080',
+			url: 'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080vision-oc-10gd/p/N82E16814932337'
+		},
+		{
 			brand: 'zotac',
 			model: 'twin edge oc',
 			series: '3070',
@@ -237,6 +243,12 @@ export const NeweggCa: Store = {
 			model: 'ftw3 gaming',
 			series: '3070',
 			url: 'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3765-kr/p/N82E16814487531'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 gaming',
+			series: '3080',
+			url: 'https://www.newegg.ca/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519'
 		},
 		{
 			brand: 'gigabyte',
