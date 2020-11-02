@@ -190,12 +190,12 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			await delay(getSleepTime(store));
 			return false;
 		}
-    }
-    
-    // Do API inventory validation in realtime (no cache) if available
-    if (store.realTimeInventoryLookup !== undefined && link.itemNumber !== undefined) {
-        return await store.realTimeInventoryLookup(link.itemNumber);
-    }
+	}
+	
+	// Do API inventory validation in realtime (no cache) if available
+	if (store.realTimeInventoryLookup !== undefined && link.itemNumber !== undefined) {
+		return await store.realTimeInventoryLookup(link.itemNumber);
+	}
 
 	return true;
 }
