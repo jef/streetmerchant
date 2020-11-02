@@ -47,7 +47,7 @@ export class NvidiaCart {
 	}
 
 	public get regionInfo(): NvidiaRegionInfo {
-		const country = config.store.country;
+		const country = config.store.country.toLowerCase();
 		const regionInfo = regionInfos.get(country);
 		if (!regionInfo) {
 			throw new Error(`Unknown country ${country}`);
