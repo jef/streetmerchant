@@ -6,10 +6,14 @@ export const Mediamarkt: Store = {
 			container: 'span[font-family="price"]',
 			euroFormat: false
 		},
-		outOfStock: {
+		outOfStock: [{
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']
-		}
+		},
+		{
+			container: '#root',
+			text: ['leider keine Lieferung möglich']
+		}]
 	},
 	links: [
 		{
