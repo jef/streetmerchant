@@ -2,7 +2,7 @@ import {Browser, LoadEvent} from 'puppeteer';
 
 export type Element = {
 	container?: string;
-	text: string[];
+    text: string[];
 };
 
 export type Pricing = {
@@ -13,13 +13,14 @@ export type Pricing = {
 export type Series = 'test:series' | '3070' | '3080' | '3090';
 
 export type Link = {
-	brand: 'test:brand' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'msi' | 'nvidia' | 'palit' | 'pny' | 'zotac';
+    brand: 'test:brand' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'msi' | 'nvidia' | 'palit' | 'pny' | 'zotac';
+    itemNumber?: string,
 	series: Series;
 	model: string;
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
-	screenshot?: string;
+    screenshot?: string;    
 };
 
 export type LabelQuery = Element[] | Element | string[];
@@ -30,12 +31,13 @@ export type Labels = {
 	container?: string;
 	inStock?: LabelQuery;
 	outOfStock?: LabelQuery;
-	maxPrice?: Pricing;
+    maxPrice?: Pricing;
 };
 
 export type StatusCodeRangeArray = Array<(number | [number, number])>;
 
 export type Store = {
+    realTimeInventoryLookup?: (itemNumber: string) => Promise<boolean>;
 	/**
 	 * The range of status codes which will trigger backoff, i.e. an increasing
 	 * delay between requests. Setting an empty array will disable the feature.
