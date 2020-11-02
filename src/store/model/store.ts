@@ -14,13 +14,13 @@ export type Series = 'test:series' | '3070' | '3080' | '3090';
 
 export type Link = {
 	brand: 'test:brand' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'msi' | 'nvidia' | 'palit' | 'pny' | 'zotac';
-	itemNumber?: string,
+	itemNumber?: string;
 	series: Series;
 	model: string;
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
-	screenshot?: string;    
+	screenshot?: string;
 };
 
 export type LabelQuery = Element[] | Element | string[];

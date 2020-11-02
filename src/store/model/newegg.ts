@@ -1,17 +1,7 @@
-const fetch = require('node-fetch');
 import {Store} from './store';
-import {logger} from '../../logger';
+import fetch from 'node-fetch';
 
 export const Newegg: Store = {
-	realTimeInventoryLookup: async (itemNumber: string) => { 
-		let req_url = "https://www.newegg.com/product/api/ProductRealtime?ItemNumber="+itemNumber;
-		let res = await fetch(req_url);
-		let res_json = await res.json();
-
-		return new Promise<boolean> ((resolve) => {            
-			return res_json.MainItem !== undefined && res_json.MainItem.Instock === true ? resolve(true) : resolve(false);
-		})
-	},
 	labels: {
 		captcha: {
 			container: 'body',
@@ -19,7 +9,7 @@ export const Newegg: Store = {
 		},
 		inStock: {
 			container: 'div#ProductBuy .btn-primary',
-			text: ['add to cart']            
+			text: ['add to cart']
 		},
 		maxPrice: {
 			container: 'div#app div.product-price > ul > li.price-current > strong',
@@ -28,7 +18,7 @@ export const Newegg: Store = {
 	},
 	links: [
 		{
-			brand: 'test:brand',			
+			brand: 'test:brand',
 			itemNumber: '14-500-495',
 			model: 'test:model',
 			series: 'test:series',
@@ -419,5 +409,11 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/asus-geforce-rtx-3070-tuf-rtx3070-o8g-gaming/p/N82E16814126461'
 		}
 	],
-	name: 'newegg'
+	name: 'newegg',
+	realTimeInventoryLookup: async (itemNumber: string) => {
+		const request_url = 'https://www.newegg.com/product/api/ProductRealtime?ItemNumber=' + itemNumber;
+		const response = await fetch(request_url);
+		const response_json = await response.json();
+		return response_json.MainItem !== undefined && response_json.MainItem.Instock === true;
+	}
 };
