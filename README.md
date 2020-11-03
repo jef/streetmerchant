@@ -1,4 +1,4 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci)
+# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![chat on freenode](https://img.shields.io/badge/chat-on%20freenode-blue)](https://kiwiirc.com/nextclient/irc.kiwiirc.com/?nick=kiwi_?#streetmerchant)
 
 [FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues)
 | [Wiki](https://github.com/jef/nvidia-snatcher/wiki)

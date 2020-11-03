@@ -6,7 +6,7 @@ import {config} from '../../../config';
 import {timestampUrlParameter} from '../../timestamp-url-parameter';
 
 function getRegionInfo(): NvidiaRegionInfo {
-	let country = config.store.country;
+	let country = config.store.country.toLowerCase();
 	if (!regionInfos.has(country)) {
 		country = 'usa';
 	}
