@@ -104,12 +104,12 @@ const models = new Set();
 const series = new Set();
 const stores = new Map();
 
-function filterBrandsSeriesModels(stores: Map<string, Store>) {
+function filterBrandsSeriesModels() {
 	brands.clear();
 	series.clear();
 	models.clear();
 
-	for (const store of stores.values()) {
+	for (const store of storeList.values()) {
 		for (const link of store.links) {
 			brands.add(link.brand);
 			series.add(link.series);
@@ -175,7 +175,7 @@ export function updateStores() {
 		}
 	}
 
-	filterBrandsSeriesModels(stores);
+	filterBrandsSeriesModels();
 	printConfig();
 }
 
