@@ -134,7 +134,7 @@ export const NeweggCa: Store = {
 			itemNumber: '14-500-504',
 			model: 'trinity oc',
 			series: '3080',
-			url: 'https://www.newegg.com/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
+			url: 'https://www.newegg.ca/zotac-geforce-rtx-3080-zt-t30800j-10p/p/N82E16814500504'
 		},
 		{
 			brand: 'pny',
