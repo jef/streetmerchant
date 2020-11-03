@@ -205,6 +205,13 @@ const notifications = {
 		consumerKey: envOrString(process.env.TWITTER_CONSUMER_KEY),
 		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
+	},
+	hue: {
+		apiKey: envOrString(process.env.HUE_API_KEY),
+		bridgeIp: envOrString(process.env.HUE_BRIDGE_IP),
+		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
+		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
+		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN)
 	}
 };
 
