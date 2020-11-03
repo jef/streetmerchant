@@ -187,8 +187,8 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
 			itemNumber: '14-126-456',
+			model: 'rog strix',
 			series: '3090',
 			url: 'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
 		},
