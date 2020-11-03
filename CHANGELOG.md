@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.1](https://www.github.com/jef/nvidia-snatcher/compare/v1.6.0...v1.6.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* **banner:** add version to docker image ([#649](https://www.github.com/jef/nvidia-snatcher/issues/649)) ([1d2a33b](https://www.github.com/jef/nvidia-snatcher/commit/1d2a33b1d765fece9d1c9bf7d548818d1f0c8d92))
+
 ## [1.6.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.5.0...v1.6.0) (2020-10-29)
 
 
