@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.6.0...v1.7.0) (2020-11-03)
+
+
+### Features
+
+* add deprecation notices ([601742c](https://www.github.com/jef/nvidia-snatcher/commit/601742cf2c0b5ccf0131e4c4e904ad4037d80a8d))
+* newegg realtime api ([#664](https://www.github.com/jef/nvidia-snatcher/issues/664)) ([5b3e95a](https://www.github.com/jef/nvidia-snatcher/commit/5b3e95acdf2f427a6098f15b9fbe65e88354a678))
+
+
+### Bug Fixes
+
+* **banner:** add version to docker image ([#649](https://www.github.com/jef/nvidia-snatcher/issues/649)) ([1d2a33b](https://www.github.com/jef/nvidia-snatcher/commit/1d2a33b1d765fece9d1c9bf7d548818d1f0c8d92))
+
 ## [1.6.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.5.0...v1.6.0) (2020-10-29)
 
 
