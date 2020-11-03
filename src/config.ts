@@ -211,7 +211,12 @@ const notifications = {
 		bridgeIp: envOrString(process.env.HUE_BRIDGE_IP),
 		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
 		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
-		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN)
+		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
+		clientId: envOrString(process.env.CLIENT_ID),
+		clientSecret: envOrString(process.env.CLIENT_SECRET),
+		accessToken: envOrString(process.env.ACCESS_TOKEN),
+		refreshToken: envOrString(process.env.REFRESH_TOKEN),
+		remoteApiUsername: envOrString(process.env.REMOTE_API_USERNAME)
 	}
 };
 
