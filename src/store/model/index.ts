@@ -146,6 +146,19 @@ function printConfig() {
 	}
 }
 
+function warnIfStoreDeprecated(store: Store) {
+	switch (store.name) {
+		case 'nvidia':
+		case 'nvidia-api':
+			logger.warn(`${store.name} is deprecated in favor of bestbuy`);
+			break;
+		case 'evga':
+			logger.warn(`${store.name} is deprecated since they only support queuing`);
+			break;
+		default:
+	}
+}
+
 export function updateStores() {
 	stores.clear();
 
@@ -153,6 +166,7 @@ export function updateStores() {
 		const store = storeList.get(storeData.name);
 
 		if (store) {
+			warnIfStoreDeprecated(store);
 			stores.set(storeData.name, store);
 			store.minPageSleep = storeData.minPageSleep;
 			store.maxPageSleep = storeData.maxPageSleep;
