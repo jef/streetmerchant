@@ -330,7 +330,17 @@ environment variables are **optional**._
 | `PAGERDUTY_SEVERITY` | Severity of PagerDuty events | Default: `info` |
 
 </details>
+<details>
+<summary>Philips Hue</summary>
 
+| Environment variable | Description | Notes |
+|:---:|---|---|
+| `HUE_API_KEY` | Hue Api Key | Generate key using https://developers.meethue.com/develop/get-started-2/ | |
+| `HUE_BRIDGE_IP`| IP Address of your Hue Bridge | e.g. `192.168.x.x`| |
+| `HUE_LIGHT_IDS` | Light IDs | Optional. Comma seperated, e.g.: `1`, `2` |See Hue App → About for IDs | |
+| `HUE_LIGHT_COLOR` | Color in RGB Format | Optional. Comma separated, e.g.: `255`, `255`, `255`| |
+
+</details>
 <details>
 <summary>Pushbullet</summary>
 
@@ -411,16 +421,7 @@ environment variables are **optional**._
 
 
 <details>
-<summary>Philips Hue</summary>
 
-| Environment variable | Description | Notes |
-|:---:|---|---|
-| `HUE_API_KEY` | Hue Api Key | Generate key using https://developers.meethue.com/develop/get-started-2/ | |
-| `HUE_BRIDGE_IP`| IP Address of your Hue Bridge | e.g. `192.168.x.x`| |
-| `HUE_LIGHT_IDS` | Light IDs | Comma seperated, e.g.: `1`, `2` |See Hue App → About for IDs | |
-| `HUE_LIGHT_COLOR` | Color in RGB Format | Comma separated, e.g.: `255`, `255`, `255`| |
-
-</details>
 
 </details>
 
