@@ -77,7 +77,7 @@ export function adjustHueLights() {
                 });
 
         })();
-    } else if (hue.clientId && hue.clientSecret){
+    } else if (hue.apiKey && hue.clientId && hue.clientSecret){
         logger.info('↗ adjusting Hue lights over cloud');
         (async () => {
             logger.debug('Attempting to connect to Hue bridge over cloud');
