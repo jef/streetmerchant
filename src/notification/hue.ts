@@ -2,16 +2,15 @@ import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
 import {config} from '../config';
 
+
 // Import the Hue API
 import {v3 as hueAPI} from 'node-hue-api';
-import { HelixUserApi } from 'twitch/lib/API/Helix/User/HelixUserApi';
 const hue = config.notifications.hue;
 const apiKey = hue.apiKey;
 const bridgeIp = hue.bridgeIp;
 const lightIds = hue.lightIds;
 const lightColor = hue.lightColor;
 const lightPattern = hue.lightPattern;
-const LightState = hueAPI.lightStates.LightState;
 const clientId = hue.clientId;
 const clientSecret = hue.clientSecret;
 const accessToken  = hue.accessToken;
@@ -19,9 +18,8 @@ const refreshToken = hue.refreshToken;
 const remoteApiUsername = hue.remoteApiUsername;
 
 
-
 // Default Light State
-const lightState = new LightState()
+const lightState = new hueAPI.lightStates.LightState()
     .on(true)
     .brightness(100)
     .rgb(46.27, 72.55, 0);
@@ -64,7 +62,6 @@ const adjustLightsWithAPI = (hueBridge: import("node-hue-api/lib/api/Api")) => {
 };
 
 
-
 export function adjustHueLights() {
     // Check if the required variables have been set
     if (hue.apiKey && hue.bridgeIp){
@@ -83,21 +80,20 @@ export function adjustHueLights() {
                 });
 
         })();
-    } else if (hue.apiKey && hue.clientId && hue.clientSecret){
+    } else if (hue.remoteApiUsername && hue.clientId && hue.clientSecret){
         logger.info('↗ adjusting Hue lights over cloud');
         (async () => {
             logger.debug('Attempting to connect to Hue bridge over cloud');
             const remoteBootstrap = hueAPI.api.createRemote(clientId, clientSecret);
             if (hue.accessToken && hue.refreshToken){
                 remoteBootstrap.connectWithTokens(accessToken, refreshToken, remoteApiUsername)
-                    .catch(err => {
-                        logger.error('Failed to get a remote Hue connection using supplied tokens.');
-                        logger.error(err);
-                        process.exit(1);
-                    })
                     .then((hueBridge) => {
                         adjustLightsWithAPI(hueBridge);
                         logger.info('✔ adjusted Hue lights over cloud');
+                    })
+                    .catch(err => {
+                        logger.error('Failed to get a remote Hue connection using supplied tokens.');
+                        logger.error(err);
                     });
             }
         })();
@@ -106,7 +102,3 @@ export function adjustHueLights() {
         logger.error('✖ couldn\'t adjust hue lights')
     }
 }
-
-function sleep(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
