@@ -104,12 +104,12 @@ const models = new Set();
 const series = new Set();
 const stores = new Map();
 
-function filterBrandsSeriesModels(stores: Map<string, Store>) {
+function filterBrandsSeriesModels() {
 	brands.clear();
 	series.clear();
 	models.clear();
 
-	for (const store of stores.values()) {
+	for (const store of storeList.values()) {
 		for (const link of store.links) {
 			brands.add(link.brand);
 			series.add(link.series);
@@ -146,6 +146,19 @@ function printConfig() {
 	}
 }
 
+function warnIfStoreDeprecated(store: Store) {
+	switch (store.name) {
+		case 'nvidia':
+		case 'nvidia-api':
+			logger.warn(`${store.name} is deprecated in favor of bestbuy`);
+			break;
+		case 'evga':
+			logger.warn(`${store.name} is deprecated since they only support queuing`);
+			break;
+		default:
+	}
+}
+
 export function updateStores() {
 	stores.clear();
 
@@ -153,6 +166,7 @@ export function updateStores() {
 		const store = storeList.get(storeData.name);
 
 		if (store) {
+			warnIfStoreDeprecated(store);
 			stores.set(storeData.name, store);
 			store.minPageSleep = storeData.minPageSleep;
 			store.maxPageSleep = storeData.maxPageSleep;
@@ -161,7 +175,7 @@ export function updateStores() {
 		}
 	}
 
-	filterBrandsSeriesModels(stores);
+	filterBrandsSeriesModels();
 	printConfig();
 }
 
