@@ -208,15 +208,15 @@ const notifications = {
 	},
 	hue: {
 		apiKey: envOrString(process.env.HUE_API_KEY),
-		bridgeIp: envOrString(process.env.HUE_BRIDGE_IP),
+		bridgeIp: envOrString(process.env.HUE_LAN_BRIDGE_IP),
 		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
 		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
 		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
-		clientId: envOrString(process.env.CLIENT_ID),
-		clientSecret: envOrString(process.env.CLIENT_SECRET),
-		accessToken: envOrString(process.env.ACCESS_TOKEN),
-		refreshToken: envOrString(process.env.REFRESH_TOKEN),
-		remoteApiUsername: envOrString(process.env.REMOTE_API_USERNAME)
+		clientId: envOrString(process.env.HUE_CLOUD_CLIENT_ID),
+		clientSecret: envOrString(process.env.HUE_CLOUD_CLIENT_SECRET),
+		accessToken: envOrString(process.env.HUE_CLOUD_ACCESS_TOKEN),
+		refreshToken: envOrString(process.env.HUE_CLOUD_REFRESH_TOKEN),
+		remoteApiUsername: envOrString(process.env.HUE_API_KEY)
 	}
 };
 
