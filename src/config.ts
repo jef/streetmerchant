@@ -216,7 +216,7 @@ const notifications = {
 		clientSecret: envOrString(process.env.CLIENT_SECRET),
 		accessToken: envOrString(process.env.ACCESS_TOKEN),
 		refreshToken: envOrString(process.env.REFRESH_TOKEN),
-		remoteApiUsername: envOrString(process.env.REMOTE_API_USERNAME)
+		remoteApiUsername: envOrString(process.env.HUE_API_KEY)
 	}
 };
 
