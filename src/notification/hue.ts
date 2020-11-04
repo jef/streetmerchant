@@ -28,7 +28,7 @@ const lightState = new LightState()
 ;
 
 
-const adjustLights = (hueBridge: import("node-hue-api/lib/api/Api")) => {
+const adjustLightsWithAPI = (hueBridge: import("node-hue-api/lib/api/Api")) => {
     logger.debug('Connected to Hue bridge.');
     // Set the custom light state (COLOR and METHOD here)
     if (lightColor) {
@@ -40,6 +40,12 @@ const adjustLights = (hueBridge: import("node-hue-api/lib/api/Api")) => {
             logger.debug('✖ Error assigning RGB Values');
         }
     }
+
+    // If blink is specified, then blink the lights
+    if (lightPattern == "blink") {
+        lightState.alertLong();
+    }
+
     // If we've been given light IDs, then only adjust those IDs
     if (lightIds) {
         let arrayOfIDs = lightIds.split(",");
@@ -68,7 +74,7 @@ export function adjustHueLights() {
             hueAPI.api.createLocal(bridgeIp).connect(apiKey).then(
                 // Fulfilled
                 (hueBridge) => {
-                    adjustLights(hueBridge);
+                    adjustLightsWithAPI(hueBridge);
                     logger.info('✔ adjusted Hue lights over LAN');
                 },
                 // Rejected, log the error
@@ -90,7 +96,7 @@ export function adjustHueLights() {
                         process.exit(1);
                     })
                     .then((hueBridge) => {
-                        adjustLights(hueBridge);
+                        adjustLightsWithAPI(hueBridge);
                         logger.info('✔ adjusted Hue lights over cloud');
                     });
             }
