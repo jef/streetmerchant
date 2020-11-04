@@ -5,7 +5,7 @@ import {config} from '../config';
 // Import the Hue API
 import {v3 as hueAPI} from 'node-hue-api';
 import { HelixUserApi } from 'twitch/lib/API/Helix/User/HelixUserApi';
-const hue = config.notifications.hue;
+const hue = config.notifications.philips_hue;
 const apiKey = hue.apiKey;
 const bridgeIp = hue.bridgeIp;
 const lightIds = hue.lightIds;
@@ -65,7 +65,7 @@ const adjustLightsWithAPI = (hueBridge: import("node-hue-api/lib/api/Api")) => {
 
 
 
-export function adjustHueLights() {
+export function adjustPhilipsHueLights() {
     // Check if the required variables have been set
     if (hue.apiKey && hue.bridgeIp){
         logger.info('↗ adjusting Hue lights over LAN');
