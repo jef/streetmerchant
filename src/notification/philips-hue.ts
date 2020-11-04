@@ -44,14 +44,26 @@ const adjustLightsWithAPI = (hueBridge: import('node-hue-api/lib/api/Api')) => {
 		const arrayOfIDs = lightIds.split(',');
 		arrayOfIDs.forEach(light => {
 			logger.debug('adjusting all hue lights');
-			hueBridge.lights.setLightState(light, lightState);
+			(hueBridge.lights.setLightState(light, lightState) as Promise<any>).catch((error: Error) => {
+				logger.error('Failed to adjust all lights.');
+				logger.error(error);
+				throw error;
+			});
 		});
 	} else { // Adjust all light IDs
 		hueBridge.lights.getAll().then((allLights: any[]) => {
 			allLights.forEach((light: any) => {
 				logger.debug('adjusting specified lights');
-				hueBridge.lights.setLightState(light, lightState);
+				(hueBridge.lights.setLightState(light, lightState) as Promise<any>).catch((error: Error) => {
+					logger.error('Failed to adjust specified lights.');
+					logger.error(error);
+					throw error;
+				});
 			});
+		}).catch((error: Error) => {
+			logger.error('Failed to get all lights.');
+			logger.error(error);
+			throw error;
 		});
 	}
 };
@@ -67,7 +79,7 @@ export function adjustPhilipsHueLights() {
 					adjustLightsWithAPI(hueBridge);
 					logger.info('✔ adjusted Hue lights over LAN');
 				},
-				error => {
+				(error: Error) => {
 					logger.error('✖ couldn\'t adjust hue lights.', error);
 				});
 		})();
@@ -78,14 +90,14 @@ export function adjustPhilipsHueLights() {
 			const remoteBootstrap = hueAPI.api.createRemote(clientId, clientSecret);
 			if (hue.accessToken && hue.refreshToken) {
 				remoteBootstrap.connectWithTokens(accessToken, refreshToken, remoteApiUsername)
-					.catch(error => {
-						logger.error('Failed to get a remote Hue connection using supplied tokens.');
-						logger.error(error);
-						throw error;
-					})
 					.then(hueBridge => {
 						adjustLightsWithAPI(hueBridge);
 						logger.info('✔ adjusted Hue lights over cloud');
+					},
+					(error: Error) => {
+						logger.error('Failed to get a remote Hue connection using supplied tokens.');
+						logger.error(error);
+						throw error;
 					});
 			}
 		})();
