@@ -335,10 +335,15 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
-| `HUE_API_KEY` | Hue Api Key | Generate key using https://developers.meethue.com/develop/get-started-2/ | |
-| `HUE_BRIDGE_IP`| IP Address of your Hue Bridge | e.g. `192.168.x.x`| |
-| `HUE_LIGHT_IDS` | Light IDs | Optional. Comma seperated, e.g.: `1`, `2` |See Hue App → About for IDs | |
-| `HUE_LIGHT_COLOR` | Color in RGB Format | Optional. Comma separated, e.g.: `255`, `255`, `255`| |
+| `HUE_API_KEY` | Hue Bridge API Key | **Required**, generate key using instructions [here](https://developers.meethue.com/develop/get-started-2/). This will be used for both LAN and cloud access over the official Remote Hue API. |
+| `HUE_LAN_BRIDGE_IP` | LAN IP Address of your Hue Bridge | LAN only, e.g. `192.168.x.x`|
+| `HUE_LIGHT_IDS` | Light IDs | Optional (all if not supplied). Comma seperated, e.g.: `1`, `2` |See Hue App → About for IDs |
+| `HUE_LIGHT_COLOR` | Color in RGB Format | Optional (NVIDIA green if not supplied). Comma separated, e.g.: `255`, `255`, `255`|
+| `HUE_CLOUD_ACCESS_TOKEN` | Remote Access Token | Cloud only, the access token obtained from Philips's Remote Hue API. Instructions to generate [here](https://developers.meethue.com/develop/hue-api/remote-authentication/). |
+| `HUE_CLOUD_REFRESH_TOKEN` | Remote Refresh Token | Cloud only, the refresh token obtained from Philips's Remote Hue API.  |
+| `HUE_CLOUD_CLIENT_ID` | Remote Client ID | Cloud only, the client ID to use when accessing the Remote Hue API. |
+| `HUE_CLOUD_CLIENT_SECRET` | Remote Client Secret | Cloud only, the client secret to use when accessing the Remote Hue API.   |
+
 
 </details>
 <details>
