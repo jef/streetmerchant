@@ -22,7 +22,7 @@ const lightState = new LightState()
 	.rgb(46.27, 72.55, 0);
 
 const adjustLightsWithAPI = (hueBridge: import('node-hue-api/lib/api/Api')) => {
-	logger.debug('Connected to Hue bridge.');
+	logger.debug('Connected to Philips Hue bridge.');
 	// Set the custom light state (COLOR and METHOD here)
 	if (lightColor) {
 		const rgbArray = lightColor.split(',');
@@ -71,31 +71,31 @@ const adjustLightsWithAPI = (hueBridge: import('node-hue-api/lib/api/Api')) => {
 export function adjustPhilipsHueLights() {
 	// Check if the required variables have been set
 	if (hue.apiKey && hue.bridgeIp) {
-		logger.info('↗ adjusting Hue lights over LAN');
+		logger.info('↗ adjusting Philips Hue lights over LAN');
 		(async () => {
-			logger.debug('Attempting to connect to Hue bridge at ' + bridgeIp);
+			logger.debug('Attempting to connect to Philips Hue bridge at ' + bridgeIp);
 			hueAPI.api.createLocal(bridgeIp).connect(apiKey).then(
 				hueBridge => {
 					adjustLightsWithAPI(hueBridge);
-					logger.info('✔ adjusted Hue lights over LAN');
+					logger.info('✔ adjusted Philips Hue lights over LAN');
 				},
 				(error: Error) => {
 					logger.error('✖ couldn\'t adjust hue lights.', error);
 				});
 		})();
 	} else if (hue.apiKey && hue.clientId && hue.clientSecret) {
-		logger.info('↗ adjusting Hue lights over cloud');
+		logger.info('↗ adjusting Philips Hue lights over cloud');
 		(async () => {
-			logger.debug('Attempting to connect to Hue bridge over cloud');
+			logger.debug('Attempting to connect to Philips Hue bridge over cloud');
 			const remoteBootstrap = hueAPI.api.createRemote(clientId, clientSecret);
 			if (hue.accessToken && hue.refreshToken) {
 				remoteBootstrap.connectWithTokens(accessToken, refreshToken, remoteApiUsername)
 					.then(hueBridge => {
 						adjustLightsWithAPI(hueBridge);
-						logger.info('✔ adjusted Hue lights over cloud');
+						logger.info('✔ adjusted Philips Hue lights over cloud');
 					},
 					(error: Error) => {
-						logger.error('Failed to get a remote Hue connection using supplied tokens.');
+						logger.error('Failed to get a remote Philips Hue connection using supplied tokens.');
 						logger.error(error);
 						throw error;
 					});
