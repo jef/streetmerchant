@@ -151,6 +151,18 @@ const notifications = {
 		integrationKey: envOrString(process.env.PAGERDUTY_INTEGRATION_KEY),
 		severity: envOrString(process.env.PAGERDUTY_SEVERITY, 'info')
 	},
+	philips_hue: {
+		apiKey: envOrString(process.env.HUE_API_KEY),
+		bridgeIp: envOrString(process.env.HUE_LAN_BRIDGE_IP),
+		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
+		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
+		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
+		clientId: envOrString(process.env.HUE_CLOUD_CLIENT_ID),
+		clientSecret: envOrString(process.env.HUE_CLOUD_CLIENT_SECRET),
+		accessToken: envOrString(process.env.HUE_CLOUD_ACCESS_TOKEN),
+		refreshToken: envOrString(process.env.HUE_CLOUD_REFRESH_TOKEN),
+		remoteApiUsername: envOrString(process.env.HUE_API_KEY)
+	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
@@ -205,18 +217,6 @@ const notifications = {
 		consumerKey: envOrString(process.env.TWITTER_CONSUMER_KEY),
 		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
-	},
-	hue: {
-		apiKey: envOrString(process.env.HUE_API_KEY),
-		bridgeIp: envOrString(process.env.HUE_LAN_BRIDGE_IP),
-		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
-		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
-		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
-		clientId: envOrString(process.env.HUE_CLOUD_CLIENT_ID),
-		clientSecret: envOrString(process.env.HUE_CLOUD_CLIENT_SECRET),
-		accessToken: envOrString(process.env.HUE_CLOUD_ACCESS_TOKEN),
-		refreshToken: envOrString(process.env.HUE_CLOUD_REFRESH_TOKEN),
-		remoteApiUsername: envOrString(process.env.HUE_API_KEY)
 	}
 };
 
