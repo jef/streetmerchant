@@ -152,14 +152,14 @@ const notifications = {
 		severity: envOrString(process.env.PAGERDUTY_SEVERITY, 'info')
 	},
 	philips_hue: {
+		accessToken: envOrString(process.env.HUE_CLOUD_ACCESS_TOKEN),
 		apiKey: envOrString(process.env.HUE_API_KEY),
 		bridgeIp: envOrString(process.env.HUE_LAN_BRIDGE_IP),
-		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
-		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
-		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
 		clientId: envOrString(process.env.HUE_CLOUD_CLIENT_ID),
 		clientSecret: envOrString(process.env.HUE_CLOUD_CLIENT_SECRET),
-		accessToken: envOrString(process.env.HUE_CLOUD_ACCESS_TOKEN),
+		lightColor: envOrString(process.env.HUE_LIGHT_COLOR),
+		lightIds: envOrString(process.env.HUE_LIGHT_IDS),
+		lightPattern: envOrString(process.env.HUE_LIGHT_PATTERN),
 		refreshToken: envOrString(process.env.HUE_CLOUD_REFRESH_TOKEN),
 		remoteApiUsername: envOrString(process.env.HUE_API_KEY)
 	},

@@ -1,9 +1,9 @@
 import {Link, Store} from '../store/model';
+import {adjustPhilipsHueLights} from './philips-hue';
 import {playSound} from './sound';
 import {sendDesktopNotification} from './desktop';
 import {sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
-import {adjustPhilipsHueLights} from './philips_hue';
 import {sendMqttMessage} from './mqtt';
 import {sendPagerDutyNotification} from './pagerduty';
 import {sendPushbulletNotification} from './pushbullet';
