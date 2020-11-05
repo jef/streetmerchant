@@ -1,5 +1,5 @@
 {
-  "name": "nvidia-snatcher",
+  "name": "streetmerchant",
   "description": "🔮 For all your Nvidia needs",
   "main": "src/index.ts",
   "scripts": {
@@ -13,15 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jef/nvidia-snatcher.git"
+    "url": "git+https://github.com/jef/streetmerchant.git"
   },
   "keywords": [],
   "author": "jef",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jef/nvidia-snatcher/issues"
+    "url": "https://github.com/jef/streetmerchant/issues"
   },
-  "homepage": "https://github.com/jef/nvidia-snatcher#readme",
+  "homepage": "https://github.com/jef/streetmerchant#readme",
   "dependencies": {
     "@jef/pushbullet": "^2.4.3",
     "@slack/web-api": "^5.13.0",

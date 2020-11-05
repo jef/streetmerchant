@@ -91,7 +91,7 @@ async function loopMain() {
 	try {
 		await main();
 	} catch (error) {
-		logger.error('✖ something bad happened, resetting nvidia-snatcher in 5 seconds', error);
+		logger.error('✖ something bad happened, resetting streetmerchant in 5 seconds', error);
 		setTimeout(loopMain, 5000);
 	}
 }
