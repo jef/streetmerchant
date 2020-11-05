@@ -1,5 +1,5 @@
 <p align="center"><a href="#"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/streetmerchant.png" alt="streetmerchant" /></a></p>
-<h1 align="center">streetmerchant</h1>
+<h1 align="center">ＳＴＲＥＥＴＭＥＲＣＨＡＮＴ</h1>
 <p align="center">The world's easiest, most powerful stock checker
 <br/><br/>
 <a href="https://github.com/jef/streetmerchant/actions?query=workflow%3Aci"><img src="https://github.com/jef/streetmerchant/workflows/ci/badge.svg" /></a>
