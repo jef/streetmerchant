@@ -227,6 +227,34 @@ export const BestBuy: Store = {
 			model: 'xlr8 rgb',
 			series: '3090',
 			url: 'https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657&intl=nosplash'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://api.bestbuy.com/click/-/6438942/cart',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.bestbuy.com/site/amd-ryzen-9-5900x-4th-gen-12-core-24-threads-unlocked-desktop-processor-without-cooler/6438942.p?skuId=6438942&intl=nosplash'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://api.bestbuy.com/click/-/6438941/cart',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.bestbuy.com/site/amd-ryzen-9-5950x-4th-gen-16-core-32-threads-unlocked-desktop-processor-without-cooler/6438941.p?skuId=6438941&intl=nosplash'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://api.bestbuy.com/click/-/6439000/cart',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.bestbuy.com/site/amd-ryzen-7-5800x-4th-gen-8-core-16-threads-unlocked-desktop-processor-without-cooler/6439000.p?skuId=6439000&intl=nosplash'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://api.bestbuy.com/click/-/6438943/cart',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.bestbuy.com/site/amd-ryzen-5-5600x-4th-gen-6-core-12-threads-unlocked-desktop-processor-with-wraith-stealth-cooler/6438943.p?skuId=6438943&intl=nosplash'
 		}
 	],
 	name: 'bestbuy'
