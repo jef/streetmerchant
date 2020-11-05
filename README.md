@@ -1,5 +1,4 @@
-<p align="center"><a href="#"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/streetmerchant.png" alt="streetmerchant" /></a></p>
-<h1 align="center">ＳＴＲＥＥＴＭＥＲＣＨＡＮＴ</h1>
+<p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/streetmerchant.png" alt="streetmerchant" /></a></p>
 <p align="center">The world's easiest, most powerful stock checker
 <br/><br/>
 <a href="https://github.com/jef/streetmerchant/actions?query=workflow%3Aci"><img src="https://github.com/jef/streetmerchant/workflows/ci/badge.svg" /></a>
@@ -9,8 +8,7 @@
 <a href="https://github.com/jef/streetmerchant#faq">FAQ</a> |
 <a href="https://github.com/jef/streetmerchant/issues">Issues</a> |
 <a href="https://github.com/jef/streetmerchant/wiki">Wiki</a>
-<br/><br/>
-<a href="https://github.com/jef/streetmerchant#"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a>
+</p>
 
 ## Features
 
@@ -453,3 +451,5 @@ contributions are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
 See [#11](https://github.com/jef/streetmerchant/issues/11).
+
+<p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>
