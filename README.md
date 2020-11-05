@@ -1,17 +1,22 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![chat on freenode](https://img.shields.io/badge/chat-on%20freenode-blue)](https://kiwiirc.com/nextclient/irc.kiwiirc.com/?nick=kiwi_?#streetmerchant)
+<p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/streetmerchant.png" alt="streetmerchant" /></a></p>
+<p align="center">The world's easiest, most powerful stock checker
+<br/><br/>
+<a href="https://github.com/jef/streetmerchant/actions?query=workflow%3Aci"><img src="https://github.com/jef/streetmerchant/workflows/ci/badge.svg" /></a>
+<a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8" alt="Tweet" /></a>
+<a href="https://twitter.com/intent/tweet?text=Beat%20the%20masses%20with%20streetmerchant&url=https://github.com/jef/streetmerchant&hashtags=typescript,opensource,bot,shopping"><img src="https://img.shields.io/badge/twitter-share-green?logo=twitter&style=social" alt="Tweet" /></a>
+<br/><br/>
+<a href="https://github.com/jef/streetmerchant#faq">FAQ</a> |
+<a href="https://github.com/jef/streetmerchant/issues">Issues</a> |
+<a href="https://github.com/jef/streetmerchant/wiki">Wiki</a>
+</p>
 
-[FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues)
-| [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
+## Features
 
-![nvidia-snatcher](media/screenshot.png)
-
-The purpose of this bot is to get an Nvidia card. It tries multiple things to do that.
-
-- Currently, `nvidia-snatcher` is not capable of purchasing a card for you
-- Scrapes multiple websites for patterns of being stocked
-	- API requests are a work in progress (very soon)
+- Scrapes multiple websites for patterns of being stocked via API and Chromium
 - Opens browser when stock is available
 - Ability to send notifications when stock is available
+
+> :point_right: The bot _will not_ automatically buy for you
 
 ## Installation overview
 
@@ -19,22 +24,22 @@ Linux, macOS, and Windows are all capable operating systems.
 
 You do not need any computer skills, smarts, or anything of that nature. You are very capable as you have made it this
 far. Some basic understanding how a terminal, git, and or Node.js is a bonus, but that does not limit you to
-getting `nvidia-snatcher` running!
+getting `streetmerchant` running!
 
 ### Installation: native
 
 - [Node.js 15](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
-- Clone this project `git clone https://github.com/jef/nvidia-snatcher.git`
+- Clone this project `git clone https://github.com/jef/streetmerchant.git`
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
-	- More on this in [customization](#Customization)
+  - More on this in [customization](#Customization)
 - Run `npm run start` to start
 
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-> :point_right: Please visit the [wiki](https://github.com/jef/nvidia-snatcher/wiki) if you need more help with installation.
+> :point_right: Please visit the [wiki](https://github.com/jef/streetmerchant/wiki) if you need more help with installation.
 
 ### Installation: Docker
 
@@ -45,7 +50,7 @@ Available via GitHub Container Registry.
 | `latest` | Latest stable build |
 | `nightly` | Latest HEAD build, could be unstable |
 
-Use `docker run --cap-add=SYS_ADMIN -it --rm --env-file ./.env ghcr.io/jef/nvidia-snatcher:nightly` to run.
+Use `docker run --cap-add=SYS_ADMIN -it --rm --env-file ./.env ghcr.io/jef/streetmerchant:nightly` to run.
 
 ### Developer notes
 
@@ -54,7 +59,7 @@ filesystem changes are detected in the `src/` folder or `.env` file.
 
 ## Customization
 
-To customize `nvidia-snatcher`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All
+To customize `streetmerchant`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All
 environment variables are **optional**._
 
 <details>
@@ -84,7 +89,7 @@ environment variables are **optional**._
 
 > :point_right: You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
 
-> :point_right: Data usage is [known to be high](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.
+> :point_right: Data usage is [known to be high](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.
 
 ### Filters
 
@@ -162,7 +167,7 @@ environment variables are **optional**._
 
 > :point_right: Used with the `MICROCENTER_LOCATION` variable.
 
-> :point_right: Before using `web`, please review [this issue comment](https://github.com/jef/nvidia-snatcher/issues/442#issuecomment-703297393).
+> :point_right: Before using `web`, please review [this issue comment](https://github.com/jef/streetmerchant/issues/442#issuecomment-703297393).
 
 | Store name |
 |:---:|
@@ -316,7 +321,7 @@ environment variables are **optional**._
 | `MQTT_CLIENT_ID` | Unique ClientID (only if required by MQTT Broker), typically not required when only publishing alerts | eg. client-123456 |
 | `MQTT_PASSWORD` | MQTT password - only use with MQTT brokers on private networks, if required. Will not be sent over public networks for safety. | e.g mysecret |
 | `MQTT_QOS` | QoS level for published alerts to broker (https://www.npmjs.com/package/mqtt#about-qos) | Default: 0, Can be 0, 1, or 2 |
-| `MQTT_TOPIC` | Topic to publish alerts to. Can include %store%, %series%, %brand%, %model% for dynamic topics | Default: nvidia-snatcher/alert e.g nv-alert/%store%/%series%/%brand%/%model%/alert |
+| `MQTT_TOPIC` | Topic to publish alerts to. Can include %store%, %series%, %brand%, %model% for dynamic topics | Default: streetmerchant/alert e.g nv-alert/%store%/%series%/%brand%/%model%/alert |
 | `MQTT_USERNAME` | MQTT username - (only if required by MQTT Broker) | e.g myusername |
 
 </details>
@@ -453,19 +458,22 @@ it. Very straight forward. Otherwise, Google more information related to your sy
 
 **Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
 
-**Q: I got a problem and need help!** File an [issue](https://github.com/jef/nvidia-snatcher/issues/new/choose). I'll do
+**Q: I got a problem and need help!** File an [issue](https://github.com/jef/streetmerchant/issues/new/choose). I'll do
 my best to get to you. I work a full time job and this is only a hobby of mine.
 
 **Q: How do I get the latest code?** Take look at
-this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-General:-Getting-the-latest-code).
+this [wiki page](https://github.com/jef/streetmerchant/wiki/Troubleshoot:-General:-Getting-the-latest-code).
 
 **Q: Why don't my notifications work?** There is probably
-an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that
-has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155).
+an [issue](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that
+has [already](https://github.com/jef/streetmerchant/issues/182) [been](https://github.com/jef/streetmerchant/issues/116) [resolved](https://github.com/jef/streetmerchant/issues/155)
+.
 
 **Q: I'd love to contribute, how do I do that?** Make
-a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All
+a [pull request](https://github.com/jef/streetmerchant/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All
 contributions are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
-See [#11](https://github.com/jef/nvidia-snatcher/issues/11).
+See [#11](https://github.com/jef/streetmerchant/issues/11).
+
+<p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>

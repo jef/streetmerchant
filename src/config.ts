@@ -144,7 +144,7 @@ const notifications = {
 		password: envOrString(process.env.MQTT_PASSWORD),
 		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
 		qos: envOrNumber(process.env.MQTT_QOS, 0),
-		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
+		topic: envOrString(process.env.MQTT_TOPIC, 'streetmerchant/alert'),
 		username: envOrString(process.env.MQTT_USERNAME)
 	},
 	pagerduty: {
@@ -250,7 +250,8 @@ const store = {
 		series: {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
-			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090)
+			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+			5950: envOrNumber(process.env.MAX_PRICE_SERIES_5950x)
 		}
 	},
 	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
