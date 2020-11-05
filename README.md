@@ -1,7 +1,6 @@
-<center>
-<br/><a href="https://github.com/jef/nvidia-snatcher#"><img src="https://raw.githubusercontent.com/jef/nvidia-snatcher/main/media/streetmerchant.png" alt="streetmerchant" /></a>
-<h1>streetmerchant</h1>
-The world's easiest, most powerful stock checker
+<p align="center"><a href="#"><img src="https://raw.githubusercontent.com/jef/nvidia-snatcher/main/media/streetmerchant.png" alt="streetmerchant" /></a></p>
+<h1 align="center">streetmerchant</h1>
+<p align="center">The world's easiest, most powerful stock checker
 <br/><br/>
 <a href="https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci"><img src="https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg" /></a>
 <a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8" alt="Tweet" /></a>
@@ -12,7 +11,6 @@ The world's easiest, most powerful stock checker
 <a href="https://github.com/jef/nvidia-snatcher/wiki">Wiki</a>
 <br/><br/>
 <a href="https://github.com/jef/nvidia-snatcher#"><img src="https://raw.githubusercontent.com/jef/nvidia-snatcher/main/media/terminal.gif" /></a>
-</center>
 
 ## Features
 
