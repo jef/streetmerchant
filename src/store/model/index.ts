@@ -1,8 +1,8 @@
 import {config, defaultStoreData} from '../../config';
+import {AMD} from './amd';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
-import {AMD} from './amd';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
