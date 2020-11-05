@@ -151,6 +151,18 @@ const notifications = {
 		integrationKey: envOrString(process.env.PAGERDUTY_INTEGRATION_KEY),
 		severity: envOrString(process.env.PAGERDUTY_SEVERITY, 'info')
 	},
+	philips_hue: {
+		accessToken: envOrString(process.env.PHILIPS_HUE_CLOUD_ACCESS_TOKEN),
+		apiKey: envOrString(process.env.PHILIPS_HUE_API_KEY),
+		bridgeIp: envOrString(process.env.PHILIPS_HUE_LAN_BRIDGE_IP),
+		clientId: envOrString(process.env.PHILIPS_HUE_CLOUD_CLIENT_ID),
+		clientSecret: envOrString(process.env.PHILIPS_HUE_CLOUD_CLIENT_SECRET),
+		lightColor: envOrString(process.env.PHILIPS_HUE_LIGHT_COLOR),
+		lightIds: envOrString(process.env.PHILIPS_HUE_LIGHT_IDS),
+		lightPattern: envOrString(process.env.PHILIPS_HUE_LIGHT_PATTERN),
+		refreshToken: envOrString(process.env.PHILIPS_HUE_CLOUD_REFRESH_TOKEN),
+		remoteApiUsername: envOrString(process.env.PHILIPS_HUE_API_KEY)
+	},
 	phone: {
 		availableCarriers: new Map([
 			['att', 'txt.att.net'],
