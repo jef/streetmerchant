@@ -196,6 +196,20 @@ export const Amazon: Store = {
 			model: 'tuf oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HJLLF7G'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08164VTWH&Quantity.1=1',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.amazon.com/dp/product/B08164VTWH'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0815Y8J9N&Quantity.1=1',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.amazon.com/dp/product/B0815Y8J9N'
 		}
 	],
 	name: 'amazon'
