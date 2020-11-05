@@ -1,17 +1,26 @@
-# nvidia-snatcher [![ci](https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg)](https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci) [![chat on freenode](https://img.shields.io/badge/chat-on%20freenode-blue)](https://kiwiirc.com/nextclient/irc.kiwiirc.com/?nick=kiwi_?#streetmerchant)
+<center>
+<br/><a href="https://github.com/jef/nvidia-snatcher#"><img src="https://raw.githubusercontent.com/jef/nvidia-snatcher/main/media/streetmerchant.png" alt="streetmerchant" /></a>
+<h1>streetmerchant</h1>
+The world's easiest, most powerful stock checker
+<br/><br/>
+<a href="https://github.com/jef/nvidia-snatcher/actions?query=workflow%3Aci"><img src="https://github.com/jef/nvidia-snatcher/workflows/ci/badge.svg" /></a>
+<a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8" alt="Tweet" /></a>
+<a href="https://twitter.com/intent/tweet?text=Beat%20the%20masses%20with%20streetmerchant&url=https://github.com/jef/nvidia-snatcher&hashtags=typescript,opensource,bot,shopping"><img src="https://img.shields.io/badge/twitter-share-green?logo=twitter&style=social" alt="Tweet" /></a>
+<br/><br/>
+<a href="https://github.com/jef/nvidia-snatcher#faq">FAQ</a> |
+<a href="https://github.com/jef/nvidia-snatcher/issues">Issues</a> |
+<a href="https://github.com/jef/nvidia-snatcher/wiki">Wiki</a>
+<br/><br/>
+<a href="https://github.com/jef/nvidia-snatcher#"><img src="https://raw.githubusercontent.com/jef/nvidia-snatcher/main/media/terminal.gif" /></a>
+</center>
 
-[FAQ](#FAQ) | [Issues](https://github.com/jef/nvidia-snatcher/issues)
-| [Wiki](https://github.com/jef/nvidia-snatcher/wiki)
+## Features
 
-![nvidia-snatcher](media/screenshot.png)
-
-The purpose of this bot is to get an Nvidia card. It tries multiple things to do that.
-
-- Currently, `nvidia-snatcher` is not capable of purchasing a card for you
-- Scrapes multiple websites for patterns of being stocked
-	- API requests are a work in progress (very soon)
+- Scrapes multiple websites for patterns of being stocked via API and Chromium
 - Opens browser when stock is available
 - Ability to send notifications when stock is available
+
+> :point_right: The bot _will not_ automatically buy for you
 
 ## Installation overview
 
@@ -29,7 +38,7 @@ getting `nvidia-snatcher` running!
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
-	- More on this in [customization](#Customization)
+  - More on this in [customization](#Customization)
 - Run `npm run start` to start
 
 At any point you want the program to stop, use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
@@ -437,7 +446,8 @@ this [wiki page](https://github.com/jef/nvidia-snatcher/wiki/Troubleshoot:-Gener
 
 **Q: Why don't my notifications work?** There is probably
 an [issue](https://github.com/jef/nvidia-snatcher/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that
-has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155).
+has [already](https://github.com/jef/nvidia-snatcher/issues/182) [been](https://github.com/jef/nvidia-snatcher/issues/116) [resolved](https://github.com/jef/nvidia-snatcher/issues/155)
+.
 
 **Q: I'd love to contribute, how do I do that?** Make
 a [pull request](https://github.com/jef/nvidia-snatcher/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All
