@@ -144,7 +144,7 @@ const notifications = {
 		password: envOrString(process.env.MQTT_PASSWORD),
 		port: envOrNumber(process.env.MQTT_BROKER_PORT, 1883),
 		qos: envOrNumber(process.env.MQTT_QOS, 0),
-		topic: envOrString(process.env.MQTT_TOPIC, 'nvidia-snatcher/alert'),
+		topic: envOrString(process.env.MQTT_TOPIC, 'streetmerchant/alert'),
 		username: envOrString(process.env.MQTT_USERNAME)
 	},
 	pagerduty: {
