@@ -28,7 +28,7 @@ getting `streetmerchant` running!
 
 ### Installation: native
 
-- [Node.js 15](https://nodejs.org/en/)
+- [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
 - Run `npm install`
