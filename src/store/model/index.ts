@@ -1,4 +1,5 @@
 import {config, defaultStoreData} from '../../config';
+import {AMD} from './amd';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -59,6 +60,7 @@ export const storeList = new Map([
 	[AmazonEs.name, AmazonEs],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
+	[AMD.name, AMD],
 	[Aria.name, Aria],
 	[Asus.name, Asus],
 	[AsusDe.name, AsusDe],

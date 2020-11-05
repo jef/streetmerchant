@@ -238,7 +238,8 @@ const store = {
 		series: {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
-			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090)
+			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+			5950: envOrNumber(process.env.MAX_PRICE_SERIES_5950x)
 		}
 	},
 	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
