@@ -24,7 +24,7 @@ export const AMD: Store = {
 			model: '5950x',
 			series: '5950',
 			url: 'https://www.amd.com/en/direct-buy/5450881400/us'
-		},
+		}
 	],
 	name: 'amd'
 };
