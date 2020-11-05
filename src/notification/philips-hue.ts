@@ -1,3 +1,4 @@
+import type Api from 'node-hue-api/lib/api/Api';
 import {config} from '../config';
 import {v3 as hueAPI} from 'node-hue-api';
 import {logger} from '../logger';
@@ -21,7 +22,7 @@ const lightState = new LightState()
 	.brightness(100)
 	.rgb(46.27, 72.55, 0);
 
-const adjustLightsWithAPI = (hueBridge: import('node-hue-api/lib/api/Api')) => {
+const adjustLightsWithAPI = (hueBridge: Api) => {
 	logger.debug('Connected to Philips Hue bridge.');
 	// Set the custom light state (COLOR and METHOD here)
 	if (lightColor) {
