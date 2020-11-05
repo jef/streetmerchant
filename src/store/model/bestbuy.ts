@@ -227,6 +227,13 @@ export const BestBuy: Store = {
 			model: 'xlr8 rgb',
 			series: '3090',
 			url: 'https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657&intl=nosplash'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://api.bestbuy.com/click/-/6438942/cart',
+			model: '5950x',
+			series: '5950',
+			url: 'https://www.bestbuy.com/site/amd-ryzen-9-5900x-4th-gen-12-core-24-threads-unlocked-desktop-processor-without-cooler/6438942.p?skuId=6438942&intl=nosplash'
 		}
 	],
 	name: 'bestbuy'
