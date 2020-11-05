@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.7.0...v1.8.0) (2020-11-05)
+
+
+### Features
+
+* **asus:** realtime api ([#675](https://www.github.com/jef/nvidia-snatcher/issues/675)) ([018784e](https://www.github.com/jef/nvidia-snatcher/commit/018784e653831103465e8278db4929e04c52397c))
+* **newegg-ca:** realtime api ([#674](https://www.github.com/jef/nvidia-snatcher/issues/674)) ([3c5407f](https://www.github.com/jef/nvidia-snatcher/commit/3c5407f5cfc635ae989101131188e999faa01d3c))
+
+
+### Bug Fixes
+
+* **filterBrandsSeriesModels:** always loop all stores ([#680](https://www.github.com/jef/nvidia-snatcher/issues/680)) ([6ced13e](https://www.github.com/jef/nvidia-snatcher/commit/6ced13e993f7b30bbdda5dc7615e895bac3e4f77))
+
 ## [1.7.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.6.0...v1.7.0) (2020-11-03)
 
 
