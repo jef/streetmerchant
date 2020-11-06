@@ -315,6 +315,30 @@ export const Alternate: Store = {
 			model: 'trinity',
 			series: '3090',
 			url: 'https://www.alternate.de/product/1672611'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.alternate.de/product/1685588'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.alternate.de/product/1685585'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.alternate.de/product/1685590'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.alternate.de/product/1685584'
 		}
 	],
 	name: 'alternate'

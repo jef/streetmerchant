@@ -219,6 +219,30 @@ export const Notebooksbilliger: Store = {
 			model: 'trinity',
 			series: '3090',
 			url: 'https://www.notebooksbilliger.de/zotac+gaming+geforce+rtx+3090+trinity+24gb+gddr6x+grafikkarte+677550'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.notebooksbilliger.de/amd+ryzen+5+5600x+cpu+684022'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.notebooksbilliger.de/amd+ryzen+ryzen+7+5800x+cpu+684018'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.notebooksbilliger.de/amd+ryzen+9+5900x+cpu+684032'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.notebooksbilliger.de/amd+ryzen+9+5950x+cpu+684033'
 		}
 	],
 	name: 'notebooksbilliger'

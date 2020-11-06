@@ -449,6 +449,30 @@ export const Computeruniverse: Store = {
 			model: 'trinity',
 			series: '3090',
 			url: 'https://www.computeruniverse.net/de/zotac-gaming-geforce-rtx-3090-trinity-24-gb-enthusiast-grafikkarte'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.computeruniverse.net/de/amd-ryzen-5-5600x-boxed-mit-wraith-stealth-kuehler'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.computeruniverse.net/de/amd-ryzen-7-5800x-box-ohne-kuehler'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.computeruniverse.net/de/amd-ryzen-9-5900x-box-ohne-kuehler'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.computeruniverse.net/de/amd-ryzen-9-5950x-box-ohne-kuehler'
 		}
 	],
 	name: 'computeruniverse'
