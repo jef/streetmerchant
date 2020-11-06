@@ -4,10 +4,7 @@ import {readFileSync} from 'fs';
 const version = readFileSync('version.txt', 'utf8');
 
 export const banner = {
-    stringVersion : chalk.gray.bold(`ＳＴＲＥＥＴＭＥＲＣＨＡＮＴ
-${version}`),
-
-    asciiVersion : chalk.green.bold(`
+	asciiVersion : chalk.green.bold(`
 
      ___           ___           ___           ___           ___           ___                                 
     /\\  \\         /\\  \\         /\\  \\         /\\  \\         /\\  \\         /\\  \\                                
@@ -32,5 +29,7 @@ ${version}`),
     /:/  /       \\:\\__\\        |:|  |        \\:\\__\\         /:/  /        /:/  /        /:/  /                 
     \\/__/         \\/__/         \\|__|         \\/__/         \\/__/         \\/__/         \\/__/                  
 
+${version}`),
+	stringVersion : chalk.gray.bold(`ＳＴＲＥＥＴＭＥＲＣＨＡＮＴ
 ${version}`)
 };
