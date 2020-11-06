@@ -9,4 +9,6 @@ const feedEntry = {
 	subscribe: feedEntrySubscribe
 };
 
-module.exports = {feedEntry};
+const Subscription = {feedEntry};
+
+export default Subscription;

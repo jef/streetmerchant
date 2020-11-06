@@ -3,6 +3,7 @@ import {config, setConfig} from '../config';
 import {createReadStream, readdir} from 'fs';
 import {getAllBrands, getAllModels, getAllSeries, storeList, updateStores} from '../store/model';
 import {join, normalize} from 'path';
+import GQLServer from '../graphql/server';
 
 const approot = join(__dirname, '../../');
 const webroot = join(approot, './web');
@@ -148,6 +149,7 @@ function requestListener(request: IncomingMessage, response: ServerResponse) {
 }
 
 let server: Server | undefined;
+let gqlServer: GQLServer | undefined;
 
 export async function startAPIServer() {
 	await stopAPIServer();
@@ -155,10 +157,21 @@ export async function startAPIServer() {
 		server = createServer(requestListener);
 		server.listen(Number(process.env.WEB_PORT));
 	}
+
+	if (process.env.GRAPHQL_PORT) {
+		const url = process.env.GRAPHQL_ROOT_URL ?? 'http://localhost';
+		const port = process.env.GRAPHQL_PORT;
+		gqlServer = new GQLServer(url, port);
+		gqlServer.serve();
+	}
 }
 
 export async function stopAPIServer() {
 	return new Promise(resolve => {
+		if (gqlServer) {
+			gqlServer = undefined;
+		}
+
 		if (server) {
 			server.close(resolve);
 			server = undefined;

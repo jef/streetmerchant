@@ -19,4 +19,6 @@ const publishFeedEntry = (_, args, context) => {
 	return feedEntry;
 };
 
-module.exports = {publishFeedEntry};
+const Mutation = {publishFeedEntry};
+
+export default Mutation;
