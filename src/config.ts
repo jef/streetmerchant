@@ -1,11 +1,11 @@
 import {banner} from './banner';
 
-console.info(banner);
-
 import {config as config_} from 'dotenv';
 import path from 'path';
 
 config_({path: path.resolve(__dirname, '../.env')});
+
+console.info(banner.render(envOrBoolean(process.env.ASCII_BANNER, false), envOrString(process.env.BANNER_COLOR, '#808080')));
 
 /**
  * Returns environment variable, given array, or default array.
