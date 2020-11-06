@@ -106,7 +106,7 @@ for (const microCenterLocation of microCenterLocations) {
 				brand: 'amd',
 				model: '5900x',
 				series: 'ryzen5900',
-				url: `microcenter.com/product/630283/amd-ryzen-9-5900x-vermeer-37ghz-12-core-am4-boxed-processor/?storeid=${storeId}`
+				url: `https://www.microcenter.com/product/630283/amd-ryzen-9-5900x-vermeer-37ghz-12-core-am4-boxed-processor/?storeid=${storeId}`
 			},
 			{
 				brand: 'amd',
