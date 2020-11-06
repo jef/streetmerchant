@@ -9,6 +9,7 @@ import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
+import {publishFeedEntry} from './publish';
 import {sendNotification} from '../notification';
 
 const inStock: Record<string, boolean> = {};
@@ -139,6 +140,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		const options = {...baseOptions, requireVisible: true, type: 'outerHTML' as const};
 
 		if (!await pageIncludesLabels(page, store.labels.inStock, options)) {
+			await publishFeedEntry(link, store, 'OUT_OF_STOCK').catch(logger.error);
 			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
@@ -146,6 +148,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.outOfStock) {
 		if (await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)) {
+			await publishFeedEntry(link, store, 'OUT_OF_STOCK').catch(logger.error);
 			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
@@ -153,6 +156,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.bannedSeller) {
 		if (await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)) {
+			await publishFeedEntry(link, store, 'BANNED_SELLER').catch(logger.error);
 			logger.warn(Print.bannedSeller(link, store, true));
 			return false;
 		}
@@ -162,6 +166,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		const price = await cardPrice(page, store.labels.maxPrice, config.store.maxPrice.series[link.series], baseOptions);
 		const maxPrice = config.store.maxPrice.series[link.series];
 		if (price) {
+			await publishFeedEntry(link, store, 'PRICE_LIMIT_EXCEEDED').catch(logger.error);
 			logger.info(Print.maxPrice(link, store,	price, maxPrice, true));
 			return false;
 		}
@@ -169,6 +174,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.captcha) {
 		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
+			await publishFeedEntry(link, store, 'CAPTCHA').catch(logger.error);
 			logger.warn(Print.captcha(link, store, true));
 			await delay(getSleepTime(store));
 			return false;

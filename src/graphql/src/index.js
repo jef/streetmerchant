@@ -1,7 +1,6 @@
 const {GraphQLServer, PubSub} = require('graphql-yoga');
 const FeedEntry = require('./resolvers/feed-entry');
 const Mutation = require('./resolvers/mutation');
-const Query = require('./resolvers/query');
 const Subscription = require('./resolvers/subscription');
 
 const pubsub = new PubSub();
@@ -9,7 +8,6 @@ const pubsub = new PubSub();
 const resolvers = {
 	FeedEntry,
 	Mutation,
-	Query,
 	Subscription
 };
 

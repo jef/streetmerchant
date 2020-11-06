@@ -1,11 +1,9 @@
-const productName = parent => parent.productName;
-const productSlug = parent => parent.productSlug;
+const link = parent => parent.link;
 const status = parent => parent.status;
-const url = parent => parent.url;
+const store = parent => parent.store;
 
 module.exports = {
-	productName,
-	productSlug,
+	link,
 	status,
-	url
+	store
 };

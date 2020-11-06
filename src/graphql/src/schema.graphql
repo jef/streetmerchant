@@ -4,20 +4,38 @@ type Query {
 
 type Mutation {
 	publishFeedEntry(
-		productName: String!
-		productSlug: String!
+		brand: String!
+		series: String!
+		model: String!
 		status: String!
 		url: String!
+		storeName: String!
+		cartUrl: String
+		screenshot: String
+		itemNumber: String
 	): FeedEntry!
 }
 
 type FeedEntry {
-	productName: String!
-	productSlug: String!
+	link: Link!
+	store: Store!
 	status: String!
-	url: String!
 }
 
 type Subscription {
 	feedEntry: FeedEntry!
+}
+
+type Link {
+	brand: String!
+	itemNumber: String
+	series: String!
+	model: String!
+	url: String!
+	cartUrl: String
+	screenshot: String
+}
+
+type Store {
+	name: String!
 }
