@@ -163,7 +163,9 @@ environment variables are **optional**._
 | Proshop (DK) | `proshop-dk`|
 | Saturn (DE) | `saturn`|
 | Scan (UK) | `scan`|
+| Target | `target`|
 | Very (UK) | `very`|
+| Walmart | `walmart`|
 | Zotac | `zotac`|
 
 <details>
@@ -222,6 +224,7 @@ environment variables are **optional**._
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
+| `sony` | `ps5 console`, `ps5 digital` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
 
 </details>

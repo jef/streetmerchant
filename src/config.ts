@@ -1,11 +1,11 @@
 import {banner} from './banner';
 
-console.info(banner);
-
 import {config as config_} from 'dotenv';
 import path from 'path';
 
 config_({path: path.resolve(__dirname, '../.env')});
+
+console.info(banner.render(envOrBoolean(process.env.ASCII_BANNER, false), envOrString(process.env.BANNER_COLOR, '#808080')));
 
 /**
  * Returns environment variable, given array, or default array.
@@ -255,6 +255,8 @@ const store = {
 			ryzen5800: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5800),
 			ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5900),
 			ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
+			sonyps5c: -1,
+			sonyps5de: -1,
 			'test:series': -1
 		}
 	},
@@ -267,7 +269,7 @@ const store = {
 			series: envOrString(series)
 		};
 	}),
-	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090', 'ryzen5600', 'ryzen5800', 'ryzen5900', 'ryzen5950']),
+	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090', 'ryzen5600', 'ryzen5800', 'ryzen5900', 'ryzen5950', 'sonyps5c', 'sonyps5de']),
 	stores: envOrArray(process.env.STORES, ['nvidia']).map(entry => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 		return {

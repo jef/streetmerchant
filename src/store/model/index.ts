@@ -46,7 +46,9 @@ import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
+import {Target} from './target';
 import {Very} from './very';
+import {Walmart} from './walmart';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
 
@@ -97,7 +99,9 @@ export const storeList = new Map([
 	[ProshopDK.name, ProshopDK],
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
+	[Target.name, Target],
 	[Very.name, Very],
+	[Walmart.name, Walmart],
 	[Zotac.name, Zotac]
 ]);
 

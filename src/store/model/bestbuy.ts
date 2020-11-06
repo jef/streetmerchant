@@ -255,6 +255,20 @@ export const BestBuy: Store = {
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.bestbuy.com/site/amd-ryzen-5-5600x-4th-gen-6-core-12-threads-unlocked-desktop-processor-with-wraith-stealth-cooler/6438943.p?skuId=6438943&intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6426149/cart',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.bestbuy.com/site/sony-playstation-5-console/6426149.p?skuId=6426149&intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430161/cart',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.bestbuy.com/site/sony-playstation-5-digital-edition-console/6430161.p?skuId=6430161&intl=nosplash'
 		}
 	],
 	name: 'bestbuy'
