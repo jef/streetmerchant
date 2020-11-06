@@ -1,11 +1,11 @@
 import {banner} from './banner';
 
-console.info(banner);
-
 import {config as config_} from 'dotenv';
 import path from 'path';
 
 config_({path: path.resolve(__dirname, '../.env')});
+
+console.info(envOrBoolean(process.env.ASCII_BANNER, false) ? banner.asciiVersion : banner.stringVersion);
 
 /**
  * Returns environment variable, given array, or default array.
