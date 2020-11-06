@@ -366,6 +366,34 @@ export const NeweggCa: Store = {
 			model: 'xc3 gaming',
 			series: '3070',
 			url: 'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3753-kr/p/N82E16814487529'
+		},
+		{
+			brand: 'amd',
+			itemNumber: '19-113-663',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.newegg.ca/amd-ryzen-9-5950x/p/N82E16819113663'
+		},
+		{
+			brand: 'amd',
+			itemNumber: '19-113-664',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.newegg.ca/amd-ryzen-9-5900x/p/N82E16819113664'
+		},
+		{
+			brand: 'amd',
+			itemNumber: '19-113-665',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.newegg.ca/amd-ryzen-7-5800x/p/N82E16819113665'
+		},
+		{
+			brand: 'amd',
+			itemNumber: '19-113-666',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666'
 		}
 	],
 	name: 'newegg-ca',
