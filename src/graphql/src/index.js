@@ -22,4 +22,4 @@ const server = new GraphQLServer({
 	typeDefs: './src/schema.graphql'
 });
 
-server.start(() => console.log('Server is running on http://localhost:4000'));
+server.start(() => console.log(`Server is running on http://localhost:${process.env.GRAPHQL_PORT}`));
