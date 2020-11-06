@@ -268,6 +268,30 @@ export const Caseking: Store = {
 			model: 'trinity',
 			series: '3090',
 			url: 'https://www.caseking.de/zotac-gaming-geforce-rtx-3090-trinity-24576-mb-gddr6x-gczt-162.html'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.caseking.de/amd-ryzen-5-5600x-3-7-ghz-vermeer-am4-mit-amd-wraith-stealth-kuehler-hpam-202.html'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.caseking.de/amd-ryzen-7-5800x-3-8-ghz-vermeer-am4-boxed-ohne-kuehler-hpam-203.html'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.caseking.de/amd-ryzen-9-5900x-3-7-ghz-vermeer-am4-boxed-ohne-kuehler-hpam-204.html'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.caseking.de/amd-ryzen-9-5950x-3-4-ghz-vermeer-am4-boxed-ohne-kuehler-hpam-205.html'
 		}
 	],
 	name: 'caseking'

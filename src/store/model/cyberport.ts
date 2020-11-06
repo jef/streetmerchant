@@ -93,6 +93,30 @@ export const Cyberport: Store = {
 			model: 'trinity oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E13-1H7'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.cyberport.de?DEEP=2001-71p'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.cyberport.de/?DEEP=2001-71n'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.cyberport.de?DEEP=2001-71m'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.cyberport.de?DEEP=2001-71l'
 		}
 	],
 	name: 'cyberport'

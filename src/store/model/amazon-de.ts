@@ -352,6 +352,30 @@ export const AmazonDe: Store = {
 			model: 'xlr8 rgb',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08HBJB7YD'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.amazon.de/dp/B08166SLDF'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.amazon.de/dp/B0815XFSGK'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.amazon.de/dp/B08164VTWH'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.amazon.de/dp/B0815Y8J9N'
 		}
 	],
 	name: 'amazon-de'
