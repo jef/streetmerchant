@@ -2,10 +2,16 @@ import {Store} from './store';
 
 export const Gamestop: Store = {
 	labels: {
-		inStock: {
-			container: '.add-to-cart',
-			text: ['add to cart']
-		},
+		inStock: [
+			{
+				container: '.add-to-cart',
+				text: ['add to cart']
+			},
+			{
+				container: '.add-to-cart',
+				text: ['Pre-Order']
+			}
+		],
 		maxPrice: {
 			container: '.primary-details-row .actual-price',
 			euroFormat: false
@@ -27,6 +33,18 @@ export const Gamestop: Store = {
 			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.gamestop.com/video-games/pc/components/graphics-cards/products/tuf-gaming-geforce-rtx-3080-graphics-card/11109446.html'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5/11108140'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5-digital-edition/11108141'
 		}
 	],
 	name: 'gamestop',

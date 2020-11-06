@@ -210,6 +210,20 @@ export const Amazon: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.amazon.com/dp/product/B0815Y8J9N'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5L3RG&Quantity.1=1',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.com/dp/B08FC5L3RG'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC6MR62&Quantity.1=1',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.amazon.com/dp/B08FC6MR62'
 		}
 	],
 	name: 'amazon'
