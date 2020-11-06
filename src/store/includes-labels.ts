@@ -89,8 +89,8 @@ export function includesLabels(domText: string, searchLabels: string[]): boolean
 	return searchLabels.some(label => domTextLowerCase.includes(label.toLowerCase()));
 }
 
-export async function cardPrice(page: Page, query: Pricing, max: number, options: Selector) {
-	if (!max) {
+export async function cardPrice(page: Page, query: Pricing, max: number, options: Selector): Promise<number | null> {
+	if (!max || max === -1) {
 		return null;
 	}
 
