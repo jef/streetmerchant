@@ -410,14 +410,6 @@ export const Newegg: Store = {
 		},
 		{
 			brand: 'amd',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113664',
-			itemNumber: '19-113-664',
-			model: '5900x',
-			series: 'ryzen5900',
-			url: 'https://www.newegg.com/amd-ryzen-9-5900x/p/N82E16819113664'
-		},
-		{
-			brand: 'amd',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113663',
 			itemNumber: '19-113-663',
 			model: '5950x',
@@ -426,8 +418,16 @@ export const Newegg: Store = {
 		},
 		{
 			brand: 'amd',
-			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113665',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113664',
 			itemNumber: '19-113-664',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.newegg.com/amd-ryzen-9-5900x/p/N82E16819113664'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113665',
+			itemNumber: '19-113-665',
 			model: '5800x',
 			series: 'ryzen5800',
 			url: 'https://www.newegg.com/amd-ryzen-9-5900x/p/N82E16819113665'
@@ -435,7 +435,7 @@ export const Newegg: Store = {
 		{
 			brand: 'amd',
 			cartUrl: 'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16819113666',
-			itemNumber: '19-113-663',
+			itemNumber: '19-113-666',
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.newegg.com/amd-ryzen-5-5600x/p/N82E16819113666'
