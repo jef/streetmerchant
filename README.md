@@ -345,8 +345,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
-| `PHILIPS_HUE_API_KEY` | Hue Bridge API Key | **
-Required**, generate key using instructions [here](https://developers.meethue.com/develop/get-started-2/). This will be used for both LAN and cloud access over the official Remote Hue API. |
+| `PHILIPS_HUE_API_KEY` | Hue Bridge API Key | **Required**, generate key using instructions [here](https://developers.meethue.com/develop/get-started-2/). This will be used for both LAN and cloud access over the official Remote Hue API. |
 | `PHILIPS_HUE_LAN_BRIDGE_IP` | LAN IP Address of your Hue Bridge | LAN only, e.g. `192.168.x.x`|
 | `PHILIPS_HUE_LIGHT_IDS` | Light IDs | Optional (all if not supplied). Comma seperated, e.g.: `1`, `2` |See Hue App → About for IDs |
 | `PHILIPS_HUE_LIGHT_COLOR` | Color in RGB Format | Optional (NVIDIA green if not supplied). Comma separated, e.g.: `255`, `255`, `255`|
