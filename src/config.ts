@@ -251,6 +251,9 @@ const store = {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
 			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+			5600: envOrNumber(process.env.MAX_PRICE_SERIES_5600x),
+			5800: envOrNumber(process.env.MAX_PRICE_SERIES_5800x),
+			5900: envOrNumber(process.env.MAX_PRICE_SERIES_5900x),
 			5950: envOrNumber(process.env.MAX_PRICE_SERIES_5950x)
 		}
 	},
@@ -263,7 +266,7 @@ const store = {
 			series: envOrString(series)
 		};
 	}),
-	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090']),
+	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, ['3070', '3080', '3090', 'ryzen5600', 'ryzen5800', 'ryzen5900', 'ryzen5950']),
 	stores: envOrArray(process.env.STORES, ['nvidia']).map(entry => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 		return {
