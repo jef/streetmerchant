@@ -9,7 +9,7 @@ import fetch, {Headers} from 'node-fetch';
  * @param status Lookup result status.
  */
 export async function publishFeedEntry(link: Link, store: Store, status: string) {
-	const rootUrl = process.env.GRAPHQL_ROOT_URL ?? 'http://localhost';
+	const rootUrl = 'http://localhost';
 	const port = process.env.GRAPHQL_PORT;
 
 	// Skip publishing if there is no API port specified

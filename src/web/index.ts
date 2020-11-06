@@ -159,9 +159,8 @@ export async function startAPIServer() {
 	}
 
 	if (process.env.GRAPHQL_PORT) {
-		const url = process.env.GRAPHQL_ROOT_URL ?? 'http://localhost';
 		const port = process.env.GRAPHQL_PORT;
-		gqlServer = new GQLServer(url, port);
+		gqlServer = new GQLServer(port);
 		gqlServer.serve();
 	}
 }
