@@ -102,7 +102,5 @@ export function adjustPhilipsHueLights() {
 					});
 			}
 		})();
-	} else {
-		logger.error('✖ couldn\'t adjust hue lights');
 	}
 }
