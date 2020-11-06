@@ -251,10 +251,10 @@ const store = {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
 			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
-			ryzen5600: envOrNumber(process.env.MAX_PRICE_SERIES_5600x),
-			ryzen5800: envOrNumber(process.env.MAX_PRICE_SERIES_5800x),
-			ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_5900x),
-			ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_5950x),
+			ryzen5600: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5600),
+			ryzen5800: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5800),
+			ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5900),
+			ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
 			'test:series': -1
 		}
 	},
