@@ -1,0 +1,15 @@
+{
+  "name": "streetmerchant-api",
+  "version": "0.0.1",
+  "description": "A GraphQL API for streaming streetmerchant results",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thetimothyp",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}

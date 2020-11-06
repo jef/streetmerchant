@@ -2,7 +2,7 @@
 .vs/
 .vscode/
 build/
-node_modules/
+**/node_modules/
 
 .env*
 .*env

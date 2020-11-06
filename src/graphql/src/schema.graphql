@@ -1,0 +1,23 @@
+type Query {
+	feeds: [Subscription!]!
+}
+
+type Mutation {
+	publishFeedEntry(
+		productName: String!
+		productSlug: String!
+		status: String!
+		url: String!
+	): FeedEntry!
+}
+
+type FeedEntry {
+	productName: String!
+	productSlug: String!
+	status: String!
+	url: String!
+}
+
+type Subscription {
+	feedEntry: FeedEntry!
+}
