@@ -81,6 +81,18 @@ export const Mindfactory: Store = {
 			model: 'gaming pro',
 			series: '3090',
 			url: 'https://www.mindfactory.de/product_info.php/24GB-Palit-GeForce-RTX-3090-GamingPro-DDR6--Retail-_1377233.html'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.mindfactory.de/product_info.php/AMD-Ryzen-5-5600X-6x-3-70GHz-So-AM4-BOX_1380726.html'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.mindfactory.de/product_info.php/AMD-Ryzen-7-5800X-8x-3-80GHz-So-AM4-WOF_1380727.html'
 		}
 	],
 	name: 'mindfactory'
