@@ -17,7 +17,7 @@ export const Amazon: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07TDN1SC5&Quantity.1=1:',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07TDN1SC5&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.amazon.com/dp/B07TDN1SC5'
