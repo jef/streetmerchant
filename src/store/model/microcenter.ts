@@ -89,6 +89,30 @@ for (const microCenterLocation of microCenterLocations) {
 				model: 'trinity',
 				series: '3080',
 				url: `https://www.microcenter.com/product/628607/zotac-geforce-rtx-3080-trinity-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'amd',
+				model: '5600x',
+				series: 'ryzen5600',
+				url: `https://www.microcenter.com/product/630285/amd-ryzen-5-5600x-vermeer-37ghz-6-core-am4-boxed-processor-with-wraith-stealth-cooler/?storeid=${storeId}`
+			},
+			{
+				brand: 'amd',
+				model: '5800x',
+				series: 'ryzen5800',
+				url: `https://www.microcenter.com/product/630284/amd-ryzen-7-5800x-vermeer-38ghz-8-core-am4-boxed-processor/?storeid=${storeId}`
+			},
+			{
+				brand: 'amd',
+				model: '5900x',
+				series: 'ryzen5900',
+				url: `https://www.microcenter.com/product/630283/amd-ryzen-9-5900x-vermeer-37ghz-12-core-am4-boxed-processor/?storeid=${storeId}`
+			},
+			{
+				brand: 'amd',
+				model: '5950x',
+				series: 'ryzen5950',
+				url: `https://www.microcenter.com/product/630282/amd-ryzen-9-5950x-vermeer-34ghz-16-core-am4-boxed-processor/?storeid=${storeId}`
 			}
 		]);
 	}
