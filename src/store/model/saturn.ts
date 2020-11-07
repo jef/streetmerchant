@@ -155,18 +155,6 @@ export const Saturn: Store = {
 			model: 'gaming x trio',
 			series: '3090',
 			url: 'https://www.saturn.de/de/product/-2683226.html'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 console',
-			series: 'sonyps5c',
-			url: 'https://www.saturn.de/de/product/-2661938.html'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 digital',
-			series: 'sonyps5de',
-			url: 'https://www.saturn.de/de/product/-2661939.html'
 		}
 	],
 	name: 'saturn'

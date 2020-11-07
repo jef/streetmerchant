@@ -376,18 +376,6 @@ export const AmazonDe: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.amazon.de/dp/B0815Y8J9N'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 console',
-			series: 'sonyps5c',
-			url: 'https://www.amazon.de/dp/B08H93ZRK9'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 digital',
-			series: 'sonyps5de',
-			url: 'https://www.amazon.de/dp/B08H98GVK8'
 		}
 	],
 	name: 'amazon-de'

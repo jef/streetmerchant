@@ -50,17 +50,7 @@ Available via GitHub Container Registry.
 | `latest` | Latest stable build |
 | `nightly` | Latest HEAD build, could be unstable |
 
-```sh
-# to run
-docker run --cap-add=SYS_ADMIN \
-  -it --rm --env-file ./.env \
-  ghcr.io/jef/streetmerchant:nightly
-
-# to test notifications
-docker run --cap-add=SYS_ADMIN \
-  -it --rm --env-file ./.env \
-  ghcr.io/jef/streetmerchant:nightly test:notification:production
-```
+Use `docker run --cap-add=SYS_ADMIN -it --rm --env-file ./.env ghcr.io/jef/streetmerchant:nightly` to run.
 
 ### Developer notes
 

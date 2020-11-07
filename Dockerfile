@@ -32,8 +32,6 @@ WORKDIR /app
 
 COPY --from=builder /build/node_modules/ node_modules/
 COPY --from=builder /build/build/ build/
-COPY package.json package.json
 COPY version.txt version.txt
 
-ENTRYPOINT ["npm", "run"]
-CMD ["start:production"]
+CMD [ "node", "./build/index.js" ]

@@ -339,18 +339,6 @@ export const Alternate: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.alternate.de/product/1685584'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 console',
-			series: 'sonyps5c',
-			url: 'https://www.alternate.de/product/1651220'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 digital',
-			series: 'sonyps5de',
-			url: 'https://www.alternate.de/product/1651221'
 		}
 	],
 	name: 'alternate'

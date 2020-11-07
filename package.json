@@ -9,9 +9,7 @@
     "lint:fix": "xo --fix",
     "start": "npm run build && node build/index.js",
     "start:dev": "nodemon --config nodemon.json",
-    "start:production": "node build/index.js",
-    "test:notification": "npm run build && node build/__test__/notification-test.js",
-    "test:notification:production": "node build/__test__/notification-test.js"
+    "test:notification": "npm run build && node build/__test__/notification-test.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +44,7 @@
     "puppeteer-extra-plugin-block-resources": "^2.2.7",
     "puppeteer-extra-plugin-stealth": "^2.6.5",
     "pushover-notifications": "^1.2.2",
-    "twilio": "^3.51.0",
+    "twilio": "^3.50.0",
     "twitch": "^4.2.7",
     "twitch-auth": "^4.2.7",
     "twitch-chat-client": "^4.2.7",
