@@ -29,6 +29,7 @@ import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Gamestop} from './gamestop';
 import {Mediamarkt} from './mediamarkt';
+import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
 import {Newegg} from './newegg';
@@ -83,6 +84,7 @@ export const storeList = new Map([
 	[EvgaEu.name, EvgaEu],
 	[Gamestop.name, Gamestop],
 	[Mediamarkt.name, Mediamarkt],
+	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
 	[Newegg.name, Newegg],
