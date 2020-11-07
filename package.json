@@ -9,7 +9,9 @@
     "lint:fix": "xo --fix",
     "start": "npm run build && node build/index.js",
     "start:dev": "nodemon --config nodemon.json",
-    "test:notification": "npm run build && node build/__test__/notification-test.js"
+    "start:production": "node build/index.js",
+    "test:notification": "npm run build && node build/__test__/notification-test.js",
+    "test:notification:production": "node build/__test__/notification-test.js"
   },
   "repository": {
     "type": "git",
