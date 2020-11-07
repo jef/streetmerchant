@@ -23,7 +23,12 @@ type FeedEntry {
 }
 
 type Subscription {
-	feedEntry: FeedEntry!
+	feedEntry(
+		storeName: String
+		brand: String
+		model: String
+		series: String
+	): FeedEntry!
 }
 
 type Link {
