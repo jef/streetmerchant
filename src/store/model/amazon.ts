@@ -52,10 +52,10 @@ export const Amazon: Store = {
 		},
 		{
 			brand: 'pny',
-			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBJB7YD&Quantity.1=1',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBF5L3K&Quantity.1=1',
 			model: 'xlr8 uprising',
 			series: '3070',
-			url: 'https://www.amazon.com/dp/B08HBJB7YD'
+			url: 'https://www.amazon.com/dp/B08HBF5L3K'
 		},
 		{
 			brand: 'msi',
