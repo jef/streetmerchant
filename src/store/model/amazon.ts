@@ -284,7 +284,7 @@ export const Amazon: Store = {
 			brand: 'microsoft',
 			model: 'xbox series s',
 			series: 'xboxss',
-			url: 'https://www.amazon.com/Xbox-X/dp/B08G9J44ZN/ref=sr_1_1?crid=2LDCJ421GASAD&dchild=1&keywords=xbox%2Bseries%2Bx&qid=1604939295&sprefix=xbox%2Bseri%2Caps%2C245&sr=8-1&th=1'
+			url: 'https://www.amazon.com/dp/B08G9J44ZN'
 		}
 	],
 	name: 'amazon'
