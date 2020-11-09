@@ -29,6 +29,7 @@ import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
+import {Galaxus} from './galaxus';
 import {Gamestop} from './gamestop';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
@@ -87,6 +88,7 @@ export const storeList = new Map([
 	[Ebuyer.name, Ebuyer],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
+	[Galaxus.name, Galaxus],
 	[Gamestop.name, Gamestop],
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
