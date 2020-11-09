@@ -273,13 +273,13 @@ export const Amazon: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.amazon.com/dp/B08FC6MR62'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
 			url: 'https://www.amazon.com/Xbox-X/dp/B08H75RTZ8/ref=sr_1_1?crid=2LDCJ421GASAD&dchild=1&keywords=xbox+series+x&qid=1604939295&sprefix=xbox+seri%2Caps%2C245&sr=8-1'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series s',

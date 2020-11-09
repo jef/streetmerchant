@@ -269,13 +269,13 @@ export const BestBuy: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.bestbuy.com/site/sony-playstation-5-digital-edition-console/6430161.p?skuId=6430161&intl=nosplash'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
 			url: 'https://www.bestbuy.com/site/microsoft-xbox-series-x-1tb-console-black/6428324.p?skuId=6428324'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series s',

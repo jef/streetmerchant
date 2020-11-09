@@ -439,13 +439,13 @@ export const Newegg: Store = {
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.newegg.com/amd-ryzen-5-5600x/p/N82E16819113666'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
 			url: 'https://www.newegg.com/p/N82E16868105273'
-		}
+		},
 		{
 			brand: 'microsoft',
 			model: 'xbox series s',
