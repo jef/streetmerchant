@@ -137,7 +137,10 @@ environment variables are **optional**._
 | Amazon (ES) | `amazon-es`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
+| AMD | `amd`|
+| AMD (DE) | `amd-de`|
 | Aria PC (UK) | `aria`|
+| ARLT (DE) | `arlt`|
 | ASUS | `asus` |
 | ASUS (DE) | `asus-de` |
 | Azerty (NL) | `azerty`|
