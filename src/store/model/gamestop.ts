@@ -46,6 +46,18 @@ export const Gamestop: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5-digital-edition/11108141'
 		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.gamestop.com/video-games/xbox-series-x/consoles/products/xbox-series-x/11108371.html?condition=New'
+		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.gamestop.com/video-games/xbox-series-x/consoles/products/xbox-series-s-digital-edition/11108372.html?condition=New'
+		}
 	],
 	name: 'gamestop',
 	successStatusCodes: [[0, 399], 404]

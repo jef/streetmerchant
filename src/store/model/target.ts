@@ -23,6 +23,18 @@ export const Target: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.target.com/p/playstation-5-digital-edition-console/-/A-81114596'
 		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.target.com/p/xbox-series-x-console/-/A-80790841'
+		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.target.com/p/xbox-series-s-console/-/A-80790842'
+		}
 	],
 	name: 'target'
 };

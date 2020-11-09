@@ -23,6 +23,18 @@ export const Walmart: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.walmart.com/ip/PlayStation5-Console/363472942'
 		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.walmart.com/ip/Xbox-Series-X/443574645'
+		}
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.walmart.com/ip/Xbox-Series-S/606518560'
+		}
 	],
 	name: 'walmart'
 };
