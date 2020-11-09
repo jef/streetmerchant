@@ -93,6 +93,18 @@ export const Mindfactory: Store = {
 			model: '5800x',
 			series: 'ryzen5800',
 			url: 'https://www.mindfactory.de/product_info.php/AMD-Ryzen-7-5800X-8x-3-80GHz-So-AM4-WOF_1380727.html'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.mindfactory.de/product_info.php/AMD-Ryzen-9-5900X-12x-3-70GHz-So-AM4-WOF_1380728.html'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.mindfactory.de/product_info.php/AMD-Ryzen-9-5950X-16x-3-40GHz-So-AM4-WOF_1380729.html'
 		}
 	],
 	name: 'mindfactory'
