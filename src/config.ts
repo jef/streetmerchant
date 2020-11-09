@@ -257,9 +257,9 @@ const store = {
 			ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
 			sonyps5c: -1,
 			sonyps5de: -1,
+			'test:series': -1,
 			xboxss: -1,
-			xboxsx: -1,
-			'test:series': -1
+			xboxsx: -1
 		}
 	},
 	microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
