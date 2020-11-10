@@ -308,8 +308,8 @@ environment variables are **optional**._
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | E.g.: `att` or `att,verizon,google`, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number |
+| `PHONE_NUMBER` | 10 digit phone number(s) | E.g.: `1234567890` or `1234567890,0987654321,11112223333`, email configuration required |
 | `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
 | `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
 
