@@ -1,11 +1,12 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {StatusCodeRangeArray} from './store/model';
+import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
 import {logger} from './logger';
 
-export function getSleepTime() {
-	return config.browser.minSleep + (Math.random() * (config.browser.maxSleep - config.browser.minSleep));
+export function getSleepTime(store: Store) {
+	const minSleep = store.minPageSleep as number;
+	return minSleep + (Math.random() * ((store.maxPageSleep as number) - minSleep));
 }
 
 export async function delay(ms: number) {
@@ -48,7 +49,7 @@ export async function usingResponse<T>(
 export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: Browser) => Promise<T>): Promise<T> {
 	const page = await browser.newPage();
 	page.setDefaultNavigationTimeout(config.page.timeout);
-	await page.setUserAgent(config.page.userAgent);
+	await page.setUserAgent(getRandomUserAgent());
 
 	try {
 		return await cb(page, browser);
@@ -67,4 +68,8 @@ export async function closePage(page: Page) {
 	}
 
 	await page.close();
+}
+
+export function getRandomUserAgent(): string {
+	return config.page.userAgents[Math.floor(Math.random() * config.page.userAgents.length)];
 }

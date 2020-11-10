@@ -1,9 +1,9 @@
+import playerLib, {PlaySound} from 'play-sound';
 import {config} from '../config';
 import fs from 'fs';
 import {logger} from '../logger';
-import playerLib from 'play-sound';
 
-let player: any;
+let player: PlaySound;
 
 if (config.notifications.playSound) {
 	player = playerLib();
@@ -11,7 +11,7 @@ if (config.notifications.playSound) {
 	if (player.player === null) {
 		logger.warn('✖ couldn\'t find sound player');
 	} else {
-		const playerName: string = player.player;
+		const playerName = player.player;
 		logger.info(`✔ sound player found: ${playerName}`);
 	}
 }

@@ -1,6 +1,6 @@
 import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
-import PushBullet from '@hijef/pushbullet';
+import PushBullet from '@jef/pushbullet';
 import {config} from '../config';
 
 const pushbullet = config.notifications.pushbullet;

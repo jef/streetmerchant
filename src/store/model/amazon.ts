@@ -17,10 +17,59 @@ export const Amazon: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07MQ36Z6L&Quantity.1=1',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07TDN1SC5&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07MQ36Z6L'
+			url: 'https://www.amazon.com/dp/B07TDN1SC5'
+		},
+		{
+			brand: 'asus',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08L8HPKR6&Quantity.1=1',
+			model: 'dual',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08L8HPKR6'
+		},
+		{
+			brand: 'evga',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08LW46GH2&Quantity.1=1',
+			model: 'xc3 black',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08LW46GH2'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08KY266MG&Quantity.1=1',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08KY266MG'
+		},
+		{
+			brand: 'pny',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBJB7YD&Quantity.1=1',
+			model: 'xlr8',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08HBJB7YD'
+		},
+		{
+			brand: 'pny',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBF5L3K&Quantity.1=1',
+			model: 'xlr8 uprising',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08HBF5L3K'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08KWLMZV4&Quantity.1=1',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08KWLMZV4'
+		},
+		{
+			brand: 'zotac',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08LF1CWT2&Quantity.1=1',
+			model: 'twin edge oc',
+			series: '3070',
+			url: 'https://www.amazon.com/dp/B08LF1CWT2'
 		},
 		{
 			brand: 'pny',
@@ -109,14 +158,14 @@ export const Amazon: Store = {
 		{
 			brand: 'asus',
 			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6F174Z&Quantity.1=1',
-			model: 'strix',
+			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.amazon.com/dp/B08J6F174Z'
 		},
 		{
 			brand: 'asus',
 			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6GMWCQ&Quantity.1=1',
-			model: 'strix',
+			model: 'rog strix oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08J6GMWCQ'
 		},
@@ -196,6 +245,34 @@ export const Amazon: Store = {
 			model: 'tuf oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HJLLF7G'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08164VTWH&Quantity.1=1',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.amazon.com/dp/product/B08164VTWH'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0815Y8J9N&Quantity.1=1',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.amazon.com/dp/product/B0815Y8J9N'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5L3RG&Quantity.1=1',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.com/dp/B08FC5L3RG'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC6MR62&Quantity.1=1',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.amazon.com/dp/B08FC6MR62'
 		}
 	],
 	name: 'amazon'

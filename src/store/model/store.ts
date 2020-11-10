@@ -10,10 +10,11 @@ export type Pricing = {
 	euroFormat?: boolean;
 };
 
-export type Series = 'test:series' | '3070' | '3080' | '3090';
+export type Series = 'test:series' | '3070' | '3080' | '3090' | 'ryzen5950' | 'ryzen5900' | 'ryzen5800' | 'ryzen5600' | 'sonyps5c' | 'sonyps5de';
 
 export type Link = {
-	brand: 'test:brand' | 'asus' | 'evga' | 'gigabyte' | 'inno3d' | 'kfa2' | 'palit' | 'pny' | 'msi' | 'nvidia' | 'zotac' | 'gainward';
+	brand: 'test:brand' | 'amd' | 'asus' | 'evga' | 'gainward' | 'gigabyte' | 'inno3d' | 'kfa2' | 'msi' | 'nvidia' | 'palit' | 'pny'| 'sony' | 'zotac';
+	itemNumber?: string;
 	series: Series;
 	model: string;
 	url: string;
@@ -36,6 +37,7 @@ export type Labels = {
 export type StatusCodeRangeArray = Array<(number | [number, number])>;
 
 export type Store = {
+	realTimeInventoryLookup?: (itemNumber: string) => Promise<boolean>;
 	/**
 	 * The range of status codes which will trigger backoff, i.e. an increasing
 	 * delay between requests. Setting an empty array will disable the feature.
@@ -46,7 +48,8 @@ export type Store = {
 	links: Link[];
 	linksBuilder?: {
 		builder: (docElement: cheerio.Cheerio, series: Series) => Link[];
-		urls: Array<{series: Series; url: string}>;
+		ttl?: number;
+		urls: Array<{series: Series; url: string | string[]}>;
 	};
 	labels: Labels;
 	name: string;
@@ -59,4 +62,6 @@ export type Store = {
 	 */
 	successStatusCodes?: StatusCodeRangeArray;
 	waitUntil?: LoadEvent;
+	minPageSleep?: number;
+	maxPageSleep?: number;
 };

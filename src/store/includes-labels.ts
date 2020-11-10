@@ -53,7 +53,7 @@ export async function pageIncludesLabels(page: Page, query: LabelQuery, options:
 }
 
 export async function extractPageContents(page: Page, selector: Selector): Promise<string | null> {
-	const content = await page.evaluate((options: Selector) => {
+	return page.evaluate((options: Selector) => {
 		// eslint-disable-next-line no-undef
 		const element: globalThis.HTMLElement | null = document.querySelector(options.selector);
 
@@ -76,8 +76,6 @@ export async function extractPageContents(page: Page, selector: Selector): Promi
 				return 'Error: selector.type is unknown';
 		}
 	}, selector);
-
-	return content;
 }
 
 /**
@@ -88,11 +86,11 @@ export async function extractPageContents(page: Page, selector: Selector): Promi
  */
 export function includesLabels(domText: string, searchLabels: string[]): boolean {
 	const domTextLowerCase = domText.toLowerCase();
-	return searchLabels.some(label => domTextLowerCase.includes(label));
+	return searchLabels.some(label => domTextLowerCase.includes(label.toLowerCase()));
 }
 
-export async function cardPriceLimit(page: Page, query: Pricing, max: number, options: Selector) {
-	if (!max) {
+export async function cardPrice(page: Page, query: Pricing, max: number, options: Selector): Promise<number | null> {
+	if (!max || max === -1) {
 		return null;
 	}
 
