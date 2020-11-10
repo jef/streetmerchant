@@ -36,7 +36,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-519',
-			model: 'ftw3 gaming',
+			model: 'ftw3',
 			series: '3080',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519'
@@ -132,7 +132,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-457',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
@@ -156,7 +156,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'pny',
 			itemNumber: '14-133-809',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.newegg.ca/pny-geforce-rtx-3080-vcg308010tfxppb/p/N82E16814133809'
@@ -212,7 +212,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-456',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
@@ -300,7 +300,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-458',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3070-rog-strix-rtx3070-o8g-gaming/p/N82E16814126458'
@@ -324,7 +324,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-528',
-			model: 'xc3 black gaming',
+			model: 'xc3 black',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3751-kr/p/N82E16814487528'
@@ -364,7 +364,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-531',
-			model: 'ftw3 gaming',
+			model: 'ftw3',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3765-kr/p/N82E16814487531'
@@ -388,7 +388,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-530',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3755-kr/p/N82E16814487530'
@@ -396,7 +396,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-532',
-			model: 'ftw3 ultra gaming',
+			model: 'ftw3 ultra',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3767-kr/p/N82E16814487532'
@@ -404,7 +404,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'pny',
 			itemNumber: '14-133-811',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/pny-geforce-rtx-3070-vcg30708tfxppb/p/N82E16814133811'
@@ -412,7 +412,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-529',
-			model: 'xc3 gaming',
+			model: 'xc3',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3070-08g-p5-3753-kr/p/N82E16814487529'

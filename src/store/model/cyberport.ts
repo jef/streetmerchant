@@ -24,13 +24,13 @@ export const Cyberport: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E07-51S'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.cyberport.de?DEEP=2E07-51T'
 		},

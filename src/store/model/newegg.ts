@@ -150,7 +150,7 @@ export const Newegg: Store = {
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126457',
 			itemNumber: '14-126-457',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
@@ -180,7 +180,7 @@ export const Newegg: Store = {
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814133809',
 			itemNumber: '14-133-809',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.newegg.com/pny-geforce-rtx-3080-vcg308010tfxppb/p/N82E16814133809'
@@ -200,7 +200,7 @@ export const Newegg: Store = {
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126456',
 			itemNumber: '14-126-456',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
@@ -370,7 +370,7 @@ export const Newegg: Store = {
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126458',
 			itemNumber: '14-126-458',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3070-rog-strix-rtx3070-o8g-gaming/p/N82E16814126458'

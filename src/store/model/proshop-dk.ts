@@ -26,28 +26,28 @@ export const ProshopDK: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3080-TUF-10GB-GDDR6X-RAM-Grafikkort/2876763'
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming oc',
+			model: 'tuf oc',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3080-TUF-OC-10GB-GDDR6X-RAM-Grafikkort/2876861'
 		},
 		{
 			brand: 'asus',
-			model: 'strix gaming',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3080-ROG-STRIX-10GB-GDDR6X-RAM-Grafikkort/2876857'
 		},
 		{
 			brand: 'asus',
-			model: 'strix gaming oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3080-ROG-STRIX-OC-10GB-GDDR6X-RAM-Grafikkort/2876859'
@@ -124,28 +124,28 @@ export const ProshopDK: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3090',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3090-TUF-24GB-GDDR6X-RAM-Grafikkort/2876764'
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming oc',
+			model: 'tuf oc',
 			series: '3090',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3090-TUF-OC-24GB-GDDR6X-RAM-Grafikkort/2876869'
 		},
 		{
 			brand: 'asus',
-			model: 'strix gaming',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3090-ROG-STRIX-24GB-GDDR6X-RAM-Grafikkort/2876865'
 		},
 		{
 			brand: 'asus',
-			model: 'strix gaming oc',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.proshop.dk/Grafikkort/ASUS-GeForce-RTX-3090-ROG-STRIX-OC-24GB-GDDR6X-RAM-Grafikkort/2876867'
