@@ -1,4 +1,4 @@
-import {Browser, Page, Response} from 'puppeteer';
+import {Browser, Page, Response, Request, PageEventObj} from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
 import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
@@ -10,16 +10,102 @@ import {
 	isStatusCodeInRange
 } from '../util';
 import {config} from '../config';
-import {disableBlockerInPage} from '../adblocker';
+import {disableBlockerInPage, enableBlockerInPage} from '../adblocker';
 import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
+import useProxy from 'puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
 
 const linkBuilderLastRunTimes: Record<string, number> = {};
+
+function nextProxy(store: Store) {
+	if (!store.proxyList) {
+		return;
+	}
+
+	if (store.currentProxyIndex === undefined) {
+		store.currentProxyIndex = 0;
+	}
+
+	store.currentProxyIndex++;
+	if (store.currentProxyIndex >= store.proxyList.length) {
+		store.currentProxyIndex = 0;
+	}
+
+	logger.info(`ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`);
+
+	return store.proxyList[store.currentProxyIndex];
+}
+
+async function handleLowBandwidth(request: Request) {
+	if (!config.browser.lowBandwidth) {
+		return false;
+	}
+
+	const typ = request.resourceType();
+	if (typ === 'font' || typ === 'image') {
+		try {
+			await request.abort();
+		} catch { }
+		return true;
+	}
+
+	return false;
+}
+
+async function handleProxy(request: Request, proxy?: string) {
+	if (!proxy) {
+		return false;
+	}
+
+	try {
+		await useProxy(
+			request,
+			proxy,
+		);
+	} catch (e) {
+		logger.error(e);
+		try {
+			await request.abort();
+		} catch { }
+	}
+
+	return true;
+}
+
+async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
+	if (!adBlockRequestHandler) {
+		return false;
+	}
+
+	return new Promise((resolve) => {
+		const continueFunc = async () => {
+			resolve(false);
+		};
+		const abortFunc = async () => {
+			try {
+				await request.abort();
+			} catch { }
+			resolve(true);
+		};
+		const requestProxy = new Proxy(request, {
+			get(target, prop, receiver) {
+				if (prop === 'continue') {
+					return continueFunc;
+				}
+				if (prop === 'abort') {
+					return abortFunc;
+				}
+				return Reflect.get(target, prop, receiver);
+			}
+		});
+		adBlockRequestHandler(requestProxy);
+	});
+}
 
 /**
  * Responsible for looking up information about a each product within
@@ -45,22 +131,55 @@ async function lookup(browser: Browser, store: Store) {
 			continue;
 		}
 
-		const context = config.browser.isIncognito
-			? await browser.createIncognitoBrowserContext()
-			: browser.defaultBrowserContext();
-		const page = config.browser.isIncognito
-			? await context.newPage()
-			: await browser.newPage();
+		const proxy = nextProxy(store);
+
+		const useAdBlock = !config.browser.lowBandwidth && !store.disableAdBlocker;
+		const customContext = config.browser.isIncognito;
+
+		const context = customContext ?
+						await browser.createIncognitoBrowserContext() :
+						browser.defaultBrowserContext();
+		const page = await context.newPage();
+
 		page.setDefaultNavigationTimeout(config.page.timeout);
 		await page.setUserAgent(getRandomUserAgent());
 
-		if (store.disableAdBlocker) {
-			try {
-				await disableBlockerInPage(page);
-			} catch (error: unknown) {
-				logger.error(error);
-			}
+		let adBlockRequestHandler: any;
+		let pageProxy;
+		if (useAdBlock) {
+			const onProxyFunc = (event: keyof PageEventObj, handler: any) => {
+				if (event !== 'request') {
+					page.on(event, handler);
+					return;
+				}
+				adBlockRequestHandler = handler;
+			};
+			pageProxy = new Proxy(page, {
+				get(target, prop, receiver) {
+					if (prop === 'on') {
+						return onProxyFunc;
+					}
+					return Reflect.get(target, prop, receiver);
+				}
+			});
+			await enableBlockerInPage(pageProxy);
 		}
+
+		await page.setRequestInterception(true);
+		page.on('request', async request => {
+			if (await handleLowBandwidth(request)) {
+				return;
+			}
+			if (await handleAdBlock(request, adBlockRequestHandler)) {
+				return;
+			}
+			if (await handleProxy(request, proxy)) {
+				return;
+			}
+			try {
+				await request.continue();
+			} catch { }
+		});
 
 		let statusCode = 0;
 
@@ -74,7 +193,11 @@ async function lookup(browser: Browser, store: Store) {
 			);
 			const client = await page.target().createCDPSession();
 			await client.send('Network.clearBrowserCookies');
-			await client.send('Network.clearBrowserCache');
+			//await client.send('Network.clearBrowserCache');
+		}
+
+		if (pageProxy) {
+			await disableBlockerInPage(pageProxy);
 		}
 
 		// Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -82,7 +205,7 @@ async function lookup(browser: Browser, store: Store) {
 		// before redirecting to the next page
 		await processBackoffDelay(store, link, statusCode);
 		await closePage(page);
-		if (config.browser.isIncognito) {
+		if (customContext) {
 			await context.close();
 		}
 	}
@@ -206,6 +329,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
+	/*
 	// Do API inventory validation in realtime (no cache) if available
 	if (
 		store.realTimeInventoryLookup !== undefined &&
@@ -213,6 +337,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	) {
 		return store.realTimeInventoryLookup(link.itemNumber);
 	}
+	*/
 
 	return true;
 }
