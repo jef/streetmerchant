@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: GoogleCloudPlatform/release-please-action@v2.5.7
+      - uses: GoogleCloudPlatform/release-please-action@v2.6.0
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
