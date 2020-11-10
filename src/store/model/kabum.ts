@@ -166,7 +166,6 @@ export const Kabum: Store = {
 			series: '3090',
 			url: 'https://www.kabum.com.br/produto/128199'
 		}
-
 	],
 	name: 'kabum'
 };
