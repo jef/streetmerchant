@@ -22,6 +22,18 @@ export const Ebuyer: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.ebuyer.com/874209-gigabyte-geforce-rtx-2060-windforce-6gb-oc-graphics-card-gv-n2060wf2oc-6gd-v2'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.ebuyer.com/1125329-sony-playstation-5-console-cfi-1015a'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.ebuyer.com/1125332-sony-playstation-5-digital-edition-cfi-1015b'
 		}
 	],
 	linksBuilder: {
