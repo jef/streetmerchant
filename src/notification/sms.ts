@@ -28,7 +28,7 @@ export function sendSms(link: Link, store: Store) {
 		}
 
 		if (!phone.availableCarriers.has(currentCarrier)) {
-			logger.error('✖ unknown carrier', currentCarrier);
+			logger.error(`✖ unknown carrier ${currentCarrier}`);
 			continue;
 		}
 
