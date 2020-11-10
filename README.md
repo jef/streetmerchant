@@ -229,6 +229,7 @@ environment variables are **optional**._
 
 | Brand | Model |
 |:---:|---|
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x` |
 | `asus` | `dual`, `dual oc`, `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
