@@ -8,15 +8,20 @@ let client: MqttClient.Client;
 
 if (mqtt.broker) {
 	if (checkInsecureUsage(mqtt.password, mqtt.broker)) {
-		logger.warn('✖ Insecure transport of password - Only use credentials with MQTT brokers on private networks.');
+		logger.warn(
+			'✖ Insecure transport of password - Only use credentials with MQTT brokers on private networks.'
+		);
 	} else {
 		const clientOptions: IClientOptions = {
-			clean: (mqtt.clientId === ''),
+			clean: mqtt.clientId === '',
 			clientId: mqtt.clientId === '' ? undefined : mqtt.clientId,
 			password: mqtt.password === '' ? undefined : mqtt.password,
 			username: mqtt.username === '' ? undefined : mqtt.username
 		};
-		client = MqttClient.connect(`mqtt://${mqtt.broker}:${mqtt.port}`, clientOptions);
+		client = MqttClient.connect(
+			`mqtt://${mqtt.broker}:${mqtt.port}`,
+			clientOptions
+		);
 	}
 }
 
@@ -26,7 +31,10 @@ export function sendMqttMessage(link: Link, store: Store) {
 
 		(async () => {
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
-			const message = `{"msg":"${Print.inStock(link, store)}", "url":"${givenUrl}"}`;
+			const message = `{"msg":"${Print.inStock(
+				link,
+				store
+			)}", "url":"${givenUrl}"}`;
 			const topic = generateTopic(link, store, mqtt.topic);
 			const pubOptions: IClientPublishOptions = {
 				qos: mqtt.qos as 0 | 1 | 2,
@@ -34,14 +42,10 @@ export function sendMqttMessage(link: Link, store: Store) {
 			};
 
 			try {
-				client.publish(
-					topic,
-					message,
-					pubOptions
-				);
+				client.publish(topic, message, pubOptions);
 				logger.info('✔ mqtt message sent');
 			} catch (error) {
-				logger.error('✖ couldn\'t send mqtt message', error);
+				logger.error("✖ couldn't send mqtt message", error);
 			}
 		})();
 	}
@@ -50,7 +54,8 @@ export function sendMqttMessage(link: Link, store: Store) {
 function generateTopic(link: Link, store: Store, topic: string): string {
 	topic.trim();
 	topic = topic.replace(/^\//, '');
-	topic = topic.replace(/%series%/g, link.series)
+	topic = topic
+		.replace(/%series%/g, link.series)
 		.replace(/%brand%/g, link.brand)
 		.replace(/%model%/g, link.model)
 		.replace(/%store%/g, store.name);
@@ -68,10 +73,12 @@ function generateTopic(link: Link, store: Store, topic: string): string {
  */
 function checkInsecureUsage(pass: string, address: string): boolean {
 	if (pass !== '') {
-		if (isClassANet(address) ||
+		if (
+			isClassANet(address) ||
 			isClassBNet(address) ||
 			isClassCNet(address) ||
-			isLinkLocal(address)) {
+			isLinkLocal(address)
+		) {
 			logger.debug(`MQTT using private network broker: ${address}`);
 		} else {
 			logger.debug(`MQTT using public network broker: ${address}`);

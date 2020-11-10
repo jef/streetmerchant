@@ -30,21 +30,23 @@ export function sendEmail(link: Link, store: Store) {
 		logger.debug('↗ sending email');
 
 		const mailOptions: Mail.Options = {
-			attachments: link.screenshot ? [
-				{
-					filename: link.screenshot,
-					path: `./${link.screenshot}`
-				}
-			] : undefined,
+			attachments: link.screenshot
+				? [
+						{
+							filename: link.screenshot,
+							path: `./${link.screenshot}`
+						}
+				  ]
+				: undefined,
 			from: email.username,
 			subject: Print.inStock(link, store),
 			text: link.cartUrl ? link.cartUrl : link.url,
 			to: email.to
 		};
 
-		transporter.sendMail(mailOptions, error => {
+		transporter.sendMail(mailOptions, (error) => {
 			if (error) {
-				logger.error('✖ couldn\'t send email', error);
+				logger.error("✖ couldn't send email", error);
 			} else {
 				logger.info('✔ email sent');
 			}

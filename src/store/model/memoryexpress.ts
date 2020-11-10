@@ -3,11 +3,13 @@ import {Store} from './store';
 export const MemoryExpress: Store = {
 	labels: {
 		maxPrice: {
-			container: '#ProductPricing .GrandTotal.c-capr-pricing__grand-total > div',
+			container:
+				'#ProductPricing .GrandTotal.c-capr-pricing__grand-total > div',
 			euroFormat: false
 		},
 		outOfStock: {
-			container: '.c-capr-inventory-selector__details-online .c-capr-inventory-store__availability',
+			container:
+				'.c-capr-inventory-selector__details-online .c-capr-inventory-store__availability',
 			text: ['Out of Stock']
 		}
 	},

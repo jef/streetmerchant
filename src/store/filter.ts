@@ -30,10 +30,14 @@ function filterModel(model: Link['model'], series: Link['series']): boolean {
 	for (const configModelEntry of config.store.showOnlyModels) {
 		const sanitizedConfigModel = configModelEntry.name.replace(/\s/g, '');
 		const sanitizedConfigSeries = configModelEntry.series.replace(/\s/g, '');
-		if (sanitizedConfigSeries ?
-			sanitizedSeries === sanitizedConfigSeries && sanitizedModel === sanitizedConfigModel :
-			sanitizedModel === sanitizedConfigModel
-		) {
+		if (sanitizedConfigSeries) {
+			if (
+				sanitizedSeries === sanitizedConfigSeries &&
+				sanitizedModel === sanitizedConfigModel
+			) {
+				return true;
+			}
+		} else if (sanitizedModel === sanitizedConfigModel) {
 			return true;
 		}
 	}

@@ -1,7 +1,9 @@
 declare module '@jef/pushbullet' {
 	export type DeviceParams = string | number | Record<string, any>;
 
-	export type PushBulletCallback = ((error: Error) => void) | ((error?: null, response: any) => void);
+	export type PushBulletCallback =
+		| ((error: Error) => void)
+		| ((error?: null, response: any) => void);
 
 	export interface ListOptions {
 		active?: boolean;
@@ -16,7 +18,11 @@ declare module '@jef/pushbullet' {
 	export interface PushBulletStream {
 		connect: () => void;
 		close: () => void;
-		on: ((event: 'connect' | 'close' | 'nop', callback: () => void) => void) & ((event: 'error', callback: (error: any) => void) => void) & ((event: 'message', callback: (message: any) => void) => void) & ((event: 'tickle', callback: (tickle: any) => void) => void) & ((event: 'push', callback: (push: any) => void) => void);
+		on: ((event: 'connect' | 'close' | 'nop', callback: () => void) => void) &
+			((event: 'error', callback: (error: any) => void) => void) &
+			((event: 'message', callback: (message: any) => void) => void) &
+			((event: 'tickle', callback: (tickle: any) => void) => void) &
+			((event: 'push', callback: (push: any) => void) => void);
 	}
 
 	export class PushBullet {
@@ -25,11 +31,31 @@ declare module '@jef/pushbullet' {
 		devices(options: ListOptions, callback: PushBulletCallback);
 		devices(callback: PushBulletCallback);
 		createDevice(options: Record<string, any>, callback: PushBulletCallback);
-		updateDevice(deviceIden: string, deviceOptions: Record<string, any>, callback: PushBulletCallback);
+		updateDevice(
+			deviceIden: string,
+			deviceOptions: Record<string, any>,
+			callback: PushBulletCallback
+		);
 		deleteDevice(deviceIden: string, callback: PushBulletCallback);
-		note(deviceParams: DeviceParams, title: string, body: string, callback: PushBulletCallback);
-		link(deviceParams: DeviceParams, name: string, url: string, body: string, callback: PushBulletCallback);
-		file(deviceParams: DeviceParams, filePath: string, message: string, callback: PushBulletCallback);
+		note(
+			deviceParams: DeviceParams,
+			title: string,
+			body: string,
+			callback: PushBulletCallback
+		);
+		link(
+			deviceParams: DeviceParams,
+			name: string,
+			url: string,
+			body: string,
+			callback: PushBulletCallback
+		);
+		file(
+			deviceParams: DeviceParams,
+			filePath: string,
+			message: string,
+			callback: PushBulletCallback
+		);
 		dismissPush(pushIden: DeviceParams, callback: PushBulletCallback);
 		deletePush(pushIden: DeviceParams, callback: PushBulletCallback);
 		deleteAllPushes(callback: PushBulletCallback);
@@ -50,9 +76,15 @@ declare module '@jef/pushbullet' {
 		unmuteChat(chatIden: string, callback: PushBulletCallback);
 		sendSMS(options: Record<string, any>, callback: PushBulletCallback);
 		sendClipboard(options: Record<string, any>, callback: PushBulletCallback);
-		dismissEphemeral(options: Record<string, any>, callback: PushBulletCallback);
+		dismissEphemeral(
+			options: Record<string, any>,
+			callback: PushBulletCallback
+		);
 		stream(): PushBulletStream;
-		enableEncryption(encryptionPassword: string, userIden: string): PushBulletStream;
+		enableEncryption(
+			encryptionPassword: string,
+			userIden: string
+		): PushBulletStream;
 	}
 
 	export default PushBullet;

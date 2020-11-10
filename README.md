@@ -118,7 +118,7 @@ environment variables are **optional**._
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `founders edition,rog strix` <br/><br/> 2. Advanced E.g: `MODEL:SERIES`, E.g: `founders edition:3090,rog strix` |
-| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
+| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080,ryzen5900` |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
 
 <details>
@@ -159,6 +159,7 @@ environment variables are **optional**._
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
+| Game (UK) | `game`|
 | Gamestop | `gamestop`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
@@ -307,8 +308,8 @@ environment variables are **optional**._
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | E.g.: `att` or `att,verizon,google`, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number |
+| `PHONE_NUMBER` | 10 digit phone number(s) | E.g.: `1234567890` or `1234567890,0987654321,11112223333`, email configuration required |
 | `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
 | `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
 

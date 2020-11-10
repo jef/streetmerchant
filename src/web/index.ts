@@ -1,13 +1,19 @@
 import {IncomingMessage, Server, ServerResponse, createServer} from 'http';
 import {config, setConfig} from '../config';
 import {createReadStream, readdir} from 'fs';
-import {getAllBrands, getAllModels, getAllSeries, storeList, updateStores} from '../store/model';
+import {
+	getAllBrands,
+	getAllModels,
+	getAllSeries,
+	storeList,
+	updateStores
+} from '../store/model';
 import {join, normalize} from 'path';
 
 const approot = join(__dirname, '../../');
 const webroot = join(approot, './web');
 
-const contentTypeMap: { [key: string]: string } = {
+const contentTypeMap: {[key: string]: string} = {
 	css: 'text/css',
 	htm: 'text/html',
 	html: 'text/html',
@@ -19,20 +25,27 @@ const contentTypeMap: { [key: string]: string } = {
 	txt: 'text/plain'
 };
 
-function sendFile(response: ServerResponse, path: string, relativeTo: string = webroot) {
+function sendFile(
+	response: ServerResponse,
+	path: string,
+	relativeTo: string = webroot
+) {
 	path = normalize(`./${path}`);
 
 	const fsPath = join(relativeTo, path);
 	try {
 		const stream = createReadStream(fsPath);
-		stream.on('error', error => {
+		stream.on('error', (error) => {
 			sendError(response, error.message);
 		});
 
 		const pathSplit = path.split('.');
 		const ext = pathSplit[pathSplit.length - 1].toLowerCase();
 
-		response.setHeader('Content-Type', contentTypeMap[ext] ?? contentTypeMap.txt);
+		response.setHeader(
+			'Content-Type',
+			contentTypeMap[ext] ?? contentTypeMap.txt
+		);
 
 		stream.on('end', () => response.end());
 		stream.pipe(response);
@@ -58,7 +71,11 @@ function sendConfig(response: ServerResponse) {
 	sendJSON(response, config);
 }
 
-function handleAPI(request: IncomingMessage, response: ServerResponse, urlComponents: string[]) {
+function handleAPI(
+	request: IncomingMessage,
+	response: ServerResponse,
+	urlComponents: string[]
+) {
 	if (urlComponents.length < 2) {
 		sendError(response, 'No API route specified', 400);
 		return;
@@ -68,7 +85,7 @@ function handleAPI(request: IncomingMessage, response: ServerResponse, urlCompon
 		case 'config':
 			if (request.method === 'PUT') {
 				const data: string[] = [];
-				request.on('data', chunk => {
+				request.on('data', (chunk) => {
 					data.push(chunk);
 				});
 				request.on('end', () => {
@@ -76,7 +93,7 @@ function handleAPI(request: IncomingMessage, response: ServerResponse, urlCompon
 					try {
 						setConfig(JSON.parse(data.join('')));
 						updateStores();
-					} catch { }
+					} catch {}
 
 					sendConfig(response);
 				});
@@ -158,7 +175,7 @@ export async function startAPIServer() {
 }
 
 export async function stopAPIServer() {
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		if (server) {
 			server.close(resolve);
 			server = undefined;
