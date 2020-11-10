@@ -2,10 +2,16 @@ import {Store} from './store';
 
 export const Target: Store = {
 	labels: {
-		inStock: {
-			container: '[data-test="preorderButton"]',
-			text: ['Preorder now']
-		},
+		inStock: [
+			{
+				container: '[data-test="preorderButton"]',
+				text: ['Preorder now']
+			},
+			{
+				container: '[data-test="shipItButton"]',
+				text: ['Ship it']
+			}
+		],
 		maxPrice: {
 			container: '[data-test="product-price"]'
 		}
