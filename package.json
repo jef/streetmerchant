@@ -73,7 +73,8 @@
     "rules": {
       "sort-imports": "error",
       "sort-keys": "error",
-      "sort-vars": "error"
+      "sort-vars": "error",
+      "max-params": 0
     }
   },
   "husky": {
