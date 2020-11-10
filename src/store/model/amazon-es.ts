@@ -99,6 +99,34 @@ export const AmazonEs: Store = {
 			model: 'trinity',
 			series: '3080',
 			url: 'https://www.amazon.es/dp/B08HR1NPPQ'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08166SLDF&Quantity.1=1',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.amazon.es/dp/product/B08166SLDF'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0815XFSGK&Quantity.1=1',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.amazon.es/dp/product/B0815XFSGK'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08164VTWH&Quantity.1=1',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.amazon.es/dp/product/B08164VTWH'
+		},
+		{
+			brand: 'amd',
+			cartUrl: 'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0815Y8J9N&Quantity.1=1',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.amazon.es/dp/product/B0815Y8J9N'
 		}
 	],
 	name: 'amazon-es'
