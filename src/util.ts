@@ -6,16 +6,19 @@ import {logger} from './logger';
 
 export function getSleepTime(store: Store) {
 	const minSleep = store.minPageSleep as number;
-	return minSleep + (Math.random() * ((store.maxPageSleep as number) - minSleep));
+	return minSleep + Math.random() * ((store.maxPageSleep as number) - minSleep);
 }
 
 export async function delay(ms: number) {
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		setTimeout(resolve, ms);
 	});
 }
 
-export function isStatusCodeInRange(statusCode: number, range: StatusCodeRangeArray) {
+export function isStatusCodeInRange(
+	statusCode: number,
+	range: StatusCodeRangeArray
+) {
 	for (const value of range) {
 		let min: number;
 		let max: number;
@@ -37,7 +40,7 @@ export function isStatusCodeInRange(statusCode: number, range: StatusCodeRangeAr
 export async function usingResponse<T>(
 	browser: Browser,
 	url: string,
-	cb: (response: (Response | null), page: Page, browser: Browser) => Promise<T>
+	cb: (response: Response | null, page: Page, browser: Browser) => Promise<T>
 ): Promise<T> {
 	return usingPage(browser, async (page, browser) => {
 		const response = await page.goto(url, {waitUntil: 'domcontentloaded'});
@@ -46,7 +49,10 @@ export async function usingResponse<T>(
 	});
 }
 
-export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: Browser) => Promise<T>): Promise<T> {
+export async function usingPage<T>(
+	browser: Browser,
+	cb: (page: Page, browser: Browser) => Promise<T>
+): Promise<T> {
 	const page = await browser.newPage();
 	page.setDefaultNavigationTimeout(config.page.timeout);
 	await page.setUserAgent(getRandomUserAgent());
@@ -71,5 +77,7 @@ export async function closePage(page: Page) {
 }
 
 export function getRandomUserAgent(): string {
-	return config.page.userAgents[Math.floor(Math.random() * config.page.userAgents.length)];
+	return config.page.userAgents[
+		Math.floor(Math.random() * config.page.userAgents.length)
+	];
 }

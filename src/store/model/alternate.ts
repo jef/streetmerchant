@@ -4,7 +4,12 @@ export const Alternate: Store = {
 	labels: {
 		inStock: {
 			container: '.stockStatus',
-			text: ['auf lager', 'ware neu eingetroffen', 'in kürze versandfertig', 'ware im zulauf']
+			text: [
+				'auf lager',
+				'ware neu eingetroffen',
+				'in kürze versandfertig',
+				'ware im zulauf'
+			]
 		},
 		maxPrice: {
 			container: 'div.price > span',

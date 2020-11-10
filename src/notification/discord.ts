@@ -25,7 +25,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 					embed.setText(notifyGroup.join(' '));
 				}
 
-				embed.setColor(0x76B900);
+				embed.setColor(0x76b900);
 				embed.setTimestamp();
 
 				const promises = [];
@@ -37,7 +37,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 
 				logger.info('✔ discord message sent');
 			} catch (error) {
-				logger.error('✖ couldn\'t send discord message', error);
+				logger.error("✖ couldn't send discord message", error);
 			}
 		})();
 	}

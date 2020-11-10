@@ -22,13 +22,13 @@ export function sendSlackMessage(link: Link, store: Store) {
 				});
 
 				if (!result.ok) {
-					logger.error('✖ couldn\'t send slack message', result);
+					logger.error("✖ couldn't send slack message", result);
 					return;
 				}
 
 				logger.info('✔ slack message sent');
 			} catch (error) {
-				logger.error('✖ couldn\'t send slack message', error);
+				logger.error("✖ couldn't send slack message", error);
 			}
 		})();
 	}

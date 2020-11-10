@@ -8,7 +8,12 @@ export const AmazonNl: Store = {
 		},
 		inStock: {
 			container: '#availability',
-			text: ['op voorraad', 'verkrijgbaar vanaf', 'wordt gewoonlijk verzonden binnen', 'nog slechts']
+			text: [
+				'op voorraad',
+				'verkrijgbaar vanaf',
+				'wordt gewoonlijk verzonden binnen',
+				'nog slechts'
+			]
 		},
 		maxPrice: {
 			container: 'span[class*="PriceString"]',

@@ -13,15 +13,23 @@ function getRegionInfo(): NvidiaRegionInfo {
 
 	const regionInfo = regionInfos.get(country);
 	if (!regionInfo) {
-		throw new Error(`LogicException could not retrieve region info for ${country}`);
+		throw new Error(
+			`LogicException could not retrieve region info for ${country}`
+		);
 	}
 
 	return regionInfo;
 }
 
-function nvidiaStockUrl(id: number, drLocale: string, currency: string): string {
-	return `https://api-prod.nvidia.com/direct-sales-shop/DR/products/${drLocale}/${currency}/${id}?` +
-		timestampUrlParameter().slice(1);
+function nvidiaStockUrl(
+	id: number,
+	drLocale: string,
+	currency: string
+): string {
+	return (
+		`https://api-prod.nvidia.com/direct-sales-shop/DR/products/${drLocale}/${currency}/${id}?` +
+		timestampUrlParameter().slice(1)
+	);
 }
 
 let cart: NvidiaCart;
@@ -45,7 +53,13 @@ export function generateOpenCartAction(id: number, cardName: string) {
 }
 
 export function generateLinks(): Link[] {
-	const {drLocale, fe3080Id, fe3090Id, fe2060SuperId, currency} = getRegionInfo();
+	const {
+		drLocale,
+		fe3080Id,
+		fe3090Id,
+		fe2060SuperId,
+		currency
+	} = getRegionInfo();
 
 	const links: Link[] = [];
 
@@ -63,7 +77,10 @@ export function generateLinks(): Link[] {
 		links.push({
 			brand: 'nvidia',
 			model: 'founders edition',
-			openCartAction: generateOpenCartAction(fe3080Id, 'nvidia founders edition 3080'),
+			openCartAction: generateOpenCartAction(
+				fe3080Id,
+				'nvidia founders edition 3080'
+			),
 			series: '3080',
 			url: nvidiaStockUrl(fe3080Id, drLocale, currency)
 		});
@@ -73,7 +90,10 @@ export function generateLinks(): Link[] {
 		links.push({
 			brand: 'nvidia',
 			model: 'founders edition',
-			openCartAction: generateOpenCartAction(fe3090Id, 'nvidia founders edition 3090'),
+			openCartAction: generateOpenCartAction(
+				fe3090Id,
+				'nvidia founders edition 3090'
+			),
 			series: '3090',
 			url: nvidiaStockUrl(fe3090Id, drLocale, currency)
 		});

@@ -21,7 +21,8 @@ export const Overclockers: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.overclockers.co.uk/gigabyte-geforce-rtx-2060-oc-rev2-6144mb-gddr6-pci-express-graphics-card-gx-1bj-gi.html'
+			url:
+				'https://www.overclockers.co.uk/gigabyte-geforce-rtx-2060-oc-rev2-6144mb-gddr6-pci-express-graphics-card-gx-1bj-gi.html'
 		}
 	],
 	linksBuilder: {
@@ -34,7 +35,8 @@ export const Overclockers: Store = {
 		urls: [
 			{
 				series: '3070',
-				url: 'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3070'
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3070'
 			},
 			{
 				series: '3080',
@@ -46,7 +48,8 @@ export const Overclockers: Store = {
 			},
 			{
 				series: '3090',
-				url: 'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3090'
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3090'
 			}
 		]
 	},
