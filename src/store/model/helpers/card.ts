@@ -1,9 +1,9 @@
-import {Link, Series} from '../store';
+import {Link, Model, Series} from '../store';
 import {logger} from '../../../logger';
 
 export interface Card {
 	brand: string;
-	model: string;
+	model: Model;
 }
 
 interface LinksBuilderOptions {
@@ -122,13 +122,8 @@ export function parseCard(name: string): Card | null {
 	});
 	/* eslint-enable @typescript-eslint/prefer-regexp-exec */
 
-	if (isOC) {
-		model.push('OC');
-	}
-
-	if (model.length === 0) {
-		return null;
-	}
+	if (isOC) model.push('oc');
+	if (model.length === 0) return null;
 
 	return {
 		brand: brand.toLowerCase(),
@@ -136,6 +131,6 @@ export function parseCard(name: string): Card | null {
 			.join(' ')
 			.toLowerCase()
 			.replace(/ gaming\b/g, '')
-			.trim()
+			.trim() as Model
 	};
 }

@@ -123,7 +123,7 @@ export type Link = {
 	brand: Brand;
 	itemNumber?: string;
 	series: Series;
-	model: Model | string;
+	model: Model;
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
