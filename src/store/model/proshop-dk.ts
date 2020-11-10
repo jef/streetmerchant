@@ -75,14 +75,14 @@ export const ProshopDK: Store = {
 		},
 		{
 			brand: 'inno3d',
-			model: 'ichill 4x',
+			model: 'ichill x3',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/Inno3D-GeForce-RTX-3080-iCHILL-X4-10GB-GDDR6X-SDRAM-Grafikkort/2878971'
 		},
 		{
 			brand: 'inno3d',
-			model: 'ichill 3x',
+			model: 'ichill x3',
 			series: '3080',
 			url:
 				'https://www.proshop.dk/Grafikkort/Inno3D-GeForce-RTX-3080-iCHILL-X3-10GB-GDDR6X-SDRAM-Grafikkort/2878969'

@@ -27,7 +27,7 @@ export const ProshopDE: Store = {
 		},
 		{
 			brand: 'asus',
-			model: ' rog strix oc',
+			model: 'rog strix oc',
 			series: '3070',
 			url: 'https://www.proshop.de/2876845'
 		},
@@ -129,7 +129,7 @@ export const ProshopDE: Store = {
 		},
 		{
 			brand: 'asus',
-			model: ' rog strix oc',
+			model: 'rog strix oc',
 			series: '3080',
 			url: 'https://www.proshop.de/2876859'
 		},

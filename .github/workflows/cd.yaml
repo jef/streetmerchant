@@ -3,10 +3,26 @@ on:
   push:
     branches:
       - main
+      - develop
     paths-ignore:
       - '**.md'
 jobs:
-  cd:
+  publish-nightly:
+    if: contains(github.ref, 'develop')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: login into github package registry
+        run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+      - name: build nightly docker image
+        run: |
+          docker build \
+          -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
+          -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
+      - name: publish nightly
+        run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
+  publish-latest:
+    if: contains(github.ref, 'main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,15 +34,6 @@ jobs:
           package-name: streetmerchant
       - name: login into github package registry
         run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-      - name: build nightly docker image
-        if: ${{ ! steps.release.outputs.release_created }}
-        run: |
-          docker build \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
-      - name: publish nightly
-        if: ${{ ! steps.release.outputs.release_created }}
-        run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
       - name: build latest docker image
         if: ${{ steps.release.outputs.release_created }}
         run: |

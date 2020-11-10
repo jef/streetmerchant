@@ -67,9 +67,7 @@ export type Model =
 	| 'gaming x3'
 	| 'ichill x2'
 	| 'ichill x3'
-	| 'ichill 3x'
 	| 'ichill x4'
-	| 'ichill 4x'
 	| 'gamerock oc'
 	| 'gaming x trio'
 	| 'gaming pro'
@@ -123,7 +121,7 @@ export type Link = {
 	brand: Brand;
 	itemNumber?: string;
 	series: Series;
-	model: Model | string;
+	model: Model;
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
