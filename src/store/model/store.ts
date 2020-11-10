@@ -10,6 +10,23 @@ export type Pricing = {
 	euroFormat?: boolean;
 };
 
+export type Brand =
+	| 'test:brand'
+	| 'amd'
+	| 'asus'
+	| 'evga'
+	| 'gainward'
+	| 'gigabyte'
+	| 'inno3d'
+	| 'kfa2'
+	| 'microsoft'
+	| 'msi'
+	| 'nvidia'
+	| 'palit'
+	| 'pny'
+	| 'sony'
+	| 'zotac';
+
 export type Series =
 	| 'test:series'
 	| '3070'
@@ -32,6 +49,7 @@ export type Model =
 	| '5950x'
 	| 'amp extreme holo'
 	| 'amp holo'
+	| 'aorus'
 	| 'aorus master'
 	| 'aorus xtreme'
 	| 'dual'
@@ -39,14 +57,19 @@ export type Model =
 	| 'dual oc'
 	| 'founders edition'
 	| 'ftw3'
+	| 'ftw3 gaming'
 	| 'ftw3 ultra'
+	| 'ftw3 ultra gaming'
 	| 'eagle'
 	| 'eagle oc'
 	| 'gaming'
 	| 'gaming oc'
 	| 'gaming x3'
+	| 'ichill x2'
 	| 'ichill x3'
+	| 'ichill 3x'
 	| 'ichill x4'
+	| 'ichill 4x'
 	| 'gamerock oc'
 	| 'gaming x trio'
 	| 'gaming pro'
@@ -58,48 +81,49 @@ export type Model =
 	| 'phoenix gs'
 	| 'phoenix gs oc'
 	| 'rog strix'
+	| 'rog strix gaming'
 	| 'rog strix oc'
+	| 'rog strix oc gaming'
 	| 'sg oc'
-	| 'tuf'
-	| 'tuf oc'
-	| 'turbo'
-	| 'ventus 2s oc'
-	| 'ventus 3x'
-	| 'ventus 3x oc'
+	| 'sg-oc'
+	| 'strix gaming'
+	| 'strix gaming oc'
 	| 'trinity'
 	| 'trinity oc'
+	| 'tuf'
+	| 'tuf gaming'
+	| 'tuf gaming oc'
+	| 'tuf oc'
+	| 'tuf oc gaming'
+	| 'turbo'
 	| 'twin edge'
 	| 'twin edge oc'
+	| 'twin x2'
 	| 'twin x2 oc'
+	| 'uprising'
+	| 'ventus 2x'
+	| 'ventus 2x oc'
+	| 'ventus 3x'
+	| 'ventus 3x oc'
 	| 'vision'
 	| 'vision oc'
 	| 'xc3'
+	| 'xc3 gaming'
+	| 'xc3 black'
+	| 'xc3 black gaming'
 	| 'xc3 ultra'
-	| 'xboxss'
-	| 'xboxsx'
+	| 'xc3 ultra gaming'
+	| 'xbox series s'
+	| 'xbox series x'
 	| 'xlr8'
-	| 'xlr8 rgb';
+	| 'xlr8 rgb'
+	| 'xlr8 uprising';
 
 export type Link = {
-	brand:
-		| 'test:brand'
-		| 'amd'
-		| 'asus'
-		| 'evga'
-		| 'gainward'
-		| 'gigabyte'
-		| 'inno3d'
-		| 'kfa2'
-		| 'microsoft'
-		| 'msi'
-		| 'nvidia'
-		| 'palit'
-		| 'pny'
-		| 'sony'
-		| 'zotac';
+	brand: Brand;
 	itemNumber?: string;
 	series: Series;
-	model: string;
+	model: Model | string;
 	url: string;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
