@@ -159,6 +159,7 @@ environment variables are **optional**._
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
+| Game (UK) | `game`|
 | Gamestop | `gamestop`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|

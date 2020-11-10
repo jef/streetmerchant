@@ -27,6 +27,18 @@ export const Scan: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.scan.co.uk/products/msi-geforce-rtx-2060-ventus-xs-oc-6gb-gddr6-vr-ready-graphics-card-1920-core-1710mhz-boost'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.scan.co.uk/products/playstation-5-console'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.scan.co.uk/products/playstation-5-digital-edition'
 		}
 	],
 	linksBuilder: {
