@@ -32,6 +32,7 @@ WORKDIR /app
 
 COPY --from=builder /build/node_modules/ node_modules/
 COPY --from=builder /build/build/ build/
+COPY web/ web/
 COPY package.json package.json
 COPY version.txt version.txt
 
