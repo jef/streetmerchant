@@ -28,6 +28,11 @@ getting `streetmerchant` running!
 
 ### Installation: native
 
+| Branch | Note |
+|:---:|---|
+| `main` | Latest release; usually tagged, stable |
+| `develop` | Latest HEAD; not tagged, could be unstable |
+
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
@@ -47,8 +52,8 @@ Available via GitHub Container Registry.
 
 | Tag | Note |
 |:---:|---|
-| `latest` | Latest stable build |
-| `nightly` | Latest HEAD build, could be unstable |
+| `latest` | Latest release; usually tagged, stable |
+| `nightly` | Latest HEAD; not tagged, could be unstable |
 
 ```sh
 # to run
