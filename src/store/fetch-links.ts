@@ -12,14 +12,16 @@ function addNewLinks(store: Store, links: Link[], series: Series) {
 		return;
 	}
 
-	const existingUrls = new Set(store.links.map(link => link.url));
-	const newLinks = links.filter(link => !existingUrls.has(link.url));
+	const existingUrls = new Set(store.links.map((link) => link.url));
+	const newLinks = links.filter((link) => !existingUrls.has(link.url));
 
 	if (newLinks.length === 0) {
 		return;
 	}
 
-	logger.debug(Print.message(`FOUND ${newLinks.length} STORE LINKS`, series, store, true));
+	logger.debug(
+		Print.message(`FOUND ${newLinks.length} STORE LINKS`, series, store, true)
+	);
 	logger.debug(JSON.stringify(newLinks, null, 2));
 
 	store.links = store.links.concat(newLinks);
@@ -43,19 +45,23 @@ export async function fetchLinks(store: Store, browser: Browser) {
 			url = [url];
 		}
 
-		url.map(x => promises.push(usingResponse(browser, x, async response => {
-			const text = await response?.text();
+		url.map((x) =>
+			promises.push(
+				usingResponse(browser, x, async (response) => {
+					const text = await response?.text();
 
-			if (!text) {
-				logger.error(Print.message('NO RESPONSE', series, store, true));
-				return;
-			}
+					if (!text) {
+						logger.error(Print.message('NO RESPONSE', series, store, true));
+						return;
+					}
 
-			const docElement = cheerio.load(text).root();
-			const links = store.linksBuilder!.builder(docElement, series);
+					const docElement = cheerio.load(text).root();
+					const links = store.linksBuilder!.builder(docElement, series);
 
-			addNewLinks(store, links, series);
-		})));
+					addNewLinks(store, links, series);
+				})
+			)
+		);
 	}
 
 	await Promise.all(promises);

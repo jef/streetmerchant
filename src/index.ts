@@ -12,9 +12,11 @@ import {tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
 if (config.browser.lowBandwidth) {
-	puppeteer.use(resourceBlock({
-		blockedTypes: new Set(['image', 'font'] as const)
-	}));
+	puppeteer.use(
+		resourceBlock({
+			blockedTypes: new Set(['image', 'font'] as const)
+		})
+	);
 } else {
 	puppeteer.use(adBlocker);
 }
@@ -41,7 +43,9 @@ async function main() {
 
 	// Add the address of the proxy server if defined
 	if (config.proxy.address) {
-		args.push(`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`);
+		args.push(
+			`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`
+		);
 	}
 
 	await stop();
@@ -91,7 +95,10 @@ async function loopMain() {
 	try {
 		await main();
 	} catch (error) {
-		logger.error('✖ something bad happened, resetting streetmerchant in 5 seconds', error);
+		logger.error(
+			'✖ something bad happened, resetting streetmerchant in 5 seconds',
+			error
+		);
 		setTimeout(loopMain, 5000);
 	}
 }

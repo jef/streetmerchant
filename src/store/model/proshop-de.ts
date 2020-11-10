@@ -3,7 +3,8 @@ import {Store} from './store';
 export const ProshopDE: Store = {
 	labels: {
 		maxPrice: {
-			container: '.site-currency-wrapper > span[class="site-currency-attention"]',
+			container:
+				'.site-currency-wrapper > span[class="site-currency-attention"]',
 			euroFormat: true
 		},
 		outOfStock: {
@@ -279,4 +280,3 @@ export const ProshopDE: Store = {
 	],
 	name: 'proshop-de'
 };
-

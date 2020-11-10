@@ -144,7 +144,11 @@ function filterBrandsSeriesModels() {
 
 function printConfig() {
 	if (config.store.stores.length > 0) {
-		logger.info(`ℹ selected stores: ${config.store.stores.map(store => store.name).join(', ')}`);
+		logger.info(
+			`ℹ selected stores: ${config.store.stores
+				.map((store) => store.name)
+				.join(', ')}`
+		);
 	}
 
 	if (config.store.showOnlyBrands.length > 0) {
@@ -152,9 +156,15 @@ function printConfig() {
 	}
 
 	if (config.store.showOnlyModels.length > 0) {
-		logger.info(`ℹ selected models: ${config.store.showOnlyModels.map(entry => {
-			return entry.series ? entry.name + ' (' + entry.series + ')' : entry.name;
-		}).join(', ')}`);
+		logger.info(
+			`ℹ selected models: ${config.store.showOnlyModels
+				.map((entry) => {
+					return entry.series
+						? entry.name + ' (' + entry.series + ')'
+						: entry.name;
+				})
+				.join(', ')}`
+		);
 	}
 
 	if (config.store.showOnlySeries.length > 0) {
@@ -169,7 +179,9 @@ function warnIfStoreDeprecated(store: Store) {
 			logger.warn(`${store.name} is deprecated in favor of bestbuy`);
 			break;
 		case 'evga':
-			logger.warn(`${store.name} is deprecated since they only support queuing`);
+			logger.warn(
+				`${store.name} is deprecated since they only support queuing`
+			);
 			break;
 		default:
 	}
