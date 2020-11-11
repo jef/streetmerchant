@@ -161,6 +161,34 @@ export const PCComponentes: Store = {
 			series: '3080',
 			url:
 				'https://www.pccomponentes.com/pny-geforce-rtx-3080-epic-x-rgb-triple-fan-xlr8-gaming-edition-10gb-gddr6x'
+		},
+		{
+			brand: 'amd',
+			model: '5600X',
+			series: 'ryzen5600',
+			url:
+				'https://www.pccomponentes.com/amd-ryzen-5-5600x-37ghz'
+		},
+		{
+			brand: 'amd',
+			model: '5800X',
+			series: 'ryzen5800',
+			url:
+				'https://www.pccomponentes.com/amd-ryzen-7-5800x-38ghz'
+		},
+		{
+			brand: 'amd',
+			model: '5900X',
+			series: 'ryzen5900',
+			url:
+				'hhttps://www.pccomponentes.com/amd-ryzen-9-5900x-37-ghz'
+		},
+		{
+			brand: 'amd',
+			model: '5950X',
+			series: 'ryzen5950',
+			url:
+				'https://www.pccomponentes.com/amd-ryzen-9-5950x-34-ghz'
 		}
 	],
 	name: 'pccomponentes'
