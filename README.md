@@ -500,7 +500,6 @@ are welcome.
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
 See [#11](https://github.com/jef/streetmerchant/issues/11).
 
-**Q: Why does Amazon opens up to a page error (picture of dog) instead of adding to cart or going to the detail page ?**
-This is intended see [#733](https://github.com/jef/streetmerchant/issues/733). Indicates that the Amazon item out of stock and only available from a third-party seller (often at a markup).
+**Q: Why does Amazon show an error page (with a picture of an animal) instead of adding to cart or going to the detail page?** This is intended; see [#733](https://github.com/jef/streetmerchant/issues/733). This indicates that the item is out of stock and only available from a third-party seller (often at a markup).
 
 <p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>
