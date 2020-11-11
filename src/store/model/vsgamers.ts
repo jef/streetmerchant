@@ -108,6 +108,67 @@ export const vsgamers: Store = {
 			series: '3070',
 			url: 'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3070-gaming-8g-8-gb-gddr6x'
         },
+        {
+			brand: 'zotac',
+			model: 'amp holo',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-zotac-gaming-nvidia-geforce-rtxr-3080-10-gb-gddr6x'
+        },
+        {
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3080-ventus-3x-10g-oc-10-gb-gddr6x'
+        }, 
+        {
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3080-gaming-x-trio-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-asus-tuf-gaming-geforce-rtx-3080-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-asus-tuf-gaming-geforce-rtx-3080-oc-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'asus',
+			model: 'strix',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3080-gaming-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3080-gaming-oc-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-geforce-rtx-3080-eagle-oc-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-geforce-rtx-3080-gaming-oc-10g-10-gb-gddr6x'
+        },
+        {
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080',
+			url: 'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3080-trinity-10-gb-gddr6x'
+        },
+        
     ],
 	name: 'vsgamers'
 };
