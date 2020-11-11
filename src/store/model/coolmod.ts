@@ -189,28 +189,28 @@ export const Coolmod: Store = {
 		},
 		{
 			brand: 'amd',
-			model: '5600X',
+			model: '5600x',
 			series: 'ryzen5600',
 			url:
 				'https://www.coolmod.com/amd-ryzen-5-5600x-46ghz-socket-am4-boxed-procesador-precio'
 		},
 		{
 			brand: 'amd',
-			model: '5800X',
+			model: '5800x',
 			series: 'ryzen5800',
 			url:
 				'https://www.coolmod.com/amd-ryzen-7-5800x-47ghz-socket-am4-boxed-procesador-precio'
 		},
 		{
 			brand: 'amd',
-			model: '5900X',
+			model: '5900x',
 			series: 'ryzen5900',
 			url:
 				'https://www.coolmod.com/amd-ryzen-9-5900x-48ghz-socket-am4-boxed-procesador-precio'
 		},
 		{
 			brand: 'amd',
-			model: '5950X',
+			model: '5950x',
 			series: 'ryzen5950',
 			url:
 				'https://www.coolmod.com/amd-ryzen-9-5950x-49ghz-socket-am4-boxed-procesador-precio'
