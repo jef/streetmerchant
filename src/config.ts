@@ -36,7 +36,7 @@ function envOrArray(
  * @param environment Interested environment variable.
  * @param boolean Default boolean. If not set, is `true`.
  */
-export function envOrBoolean(
+function envOrBoolean(
 	environment: string | undefined,
 	boolean?: boolean
 ): boolean {
@@ -302,6 +302,7 @@ if (process.env.MAX_PRICE) {
 }
 
 const store = {
+	autoAddToCart: envOrBoolean(process.env.AUTO_ADD_TO_CART, true),
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	maxPrice: {
 		series: {

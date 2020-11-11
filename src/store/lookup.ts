@@ -9,7 +9,7 @@ import {
 	getSleepTime,
 	isStatusCodeInRange
 } from '../util';
-import {config, envOrBoolean} from '../config';
+import {config} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
@@ -118,7 +118,7 @@ async function lookupCard(
 
 	if (await lookupCardInStock(store, page, link)) {
 		const givenUrl =
-			link.cartUrl && !envOrBoolean(process.env.DISABLE_ADD_TO_CART, false)
+			link.cartUrl && config.store.autoAddToCart
 				? link.cartUrl
 				: link.url;
 		logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
