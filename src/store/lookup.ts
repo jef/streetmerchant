@@ -9,7 +9,7 @@ import {
 	getSleepTime,
 	isStatusCodeInRange
 } from '../util';
-import {config} from '../config';
+import {config, envOrBoolean} from '../config';
 import {disableBlockerInPage} from '../adblocker';
 import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
@@ -117,7 +117,10 @@ async function lookupCard(
 	}
 
 	if (await lookupCardInStock(store, page, link)) {
-		const givenUrl = link.cartUrl ? link.cartUrl : link.url;
+		const givenUrl =
+			link.cartUrl && !envOrBoolean(process.env.DISABLE_ADD_TO_CART, false)
+				? link.cartUrl
+				: link.url;
 		logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
 		if (config.browser.open) {

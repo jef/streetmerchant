@@ -36,7 +36,7 @@ function envOrArray(
  * @param environment Interested environment variable.
  * @param boolean Default boolean. If not set, is `true`.
  */
-function envOrBoolean(
+export function envOrBoolean(
 	environment: string | undefined,
 	boolean?: boolean
 ): boolean {
