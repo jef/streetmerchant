@@ -63,7 +63,7 @@ export const Coolmod: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.coolmod.com/asus-rog-strix-geforce-rtx-3080-oc-10gb-gddr6x-tarjeta-grafica-precio'
@@ -91,7 +91,7 @@ export const Coolmod: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.coolmod.com/asus-rog-strix-geforce-rtx-3080-10gb-gddr6x-tarjeta-grfica-precio'
@@ -147,21 +147,21 @@ export const Coolmod: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.coolmod.com/pny-geforce-rtx-3080-10gb-xlr8-gaming-epic-x-rgb-10gb-gddr6x-tarjeta-grafica-precio'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.coolmod.com/pny-geforce-rtx-3080-xlr8-gaming-epic-x-rgb-10gb-gddr6x-tarjeta-grafica-precio'
 		},
 		{
 			brand: 'kfa2',
-			model: 'sg-oc',
+			model: 'sg oc',
 			series: '3080',
 			url:
 				'https://www.coolmod.com/kfa2-geforce-rtx-3080-sg-1-click-oc-10gb-gddr6x-tarjeta-grafica-precio'
