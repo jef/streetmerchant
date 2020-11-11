@@ -17,6 +17,7 @@ import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
+import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
@@ -71,6 +72,7 @@ export const storeList = new Map([
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
+	[CanadaComputers.name, CanadaComputers],
 	[Caseking.name, Caseking],
 	[Ccl.name, Ccl],
 	[Computeruniverse.name, Computeruniverse],
