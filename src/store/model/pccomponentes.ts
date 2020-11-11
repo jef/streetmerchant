@@ -66,7 +66,7 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.pccomponentes.com/asus-rog-strix-geforce-rtx-3080-10g-gaming-oc-10gb-gddr6x'
@@ -94,7 +94,7 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.pccomponentes.com/asus-rog-strix-geforce-rtx-3080-gaming-10gb-gddr6x'
@@ -150,14 +150,14 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.pccomponentes.com/pny-geforce-rtx-3080-xlr8-gaming-epic-x-rgb-10gb-gddr6x'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.pccomponentes.com/pny-geforce-rtx-3080-epic-x-rgb-triple-fan-xlr8-gaming-edition-10gb-gddr6x'

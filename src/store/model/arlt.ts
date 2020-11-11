@@ -46,7 +46,7 @@ export const Arlt: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url:
 				'https://www.arlt.com/Hardware/PC-Komponenten/Grafikkarten/NVIDIA/GeForce-RTX/RTX-3070/ASUS-ROG-Strix-GeForce-RTX-3070.html'
@@ -95,7 +95,7 @@ export const Arlt: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.arlt.com/Hardware/PC-Komponenten/Grafikkarten/NVIDIA/GeForce-RTX/RTX-3090/ASUS-ROG-Strix-GeForce-RTX-3090-OC.html'

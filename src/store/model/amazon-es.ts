@@ -84,7 +84,7 @@ export const AmazonEs: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.amazon.es/dp/B08HN6KYS3'
 		},

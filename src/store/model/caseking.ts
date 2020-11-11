@@ -26,14 +26,14 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.caseking.de/asus-geforce-rtx-3080-rog-strix-10g-10240-mb-gddr6x-gcas-400.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.caseking.de/asus-geforce-rtx-3080-rog-strix-o10g-10240-mb-gddr6x-gcas-399.html'
@@ -152,14 +152,14 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.caseking.de/pny-geforce-rtx-3080-xlr8-gaming-epic-x-rgb-10240-mb-gddr6x-gcpn-075.html'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.caseking.de/pny-geforce-rtx-3080-xlr8-gaming-revel-epic-x-rgb-10240-mb-gddr6x-gcpn-076.html'
@@ -187,14 +187,14 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.caseking.de/asus-geforce-rtx-3090-rog-strix-24g-24576-mb-gddr6x-gcas-397.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.caseking.de/asus-geforce-rtx-3090-rog-strix-o24g-24576-mb-gddr6x-gcas-398.html'
@@ -292,14 +292,14 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
 			url:
 				'https://www.caseking.de/pny-geforce-rtx-3090-xlr8-gaming-epic-x-rgb-24576-mb-gddr6x-gcpn-073.html'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
 			url:
 				'https://www.caseking.de/pny-geforce-rtx-3090-xlr8-gaming-revel-epic-x-rgb-24576-mb-gddr6x-gcpn-074.html'
