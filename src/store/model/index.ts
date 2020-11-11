@@ -52,6 +52,7 @@ import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Target} from './target';
+import {vsgamers} from './vsgamers';
 import {Very} from './very';
 import {Walmart} from './walmart';
 import {Zotac} from './zotac';
@@ -110,6 +111,7 @@ export const storeList = new Map([
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Target.name, Target],
+	[vsgamers.name, vsgamers],
 	[Very.name, Very],
 	[Walmart.name, Walmart],
 	[Zotac.name, Zotac]
