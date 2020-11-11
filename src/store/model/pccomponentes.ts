@@ -164,28 +164,28 @@ export const PCComponentes: Store = {
 		},
 		{
 			brand: 'amd',
-			model: '5600X',
+			model: '5600x',
 			series: 'ryzen5600',
 			url:
 				'https://www.pccomponentes.com/amd-ryzen-5-5600x-37ghz'
 		},
 		{
 			brand: 'amd',
-			model: '5800X',
+			model: '5800x',
 			series: 'ryzen5800',
 			url:
 				'https://www.pccomponentes.com/amd-ryzen-7-5800x-38ghz'
 		},
 		{
 			brand: 'amd',
-			model: '5900X',
+			model: '5900x',
 			series: 'ryzen5900',
 			url:
 				'hhttps://www.pccomponentes.com/amd-ryzen-9-5900x-37-ghz'
 		},
 		{
 			brand: 'amd',
-			model: '5950X',
+			model: '5950x',
 			series: 'ryzen5950',
 			url:
 				'https://www.pccomponentes.com/amd-ryzen-9-5950x-34-ghz'
