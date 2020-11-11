@@ -63,7 +63,7 @@ export const AmazonNl: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.amazon.nl/dp/B08HN7VVLJ'
 		}

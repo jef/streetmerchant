@@ -24,7 +24,7 @@ export const Adorama: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3080',
 			url: 'https://www.adorama.com/pnv301tfxmpb.html'
 		},
@@ -72,13 +72,13 @@ export const Adorama: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url: 'https://www.adorama.com/png30801tfxb.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.adorama.com/asrx3080o10g.html'
 		},
@@ -120,7 +120,7 @@ export const Adorama: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.adorama.com/asrx3090o24g.html'
 		}

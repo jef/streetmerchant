@@ -60,7 +60,7 @@ export const Azerty: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://azerty.nl/product/asus/4348174/rog-strix-geforce-rtx-3080-oc-grafische-kaart-gf-rtx-3080'
@@ -81,21 +81,21 @@ export const Azerty: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://azerty.nl/product/pny/4342269/geforce-rtx-3080-xlr8-gaming-revel-epic-x-rgb-triple-fan-gaming-edition-grafische-kaart-gf-rtx-3080'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3070',
 			url:
 				'https://azerty.nl/product/asus/4363892/rog-strix-gaming-geforce-rtx-3070-o8g-videokaart-8-gb-gddr6'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url:
 				'https://azerty.nl/product/asus/4373096/rog-strix-gaming-geforce-rtx-3070-8g-videokaart-8-gb-gddr6'
@@ -151,7 +151,7 @@ export const Azerty: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url:
 				'https://azerty.nl/product/pny/4342271/epic-x-rgb-geforce-rtx-3070-triple-fan-gaming-edition-xlr8--videokaart-8-gb-gddr6x'

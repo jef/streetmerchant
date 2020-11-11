@@ -102,7 +102,7 @@ export const Notebooksbilliger: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url:
 				'https://www.notebooksbilliger.de/pny+geforce+rtx+3070+8gb+xlr8+gaming+revel+epic+x+rgb+685560'
@@ -200,28 +200,28 @@ export const Notebooksbilliger: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+xlr8+gaming+10gb+gddr6x+grafikkarte+677407'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.notebooksbilliger.de/pny+geforce+rtx+3080+10gb+xlr8+gaming+revel+epic+x+grafikkarte+677412'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3090+24gb+gddr6x+grafikkarte+677343'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.notebooksbilliger.de/asus+rog+strix+geforce+rtx+3090+oc+24gb+gddr6x+grafikkarte+677308'

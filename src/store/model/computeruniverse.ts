@@ -39,14 +39,14 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3070-gaming-8-gb-enthusiast-grafikkarte'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3070',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3070-gaming-oc-8-gb-oc-enthusiast-grafikkarte'
@@ -142,7 +142,7 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url:
 				'https://www.computeruniverse.net/de/pny-geforce-rtx3070-xlr8-gaming-epic-x-rgb-p-8-gb-enthusiast-grafikkarte'
@@ -156,14 +156,14 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3080-gaming-10-gb-enthusiast-grafikkarte'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3080-gaming-oc-10-gb-oc-enthusiast-grafikkarte'
@@ -317,14 +317,14 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.computeruniverse.net/de/pny-geforce-rtx-3080-xlr8-gaming-epic-x-rgb-p-10-gb-enthusiast-grafikkarte'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.computeruniverse.net/de/pny-geforce-rtx3080-xlr8-gaming-epic-x-rgb-m-10-gb-enthusiast-grafikkarte'
@@ -359,14 +359,14 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3090-gaming-24-gb-enthusiast-grafikkarte'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3090-gaming-oc-24-gb-oc-enthusiast-grafikkarte'
@@ -506,14 +506,14 @@ export const Computeruniverse: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
 			url:
 				'https://www.computeruniverse.net/de/pny-geforce-rtx3090-xlr8-gaming-epic-x-rgb-m-24-gb-enthusiast-grafikkarte'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
 			url:
 				'https://www.computeruniverse.net/de/pny-geforce-rtx3090-xlr8-gaming-epic-x-rgb-p-24-gb-enthusiast-grafikkarte'

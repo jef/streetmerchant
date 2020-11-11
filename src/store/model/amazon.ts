@@ -51,7 +51,7 @@ export const Amazon: Store = {
 			brand: 'pny',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBJB7YD&Quantity.1=1',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3070',
 			url: 'https://www.amazon.com/dp/B08HBJB7YD'
 		},
@@ -83,7 +83,7 @@ export const Amazon: Store = {
 			brand: 'pny',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBR7QBM&Quantity.1=1',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3080',
 			url: 'https://www.amazon.com/dp/B08HBR7QBM'
 		},
@@ -91,7 +91,7 @@ export const Amazon: Store = {
 			brand: 'pny',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBTJMLJ&Quantity.1=1',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url: 'https://www.amazon.com/dp/B08HBTJMLJ'
 		},
@@ -179,7 +179,7 @@ export const Amazon: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6F174Z&Quantity.1=1',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.amazon.com/dp/B08J6F174Z'
 		},
@@ -187,7 +187,7 @@ export const Amazon: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J6GMWCQ&Quantity.1=1',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08J6GMWCQ'
 		},
@@ -219,7 +219,7 @@ export const Amazon: Store = {
 			brand: 'pny',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBQWBHH&Quantity.1=1',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HBQWBHH'
 		},
@@ -227,7 +227,7 @@ export const Amazon: Store = {
 			brand: 'pny',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HBVX53D&Quantity.1=1',
-			model: 'xlr8',
+			model: 'xlr8 revel',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HBVX53D'
 		},

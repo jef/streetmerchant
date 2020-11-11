@@ -39,7 +39,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'asus',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432445/cart',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445&intl=nosplash'
@@ -159,7 +159,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'pny',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432653/cart',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url:
 				'https://www.bestbuy.com/site/pny-geforce-rtx-3070-8gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432653.p?skuId=6432653&intl=nosplash'
@@ -167,7 +167,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'pny',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432655/cart',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.bestbuy.com/site/pny-geforce-rtx-3080-10gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432655.p?skuId=6432655&intl=nosplash'
@@ -175,7 +175,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'pny',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432658/cart',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
 			url:
 				'https://www.bestbuy.com/site/pny-geforce-rtx-3080-10gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432658.p?skuId=6432658&intl=nosplash'
@@ -191,7 +191,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'asus',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432447/cart',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.bestbuy.com/site/asus-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432447.p?skuId=6432447&intl=nosplash'
@@ -255,7 +255,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'pny',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432657/cart',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
 			url:
 				'https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657&intl=nosplash'

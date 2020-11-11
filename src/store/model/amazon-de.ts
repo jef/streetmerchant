@@ -28,13 +28,13 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HN7VVLJ'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HN6KYS3'
 		},
@@ -142,13 +142,13 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HN642LY'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HN51T8Q'
 		},
@@ -268,13 +268,13 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08HT7PR9Y'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08L8JNTXQ'
 		},
@@ -352,7 +352,7 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08HBJB7YD'
 		},

@@ -50,7 +50,7 @@ export const BestBuyCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url:
 				'https://www.bestbuy.ca/en-ca/product/asus-rog-strix-geforce-rtx-3080-10gb-gddr6x-video-card/14954116?intl=nosplash'
@@ -71,7 +71,7 @@ export const BestBuyCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url:
 				'https://www.bestbuy.ca/en-ca/product/asus-rog-strix-geforce-rtx-3090-24gb-gddr6x-video-card/14954117?intl=nosplash'

@@ -21,13 +21,13 @@ export const ProshopDE: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url: 'https://www.proshop.de/2876843'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3070',
 			url: 'https://www.proshop.de/2876845'
 		},
@@ -123,13 +123,13 @@ export const ProshopDE: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.proshop.de/2876857'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.proshop.de/2876859'
 		},
@@ -207,13 +207,13 @@ export const ProshopDE: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url: 'https://www.proshop.de/2876865'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.proshop.de/2876867'
 		},

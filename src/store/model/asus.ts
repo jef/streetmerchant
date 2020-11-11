@@ -47,7 +47,7 @@ export const Asus: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '202009AM290000002',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://store.asus.com/us/item/202009AM290000002'
 		}
