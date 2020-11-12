@@ -142,6 +142,7 @@ environment variables are **optional**._
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
+| Amazon (FR) | `amazon-fr`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
