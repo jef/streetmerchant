@@ -139,6 +139,7 @@ environment variables are **optional**._
 | Alternate (DE) | `alternate`|
 | Alternate (NL) | `alternate-nl`|
 | Amazon | `amazon`|
+| Amazon (BR) | `amazon-br`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
@@ -173,6 +174,7 @@ environment variables are **optional**._
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
+| Mike's Computer Shop | `mikescomputershop`|
 | Mindfactory (DE) | `mindfactory` |
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
