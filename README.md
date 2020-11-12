@@ -174,7 +174,7 @@ environment variables are **optional**._
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
-| Mike's Computer Shop | `mikescomputershop`|
+| Mike's Computer Shop (CA) | `mikescomputershop`|
 | Mindfactory (DE) | `mindfactory` |
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
