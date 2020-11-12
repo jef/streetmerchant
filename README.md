@@ -84,6 +84,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
+| `AUTO_ADD_TO_CART` | Enable auto add to cart on support stores | Default: `true` |
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
