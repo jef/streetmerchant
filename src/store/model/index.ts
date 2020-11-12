@@ -20,6 +20,7 @@ import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Caseking} from './caseking';
+import {CanadaComputers} from './canadacomputers';
 import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
@@ -32,7 +33,6 @@ import {EvgaEu} from './evga-eu';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
-import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
@@ -80,6 +80,7 @@ export const storeList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Caseking.name, Caseking],
+	[CanadaComputers.name, CanadaComputers],
 	[Ccl.name, Ccl],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
@@ -92,7 +93,6 @@ export const storeList = new Map([
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
-	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
