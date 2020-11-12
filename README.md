@@ -28,15 +28,15 @@ getting `streetmerchant` running!
 
 ### Installation: native
 
-| Branch | Note |
+| Reference | Note |
 |:---:|---|
-| `main` | Latest release; usually tagged, stable |
-| `develop` | Latest HEAD; not tagged, could be unstable |
+| tag | Example, `v1.0.0`; stable |
+| `main` | Latest HEAD; not tagged, could be unstable |
 
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
-  - To checkout a particular branch, use `git checkout <branch name>` after cloning
+  - To checkout a particular ref, use `git checkout <ref name>` after cloning
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
@@ -53,8 +53,8 @@ Available via GitHub Container Registry.
 
 | Tag | Note |
 |:---:|---|
-| `latest` | Latest release; usually tagged, stable |
-| `nightly` | Latest HEAD; not tagged, could be unstable |
+| `latest` | Latest release; stable |
+| `nightly` | Latest HEAD each day at midnight UTC; could be unstable |
 
 ```sh
 # to run
