@@ -33,6 +33,7 @@ import {EvgaEu} from './evga-eu';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
+import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
@@ -93,6 +94,7 @@ export const storeList = new Map([
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
+	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
