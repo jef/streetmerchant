@@ -53,7 +53,7 @@ import {Scan} from './scan';
 import {Store} from './store';
 import {Target} from './target';
 import {Very} from './very';
-import {vsgamers} from './vsgamers';
+import {VsGamers} from './vsgamers';
 import {Walmart} from './walmart';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
