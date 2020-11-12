@@ -4,13 +4,13 @@ on:
     branches:
       - main
 jobs:
-  build-lint:
+  build-and-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v2.1.1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.2
         with:
-          node-version: 14
+          node-version: 14.15.0
       - uses: actions/cache@v2
         with:
           path: ~/.npm
@@ -23,3 +23,16 @@ jobs:
           npm ci
           npm run build
           npm run lint
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dorny/paths-filter@v2.5.2
+        id: filter
+        with:
+          filters: |
+            docker:
+              - 'Dockerfile'
+      - name: Build image
+        if: steps.filter.outputs.docker == 'true'
+        run: docker build .

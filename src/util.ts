@@ -1,20 +1,24 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Config} from './config';
-import {Logger} from './logger';
-import {StatusCodeRangeArray} from './store/model';
+import {StatusCodeRangeArray, Store} from './store/model';
+import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
+import {logger} from './logger';
 
-export function getSleepTime() {
-	return Config.browser.minSleep + (Math.random() * (Config.browser.maxSleep - Config.browser.minSleep));
+export function getSleepTime(store: Store) {
+	const minSleep = store.minPageSleep as number;
+	return minSleep + Math.random() * ((store.maxPageSleep as number) - minSleep);
 }
 
 export async function delay(ms: number) {
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		setTimeout(resolve, ms);
 	});
 }
 
-export function isStatusCodeInRange(statusCode: number, range: StatusCodeRangeArray) {
+export function isStatusCodeInRange(
+	statusCode: number,
+	range: StatusCodeRangeArray
+) {
 	for (const value of range) {
 		let min: number;
 		let max: number;
@@ -36,7 +40,7 @@ export function isStatusCodeInRange(statusCode: number, range: StatusCodeRangeAr
 export async function usingResponse<T>(
 	browser: Browser,
 	url: string,
-	cb: (response: (Response | null), page: Page, browser: Browser) => Promise<T>
+	cb: (response: Response | null, page: Page, browser: Browser) => Promise<T>
 ): Promise<T> {
 	return usingPage(browser, async (page, browser) => {
 		const response = await page.goto(url, {waitUntil: 'domcontentloaded'});
@@ -45,10 +49,13 @@ export async function usingResponse<T>(
 	});
 }
 
-export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: Browser) => Promise<T>): Promise<T> {
+export async function usingPage<T>(
+	browser: Browser,
+	cb: (page: Page, browser: Browser) => Promise<T>
+): Promise<T> {
 	const page = await browser.newPage();
-	page.setDefaultNavigationTimeout(Config.page.navigationTimeout);
-	await page.setUserAgent(Config.page.userAgent);
+	page.setDefaultNavigationTimeout(config.page.timeout);
+	await page.setUserAgent(getRandomUserAgent());
 
 	try {
 		return await cb(page, browser);
@@ -56,15 +63,21 @@ export async function usingPage<T>(browser: Browser, cb: (page: Page, browser: B
 		try {
 			await closePage(page);
 		} catch (error) {
-			Logger.error(error);
+			logger.error(error);
 		}
 	}
 }
 
 export async function closePage(page: Page) {
-	if (!Config.browser.lowBandwidth) {
+	if (!config.browser.lowBandwidth) {
 		await disableBlockerInPage(page);
 	}
 
 	await page.close();
+}
+
+export function getRandomUserAgent(): string {
+	return config.page.userAgents[
+		Math.floor(Math.random() * config.page.userAgents.length)
+	];
 }

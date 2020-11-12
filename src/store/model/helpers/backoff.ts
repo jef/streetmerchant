@@ -1,7 +1,7 @@
 import {Link, Store} from '..';
-import {Logger, Print} from '../../../logger';
+import {Print, logger} from '../../../logger';
 import {delay, isStatusCodeInRange} from '../../../util';
-import {Config} from '../../../config';
+import {config} from '../../../config';
 
 type Backoff = {
 	count: number;
@@ -10,7 +10,11 @@ type Backoff = {
 
 const stores: Record<string, Backoff> = {};
 
-export async function processBackoffDelay(store: Store, link: Link, statusCode: number): Promise<number> {
+export async function processBackoffDelay(
+	store: Store,
+	link: Link,
+	statusCode: number
+): Promise<number> {
 	/**
 	 * We treat statusCode 0 as successful as some of the puppeteer plugins
 	 * cause side-effects resulting in an empty response object even though
@@ -27,26 +31,28 @@ export async function processBackoffDelay(store: Store, link: Link, statusCode: 
 	let backoff = stores[store.name];
 
 	if (!backoff) {
-		backoff = {count: 0, time: Config.browser.minBackoff};
+		backoff = {count: 0, time: config.browser.minBackoff};
 		stores[store.name] = backoff;
 	}
 
 	if (!isBackoff) {
 		if (backoff.count > 0) {
 			backoff.count--;
-			backoff.time = Math.max(backoff.time / 2, Config.browser.minBackoff);
+			backoff.time = Math.max(backoff.time / 2, config.browser.minBackoff);
 		}
 
 		return -1;
 	}
 
 	const backoffTime = backoff.time;
-	Logger.debug(Print.backoff(link, store, {delay: backoffTime, statusCode}, true));
+	logger.debug(
+		Print.backoff(link, store, {delay: backoffTime, statusCode}, true)
+	);
 
 	await delay(backoff.time);
 
 	backoff.count++;
-	backoff.time = Math.min(backoff.time * 2, Config.browser.maxBackoff);
+	backoff.time = Math.min(backoff.time * 2, config.browser.maxBackoff);
 
 	return backoffTime;
 }
