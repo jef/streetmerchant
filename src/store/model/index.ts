@@ -55,6 +55,7 @@ import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Target} from './target';
+import {TopAchat} from './topachat';
 import {Very} from './very';
 import {Walmart} from './walmart';
 import {Zotac} from './zotac';
@@ -118,7 +119,8 @@ export const storeList = new Map([
 	[Target.name, Target],
 	[Very.name, Very],
 	[Walmart.name, Walmart],
-	[Zotac.name, Zotac]
+	[Zotac.name, Zotac],
+	[TopAchat.name, TopAchat]
 ]);
 
 const brands = new Set();

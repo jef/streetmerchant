@@ -193,6 +193,7 @@ environment variables are **optional**._
 | Very (UK) | `very`|
 | Walmart | `walmart`|
 | Zotac | `zotac`|
+| TopAchat | `topachat`|
 
 <details>
 <summary>Micro Center stores</summary>
@@ -254,6 +255,8 @@ environment variables are **optional**._
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
+| kfa2 | sg |
+| gainward | phoenix, phoenix gs |
 
 </details>
 
