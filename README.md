@@ -155,6 +155,7 @@ environment variables are **optional**._
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box (UK) | `box`|
+| CanadaComputers (CA) | `canadacomputers
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
 | Computeruniverse (DE) | `computeruniverse` |
