@@ -5,6 +5,7 @@ import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
+import {AmazonBr} from './amazon-br';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
 import {AmazonEs} from './amazon-es';
@@ -37,6 +38,7 @@ import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
+import {MikesComputerShop} from './mikescomputershop';
 import {Mindfactory} from './mindfactory';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
@@ -64,6 +66,7 @@ export const storeList = new Map([
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],
+	[AmazonBr.name, AmazonBr],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
 	[AmazonEs.name, AmazonEs],
@@ -98,6 +101,7 @@ export const storeList = new Map([
 	[Mediamarkt.name, Mediamarkt],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
+	[MikesComputerShop.name, MikesComputerShop],
 	[Mindfactory.name, Mindfactory],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
