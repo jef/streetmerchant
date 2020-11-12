@@ -5,7 +5,7 @@ export const CanadaComputers: Store = {
 		outOfStock: {
 			container:
 				'div[class="pi-prod-availability"]',
-			text: ['Not Available Online']
+			text: ['not available online']
 		},
 	},
 	links: [
@@ -324,13 +324,6 @@ export const CanadaComputers: Store = {
 			series: '3090',
 			url: 'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181352'
 		}, //3090s
-
-
-
-
-
-
-
 	],
 	name: 'canadacomputers',
 	waitUntil: 'domcontentloaded'
