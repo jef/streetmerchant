@@ -36,6 +36,7 @@ getting `streetmerchant` running!
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
+  - To checkout a particular branch, use `git checkout <branch name>` after cloning
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
@@ -84,6 +85,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
+| `AUTO_ADD_TO_CART` | Enable auto add to cart on support stores | Default: `true` |
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
@@ -166,6 +168,7 @@ environment variables are **optional**._
 | Galaxus (DE) | `galaxus`|
 | Game (UK) | `game`|
 | Gamestop | `gamestop`|
+| Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
