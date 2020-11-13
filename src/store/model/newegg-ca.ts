@@ -444,7 +444,14 @@ export const NeweggCa: Store = {
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.newegg.ca/p/N82E16868110294'
 		}
+
 	],
 	name: 'newegg-ca',
 	realTimeInventoryLookup: async (itemNumber: string) => {
