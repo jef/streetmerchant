@@ -129,6 +129,42 @@ export const AmazonCa: Store = {
 			model: 'tuf oc',
 			series: '3090',
 			url: 'https://www.amazon.ca/dp/B08HJLLF7G'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url: 'https://www.amazon.ca/dp/B08166SLDF'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.amazon.ca/dp/B0815XFSGK'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.amazon.ca/dp/B08164VTWH'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.amazon.ca/dp/B0815Y8J9N'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.ca/dp/B08GSC5D9G'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.amazon.ca/dp/B08GS1N24H'
 		}
 	],
 	name: 'amazon-ca'
