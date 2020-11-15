@@ -1,5 +1,53 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/jef/streetmerchant/compare/v2.0.0...v3.0.0) (2020-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed duplicated `Model`
+
+### Features
+
+* **amazon:** add more 3070s ([#719](https://www.github.com/jef/streetmerchant/issues/719)) ([dde9837](https://www.github.com/jef/streetmerchant/commit/dde9837829b9d52e43800a2ac826b5dd00f5a744))
+* **coolmod:** add zen 3 ([#754](https://www.github.com/jef/streetmerchant/issues/754)) ([3270292](https://www.github.com/jef/streetmerchant/commit/32702929a97236d7dc51aa8f669140bc6d89aa9a))
+* **discord:** add cart link to embed ([#762](https://www.github.com/jef/streetmerchant/issues/762)) ([ccb207a](https://www.github.com/jef/streetmerchant/commit/ccb207abeb43b8e85f32c5c0a7a02aa33b5cdd7c))
+* **store:** support for kabum (amd and rtx 30 series) ([#727](https://www.github.com/jef/streetmerchant/issues/727)) ([23d061b](https://www.github.com/jef/streetmerchant/commit/23d061b387b540803a81212fee937d4c8c9b17ad))
+* add option to disable auto add to cart ([#759](https://www.github.com/jef/streetmerchant/issues/759)) ([a5249ec](https://www.github.com/jef/streetmerchant/commit/a5249ecc7c3acc29a1f9d5285bd77397263cb135))
+* fix metadata in logging, lint prettier, typed `Model`s ([#747](https://www.github.com/jef/streetmerchant/issues/747)) ([318e626](https://www.github.com/jef/streetmerchant/commit/318e626e78c18524c4d8624176ccb659c6b6d17c))
+* **amazon-ca:** add ps5 ([#713](https://www.github.com/jef/streetmerchant/issues/713)) ([2570056](https://www.github.com/jef/streetmerchant/commit/25700567c57a303a9376351daf015741193350a3))
+* **amd:** add 5950 config ([#685](https://www.github.com/jef/streetmerchant/issues/685)) ([31a3d8f](https://www.github.com/jef/streetmerchant/commit/31a3d8f7e068a17c72e0c296e176b93625bf9063))
+* **amd:** add env vars and series filtering ([#696](https://www.github.com/jef/streetmerchant/issues/696)) ([df3b10b](https://www.github.com/jef/streetmerchant/commit/df3b10b9a5c2467e00cacb3ab93f818aafc95f02))
+* **galaxus:** add zen 3 ([#729](https://www.github.com/jef/streetmerchant/issues/729)) ([4e086e9](https://www.github.com/jef/streetmerchant/commit/4e086e92675df97fe7f94c4e6d51b73d63e7effb))
+* **mindfactory:** add ryzen 5900x, 5950x  ([#720](https://www.github.com/jef/streetmerchant/issues/720)) ([0362bf8](https://www.github.com/jef/streetmerchant/commit/0362bf808198d47e6aaa4a4838251f870d6dce4a))
+* **notification:** add philips hue ([#681](https://www.github.com/jef/streetmerchant/issues/681)) ([c8a9b0b](https://www.github.com/jef/streetmerchant/commit/c8a9b0ba3ed581a9fef7ee2b459b1de84d976ff0))
+* **notification:** support for multiple phone numbers ([#738](https://www.github.com/jef/streetmerchant/issues/738)) ([9f28fe5](https://www.github.com/jef/streetmerchant/commit/9f28fe5803fc71bf64d303cd1e7d20d0be8fecac))
+* **ps5:** add console and digital edition ([#709](https://www.github.com/jef/streetmerchant/issues/709)) ([42ef7cf](https://www.github.com/jef/streetmerchant/commit/42ef7cfdced8ae3bc4192e245469798324bc42d3))
+* **store:** add `arlt` and `amd-de` ([#721](https://www.github.com/jef/streetmerchant/issues/721)) ([38937f6](https://www.github.com/jef/streetmerchant/commit/38937f6880fcffb3a56ef17acd278f7c2f8d251c))
+* **store:** add `game` store, add ps5 for uk stores ([#736](https://www.github.com/jef/streetmerchant/issues/736)) ([0128718](https://www.github.com/jef/streetmerchant/commit/0128718ba76b0c431d790cea7dd2183d10a02278))
+* **store:** add ps5 to german stores ([#715](https://www.github.com/jef/streetmerchant/issues/715)) ([2291b8e](https://www.github.com/jef/streetmerchant/commit/2291b8eff5b23613d1233cc4c3ead83a42286d85))
+* **store:** add xbox series x and s ([#732](https://www.github.com/jef/streetmerchant/issues/732)) ([314f533](https://www.github.com/jef/streetmerchant/commit/314f533f0bab0a466a276c5895d2f00bf86741f4))
+* **store:** add zen 3 to german stores ([#702](https://www.github.com/jef/streetmerchant/issues/702)) ([71d5cb4](https://www.github.com/jef/streetmerchant/commit/71d5cb426179f5e587adeba1ec60f9a9233ec7b6))
+* **store:** add zen 3 to more stores ([#698](https://www.github.com/jef/streetmerchant/issues/698)) ([760ddf5](https://www.github.com/jef/streetmerchant/commit/760ddf5d8523e28e294146643dda16e105176dff))
+* **store:** Adds AM3 to microcenter ([#707](https://www.github.com/jef/streetmerchant/issues/707)) ([8a45905](https://www.github.com/jef/streetmerchant/commit/8a459056c5ba8a5a90de55cfbb08c4c89ccb19d3))
+* **target:** add additional selector for 'ship it' ([#737](https://www.github.com/jef/streetmerchant/issues/737)) ([ab1fddf](https://www.github.com/jef/streetmerchant/commit/ab1fddf20c3a735b746befda0e21462701882645))
+* add production scripts and better `Dockerfile` ([0d14500](https://www.github.com/jef/streetmerchant/commit/0d14500d5d8b93204bb99baf34dc9de745ae645d)), closes [#710](https://www.github.com/jef/streetmerchant/issues/710)
+* bring back ascii banner, but make it configurable ([#703](https://www.github.com/jef/streetmerchant/issues/703)) ([0a680e9](https://www.github.com/jef/streetmerchant/commit/0a680e977b7904e7f62a8c1c0f3d533329b23fb0))
+* memoryexpress website support ([#717](https://www.github.com/jef/streetmerchant/issues/717)) ([c02241c](https://www.github.com/jef/streetmerchant/commit/c02241c7528656c2c2fba9befc36628b4db7befb))
+
+
+### Bug Fixes
+
+* **docker:** copy web directory ([#745](https://www.github.com/jef/streetmerchant/issues/745)) ([0754fec](https://www.github.com/jef/streetmerchant/commit/0754feccaea2ce2dd37e7caeed3fa0b53c0cdcb3))
+* **walmart:** ps5 digital url ([#763](https://www.github.com/jef/streetmerchant/issues/763)) ([841647c](https://www.github.com/jef/streetmerchant/commit/841647c06c488cf6b9d6d6af3c3eb6c8dbadab7e))
+* environment variables to match ryzen cpus ([5db8348](https://www.github.com/jef/streetmerchant/commit/5db83484f301d48509205d9d0b5146c5d7114d26))
+* revert to 14.15.0 until 15 is stable for `tsc` ([2955ea7](https://www.github.com/jef/streetmerchant/commit/2955ea70ab59c1b0dd82ec506c7a03952f81ea01)), closes [#691](https://www.github.com/jef/streetmerchant/issues/691)
+
+
+### Code Refactoring
+
+* removed duplicated `Model` ([d19dd5a](https://www.github.com/jef/streetmerchant/commit/d19dd5a404f2a585dd80f4d23d0e3af2d435ae85))
+
 ## [2.0.0](https://www.github.com/jef/streetmerchant/compare/v1.7.0...v2.0.0) (2020-11-05)
 
 

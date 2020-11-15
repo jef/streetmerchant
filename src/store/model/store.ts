@@ -76,6 +76,7 @@ export type Model =
 	| 'phoenix'
 	| 'phoenix gs'
 	| 'phoenix gs oc'
+	| 'sg'
 	| 'sg oc'
 	| 'strix'
 	| 'strix oc'

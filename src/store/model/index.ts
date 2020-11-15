@@ -8,6 +8,7 @@ import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
 import {AmazonEs} from './amazon-es';
+import {AmazonFr} from './amazon-fr';
 import {AmazonNl} from './amazon-nl';
 import {AmazonUk} from './amazon-uk';
 import {Aria} from './aria';
@@ -19,6 +20,7 @@ import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
+import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
@@ -32,6 +34,7 @@ import {EvgaEu} from './evga-eu';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
+import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
@@ -52,6 +55,7 @@ import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Target} from './target';
+import {TopAchat} from './topachat';
 import {Very} from './very';
 import {Walmart} from './walmart';
 import {Zotac} from './zotac';
@@ -65,6 +69,7 @@ export const storeList = new Map([
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
 	[AmazonEs.name, AmazonEs],
+	[AmazonFr.name, AmazonFr],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
 	[AMD.name, AMD],
@@ -79,6 +84,7 @@ export const storeList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Caseking.name, Caseking],
+	[CanadaComputers.name, CanadaComputers],
 	[Ccl.name, Ccl],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
@@ -91,6 +97,7 @@ export const storeList = new Map([
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
+	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
@@ -112,7 +119,8 @@ export const storeList = new Map([
 	[Target.name, Target],
 	[Very.name, Very],
 	[Walmart.name, Walmart],
-	[Zotac.name, Zotac]
+	[Zotac.name, Zotac],
+	[TopAchat.name, TopAchat]
 ]);
 
 const brands = new Set();
