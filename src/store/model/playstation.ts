@@ -1,0 +1,46 @@
+import {Store} from './store';
+import fetch from 'node-fetch';
+
+export const PlayStation: Store = {
+	labels: {
+		inStock: {
+			container: '.productHero-info .button-placeholder',
+			text: ['Add']
+		}
+	},
+	links: [
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715',
+            itemNumber: '3005715'
+        },
+        {
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816',
+			itemNumber: '3005816'
+        },
+        {
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+            url: 'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817',
+            itemNumber: '3005817'
+		}
+	],
+	name: 'playstation',
+	realTimeInventoryLookup: async (itemNumber: string) => {
+		const request_url =
+			'https://api.direct.playstation.com/commercewebservices/ps-direct-us/products/productList?fields=BASIC&productCodes=' +
+			itemNumber;
+		const response = await fetch(request_url);
+        const response_json = await response.json();
+        if (response_json.products[0].stock.stockLevelStatus !== 'outOfStock' && response_json.products[0].maxOrderQuantity >= 1) {
+            return true;
+        }
+		return false;
+	}
+};

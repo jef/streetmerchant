@@ -184,6 +184,7 @@ environment variables are **optional**._
 | Office Depot | `officedepot`|
 | Overclockers (UK) | `overclockers`|
 | PCComponentes (ES) | `pccomponentes`|
+| PlayStation (ES) | `playstation`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
