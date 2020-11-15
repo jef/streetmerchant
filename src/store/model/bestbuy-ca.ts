@@ -3,8 +3,8 @@ import {Store} from './store';
 export const BestBuyCa: Store = {
 	labels: {
 		inStock: {
-			container: '#root',
-			text: ['available online']
+			container: '.x-product-detail-page .addToCartButton:enabled',
+			text: ['Add to Cart']
 		},
 		maxPrice: {
 			container:
