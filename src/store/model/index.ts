@@ -48,6 +48,7 @@ import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
+import {PlayStation} from './playstation';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
@@ -111,6 +112,7 @@ export const storeList = new Map([
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
+	[PlayStation.name, PlayStation],
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
