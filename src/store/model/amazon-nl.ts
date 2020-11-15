@@ -8,7 +8,12 @@ export const AmazonNl: Store = {
 		},
 		inStock: {
 			container: '#availability',
-			text: ['op voorraad', 'verkrijgbaar vanaf', 'wordt gewoonlijk verzonden binnen', 'nog slechts']
+			text: [
+				'op voorraad',
+				'verkrijgbaar vanaf',
+				'wordt gewoonlijk verzonden binnen',
+				'nog slechts'
+			]
 		},
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
@@ -63,8 +68,8 @@ export const AmazonNl: Store = {
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HN7VVLJ&Quantity.1=1',
-			model: 'rog strix',
+      cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HN7VVLJ&Quantity.1=1',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.amazon.nl/dp/B08HN7VVLJ'
 		},

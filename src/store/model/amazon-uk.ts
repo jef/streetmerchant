@@ -30,15 +30,34 @@ export const AmazonUk: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			cartUrl: 'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B081265T5Z&Quantity.1=1',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B081265T5Z&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.amazon.co.uk/dp/B081265T5Z/'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5L3RG&Quantity.1=1',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.com/dp/B08FC5L3RG'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08H97NYGP&Quantity.1=1',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.amazon.co.uk/dp/B08H97NYGP/'
 		}
 	],
 	linksBuilder: {
 		builder: (docElement, series) => {
-			const productElements = docElement.find('.s-result-list .s-result-item[data-asin]');
+			const productElements = docElement.find(
+				'.s-result-list .s-result-item[data-asin]'
+			);
 			const links: Link[] = [];
 			for (let i = 0; i < productElements.length; i++) {
 				const productElement = productElements.eq(i);
@@ -49,7 +68,9 @@ export const AmazonUk: Store = {
 				}
 
 				const url = `https://www.amazon.co.uk/dp/${asin}/`;
-				const titleElement = productElement.find('.sg-col-inner h2 a.a-text-normal[href] span').first();
+				const titleElement = productElement
+					.find('.sg-col-inner h2 a.a-text-normal[href] span')
+					.first();
 				const title = titleElement.text().trim();
 
 				if (!title || !new RegExp(`RTX.*${series}`, 'i').exec(title)) {

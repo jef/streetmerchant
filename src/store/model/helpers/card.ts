@@ -1,9 +1,9 @@
-import {Link, Series} from '../store';
+import {Link, Model, Series} from '../store';
 import {logger} from '../../../logger';
 
 export interface Card {
 	brand: string;
-	model: string;
+	model: Model;
 }
 
 interface LinksBuilderOptions {
@@ -95,7 +95,10 @@ export function parseCard(name: string): Card | null {
 	}
 
 	// Split non spaced TitleCase words only after extracting brand
-	model = model.join(' ').replace(/([A-Z][a-z]+)([A-Z][a-z]+)/g, '$1 $2').split(' ');
+	model = model
+		.join(' ')
+		.replace(/([A-Z][a-z]+)([A-Z][a-z]+)/g, '$1 $2')
+		.split(' ');
 
 	// Some vendors have oc at the beginning of the product name,
 	// store whether the card contains the term "oc" and remove
@@ -103,28 +106,31 @@ export function parseCard(name: string): Card | null {
 	let isOC = false;
 
 	/* eslint-disable @typescript-eslint/prefer-regexp-exec */
-	model = model.filter(word => {
+	model = model.filter((word) => {
 		if (word.toLowerCase() === 'oc') {
 			isOC = true;
 			return false;
 		}
 
-		return !word.match(/^(nvidia|geforce|ge|force|rtx|amp[ae]re|graphics|card|gpu|pci-?e(xpress)?|ray-?tracing|ray|tracing|core|boost|epicx)$/i) &&
+		return (
+			!word.match(
+				/^(nvidia|geforce|ge|force|rtx|amp[ae]re|graphics|card|gpu|pci-?e(xpress)?|ray-?tracing|ray|tracing|core|boost|epicx)$/i
+			) &&
 			!word.match(/^(\d+(?:gb?|mhz)?|gb|mhz|g?ddr(\d+x?)?)$/i) &&
-			!word.match(/^(display ?port|hdmi|vga)$/i);
+			!word.match(/^(display ?port|hdmi|vga)$/i)
+		);
 	});
 	/* eslint-enable @typescript-eslint/prefer-regexp-exec */
 
-	if (isOC) {
-		model.push('OC');
-	}
-
-	if (model.length === 0) {
-		return null;
-	}
+	if (isOC) model.push('oc');
+	if (model.length === 0) return null;
 
 	return {
 		brand: brand.toLowerCase(),
-		model: model.join(' ').toLowerCase().replace(/ gaming\b/g, '').trim()
+		model: model
+			.join(' ')
+			.toLowerCase()
+			.replace(/ gaming\b/g, '')
+			.trim() as Model
 	};
 }

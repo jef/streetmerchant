@@ -9,7 +9,7 @@ export const Aria: Store = {
 		},
 		maxPrice: {
 			container: '.priceBig',
-			euroFormat: false	// Note: Aria uses non-euroFromat as price seperator
+			euroFormat: false // Note: Aria uses non-euroFromat as price seperator
 		},
 		outOfStock: {
 			container: '.fBox',
@@ -21,7 +21,8 @@ export const Aria: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+2060+Super/Gigabyte+NVIDIA+GeForce+RTX+2060+SUPER+8GB+WINDFORCE+OC+Turing+Graphics+Card+%2B+RTX+Bundle%21?productId=71541'
+			url:
+				'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+2060+Super/Gigabyte+NVIDIA+GeForce+RTX+2060+SUPER+8GB+WINDFORCE+OC+Turing+Graphics+Card+%2B+RTX+Bundle%21?productId=71541'
 		}
 	],
 	linksBuilder: {
@@ -33,11 +34,13 @@ export const Aria: Store = {
 		urls: [
 			{
 				series: '3080',
-				url: 'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3080'
+				url:
+					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3080'
 			},
 			{
 				series: '3090',
-				url: 'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3090'
+				url:
+					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3090'
 			}
 		]
 	},

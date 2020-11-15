@@ -15,7 +15,9 @@ export function sendDiscordMessage(link: Link, store: Store) {
 			try {
 				const embed = new MessageBuilder();
 				embed.setTitle('Stock Notification');
-				embed.addField('URL', link.cartUrl ? link.cartUrl : link.url, true);
+				if (link.cartUrl)
+					embed.addField('Add To Cart Link', link.cartUrl, true);
+				embed.addField('Product Page', link.url, true);
 				embed.addField('Store', store.name, true);
 				embed.addField('Brand', link.brand, true);
 				embed.addField('Series', link.series, true);
@@ -25,7 +27,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 					embed.setText(notifyGroup.join(' '));
 				}
 
-				embed.setColor(0x76B900);
+				embed.setColor(0x76b900);
 				embed.setTimestamp();
 
 				const promises = [];
@@ -37,7 +39,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 
 				logger.info('✔ discord message sent');
 			} catch (error) {
-				logger.error('✖ couldn\'t send discord message', error);
+				logger.error("✖ couldn't send discord message", error);
 			}
 		})();
 	}

@@ -10,7 +10,6 @@ export const Pny: Store = {
 			container: 'span[itemprop="price"]',
 			euroFormat: false
 		}
-
 	},
 	links: [
 		{
@@ -27,35 +26,39 @@ export const Pny: Store = {
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3070',
-			url: 'https://www.pny.com/geforce-rtx-3070-xlr8-gaming-epic-x-rgb-triple-fan'
+			url:
+				'https://www.pny.com/geforce-rtx-3070-xlr8-gaming-epic-x-rgb-triple-fan'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
-			url: 'https://www.pny.com/geforce-rtx-3080-xlr8-gaming-epic-x-rgb-triple-fan-m'
+			url:
+				'https://www.pny.com/geforce-rtx-3080-xlr8-gaming-epic-x-rgb-triple-fan-m'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3080',
-			url: 'https://www.pny.com/geforce-rtx-3080-xlr8-gaming-epic-x-rgb-triple-fan-p'
+			url:
+				'https://www.pny.com/geforce-rtx-3080-xlr8-gaming-epic-x-rgb-triple-fan-p'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
-			url: 'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-m'
+			url:
+				'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-m'
 		},
 		{
 			brand: 'pny',
-			model: 'xlr8 rgb',
+			model: 'xlr8 revel',
 			series: '3090',
-			url: 'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-p'
+			url:
+				'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-p'
 		}
 	],
 	name: 'pny'
 };
-

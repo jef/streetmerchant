@@ -4,7 +4,12 @@ export const Alternate: Store = {
 	labels: {
 		inStock: {
 			container: '.stockStatus',
-			text: ['auf lager', 'ware neu eingetroffen', 'in kürze versandfertig', 'ware im zulauf']
+			text: [
+				'auf lager',
+				'ware neu eingetroffen',
+				'in kürze versandfertig',
+				'ware im zulauf'
+			]
 		},
 		maxPrice: {
 			container: 'div.price > span',
@@ -24,13 +29,13 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672868'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.alternate.de/product/1672867'
 		},
@@ -186,13 +191,13 @@ export const Alternate: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url: 'https://www.alternate.de/product/1672870'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.alternate.de/product/1672872'
 		},

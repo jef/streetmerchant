@@ -21,7 +21,20 @@ export const Walmart: Store = {
 			brand: 'sony',
 			model: 'ps5 digital',
 			series: 'sonyps5de',
-			url: 'https://www.walmart.com/ip/PlayStation5-Console/363472942'
+			url:
+				'https://www.walmart.com/ip/Sony-PlayStation-5-Digital-Edition/493824815'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.walmart.com/ip/Xbox-Series-X/443574645'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.walmart.com/ip/Xbox-Series-S/606518560'
 		}
 	],
 	name: 'walmart'

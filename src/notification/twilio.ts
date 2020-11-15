@@ -26,7 +26,7 @@ export function sendTwilioMessage(link: Link, store: Store) {
 				});
 				logger.info('✔ twilio message sent');
 			} catch (error) {
-				logger.error('✖ couldn\'t send twilio message', error);
+				logger.error("✖ couldn't send twilio message", error);
 			}
 		})();
 	}

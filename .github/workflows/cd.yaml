@@ -3,14 +3,12 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
 jobs:
-  cd:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: GoogleCloudPlatform/release-please-action@v2.5.7
+      - uses: GoogleCloudPlatform/release-please-action@v2.6.0
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -18,15 +16,6 @@ jobs:
           package-name: streetmerchant
       - name: login into github package registry
         run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-      - name: build nightly docker image
-        if: ${{ ! steps.release.outputs.release_created }}
-        run: |
-          docker build \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
-      - name: publish nightly
-        if: ${{ ! steps.release.outputs.release_created }}
-        run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
       - name: build latest docker image
         if: ${{ steps.release.outputs.release_created }}
         run: |
@@ -35,6 +24,6 @@ jobs:
           -t "ghcr.io/${GITHUB_REPOSITORY}:latest" .
         env:
           TAG_NAME: ${{ steps.release.outputs.tag_name }}
-      - name: publish latest
+      - name: publish latest image
         if: ${{ steps.release.outputs.release_created }}
         run: docker push "ghcr.io/${GITHUB_REPOSITORY}"

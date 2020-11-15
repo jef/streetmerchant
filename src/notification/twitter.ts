@@ -13,18 +13,25 @@ const client = new Twitter({
 });
 
 export function sendTweet(link: Link, store: Store) {
-	if (twitter.accessTokenKey && twitter.accessTokenSecret && twitter.consumerKey && twitter.consumerSecret) {
+	if (
+		twitter.accessTokenKey &&
+		twitter.accessTokenSecret &&
+		twitter.consumerKey &&
+		twitter.consumerSecret
+	) {
 		logger.debug('↗ sending twitter message');
 
-		let status = `${Print.inStock(link, store)}\n${link.cartUrl ? link.cartUrl : link.url}`;
+		let status = `${Print.inStock(link, store)}\n${
+			link.cartUrl ? link.cartUrl : link.url
+		}`;
 
 		if (twitter.tweetTags) {
 			status += `\n\n${twitter.tweetTags}`;
 		}
 
-		client.post('statuses/update', {status}, error => {
+		client.post('statuses/update', {status}, (error) => {
 			if (error) {
-				logger.error('✖ couldn\'t send twitter notification', error);
+				logger.error("✖ couldn't send twitter notification", error);
 			} else {
 				logger.info('✔ twitter notification sent');
 			}

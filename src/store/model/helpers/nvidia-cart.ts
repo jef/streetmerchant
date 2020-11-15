@@ -74,7 +74,12 @@ export class NvidiaCart {
 
 					break;
 				} catch (error) {
-					logger.error(`✖ [nvidia] ${name} could not automatically add to cart, attempt ${i + 1} of ${config.nvidia.addToCardAttempts}`, error);
+					logger.error(
+						`✖ [nvidia] ${name} could not automatically add to cart, attempt ${
+							i + 1
+						} of ${config.nvidia.addToCardAttempts}`,
+						error
+					);
 					logger.debug(error);
 
 					lastError = error;
@@ -92,7 +97,9 @@ export class NvidiaCart {
 
 			await open(cartUrl);
 		} catch (error) {
-			logger.error(`✖ [nvidia] ${name} could not automatically add to cart, opening page`);
+			logger.error(
+				`✖ [nvidia] ${name} could not automatically add to cart, opening page`
+			);
 			logger.debug(error);
 
 			cartUrl = this.fallbackCartUrl;
@@ -118,10 +125,18 @@ export class NvidiaCart {
 	public async refreshSessionToken(): Promise<void> {
 		logger.debug('ℹ [nvidia] refreshing session token');
 		try {
-			const result = await usingResponse(this.browser, this.sessionUrl, async response => {
-				return response?.json() as NvidiaSessionTokenJSON | undefined;
-			});
-			if (typeof result !== 'object' || result === null || !('session_token' in result)) {
+			const result = await usingResponse(
+				this.browser,
+				this.sessionUrl,
+				async (response) => {
+					return response?.json() as NvidiaSessionTokenJSON | undefined;
+				}
+			);
+			if (
+				typeof result !== 'object' ||
+				result === null ||
+				!('session_token' in result)
+			) {
 				throw new Error('malformed response');
 			}
 
@@ -133,18 +148,20 @@ export class NvidiaCart {
 		}
 	}
 
-	protected async addToCartAndGetLocationRedirect(productId: number): Promise<string> {
+	protected async addToCartAndGetLocationRedirect(
+		productId: number
+	): Promise<string> {
 		const url = 'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
 		const sessionToken = await this.getSessionToken();
 
 		logger.info(`ℹ [nvidia] session_token=${sessionToken}`);
 
-		const locationData = await usingPage(this.browser, async page => {
+		const locationData = await usingPage(this.browser, async (page) => {
 			page.removeAllListeners('request');
 
 			await page.setRequestInterception(true);
 
-			page.on('request', interceptedRequest => {
+			page.on('request', (interceptedRequest) => {
 				void interceptedRequest.continue({
 					headers: {
 						...interceptedRequest.headers(),
@@ -153,9 +170,7 @@ export class NvidiaCart {
 					},
 					method: 'POST',
 					postData: JSON.stringify({
-						products: [
-							{productId, quantity: 1}
-						]
+						products: [{productId, quantity: 1}]
 					})
 				});
 			});

@@ -5,7 +5,10 @@ export const AmazonDe: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
-			text: ['geben sie die unten angezeigten zeichen ein', 'geben sie die zeichen unten ein']
+			text: [
+				'geben sie die unten angezeigten zeichen ein',
+				'geben sie die zeichen unten ein'
+			]
 		},
 		inStock: {
 			container: '#desktop_buybox',
@@ -26,15 +29,15 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN7VVLJ&Quantity.1=1',
-			model: 'rog strix',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN7VVLJ&Quantity.1=1',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HN7VVLJ'
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN6KYS3&Quantity.1=1',
-			model: 'rog strix oc',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN6KYS3&Quantity.1=1',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.amazon.de/dp/B08HN6KYS3'
 		},
@@ -159,15 +162,15 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN642LY&Quantity.1=1',
-			model: 'rog strix',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN642LY&Quantity.1=1',
+			model: 'strix',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HN642LY'
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN51T8Q&Quantity.1=1',
-			model: 'rog strix oc',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HN51T8Q&Quantity.1=1',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.amazon.de/dp/B08HN51T8Q'
 		},
@@ -306,15 +309,15 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HT7PR9Y&Quantity.1=1',
-			model: 'rog strix',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HT7PR9Y&Quantity.1=1',
+			model: 'strix',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08HT7PR9Y'
 		},
 		{
 			brand: 'asus',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08L8JNTXQ&Quantity.1=1',
-			model: 'rog strix oc',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08L8JNTXQ&Quantity.1=1',
+			model: 'strix oc',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08L8JNTXQ'
 		},
@@ -404,8 +407,8 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'pny',
-            cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HBJB7YD&Quantity.1=1',
-			model: 'xlr8 rgb',
+      cartUrl: 'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HBJB7YD&Quantity.1=1',
+			model: 'xlr8 revel',
 			series: '3070',
 			url: 'https://www.amazon.de/dp/B08HBJB7YD'
 		},

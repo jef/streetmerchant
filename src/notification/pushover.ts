@@ -21,7 +21,7 @@ export function sendPushoverNotification(link: Link, store: Store) {
 
 		push.send(message, (error: Error) => {
 			if (error) {
-				logger.error('✖ couldn\'t send pushover message', error);
+				logger.error("✖ couldn't send pushover message", error);
 			} else {
 				logger.info('✔ pushover message sent');
 			}

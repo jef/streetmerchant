@@ -28,9 +28,15 @@ getting `streetmerchant` running!
 
 ### Installation: native
 
+| Reference | Note |
+|:---:|---|
+| tag | Example, `v1.0.0`; stable |
+| `main` | Latest HEAD; not tagged, could be unstable |
+
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
+  - To checkout a particular ref, use `git checkout <ref name>` after cloning
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
@@ -47,8 +53,8 @@ Available via GitHub Container Registry.
 
 | Tag | Note |
 |:---:|---|
-| `latest` | Latest stable build |
-| `nightly` | Latest HEAD build, could be unstable |
+| `latest` | Latest release; stable |
+| `nightly` | Latest HEAD each day at midnight UTC; could be unstable |
 
 ```sh
 # to run
@@ -79,6 +85,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
+| `AUTO_ADD_TO_CART` | Enable auto add to cart on support stores | Default: `true` |
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
@@ -118,7 +125,7 @@ environment variables are **optional**._
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `founders edition,rog strix` <br/><br/> 2. Advanced E.g: `MODEL:SERIES`, E.g: `founders edition:3090,rog strix` |
-| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080` |
+| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080,ryzen5900` |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
 
 <details>
@@ -135,6 +142,7 @@ environment variables are **optional**._
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
+| Amazon (FR) | `amazon-fr`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
@@ -148,6 +156,7 @@ environment variables are **optional**._
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box (UK) | `box`|
+| CanadaComputers (CA) | `canadacomputers` |
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
 | Computeruniverse (DE) | `computeruniverse` |
@@ -159,7 +168,9 @@ environment variables are **optional**._
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
+| Game (UK) | `game`|
 | Gamestop | `gamestop`|
+| Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
@@ -173,6 +184,7 @@ environment variables are **optional**._
 | Office Depot | `officedepot`|
 | Overclockers (UK) | `overclockers`|
 | PCComponentes (ES) | `pccomponentes`|
+| PlayStation | `playstation`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
@@ -182,6 +194,7 @@ environment variables are **optional**._
 | Very (UK) | `very`|
 | Walmart | `walmart`|
 | Zotac | `zotac`|
+| TopAchat | `topachat`|
 
 <details>
 <summary>Micro Center stores</summary>
@@ -229,18 +242,22 @@ environment variables are **optional**._
 
 | Brand | Model |
 |:---:|---|
-| `asus` | `dual`, `dual oc`, `rog strix`, `rog strix oc`, `tuf`, `tuf oc` |
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x` |
+| `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
 | `kfa2` | `sg oc` |
+| `microsoft` | `xboxsx` , `xboxss` |
 | `msi` | `gaming x trio`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
-| `pny` | `dual fan`, `xlr8`, `xlr8 rgb` |
+| `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
+| kfa2 | sg |
+| gainward | phoenix, phoenix gs |
 
 </details>
 
@@ -305,8 +322,8 @@ environment variables are **optional**._
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
-| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | Email configuration required |
-| `PHONE_NUMBER` | 10 digit phone number | E.g.: `1234567890`, email configuration required |
+| `PHONE_CARRIER` | [Supported carriers](#supported-carriers) for SMS | E.g.: `att` or `att,verizon,google`, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number |
+| `PHONE_NUMBER` | 10 digit phone number(s) | E.g.: `1234567890` or `1234567890,0987654321,11112223333`, email configuration required |
 | `SMTP_ADDRESS` | IP Address or fqdn of smtp server |
 | `SMTP_PORT` | TCP Port number on which the smtp server is listening for connections | Default: `25` |
 
@@ -491,5 +508,7 @@ are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
 See [#11](https://github.com/jef/streetmerchant/issues/11).
+
+**Q: Why does Amazon show an error page (with a picture of an animal) instead of adding to cart or going to the detail page?** This is intended; see [#733](https://github.com/jef/streetmerchant/issues/733). This indicates that the item is out of stock and only available from a third-party seller (often at a markup).
 
 <p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>
