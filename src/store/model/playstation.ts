@@ -5,7 +5,7 @@ export const PlayStation: Store = {
 	labels: {
 		inStock: {
 			container: '.productHero-info .button-placeholder',
-			text: ['Add'],
+			text: ['Add']
 		}
 	},
 	links: [
