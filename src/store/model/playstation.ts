@@ -1,4 +1,4 @@
-import { Store } from './store';
+import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const PlayStation: Store = {
@@ -6,7 +6,7 @@ export const PlayStation: Store = {
 		inStock: {
 			container: '.productHero-info .button-placeholder',
 			text: ['Add'],
-		},
+		}
 	},
 	links: [
 		{
@@ -15,7 +15,7 @@ export const PlayStation: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715',
+				'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715'
 		},
 		{
 			brand: 'sony',
@@ -23,7 +23,7 @@ export const PlayStation: Store = {
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url:
-				'https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816',
+				'https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816'
 		},
 		{
 			brand: 'sony',
@@ -31,8 +31,8 @@ export const PlayStation: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url:
-				'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817',
-		},
+				'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817'
+		}
 	],
 	name: 'playstation',
 	realTimeInventoryLookup: async (itemNumber: string) => {
@@ -47,6 +47,7 @@ export const PlayStation: Store = {
 		) {
 			return true;
 		}
+
 		return false;
-	},
+	}
 };
