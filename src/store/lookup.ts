@@ -120,6 +120,20 @@ async function lookup(browser: Browser, store: Store) {
 		return;
 	}
 
+	if (store.linksBuilder) {
+		logger.info(`[${store.name}] Running linksBuilder...`);
+		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
+		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
+		if (lastRunTime === -1 || Date.now() - lastRunTime > ttl) {
+			try {
+				await fetchLinks(store, browser);
+				linkBuilderLastRunTimes[store.name] = Date.now();
+			} catch (error: unknown) {
+				logger.error(error);
+			}
+		}
+	}
+
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterStoreLink(link)) {
@@ -346,19 +360,6 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
 	if (!browser.isConnected()) {
 		logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
 		return;
-	}
-
-	if (getStores().has(store.name) && store.linksBuilder) {
-		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
-		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
-		if (lastRunTime === -1 || Date.now() - lastRunTime > ttl) {
-			try {
-				await fetchLinks(store, browser);
-				linkBuilderLastRunTimes[store.name] = Date.now();
-			} catch (error: unknown) {
-				logger.error((error as Error).message);
-			}
-		}
 	}
 
 	logger.debug(`[${store.name}] Starting lookup...`);
