@@ -293,22 +293,6 @@ export const Amazon: Store = {
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0815XFSGK&Quantity.1=1',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 'https://www.amazon.com/dp/B0815XFSGK'
-		},
-		{
-			brand: 'amd',
-			cartUrl:
-				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08166SLDF&Quantity.1=1',
-			model: '5600x',
-			series: 'ryzen5600',
-			url: 'https://www.amazon.com/dp/B08166SLDF'
-		},
-		{
-			brand: 'amd',
-			cartUrl:
-				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0815XFSGK&Quantity.1=1',
-			model: '5800x',
-			series: 'ryzen5800',
 			url: 'https://www.amazon.com/dp/product/B0815XFSGK'
 		},
 		{
