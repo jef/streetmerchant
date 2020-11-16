@@ -511,4 +511,6 @@ See [#11](https://github.com/jef/streetmerchant/issues/11).
 
 **Q: Why does Amazon show an error page (with a picture of an animal) instead of adding to cart or going to the detail page?** This is intended; see [#733](https://github.com/jef/streetmerchant/issues/733). This indicates that the item is out of stock and only available from a third-party seller (often at a markup).
 
+**Q: I'm using streetmerchant in the cloud and X isn't working.** There is _a lot_ of undefined behavior with using streetmerchant in the cloud. Some sites may block IPs from your cloud provider. It is possible that a VPN will help circumvent these problems.
+
 <p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>
