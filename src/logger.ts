@@ -180,6 +180,12 @@ export const Print = {
 
 		return `✖ ${buildProductString(link, store)} :: OUT OF STOCK`;
 	},
+	productInStock(link: Link): string {
+		let productString = `Product Page: ${link.url}`;
+		if (link.cartUrl) productString += `\nAdd To Cart Link: ${link.cartUrl}`;
+
+		return productString;
+	},
 	rateLimit(link: Link, store: Store, color?: boolean): string {
 		if (color) {
 			return (

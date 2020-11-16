@@ -40,7 +40,7 @@ export function sendEmail(link: Link, store: Store) {
 				: undefined,
 			from: email.username,
 			subject: Print.inStock(link, store),
-			text: link.cartUrl ? link.cartUrl : link.url,
+			text: Print.productInStock(link),
 			to: email.to
 		};
 
