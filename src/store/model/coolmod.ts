@@ -252,7 +252,7 @@ export const Coolmod: Store = {
 		},
 		{
 			brand: 'kfa2',
-			model: 'sg',
+			model: 'sg oc',
 			series: '3070',
 			url:
 				'https://www.coolmod.com/kfa2-geforce-rtx-3070-sg-1-click-oc-8gb-gddr6-tarjeta-grafica-precio'
