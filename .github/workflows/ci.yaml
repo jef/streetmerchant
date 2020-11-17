@@ -2,11 +2,9 @@ name: ci
 on:
   pull_request:
     branches:
-      - develop
-    paths-ignore:
-      - '**.md'
+      - main
 jobs:
-  build-lint:
+  build-and-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2.5.2
+      - uses: dorny/paths-filter@v2.5.3
         id: filter
         with:
           filters: |
