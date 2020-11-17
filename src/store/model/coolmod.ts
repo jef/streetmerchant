@@ -188,7 +188,34 @@ export const Coolmod: Store = {
 				'https://www.coolmod.com/inno3d-geforce-rtx-3080-twin-x2-oc-10gb-gddr6x-tarjeta-grafica-precio'
 		},
 		{
-<<<<<<< HEAD
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url:
+				'https://www.coolmod.com/amd-ryzen-5-5600x-46ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url:
+				'https://www.coolmod.com/amd-ryzen-7-5800x-47ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url:
+				'https://www.coolmod.com/amd-ryzen-9-5900x-48ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url:
+				'https://www.coolmod.com/amd-ryzen-9-5950x-49ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
 			brand: 'asus',
 			model: 'dual',
 			series: '3070',
@@ -257,34 +284,6 @@ export const Coolmod: Store = {
 			series: '3070',
 			url:
 				'https://www.coolmod.com/kfa2-geforce-rtx-3070-sg-1-click-oc-8gb-gddr6-tarjeta-grafica-precio'
-=======
-			brand: 'amd',
-			model: '5600x',
-			series: 'ryzen5600',
-			url:
-				'https://www.coolmod.com/amd-ryzen-5-5600x-46ghz-socket-am4-boxed-procesador-precio'
-		},
-		{
-			brand: 'amd',
-			model: '5800x',
-			series: 'ryzen5800',
-			url:
-				'https://www.coolmod.com/amd-ryzen-7-5800x-47ghz-socket-am4-boxed-procesador-precio'
-		},
-		{
-			brand: 'amd',
-			model: '5900x',
-			series: 'ryzen5900',
-			url:
-				'https://www.coolmod.com/amd-ryzen-9-5900x-48ghz-socket-am4-boxed-procesador-precio'
-		},
-		{
-			brand: 'amd',
-			model: '5950x',
-			series: 'ryzen5950',
-			url:
-				'https://www.coolmod.com/amd-ryzen-9-5950x-49ghz-socket-am4-boxed-procesador-precio'
->>>>>>> upstream/main
 		}
 	],
 	name: 'coolmod'
