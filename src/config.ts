@@ -23,8 +23,8 @@ function envOrArray(
 	array?: string[]
 ): string[] {
 	return (environment
-		? environment.includes('\n')
-			? environment.split('\n')
+		? environment.includes('\\n')
+			? environment.split('\\n')
 			: environment.split(',')
 		: array ?? []
 	).map((s) => s.trim());
