@@ -13,6 +13,7 @@ export type Pricing = {
 export type Brand =
 	| 'test:brand'
 	| 'amd'
+	| 'asrock'
 	| 'asus'
 	| 'evga'
 	| 'gainward'
@@ -26,6 +27,7 @@ export type Brand =
 	| 'pny'
 	| 'sapphire'
 	| 'sony'
+	| 'xfx'
 	| 'zotac';
 
 export type Series =
