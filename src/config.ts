@@ -306,7 +306,6 @@ const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	maxPrice: {
 		series: {
-			'test:series': -1,
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
 			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
@@ -319,6 +318,7 @@ const store = {
 			ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
 			sonyps5c: -1,
 			sonyps5de: -1,
+			'test:series': -1,
 			xboxss: -1,
 			xboxsx: -1
 		}
