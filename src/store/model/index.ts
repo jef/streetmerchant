@@ -121,7 +121,7 @@ export const storeList = new Map([
 	[Scan.name, Scan],
 	[Target.name, Target],
 	[Very.name, Very],
-	[Vsgamers.name, vsgamers],
+	[VsGamers.name, VsGamers],
 	[Walmart.name, Walmart],
 	[Zotac.name, Zotac],
 	[TopAchat.name, TopAchat]
