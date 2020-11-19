@@ -356,6 +356,16 @@ export const Newegg: Store = {
 				'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070vision-oc-8gd/p/N82E16814932360'
 		},
 		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932337',
+			itemNumber: '14-932-337',
+			model: 'vision oc',
+			series: '3080',
+			url:
+				'https://www.newegg.com/gigabyte-geforce-rtx-3070-gv-n3070vision-oc-8gd/p/N82E16814932337'
+		},
+		{
 			brand: 'asus',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126459',
@@ -552,6 +562,76 @@ export const Newegg: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.newegg.com/p/N82E16868105274'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/msi-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814137607'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6800-xt-21304-01-20g/p/N82E16814202388'
+		},
+		{
+			brand: 'asrock',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814930045'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-xt-rx6800xt-16g/p/N82E16814126472'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-rx6800-16g/p/N82E16814126473'
+		},
+		{
+			brand: 'asrock',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-rx-6800-16g/p/N82E16814930046'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6800-gv-r68-16gc-b/p/N82E16814932374'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6800-21305-01-20g/p/N82E16814202389'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/msi-radeon-rx-6800-rx-6800-16g/p/N82E16814137608'
 		}
 	],
 	name: 'newegg',

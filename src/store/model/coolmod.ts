@@ -186,6 +186,104 @@ export const Coolmod: Store = {
 			series: '3080',
 			url:
 				'https://www.coolmod.com/inno3d-geforce-rtx-3080-twin-x2-oc-10gb-gddr6x-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url:
+				'https://www.coolmod.com/amd-ryzen-5-5600x-46ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url:
+				'https://www.coolmod.com/amd-ryzen-7-5800x-47ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url:
+				'https://www.coolmod.com/amd-ryzen-9-5900x-48ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url:
+				'https://www.coolmod.com/amd-ryzen-9-5950x-49ghz-socket-am4-boxed-procesador-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'dual',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/asus-dual-geforce-rtx-3070-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/msi-geforce-rtx-3070-gaming-x-trio-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/msi-geforce-rtx-3070-ventus-2x-oc-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/evga-geforce-rtx-3070-xc3-black-gaming-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/asus-rog-strix-geforce-rtx-3070-gaming-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/gigabyte-geforce-rtx-3070-eagle-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/gigabyte-aorus-geforce-rtx-3070-master-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 revel',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/pny-geforce-rtx-3070-xlr8-gaming-epic-x-rgb-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/zotac-gaming-geforce-rtx-3070-twin-edge-8gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'kfa2',
+			model: 'sg oc',
+			series: '3070',
+			url:
+				'https://www.coolmod.com/kfa2-geforce-rtx-3070-sg-1-click-oc-8gb-gddr6-tarjeta-grafica-precio'
 		}
 	],
 	name: 'coolmod'

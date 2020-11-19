@@ -28,14 +28,15 @@ getting `streetmerchant` running!
 
 ### Installation: native
 
-| Branch | Note |
+| Reference | Note |
 |:---:|---|
-| `main` | Latest release; usually tagged, stable |
-| `develop` | Latest HEAD; not tagged, could be unstable |
+| tag | Example, `v1.0.0`; stable |
+| `main` | Latest HEAD; not tagged, could be unstable |
 
 - [Node.js 14](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
+  - To checkout a particular ref, use `git checkout <ref name>` after cloning
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
@@ -52,8 +53,8 @@ Available via GitHub Container Registry.
 
 | Tag | Note |
 |:---:|---|
-| `latest` | Latest release; usually tagged, stable |
-| `nightly` | Latest HEAD; not tagged, could be unstable |
+| `latest` | Latest release; stable |
+| `nightly` | Latest HEAD each day at midnight UTC; could be unstable |
 
 ```sh
 # to run
@@ -84,6 +85,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
+| `AUTO_ADD_TO_CART` | Enable auto add to cart on support stores | Default: `true` |
 | `BROWSER_TRUSTED` | Skip Chromium Sandbox | Useful for containerized environments, default: `false` |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `INCOGNITO` | Puppeteer to run incognito or not | Debugging related, default: `false` |
@@ -140,6 +142,7 @@ environment variables are **optional**._
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
+| Amazon (FR) | `amazon-fr`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
@@ -153,6 +156,7 @@ environment variables are **optional**._
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box (UK) | `box`|
+| CanadaComputers (CA) | `canadacomputers` |
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
 | Computeruniverse (DE) | `computeruniverse` |
@@ -166,6 +170,7 @@ environment variables are **optional**._
 | Galaxus (DE) | `galaxus`|
 | Game (UK) | `game`|
 | Gamestop | `gamestop`|
+| Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
@@ -179,6 +184,7 @@ environment variables are **optional**._
 | Office Depot | `officedepot`|
 | Overclockers (UK) | `overclockers`|
 | PCComponentes (ES) | `pccomponentes`|
+| PlayStation | `playstation`|
 | PNY | `pny`|
 | Proshop (DE) | `proshop-de`|
 | Proshop (DK) | `proshop-dk`|
@@ -188,6 +194,7 @@ environment variables are **optional**._
 | Very (UK) | `very`|
 | Walmart | `walmart`|
 | Zotac | `zotac`|
+| TopAchat | `topachat`|
 
 <details>
 <summary>Micro Center stores</summary>
@@ -249,6 +256,8 @@ environment variables are **optional**._
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
+| kfa2 | sg |
+| gainward | phoenix, phoenix gs |
 
 </details>
 
@@ -499,5 +508,9 @@ are welcome.
 
 **Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
 See [#11](https://github.com/jef/streetmerchant/issues/11).
+
+**Q: Why does Amazon show an error page (with a picture of an animal) instead of adding to cart or going to the detail page?** This is intended; see [#733](https://github.com/jef/streetmerchant/issues/733). This indicates that the item is out of stock and only available from a third-party seller (often at a markup).
+
+**Q: I'm using streetmerchant in the cloud and X isn't working.** There is _a lot_ of undefined behavior with using streetmerchant in the cloud. Some sites may block IPs from your cloud provider. It is possible that a VPN will help circumvent these problems.
 
 <p align="center"><a href="https://github.com/jef/streetmerchant#readme"><img src="https://raw.githubusercontent.com/jef/streetmerchant/main/media/terminal.gif" /></a></p>

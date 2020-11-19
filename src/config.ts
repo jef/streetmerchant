@@ -302,12 +302,16 @@ if (process.env.MAX_PRICE) {
 }
 
 const store = {
+	autoAddToCart: envOrBoolean(process.env.AUTO_ADD_TO_CART, true),
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	maxPrice: {
 		series: {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
 			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+			rx6800: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800),
+			rx6800xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800XT),
+			rx6900xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6900XT),
 			ryzen5600: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5600),
 			ryzen5800: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5800),
 			ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5900),
@@ -332,14 +336,17 @@ const store = {
 		'3070',
 		'3080',
 		'3090',
+		'rx6800',
+		'rx6800xt',
+		'rx6900xt',
 		'ryzen5600',
 		'ryzen5800',
 		'ryzen5900',
 		'ryzen5950',
 		'sonyps5c',
 		'sonyps5de',
-		'xboxsx',
-		'xboxss'
+		'xboxss',
+		'xboxsx'
 	]),
 	stores: envOrArray(process.env.STORES, ['nvidia']).map((entry) => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
