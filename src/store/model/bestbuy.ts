@@ -321,6 +321,34 @@ export const BestBuy: Store = {
 			series: 'xboxss',
 			url:
 				'https://www.bestbuy.com/site/microsoft-xbox-series-s-512-gb-all-digital-console-disc-free-gaming-white/6430277.p?skuId=6430277'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.bestbuy.com/site/msi-radeon-rx-6800-xt-16g-16gb-gddr6-pci-express-4-0-graphics-card-black-black/6440913.p?skuId=6440913'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.bestbuy.com/site/msi-radeon-rx-6800-16g-16gb-gddr6-pci-express-4-0-graphics-card-black-black/6441020.p?skuId=6441020'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6800-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6442077.p?skuId=6442077'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6441226.p?skuId=6441226'
 		}
 	],
 	name: 'bestbuy'
