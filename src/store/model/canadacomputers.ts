@@ -350,6 +350,34 @@ export const CanadaComputers: Store = {
 			series: '3090',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181352'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183432'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183431'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183430'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183427'
 		}
 	],
 	name: 'canadacomputers',
