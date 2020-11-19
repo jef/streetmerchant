@@ -444,6 +444,83 @@ export const NeweggCa: Store = {
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/msi-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814137607'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/msi-radeon-rx-6800-rx-6800-16g/p/N82E16814137608'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-xt-rx6800xt-16g/p/N82E16814126472'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-rx6800-16g/p/N82E16814126473'
+		},
+		{
+			brand: 'asrock',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814930045'
+		},
+		{
+			brand: 'asrock',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-rx-6800-16g/p/N82E16814930046'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/gigabyte-radeon-rx-6800-gv-r68-16gc-b/p/N82E16814932374'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6800-xt-21304-01-20g/p/N82E16814202388'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6800-21305-01-20g/p/N82E16814202389'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373'
 		}
 	],
 	name: 'newegg-ca',
