@@ -632,7 +632,7 @@ export const Newegg: Store = {
 			series: 'rx6800',
 			url:
 				'https://www.newegg.com/msi-radeon-rx-6800-rx-6800-16g/p/N82E16814137608'
-		},
+		}
 	],
 	name: 'newegg',
 	realTimeInventoryLookup: async (itemNumber: string) => {
