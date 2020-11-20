@@ -178,7 +178,9 @@ export const PCComponentes: Store = {
 			brand: 'amd',
 			model: '5900x',
 			series: 'ryzen5900',
-			url: 'https://www.pccomponentes.com/amd-ryzen-9-5900x-37-ghz'
+			url: 
+			
+			'https://www.pccomponentes.com/amd-ryzen-9-5900x-37-ghz'
 
 		},
 		{
