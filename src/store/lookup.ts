@@ -1,5 +1,5 @@
 import {Browser, Page, Response} from 'puppeteer';
-import {Link, Store, getStores} from './model';
+import {Link, Store} from './model';
 import {Print, logger} from '../logger';
 import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
 import {
@@ -30,10 +30,6 @@ const linkBuilderLastRunTimes: Record<string, number> = {};
  * @param store Vendor of graphics cards.
  */
 async function lookup(browser: Browser, store: Store) {
-	if (!getStores().has(store.name)) {
-		return;
-	}
-
 	/* eslint-disable no-await-in-loop */
 	for (const link of store.links) {
 		if (!filterStoreLink(link)) {

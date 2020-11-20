@@ -7,7 +7,7 @@ import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
 import resourceBlock from 'puppeteer-extra-plugin-block-resources';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
-import {storeList} from './store/model';
+import {storeList, getStores} from './store/model';
 import {tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
@@ -60,6 +60,10 @@ async function main() {
 	});
 
 	for (const store of storeList.values()) {
+	  if (!getStores().has(store.name)) {
+	     logger.debug(`[${store.name}] Skipped store...`);
+	     continue;
+	  }
 		logger.debug('store links', {meta: {links: store.links}});
 		if (store.setupAction !== undefined) {
 			store.setupAction(browser);
