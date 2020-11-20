@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const vsgamers: Store = {
+export const VsGamers: Store = {
 	labels: {
 		inStock: {
 			container: '#vs-product-sheet-dashboard',
