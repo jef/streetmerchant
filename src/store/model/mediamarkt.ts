@@ -2,13 +2,13 @@ import {Store} from './store';
 
 export const Mediamarkt: Store = {
 	labels: {
-		maxPrice: {
-			container: 'span[font-family="price"]',
-			euroFormat: false
-		},
 		captcha: {
 			container: 'body',
 			text: ['Das ging uns leider zu schnell.']
+		},
+		maxPrice: {
+			container: 'span[font-family="price"]',
+			euroFormat: false
 		},
 		outOfStock: [
 			{
