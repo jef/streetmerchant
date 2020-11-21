@@ -9,6 +9,12 @@ export const Saturn: Store = {
 		outOfStock: {
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']
+		},
+		captcha: {
+			container: 'body',
+			text: [
+				'Das ging uns leider zu schnell.'
+			]
 		}
 	},
 	links: [

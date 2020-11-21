@@ -9,11 +9,16 @@ export const Mediamarkt: Store = {
 		outOfStock: [{
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']
-		},
-		{
+		}, {
 			container: '#root',
 			text: ['leider keine Lieferung möglich']
-		}]
+		}],
+		captcha: {
+			container: 'body',
+			text: [
+				'Das ging uns leider zu schnell.'
+			]
+		}
 	},
 	links: [
 		{
