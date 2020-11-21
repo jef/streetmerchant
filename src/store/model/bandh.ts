@@ -20,6 +20,27 @@ export const BAndH: Store = {
 			url:
 				'https://www.bhphotovideo.com/c/product/1452927-REG/evga_06g_p4_2063_kr_geforce_rtx_2060_xc.html'
 		},
+		{
+			brand: 'asus',
+			model: 'dual',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1602755-REG/asus_dualrtx30708g_geforce_rtx_3070_8g.html'
+		},
+		{
+			brand: 'pny',
+			model: 'dual fan',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1595984-REG/pny_technologies_vcg30708tfxppb_geforce_rtx_3070_epic_x.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1602756-REG/asus_strixrtx3070o8_rog_strix_geforce_rtx.html'
+		},
 		// TUF was removed from BH, not sure why so commenting out listing for now
 		// {
 		// 	brand: 'asus',
