@@ -8,6 +8,7 @@ import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
 import {AmazonEs} from './amazon-es';
+import {AmazonFr} from './amazon-fr';
 import {AmazonNl} from './amazon-nl';
 import {AmazonUk} from './amazon-uk';
 import {Aria} from './aria';
@@ -19,6 +20,7 @@ import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
+import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
@@ -30,7 +32,9 @@ import {Ebuyer} from './ebuyer';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Galaxus} from './galaxus';
+import {Game} from './game';
 import {Gamestop} from './gamestop';
+import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
@@ -44,6 +48,7 @@ import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
+import {PlayStation} from './playstation';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
@@ -51,7 +56,9 @@ import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Store} from './store';
 import {Target} from './target';
+import {TopAchat} from './topachat';
 import {Very} from './very';
+import {VsGamers} from './vsgamers';
 import {Walmart} from './walmart';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
@@ -64,6 +71,7 @@ export const storeList = new Map([
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
 	[AmazonEs.name, AmazonEs],
+	[AmazonFr.name, AmazonFr],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
 	[AMD.name, AMD],
@@ -78,6 +86,7 @@ export const storeList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Caseking.name, Caseking],
+	[CanadaComputers.name, CanadaComputers],
 	[Ccl.name, Ccl],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
@@ -88,7 +97,9 @@ export const storeList = new Map([
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Galaxus.name, Galaxus],
+	[Game.name, Game],
 	[Gamestop.name, Gamestop],
+	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
@@ -102,6 +113,7 @@ export const storeList = new Map([
 	[OfficeDepot.name, OfficeDepot],
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
+	[PlayStation.name, PlayStation],
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
@@ -109,8 +121,10 @@ export const storeList = new Map([
 	[Scan.name, Scan],
 	[Target.name, Target],
 	[Very.name, Very],
+	[VsGamers.name, VsGamers],
 	[Walmart.name, Walmart],
-	[Zotac.name, Zotac]
+	[Zotac.name, Zotac],
+	[TopAchat.name, TopAchat]
 ]);
 
 const brands = new Set();
@@ -142,7 +156,11 @@ function filterBrandsSeriesModels() {
 
 function printConfig() {
 	if (config.store.stores.length > 0) {
-		logger.info(`ℹ selected stores: ${config.store.stores.map(store => store.name).join(', ')}`);
+		logger.info(
+			`ℹ selected stores: ${config.store.stores
+				.map((store) => store.name)
+				.join(', ')}`
+		);
 	}
 
 	if (config.store.showOnlyBrands.length > 0) {
@@ -150,9 +168,15 @@ function printConfig() {
 	}
 
 	if (config.store.showOnlyModels.length > 0) {
-		logger.info(`ℹ selected models: ${config.store.showOnlyModels.map(entry => {
-			return entry.series ? entry.name + ' (' + entry.series + ')' : entry.name;
-		}).join(', ')}`);
+		logger.info(
+			`ℹ selected models: ${config.store.showOnlyModels
+				.map((entry) => {
+					return entry.series
+						? entry.name + ' (' + entry.series + ')'
+						: entry.name;
+				})
+				.join(', ')}`
+		);
 	}
 
 	if (config.store.showOnlySeries.length > 0) {
@@ -167,7 +191,9 @@ function warnIfStoreDeprecated(store: Store) {
 			logger.warn(`${store.name} is deprecated in favor of bestbuy`);
 			break;
 		case 'evga':
-			logger.warn(`${store.name} is deprecated since they only support queuing`);
+			logger.warn(
+				`${store.name} is deprecated since they only support queuing`
+			);
 			break;
 		default:
 	}

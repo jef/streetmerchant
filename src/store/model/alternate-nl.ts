@@ -36,7 +36,7 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1672251'
 		},
@@ -54,19 +54,19 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf oc gaming',
+			model: 'tuf oc',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1672634'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc gaming',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1672867'
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 black gaming',
+			model: 'xc3 black',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1673512'
 		},
@@ -78,13 +78,13 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 ultra gaming',
+			model: 'xc3 ultra',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1674164'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix gaming',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1672868'
 		},
@@ -108,7 +108,7 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc3 gaming',
+			model: 'xc3',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1673520'
 		},
@@ -126,7 +126,7 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'ftw3 ultra gaming',
+			model: 'ftw3 ultra',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1673524'
 		},
@@ -138,7 +138,7 @@ export const AlternateNL: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'ftw3 gaming',
+			model: 'ftw3',
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1673517'
 		},
@@ -169,4 +169,3 @@ export const AlternateNL: Store = {
 	],
 	name: 'alternate-nl'
 };
-

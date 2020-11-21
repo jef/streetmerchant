@@ -6,13 +6,16 @@ export const Mediamarkt: Store = {
 			container: 'span[font-family="price"]',
 			euroFormat: false
 		},
-		outOfStock: [{
-			container: '#root',
-			text: ['dieser artikel ist aktuell nicht verfügbar.']
-		}, {
-			container: '#root',
-			text: ['leider keine Lieferung möglich']
-		}],
+		outOfStock: [
+			{
+				container: '#root',
+				text: ['dieser artikel ist aktuell nicht verfügbar.']
+			},
+			{
+				container: '#root',
+				text: ['leider keine Lieferung möglich']
+			}
+		],
 		captcha: {
 			container: 'body',
 			text: [
@@ -29,13 +32,13 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3070',
 			url: 'https://www.mediamarkt.de/de/product/-2691243.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3070',
 			url: 'https://www.mediamarkt.de/de/product/-2691244.html'
 		},
@@ -125,13 +128,13 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2681869.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3080',
 			url: 'https://www.mediamarkt.de/de/product/-2681871.html'
 		},
@@ -191,13 +194,13 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3090',
 			url: 'https://www.mediamarkt.de/de/product/-2681863.html'
 		},
 		{
 			brand: 'asus',
-			model: 'rog strix oc',
+			model: 'strix oc',
 			series: '3090',
 			url: 'https://www.mediamarkt.de/de/product/-2681866.html'
 		},

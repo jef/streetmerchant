@@ -73,11 +73,16 @@ export class NvidiaCart {
 					cartUrl = await this.addToCartAndGetLocationRedirect(productId);
 
 					break;
-				} catch (error) {
-					logger.error(`✖ [nvidia] ${name} could not automatically add to cart, attempt ${i + 1} of ${config.nvidia.addToCardAttempts}`, error);
+				} catch (error: unknown) {
+					logger.error(
+						`✖ [nvidia] ${name} could not automatically add to cart, attempt ${
+							i + 1
+						} of ${config.nvidia.addToCardAttempts}`,
+						error
+					);
 					logger.debug(error);
 
-					lastError = error;
+					lastError = error as Error;
 				}
 			}
 			/* eslint-enable no-await-in-loop */
@@ -91,9 +96,11 @@ export class NvidiaCart {
 			logger.info(cartUrl);
 
 			await open(cartUrl);
-		} catch (error) {
-			logger.error(`✖ [nvidia] ${name} could not automatically add to cart, opening page`);
-			logger.debug(error);
+		} catch (error: unknown) {
+			logger.error(
+				`✖ [nvidia] ${name} could not automatically add to cart, opening page`,
+				error
+			);
 
 			cartUrl = this.fallbackCartUrl;
 
@@ -118,33 +125,46 @@ export class NvidiaCart {
 	public async refreshSessionToken(): Promise<void> {
 		logger.debug('ℹ [nvidia] refreshing session token');
 		try {
-			const result = await usingResponse(this.browser, this.sessionUrl, async response => {
-				return response?.json() as NvidiaSessionTokenJSON | undefined;
-			});
-			if (typeof result !== 'object' || result === null || !('session_token' in result)) {
+			const result = await usingResponse(
+				this.browser,
+				this.sessionUrl,
+				async (response) => {
+					return response?.json() as NvidiaSessionTokenJSON | undefined;
+				}
+			);
+			if (
+				typeof result !== 'object' ||
+				result === null ||
+				!('session_token' in result)
+			) {
 				throw new Error('malformed response');
 			}
 
 			this.sessionToken = result.session_token;
 			logger.debug(`ℹ [nvidia] session_token=${result.session_token}`);
-		} catch (error) {
-			const message: string = typeof error === 'object' ? error.message : error;
+		} catch (error: unknown) {
+			const message: string =
+				typeof error === 'object'
+					? (error as Error).message
+					: (error as string);
 			logger.error(`✖ [nvidia] ${message}`);
 		}
 	}
 
-	protected async addToCartAndGetLocationRedirect(productId: number): Promise<string> {
+	protected async addToCartAndGetLocationRedirect(
+		productId: number
+	): Promise<string> {
 		const url = 'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
 		const sessionToken = await this.getSessionToken();
 
 		logger.info(`ℹ [nvidia] session_token=${sessionToken}`);
 
-		const locationData = await usingPage(this.browser, async page => {
+		const locationData = await usingPage(this.browser, async (page) => {
 			page.removeAllListeners('request');
 
 			await page.setRequestInterception(true);
 
-			page.on('request', interceptedRequest => {
+			page.on('request', (interceptedRequest) => {
 				void interceptedRequest.continue({
 					headers: {
 						...interceptedRequest.headers(),
@@ -153,9 +173,7 @@ export class NvidiaCart {
 					},
 					method: 'POST',
 					postData: JSON.stringify({
-						products: [
-							{productId, quantity: 1}
-						]
+						products: [{productId, quantity: 1}]
 					})
 				});
 			});

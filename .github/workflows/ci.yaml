@@ -3,16 +3,14 @@ on:
   pull_request:
     branches:
       - main
-    paths-ignore:
-      - '**.md'
 jobs:
-  build-lint:
+  build-and-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.2
         with:
-          node-version: 14
+          node-version: 14.15.0
       - uses: actions/cache@v2
         with:
           path: ~/.npm
@@ -29,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2.5.1
+      - uses: dorny/paths-filter@v2.5.3
         id: filter
         with:
           filters: |

@@ -10,7 +10,11 @@ type Backoff = {
 
 const stores: Record<string, Backoff> = {};
 
-export async function processBackoffDelay(store: Store, link: Link, statusCode: number): Promise<number> {
+export async function processBackoffDelay(
+	store: Store,
+	link: Link,
+	statusCode: number
+): Promise<number> {
 	/**
 	 * We treat statusCode 0 as successful as some of the puppeteer plugins
 	 * cause side-effects resulting in an empty response object even though
@@ -41,7 +45,9 @@ export async function processBackoffDelay(store: Store, link: Link, statusCode: 
 	}
 
 	const backoffTime = backoff.time;
-	logger.debug(Print.backoff(link, store, {delay: backoffTime, statusCode}, true));
+	logger.debug(
+		Print.backoff(link, store, {delay: backoffTime, statusCode}, true)
+	);
 
 	await delay(backoff.time);
 

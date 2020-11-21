@@ -1,5 +1,6 @@
-# Build the source code
 FROM node:14.15.0-alpine3.12 AS builder
+
+LABEL org.opencontainers.image.source=https://github.com/jef/streetmerchant
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
@@ -32,6 +33,7 @@ WORKDIR /app
 
 COPY --from=builder /build/node_modules/ node_modules/
 COPY --from=builder /build/build/ build/
+COPY web/ web/
 COPY package.json package.json
 COPY version.txt version.txt
 
