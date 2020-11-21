@@ -6,15 +6,13 @@ export const Saturn: Store = {
 			container: 'span[font-family="price"]',
 			euroFormat: false // Note: Saturn uses non-euroFromat as price seperator
 		},
+		captcha: {
+			container: 'body',
+			text: ['Das ging uns leider zu schnell.']
+		},
 		outOfStock: {
 			container: '#root',
 			text: ['dieser artikel ist aktuell nicht verfügbar.']
-		},
-		captcha: {
-			container: 'body',
-			text: [
-				'Das ging uns leider zu schnell.'
-			]
 		}
 	},
 	links: [

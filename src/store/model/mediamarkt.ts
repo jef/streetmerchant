@@ -6,6 +6,10 @@ export const Mediamarkt: Store = {
 			container: 'span[font-family="price"]',
 			euroFormat: false
 		},
+		captcha: {
+			container: 'body',
+			text: ['Das ging uns leider zu schnell.']
+		},
 		outOfStock: [
 			{
 				container: '#root',
@@ -15,13 +19,7 @@ export const Mediamarkt: Store = {
 				container: '#root',
 				text: ['leider keine Lieferung möglich']
 			}
-		],
-		captcha: {
-			container: 'body',
-			text: [
-				'Das ging uns leider zu schnell.'
-			]
-		}
+		]
 	},
 	links: [
 		{
