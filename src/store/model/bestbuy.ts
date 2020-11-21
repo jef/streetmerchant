@@ -99,7 +99,7 @@ export const BestBuy: Store = {
 			series: '3070',
 			url:
 				'https://www.bestbuy.com/site/msi-geforce-rtx-3070-ventus-3x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black/6438278.p?skuId=6438278'
-		},		
+		},
 		{
 			brand: 'asus',
 			cartUrl: 'https://api.bestbuy.com/click/-/6439127/cart',
@@ -219,7 +219,7 @@ export const BestBuy: Store = {
 			series: '3080',
 			url:
 				'https://www.bestbuy.com/site/msi-geforce-rtx-3080-ventus-3x-10g-oc-bv-gddr6x-pci-express-4-0-graphic-card-black-silver/6430175.p?skuId=6430175&intl=nosplash'
-		},		
+		},
 		{
 			brand: 'pny',
 			cartUrl: 'https://api.bestbuy.com/click/-/6432655/cart',
