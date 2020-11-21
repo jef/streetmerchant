@@ -26,7 +26,7 @@ export function sendTelegramMessage(link: Link, store: Store) {
 						)
 					);
 					logger.info('✔ telegram message sent');
-				} catch (error) {
+				} catch (error: unknown) {
 					logger.error("✖ couldn't send telegram message", error);
 				}
 			}

@@ -1,5 +1,5 @@
 declare module '@jef/pushbullet' {
-	export type DeviceParams = string | number | Record<string, any>;
+	export type DeviceParameters = string | number | Record<string, any>;
 
 	export type PushBulletCallback =
 		| ((error: Error) => void)
@@ -38,26 +38,26 @@ declare module '@jef/pushbullet' {
 		);
 		deleteDevice(deviceIden: string, callback: PushBulletCallback);
 		note(
-			deviceParams: DeviceParams,
+			deviceParameters: DeviceParameters,
 			title: string,
 			body: string,
 			callback: PushBulletCallback
 		);
 		link(
-			deviceParams: DeviceParams,
+			deviceParameters: DeviceParameters,
 			name: string,
 			url: string,
 			body: string,
 			callback: PushBulletCallback
 		);
 		file(
-			deviceParams: DeviceParams,
+			deviceParameters: DeviceParameters,
 			filePath: string,
 			message: string,
 			callback: PushBulletCallback
 		);
-		dismissPush(pushIden: DeviceParams, callback: PushBulletCallback);
-		deletePush(pushIden: DeviceParams, callback: PushBulletCallback);
+		dismissPush(pushIden: DeviceParameters, callback: PushBulletCallback);
+		deletePush(pushIden: DeviceParameters, callback: PushBulletCallback);
 		deleteAllPushes(callback: PushBulletCallback);
 		history(options: HistoryOptions, callback: PushBulletCallback);
 		history(callback: PushBulletCallback);

@@ -6,6 +6,10 @@ export const Coolmod: Store = {
 			container: '.product-availability',
 			text: ['Envío']
 		},
+		maxPrice: {
+			container: '.text-price-total',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '.product-availability',
 			text: ['Sin Stock']
