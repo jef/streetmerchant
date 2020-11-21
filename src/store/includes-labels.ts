@@ -72,7 +72,6 @@ export async function extractPageContents(
 	selector: Selector
 ): Promise<string | null> {
 	return page.evaluate((options: Selector) => {
-		// eslint-disable-next-line no-undef
 		const element: globalThis.HTMLElement | null = document.querySelector(
 			options.selector
 		);

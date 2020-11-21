@@ -13,7 +13,7 @@ import {join, normalize} from 'path';
 const approot = join(__dirname, '../../');
 const webroot = join(approot, './web');
 
-const contentTypeMap: {[key: string]: string} = {
+const contentTypeMap: Record<string, string> = {
 	css: 'text/css',
 	htm: 'text/html',
 	html: 'text/html',
@@ -49,8 +49,8 @@ function sendFile(
 
 		stream.on('end', () => response.end());
 		stream.pipe(response);
-	} catch (error) {
-		sendError(response, error);
+	} catch (error: unknown) {
+		sendError(response, (error as Error).message);
 	}
 }
 
@@ -182,6 +182,6 @@ export async function stopAPIServer() {
 			return;
 		}
 
-		resolve();
+		resolve(null);
 	});
 }
