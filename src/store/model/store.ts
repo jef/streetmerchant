@@ -28,6 +28,7 @@ export type Brand =
 	| 'sapphire'
 	| 'sony'
 	| 'xfx'
+	| 'powercolor'
 	| 'zotac';
 
 export type Series =
