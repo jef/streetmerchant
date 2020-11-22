@@ -2,9 +2,13 @@ import {Store} from './store';
 
 export const CanadaComputers: Store = {
 	labels: {
+		inStock: {
+			container: 'div[class="pi-prod-availability"]',
+			text: ['Online In Stock', 'Disponible en ligne']
+		},
 		outOfStock: {
 			container: 'div[class="pi-prod-availability"]',
-			text: ['not available online']
+			text: ['Not Available Online', 'Order Online and Pick Up In-Store', 'Commandez en ligne puis ramassez en magasin', 'Non disponible en ligne']
 		}
 	},
 	links: [
