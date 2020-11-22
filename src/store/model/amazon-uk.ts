@@ -88,7 +88,7 @@ export const AmazonUk: Store = {
 						url
 					});
 				} else {
-					logger.error(`Failed to parse card: ${title}`);
+					logger.error(`Failed to parse card: ${title}`, {url});
 				}
 			}
 

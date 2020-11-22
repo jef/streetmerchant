@@ -59,7 +59,7 @@ export function getProductLinksBuilder(options: LinksBuilderOptions) {
 					url
 				});
 			} else {
-				logger.error(`Failed to parse card: ${title}`);
+				logger.error(`Failed to parse card: ${title}`, {url});
 			}
 		}
 
