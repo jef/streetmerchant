@@ -33,7 +33,7 @@ jobs:
           filters: |
             build:
               - 'Dockerfile'
-              - 'package*.json
+              - 'package*.json'
       - name: Build image
         if: steps.filter.outputs.build == 'true'
         run: docker build .
