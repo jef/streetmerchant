@@ -266,6 +266,7 @@ environment variables are **optional**._
 <summary>Supported series</summary>
 
 > :point_right: Used with the `SHOW_ONLY_SERIES` variable.
+
 | Series | Environment variable |
 |:---:|:---:|
 | `AMD Ryzen 5600x` | `ryzen5600` |
