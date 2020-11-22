@@ -38,7 +38,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				await Promise.all(promises);
 
 				logger.info('✔ discord message sent');
-			} catch (error) {
+			} catch (error: unknown) {
 				logger.error("✖ couldn't send discord message", error);
 			}
 		})();

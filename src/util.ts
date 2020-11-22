@@ -62,7 +62,7 @@ export async function usingPage<T>(
 	} finally {
 		try {
 			await closePage(page);
-		} catch (error) {
+		} catch (error: unknown) {
 			logger.error(error);
 		}
 	}

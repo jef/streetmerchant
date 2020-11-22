@@ -73,7 +73,7 @@ export class NvidiaCart {
 					cartUrl = await this.addToCartAndGetLocationRedirect(productId);
 
 					break;
-				} catch (error) {
+				} catch (error: unknown) {
 					logger.error(
 						`✖ [nvidia] ${name} could not automatically add to cart, attempt ${
 							i + 1
@@ -82,7 +82,7 @@ export class NvidiaCart {
 					);
 					logger.debug(error);
 
-					lastError = error;
+					lastError = error as Error;
 				}
 			}
 			/* eslint-enable no-await-in-loop */
@@ -96,11 +96,11 @@ export class NvidiaCart {
 			logger.info(cartUrl);
 
 			await open(cartUrl);
-		} catch (error) {
+		} catch (error: unknown) {
 			logger.error(
-				`✖ [nvidia] ${name} could not automatically add to cart, opening page`
+				`✖ [nvidia] ${name} could not automatically add to cart, opening page`,
+				error
 			);
-			logger.debug(error);
 
 			cartUrl = this.fallbackCartUrl;
 
@@ -142,8 +142,11 @@ export class NvidiaCart {
 
 			this.sessionToken = result.session_token;
 			logger.debug(`ℹ [nvidia] session_token=${result.session_token}`);
-		} catch (error) {
-			const message: string = typeof error === 'object' ? error.message : error;
+		} catch (error: unknown) {
+			const message: string =
+				typeof error === 'object'
+					? (error as Error).message
+					: (error as string);
 			logger.error(`✖ [nvidia] ${message}`);
 		}
 	}

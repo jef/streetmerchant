@@ -94,7 +94,7 @@ async function stopAndExit() {
 async function loopMain() {
 	try {
 		await main();
-	} catch (error) {
+	} catch (error: unknown) {
 		logger.error(
 			'✖ something bad happened, resetting streetmerchant in 5 seconds',
 			error

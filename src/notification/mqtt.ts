@@ -44,7 +44,7 @@ export function sendMqttMessage(link: Link, store: Store) {
 			try {
 				client.publish(topic, message, pubOptions);
 				logger.info('✔ mqtt message sent');
-			} catch (error) {
+			} catch (error: unknown) {
 				logger.error("✖ couldn't send mqtt message", error);
 			}
 		})();
