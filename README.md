@@ -267,7 +267,7 @@ environment variables are **optional**._
 
 > :point_right: Used with the `SHOW_ONLY_SERIES` variable.
 | Series | Environment variable |
-|:---:|---|
+|:---:|:---:|
 | `AMD Ryzen 5600x` | `ryzen5600` |
 | `AMD Ryzen 5800x` | `ryzen5800` |
 | `AMD Ryzen 5900x` | `ryzen5900` |
