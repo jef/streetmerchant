@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const AMD: Store = {
+export const Amd: Store = {
 	labels: {
 		inStock: {
 			container: '.btn-shopping-cart',

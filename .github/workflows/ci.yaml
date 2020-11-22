@@ -31,8 +31,9 @@ jobs:
         id: filter
         with:
           filters: |
-            docker:
+            build:
               - 'Dockerfile'
+              - 'package*.json'
       - name: Build image
-        if: steps.filter.outputs.docker == 'true'
+        if: steps.filter.outputs.build == 'true'
         run: docker build .
