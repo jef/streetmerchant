@@ -570,7 +570,7 @@ export const Newegg: Store = {
 			itemNumber: '19-113-665',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 'https://www.newegg.com/amd-ryzen-9-5900x/p/N82E16819113665'
+			url: 'https://www.newegg.com/amd-ryzen-7-5800x/p/N82E16819113665'
 		},
 		{
 			brand: 'amd',
