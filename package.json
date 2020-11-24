@@ -49,7 +49,7 @@
     "twilio": "^3.52.0",
     "twitch": "^4.3.1",
     "twitch-auth": "^4.3.1",
-    "twitch-chat-client": "^4.3.0",
+    "twitch-chat-client": "^4.3.1",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
   },
