@@ -1,5 +1,14 @@
 # Changelog
 
+### [3.1.1](https://www.github.com/jef/streetmerchant/compare/v3.1.0...v3.1.1) (2020-11-24)
+
+
+### Bug Fixes
+
+* **canadacomputers:** add `inStock` selector, use english links ([#889](https://www.github.com/jef/streetmerchant/issues/889)) ([06214eb](https://www.github.com/jef/streetmerchant/commit/06214eb4a8a5c2d8a180e8dcf846f828d5cce2ed))
+* **memoryexpress:** add backorder to `outOfStock` selector ([#890](https://www.github.com/jef/streetmerchant/issues/890)) ([67605a6](https://www.github.com/jef/streetmerchant/commit/67605a6e280af35f210c536bc03571a84ea1a7e9))
+* **newegg:** typo in 5800x url([#903](https://www.github.com/jef/streetmerchant/issues/903)) ([a99eecb](https://www.github.com/jef/streetmerchant/commit/a99eecb4613bc136e65afe4e5e8788316beae39e))
+
 ## [3.1.0](https://www.github.com/jef/streetmerchant/compare/v3.0.0...v3.1.0) (2020-11-22)
 
 
