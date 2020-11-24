@@ -48,8 +48,8 @@ export const Walmart: Store = {
 			series: 'sf',
 			url:
 				'https://www.walmart.com/ip/Corsair-SF-Series-600W-80-Platinum-Power-Supply/250717047'
-    },
-    {
+		},
+		{
 			brand: 'amd',
 			model: '5900x',
 			series: 'ryzen5900',
