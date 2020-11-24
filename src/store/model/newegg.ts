@@ -662,6 +662,24 @@ export const Newegg: Store = {
 			series: 'rx6800',
 			url:
 				'https://www.newegg.com/msi-radeon-rx-6800-rx-6800-16g/p/N82E16814137608'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16817139080',
+			model: '750 platinum',
+			series: 'sf',
+			url:
+				'https://www.newegg.com/corsair-sf750-cp-9020186-na-750w/p/N82E16817139080'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16817139242',
+			model: '600 platinum',
+			series: 'sf',
+			url:
+				'https://www.newegg.com/corsair-sf-series-sf600-cp-9020182-na-600w/p/N82E16817139242'
 		}
 	],
 	name: 'newegg',

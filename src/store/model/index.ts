@@ -1,6 +1,4 @@
 import {config, defaultStoreData} from '../../config';
-import {AMD} from './amd';
-import {AMDDe} from './amd-de';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -11,6 +9,8 @@ import {AmazonEs} from './amazon-es';
 import {AmazonFr} from './amazon-fr';
 import {AmazonNl} from './amazon-nl';
 import {AmazonUk} from './amazon-uk';
+import {Amd} from './amd';
+import {AmdDe} from './amd-de';
 import {Aria} from './aria';
 import {Arlt} from './arlt';
 import {Asus} from './asus';
@@ -26,6 +26,7 @@ import {Ccl} from './ccl';
 import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
 import {Coolmod} from './coolmod';
+import {Corsair} from './corsair';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
@@ -60,6 +61,7 @@ import {TopAchat} from './topachat';
 import {Very} from './very';
 import {VsGamers} from './vsgamers';
 import {Walmart} from './walmart';
+import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
 
@@ -74,8 +76,8 @@ export const storeList = new Map([
 	[AmazonFr.name, AmazonFr],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
-	[AMD.name, AMD],
-	[AMDDe.name, AMDDe],
+	[Amd.name, Amd],
+	[AmdDe.name, AmdDe],
 	[Aria.name, Aria],
 	[Arlt.name, Arlt],
 	[Asus.name, Asus],
@@ -91,6 +93,7 @@ export const storeList = new Map([
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
 	[Coolmod.name, Coolmod],
+	[Corsair.name, Corsair],
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
 	[Ebuyer.name, Ebuyer],
@@ -120,11 +123,12 @@ export const storeList = new Map([
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Target.name, Target],
+	[TopAchat.name, TopAchat],
 	[Very.name, Very],
 	[VsGamers.name, VsGamers],
 	[Walmart.name, Walmart],
-	[Zotac.name, Zotac],
-	[TopAchat.name, TopAchat]
+	[Xbox.name, Xbox],
+	[Zotac.name, Zotac]
 ]);
 
 const brands = new Set();

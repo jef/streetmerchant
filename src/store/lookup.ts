@@ -223,7 +223,7 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
 		return;
 	}
 
-	if (store.linksBuilder) {
+	if (getStores().has(store.name) && store.linksBuilder) {
 		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
 		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
 		if (lastRunTime === -1 || Date.now() - lastRunTime > ttl) {

@@ -405,6 +405,22 @@ export const BestBuy: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6441226.p?skuId=6441226'
+		},
+		{
+			brand: 'corsair',
+			cartUrl: 'https://api.bestbuy.com/click/-/6351845/cart',
+			model: '750 platinum',
+			series: 'sf',
+			url:
+				'https://www.bestbuy.com/site/corsair-sf-series-750w-atx12v-2-4-eps12v-2-92-sfx12v-80-plus-platinum-modular-power-supply-black/6351845.p?skuId=6351845'
+		},
+		{
+			brand: 'corsair',
+			cartUrl: 'https://api.bestbuy.com/click/-/6351844/cart',
+			model: '600 platinum',
+			series: 'sf',
+			url:
+				'https://www.bestbuy.com/site/corsair-sf-series-600w-atx12v-2-4-eps12v-2-92-sfx12v-80-plus-platinum-modular-power-supply-black/6351844.p?skuId=6351844'
 		}
 	],
 	name: 'bestbuy'
