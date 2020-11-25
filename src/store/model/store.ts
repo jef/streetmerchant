@@ -30,7 +30,9 @@ export type Brand =
 	| 'sony'
 	| 'xfx'
 	| 'powercolor'
-	| 'zotac';
+	| 'zotac'
+	| 'powercolor'
+	| 'sapphire';
 
 export type Series =
 	| 'test:series'
@@ -117,7 +119,16 @@ export type Model =
 	| 'xc3 ultra'
 	| 'xc3'
 	| 'xlr8 revel'
-	| 'xlr8 uprising';
+	| 'xlr8 uprising'
+	| 'merc319'
+	| 'nitro+ se'
+	| 'nitro+'
+	| 'red devil'
+	| 'strix lc'
+	| 'strix'
+	| 'taichi'
+	| 'phantom'
+	| 'challenger'
 
 export type Link = {
 	brand: Brand;

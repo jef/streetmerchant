@@ -704,6 +704,114 @@ export const Newegg: Store = {
 			series: 'sf',
 			url:
 				'https://www.newegg.com/corsair-sf-series-sf600-cp-9020182-na-600w/p/N82E16817139242'
+		},
+        {   
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930047',
+			model: 'challenger',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-rx6800-clp-16go/p/N82E16814930047'
+		},
+        {   
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930048',
+			model: 'phantom',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-rx6800-pgd-16go/p/N82E16814930048'
+		},
+        {   
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930049',
+			model: 'phantom',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx6800xt-pgd-16go/p/N82E16814930049'
+		},
+        {   
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930050',
+			model: 'taichi',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx6800xt-tcx-16go/p/N82E16814930050'
+		},
+        {   
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126478',
+			model: 'tuf',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-tuf-rx6800-o16g-gaming/p/N82E16814126478'
+		},
+        {   
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126476',
+			model: 'tuf',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-xt-tuf-rx6800xt-o16g-gaming/p/N82E16814126476'
+		},
+        {   
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126477',
+			model: 'strix',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-rog-strix-rx6800-o16g-gaming/p/N82E16814126477'
+		},
+        {   
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126475',
+			model: 'strix lc',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/asus-radeon-rx-6800-xt-rog-strix-lc-rx6800xt-o16g-gaming/p/N82E16814126475'
+		},
+        {   
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131767',
+			model: 'red devil',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-xt-axrx-6800xt-16gbd6-2dhce-oc/p/N82E16814131767'
+		},
+        {   
+			brand: 'sapphire',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202391',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6800-xt-11304-02-20g/p/N82E16814202391'
+		},
+        {   
+			brand: 'sapphire',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202390',
+			model: 'nitro+ se',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6800-xt-11304-01-20g/p/N82E16814202390'
+		},
+        {   
+			brand: 'xfx',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150844',
+			model: 'merc319',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/xfx-radeon-rx-6800-xt-rx-68xtacbd9/p/N82E16814150844'
 		}
 	],
 	name: 'newegg',
