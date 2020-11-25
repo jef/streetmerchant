@@ -15,6 +15,7 @@ export type Brand =
 	| 'amd'
 	| 'asrock'
 	| 'asus'
+	| 'corsair'
 	| 'evga'
 	| 'gainward'
 	| 'gigabyte'
@@ -28,6 +29,7 @@ export type Brand =
 	| 'sapphire'
 	| 'sony'
 	| 'xfx'
+	| 'powercolor'
 	| 'zotac';
 
 export type Series =
@@ -44,6 +46,7 @@ export type Series =
 	| 'ryzen5950'
 	| 'sonyps5c'
 	| 'sonyps5de'
+	| 'sf'
 	| 'xboxsx'
 	| 'xboxss';
 
@@ -53,6 +56,8 @@ export type Model =
 	| '5800x'
 	| '5900x'
 	| '5950x'
+	| '600 platinum'
+	| '750 platinum'
 	| 'amd reference'
 	| 'amp extreme holo'
 	| 'amp holo'

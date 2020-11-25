@@ -120,6 +120,7 @@ environment variables are **optional**._
 | `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PSUs above `1234` will be skipped. |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search | Comma separated, e.g.: `marietta,duluth`, default: `web` |
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
@@ -162,6 +163,7 @@ environment variables are **optional**._
 | Computeruniverse (DE) | `computeruniverse` |
 | Coolblue (NL) | `coolblue`|
 | Coolmod (ES) | `coolmod`|
+| Corsair | `corsair`|
 | Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer (UK) | `ebuyer`|
@@ -244,6 +246,7 @@ environment variables are **optional**._
 |:---:|---|
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x` |
 | `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
+| `corsair` | `750 platinum`, `600 platinum` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
@@ -259,6 +262,30 @@ environment variables are **optional**._
 
 </details>
 
+<details>
+<summary>Supported series</summary>
+
+> :point_right: Used with the `SHOW_ONLY_SERIES` variable.
+
+| Series | Environment variable |
+|:---:|:---:|
+| `AMD Ryzen 5600x` | `ryzen5600` |
+| `AMD Ryzen 5800x` | `ryzen5800` |
+| `AMD Ryzen 5900x` | `ryzen5900` |
+| `AMD Ryzen 5950x` | `ryzen5950` |
+| `AMD RX 6800` | `rx6800` |
+| `AMD RX 6800XT` | `rx6800xt` |
+| `AMD RX 6900XT` | `rx6900xt` |
+| `Nvidia RTX 3070` | `3070` |
+| `Nvidia RTX 3080` | `3080` |
+| `Nvidia RTX 3090` | `3090` |
+| `Corsair SFX PSU` | `sf` |
+| `Sony PS5` | `sonyps5c` |
+| `Sony PS5 Digital Edition` | `sonyps5de` |
+| `Xbox Series S` | `xboxss` |
+| `Xbox Series X` | `xboxsx` |
+
+</details>
 <details>
 <summary>Supported countries (used with nvidia and nvidia-api)</summary>
 

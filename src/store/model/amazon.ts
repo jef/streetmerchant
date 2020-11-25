@@ -425,6 +425,46 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/dp/B0815Y8J9N'
 		},
 		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NS4W2ZY&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NS4W2ZY'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MVC76SR&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08MVC76SR'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08N6ZLX9B&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08N6ZLX9B'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MNZM5TK&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08MNZM5TK'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MVCLBWK&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08MVCLBWK'
+		},
+		{
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5L3RG&Quantity.1=1',
@@ -451,6 +491,22 @@ export const Amazon: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.amazon.com/dp/B08G9J44ZN'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07M63H81H&Quantity.1=1',
+			model: '750 platinum',
+			series: 'sf',
+			url: 'https://www.amazon.com/dp/B07M63H81H'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07F84FJ1G&Quantity.1=1',
+			model: '600 platinum',
+			series: 'sf',
+			url: 'https://www.amazon.com/dp/B07F84FJ1G'
 		}
 	],
 	name: 'amazon'

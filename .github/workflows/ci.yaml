@@ -27,12 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2.5.3
+      - uses: dorny/paths-filter@v2.6.0
         id: filter
         with:
           filters: |
-            docker:
+            build:
               - 'Dockerfile'
+              - 'package*.json'
       - name: Build image
-        if: steps.filter.outputs.docker == 'true'
+        if: steps.filter.outputs.build == 'true'
         run: docker build .
