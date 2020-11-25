@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Overclockers: Store = {
+	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		inStock: {
 			container: '#detailbox',
@@ -78,6 +79,16 @@ export const Overclockers: Store = {
 				series: '3090',
 				url:
 					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3090'
+			},
+			{
+				series: 'rx6800',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-series'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-xt-series'
 			}
 		]
 	},
