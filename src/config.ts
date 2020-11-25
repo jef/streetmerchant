@@ -382,8 +382,8 @@ export const config = {
 	nvidia,
 	page,
 	proxy,
-	store,
-	maxRunTime
+	maxRunTime,
+	store
 };
 
 export function setConfig(newConfig: any) {
