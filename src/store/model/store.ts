@@ -128,7 +128,7 @@ export type Model =
 	| 'strix'
 	| 'taichi'
 	| 'phantom'
-	| 'challenger'
+	| 'challenger';
 
 export type Link = {
 	brand: Brand;
