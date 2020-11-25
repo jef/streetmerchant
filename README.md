@@ -98,6 +98,7 @@ environment variables are **optional**._
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same product page | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same product page | In milliseconds, default: `10000` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
+| `PROXY_PROTOCOL` | protocol of proxy server, such as `socks5` | default: `http` |
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
