@@ -78,11 +78,6 @@ export const Ccl: Store = {
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3090-Graphics-Cards/'
 			},
 			{
-				series: '3090',
-				url:
-					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3090-Graphics-Cards/'
-			},
-			{
 				series: 'rx6800',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-Graphics-Cards/'
