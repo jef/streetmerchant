@@ -378,11 +378,11 @@ export const config = {
 	browser,
 	docker,
 	logLevel,
+	maxRunTime,
 	notifications,
 	nvidia,
 	page,
 	proxy,
-	maxRunTime,
 	store
 };
 
