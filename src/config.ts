@@ -367,6 +367,8 @@ const store = {
 	})
 };
 
+const maxRunTime = envOrNumber(process.env.MAX_RUNTIME);
+
 export const defaultStoreData = {
 	maxPageSleep: browser.maxSleep,
 	minPageSleep: browser.minSleep
@@ -380,7 +382,8 @@ export const config = {
 	nvidia,
 	page,
 	proxy,
-	store
+	store,
+	maxRunTime
 };
 
 export function setConfig(newConfig: any) {

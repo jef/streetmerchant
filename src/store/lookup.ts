@@ -218,7 +218,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
-	if (!browser.isConnected()) {
+	if (!browser || !browser.isConnected()) {
 		logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
 		return;
 	}

@@ -69,6 +69,13 @@ async function main() {
 	}
 
 	await startAPIServer();
+
+	if (config.maxRunTime) {
+		setTimeout(() => {
+			logger.info(`We've been searching for over ${config.maxRunTime} seconds as configured by MAX_RUNTIME. Time to call it quits for now. Gracefully stopping program.`);
+			stopAndExit();
+		}, config.maxRunTime);
+	}
 }
 
 async function stop() {
