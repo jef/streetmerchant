@@ -385,22 +385,19 @@ export const PCComponentes: Store = {
 			brand: 'xfx',
 			model: 'amd reference',
 			series: 'rx6800xt',
-			url:
-				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
 		},
 		{
 			brand: 'msi',
 			model: 'amd reference',
 			series: 'rx6800',
-			url:
-				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
 		},
 		{
 			brand: 'msi',
 			model: 'amd reference',
 			series: 'rx6800xt',
-			url:
-				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
 		},
 		{
 			brand: 'sapphire',
@@ -413,22 +410,19 @@ export const PCComponentes: Store = {
 			brand: 'xfx',
 			model: 'amd reference',
 			series: 'rx6800xt',
-			url:
-				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
 		},
 		{
 			brand: 'msi',
 			model: 'amd reference',
 			series: 'rx6800',
-			url:
-				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
 		},
 		{
 			brand: 'msi',
 			model: 'amd reference',
 			series: 'rx6800xt',
-			url:
-				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
 		},
 		{
 			brand: 'asus',
@@ -490,8 +484,7 @@ export const PCComponentes: Store = {
 			brand: 'xfx',
 			model: 'amd reference',
 			series: 'rx6800',
-			url:
-				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-16gb-gddr6'
+			url: 'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-16gb-gddr6'
 		}
 	],
 	name: 'pccomponentes'
