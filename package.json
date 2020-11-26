@@ -32,7 +32,7 @@
     "discord-webhook-node": "^1.1.8",
     "dotenv": "^8.2.0",
     "messaging-api-telegram": "^1.0.1",
-    "mqtt": "^4.2.5",
+    "mqtt": "^4.2.6",
     "node-fetch": "^2.6.1",
     "node-hue-api": "^4.0.9",
     "node-notifier": "^8.0.0",
