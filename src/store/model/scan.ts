@@ -74,7 +74,7 @@ export const Scan: Store = {
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
-			productsSelector: 'ul.productColumns li.product',
+			productsSelector: 'ul.productColumns:not(.related) li.product',
 			sitePrefix: 'https://www.scan.co.uk',
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
