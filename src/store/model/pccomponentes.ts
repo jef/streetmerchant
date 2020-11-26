@@ -310,6 +310,188 @@ export const PCComponentes: Store = {
 			series: '3070',
 			url:
 				'https://www.pccomponentes.com/asus-rog-strix-gaming-geforce-rtx-3070-8gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800-red-devil-limited-edition-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800xt-red-devil-limited-edition-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800-fighter-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800-red-dragon-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800-red-devil-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800xt-red-dragon-16gb-gddr6'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/powercolor-amd-radeon-rx-6800xt-red-devil-16gb-gddr6'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/sapphire-amd-radeon-rx-6800-16gb-gddr6'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/sapphire-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/sapphire-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-16gb-gddr6'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/msi-amd-radeon-rx-6800-xt-16gb-gddr6'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/asus-tuf-gaming-radeon-rx-6800-oc-16gb-gddr6'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-black-gaming-16gb-gddr6'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-xt-black-gaming-16gb-gddr6'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/sapphire-nitro-amd-radeon-rx-6800-gaming-16gb-gddr6'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/sapphire-nitro-amd-radeon-rx-6800-xt-gaming-16gb-gddr6'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/asus-rog-strix-amd-radeon-rx-6800-oc-16-gb-gddr6'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/asus-tuf-gaming-radeon-rx-6800-xt-oc-16-gb-gddr6'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.pccomponentes.com/asus-rog-strix-amd-radeon-rx-6800xt-oc-16gb-gddr6'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.pccomponentes.com/xfx-amd-radeon-rx-6800-16gb-gddr6'
 		}
 	],
 	name: 'pccomponentes'

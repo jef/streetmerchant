@@ -288,7 +288,84 @@ export const Coolmod: Store = {
 			series: '3070',
 			url:
 				'https://www.coolmod.com/kfa2-geforce-rtx-3070-sg-1-click-oc-8gb-gddr6-tarjeta-grafica-precio'
-		}
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/powercolor-radeon-rx-6800-xt-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/sapphire-radeon-rx-6800-xt-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.coolmod.com/sapphire-radeon-rx-6800-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/sapphire-nitroplus-radeon-rx-6800-xt-se-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/sapphire-nitroplus-radeon-rx-6800-xt-oc-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.coolmod.com/sapphire-nitroplus-radeon-rx-6800-oc-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.coolmod.com/msi-radeon-rx-6800-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.coolmod.com/asus-rog-strix-radeon-rx-6800-oc-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/asus-tuf-radeon-rx-6800-xt-oc-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.coolmod.com/asus-rog-strix-lc-radeon-rx-6800-xt-oc-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.coolmod.com/asus-tuf-radeon-rx-6800-oc-gaming-16gb-gddr6-tarjeta-grafica-precio'
+		},
 	],
 	name: 'coolmod'
 };
