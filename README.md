@@ -282,6 +282,7 @@ environment variables are **optional**._
 | `Corsair SFX PSU` | `sf` |
 | `Sony PS5` | `sonyps5c` |
 | `Sony PS5 Digital Edition` | `sonyps5de` |
+| `Sony PS5 Dualsense` | `sonyps5ds` |
 | `Xbox Series S` | `xboxss` |
 | `Xbox Series X` | `xboxsx` |
 

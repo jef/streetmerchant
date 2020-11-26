@@ -319,6 +319,7 @@ const store = {
 			sf: envOrNumber(process.env.MAX_PRICE_SERIES_CORSAIR_SF),
 			sonyps5c: -1,
 			sonyps5de: -1,
+			sonyps5ds: -1,
 			'test:series': -1,
 			xboxss: -1,
 			xboxsx: -1
