@@ -46,6 +46,7 @@ export type Series =
 	| 'ryzen5950'
 	| 'sonyps5c'
 	| 'sonyps5de'
+	| 'sonyps5ds'
 	| 'sf'
 	| 'xboxsx'
 	| 'xboxss';
@@ -90,6 +91,7 @@ export type Model =
 	| 'phoenix'
 	| 'ps5 console'
 	| 'ps5 digital'
+	| 'ps5 dualsense'
 	| 'sg oc'
 	| 'sg'
 	| 'strix lc'
