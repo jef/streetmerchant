@@ -365,7 +365,7 @@ export const Coolmod: Store = {
 			series: 'rx6800',
 			url:
 				'https://www.coolmod.com/asus-tuf-radeon-rx-6800-oc-gaming-16gb-gddr6-tarjeta-grafica-precio'
-		},
+		}
 	],
 	name: 'coolmod'
 };
