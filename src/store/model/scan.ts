@@ -32,6 +32,48 @@ export const Scan: Store = {
 				'https://www.scan.co.uk/products/msi-geforce-rtx-2060-ventus-xs-oc-6gb-gddr6-vr-ready-graphics-card-1920-core-1710mhz-boost'
 		},
 		{
+			brand: 'powercolor',
+			model: '6800',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams'
+		},
+		{
+			brand: 'sapphire',
+			model: '6800',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu'
+		},
+		{
+			brand: 'asus',
+			model: '6800',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/asus-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu-2105mhz'
+		},
+		{
+			brand: 'msi',
+			model: '6800',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/msi-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1700mhz-gpu'
+		},
+		{
+			brand: 'powercolor',
+			model: '6800xt',
+			series: 'rx6800xt',
+			url:
+				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams'
+		},
+		{
+			brand: 'sapphire',
+			model: '6800xt',
+			series: 'rx6800xt',
+			url:
+				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams-2015mhz'
+		},
+		{
 			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5c',
