@@ -14,10 +14,10 @@ export const PlayStation: Store = {
 	},
 	links: [
 		{
-			brand: 'test:brand',
+			brand: 'sony',
 			itemNumber: '3005715',
-			model: 'test:model',
-			series: 'test:series',
+			model: 'ps5 dualsense',
+			series: 'sonyps5ds',
 			url:
 				'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715'
 		},

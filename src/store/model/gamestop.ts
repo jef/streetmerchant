@@ -51,6 +51,13 @@ export const Gamestop: Store = {
 				'https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5-digital-edition/11108141'
 		},
 		{
+			brand: 'sony',
+			model: 'ps5 dualsense',
+			series: 'sonyps5ds',
+			url:
+				'https://www.gamestop.com/video-games/playstation-5/accessories/products/sony-dualsense-wireless-controller/11106262.html'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
