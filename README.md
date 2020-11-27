@@ -148,6 +148,7 @@ environment variables are **optional**._
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
 | AMD (DE) | `amd-de`|
+| AMD (IT) | `amd-it`|
 | Aria PC (UK) | `aria`|
 | ARLT (DE) | `arlt`|
 | ASUS | `asus` |
@@ -244,7 +245,7 @@ environment variables are **optional**._
 
 | Brand | Model |
 |:---:|---|
-| `amd` | `5600x`, `5800x`, `5900x`, `5950x` |
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
 | `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
