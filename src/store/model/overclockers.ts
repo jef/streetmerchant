@@ -62,6 +62,16 @@ export const Overclockers: Store = {
 		}),
 		urls: [
 			{
+				series: 'rx6800',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-series'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-xt-series'
+			},
+			{
 				series: '3070',
 				url:
 					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3070'
