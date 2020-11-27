@@ -145,6 +145,7 @@ environment variables are **optional**._
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
 | Amazon (FR) | `amazon-fr`|
+| Amazon (IT) | `amazon-it`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
@@ -162,6 +163,7 @@ environment variables are **optional**._
 | CanadaComputers (CA) | `canadacomputers` |
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
+| Comet (IT) | `comet`|
 | Computeruniverse (DE) | `computeruniverse` |
 | Coolblue (NL) | `coolblue`|
 | Coolmod (ES) | `coolmod`|
@@ -169,6 +171,7 @@ environment variables are **optional**._
 | Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer (UK) | `ebuyer`|
+| Euronics (IT) | `euronics`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
@@ -195,6 +198,7 @@ environment variables are **optional**._
 | Saturn (DE) | `saturn`|
 | Scan (UK) | `scan`|
 | Target | `target`|
+| Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
 | Zotac | `zotac`|
