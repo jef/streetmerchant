@@ -44,6 +44,48 @@ export const Scan: Store = {
 			url: 'https://www.scan.co.uk/products/playstation-5-digital-edition'
 		},
 		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu'
+		},
+		{
+			brand: 'asus',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/asus-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu-2105mhz'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.scan.co.uk/products/msi-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1700mhz-gpu'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url:
+				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams-2015mhz'
+		},
+		{
 			brand: 'amd',
 			model: '5600x',
 			series: 'ryzen5600',
@@ -74,7 +116,7 @@ export const Scan: Store = {
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
-			productsSelector: 'ul.productColumns li.product',
+			productsSelector: 'ul.productColumns:not(.related) li.product',
 			sitePrefix: 'https://www.scan.co.uk',
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
