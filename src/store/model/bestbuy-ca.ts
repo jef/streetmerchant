@@ -3,8 +3,8 @@ import {Store} from './store';
 export const BestBuyCa: Store = {
 	labels: {
 		inStock: {
-			container: '.x-product-detail-page .addToCartButton:enabled',
-			text: ['Add to Cart']
+			container: '.pricingContainer_25k3c',
+			text: ['href="http://schema.org/InStock"']
 		},
 		maxPrice: {
 			container:
@@ -18,7 +18,7 @@ export const BestBuyCa: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-2060-super-gaming-x-8gb-gddr6-video-card/14419420?intl=nosplash'
+				'https://www.bestbuy.ca/en-ca/product/hp-deskjet-3755-wireless-all-in-one-inkjet-printer-seagrass-only-at-best-buy/10747797?intl=nosplash'
 		},
 		{
 			brand: 'zotac',
