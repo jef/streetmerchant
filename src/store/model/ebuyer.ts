@@ -75,6 +75,16 @@ export const Ebuyer: Store = {
 		}),
 		urls: [
 			{
+				series: 'rx6800',
+				url:
+					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-AMD/subcat/AMD-RX-6800'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-AMD/subcat/AMD-RX-6800-XT'
+			},
+			{
 				series: '3070',
 				url:
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3070'

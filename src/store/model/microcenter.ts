@@ -73,6 +73,12 @@ for (const microCenterLocation of microCenterLocations) {
 				url: `https://www.microcenter.com/product/628303/asus-geforce-rtx-3080-tuf-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
 			},
 			{
+				brand: 'asus',
+				model: 'strix oc',
+				series: '3080',
+				url: `https://www.microcenter.com/product/628686/asus-geforce-rtx-3080-strix-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
 				brand: 'msi',
 				model: 'gaming x trio',
 				series: '3080',
