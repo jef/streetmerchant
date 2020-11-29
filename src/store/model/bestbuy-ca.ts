@@ -115,13 +115,15 @@ export const BestBuyCa: Store = {
 			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5c',
-			url: 'https://www.bestbuy.ca/en-ca/product/playstation-5-console-online-only/14962185?intl=nosplash'
+			url:
+				'https://www.bestbuy.ca/en-ca/product/playstation-5-console-online-only/14962185?intl=nosplash'
 		},
 		{
 			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5de',
-			url: 'https://www.bestbuy.ca/en-ca/product/playstation-5-digital-edition-console-online-only/14962184?intl=nosplash'
+			url:
+				'https://www.bestbuy.ca/en-ca/product/playstation-5-digital-edition-console-online-only/14962184?intl=nosplash'
 		}
 	],
 	name: 'bestbuy-ca',
