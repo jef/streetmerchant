@@ -77,6 +77,9 @@ filesystem changes are detected in the `src/` folder or `.env` file.
 
 To customize `streetmerchant`, make a copy of `.env-example` as `.env` and make any changes to your liking. _All
 environment variables are **optional**._
+> :page_facing_up: Don't copy empty or otherwise unused options to your `.env` as it can cause issues when running in Docker and passing in the `.env` file with the `--env-file` option.
+
+> :page_facing_up: Also don't wrap your settings values in double quotes (`"`) in the `.env` file when using Docker, as this can also cause issues.
 
 <details>
 <summary>Expand to see all available options</summary>
