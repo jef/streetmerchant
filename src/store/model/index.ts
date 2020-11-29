@@ -34,6 +34,7 @@ import {Corsair} from './corsair';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
+import {Eprice} from './eprice';
 import {Euronics} from './euronics';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
@@ -107,6 +108,7 @@ export const storeList = new Map([
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
 	[Ebuyer.name, Ebuyer],
+	[Eprice.name, Eprice],
 	[Euronics.name, Euronics],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
