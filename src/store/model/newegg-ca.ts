@@ -521,6 +521,97 @@ export const NeweggCa: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6800-11305-01-20g/p/N82E16814202392'
+		},
+		{
+			brand: 'asrock',
+			model: 'phantom gaming',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-xt-rx6800xt-pgd-16go/p/N82E16814930049'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-xt-tuf-rx6800xt-o16g-gaming/p/N82E16814126476'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/xfx-radeon-rx-6800-xt-rx-68xtacbd9/p/N82E16814150844'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-rog-strix-rx6800-o16g-gaming/p/N82E16814126477'
+		},
+		{
+			brand: 'asrock',
+			model: 'challenger',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-rx6800-clp-16go/p/N82E16814930047'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6800-xt-11304-01-20g/p/N82E16814202390'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-xt-rog-strix-lc-rx6800xt-o16g-gaming/p/N82E16814126475'
+		},
+		{
+			brand: 'powercolor',
+			model: 'red devil',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/powercolor-radeon-rx-6800-xt-axrx-6800xt-16gbd6-2dhce-oc/p/N82E16814131767'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6800-xt-11304-02-20g/p/N82E16814202391'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asus-radeon-rx-6800-tuf-rx6800-o16g-gaming/p/N82E16814126478'
+		},
+		{
+			brand: 'asrock',
+			model: 'taichi',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-xt-rx6800xt-tcx-16go/p/N82E16814930050'
+		},
+		{
+			brand: 'asrock',
+			model: 'phantom gaming',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.ca/asrock-radeon-rx-6800-rx6800-pgd-16go/p/N82E16814930048'
 		}
 	],
 	name: 'newegg-ca',
