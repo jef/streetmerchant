@@ -11,6 +11,7 @@ import {AmazonIt} from './amazon-it';
 import {AmazonNl} from './amazon-nl';
 import {AmazonUk} from './amazon-uk';
 import {Amd} from './amd';
+import {AmdCa} from './amd-ca';
 import {AmdDe} from './amd-de';
 import {AmdIt} from './amd-it';
 import {Aria} from './aria';
@@ -83,6 +84,7 @@ export const storeList = new Map([
 	[AmazonUk.name, AmazonUk],
 	[AmazonIt.name, AmazonIt],
 	[Amd.name, Amd],
+	[AmdCa.name, AmdCa],
 	[AmdDe.name, AmdDe],
 	[AmdIt.name, AmdIt],
 	[Aria.name, Aria],

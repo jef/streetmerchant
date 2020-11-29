@@ -149,6 +149,7 @@ environment variables are **optional**._
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
+| AMD (CA) | `amd-ca`|
 | AMD (DE) | `amd-de`|
 | AMD (IT) | `amd-it`|
 | Aria PC (UK) | `aria`|
