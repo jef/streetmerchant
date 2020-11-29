@@ -41,7 +41,8 @@ export const Wipoid: Store = {
 			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
-			url: 'https://www.wipoid.com/asus-tuf-gaming-geforce-rtx-3080-10gb-gddr6x.html'
+			url:
+				'https://www.wipoid.com/asus-tuf-gaming-geforce-rtx-3080-10gb-gddr6x.html'
 		},
 		{
 			brand: 'gigabyte',
