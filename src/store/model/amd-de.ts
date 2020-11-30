@@ -49,6 +49,22 @@ export const AmdDe: Store = {
 			model: '5600x',
 			series: 'ryzen5600',
 			url: 'https://www.amd.com/de/direct-buy/5450881700/de'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458374100/de?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amd.com/en/direct-buy/5458374100/de'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458374000/de?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amd.com/en/direct-buy/5458374000/de'
 		}
 	],
 	name: 'amd-de'
