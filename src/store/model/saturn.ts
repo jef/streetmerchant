@@ -10,10 +10,16 @@ export const Saturn: Store = {
 			container: 'span[font-family="price"]',
 			euroFormat: false // Note: Saturn uses non-euroFromat as price seperator
 		},
-		outOfStock: {
-			container: '#root',
-			text: ['dieser artikel ist aktuell nicht verfügbar.']
-		}
+		outOfStock: [
+			{
+				container: '#root',
+				text: ['dieser artikel ist aktuell nicht verfügbar.']
+			},
+			{
+				container: '#root',
+				text: ['leider keine Lieferung möglich']
+			}
+		]
 	},
 	links: [
 		{
@@ -171,6 +177,18 @@ export const Saturn: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.saturn.de/de/product/-2661939.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.saturn.de/de/product/-2677360.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.saturn.de/de/product/-2677359.html'
 		}
 	],
 	name: 'saturn'
