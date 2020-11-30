@@ -36,6 +36,7 @@ import {Cyberport} from './cyberport';
 import {Ebuyer} from './ebuyer';
 import {Eprice} from './eprice';
 import {Euronics} from './euronics';
+import {EuronicsDE} from './euronics-de';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Galaxus} from './galaxus';
@@ -112,6 +113,7 @@ export const storeList = new Map([
 	[Ebuyer.name, Ebuyer],
 	[Eprice.name, Eprice],
 	[Euronics.name, Euronics],
+	[EuronicsDE.name, EuronicsDE],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Galaxus.name, Galaxus],
