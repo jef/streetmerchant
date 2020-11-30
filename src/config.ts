@@ -354,14 +354,14 @@ const store = {
 	stores: envOrArray(process.env.STORES, ['nvidia']).map((entry) => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
-		let proxyList = undefined;
+		let proxyList;
 		try {
 			proxyList = readFileSync(`${name}.proxies`)
-							.toString()
-							.trim()
-							.split('\n')
-							.map(x => x.trim());
-		} catch { }
+				.toString()
+				.trim()
+				.split('\n')
+				.map((x) => x.trim());
+		} catch {}
 
 		return {
 			maxPageSleep: envOrNumberMax(
@@ -375,7 +375,7 @@ const store = {
 				browser.minSleep
 			),
 			name: envOrString(name),
-			proxyList,
+			proxyList
 		};
 	})
 };

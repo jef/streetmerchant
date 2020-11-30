@@ -10,6 +10,7 @@ export async function enableBlockerInPage(page: Page) {
 	if (blockerObject.isBlockingEnabled(page)) {
 		return;
 	}
+
 	await blockerObject.enableBlockingInPage(page);
 }
 
@@ -18,5 +19,6 @@ export async function disableBlockerInPage(page: Page) {
 	if (!blockerObject.isBlockingEnabled(page)) {
 		return;
 	}
+
 	await blockerObject.disableBlockingInPage(page);
 }

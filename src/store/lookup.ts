@@ -1,4 +1,4 @@
-import {Browser, Page, Response, Request, PageEventObj} from 'puppeteer';
+import {Browser, Page, PageEventObj, Request, Response} from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
 import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
@@ -9,8 +9,8 @@ import {
 	getSleepTime,
 	isStatusCodeInRange
 } from '../util';
-import {config} from '../config';
 import {disableBlockerInPage, enableBlockerInPage} from '../adblocker';
+import {config} from '../config';
 import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
@@ -36,7 +36,9 @@ function nextProxy(store: Store) {
 		store.currentProxyIndex = 0;
 	}
 
-	logger.info(`ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`);
+	logger.info(
+		`ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`
+	);
 
 	return store.proxyList[store.currentProxyIndex];
 }
@@ -50,7 +52,8 @@ async function handleLowBandwidth(request: Request) {
 	if (typ === 'font' || typ === 'image') {
 		try {
 			await request.abort();
-		} catch { }
+		} catch {}
+
 		return true;
 	}
 
@@ -63,15 +66,12 @@ async function handleProxy(request: Request, proxy?: string) {
 	}
 
 	try {
-		await useProxy(
-			request,
-			proxy,
-		);
-	} catch (e) {
-		logger.error(e);
+		await useProxy(request, proxy);
+	} catch (error: unknown) {
+		logger.error(error);
 		try {
 			await request.abort();
-		} catch { }
+		} catch {}
 	}
 
 	return true;
@@ -86,20 +86,25 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
 		const continueFunc = async () => {
 			resolve(false);
 		};
+
 		const abortFunc = async () => {
 			try {
 				await request.abort();
-			} catch { }
+			} catch {}
+
 			resolve(true);
 		};
+
 		const requestProxy = new Proxy(request, {
 			get(target, prop, receiver) {
 				if (prop === 'continue') {
 					return continueFunc;
 				}
+
 				if (prop === 'abort') {
 					return abortFunc;
 				}
+
 				return Reflect.get(target, prop, receiver);
 			}
 		});
@@ -150,9 +155,9 @@ async function lookup(browser: Browser, store: Store) {
 		const useAdBlock = !config.browser.lowBandwidth && !store.disableAdBlocker;
 		const customContext = config.browser.isIncognito;
 
-		const context = customContext ?
-						await browser.createIncognitoBrowserContext() :
-						browser.defaultBrowserContext();
+		const context = customContext
+			? await browser.createIncognitoBrowserContext()
+			: browser.defaultBrowserContext();
 		const page = await context.newPage();
 
 		page.setDefaultNavigationTimeout(config.page.timeout);
@@ -166,13 +171,16 @@ async function lookup(browser: Browser, store: Store) {
 					page.on(event, handler);
 					return;
 				}
+
 				adBlockRequestHandler = handler;
 			};
+
 			pageProxy = new Proxy(page, {
 				get(target, prop, receiver) {
 					if (prop === 'on') {
 						return onProxyFunc;
 					}
+
 					return Reflect.get(target, prop, receiver);
 				}
 			});
@@ -180,19 +188,22 @@ async function lookup(browser: Browser, store: Store) {
 		}
 
 		await page.setRequestInterception(true);
-		page.on('request', async request => {
+		page.on('request', async (request) => {
 			if (await handleLowBandwidth(request)) {
 				return;
 			}
+
 			if (await handleAdBlock(request, adBlockRequestHandler)) {
 				return;
 			}
+
 			if (await handleProxy(request, proxy)) {
 				return;
 			}
+
 			try {
 				await request.continue();
-			} catch { }
+			} catch {}
 		});
 
 		let statusCode = 0;
@@ -207,7 +218,7 @@ async function lookup(browser: Browser, store: Store) {
 			);
 			const client = await page.target().createCDPSession();
 			await client.send('Network.clearBrowserCookies');
-			//await client.send('Network.clearBrowserCache');
+			// Await client.send('Network.clearBrowserCache');
 		}
 
 		if (pageProxy) {
