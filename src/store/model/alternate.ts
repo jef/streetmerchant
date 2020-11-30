@@ -17,7 +17,10 @@ export const Alternate: Store = {
 		},
 		outOfStock: {
 			container: '.stockStatus',
-			text: ['liefertermin unbekannt']
+			text: [
+				'liefertermin unbekannt',
+				'Artikel kann nicht gekauft werden'
+			]
 		}
 	},
 	links: [
@@ -386,6 +389,18 @@ export const Alternate: Store = {
 			model: 'gaming oc',
 			series: 'rx6800xt',
 			url: 'https://www.alternate.de/product/1697044'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.alternate.de/product/1675115'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.alternate.de/product/1675117'
 		}
 	],
 	name: 'alternate'
