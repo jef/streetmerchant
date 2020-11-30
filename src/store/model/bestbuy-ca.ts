@@ -110,6 +110,20 @@ export const BestBuyCa: Store = {
 			series: '3070',
 			url:
 				'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3070-8gb-gddr6-video-card-only-at-best-buy/15078017?intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/playstation-5-console-online-only/14962185?intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5de',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/playstation-5-digital-edition-console-online-only/14962184?intl=nosplash'
 		}
 	],
 	name: 'bestbuy-ca',
