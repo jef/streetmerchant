@@ -57,6 +57,14 @@ export const Amd: Store = {
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url: 'https://www.amd.com/en/direct-buy/5458372800/us'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458373400/us?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amd.com/en/direct-buy/5458373400/us'
 		}
 	],
 	name: 'amd'
