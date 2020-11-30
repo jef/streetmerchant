@@ -154,6 +154,7 @@ environment variables are **optional**._
 | AMD (CA) | `amd-ca`|
 | AMD (DE) | `amd-de`|
 | AMD (IT) | `amd-it`|
+| AntOnline | `antonline`|
 | Aria PC (UK) | `aria`|
 | ARLT (DE) | `arlt`|
 | ASUS | `asus` |
