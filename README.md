@@ -98,6 +98,7 @@ environment variables are **optional**._
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same product page | In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same product page | In milliseconds, default: `10000` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
+| `PROXY_PROTOCOL` | protocol of proxy server, such as `socks5` | default: `http` |
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections | Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found | Default: `true` |
@@ -116,11 +117,13 @@ environment variables are **optional**._
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PSUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5600` | Maximum price allowed for a match, applies AMD 5600 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PSUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search | Comma separated, e.g.: `marietta,duluth`, default: `web` |
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
 | `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
@@ -144,10 +147,13 @@ environment variables are **optional**._
 | Amazon (DE) | `amazon-de`|
 | Amazon (ES) | `amazon-es`|
 | Amazon (FR) | `amazon-fr`|
+| Amazon (IT) | `amazon-it`|
 | Amazon (NL) | `amazon-nl`|
 | Amazon (UK) | `amazon-uk`|
 | AMD | `amd`|
+| AMD (CA) | `amd-ca`|
 | AMD (DE) | `amd-de`|
+| AMD (IT) | `amd-it`|
 | Aria PC (UK) | `aria`|
 | ARLT (DE) | `arlt`|
 | ASUS | `asus` |
@@ -160,6 +166,7 @@ environment variables are **optional**._
 | CanadaComputers (CA) | `canadacomputers` |
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
+| Comet (IT) | `comet`|
 | Computeruniverse (DE) | `computeruniverse` |
 | Coolblue (NL) | `coolblue`|
 | Coolmod (ES) | `coolmod`|
@@ -167,6 +174,8 @@ environment variables are **optional**._
 | Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer (UK) | `ebuyer`|
+| ePrice (IT) | `eprice`|
+| Euronics (IT) | `euronics`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
@@ -193,8 +202,10 @@ environment variables are **optional**._
 | Saturn (DE) | `saturn`|
 | Scan (UK) | `scan`|
 | Target | `target`|
+| Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
+| Wipoid | `wipoid`|
 | Zotac | `zotac`|
 | TopAchat | `topachat`|
 
@@ -244,7 +255,7 @@ environment variables are **optional**._
 
 | Brand | Model |
 |:---:|---|
-| `amd` | `5600x`, `5800x`, `5900x`, `5950x` |
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
 | `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |

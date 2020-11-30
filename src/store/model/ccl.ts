@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ccl: Store = {
+	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		inStock: {
 			container: '#pnlAddToBasket',
@@ -75,6 +76,16 @@ export const Ccl: Store = {
 				series: '3090',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3090-Graphics-Cards/'
+			},
+			{
+				series: 'rx6800',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-Graphics-Cards/'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-XT-Graphics-Cards/'
 			}
 		]
 	},
