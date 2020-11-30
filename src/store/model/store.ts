@@ -131,6 +131,7 @@ export type Link = {
 	series: Series;
 	model: Model;
 	url: string;
+	price?: number;
 	cartUrl?: string;
 	openCartAction?: (browser: Browser) => Promise<string>;
 	screenshot?: string;

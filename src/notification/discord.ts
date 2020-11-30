@@ -23,6 +23,10 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				embed.addField('Series', link.series, true);
 				embed.addField('Model', link.model, true);
 
+				if (link.price) {
+					embed.addField('Preis', `${String(link.price)}€`, true);
+				}
+
 				if (notifyGroup) {
 					embed.setText(notifyGroup.join(' '));
 				}

@@ -193,6 +193,7 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		);
 		const maxPrice = config.store.maxPrice.series[link.series];
 		if (price) {
+			link.price = price;
 			logger.info(Print.maxPrice(link, store, price, maxPrice, true));
 			return false;
 		}
