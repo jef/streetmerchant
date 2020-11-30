@@ -386,9 +386,7 @@ export const Alternate: Store = {
 			model: 'gaming oc',
 			series: 'rx6800xt',
 			url: 'https://www.alternate.de/product/1697044'
-		},
-		
-		
+		}
 	],
 	name: 'alternate'
 };
