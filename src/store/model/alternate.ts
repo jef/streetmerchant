@@ -15,13 +15,16 @@ export const Alternate: Store = {
 			container: 'div.price > span',
 			euroFormat: true
 		},
-		outOfStock: {
-			container: '.stockStatus',
-			text: [
-				'liefertermin unbekannt',
-				'Artikel kann nicht gekauft werden'
-			]
-		}
+		outOfStock: [
+			{
+				container: '.stockStatus',
+				text: ['liefertermin unbekannt']
+			},
+			{
+				container: '.stockStatus',
+				text: ['Artikel kann nicht gekauft werden']
+			}
+		]
 	},
 	links: [
 		{
