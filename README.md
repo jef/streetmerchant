@@ -181,6 +181,7 @@ environment variables are **optional**._
 | Galaxus (DE) | `galaxus`|
 | Game (UK) | `game`|
 | Gamestop | `gamestop`|
+| Gamestop (DE) | `gamestop-de`|
 | Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
 | MemoryExpress (CA) | `memoryexpress`|
