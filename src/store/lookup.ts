@@ -354,7 +354,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
-	/*
 	// Do API inventory validation in realtime (no cache) if available
 	if (
 		store.realTimeInventoryLookup !== undefined &&
@@ -362,7 +361,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	) {
 		return store.realTimeInventoryLookup(link.itemNumber);
 	}
-	*/
 
 	return true;
 }
