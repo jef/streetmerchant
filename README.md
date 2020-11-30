@@ -176,6 +176,7 @@ environment variables are **optional**._
 | eBuyer (UK) | `ebuyer`|
 | ePrice (IT) | `eprice`|
 | Euronics (IT) | `euronics`|
+| Euronics (DE) | `euronics-de`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
 | Galaxus (DE) | `galaxus`|
