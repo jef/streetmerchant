@@ -205,6 +205,7 @@ environment variables are **optional**._
 | Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
+| Wipoid | `wipoid`|
 | Zotac | `zotac`|
 | TopAchat | `topachat`|
 
