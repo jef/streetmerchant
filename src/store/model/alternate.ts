@@ -356,7 +356,39 @@ export const Alternate: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.alternate.de/product/1651221'
-		}
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800xt',
+			url: 'https://www.alternate.de/product/1698792'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro oc se',
+			series: 'rx6800xt',
+			url: 'https://www.alternate.de/product/1696478'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro oc',
+			series: 'rx6800xt',
+			url: 'https://www.alternate.de/product/1696482'
+		},
+		{
+			brand: 'asus',
+			model: 'strix lc',
+			series: 'rx6800xt',
+			url: 'https://www.alternate.de/product/1695392'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: 'rx6800xt',
+			url: 'https://www.alternate.de/product/1697044'
+		},
+		
+		
 	],
 	name: 'alternate'
 };
