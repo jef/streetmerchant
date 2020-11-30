@@ -201,6 +201,7 @@ environment variables are **optional**._
 | Proshop (DK) | `proshop-dk`|
 | Saturn (DE) | `saturn`|
 | Scan (UK) | `scan`|
+| Spielegrotte | `spielegrotte`|
 | Target | `target`|
 | Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
