@@ -528,7 +528,7 @@ it. Very straight forward. Otherwise, Google more information related to your sy
 
 </details>
 
-**Q: Will I get banned from of the stores?** Perhaps, but it's the risk we're willing to take! To help minimize this, take a look at [#1050](https://github.com/jef/streetmerchant/issues/1050)
+**Q: Will I get banned from of the stores?** Perhaps, but it's the risk we're willing to take! To help minimize this, take a look at [#1050](https://github.com/jef/streetmerchant/issues/1050).
 
 **Q: I got a problem and need help!** File an [issue](https://github.com/jef/streetmerchant/issues/new/choose). I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
