@@ -266,7 +266,7 @@ environment variables are **optional**._
 | `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
 | `kfa2` | `sg`, `sg oc` |
-| `microsoft` | `xboxsx`, `xboxss` |
+| `microsoft` | `xbox series x`, `xbox series s` |
 | `msi` | `gaming x trio`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
