@@ -117,30 +117,6 @@ export const Cyberport: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.cyberport.de?DEEP=2001-71l'
-		},
-		{
-			brand: 'microsoft',
-			model: 'xbox series x',
-			series: 'xboxsx',
-			url: 'https://www.alternate.de/product/1675115'
-		},
-		{
-			brand: 'microsoft',
-			model: 'xbox series s',
-			series: 'xboxss',
-			url: 'https://www.alternate.de/product/1675117'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 console',
-			series: 'sonyps5c',
-			url: 'https://www.alternate.de/product/1651220'
-		},
-		{
-			brand: 'sony',
-			model: 'ps5 digital',
-			series: 'sonyps5de',
-			url: 'https://www.alternate.de/product/1651221'
 		}
 	],
 	name: 'cyberport'
