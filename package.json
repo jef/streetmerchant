@@ -26,7 +26,7 @@
   "homepage": "https://github.com/jef/streetmerchant#readme",
   "dependencies": {
     "@jef/pushbullet": "^2.4.3",
-    "@slack/web-api": "^5.13.0",
+    "@slack/web-api": "^5.14.0",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "discord-webhook-node": "^1.1.8",
@@ -67,7 +67,7 @@
     "nodemon": "^2.0.6",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2",
-    "webpack": "^5.6.0",
+    "webpack": "^5.9.0",
     "xo": "^0.35.0"
   },
   "xo": {

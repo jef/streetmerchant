@@ -249,6 +249,18 @@ export const Mediamarkt: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.mediamarkt.de/de/product/-2661939.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.mediamarkt.de/de/product/-2677360.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.mediamarkt.de/de/product/-2677359.html'
 		}
 	],
 	name: 'mediamarkt'
