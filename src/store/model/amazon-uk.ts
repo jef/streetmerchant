@@ -67,6 +67,94 @@ export const AmazonUk: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.amazon.co.uk/dp/B08GD9MNZB'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LBVNKT1&Quantity.1=1',
+			model: 'ventus 2x oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LBVNKT1'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08KHFZN9P&Quantity.1=1',
+			model: 'dual',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08KHFZN9P'
+		},
+		{
+			brand: 'zotac',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LBVNKT1&Quantity.1=1',
+			model: 'dual oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LBVNKT1'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08KWN2LZG&Quantity.1=1',
+			model: 'gaming x trio',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08KWN2LZG'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LNY8P5L&Quantity.1=1',
+			model: 'aorus master',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LNY8P5L'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08L6PCZTR&Quantity.1=1',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08L6PCZTR'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LNQTSCT&Quantity.1=1',
+			model: 'ventus 2x oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LNQTSCT'
+		},
+		{
+			brand: 'palit',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LDT6HQ5&Quantity.1=1',
+			model: 'gaming pro oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LDT6HQ5'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08KHL21CV&Quantity.1=1',
+			model: 'gaming oc',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08KHL21CV'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08MDCF8Z8&Quantity.1=1',
+			model: 'eagle',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08MDCF8Z8'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B08LNPPCWJ&Quantity.1=1',
+			model: 'gaming x trio',
+			series: '3070',
+			url: 'https://www.amazon.co.uk/dp/B08LNPPCWJ'
 		}
 	],
 	linksBuilder: {
