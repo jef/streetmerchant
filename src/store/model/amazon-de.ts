@@ -17,7 +17,13 @@ export const AmazonDe: Store = {
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
 			euroFormat: true
-		}
+		},
+		outOfStock: [
+			{
+				container: '#availability',
+				text: ['Derzeit nicht verfügbar']
+			}
+		]
 	},
 	links: [
 		{
@@ -515,6 +521,22 @@ export const AmazonDe: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.amazon.de/dp/B08H98GVK8'
+		},
+		{
+			brand: 'microsoft',
+			cartUrl:
+				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.amazon.de/dp/B08H93ZRLL'
+		},
+		{
+			brand: 'microsoft',
+			cartUrl:
+				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.amazon.de/dp/B087VM5XC6'
 		}
 	],
 	name: 'amazon-de'

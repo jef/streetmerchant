@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AmazonEs: Store = {
+	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		captcha: {
 			container: 'body',
@@ -13,7 +14,13 @@ export const AmazonEs: Store = {
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
 			euroFormat: true
-		}
+		},
+		outOfStock: [
+			{
+				container: '#availability',
+				text: ['No disponible']
+			}
+		]
 	},
 	links: [
 		{
@@ -159,6 +166,38 @@ export const AmazonEs: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.amazon.es/dp/B0815Y8J9N'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08KKJ37F7&Quantity.1=1',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.es/dp/B08KKJ37F7'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08KJF2D25&Quantity.1=1',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url: 'https://www.amazon.es/dp/B08KJF2D25'
+		},
+		{
+			brand: 'microsoft',
+			cartUrl:
+				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.amazon.es/dp/B08H93ZRLL'
+		},
+		{
+			brand: 'microsoft',
+			cartUrl:
+				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.amazon.es/dp/B087VM5XC6'
 		}
 	],
 	name: 'amazon-es'
