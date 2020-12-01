@@ -528,25 +528,19 @@ it. Very straight forward. Otherwise, Google more information related to your sy
 
 </details>
 
-**Q: Will I get banned from of the stores?** Perhaps, but getting a card is a nice outcome.
+**Q: Will I get banned from of the stores?** Perhaps, but it's the risk we're willing to take! To help minimize this, take a look at [#1050](https://github.com/jef/streetmerchant/issues/1050)
 
-**Q: I got a problem and need help!** File an [issue](https://github.com/jef/streetmerchant/issues/new/choose). I'll do
-my best to get to you. I work a full time job and this is only a hobby of mine.
+**Q: I got a problem and need help!** File an [issue](https://github.com/jef/streetmerchant/issues/new/choose). I'll do my best to get to you. I work a full time job and this is only a hobby of mine.
 
-**Q: How do I get the latest code?** Take look at
-this [wiki page](https://github.com/jef/streetmerchant/wiki/Troubleshoot:-General:-Getting-the-latest-code).
+**Q: How do I get the latest code?** Take look at this [wiki page](https://github.com/jef/streetmerchant/wiki/Troubleshoot:-General:-Getting-the-latest-code).
 
-**Q: Why don't my notifications work?** There is probably
-an [issue](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that
-has [already](https://github.com/jef/streetmerchant/issues/182) [been](https://github.com/jef/streetmerchant/issues/116) [resolved](https://github.com/jef/streetmerchant/issues/155)
-.
+**Q: Why don't my notifications work?** There is probably an [issue](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that has [already](https://github.com/jef/streetmerchant/issues/182) [been](https://github.com/jef/streetmerchant/issues/116) [resolved](https://github.com/jef/streetmerchant/issues/155).
 
-**Q: I'd love to contribute, how do I do that?** Make
-a [pull request](https://github.com/jef/streetmerchant/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All contributions
-are welcome.
+**Q: I'd love to contribute, how do I do that?** Make a [pull request](https://github.com/jef/streetmerchant/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)! All contributions are welcome.
 
-**Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either.
-See [#11](https://github.com/jef/streetmerchant/issues/11).
+**Q: How do I add a store?** Take a look at [this page](https://github.com/jef/streetmerchant/wiki/Help:-Configuration:-Adding-a-store) on the wiki.
+
+**Q: Why do I have to download all this stuff just to get this bot working?** Well, I would rather you didn't either. See [#11](https://github.com/jef/streetmerchant/issues/11).
 
 **Q: Why does Amazon show an error page (with a picture of an animal) instead of adding to cart or going to the detail page?** This is intended; see [#733](https://github.com/jef/streetmerchant/issues/733). This indicates that the item is out of stock and only available from a third-party seller (often at a markup).
 
