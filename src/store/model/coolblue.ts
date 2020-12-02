@@ -117,7 +117,13 @@ export const Coolblue: Store = {
 			model: 'eagle oc',
 			series: '3090',
 			url: 'https://www.coolblue.nl/product/868735/'
-		}
+		},
+		{
+            brand: 'sony',
+            model: 'ps5 console',
+            series: 'sonyps5c',
+            url: 'https://www.coolblue.nl/product/865866/playstation-5.html'
+        }
 	],
 	name: 'coolblue'
 };

@@ -110,7 +110,14 @@ export const AmazonNl: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.amazon.nl/dp/B0815Y8J9N'
-		}
+		},
+		{
+            brand: 'sony',
+            cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08H93ZRK9&Quantity.1=1',
+            model: 'ps5 console',
+            series: 'sonyps5c',
+            url: 'https://www.amazon.nl/dp/B08H93ZRK9'
+        }
 	],
 	name: 'amazon-nl'
 };
