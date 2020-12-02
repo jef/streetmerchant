@@ -1,4 +1,4 @@
-import {Browser, BrowserContext, LoadEvent} from 'puppeteer';
+import {Browser, LoadEvent} from 'puppeteer';
 
 export type Element = {
 	container?: string;
