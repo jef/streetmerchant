@@ -524,16 +524,18 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'microsoft',
-			cartUrl:
-				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
+			// Disabled because of #1095
+			// cartUrl:
+			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
 			model: 'xbox series x',
 			series: 'xboxsx',
 			url: 'https://www.amazon.de/dp/B08H93ZRLL'
 		},
 		{
 			brand: 'microsoft',
-			cartUrl:
-				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
+			// Disabled because of #1095
+			// cartUrl:
+			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.amazon.de/dp/B087VM5XC6'
