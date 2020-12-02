@@ -236,6 +236,7 @@ export function updateStores() {
 			stores.set(storeData.name, store);
 			store.minPageSleep = storeData.minPageSleep;
 			store.maxPageSleep = storeData.maxPageSleep;
+			store.proxyList = storeData.proxyList;
 		} else {
 			logger.warn(`No store named ${storeData.name}, skipping.`);
 		}

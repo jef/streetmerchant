@@ -1,4 +1,4 @@
-import {Browser, LoadEvent} from 'puppeteer';
+import {Browser, BrowserContext, LoadEvent} from 'puppeteer';
 
 export type Element = {
 	container?: string;
@@ -178,4 +178,7 @@ export type Store = {
 	waitUntil?: LoadEvent;
 	minPageSleep?: number;
 	maxPageSleep?: number;
+
+	proxyList?: string[];
+	currentProxyIndex?: number;
 };

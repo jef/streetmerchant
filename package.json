@@ -45,6 +45,7 @@
     "puppeteer-extra-plugin-adblocker": "^2.11.9",
     "puppeteer-extra-plugin-block-resources": "^2.2.7",
     "puppeteer-extra-plugin-stealth": "^2.6.5",
+    "puppeteer-page-proxy": "^1.2.8",
     "pushover-notifications": "^1.2.2",
     "twilio": "^3.52.0",
     "twitch": "^4.3.2",

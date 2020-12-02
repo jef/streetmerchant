@@ -2,6 +2,7 @@ import {banner} from './banner';
 
 import {config as config_} from 'dotenv';
 import path from 'path';
+import {readFileSync} from 'fs';
 
 config_({path: path.resolve(__dirname, '../.env')});
 
@@ -354,6 +355,16 @@ const store = {
 	]),
 	stores: envOrArray(process.env.STORES, ['nvidia']).map((entry) => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
+
+		let proxyList;
+		try {
+			proxyList = readFileSync(`${name}.proxies`)
+				.toString()
+				.trim()
+				.split('\n')
+				.map((x) => x.trim());
+		} catch {}
+
 		return {
 			maxPageSleep: envOrNumberMax(
 				minPageSleep,
@@ -365,7 +376,8 @@ const store = {
 				maxPageSleep,
 				browser.minSleep
 			),
-			name: envOrString(name)
+			name: envOrString(name),
+			proxyList
 		};
 	})
 };
