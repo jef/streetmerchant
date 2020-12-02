@@ -21,6 +21,22 @@ export const BestBuy: Store = {
 				'https://www.bestbuy.com/site/evga-sc-ultra-gaming-nvidia-geforce-gtx-1660-ti-6gb-gddr6-pci-express-3-0-graphics-card-black-gray/6373500.p?skuId=6373500&intl=nosplash'
 		},
 		{
+			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6441172/cart',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/msi-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black-black/6441172.p?skuId=6441172&intl=nosplash'
+		},
+		{
+			brand: 'nvidia',
+			cartUrl: 'https://api.bestbuy.com/click/-/6439402/cart',
+			model: 'founders edition',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/nvidia-geforce-rtx-3060-ti-8gb-gddr6-pci-express-4-0-graphics-card-steel-and-black/6439402.p?skuId=6439402&intl=nosplash'
+		},
+		{
 			brand: 'nvidia',
 			cartUrl: 'https://api.bestbuy.com/click/-/6429442/cart',
 			model: 'founders edition',
