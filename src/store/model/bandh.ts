@@ -97,7 +97,7 @@ export const BAndH: Store = {
 			url:
 				'https://www.bhphotovideo.com/c/product/1606947-REG/gigabyte_gv_n306tgaming_oc_8gd_rtx_3060_ti_gaming.html'
 		},
-				{
+		{
 			brand: 'gigabyte',
 			model: 'gaming pro',
 			series: '3060ti',
