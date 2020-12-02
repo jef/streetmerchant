@@ -190,6 +190,7 @@ environment variables are **optional**._
 | Gamestop (DE) | `gamestop-de`|
 | Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
+| Medimax | `medimax`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
 | Mindfactory (DE) | `mindfactory` |
