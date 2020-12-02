@@ -22,17 +22,21 @@ export const Bol: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			cartUrl: 'https://www.bol.com/nl/order/basket/addItems.html?productId=9300000010038849&offerId=0&quantity=1',
+			cartUrl:
+				'https://www.bol.com/nl/order/basket/addItems.html?productId=9300000010038849&offerId=0&quantity=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.bol.com/nl/p/nintendo-switch-console-geel-blauw-verbeterde-accuduur-nieuw-model/9300000010038849/'
+			url:
+				'https://www.bol.com/nl/p/nintendo-switch-console-geel-blauw-verbeterde-accuduur-nieuw-model/9300000010038849/'
 		},
 		{
 			brand: 'sony',
-			cartUrl: 'https://www.bol.com/nl/order/basket/addItems.html?productId=9300000004162282&offerId=0&quantity=1',
+			cartUrl:
+				'https://www.bol.com/nl/order/basket/addItems.html?productId=9300000004162282&offerId=0&quantity=1',
 			model: 'ps5 console',
 			series: 'sonyps5c',
-			url: 'https://www.bol.com/nl/p/sony-playstation-5-console/9300000004162282/'
+			url:
+				'https://www.bol.com/nl/p/sony-playstation-5-console/9300000004162282/'
 		}
 	],
 	name: 'bol'
