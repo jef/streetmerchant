@@ -31,7 +31,7 @@ export const Alternate: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.alternate.de/product/1516616'
+			url: 'https://www.alternate.de/product/1662088'
 		},
 		{
 			brand: 'asus',
@@ -404,6 +404,12 @@ export const Alternate: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.alternate.de/product/1675117'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.alternate.de/product/1676874'
 		}
 	],
 	name: 'alternate'

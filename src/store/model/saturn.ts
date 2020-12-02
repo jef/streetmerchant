@@ -8,16 +8,16 @@ export const Saturn: Store = {
 		},
 		maxPrice: {
 			container: 'span[font-family="price"]',
-			euroFormat: false // Note: Saturn uses non-euroFromat as price seperator
+			euroFormat: false
 		},
 		outOfStock: [
 			{
 				container: '#root',
-				text: ['dieser artikel ist aktuell nicht verfügbar.']
+				text: ['Dieser artikel ist aktuell nicht verfügbar.']
 			},
 			{
 				container: '#root',
-				text: ['leider keine Lieferung möglich']
+				text: ['Leider keine Lieferung möglich']
 			}
 		]
 	},
@@ -26,7 +26,7 @@ export const Saturn: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.saturn.de/de/product/-2592355.html'
+			url: 'https://www.saturn.de/de/product/-2641856.html'
 		},
 		{
 			brand: 'asus',
