@@ -28,12 +28,12 @@ export const Bol: Store = {
 			url: 'https://www.bol.com/nl/p/nintendo-switch-console-geel-blauw-verbeterde-accuduur-nieuw-model/9300000010038849/'
 		},
 		{
-            brand: 'sony',
+			brand: 'sony',
 			cartUrl: 'https://www.bol.com/nl/order/basket/addItems.html?productId=9300000004162282&offerId=0&quantity=1',
-            model: 'ps5 console',
-            series: 'sonyps5c',
-            url: 'https://www.bol.com/nl/p/sony-playstation-5-console/9300000004162282/'
-        }
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.bol.com/nl/p/sony-playstation-5-console/9300000004162282/'
+		}
 	],
 	name: 'bol'
 };
