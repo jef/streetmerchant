@@ -3,14 +3,21 @@ import {Store} from './store';
 export const Walmart: Store = {
 	labels: {
 		inStock: {
-			container: '#ProductPrimaryCTA-cta_add_to_cart_button',
-			text: ['Add to cart']
+			container: '.button.spin-button.prod-ProductCTA--primary.button--primary',
+			text: ['add to cart']
 		},
 		maxPrice: {
 			container: 'span[class*="price-characteristic"]'
 		}
 	},
 	links: [
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url:
+				'https://www.walmart.com/ip/Keurig-K-compact-Brewer-Black-Coffee-Maker/806217614'
+		},
 		{
 			brand: 'sony',
 			model: 'ps5 console',
