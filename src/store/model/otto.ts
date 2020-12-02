@@ -11,7 +11,7 @@ export const Otto: Store = {
 		],
 		maxPrice: {
 			container: '#normalPriceAmount',
-			euroFormat: false
+			euroFormat: true
 		},
 		outOfStock: {
 			container: 'div.p_message.p_message--hint > strong',
