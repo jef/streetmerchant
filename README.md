@@ -147,6 +147,7 @@ environment variables are **optional**._
 | Amazon | `amazon`|
 | Amazon (CA) | `amazon-ca`|
 | Amazon (DE) | `amazon-de`|
+| Amazon (DE) Warehouse | `amazon-de-warehouse`|
 | Amazon (ES) | `amazon-es`|
 | Amazon (FR) | `amazon-fr`|
 | Amazon (IT) | `amazon-it`|
