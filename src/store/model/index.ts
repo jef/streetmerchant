@@ -58,6 +58,7 @@ import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
 import {PlayStation} from './playstation';
@@ -138,6 +139,7 @@ export const storeList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
 	[PlayStation.name, PlayStation],

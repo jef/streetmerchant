@@ -200,6 +200,7 @@ environment variables are **optional**._
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| Otto | `otto`|
 | Overclockers (UK) | `overclockers`|
 | PCComponentes (ES) | `pccomponentes`|
 | PlayStation | `playstation`|
