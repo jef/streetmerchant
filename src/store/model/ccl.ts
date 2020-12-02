@@ -26,6 +26,55 @@ export const Ccl: Store = {
 				'https://www.cclonline.com/product/296443/RTX-2060-SUPER-VENTUS-GP-OC/Graphics-Cards/MSI-GeForce-RTX-2060-SUPER-VENTUS-GP-OC-8GB-Overclocked-Graphics-Card/VGA5671/'
 		},
 		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/334497/90YV0G12-M0NA00/Graphics-Cards/ASUS-Dual-GeForce-RTX-3060-Ti-OC-Edition-8GB-Overclocked-Graphics-Card-DUAL-RTX3060TI-O8G-/VGA5941/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/336146/RTX-3060-Ti-VENTUS-2X-OC/Graphics-Cards/MSI-GeForce-RTX-3060-Ti-VENTUS-2X-OC-8GB-Overclocked-Graphics-Card/VGA5968/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/336145/RTX-3060-Ti-GAMING-X-TRIO/Graphics-Cards/MSI-GeForce-RTX-3060-Ti-GAMING-X-TRIO-8GB-Overclocked-Graphics-Card/VGA5967/'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/334501/90YV0G02-M0NA00/Graphics-Cards/ASUS-ROG-Strix-GeForce-RTX-3060-Ti-OC-Edition-8GB-Overclocked-Graphics-Card-ROG-STRIX-RTX3060TI-O8G-GAMING-/VGA5945/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/334499/90YV0G10-M0NA00/Graphics-Cards/ASUS-TUF-Gaming-GeForce-RTX-3060-Ti-OC-Edition-8GB-Overclocked-Graphics-Card-TUF-RTX3060TI-O8G-GAMING-/VGA5943/'
+		},
+		{
+			brand: 'asus',
+			model: 'dual',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/334496/90YV0G13-M0NA00/Graphics-Cards/ASUS-Dual-GeForce-RTX-3060-Ti-8GB-Graphics-Card-DUAL-RTX3060TI-8G-/VGA5940/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.cclonline.com/product/334425/GV-N306TGAMING-OC-8GD/Graphics-Cards/Gigabyte-GeForce-RTX-3060-Ti-GAMING-OC-8GB-Overclocked-Graphics-Card/VGA5932/'
+		},
+		{
 			brand: 'amd',
 			model: '5600x',
 			series: 'ryzen5600',
@@ -62,6 +111,11 @@ export const Ccl: Store = {
 			titleSelector: '.productList_Detail a[title]'
 		}),
 		urls: [
+			{
+				series: '3060ti',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-ti-Graphics-Cards/'
+			},
 			{
 				series: '3070',
 				url:
