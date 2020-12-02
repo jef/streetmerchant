@@ -183,6 +183,7 @@ environment variables are **optional**._
 | Euronics (DE) | `euronics-de`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
+| Expert | `expert`|
 | Galaxus (DE) | `galaxus`|
 | Game (UK) | `game`|
 | Gamestop | `gamestop`|
