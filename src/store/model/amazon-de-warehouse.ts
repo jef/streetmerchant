@@ -16,7 +16,7 @@ export const AmazonDeWarehouse: Store = {
 		},
 		maxPrice: {
 			container: 'a-size-large a-color-price olpOfferPrice a-text-bold',
-			euroFormat: false
+			euroFormat: true
 		},
 		outOfStock: [
 			{
@@ -32,7 +32,7 @@ export const AmazonDeWarehouse: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.de/gp/offer-listing/B087VM5XC6'
+			url: 'https://www.amazon.de/gp/offer-listing/B07PW9VBK5'
 		},
 		{
 			brand: 'sony',
