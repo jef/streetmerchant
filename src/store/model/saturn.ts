@@ -12,12 +12,11 @@ export const Saturn: Store = {
 		},
 		outOfStock: [
 			{
-				container: '.Typostyled__StyledInfoTypo-sc-1jga2g7-0.gseEVE',
+				container: '#root',
 				text: ['Dieser artikel ist aktuell nicht verfügbar.']
 			},
 			{
-				container:
-					'.Typostyled__StyledInfoTypo-sc-1jga2g7-0.bmovvS.Availabilitystyled__StyledAvailabilityTypo-sc-901vi5-7.eWPxJC',
+				container: '#root',
 				text: ['Leider keine Lieferung möglich']
 			}
 		]
