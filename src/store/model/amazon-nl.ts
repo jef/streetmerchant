@@ -33,24 +33,21 @@ export const AmazonNl: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			cartUrl:
-				'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B083GGYNQ6&Quantity.1=1',
+			cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B083GGYNQ6&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
 			url: 'https://www.amazon.nl/dp/B083GGYNQ6'
 		},
 		{
 			brand: 'msi',
-			cartUrl:
-				'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HM4M621&Quantity.1=1',
+			cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HM4M621&Quantity.1=1',
 			model: 'ventus 3x oc',
 			series: '3080',
 			url: 'https://www.amazon.nl/dp/B08HM4M621'
 		},
 		{
 			brand: 'msi',
-			cartUrl:
-				'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HM4V2DH&Quantity.1=1',
+			cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08HM4V2DH&Quantity.1=1',
 			model: 'gaming x trio',
 			series: '3080',
 			url: 'https://www.amazon.nl/dp/B08HM4V2DH'
@@ -112,12 +109,12 @@ export const AmazonNl: Store = {
 			url: 'https://www.amazon.nl/dp/B0815Y8J9N'
 		},
 		{
-            brand: 'sony',
-            cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08H93ZRK9&Quantity.1=1',
-            model: 'ps5 console',
-            series: 'sonyps5c',
-            url: 'https://www.amazon.nl/dp/B08H93ZRK9'
-        }
+			brand: 'sony',
+			cartUrl: 'https://www.amazon.nl/gp/aws/cart/add.html?ASIN.1=B08H93ZRK9&Quantity.1=1',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.amazon.nl/dp/B08H93ZRK9'
+		}
 	],
 	name: 'amazon-nl'
 };

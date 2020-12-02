@@ -24,6 +24,7 @@ import {Azerty} from './azerty';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
+import {Bol} from './bol';
 import {Box} from './box';
 import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
@@ -41,12 +42,14 @@ import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
+import {Fnac} from './fnac';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
+import {MediamarktNL} from './mediamarkt-nl';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
@@ -103,6 +106,7 @@ export const storeList = new Map([
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
 	[BestBuyCa.name, BestBuyCa],
+	[Bol.name, Bol],
 	[Box.name, Box],
 	[Caseking.name, Caseking],
 	[CanadaComputers.name, CanadaComputers],
@@ -120,12 +124,14 @@ export const storeList = new Map([
 	[EuronicsDE.name, EuronicsDE],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
+	[Fnac.name, Fnac],
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
 	[GamestopDE.name, GamestopDE],
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
+	[MediamarktNL.name, MediamarktNL],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
