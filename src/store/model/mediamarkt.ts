@@ -8,16 +8,17 @@ export const Mediamarkt: Store = {
 		},
 		maxPrice: {
 			container: 'span[font-family="price"]',
-			euroFormat: false
+			euroFormat: true
 		},
 		outOfStock: [
 			{
-				container: '#root',
-				text: ['dieser artikel ist aktuell nicht verfügbar.']
+				container: '.Typostyled__StyledInfoTypo-sc-1jga2g7-0.gseEVE',
+				text: ['Dieser artikel ist aktuell nicht verfügbar.']
 			},
 			{
-				container: '#root',
-				text: ['leider keine Lieferung möglich']
+				container:
+					'.Typostyled__StyledInfoTypo-sc-1jga2g7-0.bmovvS.Availabilitystyled__StyledAvailabilityTypo-sc-901vi5-7.eWPxJC',
+				text: ['Leider keine Lieferung möglich']
 			}
 		]
 	},
