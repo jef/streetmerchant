@@ -1,9 +1,10 @@
 import {Store} from './store';
 
 export const Mediamarkt: Store = {
+	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		captcha: {
-			container: 'body',
+			container: 'p',
 			text: ['Das ging uns leider zu schnell.']
 		},
 		maxPrice: {
