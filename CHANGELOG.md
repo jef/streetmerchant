@@ -1,5 +1,33 @@
 # Changelog
 
+## [3.2.0](https://www.github.com/jef/streetmerchant/compare/v3.1.0...v3.2.0) (2020-12-02)
+
+
+### Features
+
+* **bestbuy:** add 3060 series ([#1074](https://www.github.com/jef/streetmerchant/issues/1074)) ([e9a39c4](https://www.github.com/jef/streetmerchant/commit/e9a39c40925736a2126f6138c369710989904d1d))
+* **bestbuy-ca:** add 3060ti cards ([29478bf](https://www.github.com/jef/streetmerchant/commit/29478bff2d27d780cc6142526f3970b4a87290bc))
+* **proxy:** socks5 support ([#933](https://www.github.com/jef/streetmerchant/issues/933)) ([364c6c2](https://www.github.com/jef/streetmerchant/commit/364c6c25dfe9dcbeb29cb20cb46e9e8dcc2fe86b))
+* **store:** add antonline store ([#1042](https://www.github.com/jef/streetmerchant/issues/1042)) ([19eece1](https://www.github.com/jef/streetmerchant/commit/19eece18dccd4489e1e441b92061fc3b5743e4cd))
+* **store:** add argos with ps5 ([b2f5c1a](https://www.github.com/jef/streetmerchant/commit/b2f5c1a3ed93cfd56e575ec634d235565a17b6bc))
+* **store:** add ePrice store ([#1016](https://www.github.com/jef/streetmerchant/issues/1016)) ([30a51a3](https://www.github.com/jef/streetmerchant/commit/30a51a38bee1c399276466e5db457bbe702edd5c))
+* **store:** add some italian stores with ps5 links ([#976](https://www.github.com/jef/streetmerchant/issues/976)) ([f663579](https://www.github.com/jef/streetmerchant/commit/f663579f3d744a5270878975407ad30b31ee0c0a))
+* **store:** add wipoid store ([#1018](https://www.github.com/jef/streetmerchant/issues/1018)) ([feae978](https://www.github.com/jef/streetmerchant/commit/feae978de9e90b96f542d2e53807144d82e380a4))
+* **topachat:** add `maxPrice` ([d7f2427](https://www.github.com/jef/streetmerchant/commit/d7f242780ef1a0a06d5b65ccfc0999e36a87d49d)), closes [#1097](https://www.github.com/jef/streetmerchant/issues/1097)
+* add proxy rotation (settable per store) ([#1026](https://www.github.com/jef/streetmerchant/issues/1026)) ([490d44e](https://www.github.com/jef/streetmerchant/commit/490d44e1fdfdf91db7344dd3050ba8fd8d069631))
+* **store:** add Euronics DE ([#1045](https://www.github.com/jef/streetmerchant/issues/1045)) ([1774afc](https://www.github.com/jef/streetmerchant/commit/1774afc1c3010bd0b183907baa4f3486dc9e8c23))
+* **store:** add Gamestop DE ([#1046](https://www.github.com/jef/streetmerchant/issues/1046)) ([79a3f33](https://www.github.com/jef/streetmerchant/commit/79a3f33150188c7ff0228a38f276ae1fe88b9714))
+* **store:** update the italian store links ([#1002](https://www.github.com/jef/streetmerchant/issues/1002)) ([de7036c](https://www.github.com/jef/streetmerchant/commit/de7036c7cc6dd7e436ad1d31b988d9d56ad31f76))
+
+
+### Bug Fixes
+
+* **bestbuy-ca:** replace old evga xc3 ultra ([#1058](https://www.github.com/jef/streetmerchant/issues/1058)) ([65df944](https://www.github.com/jef/streetmerchant/commit/65df9449730bce2acb82f5edac25a91bdddd94db))
+* related products being picked up on scan ([#954](https://www.github.com/jef/streetmerchant/issues/954)) ([db18157](https://www.github.com/jef/streetmerchant/commit/db18157a490b9c9672c32de3372bff0b472a48f3))
+* **canadacomputers:** add `inStock` selector, use english links ([#889](https://www.github.com/jef/streetmerchant/issues/889)) ([06214eb](https://www.github.com/jef/streetmerchant/commit/06214eb4a8a5c2d8a180e8dcf846f828d5cce2ed))
+* **memoryexpress:** add backorder to `outOfStock` selector ([#890](https://www.github.com/jef/streetmerchant/issues/890)) ([67605a6](https://www.github.com/jef/streetmerchant/commit/67605a6e280af35f210c536bc03571a84ea1a7e9))
+* **newegg:** typo in 5800x url([#903](https://www.github.com/jef/streetmerchant/issues/903)) ([a99eecb](https://www.github.com/jef/streetmerchant/commit/a99eecb4613bc136e65afe4e5e8788316beae39e))
+
 ## [3.1.0](https://www.github.com/jef/streetmerchant/compare/v3.0.0...v3.1.0) (2020-11-22)
 
 
