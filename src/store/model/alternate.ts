@@ -13,7 +13,7 @@ export const Alternate: Store = {
 		},
 		maxPrice: {
 			container: 'div.price > span',
-			euroFormat: true
+			euroFormat: false
 		},
 		outOfStock: [
 			{
@@ -404,6 +404,12 @@ export const Alternate: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.alternate.de/product/1675117'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url: 'https://www.alternate.de/product/1676874'
 		}
 	],
 	name: 'alternate'
