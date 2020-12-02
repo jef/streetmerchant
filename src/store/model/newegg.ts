@@ -809,7 +809,7 @@ export const Newegg: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126470',
-			model: 'rog strix',
+			model: 'strix',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-rog-strix-rtx3060ti-o8g-gaming/p/N82E16814126470'
@@ -836,7 +836,7 @@ export const Newegg: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126471',
-			model: 'tuf gaming',
+			model: 'tuf',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-tuf-rtx3060ti-o8g-gaming/p/N82E16814126471'
@@ -845,7 +845,7 @@ export const Newegg: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487535',
-			model: 'xc gaming',
+			model: 'xc3',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/evga-geforce-rtx-3060-ti-08g-p5-3663-kr/p/N82E16814487535'
@@ -854,7 +854,7 @@ export const Newegg: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126468',
-			model: 'dual gaming',
+			model: 'dual',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-dual-rtx3060ti-o8g/p/N82E16814126468'
@@ -872,7 +872,7 @@ export const Newegg: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814487537',
-			model: 'ftw ultra',
+			model: 'ftw3 ultra',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/evga-geforce-rtx-3060-ti-08g-p5-3667-kr/p/N82E16814487537'
@@ -935,7 +935,7 @@ export const Newegg: Store = {
 			brand: 'asus',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126474',
-			model: 'ko',
+			model: 'gaming',
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-ko-rtx3060ti-o8g-gaming/p/N82E16814126474'
