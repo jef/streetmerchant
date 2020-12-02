@@ -137,6 +137,11 @@ export const Scan: Store = {
 				series: '3090',
 				url:
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/nvidia-geforce-rtx-3090-graphics-cards'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
 			}
 		]
 	},

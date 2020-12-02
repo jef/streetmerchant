@@ -5,7 +5,6 @@ import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
 import {AmazonDe} from './amazon-de';
-import {AmazonDeWarehouse} from './amazon-de-warehouse';
 import {AmazonEs} from './amazon-es';
 import {AmazonFr} from './amazon-fr';
 import {AmazonIt} from './amazon-it';
@@ -21,6 +20,7 @@ import {Aria} from './aria';
 import {Arlt} from './arlt';
 import {Asus} from './asus';
 import {AsusDe} from './asus-de';
+import {Awd} from './awd';
 import {Azerty} from './azerty';
 import {BAndH} from './bandh';
 import {BestBuy} from './bestbuy';
@@ -49,7 +49,6 @@ import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
-import {Medimax} from './medimax';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
@@ -69,7 +68,6 @@ import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
-import {Spielegrotte} from './spielegrotte';
 import {Store} from './store';
 import {Target} from './target';
 import {TopAchat} from './topachat';
@@ -89,7 +87,6 @@ export const storeList = new Map([
 	[Amazon.name, Amazon],
 	[AmazonCa.name, AmazonCa],
 	[AmazonDe.name, AmazonDe],
-	[AmazonDeWarehouse.name, AmazonDeWarehouse],
 	[AmazonEs.name, AmazonEs],
 	[AmazonFr.name, AmazonFr],
 	[AmazonNl.name, AmazonNl],
@@ -105,6 +102,7 @@ export const storeList = new Map([
 	[Arlt.name, Arlt],
 	[Asus.name, Asus],
 	[AsusDe.name, AsusDe],
+	[Awd.name, Awd],
 	[Azerty.name, Azerty],
 	[BAndH.name, BAndH],
 	[BestBuy.name, BestBuy],
@@ -133,7 +131,6 @@ export const storeList = new Map([
 	[GamestopDE.name, GamestopDE],
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
-	[Medimax.name, Medimax],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
@@ -153,7 +150,6 @@ export const storeList = new Map([
 	[ProshopDK.name, ProshopDK],
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
-	[Spielegrotte.name, Spielegrotte],
 	[Target.name, Target],
 	[TopAchat.name, TopAchat],
 	[Unieuro.name, Unieuro],
