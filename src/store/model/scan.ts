@@ -38,6 +38,20 @@ export const Scan: Store = {
 			url: 'https://www.scan.co.uk/products/playstation-5-console'
 		},
 		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3060ti',
+			url:
+				'https://www.scan.co.uk/products/msi-nvidia-geforce-rtx-3060-ti-ventus-3x-oc-8gb-gddr6-ray-tracing-graphics-card-4864-core-1695mhz-bo'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3060ti',
+			url:
+				'https://www.scan.co.uk/products/nda-2-12-2pm-evga-nvidia-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-graphics-card'
+		},
+		{
 			brand: 'sony',
 			model: 'ps5 digital',
 			series: 'sonyps5de',
