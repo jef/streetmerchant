@@ -53,6 +53,14 @@ export const BestBuy: Store = {
 				'https://www.bestbuy.com/site/evga-geforce-rtx-3070-xc3-black-gaming-8gb-gddr6x-pci-express-4-0-graphics-card/6439300.p?skuId=6439300&intl=nosplash'
 		},
 		{
+			brand: 'evga',
+			cartUrl: 'https://api.bestbuy.com/click/-/6436191/cart',
+			model: 'ftw3',
+			series: '3080',
+			url:
+				'https://www.bestbuy.com/site/evga-geforce-rtx-3080-ftw3-gaming-10gb-gddr6x-pci-express-4-0-graphics-card/6436191.p?skuId=6436191&intl=nosplash'
+		},
+		{
 			brand: 'gigabyte',
 			cartUrl: 'https://api.bestbuy.com/click/-/6437912/cart',
 			model: 'eagle',
