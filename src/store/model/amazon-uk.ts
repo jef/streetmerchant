@@ -31,10 +31,10 @@ export const AmazonUk: Store = {
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B081265T5Z&Quantity.1=1',
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B07PW9VBK5&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.co.uk/dp/B081265T5Z/'
+			url: 'https://www.amazon.co.uk/dp/B07PW9VBK5/'
 		},
 		{
 			brand: 'sony',
