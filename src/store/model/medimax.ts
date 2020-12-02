@@ -26,7 +26,7 @@ export const Medimax: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.medimax.de/p/1318947/expansion-card-1tb-xbox-series-x-s'
+			url: 'https://www.medimax.de/p/1311642/drivesmart-51-lmt-d-ce'
 		},
 		{
 			brand: 'sony',
