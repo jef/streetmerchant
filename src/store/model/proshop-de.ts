@@ -276,7 +276,19 @@ export const ProshopDE: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.proshop.de/2884175'
-		}
+		},
+                {
+                        brand: 'sony',
+                        model: 'ps5 console',
+                        series: 'sonyps5c',
+                        url: 'https://www.proshop.de/Spielkonsolen/Sony-PlayStation-5/2831713'
+                },
+                {
+                        brand: 'sony',
+                        model: 'ps5 digital',
+                        series: 'sonyps5de',
+                        url: 'https://www.proshop.de/Spielkonsolen/Sony-PlayStation-5-Digital-Edition/2863627'
+                }
 	],
 	name: 'proshop-de'
 };
