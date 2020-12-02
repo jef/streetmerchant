@@ -42,6 +42,7 @@ import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
+import {Expert} from './expert';
 import {Fnac} from './fnac';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
@@ -60,6 +61,7 @@ import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
 import {PlayStation} from './playstation';
@@ -124,6 +126,7 @@ export const storeList = new Map([
 	[EuronicsDE.name, EuronicsDE],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
+	[Expert.name, Expert],
 	[Fnac.name, Fnac],
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
@@ -142,6 +145,7 @@ export const storeList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
 	[PlayStation.name, PlayStation],

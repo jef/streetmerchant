@@ -183,6 +183,7 @@ environment variables are **optional**._
 | Euronics (DE) | `euronics-de`|
 | EVGA | `evga`|
 | EVGA (EU) | `evga-eu`|
+| Expert | `expert`|
 | Galaxus (DE) | `galaxus`|
 | Game (UK) | `game`|
 | Gamestop | `gamestop`|
@@ -199,6 +200,7 @@ environment variables are **optional**._
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| Otto | `otto`|
 | Overclockers (UK) | `overclockers`|
 | PCComponentes (ES) | `pccomponentes`|
 | PlayStation | `playstation`|

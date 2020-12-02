@@ -22,6 +22,34 @@ export const Zotac: Store = {
 		},
 		{
 			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url:
+				'https://store.zotac.com/zotac-gaming-geforce-rtx-3060-ti-twin-edge-zt-a30610e-10m'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://store.zotac.com/zotac-gaming-geforce-rtx-3060-ti-twin-edge-oc-zt-a30610h-10m'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3070',
+			url:
+				'https://store.zotac.com/zotac-gaming-geforce-rtx-3070-twin-edge-zt-a30700e-10p'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3070',
+			url:
+				'https://store.zotac.com/zotac-gaming-geforce-rtx-3070-twin-edge-oc-zt-a30700h-10p'
+		},
+		{
+			brand: 'zotac',
 			model: 'trinity',
 			series: '3080',
 			url:
