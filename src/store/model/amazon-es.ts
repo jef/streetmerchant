@@ -13,7 +13,7 @@ export const AmazonEs: Store = {
 		},
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
-			euroFormat: true
+			euroFormat: false
 		},
 		outOfStock: [
 			{
@@ -26,10 +26,10 @@ export const AmazonEs: Store = {
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B083JX52VG&Quantity.1=1',
+				'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08124HJKF&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.es/dp/B083JX52VG'
+			url: 'https://www.amazon.es/dp/B08124HJKF'
 		},
 		{
 			brand: 'msi',
