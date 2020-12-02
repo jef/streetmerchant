@@ -12,8 +12,8 @@ export const Newegg: Store = {
 			text: ['add to cart']
 		},
 		maxPrice: {
-			container: 'div#app div.product-price > ul > li.price-current > strong',
-			euroFormat: false
+			container:
+				'#app > div.page-content > div.page-section > div > div > div.row-side > div.product-buy-box > div:nth-child(3) > div.product-price > ul > li.price-current'
 		}
 	},
 	links: [
