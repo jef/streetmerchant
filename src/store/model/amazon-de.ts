@@ -16,7 +16,7 @@ export const AmazonDe: Store = {
 		},
 		maxPrice: {
 			container: 'span[class*="PriceString"]',
-			euroFormat: false
+			euroFormat: true
 		},
 		outOfStock: [
 			{
@@ -29,10 +29,10 @@ export const AmazonDe: Store = {
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08CHJBDWF&Quantity.1=1',
+				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B07PW9VBK5&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.de/dp/B08CHJBDWF'
+			url: 'https://www.amazon.de/dp/B07PW9VBK5'
 		},
 		{
 			brand: 'asus',

@@ -8,7 +8,7 @@ export const Saturn: Store = {
 		},
 		maxPrice: {
 			container: 'span[font-family="price"]',
-			euroFormat: true
+			euroFormat: false
 		},
 		outOfStock: [
 			{
@@ -26,7 +26,7 @@ export const Saturn: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.saturn.de/de/product/-2592355.html'
+			url: 'https://www.saturn.de/de/product/-2641856.html'
 		},
 		{
 			brand: 'asus',

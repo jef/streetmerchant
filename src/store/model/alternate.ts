@@ -13,7 +13,7 @@ export const Alternate: Store = {
 		},
 		maxPrice: {
 			container: 'div.price > span',
-			euroFormat: false
+			euroFormat: true
 		},
 		outOfStock: [
 			{
@@ -31,7 +31,7 @@ export const Alternate: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.alternate.de/product/1516616'
+			url: 'https://www.alternate.de/product/1662088'
 		},
 		{
 			brand: 'asus',
