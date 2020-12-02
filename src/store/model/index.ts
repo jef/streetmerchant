@@ -68,6 +68,8 @@ import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
+import {SmythsToys} from './smythstoys';
+import {Spielegrotte} from './spielegrotte';
 import {Store} from './store';
 import {Target} from './target';
 import {TopAchat} from './topachat';
@@ -150,6 +152,8 @@ export const storeList = new Map([
 	[ProshopDK.name, ProshopDK],
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
+  [SmythsToys.name, SmythsToys],
+	[Spielegrotte.name, Spielegrotte],
 	[Target.name, Target],
 	[TopAchat.name, TopAchat],
 	[Unieuro.name, Unieuro],
