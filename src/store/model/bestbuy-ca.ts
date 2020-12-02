@@ -3,8 +3,8 @@ import {Store} from './store';
 export const BestBuyCa: Store = {
 	labels: {
 		inStock: {
-			container: '.x-product-detail-page .addToCartButton:enabled',
-			text: ['Add to Cart']
+			container: '.x-checkout-experience-new',
+			text: ['add to cart']
 		},
 		maxPrice: {
 			container:
@@ -18,7 +18,42 @@ export const BestBuyCa: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-2060-super-gaming-x-8gb-gddr6-video-card/14419420?intl=nosplash'
+				'https://www.bestbuy.ca/en-ca/product/evga-geforce-gtx-1660-xc-ultra-6gb-gddr5-video-card/14119081?intl=nosplash'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-3060-ti-ventus-2x-oc-8gb-gddr6-video-card/15178453?intl=nosplash'
+		},
+		{
+			brand: 'nvidia',
+			model: 'founders edition',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3060-ti-8gb-gddr6-video-card/15166285?intl=nosplash'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3060-ti-twin-edge-oc-8gb-gddr6-video-card/15178452?intl=nosplash'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3060-ti-twin-edge-8gb-gddr6-video-card/15178583?intl=nosplash'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-video-card/15200164?intl=nosplash'
 		},
 		{
 			brand: 'zotac',
