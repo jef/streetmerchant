@@ -34,7 +34,7 @@ export type Brand =
 
 export type Series =
 	| 'test:series'
-	| '3060'
+	| '3060ti'
 	| '3070'
 	| '3080'
 	| '3090'
