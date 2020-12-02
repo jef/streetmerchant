@@ -3,8 +3,11 @@ import {Store} from './store';
 export const TopAchat: Store = {
 	labels: {
 		inStock: {
-			container: '.cart.button',
+			container: 'input.cart.button[value="Ajouter au panier"]',
 			text: ['']
+		},
+		maxPrice: {
+			container: 'span.priceFinal.fp44'
 		}
 	},
 	links: [
