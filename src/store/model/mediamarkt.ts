@@ -30,6 +30,18 @@ export const Mediamarkt: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'dual',
+			series: '3060ti',
+			url: 'https://www.mediamarkt.de/de/product/-2701239.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url: 'https://www.mediamarkt.de/de/product/-2704436.html'
+		},
+		{
+			brand: 'asus',
 			model: 'strix',
 			series: '3070',
 			url: 'https://www.mediamarkt.de/de/product/-2691243.html'
