@@ -7,12 +7,18 @@ export const Amazon: Store = {
 			container: 'body',
 			text: ['enter the characters you see below']
 		},
-		inStock: {
-			container: '#desktop_buybox',
-			text: ['add to cart']
-		},
+		inStock: [
+			{
+				container: '#add-to-cart-button',
+				text: ['add to cart']
+			},
+			{
+				container: '#buy-now-button',
+				text: ['buy now']
+			}
+		],
 		maxPrice: {
-			container: 'span[class*="PriceString"]'
+			container: '#price_inside_buybox'
 		}
 	},
 	links: [
