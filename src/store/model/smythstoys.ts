@@ -9,6 +9,10 @@ export const SmythsToys: Store = {
 		maxPrice: {
 			container: '.price_tag',
 			euroFormat: false
+		},
+		outOfStock: {
+			container: '.instoreMessage',
+			text: ['out of stock']
 		}
 	},
 	links: [
