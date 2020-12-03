@@ -152,7 +152,7 @@ export const storeList = new Map([
 	[ProshopDK.name, ProshopDK],
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
-  [SmythsToys.name, SmythsToys],
+  	[SmythsToys.name, SmythsToys],
 	[Spielegrotte.name, Spielegrotte],
 	[Target.name, Target],
 	[TopAchat.name, TopAchat],
