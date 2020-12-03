@@ -64,6 +64,13 @@ export const Zotac: Store = {
 		},
 		{
 			brand: 'zotac',
+			model: 'amp holo',
+			series: '3080',
+			url:
+				'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-3080-amp-holo-zt-a30800f-10p'
+		},
+		{
+			brand: 'zotac',
 			model: 'trinity',
 			series: '3090',
 			url:
