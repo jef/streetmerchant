@@ -10,6 +10,10 @@ export const BestBuyCa: Store = {
 			container:
 				'div[class^="productPricingContainer"] span[class^="screenReaderOnly_"',
 			euroFormat: false
+		},
+		outOfStock: {
+			container: 'button.addToCartButton.disabled_XY3i_',
+			text: ['Add to Cart']
 		}
 	},
 	links: [
