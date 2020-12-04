@@ -47,7 +47,7 @@
     "puppeteer-extra-plugin-stealth": "^2.6.5",
     "puppeteer-page-proxy": "^1.2.8",
     "pushover-notifications": "^1.2.2",
-    "twilio": "^3.52.0",
+    "twilio": "^3.53.0",
     "twitch": "^4.3.2",
     "twitch-auth": "^4.3.1",
     "twitch-chat-client": "^4.3.2",
