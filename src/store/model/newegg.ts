@@ -8,7 +8,7 @@ export const Newegg: Store = {
 			text: ['are you a human?']
 		},
 		inStock: {
-			container: 'div#ProductBuy .btn-primary',
+			container: '#ProductBuy',
 			text: ['add to cart']
 		},
 		maxPrice: {
