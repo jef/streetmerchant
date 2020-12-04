@@ -11,11 +11,11 @@ export const AmazonDe: Store = {
 			]
 		},
 		inStock: {
-			container: '#desktop_buybox',
+			container: '#add-to-cart-button',
 			text: ['in den einkaufswagen']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]',
+			container: '#priceblock_ourprice',
 			euroFormat: true
 		},
 		outOfStock: [
