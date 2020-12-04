@@ -68,6 +68,7 @@ import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
 import {PlayStation} from './playstation';
+import {PlayStationQueue} from './playstation-queue';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
@@ -159,6 +160,7 @@ export const storeList = new Map([
 	[Overclockers.name, Overclockers],
 	[PCComponentes.name, PCComponentes],
 	[PlayStation.name, PlayStation],
+	[PlayStationQueue.name, PlayStationQueue],
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
