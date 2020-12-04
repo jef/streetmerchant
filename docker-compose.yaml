@@ -4,3 +4,5 @@ services:
     build: .
     env_file:
       - ./.env
+    cap_add:
+      - SYS_ADMIN
