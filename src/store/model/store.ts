@@ -72,7 +72,6 @@ export type Model =
 	| 'eagle oc'
 	| 'eagle'
 	| 'founders edition'
-	| 'ftw ultra'
 	| 'ftw3 ultra'
 	| 'ftw3'
 	| 'gamerock oc'
