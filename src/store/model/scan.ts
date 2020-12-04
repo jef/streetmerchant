@@ -124,6 +124,11 @@ export const Scan: Store = {
 		ttl: 300000,
 		urls: [
 			{
+				series: '3060ti',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
+			},
+			{
 				series: '3070',
 				url:
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/nvidia-geforce-rtx-3070-graphics-cards'
