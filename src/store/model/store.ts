@@ -94,6 +94,7 @@ export type Model =
 	| 'phoenix'
 	| 'ps5 console'
 	| 'ps5 digital'
+	| 'pulse'
 	| 'red devil'
 	| 'sg oc'
 	| 'sg'

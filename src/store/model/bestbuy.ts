@@ -388,7 +388,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'msi',
 			model: 'amd reference',
-			series: 'rx6800xt',
+			series: 'rx6800',
 			url:
 				'https://www.bestbuy.com/site/msi-radeon-rx-6800-16g-16gb-gddr6-pci-express-4-0-graphics-card-black-black/6441020.p?skuId=6441020'
 		},

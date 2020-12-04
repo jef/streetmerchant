@@ -37,6 +37,7 @@ getting `streetmerchant` running!
 - [git](https://git-scm.com/)
 - Clone this project `git clone https://github.com/jef/streetmerchant.git`
   - To checkout a particular ref, use `git checkout <ref name>` after cloning
+- Navigate to this project by entering `cd streetmerchant` 
 - Run `npm install`
 - Copy `.env-example` to a new file `.env` and edit the `.env` file to your liking using
   your [favorite text editor](https://code.visualstudio.com/)
