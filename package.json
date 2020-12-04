@@ -65,7 +65,7 @@
     "@types/twitter": "^1.7.0",
     "husky": "^4.3.0",
     "nodemon": "^2.0.6",
-    "ts-node": "^9.0.0",
+    "ts-node": "^9.1.0",
     "typescript": "^4.1.2",
     "webpack": "^5.9.0",
     "xo": "^0.35.0"
