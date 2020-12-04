@@ -6,3 +6,4 @@ services:
       - ./.env
     cap_add:
       - SYS_ADMIN
+    command: start:production
