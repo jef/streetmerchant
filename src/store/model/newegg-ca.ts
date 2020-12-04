@@ -484,7 +484,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'evga',
 			itemNumber: '14-487-537',
-			model: 'ftw ultra',
+			model: 'ftw3 ultra',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/evga-geforce-rtx-3060-ti-08g-p5-3667-kr/p/N82E16814487537'
