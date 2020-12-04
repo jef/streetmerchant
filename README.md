@@ -361,6 +361,18 @@ environment variables are **optional**._
 | Environment variable | Description | Notes |
 |:---:|---|---|
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@&2834729847239842>` |
+| `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock | Same as `DISCORD_NOTIFY_GROUP` |
+| `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock | Same as `DISCORD_NOTIFY_GROUP` |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
 
 </details>
