@@ -18,7 +18,7 @@ export const BestBuy: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.bestbuy.com/site/evga-sc-ultra-gaming-nvidia-geforce-gtx-1660-ti-6gb-gddr6-pci-express-3-0-graphics-card-black-gray/6373500.p?skuId=6373500&intl=nosplash'
+				'https://www.bestbuy.com/site/insignia-8qt-digital-multi-cooker-stainless-steel/6258941.p?skuId=6258941&intl=nosplash'
 		},
 		{
 			brand: 'nvidia',
