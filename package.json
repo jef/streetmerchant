@@ -73,6 +73,7 @@
   "xo": {
     "prettier": true,
     "rules": {
+      "no-warning-comments": "off",
       "sort-imports": "error",
       "sort-keys": "error",
       "sort-vars": "error"
