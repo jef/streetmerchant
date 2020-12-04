@@ -349,6 +349,13 @@ export const CanadaComputers: Store = {
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183096&language=en'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181352&language=en'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3060ti',
