@@ -447,12 +447,60 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/dp/B08MVC76SR'
 		},
 		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXXT7WN&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXXT7WN'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXYNLMR&Quantity.1=1',
+			model: 'pulse',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXYNLMR'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXVNMPQ&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXVNMPQ'
+		},
+		{
 			brand: 'xfx',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08N6ZLX9B&Quantity.1=1',
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url: 'https://www.amazon.com/dp/B08N6ZLX9B'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NX14LV1&Quantity.1=1',
+			model: 'merc',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NX14LV1'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NN76VJD&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NN76VJD'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P5YFZCY&Quantity.1=1',
+			model: 'merc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08P5YFZCY'
 		},
 		{
 			brand: 'powercolor',
@@ -469,6 +517,46 @@ export const Amazon: Store = {
 			model: 'amd reference',
 			series: 'rx6800',
 			url: 'https://www.amazon.com/dp/B08MVCLBWK'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXZSPMY&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NXZSPMY'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXYBVDB&Quantity.1=1',
+			model: 'pulse',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NXYBVDB'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NWJ29NB&Quantity.1=1',
+			model: 'strix oc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NWJ29NB'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P3YT3MY&Quantity.1=1',
+			model: 'tuf oc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08P3YT3MY'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NWHKGS9&Quantity.1=1',
+			model: 'strix lc',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NWHKGS9'
 		},
 		{
 			brand: 'sony',
