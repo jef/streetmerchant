@@ -180,6 +180,7 @@ environment variables are **optional**._
 | Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer (UK) | `ebuyer`|
+| El Corte Inglés | `elcorteingles`|
 | ePrice (IT) | `eprice`|
 | Euronics (IT) | `euronics`|
 | Euronics (DE) | `euronics-de`|
