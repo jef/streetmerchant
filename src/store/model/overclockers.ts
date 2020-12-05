@@ -93,6 +93,11 @@ export const Overclockers: Store = {
 				series: '3090',
 				url:
 					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3090'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3060-ti'
 			}
 		]
 	},

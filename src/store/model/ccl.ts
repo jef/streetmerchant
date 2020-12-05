@@ -86,6 +86,11 @@ export const Ccl: Store = {
 				series: 'rx6800xt',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-XT-Graphics-Cards/'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-Ti-Graphics-Cards/'
 			}
 		]
 	},
