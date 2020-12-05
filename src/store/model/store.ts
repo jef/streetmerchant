@@ -132,13 +132,14 @@ export type Model =
 
 export type Link = {
 	brand: Brand;
-	itemNumber?: string;
-	series: Series;
-	model: Model;
-	url: string;
 	cartUrl?: string;
+	itemNumber?: string;
+	labels?: Labels;
+	model: Model;
 	openCartAction?: (browser: Browser) => Promise<string>;
+	series: Series;
 	screenshot?: string;
+	url: string;
 };
 
 export type LabelQuery = Element[] | Element | string[];

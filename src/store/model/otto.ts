@@ -28,6 +28,13 @@ export const Otto: Store = {
 		},
 		{
 			brand: 'sony',
+			labels: {
+				inStock: {
+					container:
+						'.js_shortInfo__variationName.prd_shortInfo__variationName',
+					text: ['konsole']
+				}
+			},
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url:
@@ -35,6 +42,13 @@ export const Otto: Store = {
 		},
 		{
 			brand: 'sony',
+			labels: {
+				inStock: {
+					container:
+						'.js_shortInfo__variationName.prd_shortInfo__variationName',
+					text: ['konsole']
+				}
+			},
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url:
@@ -42,6 +56,13 @@ export const Otto: Store = {
 		},
 		{
 			brand: 'sony',
+			labels: {
+				inStock: {
+					container:
+						'.js_shortInfo__variationName.prd_shortInfo__variationName',
+					text: ['konsole']
+				}
+			},
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url:
