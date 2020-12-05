@@ -284,6 +284,7 @@ environment variables are **optional**._
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |
+| `xfx` | `merc`, `amd reference` |
 
 </details>
 
