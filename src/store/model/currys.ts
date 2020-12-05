@@ -80,6 +80,11 @@ export const Currys: Store = {
 				series: '3090',
 				url:
 					'https://www.currys.co.uk/gbuk/rtx-3090/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00313725/xx-criteria.html'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.currys.co.uk/gbuk/rtx-3060-ti/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00313952/xx-criteria.html'
 			}
 		]
 	},

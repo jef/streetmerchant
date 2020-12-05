@@ -116,7 +116,7 @@ export const Scan: Store = {
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
-			productsSelector: 'ul.productColumns:not(.related) li.product',
+			productsSelector: 'div.productList ul.productColumns li.product',
 			sitePrefix: 'https://www.scan.co.uk',
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
@@ -142,6 +142,11 @@ export const Scan: Store = {
 				series: '3090',
 				url:
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/nvidia-geforce-rtx-3090-graphics-cards'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
 			}
 		]
 	},
