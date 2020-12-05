@@ -346,15 +346,17 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.maxPrice) {
-		const price = await cardPrice(
+		link.price = await cardPrice(
 			page,
 			store.labels.maxPrice,
 			config.store.maxPrice.series[link.series],
 			baseOptions
 		);
+
 		const maxPrice = config.store.maxPrice.series[link.series];
-		if (price) {
-			logger.info(Print.maxPrice(link, store, price, maxPrice, true));
+
+		if (link.price) {
+			logger.info(Print.maxPrice(link, store, maxPrice, true));
 			return false;
 		}
 	}
