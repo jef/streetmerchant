@@ -510,6 +510,12 @@ export const AmazonDe: Store = {
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRK9&Quantity.1=1',
+			labels: {
+				inStock: {
+					container: '#productTitle',
+					text: ['sony playstation 5']
+				}
+			},
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url: 'https://www.amazon.de/dp/B08H93ZRK9'
@@ -518,13 +524,19 @@ export const AmazonDe: Store = {
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H98GVK8&Quantity.1=1',
+			labels: {
+				inStock: {
+					container: '#productTitle',
+					text: ['sony playstation 5']
+				}
+			},
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.amazon.de/dp/B08H98GVK8'
 		},
 		{
 			brand: 'microsoft',
-			// Disabled because of #1095
+			// Fixme: disabled because of #1095, enable when working again
 			// cartUrl:
 			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
 			model: 'xbox series x',
@@ -533,7 +545,7 @@ export const AmazonDe: Store = {
 		},
 		{
 			brand: 'microsoft',
-			// Disabled because of #1095
+			// Fixme: disabled because of #1095, enable when working again
 			// cartUrl:
 			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
 			model: 'xbox series s',
