@@ -52,10 +52,6 @@ export function sendDiscordMessage(link: Link, store: Store) {
 					notifyText.concat(notifyGroup); // If there is no group for the series we
 				}
 
-				if (notifyText.length > 0) {
-					embed.setText(notifyText.join(' '));
-				}
-
 				embed.setColor(0x76b900);
 				embed.setTimestamp();
 
