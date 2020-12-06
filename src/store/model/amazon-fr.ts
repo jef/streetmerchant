@@ -12,7 +12,7 @@ export const AmazonFr: Store = {
 			text: ['ajouter au panier']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]',
+			container: '#priceblock_ourprice',
 			euroFormat: true
 		},
 		outOfStock: [

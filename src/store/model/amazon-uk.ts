@@ -14,7 +14,7 @@ export const AmazonUk: Store = {
 			text: ['in stock']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]'
+			container: '#priceblock_ourprice'
 		},
 		outOfStock: [
 			{
@@ -31,10 +31,10 @@ export const AmazonUk: Store = {
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B07PW9VBK5&Quantity.1=1',
+				'https://www.amazon.co.uk/gp/aws/cart/add.html?ASIN.1=B0753R2TWC&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.co.uk/dp/B07PW9VBK5/'
+			url: 'https://www.amazon.co.uk/dp/B0753R2TWC/'
 		},
 		{
 			brand: 'sony',
@@ -125,6 +125,11 @@ export const AmazonUk: Store = {
 					'https://www.amazon.co.uk/s?k=%2B%22RTX+3090%22+-3080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675291',
 					'https://www.amazon.co.uk/s?k=%2B%22RTX+3090%22+-3080+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675594&page=2'
 				]
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.amazon.co.uk/s?k=%2B%22RTX+3060+TI%22+-2060+-2070+-2080+-SUPER+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675291sb_noss'
 			}
 		]
 	},

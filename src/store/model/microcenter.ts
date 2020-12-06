@@ -115,6 +115,60 @@ for (const microCenterLocation of microCenterLocations) {
 				url: `https://www.microcenter.com/product/628607/zotac-geforce-rtx-3080-trinity-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`
 			},
 			{
+				brand: 'nvidia',
+				model: 'founders edition',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631716/nvidia-geforce-rtx-3060ti-ti-founders-edition-dual-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'msi',
+				model: 'gaming x trio',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631531/msi-geforce-rtx-3060ti-ti-gaming-x-trio-triple-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'msi',
+				model: 'ventus 2x oc',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631532/msi-geforce-rtx-3060ti-ti-ventus-2x-overclocked-dual-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'evga',
+				model: 'ftw3 ultra',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631926/evga-geforce-rtx-3060ti-ti-ftw-ultra-gaming-triple-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'asus',
+				model: 'dual oc',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631473/asus-geforce-rtx-3060ti-ti-dual-overclocked-dual-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'asus',
+				model: 'tuf',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631469/asus-geforce-rtx-3060ti-ti-tuf-gaming-overclocked-dual-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'asus',
+				model: 'strix oc',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631283/asus-geforce-rtx-3060ti-ti-rog-strix-overclocked-triple-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'gigabyte',
+				model: 'gaming oc',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631742/gigabyte-geforce-rtx-3060ti-ti-gaming-overclocked-triple-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'gigabyte',
+				model: 'eagle',
+				series: '3060ti',
+				url: `https://www.microcenter.com/product/631744/gigabyte-geforce-rtx-3060ti-ti-eagle-dual-fan-8gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
 				brand: 'amd',
 				model: '5600x',
 				series: 'ryzen5600',

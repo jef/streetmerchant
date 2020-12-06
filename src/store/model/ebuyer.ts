@@ -103,6 +103,11 @@ export const Ebuyer: Store = {
 				series: '3090',
 				url:
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3090'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti'
 			}
 		]
 	},

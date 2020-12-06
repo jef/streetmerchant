@@ -199,7 +199,7 @@ const notifications = {
 			xboxss: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSS),
 			xboxsx: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSX)
 		},
-		webHookUrl: envOrArray(process.env.DISCORD_WEB_HOOK)
+		webhooks: envOrArray(process.env.DISCORD_WEB_HOOK)
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
