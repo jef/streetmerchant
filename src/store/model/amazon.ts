@@ -18,17 +18,17 @@ export const Amazon: Store = {
 			}
 		],
 		maxPrice: {
-			container: '#price_inside_buybox'
+			container: '#priceblock_ourprice'
 		}
 	},
 	links: [
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07TDN1SC5&Quantity.1=1',
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B083248S3B&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07TDN1SC5'
+			url: 'https://www.amazon.com/dp/B083248S3B'
 		},
 		{
 			brand: 'asus',

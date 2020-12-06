@@ -14,7 +14,7 @@ export const AmazonUk: Store = {
 			text: ['in stock']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]'
+			container: '#priceblock_ourprice'
 		},
 		outOfStock: [
 			{
