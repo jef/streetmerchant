@@ -44,21 +44,22 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				embed.addField('Model', link.model, true);
 				embed.addField('Series', link.series, true);
 
-				const notifyText: string[] = [];
-
-				if (Object.keys(notifyGroupSeries).indexOf(link.series) !== 0) {
-					notifyText.concat(notifyGroupSeries[link.series]);
-				} else if (notifyGroup) {
-					notifyText.concat(notifyGroup); // If there is no group for the series we
-				}
-
 				embed.setColor(0x76b900);
 				embed.setTimestamp();
+
+				let notifyText: string[] = [];
+
+				if (Object.keys(notifyGroupSeries).indexOf(link.series) !== 0) {
+					notifyText = notifyText.concat(notifyGroupSeries[link.series]);
+				} else if (notifyGroup) {
+					notifyText = notifyText.concat(notifyGroup); // If there is no group for the series we
+				}
 
 				const promises = [];
 				for (const webhook of webhooks) {
 					const {id, token} = getIdAndToken(webhook);
 					const client = new Discord.WebhookClient(id, token);
+
 					promises.push({
 						client,
 						message: client.send(notifyText.join(' '), {
