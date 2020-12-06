@@ -232,7 +232,8 @@ function warnIfStoreDeprecated(store: Store) {
 	switch (store.name) {
 		case 'nvidia':
 		case 'nvidia-api':
-			logger.warn(`${store.name} is deprecated in favor of bestbuy`);
+			if (config.store.country === 'usa')
+				logger.warn(`${store.name} is deprecated in favor of bestbuy`);
 			break;
 		case 'evga':
 			logger.warn(

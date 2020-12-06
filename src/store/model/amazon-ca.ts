@@ -11,8 +11,7 @@ export const AmazonCa: Store = {
 			text: ['add to cart']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]',
-			euroFormat: false
+			container: '#priceblock_ourprice'
 		}
 	},
 	links: [

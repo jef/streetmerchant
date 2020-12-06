@@ -1,7 +1,7 @@
 import {Browser, Page, PageEventObj, Request, Response} from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
-import {Selector, cardPrice, pageIncludesLabels} from './includes-labels';
+import {Selector, getPrice, pageIncludesLabels} from './includes-labels';
 import {
 	closePage,
 	delay,
@@ -303,6 +303,43 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		type: 'textContent'
 	};
 
+	if (store.labels.captcha) {
+		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
+			logger.warn(Print.captcha(link, store, true));
+			await delay(getSleepTime(store));
+			return false;
+		}
+	}
+
+	if (store.labels.bannedSeller) {
+		if (
+			await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)
+		) {
+			logger.warn(Print.bannedSeller(link, store, true));
+			return false;
+		}
+	}
+
+	if (store.labels.maxPrice) {
+		const maxPrice = config.store.maxPrice.series[link.series];
+
+		link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
+
+		if (link.price && link.price > maxPrice && maxPrice > 0) {
+			logger.info(Print.maxPrice(link, store, maxPrice, true));
+			return false;
+		}
+	}
+
+	// Fixme: currently causing issues
+	// Do API inventory validation in realtime (no cache) if available
+	// if (
+	// 	store.realTimeInventoryLookup !== undefined &&
+	// 	link.itemNumber !== undefined
+	// ) {
+	// 	return store.realTimeInventoryLookup(link.itemNumber);
+	// }
+
 	if (store.labels.inStock) {
 		const options = {
 			...baseOptions,
@@ -335,46 +372,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			return false;
 		}
 	}
-
-	if (store.labels.bannedSeller) {
-		if (
-			await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)
-		) {
-			logger.warn(Print.bannedSeller(link, store, true));
-			return false;
-		}
-	}
-
-	if (store.labels.maxPrice) {
-		const price = await cardPrice(
-			page,
-			store.labels.maxPrice,
-			config.store.maxPrice.series[link.series],
-			baseOptions
-		);
-		const maxPrice = config.store.maxPrice.series[link.series];
-		if (price) {
-			logger.info(Print.maxPrice(link, store, price, maxPrice, true));
-			return false;
-		}
-	}
-
-	if (store.labels.captcha) {
-		if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
-			logger.warn(Print.captcha(link, store, true));
-			await delay(getSleepTime(store));
-			return false;
-		}
-	}
-
-	// Fixme: currently causing issues
-	// Do API inventory validation in realtime (no cache) if available
-	// if (
-	// 	store.realTimeInventoryLookup !== undefined &&
-	// 	link.itemNumber !== undefined
-	// ) {
-	// 	return store.realTimeInventoryLookup(link.itemNumber);
-	// }
 
 	return true;
 }

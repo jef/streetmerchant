@@ -180,7 +180,7 @@ const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
 	discord: {
 		notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
-		webHookUrl: envOrArray(process.env.DISCORD_WEB_HOOK)
+		webhooks: envOrArray(process.env.DISCORD_WEB_HOOK)
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
