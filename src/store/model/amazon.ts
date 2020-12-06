@@ -18,7 +18,7 @@ export const Amazon: Store = {
 			}
 		],
 		maxPrice: {
-			container: '#price_inside_buybox'
+			container: '#priceblock_ourprice'
 		}
 	},
 	links: [
