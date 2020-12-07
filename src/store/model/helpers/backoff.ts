@@ -38,7 +38,10 @@ export async function processBackoffDelay(
 	if (!isBackoff) {
 		if (backoff.count > 0) {
 			backoff.count--;
-			backoff.time = Math.max(backoff.time / 2, config.browser.minBackoff);
+			backoff.time = Math.max(
+				backoff.time / 2,
+				config.browser.minBackoff
+			);
 		}
 
 		return -1;

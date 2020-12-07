@@ -28,7 +28,8 @@ export const Ebuyer: Store = {
 			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5c',
-			url: 'https://www.ebuyer.com/1125329-sony-playstation-5-console-cfi-1015a'
+			url:
+				'https://www.ebuyer.com/1125329-sony-playstation-5-console-cfi-1015a'
 		},
 		{
 			brand: 'sony',

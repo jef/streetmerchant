@@ -67,7 +67,10 @@ export function generateLinks(): Link[] {
 		links.push({
 			brand: 'test:brand',
 			model: 'test:model',
-			openCartAction: generateOpenCartAction(fe2060SuperId, 'TEST CARD debug'),
+			openCartAction: generateOpenCartAction(
+				fe2060SuperId,
+				'TEST CARD debug'
+			),
 			series: 'test:series',
 			url: nvidiaStockUrl(fe2060SuperId, drLocale, currency)
 		});

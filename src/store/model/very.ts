@@ -32,13 +32,17 @@ export const Very: Store = {
 			const links: Link[] = [];
 			for (let i = 0; i < productElements.length; i++) {
 				const productElement = productElements.eq(i);
-				const titleElement = productElement.find('.productTitle').first();
+				const titleElement = productElement
+					.find('.productTitle')
+					.first();
 				const title = titleElement.text()?.replace(/\n/g, ' ').trim();
 
 				if (
 					!title ||
 					['RTX', series]
-						.map((x) => title.toLowerCase().includes(x.toLowerCase()))
+						.map((x) =>
+							title.toLowerCase().includes(x.toLowerCase())
+						)
 						.filter((x) => !x).length > 0
 				) {
 					continue;

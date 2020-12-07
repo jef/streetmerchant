@@ -62,7 +62,9 @@ export class NvidiaCart {
 
 	public async addToCard(productId: number, name: string): Promise<string> {
 		let cartUrl: string | undefined;
-		logger.info(`🚀🚀🚀 [nvidia] ${name}, starting auto add to cart 🚀🚀🚀`);
+		logger.info(
+			`🚀🚀🚀 [nvidia] ${name}, starting auto add to cart 🚀🚀🚀`
+		);
 		try {
 			logger.info(`🚀🚀🚀 [nvidia] ${name}, adding to cart 🚀🚀🚀`);
 			let lastError: Error | string | undefined;
@@ -70,7 +72,9 @@ export class NvidiaCart {
 			/* eslint-disable no-await-in-loop */
 			for (let i = 0; i < config.nvidia.addToCardAttempts; i++) {
 				try {
-					cartUrl = await this.addToCartAndGetLocationRedirect(productId);
+					cartUrl = await this.addToCartAndGetLocationRedirect(
+						productId
+					);
 
 					break;
 				} catch (error: unknown) {
@@ -92,7 +96,9 @@ export class NvidiaCart {
 				throw lastError;
 			}
 
-			logger.info(`🚀🚀🚀 [nvidia] ${name}, opening checkout page 🚀🚀🚀`);
+			logger.info(
+				`🚀🚀🚀 [nvidia] ${name}, opening checkout page 🚀🚀🚀`
+			);
 			logger.info(cartUrl);
 
 			await open(cartUrl);
@@ -129,7 +135,9 @@ export class NvidiaCart {
 				this.browser,
 				this.sessionUrl,
 				async (response) => {
-					return response?.json() as NvidiaSessionTokenJSON | undefined;
+					return response?.json() as
+						| NvidiaSessionTokenJSON
+						| undefined;
 				}
 			);
 			if (
@@ -154,7 +162,8 @@ export class NvidiaCart {
 	protected async addToCartAndGetLocationRedirect(
 		productId: number
 	): Promise<string> {
-		const url = 'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
+		const url =
+			'https://api-prod.nvidia.com/direct-sales-shop/DR/add-to-cart';
 		const sessionToken = await this.getSessionToken();
 
 		logger.info(`ℹ [nvidia] session_token=${sessionToken}`);
