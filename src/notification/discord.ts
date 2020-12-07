@@ -31,7 +31,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 						'> provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
 					)
 					.setThumbnail(
-						'https://raw.githubusercontent.com/jef/streetmerchant/main/media/streetmerchant-square.png'
+						'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png'
 					)
 					.setColor('#52b788')
 					.setTimestamp();
@@ -57,7 +57,9 @@ export function sendDiscordMessage(link: Link, store: Store) {
 					});
 				}
 
-				(await Promise.all(promises)).forEach(({client}) => client.destroy());
+				(await Promise.all(promises)).forEach(({client}) =>
+					client.destroy()
+				);
 
 				logger.info('✔ discord message sent');
 			} catch (error: unknown) {

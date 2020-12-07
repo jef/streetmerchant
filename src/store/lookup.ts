@@ -152,7 +152,8 @@ async function lookup(browser: Browser, store: Store) {
 
 		const proxy = nextProxy(store);
 
-		const useAdBlock = !config.browser.lowBandwidth && !store.disableAdBlocker;
+		const useAdBlock =
+			!config.browser.lowBandwidth && !store.disableAdBlocker;
 		const customContext = config.browser.isIncognito;
 
 		const context = customContext
@@ -212,9 +213,9 @@ async function lookup(browser: Browser, store: Store) {
 			statusCode = await lookupCard(browser, store, page, link);
 		} catch (error: unknown) {
 			logger.error(
-				`✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
-					(error as Error).message
-				}`
+				`✖ [${store.name}] ${link.brand} ${link.series} ${
+					link.model
+				} - ${(error as Error).message}`
 			);
 			const client = await page.target().createCDPSession();
 			await client.send('Network.clearBrowserCookies');
@@ -266,7 +267,9 @@ async function lookupCard(
 
 	if (await lookupCardInStock(store, page, link)) {
 		const givenUrl =
-			link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url;
+			link.cartUrl && config.store.autoAddToCart
+				? link.cartUrl
+				: link.url;
 		logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
 		if (config.browser.open) {
@@ -313,7 +316,11 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 	if (store.labels.bannedSeller) {
 		if (
-			await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)
+			await pageIncludesLabels(
+				page,
+				store.labels.bannedSeller,
+				baseOptions
+			)
 		) {
 			logger.warn(Print.bannedSeller(link, store, true));
 			return false;
@@ -367,7 +374,9 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	if (store.labels.outOfStock) {
-		if (await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)) {
+		if (
+			await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)
+		) {
 			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
@@ -378,7 +387,9 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
 	if (!browser.isConnected()) {
-		logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
+		logger.debug(
+			`[${store.name}] Ending this loop as browser is disposed...`
+		);
 		return;
 	}
 

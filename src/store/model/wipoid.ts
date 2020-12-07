@@ -20,7 +20,8 @@ export const Wipoid: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.wipoid.com/pny-geforce-rtx-1650-dual-fan-4gb-gddr6.html'
+			url:
+				'https://www.wipoid.com/pny-geforce-rtx-1650-dual-fan-4gb-gddr6.html'
 		},
 		{
 			brand: 'gigabyte',

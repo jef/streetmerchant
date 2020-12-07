@@ -3,7 +3,8 @@ import {Store} from './store';
 export const BestBuy: Store = {
 	labels: {
 		inStock: {
-			container: '[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
+			container:
+				'[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
 			text: ['add to cart']
 		},
 		maxPrice: {

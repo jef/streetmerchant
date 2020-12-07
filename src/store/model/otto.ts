@@ -15,7 +15,9 @@ export const Otto: Store = {
 		},
 		outOfStock: {
 			container: 'div.p_message.p_message--hint > strong',
-			text: ['Deinen gewünschten Artikel können wir leider nicht mehr liefern']
+			text: [
+				'Deinen gewünschten Artikel können wir leider nicht mehr liefern'
+			]
 		}
 	},
 	links: [

@@ -59,7 +59,8 @@ export const Computeruniverse: Store = {
 			brand: 'evga',
 			model: 'xc3 black',
 			series: '3070',
-			url: 'https://www.computeruniverse.net/de/evga-geforce-rtx3070-xc3-black'
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3070-xc3-black'
 		},
 		{
 			brand: 'gainward',
@@ -142,7 +143,8 @@ export const Computeruniverse: Store = {
 			brand: 'pny',
 			model: 'dual fan',
 			series: '3070',
-			url: 'https://www.computeruniverse.net/de/pny-geforce-rtx3070-m-dual-8-gb'
+			url:
+				'https://www.computeruniverse.net/de/pny-geforce-rtx3070-m-dual-8-gb'
 		},
 		{
 			brand: 'pny',

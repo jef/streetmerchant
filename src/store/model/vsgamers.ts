@@ -23,25 +23,29 @@ export const VsGamers: Store = {
 			brand: 'amd',
 			model: '5600x',
 			series: 'ryzen5600',
-			url: 'https://www.vsgamers.es/product/procesador-amd-ryzen-5-5600x-37-ghz'
+			url:
+				'https://www.vsgamers.es/product/procesador-amd-ryzen-5-5600x-37-ghz'
 		},
 		{
 			brand: 'amd',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 'https://www.vsgamers.es/product/procesador-amd-ryzen-7-5800x-38-ghz'
+			url:
+				'https://www.vsgamers.es/product/procesador-amd-ryzen-7-5800x-38-ghz'
 		},
 		{
 			brand: 'amd',
 			model: '5900x',
 			series: 'ryzen5900',
-			url: 'https://www.vsgamers.es/product/procesador-amd-ryzen-9-5900x-37-ghz'
+			url:
+				'https://www.vsgamers.es/product/procesador-amd-ryzen-9-5900x-37-ghz'
 		},
 		{
 			brand: 'amd',
 			model: '5950x',
 			series: 'ryzen5950',
-			url: 'https://www.vsgamers.es/product/procesador-amd-ryzen-9-5950x-34-ghz'
+			url:
+				'https://www.vsgamers.es/product/procesador-amd-ryzen-9-5950x-34-ghz'
 		},
 		{
 			brand: 'zotac',
