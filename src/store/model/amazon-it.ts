@@ -12,7 +12,8 @@ export const AmazonIt: Store = {
 			text: ['Aggiungi al carrello']
 		},
 		maxPrice: {
-			container: '#priceblock_ourprice'
+			container: '#priceblock_ourprice',
+			euroFormat: true
 		}
 	},
 	links: [
