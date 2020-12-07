@@ -50,7 +50,9 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				let notifyText: string[] = [];
 
 				if (Object.keys(notifyGroupSeries).indexOf(link.series) !== 0) {
-					notifyText = notifyText.concat(notifyGroupSeries[link.series]);
+					notifyText = notifyText.concat(
+						notifyGroupSeries[link.series]
+					);
 				} else if (notifyGroup) {
 					notifyText = notifyText.concat(notifyGroup); // If there is no group for the series we
 				}
