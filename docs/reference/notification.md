@@ -31,6 +31,10 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock | Same as `DISCORD_NOTIFY_GROUP` |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 
+???+ note
+    If you don't assign a value to a series group it will always fallback to `DISCORD_NOTIFY_GROUP`.
+    Sidenote: If you don't want any ping for a specific series you could set the group for that series to
+    something like `" "` or just don't set `DISCORD_NOTIFY_GROUP`.
 
 ???+ note
     - If you're using a role, please use `<@&2834729847239842>`
