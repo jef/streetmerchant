@@ -45,13 +45,14 @@ const adjustLightsWithAPI = (hueBridge: Api) => {
 		const arrayOfIDs = lightIds.split(',');
 		arrayOfIDs.forEach((light) => {
 			logger.debug('adjusting all hue lights');
-			(hueBridge.lights.setLightState(light, lightState) as Promise<any>).catch(
-				(error: Error) => {
-					logger.error('Failed to adjust all lights.');
-					logger.error(error);
-					throw error;
-				}
-			);
+			(hueBridge.lights.setLightState(
+				light,
+				lightState
+			) as Promise<any>).catch((error: Error) => {
+				logger.error('Failed to adjust all lights.');
+				logger.error(error);
+				throw error;
+			});
 		});
 	} else {
 		// Adjust all light IDs
@@ -102,15 +103,26 @@ export function adjustPhilipsHueLights() {
 	} else if (hue.apiKey && hue.clientId && hue.clientSecret) {
 		logger.info('↗ adjusting Philips Hue lights over cloud');
 		(async () => {
-			logger.debug('Attempting to connect to Philips Hue bridge over cloud');
-			const remoteBootstrap = hueAPI.api.createRemote(clientId, clientSecret);
+			logger.debug(
+				'Attempting to connect to Philips Hue bridge over cloud'
+			);
+			const remoteBootstrap = hueAPI.api.createRemote(
+				clientId,
+				clientSecret
+			);
 			if (hue.accessToken && hue.refreshToken) {
 				remoteBootstrap
-					.connectWithTokens(accessToken, refreshToken, remoteApiUsername)
+					.connectWithTokens(
+						accessToken,
+						refreshToken,
+						remoteApiUsername
+					)
 					.then(
 						(hueBridge) => {
 							adjustLightsWithAPI(hueBridge);
-							logger.info('✔ adjusted Philips Hue lights over cloud');
+							logger.info(
+								'✔ adjusted Philips Hue lights over cloud'
+							);
 						},
 						(error: Error) => {
 							logger.error(

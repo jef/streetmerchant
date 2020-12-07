@@ -28,7 +28,8 @@ export const Nvidia: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2060-super/'
+			url:
+				'https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2060-super/'
 		},
 		{
 			brand: 'nvidia',

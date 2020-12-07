@@ -251,7 +251,8 @@ const notifications = {
 			['tmobile', 'tmomail.net'],
 			['verizon', 'vtext.com'],
 			['virgin', 'vmobl.com'],
-			['virgin-ca', 'vmobile.ca']
+			['virgin-ca', 'vmobile.ca'],
+			['visible', 'vtext.com']
 		]),
 		carrier: envOrArray(process.env.PHONE_CARRIER),
 		number: envOrArray(process.env.PHONE_NUMBER)

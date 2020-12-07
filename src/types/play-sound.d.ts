@@ -9,7 +9,10 @@ declare module 'play-sound' {
 	export interface PlaySound {
 		player: string;
 
-		play: ((file: string, callback: (error: Error) => void) => PlayerProcess) &
+		play: ((
+			file: string,
+			callback: (error: Error) => void
+		) => PlayerProcess) &
 			((
 				file: string,
 				options: PlayOptions,

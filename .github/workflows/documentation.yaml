@@ -1,0 +1,19 @@
+name: documentation
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Python runtime
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install Python dependencies
+        run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-macros-plugin
+      - name: Deploy documentation
+        run: mkdocs gh-deploy --force
