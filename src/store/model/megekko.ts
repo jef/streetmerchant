@@ -20,7 +20,7 @@ export const Megekko: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.coolblue.nl/product/826844/'
+			url: 'https://www.megekko.nl/product/351421/'
 		},
 		{
 			brand: 'msi',
