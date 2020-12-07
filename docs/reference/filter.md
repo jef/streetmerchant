@@ -56,14 +56,17 @@ Used with the `STORES` variable.
 | Best Buy | `bestbuy`|
 | Best Buy (CA) | `bestbuy-ca`|
 | Box (UK) | `box`|
+| BPCTech (AU) | `bpctech`|
 | CanadaComputers (CA) | `canadacomputers` |
 | Caseking (DE) | `caseking`|
 | CCL (UK) | `ccl`|
+| Centrecom (AU) | `centrecom`|
 | Comet (IT) | `comet`|
 | Computeruniverse (DE) | `computeruniverse` |
 | Coolblue (NL) | `coolblue`|
 | Coolmod (ES) | `coolmod`|
 | Corsair | `corsair`|
+| CPL | `cpl`|
 | Currys (UK) | `currys`|
 | Cyberport (DE) | `cyberport` |
 | eBuyer (UK) | `ebuyer`|
@@ -84,6 +87,7 @@ Used with the `STORES` variable.
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
 | Mindfactory (DE) | `mindfactory` |
+| Mwave (AU) | `mwave`|
 | Newegg | `newegg`|
 | Newegg (CA) | `newegg-ca`|
 | Notebooksbilliger (DE) |`notebooksbilliger`|
@@ -93,6 +97,7 @@ Used with the `STORES` variable.
 | Office Depot | `officedepot`|
 | Otto | `otto`|
 | Overclockers (UK) | `overclockers`|
+| PCCG (AU) | `pccg`|
 | PCComponentes (ES) | `pccomponentes`|
 | PlayStation | `playstation`|
 | PNY | `pny`|
@@ -100,9 +105,11 @@ Used with the `STORES` variable.
 | Proshop (DK) | `proshop-dk`|
 | Saturn (DE) | `saturn`|
 | Scan (UK) | `scan`|
+| Scorptec (AU) | `scorptec`|
 | Smyths Toys (UK) | `smythstoys`|
 | Spielegrotte | `spielegrotte`|
 | Target | `target`|
+| Umart (AU) | `umart`|
 | Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
@@ -136,13 +143,16 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
 | `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
+| `colorful` | `igame advanced oc`, `igame vulcan oc` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
-| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
+| `galax` | `sg`, `sg oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
 | `kfa2` | `sg`, `sg oc` |
+| `leadtek` | `hurricane` |
 | `microsoft` | `xbox series x`, `xbox series s` |
-| `msi` | `gaming x trio`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
+| `msi` | `gaming x trio`, `suprim x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
