@@ -208,7 +208,9 @@ function printConfig() {
 	}
 
 	if (config.store.showOnlyBrands.length > 0) {
-		logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
+		logger.info(
+			`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`
+		);
 	}
 
 	if (config.store.showOnlyModels.length > 0) {
@@ -224,7 +226,9 @@ function printConfig() {
 	}
 
 	if (config.store.showOnlySeries.length > 0) {
-		logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
+		logger.info(
+			`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`
+		);
 	}
 }
 

@@ -4,7 +4,7 @@ import {WebClient} from '@slack/web-api';
 import {config} from '../config';
 
 const slack = config.notifications.slack;
-const channel = slack.channel;
+const channel = slack.channel.replace('#', '');
 const token = slack.token;
 const web = new WebClient(token);
 

@@ -55,13 +55,15 @@ export const Asus: Store = {
 	],
 	name: 'asus',
 	realTimeInventoryLookup: async (itemNumber: string) => {
-		const request_url = 'https://store.asus.com/us/category/get_real_time_data';
+		const request_url =
+			'https://store.asus.com/us/category/get_real_time_data';
 		const response = await fetch(request_url, {
 			body: 'sm_seq_list%5B%5D=' + itemNumber,
 			headers: {
 				'accept-language': 'en-US,en;q=0.9',
 				'cache-control': 'no-cache',
-				'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+				'content-type':
+					'application/x-www-form-urlencoded; charset=UTF-8'
 			},
 			method: 'POST'
 		});

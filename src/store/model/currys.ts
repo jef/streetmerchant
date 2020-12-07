@@ -8,7 +8,8 @@ export const Currys: Store = {
 			text: ['add to basket']
 		},
 		maxPrice: {
-			container: '#product-actions span[class*="ProductPriceBlock__Price"]',
+			container:
+				'#product-actions span[class*="ProductPriceBlock__Price"]',
 			euroFormat: false // Note: Currys uses non-euroFromat as price seperator
 		},
 		outOfStock: {
