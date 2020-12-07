@@ -23,24 +23,6 @@ export const Megekko: Store = {
 			url: 'https://www.megekko.nl/product/351421/'
 		},
 		{
-			brand: 'msi',
-			model: 'gaming x trio',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/292742/'
-		},
-		{
-			brand: 'msi',
-			model: 'ventus 3x oc',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/292740/'
-		},
-		{
-			brand: 'msi',
-			model: 'suprim x',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/295473/'
-		},
-		{
 			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
@@ -65,6 +47,36 @@ export const Megekko: Store = {
 			url: 'https://www.megekko.nl/product/1118233/'
 		},
 		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/1118248/'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/1118249/'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/1118247/'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/1118260/'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/1118246/'
+		},
+		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: '3080',
@@ -75,6 +87,12 @@ export const Megekko: Store = {
 			model: 'vision oc',
 			series: '3080',
 			url: 'https://www.megekko.nl/product/293966/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/293965/'
 		},
 		{
 			brand: 'gigabyte',
@@ -90,51 +108,15 @@ export const Megekko: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'eagle oc',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/292735/'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'aorus master',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/293965/'
-		},
-		{
-			brand: 'evga',
-			model: 'ftw3 ultra',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/1118248/'
-		},
-		{
-			brand: 'evga',
-			model: 'ftw3 ultra',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/1118249/'
-		},
-		{
-			brand: 'evga',
-			model: 'xc3 gaming',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/1118247/'
-		},
-		{
-			brand: 'gigabyte',
 			model: 'eagle',
 			series: '3080',
 			url: 'https://www.megekko.nl/product/1125074/'
 		},
 		{
-			brand: 'evga',
-			model: 'xc3 ultra',
+			brand: 'gigabyte',
+			model: 'eagle oc',
 			series: '3080',
-			url: 'https://www.megekko.nl/product/1118260/'
-		},
-		{
-			brand: 'evga',
-			model: 'xc3 black',
-			series: '3080',
-			url: 'https://www.megekko.nl/product/1118246/'
+			url: 'https://www.megekko.nl/product/292735/'
 		},
 		{
 			brand: 'inno3d',
@@ -153,6 +135,24 @@ export const Megekko: Store = {
 			model: 'ichill x4',
 			series: '3080',
 			url: 'https://www.megekko.nl/product/1118237/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/292742/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/292740/'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080',
+			url: 'https://www.megekko.nl/product/295473/'
 		}
 	],
 	name: 'megekko'
