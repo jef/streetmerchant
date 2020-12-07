@@ -81,7 +81,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run all"
     }
   }
 }

@@ -114,7 +114,7 @@ environment variables are **optional**._
 
 | Environment variable | Description | Notes |
 |:---:|---|---|
-| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Only used with `nvidia-api`, default: `usa` |
+| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Only used with `nvidia`, default: `uk` (Founders Edition) |
 | `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
@@ -201,8 +201,7 @@ environment variables are **optional**._
 | Newegg (CA) | `newegg-ca`|
 | Notebooksbilliger (DE) |`notebooksbilliger`|
 | Novatech (UK) | `novatech`|
-| Nvidia | `nvidia`|
-| Nvidia (API) | `nvidia-api`|
+| Nvidia (EU) | `nvidia`|
 | Office Depot | `officedepot`|
 | Otto | `otto`|
 | Overclockers (UK) | `overclockers`|
@@ -314,31 +313,17 @@ environment variables are **optional**._
 
 </details>
 <details>
-<summary>Supported countries (used with nvidia and nvidia-api)</summary>
+<summary>Offically supported countries (used with nvidia)</summary>
 
 > :point_right: Used with the `COUNTRY` variable.
 
-| Country | 3080 FE | 3090 FE | Test Card | Notes |
-|:---:|:---:|:---:|:---:|:---:|
-| austria | `✔` | `✔` | `✔` | |
-| belgium | `✔` | `✔` | `✔` | |
-| canada | `✔` | `✔` | `✔` | |
-| czechia | `✔` | `✔` | `✔` | |
-| denmark | `✔` | | `✔` | Missing RTX 3090 |
-| finland | `✔` | | `✔` | Missing RTX 3090 |
-| france | `✔` | `✔` | `✔` | |
-| germany | `✔` | `✔` | `✔` | |
-| great_britain | `✔` | `✔` | `✔` | |
-| ireland | `✔` | `✔` | `✔` | |
-| italy | `✔` | `✔` | `✔` | |
-| luxembourg | `✔` | `✔` | `✔` | |
-| netherlands | `✔` | `✔` | `✔` | |
-| norway | `✔` | `✔` | `✔` | |
-| poland | `✔` | `✔` | `✔` | |
-| portugal | `✔` | | | RTX 3080 only |
-| spain | `✔` | `✔` | `✔` | |
-| sweden | `✔` | `✔` | `✔` | |
-| usa | `✔` | `✔` | `✔` | |
+| Country | 3060 Ti FE | 3070 FE | 3080 FE | 3090 FE | Notes |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| france | `✔` | `✔` | `✔` | `✔` | Retail partner: LDLC |
+| germany | `✔` | `✔` | `✔` | `✔` | Retail partner: NBB |
+| ireland | `✔` | `✔` | `✔` | `✔` | Retail partner: Scan (UK) |
+| spain | `✔` | `✔` | `✔` | `✔` | Retail partner: LDLC |
+| uk | `✔` | `✔` | `✔` | `✔` | Retail partner: Scan |
 
 </details>
 

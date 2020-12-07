@@ -102,17 +102,6 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 		}
 	],
 	[
-		'great_britain',
-		{
-			currency: 'GBP',
-			drLocale: 'en_gb',
-			fe2060SuperId: 5394903300,
-			fe3080Id: 5438792800,
-			fe3090Id: 5438792700,
-			siteLocale: 'en-gb'
-		}
-	],
-	[
 		'ireland',
 		{
 			currency: 'GBP',
@@ -220,6 +209,17 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 			fe3080Id: 5438798100,
 			fe3090Id: 5438761600,
 			siteLocale: 'sv-se'
+		}
+	],
+	[
+		'uk',
+		{
+			currency: 'GBP',
+			drLocale: 'en_gb',
+			fe2060SuperId: 5394903300,
+			fe3080Id: 5438792800,
+			fe3090Id: 5438792700,
+			siteLocale: 'en-gb'
 		}
 	],
 	// https://github.com/jef/streetmerchant/issues/407 This fe2080SuperID is for the Shield TV which is out of stock in the US
