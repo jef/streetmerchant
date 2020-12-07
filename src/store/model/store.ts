@@ -64,6 +64,7 @@ export type Model =
 	| 'amp holo'
 	| 'aorus master'
 	| 'aorus xtreme'
+	| 'aorus xtreme waterforce'
 	| 'aorus'
 	| 'challenger'
 	| 'dual fan'
@@ -81,10 +82,12 @@ export type Model =
 	| 'gaming pro'
 	| 'gaming x trio'
 	| 'gaming x3'
+	| 'suprim x'
 	| 'gaming'
 	| 'ichill x2'
 	| 'ichill x3'
 	| 'ichill x4'
+	| 'ichill frostbite'
 	| 'ko'
 	| 'nitro+'
 	| 'nitro oc se'
@@ -127,6 +130,7 @@ export type Model =
 	| 'xc3 black'
 	| 'xc3 ultra'
 	| 'xc3'
+	| 'xc3 gaming'
 	| 'xlr8 revel'
 	| 'xlr8 uprising';
 
