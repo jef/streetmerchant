@@ -20,10 +20,10 @@ export const AmazonIt: Store = {
 		{
 			brand: 'asus',
 			cartUrl:
-				'https://www.amazon.it/gp/aws/cart/add.html?ASIN.1=B07PW9VBK5&Quantity.1=1',
+				'https://www.amazon.it/gp/aws/cart/add.html?ASIN.1=B08KHFZN9P&Quantity.1=1',
 			model: 'dual',
 			series: '3070',
-			url: 'https://www.amazon.it/dp/B07PW9VBK5'
+			url: 'https://www.amazon.it/dp/B08KHFZN9P'
 		},
 		{
 			brand: 'asus',
