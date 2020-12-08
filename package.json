@@ -71,6 +71,7 @@
   },
   "xo": {
     "prettier": true,
+    "ignores": "docs/javascripts",
     "rules": {
       "no-warning-comments": "off",
       "sort-imports": "error",
