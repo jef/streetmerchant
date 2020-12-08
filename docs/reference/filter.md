@@ -81,6 +81,7 @@ Used with the `STORES` variable.
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | US | `medimax`|
+| Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
 | Micro Center | US | `microcenter`|
 | Mindfactory | DE | `mindfactory` |
@@ -103,9 +104,11 @@ Used with the `STORES` variable.
 | Smyths Toys | UK | `smythstoys`|
 | Spielegrotte | DE | `spielegrotte`|
 | Target | US | `target`|
+| Toys R Us | US | `toysrus` |
 | Unieuro | IT | `unieuro`|
 | Very | UK | `very`|
 | Walmart | US | `walmart`|
+| Walmart | CA | `walmart-ca`|
 | Wipoid | ES | `wipoid`|
 | Zotac | US | `zotac`|
 | TopAchat | GR | `topachat`|
