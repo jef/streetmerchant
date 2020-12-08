@@ -87,6 +87,8 @@ Generate required keys using [instructions](https://developers.meethue.com/devel
 
 For cloud only usage, instructions to generate are located [here](https://developers.meethue.com/develop/hue-api/remote-authentication/).
 
+> :point_right: Here's a [video demonstration](https://vimeo.com/476083242).
+
 | Environment variable | Description |
 |:---:|---|
 | `PHILIPS_HUE_API_KEY` | Hue Bridge API Key |
@@ -99,15 +101,13 @@ For cloud only usage, instructions to generate are located [here](https://develo
 | `PHILIPS_HUE_CLOUD_CLIENT_ID` | Cloud Client ID. Cloud only |
 | `PHILIPS_HUE_CLOUD_CLIENT_SECRET` | Cloud Client Secret. Cloud only |
 
-> :point_right: Here's a [video demonstration](https://vimeo.com/476083242).
-
 ## Pushbullet
 
 Generate token at https://www.pushbullet.com/#settings/account.
 
 | Environment variable | Description |
 |:---:|---|
-| `PUSHBULLET` | PushBullet API key |
+| `PUSHBULLET` | API key |
 
 ## Pushover
 
@@ -115,23 +115,28 @@ Generate token at https://pushover.net/apps/build.
 
 | Environment variable | Description |
 |:---:|---|
-| `PUSHOVER_TOKEN` | Pushover access token |
-| `PUSHOVER_USER` | Pushover username |
-| `PUSHOVER_PRIORITY` | Pushover message priority |
+| `PUSHOVER_EXPIRE` | How many seconds your notification will continue to be retried for (every `PUSHOVER_RETRY` seconds) |
+| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user |
+| `PUSHOVER_PRIORITY` | Message priority |
+| `PUSHOVER_TOKEN` | API token |
+| `PUSHOVER_USER` | Username |
+
+???+ note
+    `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
 
 ## Slack
 
 | Environment variable | Description |
 |:---:|---|
-| `SLACK_CHANNEL` | Slack channel for posting |
-| `SLACK_TOKEN` | Slack API token |
+| `SLACK_CHANNEL` | Channel for posting |
+| `SLACK_TOKEN` | API token |
 
 ## Telegram
 
 | Environment variable | Description |
 |:---:|---|
-| `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID. Can be comma separated, e.g.: `123456789,987654321` |
+| `TELEGRAM_ACCESS_TOKEN` | Access token |
+| `TELEGRAM_CHAT_ID` | Chat ID. Can be comma separated, e.g.: `123456789,987654321` |
 
 ## Twilio
 
@@ -139,9 +144,9 @@ Token generation can be found at https://twilio.com/console.
 
 | Environment variable | Description |
 |:---:|---|
-| `TWILIO_ACCOUNT_SID` | Twilio Account SID |
-| `TWILIO_AUTH_TOKEN` | Twilio Auth Token |
-| `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from |
+| `TWILIO_ACCOUNT_SID` | Account SID |
+| `TWILIO_AUTH_TOKEN` | Auth Token |
+| `TWILIO_FROM_NUMBER` | Provided phone number to send messages from |
 | `TWILIO_TO_NUMBER` | Mobile number to send SMS to |
 
 ???+ note
