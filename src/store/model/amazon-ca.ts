@@ -23,13 +23,6 @@ export const AmazonCa: Store = {
 			series: 'test:series',
 			url: 'https://www.amazon.ca/dp/B07PBLD2MX'
 		},
-			brand: 'test:brand',
-			cartUrl:
-				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B07PBLD2MX&Quantity.1=1',
-			model: 'test:model',
-			series: 'test:series',
-			url: 'https://www.amazon.ca/dp/B07PBLD2MX'
-		},
 		{
 			brand: 'msi',
 			cartUrl:
