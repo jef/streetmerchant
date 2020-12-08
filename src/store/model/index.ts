@@ -52,6 +52,7 @@ import {GamestopDE} from './gamestop-de';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
+import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
@@ -139,6 +140,7 @@ export const storeList = new Map([
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[Medimax.name, Medimax],
+	[Megekko.name, Megekko],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],

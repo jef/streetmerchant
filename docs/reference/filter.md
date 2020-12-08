@@ -81,6 +81,7 @@ Used with the `STORES` variable.
 | Kabum (BR) | `kabum`|
 | Mediamarkt (DE) | `mediamarkt`|
 | Medimax | `medimax`|
+| Megekko (NL) | `megekko`|
 | MemoryExpress (CA) | `memoryexpress`|
 | Micro Center | `microcenter`|
 | Mindfactory (DE) | `mindfactory` |
@@ -138,11 +139,11 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `corsair` | `750 platinum`, `600 platinum` |
 | `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
-| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
-| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
+| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2 oc` |
 | `kfa2` | `sg`, `sg oc` |
 | `microsoft` | `xbox series x`, `xbox series s` |
-| `msi` | `gaming x trio`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
+| `msi` | `gaming x trio`, `suprim x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
