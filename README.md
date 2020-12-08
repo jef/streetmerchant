@@ -38,7 +38,7 @@ First and foremost, this service _will not_ automatically buy for you.
 
 ## Quick start
 
-streetmerchant can ran with Node.js 14:
+streetmerchant can run with Node.js 14:
 
 ```shell
 git clone https://github.com/jef/streetmerchant.git
