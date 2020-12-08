@@ -73,7 +73,7 @@ Used with the `STORES` variable.
 | Euronics | DE | `euronics-de`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
-| Expert | ? | `expert`|
+| Expert | DE | `expert`|
 | Galaxus | DE | `galaxus`|
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|
