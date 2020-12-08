@@ -3,8 +3,8 @@ import {Store} from './store';
 export const Eprice: Store = {
 	labels: {
 		inStock: {
-			container: '.form_aggiungi_articolo',
-			text: ['AGGIUNGI AL CARRELLO']
+			container: '.topSideDx',
+			text: ['disponibile', 'pochi pezzi']
 		},
 		maxPrice: {
 			container: '#PrezzoClasic span[class*="big"]',
@@ -16,6 +16,12 @@ export const Eprice: Store = {
 		}
 	},
 	links: [
+		{
+			brand: 'test:brand',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://www.eprice.it/cuffie-con-microfono-APPLE/d-9030906'
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
