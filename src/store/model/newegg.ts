@@ -939,6 +939,33 @@ export const Newegg: Store = {
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-ko-rtx3060ti-o8g-gaming/p/N82E16814126474'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131767',
+			model: 'red devil',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-xt-axrx-6800xt-16gbd6-2dhce-oc/p/N82E16814131767'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131770',
+			model: 'red devil',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-2dhce-oc/p/N82E16814131770'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131773',
+			model: 'red dragon',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-3dhr-oc/p/N82E16814131773'
 		}
 	],
 	name: 'newegg',
