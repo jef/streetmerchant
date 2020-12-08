@@ -107,6 +107,7 @@ Used with the `STORES` variable.
 | Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
+| Walmart (CA) | `walmart-ca` |
 | Wipoid | `wipoid`|
 | Zotac | `zotac`|
 | TopAchat | `topachat`|
