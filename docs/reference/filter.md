@@ -89,7 +89,7 @@ Used with the `STORES` variable.
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
 | Nvidia | US | `nvidia`|
-| Nvidia | API | `nvidia-api`|
+| Nvidia API | | `nvidia-api`|
 | Office Depot | US | `officedepot`|
 | Otto | DE | `otto`|
 | Overclockers | UK | `overclockers`|
