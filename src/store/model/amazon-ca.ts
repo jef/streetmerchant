@@ -23,6 +23,69 @@ export const AmazonCa: Store = {
 			series: 'test:series',
 			url: 'https://www.amazon.ca/dp/B07PBLD2MX'
 		},
+			brand: 'test:brand',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B07PBLD2MX&Quantity.1=1',
+			model: 'test:model',
+			series: 'test:series',
+			url: 'https://www.amazon.ca/dp/B07PBLD2MX'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08KWN2LZG&Quantity.1=1',
+			model: 'gaming x trio',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08KWN2LZG
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08KWLMZV4&Quantity.1=1',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08KWLMZV4'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08L8L9TCZ&Quantity.1=1',
+			model: 'ftw3',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08L8L9TCZ'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08L8L9TCZ&Quantity.1=1',
+			model: 'ftw3 ultra',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08L8L9TCZ'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08L8L71SM&Quantity.1=1',
+			model: 'xc3 ultra',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08L8L71SM'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08LW46GH2&Quantity.1=1',
+			model: 'xc3 black',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08LW46GH2'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08MZ31N6L&Quantity.1=1',
+			model: 'OC',
+			series: '3070',
+			url: 'https://www.amazon.ca/dp/B08MZ31N6L'
+		},
 		{
 			brand: 'msi',
 			cartUrl:
