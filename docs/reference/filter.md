@@ -91,7 +91,7 @@ Used with the `STORES` variable.
 | Nvidia | US | `nvidia`|
 | Nvidia | API | `nvidia-api`|
 | Office Depot | US | `officedepot`|
-| Otto | ? | `otto`|
+| Otto | DE | `otto`|
 | Overclockers | UK | `overclockers`|
 | PCComponentes | ES | `pccomponentes`|
 | PlayStation | US | `playstation`|
