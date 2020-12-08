@@ -104,6 +104,7 @@ Used with the `STORES` variable.
 | Smyths Toys (UK) | `smythstoys`|
 | Spielegrotte | `spielegrotte`|
 | Target | `target`|
+| Toys R Us | `toysrus` |
 | Unieuro (IT) | `unieuro`|
 | Very (UK) | `very`|
 | Walmart | `walmart`|
