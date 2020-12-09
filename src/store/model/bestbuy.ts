@@ -446,6 +446,13 @@ export const BestBuy: Store = {
 				'https://www.bestbuy.com/site/xfx-merc-319-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6442585.p?skuId=6442585'
 		},
 		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6900-xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6444358.p?skuId=6444358'
+		},
+		{
 			brand: 'corsair',
 			cartUrl: 'https://api.bestbuy.com/click/-/6351845/cart',
 			model: '750 platinum',

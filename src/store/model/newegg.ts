@@ -598,6 +598,51 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/p/N82E16868105274'
 		},
 		{
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930051',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6900-xt-rx6900xt-16g/p/N82E16814930051'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932384',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6900-xt-gv-r69xt-16gc-b/p/N82E16814932384'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137618',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/msi-radeon-rx-6900-xt-rx-6900-xt-16g/p/N82E16814137618'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131774',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6900-xt-axrx-6900xt-16gbd6-m2dhc/p/N82E16814131774'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202393',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6900-xt-21308-01-20g/p/N82E16814202393'
+		},
+		{
 			brand: 'gigabyte',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932373',
