@@ -15,15 +15,16 @@
 | `PAGE_SLEEP_MIN` | Minimum sleep time between queries of the same product page. In milliseconds, default: `5000` |
 | `PAGE_SLEEP_MAX` | Maximum sleep time between queries of the same product page. In milliseconds, default: `10000` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds. `0` for infinite, default: `30000` |
-| `PROXY_PROTOCOL` | protocol of proxy server, such as `socks5`. Default: `http` |
+| `PROXY_PROTOCOL` | Protocol of proxy server, such as `socks5`. Default: `http` |
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections. Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found. Default: `true` |
 | `USER_AGENT` | Custom User-Agents headers for HTTP requests. Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2`. Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
-| `WEB_PORT` | Starts a webserver to be able to control the bot while it is running. Setting this value starts this service. Default: `` |
+| `WEB_PORT` | Starts a webserver to be able to control the bot while it is running. Setting this value starts this service. |
 
-???+ note
-    You can find your computer's user agent by [searching google for "my user agent"](http://google.com/search?q=my+user+agent)
+???+ info
+    You can also have a list of proxies that are rotated while searching stores. Proxies can be read from a file named `STORENAME.proxies` in the format of `socks5://username:password@ip`; one per line. In this case, there is no need to use the `PROXY_*` environments.
 
 ???+ tip
-    Data usage is [known to be high](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.
+    - You can also have a list of proxies that are rotated while searching stores. Proxies can be read from a file named `STORENAME.proxies` in the format of `socks5://username:password@ip`; one per line.
+    - Data usage is [known to be high](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+bandwidth). This is expected as the program scrapes many websites in parallel 24/7. To help reduce this, use `LOW_BANDWIDTH="true"`. We are looking into other solutions as well, but is low priority.

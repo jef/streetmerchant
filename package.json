@@ -48,40 +48,35 @@
     "puppeteer-page-proxy": "^1.2.8",
     "pushover-notifications": "^1.2.2",
     "twilio": "^3.53.0",
-    "twitch": "^4.3.3",
-    "twitch-auth": "^4.3.3",
-    "twitch-chat-client": "^4.3.3",
+    "twitch": "^4.3.5",
+    "twitch-auth": "^4.3.5",
+    "twitch-chat-client": "^4.3.5",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/async": "^3.2.5",
-    "@types/cheerio": "^0.22.22",
+    "@types/cheerio": "^0.22.23",
     "@types/node": "^14.14.10",
     "@types/node-fetch": "^2.5.7",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",
     "@types/puppeteer": "^5.4.1",
     "@types/twitter": "^1.7.0",
-    "husky": "^4.3.0",
     "nodemon": "^2.0.6",
-    "ts-node": "^9.1.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
     "webpack": "^5.10.0",
-    "xo": "^0.35.0"
+    "xo": "^0.36.1"
   },
   "xo": {
     "prettier": true,
+    "ignores": "docs/javascripts",
     "rules": {
       "no-warning-comments": "off",
       "sort-imports": "error",
       "sort-keys": "error",
       "sort-vars": "error"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run all"
     }
   }
 }

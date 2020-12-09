@@ -45,6 +45,10 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jeflecompte/
 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+
 # Extensions
 markdown_extensions:
   - admonition
