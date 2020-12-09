@@ -17,7 +17,22 @@ You can test your notification configuration by running `npm run test:notificati
 | Environment variable | Description |
 |:---:|---|
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify. Can be comma separated |
+| `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
+| `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
+| `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
+| `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
+| `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
+| `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
+| `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
+| `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
+
+???+ note
+    If you don't assign a value to a series group it will always fallback to `DISCORD_NOTIFY_GROUP`.
 
 ???+ note
     - If you're using a role, please use `<@&2834729847239842>`

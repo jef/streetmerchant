@@ -119,7 +119,7 @@ export const AmazonIt: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://www.amazon.it/gp/aws/cart/add.html?ASIN.1=B08L8L9TCZ&Quantity.1=1',
-			model: 'ftw3',
+			model: 'ftw3 ultra',
 			series: '3070',
 			url: 'https://www.amazon.it/dp/B08L8L9TCZ'
 		},
