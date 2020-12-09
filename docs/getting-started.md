@@ -51,7 +51,7 @@ docker run --cap-add=SYS_ADMIN \
 
 ## Customization
 
-To customize streetmerchant, make a copy of `.env-example` as `.env` and make any changes to your liking. View [Reference](docs/reference/application.md) for more information on variables and their usage.
+To customize streetmerchant, make a copy of `.env-example` as `.env` and make any changes to your liking. View [Reference](reference/application.md) for more information on variables and their usage.
 
 ???+ tip
     All environment variables are optional.
