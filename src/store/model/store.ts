@@ -91,6 +91,7 @@ export type Model =
 	| 'ichill frostbite'
 	| 'ko'
 	| 'nitro+'
+	| 'nitro+ SE'
 	| 'nitro oc se'
 	| 'nitro oc'
 	| 'phantom gaming'
