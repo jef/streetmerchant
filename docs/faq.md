@@ -52,7 +52,7 @@ Make a [pull request](https://github.com/jef/streetmerchant/pulls?q=is%3Apr+is%3
 
 ## How do I add a store?
 
-Take a look at [this page](https://github.com/jef/streetmerchant/wiki/Help:-Configuration:-Adding-a-store) on the wiki.
+Here's a little write-up I did: [Adding a store](help/general.md#adding-a-store).
 
 ## Why do I have to download all this stuff just to get this bot working?
 

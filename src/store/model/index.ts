@@ -52,6 +52,7 @@ import {GamestopDE} from './gamestop-de';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
+import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
@@ -76,10 +77,12 @@ import {Spielegrotte} from './spielegrotte';
 import {Store} from './store';
 import {Target} from './target';
 import {TopAchat} from './topachat';
+import {ToysRUs} from './toysrus';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
 import {VsGamers} from './vsgamers';
 import {Walmart} from './walmart';
+import {WalmartCa} from './walmart-ca';
 import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
@@ -139,6 +142,7 @@ export const storeList = new Map([
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[Medimax.name, Medimax],
+	[Megekko.name, Megekko],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
@@ -162,10 +166,12 @@ export const storeList = new Map([
 	[Spielegrotte.name, Spielegrotte],
 	[Target.name, Target],
 	[TopAchat.name, TopAchat],
+	[ToysRUs.name, ToysRUs],
 	[Unieuro.name, Unieuro],
 	[Very.name, Very],
 	[VsGamers.name, VsGamers],
 	[Walmart.name, Walmart],
+	[WalmartCa.name, WalmartCa],
 	[Wipoid.name, Wipoid],
 	[Xbox.name, Xbox],
 	[Zotac.name, Zotac]

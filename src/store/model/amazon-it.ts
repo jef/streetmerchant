@@ -5,7 +5,9 @@ export const AmazonIt: Store = {
 	labels: {
 		captcha: {
 			container: 'body',
-			text: ['enter the characters you see below']
+			text: [
+				'Inserisci i caratteri visualizzati nello spazio sottostante'
+			]
 		},
 		inStock: {
 			container: '#desktop_buybox',

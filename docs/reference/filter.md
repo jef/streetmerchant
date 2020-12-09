@@ -27,88 +27,91 @@
 
 Used with the `STORES` variable.
 
-| Stores | Environment variable |
-|:---:|:---:|
-| Adorama | `adorama`|
-| Alternate (DE) | `alternate`|
-| Alternate (NL) | `alternate-nl`|
-| Amazon | `amazon`|
-| Amazon (CA) | `amazon-ca`|
-| Amazon (DE) | `amazon-de`|
-| Amazon (DE) Warehouse | `amazon-de-warehouse`|
-| Amazon (ES) | `amazon-es`|
-| Amazon (FR) | `amazon-fr`|
-| Amazon (IT) | `amazon-it`|
-| Amazon (NL) | `amazon-nl`|
-| Amazon (UK) | `amazon-uk`|
-| AMD | `amd`|
-| AMD (CA) | `amd-ca`|
-| AMD (DE) | `amd-de`|
-| AMD (IT) | `amd-it`|
-| AntOnline | `antonline`|
-| Argos (UK) | `argos`|
-| Aria PC (UK) | `aria`|
-| ARLT (DE) | `arlt`|
-| ASUS | `asus` |
-| ASUS (DE) | `asus-de` |
-| Azerty (NL) | `azerty`|
-| B&H | `bandh`|
-| Best Buy | `bestbuy`|
-| Best Buy (CA) | `bestbuy-ca`|
-| Box (UK) | `box`|
-| CanadaComputers (CA) | `canadacomputers` |
-| Caseking (DE) | `caseking`|
-| CCL (UK) | `ccl`|
-| Comet (IT) | `comet`|
-| Computeruniverse (DE) | `computeruniverse` |
-| Coolblue (NL) | `coolblue`|
-| Coolmod (ES) | `coolmod`|
-| Corsair | `corsair`|
-| Currys (UK) | `currys`|
-| Cyberport (DE) | `cyberport` |
-| eBuyer (UK) | `ebuyer`|
-| El Corte Inglés | `elcorteingles`|
-| ePrice (IT) | `eprice`|
-| Euronics (IT) | `euronics`|
-| Euronics (DE) | `euronics-de`|
-| EVGA | `evga`|
-| EVGA (EU) | `evga-eu`|
-| Expert | `expert`|
-| Galaxus (DE) | `galaxus`|
-| Game (UK) | `game`|
-| Gamestop | `gamestop`|
-| Gamestop (DE) | `gamestop-de`|
-| Kabum (BR) | `kabum`|
-| Mediamarkt (DE) | `mediamarkt`|
-| Medimax | `medimax`|
-| MemoryExpress (CA) | `memoryexpress`|
-| Micro Center | `microcenter`|
-| Mindfactory (DE) | `mindfactory` |
-| Newegg | `newegg`|
-| Newegg (CA) | `newegg-ca`|
-| Notebooksbilliger (DE) |`notebooksbilliger`|
-| Novatech (UK) | `novatech`|
-| Nvidia | `nvidia`|
-| Nvidia (API) | `nvidia-api`|
-| Office Depot | `officedepot`|
-| Otto | `otto`|
-| Overclockers (UK) | `overclockers`|
-| PCComponentes (ES) | `pccomponentes`|
-| PlayStation | `playstation`|
-| PNY | `pny`|
-| Proshop (DE) | `proshop-de`|
-| Proshop (DK) | `proshop-dk`|
-| Saturn (DE) | `saturn`|
-| Scan (UK) | `scan`|
-| Smyths Toys (UK) | `smythstoys`|
-| Spielegrotte | `spielegrotte`|
-| Target | `target`|
-| Unieuro (IT) | `unieuro`|
-| Very (UK) | `very`|
-| Walmart | `walmart`|
-| Wipoid | `wipoid`|
-| Zotac | `zotac`|
-| TopAchat | `topachat`|
+| Stores | Country | Environment variable |
+|---|---|---|
+| Adorama | US | `adorama`|
+| Alternate | DE | `alternate`|
+| Alternate | NL | `alternate-nl`|
+| Amazon | US | `amazon`|
+| Amazon | CA | `amazon-ca`|
+| Amazon | DE | `amazon-de`|
+| Amazon Warehouse | DE | `amazon-de-warehouse`|
+| Amazon | ES | `amazon-es`|
+| Amazon | FR | `amazon-fr`|
+| Amazon | IT | `amazon-it`|
+| Amazon | NL | `amazon-nl`|
+| Amazon | UK | `amazon-uk`|
+| AMD | US | `amd`|
+| AMD | CA | `amd-ca`|
+| AMD | DE | `amd-de`|
+| AMD | IT | `amd-it`|
+| AntOnline | US | `antonline`|
+| Argos | UK | `argos`|
+| Aria PC | UK | `aria`|
+| ARLT | DE | `arlt`|
+| ASUS | US | `asus` |
+| ASUS | DE | `asus-de` |
+| Azerty | NL | `azerty`|
+| B&H | US | `bandh`|
+| Best Buy | US | `bestbuy`|
+| Best Buy | CA | `bestbuy-ca`|
+| Box | UK | `box`|
+| CanadaComputers | CA | `canadacomputers` |
+| Caseking | DE | `caseking`|
+| CCL | UK | `ccl`|
+| Comet | IT | `comet`|
+| Computeruniverse | DE | `computeruniverse` |
+| Coolblue | NL | `coolblue`|
+| Coolmod | ES | `coolmod`|
+| Corsair | US | `corsair`|
+| Currys | UK | `currys`|
+| Cyberport | DE | `cyberport` |
+| eBuyer | UK | `ebuyer`|
+| El Corte Inglés | US | `elcorteingles`|
+| ePrice | IT | `eprice`|
+| Euronics | IT | `euronics`|
+| Euronics | DE | `euronics-de`|
+| EVGA | US | `evga`|
+| EVGA | EU | `evga-eu`|
+| Expert | DE | `expert`|
+| Galaxus | DE | `galaxus`|
+| Game | UK | `game`|
+| Gamestop | US | `gamestop`|
+| Gamestop | DE | `gamestop-de`|
+| Kabum | BR | `kabum`|
+| Mediamarkt | DE | `mediamarkt`|
+| Medimax | US | `medimax`|
+| Megekko | NL | `megekko`|
+| MemoryExpress | CA | `memoryexpress`|
+| Micro Center | US | `microcenter`|
+| Mindfactory | DE | `mindfactory` |
+| Newegg | US | `newegg`|
+| Newegg | CA | `newegg-ca`|
+| Notebooksbilliger | DE |`notebooksbilliger`|
+| Novatech | UK | `novatech`|
+| Nvidia | US | `nvidia`|
+| Nvidia API | | `nvidia-api`|
+| Office Depot | US | `officedepot`|
+| Otto | DE | `otto`|
+| Overclockers | UK | `overclockers`|
+| PCComponentes | ES | `pccomponentes`|
+| PlayStation | US | `playstation`|
+| PNY | US | `pny`|
+| Proshop | DE | `proshop-de`|
+| Proshop | DK | `proshop-dk`|
+| Saturn | DE | `saturn`|
+| Scan | UK | `scan`|
+| Smyths Toys | UK | `smythstoys`|
+| Spielegrotte | DE | `spielegrotte`|
+| Target | US | `target`|
+| Toys R Us | US | `toysrus` |
+| Unieuro | IT | `unieuro`|
+| Very | UK | `very`|
+| Walmart | US | `walmart`|
+| Walmart | CA | `walmart-ca`|
+| Wipoid | ES | `wipoid`|
+| Zotac | US | `zotac`|
+| TopAchat | GR | `topachat`|
 
 ### Micro Center stores
 
@@ -136,13 +139,13 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
 | `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
-| `evga` | `ftw3`, `ftw3 ultra`, `xc3`, `xc3 black`, `xc3 ultra` |
+| `evga` | `ftw3`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
-| `gigabyte` | `aorus master`, `aorus xtreme`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
-| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `twin x2 oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
+| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2 oc` |
 | `kfa2` | `sg`, `sg oc` |
 | `microsoft` | `xbox series x`, `xbox series s` |
-| `msi` | `gaming x trio`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
+| `msi` | `gaming x trio`, `suprim x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
 | `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
 | `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
