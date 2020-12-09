@@ -51,7 +51,7 @@ export const AmazonCa: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=B08L8L71SM&Quantity.1=1',
-			model: 'cx3 ultra',
+			model: 'xc3 ultra',
 			series: '3070',
 			url: 'https://www.amazon.ca/dp/B08L8L71SM'
 		},
