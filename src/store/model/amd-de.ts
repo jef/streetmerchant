@@ -9,6 +9,10 @@ export const AmdDe: Store = {
 		maxPrice: {
 			container: '.product-page-description h4',
 			euroFormat: true
+		},
+		outOfStock: {
+			container: '.btn-radeon',
+			text: ['ausverkauft']
 		}
 	},
 	links: [
