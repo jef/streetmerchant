@@ -180,6 +180,25 @@ const notifications = {
 	desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
 	discord: {
 		notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
+		notifyGroupSeries: {
+			'3060ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060TI),
+			3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
+			3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
+			3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
+			rx6800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800),
+			rx6800xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800XT),
+			rx6900xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6900XT),
+			ryzen5600: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5600),
+			ryzen5800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5800),
+			ryzen5900: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5900),
+			ryzen5950: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5950),
+			sf: envOrArray(process.env.DISCORD_NOTIFY_GROUP_CORSAIR_SF),
+			sonyps5c: envOrArray(process.env.DISCORD_NOTIFY_GROUP_SONYPS5C),
+			sonyps5de: envOrArray(process.env.DISCORD_NOTIFY_GROUP_SONYPS5DE),
+			'test:series': envOrArray(process.env.DISCORD_NOTIFY_GROUP_TEST),
+			xboxss: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSS),
+			xboxsx: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSX)
+		},
 		webhooks: envOrArray(process.env.DISCORD_WEB_HOOK)
 	},
 	email: {
