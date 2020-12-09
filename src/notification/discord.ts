@@ -44,7 +44,6 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				embed.addField('Model', link.model, true);
 				embed.addField('Series', link.series, true);
 
-				embed.setColor(0x76b900);
 				embed.setTimestamp();
 
 				let notifyText: string[] = [];
