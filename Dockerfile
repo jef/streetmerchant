@@ -23,6 +23,8 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
 	DOCKER=true
 
 RUN addgroup -S appuser && adduser -S -g appuser appuser \
+	&& addgroup appuser audio \
+	&& addgroup appuser video \
 	&& mkdir -p /home/appuser/Downloads /app \
 	&& chown -R appuser:appuser /home/appuser \
 	&& chown -R appuser:appuser /app

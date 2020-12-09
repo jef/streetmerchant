@@ -26,8 +26,13 @@ async function main() {
 	}
 
 	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	// https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
 	if (config.docker) {
 		args.push('--disable-dev-shm-usage');
+		args.push('--no-sandbox');
+		args.push('--disable-setuid-sandbox');
+		args.push('--headless');
+		args.push('--disable-gpu');
 	}
 
 	// Add the address of the proxy server if defined
@@ -38,7 +43,7 @@ async function main() {
 	}
 
 	await stop();
-
+	logger.warn('ℹ printing puppeteer configs::', args);
 	browser = await puppeteer.launch({
 		args,
 		defaultViewport: {

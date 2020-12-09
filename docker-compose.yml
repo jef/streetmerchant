@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  streetmerchant-shop-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streetmerchant-shop-bot
+    hostname: streetmerchant-shop-bot
+    # cap_add:
+    #   - CAP_SYS_ADMIN
+    environment:
+      - "ENV=dev"
+    volumes:
+      - ".env:/app/.env:ro"
+    ports:
+      - 7997:7997
