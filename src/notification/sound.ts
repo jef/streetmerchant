@@ -6,11 +6,9 @@ import {logger} from '../logger';
 let player: PlaySound;
 
 if (config.notifications.playSound) {
-	if (config.notifications.soundPlayer) {
-		player = playerLib({player: config.notifications.soundPlayer});
-	} else {
-		player = playerLib();
-	}
+	player = config.notifications.soundPlayer
+		? playerLib({player: config.notifications.soundPlayer})
+		: playerLib();
 
 	if (player.player === null) {
 		logger.warn("✖ couldn't find sound player");
