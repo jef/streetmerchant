@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  streetmerchant:
+    build:
+      context: .
+    env_file: .env
+    stdin_open: true
+    tty: true
+    init: true
+    container_name: playstation
+    cap_add:
+      - SYS_ADMIN
+    restart: always
