@@ -258,6 +258,7 @@ const notifications = {
 		number: envOrArray(process.env.PHONE_NUMBER)
 	},
 	playSound: envOrString(process.env.PLAY_SOUND),
+	soundPlayer: envOrString(process.env.SOUND_PLAYER),
 	pushbullet: envOrString(process.env.PUSHBULLET),
 	pushover: {
 		expire: envOrNumber(process.env.PUSHOVER_EXPIRE),
