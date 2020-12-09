@@ -66,6 +66,7 @@ Used with the `STORES` variable.
 | Corsair | US | `corsair`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | US | `elcorteingles`|
 | ePrice | IT | `eprice`|
