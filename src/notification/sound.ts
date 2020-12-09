@@ -7,7 +7,7 @@ let player: PlaySound;
 
 if (config.notifications.playSound) {
 	player = config.notifications.soundPlayer
-		? playerLib({player: config.notifications.soundPlayer})
+		? playerLib({players: [config.notifications.soundPlayer]})
 		: playerLib();
 
 	if (player.player === null) {
