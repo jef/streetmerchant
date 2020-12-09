@@ -283,6 +283,9 @@ environment variables are **optional**._
 | `Sony PS5` | `sonyps5c` |
 | `Sony PS5 Digital Edition` | `sonyps5de` |
 | `Sony PS5 Dualsense` | `sonyps5ds` |
+| `Sony PS5 Dualsense Charger` | `sonyps5dsc` |
+| `Sony PS5 Media Remote` | `sonyps5mr` |
+| `Sony PS5 Pulse3D` | `sonyps5p3d` |
 | `Xbox Series S` | `xboxss` |
 | `Xbox Series X` | `xboxsx` |
 

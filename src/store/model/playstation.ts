@@ -23,6 +23,30 @@ export const PlayStation: Store = {
 		},
 		{
 			brand: 'sony',
+			itemNumber: '3005715',
+			model: 'ps5 dualsense charger',
+			series: 'sonyps5dsc',
+			url:
+				'https://direct.playstation.com/en-us/accessories/accessory/dualsense-charging-station.3005837'
+		},
+		{
+			brand: 'sony',
+			itemNumber: '3005715',
+			model: 'ps5 Pulse3D',
+			series: 'sonyps5p3d',
+			url:
+				'https://direct.playstation.com/en-us/accessories/accessory/pulse-3d-wireless-headset.3005688'
+		},
+		{
+			brand: 'sony',
+			itemNumber: '3005715',
+			model: 'ps5 media remote',
+			series: 'sonyps5mr',
+			url:
+				'https://direct.playstation.com/en-us/accessories/accessory/media-remote.3005727'
+		},
+		{
+			brand: 'sony',
 			itemNumber: '3005816',
 			model: 'ps5 console',
 			series: 'sonyps5c',

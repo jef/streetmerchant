@@ -58,6 +58,27 @@ export const Gamestop: Store = {
 				'https://www.gamestop.com/video-games/playstation-5/accessories/products/sony-dualsense-wireless-controller/11106262.html'
 		},
 		{
+			brand: 'sony',
+			model: 'ps5 dualsense charger',
+			series: 'sonyps5dsc',
+			url:
+				'https://www.gamestop.com/video-games/playstation-5/accessories/products/playstation-5-dualsense-charging-station/11106283.html'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 Pulse3D',
+			series: 'sonyps5p3d',
+			url:
+				'https://www.gamestop.com/video-games/playstation-5/accessories/products/playstation-5-pulse-3d-wireless-gaming-headset/11106278.html'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 media remote',
+			series: 'sonyps5mr',
+			url:
+				'https://www.gamestop.com/video-games/playstation-5/accessories/products/playstation-5-media-remote/11106279.html'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',

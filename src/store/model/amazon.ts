@@ -481,6 +481,38 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/dp/B08FC6MR62'
 		},
 		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC6C75Y&Quantity.1=1',
+			model: 'ps5 dualsense',
+			series: 'sonyps5ds',
+			url: 'https://www.amazon.com/dp/B08FC6C75Y'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC6Y4VG&Quantity.1=1',
+			model: 'ps5 dualsense charger',
+			series: 'sonyps5dsc',
+			url: 'https://www.amazon.com/dp/B08FC6Y4VG'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC6QLKN&Quantity.1=1',
+			model: 'ps5 Pulse3D',
+			series: 'sonyps5p3d',
+			url: 'https://www.amazon.com/dp/B08FC6QLKN'
+		},
+		{
+			brand: 'sony',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5R4KV&Quantity.1=1',
+			model: 'ps5 media remote',
+			series: 'sonyps5mr',
+			url: 'https://www.amazon.com/dp/B08FC5R4KV'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',

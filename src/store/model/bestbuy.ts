@@ -365,6 +365,38 @@ export const BestBuy: Store = {
 				'https://www.bestbuy.com/site/sony-playstation-5-digital-edition-console/6430161.p?skuId=6430161&intl=nosplash'
 		},
 		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430163/cart',
+			model: 'ps5 dualsense',
+			series: 'sonyps5ds',
+			url:
+				'https://www.bestbuy.com/site/sony-playstation-5-dualsense-wireless-controller/6430163.p?skuId=6430163&intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430165/cart',
+			model: 'ps5 dualsense charger',
+			series: 'sonyps5dsc',
+			url:
+				'https://www.bestbuy.com/site/sony-playstation-5-dualsense-charging-station-white/6430165.p?skuId=6430165&intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430164/cart',
+			model: 'ps5 Pulse3D',
+			series: 'sonyps5p3d',
+			url:
+				'https://www.bestbuy.com/site/sony-playstation-pulse-3d-wireless-headset-compatible-for-both-playstation-4-playstation-5-white/6430164.p?skuId=6430164&intl=nosplash'
+		},
+		{
+			brand: 'sony',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430167/cart',
+			model: 'ps5 media remote',
+			series: 'sonyps5mr',
+			url:
+				'https://www.bestbuy.com/site/sony-playstation-5-media-remote/6430167.p?skuId=6430167&intl=nosplash'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
