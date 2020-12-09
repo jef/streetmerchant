@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   streetmerchant:
-    build:
-      context: .
+    image: ghcr.io/jef/streetmerchant:nightly
     env_file: .env
     stdin_open: true
     tty: true
