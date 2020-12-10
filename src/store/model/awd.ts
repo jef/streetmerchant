@@ -2,7 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Awd: Store = {
-	name: 'awd-it',
+	name: 'awd',
 	currency: '£',
 	waitUntil: 'domcontentloaded',
 	labels: {
