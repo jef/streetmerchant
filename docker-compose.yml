@@ -6,11 +6,9 @@ services:
       dockerfile: Dockerfile
     container_name: streetmerchant-shop-bot
     hostname: streetmerchant-shop-bot
-    # cap_add:
-    #   - CAP_SYS_ADMIN
     environment:
       - "ENV=dev"
     volumes:
       - ".env:/app/.env:ro"
-    ports:
-      - 7997:7997
+    # ports:
+    #   - 7997:7997
