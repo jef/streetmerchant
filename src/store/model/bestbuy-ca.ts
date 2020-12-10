@@ -12,7 +12,7 @@ export const BestBuyCa: Store = {
 		},
 		outOfStock: {
 			container: '.shippingAvailability_2RMa1',
-			text: ['coming soon']
+			text: ['coming soon', 'sold out']
 		}
 	},
 	links: [

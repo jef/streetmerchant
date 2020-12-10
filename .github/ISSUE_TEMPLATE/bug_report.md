@@ -7,9 +7,6 @@ assignees: jef
 
 ---
 
-<!--- If you have a question or idea, feel free to create a topic in https://github.com/jef/streetmerchant/discussions --->
-<!--- Feel free to join our Discord server (https://discord.gg/gbVY4vB9JF) for addition support --->
-
 ## Expected Behavior
 
 <!--- Tell us what should happen -->
