@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Spielegrotte: Store = {
+	name: 'spielegrotte',
+	currency: '€',
 	labels: {
 		inStock: [
 			{
@@ -39,6 +41,5 @@ export const Spielegrotte: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.spielegrotte.de/index.php?kat=100100&anr=56006'
 		}
-	],
-	name: 'spielegrotte'
+	]
 };

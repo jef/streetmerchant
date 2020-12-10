@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const AmazonFr: Store = {
+	name: 'amazon-fr',
+	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		captcha: {
@@ -185,6 +187,5 @@ export const AmazonFr: Store = {
 			series: 'xboxss',
 			url: 'https://www.amazon.fr/dp/B087VM5XC6'
 		}
-	],
-	name: 'amazon-fr'
+	]
 };

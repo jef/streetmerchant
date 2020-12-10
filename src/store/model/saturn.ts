@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Saturn: Store = {
+	name: 'saturn',
+	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		captcha: {
@@ -203,6 +205,5 @@ export const Saturn: Store = {
 			series: 'xboxss',
 			url: 'https://www.saturn.de/de/product/-2677359.html'
 		}
-	],
-	name: 'saturn'
+	]
 };

@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Computeruniverse: Store = {
+	name: 'computeruniverse',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.availability',
@@ -573,6 +575,5 @@ export const Computeruniverse: Store = {
 			url:
 				'https://www.computeruniverse.net/de/sony-playstation-5-digital-edition-weiss-schwarz-825gb-ssd'
 		}
-	],
-	name: 'computeruniverse'
+	]
 };

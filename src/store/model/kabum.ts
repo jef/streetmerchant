@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Kabum: Store = {
+	name: 'kabum',
+	currency: 'R$',
 	labels: {
 		inStock: {
 			container: '.botao-comprar',
@@ -166,6 +168,5 @@ export const Kabum: Store = {
 			series: '3090',
 			url: 'https://www.kabum.com.br/produto/128199'
 		}
-	],
-	name: 'kabum'
+	]
 };

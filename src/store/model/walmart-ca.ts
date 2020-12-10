@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const WalmartCa: Store = {
+	name: 'walmart-ca',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '[data-automation="cta-button"]',
@@ -51,6 +53,5 @@ export const WalmartCa: Store = {
 			url:
 				'https://www.walmart.ca/en/ip/Corsair-SF-Series-SF600-600-Watt-80-PLUS-Gold-Certified-High-Performance-SFX-PSU/PRD6VH8WNKHD36Q'
 		}
-	],
-	name: 'walmart-ca'
+	]
 };

@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Game: Store = {
+	name: 'game',
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.buyingOptions',
@@ -36,6 +38,5 @@ export const Game: Store = {
 			url:
 				'https://www.game.co.uk/en/playstation-5-digital-edition-2826341'
 		}
-	],
-	name: 'game'
+	]
 };

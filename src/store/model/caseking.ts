@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Caseking: Store = {
+	name: 'caseking',
+	currency: '€',
 	backoffStatusCodes: [403, 429],
 	labels: {
 		inStock: {
@@ -381,6 +383,5 @@ export const Caseking: Store = {
 			url:
 				'https://www.caseking.de/asus-radeon-rx-6800-xt-tuf-o16g-16384-mb-gddr6-gcas-417.html'
 		}
-	],
-	name: 'caseking'
+	]
 };

@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Xbox: Store = {
+	name: 'xbox',
+	currency: '$',
 	labels: {
 		outOfStock: {
 			container:
@@ -15,6 +17,5 @@ export const Xbox: Store = {
 			series: 'xboxsx',
 			url: 'https://www.xbox.com/en-us/configure/8WJ714N3RBTL'
 		}
-	],
-	name: 'xbox'
+	]
 };

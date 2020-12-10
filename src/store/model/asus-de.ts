@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const AsusDe: Store = {
+	name: 'asus-de',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.buybox--button',
@@ -71,6 +73,5 @@ export const AsusDe: Store = {
 			url:
 				'https://webshop.asus.com/de/komponenten/grafikkarten/nvidia-serie/2823/asus-tuf-rtx3090-o24g-gaming'
 		}
-	],
-	name: 'asus-de'
+	]
 };

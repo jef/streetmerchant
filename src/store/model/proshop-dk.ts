@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const ProshopDK: Store = {
+	name: 'proshop-dk',
+	currency: 'kr.',
 	labels: {
 		inStock: {
 			container: '.site-stock',
@@ -171,6 +173,5 @@ export const ProshopDK: Store = {
 			url:
 				'https://www.proshop.dk/Grafikkort/GIGABYTE-GeForce-RTX-3090-AORUS-Xtreme-24GB-GDDR6X-RAM-Grafikkort/2876839'
 		}
-	],
-	name: 'proshop-dk'
+	]
 };

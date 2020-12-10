@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const OfficeDepot: Store = {
+	name: 'officedepot',
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -44,6 +46,5 @@ export const OfficeDepot: Store = {
 			url:
 				'https://www.officedepot.com/a/products/1992758/PNY-GeForce-RTX-3070-8GB-GDDR6/'
 		}
-	],
-	name: 'officedepot'
+	]
 };

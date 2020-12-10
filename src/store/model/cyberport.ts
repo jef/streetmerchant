@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Cyberport: Store = {
+	name: 'cyberport',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.tooltipAvailabilityParent',
@@ -118,6 +120,5 @@ export const Cyberport: Store = {
 			series: 'ryzen5950',
 			url: 'https://www.cyberport.de?DEEP=2001-71l'
 		}
-	],
-	name: 'cyberport'
+	]
 };

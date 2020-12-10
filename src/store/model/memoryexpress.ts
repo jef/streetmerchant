@@ -1,6 +1,9 @@
 import {Store} from './store';
 
 export const MemoryExpress: Store = {
+	name: 'memoryexpress',
+	currency: '$',
+	waitUntil: 'domcontentloaded',
 	labels: {
 		maxPrice: {
 			container:
@@ -212,7 +215,5 @@ export const MemoryExpress: Store = {
 			series: '3080',
 			url: 'https://www.memoryexpress.com/Products/MX00114404'
 		}
-	],
-	name: 'memoryexpress',
-	waitUntil: 'domcontentloaded'
+	]
 };

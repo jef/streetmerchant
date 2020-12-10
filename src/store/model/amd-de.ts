@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const AmdDe: Store = {
+	name: 'amd-de',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.btn-shopping-cart',
@@ -62,6 +64,5 @@ export const AmdDe: Store = {
 			series: 'rx6800xt',
 			url: 'https://www.amd.com/de/direct-buy/5458374100/de'
 		}
-	],
-	name: 'amd-de'
+	]
 };

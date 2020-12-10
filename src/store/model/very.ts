@@ -3,6 +3,8 @@ import {logger} from '../../logger';
 import {parseCard} from './helpers/card';
 
 export const Very: Store = {
+	name: 'very',
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.stockMessaging .indicator',
@@ -93,6 +95,5 @@ export const Very: Store = {
 					'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100'
 			}
 		]
-	},
-	name: 'very'
+	}
 };

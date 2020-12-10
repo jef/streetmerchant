@@ -2,6 +2,8 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const PlayStation: Store = {
+	name: 'playstation',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.productHero-info .add-to-cart:not(.hide)',
@@ -38,7 +40,6 @@ export const PlayStation: Store = {
 				'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817'
 		}
 	],
-	name: 'playstation',
 	realTimeInventoryLookup: async (itemNumber: string) => {
 		const request_url =
 			'https://api.direct.playstation.com/commercewebservices/ps-direct-us/products/productList?fields=BASIC&productCodes=' +

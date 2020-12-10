@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Target: Store = {
+	name: 'target',
+	currency: '$',
 	labels: {
 		inStock: [
 			{
@@ -42,6 +44,5 @@ export const Target: Store = {
 			series: 'xboxss',
 			url: 'https://www.target.com/p/xbox-series-s-console/-/A-80790842'
 		}
-	],
-	name: 'target'
+	]
 };

@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Expert: Store = {
+	name: 'expert',
+	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		inStock: [
@@ -53,6 +55,5 @@ export const Expert: Store = {
 			series: 'xboxss',
 			url: 'https://www.expert.de/shop/11350018530-xbox-series-s.html'
 		}
-	],
-	name: 'expert'
+	]
 };

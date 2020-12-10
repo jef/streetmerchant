@@ -2,6 +2,9 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Awd: Store = {
+	name: 'awd-it',
+	currency: '£',
+	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '.vs-stock .ty-qty-in-stock',
@@ -110,7 +113,5 @@ export const Awd: Store = {
 					'https://www.awd-it.co.uk/components/graphics-cards/nvidia/nvidia-geforce-rtx-3060ti.html'
 			}
 		]
-	},
-	name: 'awd',
-	waitUntil: 'domcontentloaded'
+	}
 };
