@@ -4,8 +4,8 @@ import {getProductLinksBuilder} from './helpers/card';
 export const Ebuyer: Store = {
 	labels: {
 		inStock: {
-			container: '.purchase-info',
-			text: ['add to basket', 'in stock']
+			container: '.purchase-info__cta',
+			text: ['add to basket', 'pre-order']
 		},
 		maxPrice: {
 			container: '.purchase-info__price .price',
@@ -13,7 +13,7 @@ export const Ebuyer: Store = {
 		},
 		outOfStock: {
 			container: '.purchase-info',
-			text: ['coming soon', 'we are expecting this item on']
+			text: ['coming soon']
 		}
 	},
 	links: [
@@ -86,6 +86,11 @@ export const Ebuyer: Store = {
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-AMD/subcat/AMD-RX-6800-XT'
 			},
 			{
+				series: 'rx6900xt',
+				url:
+					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-AMD/subcat/AMD-RX-6900-XT'
+			},
+			{
 				series: '3060ti',
 				url:
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti'
@@ -104,11 +109,6 @@ export const Ebuyer: Store = {
 				series: '3090',
 				url:
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3090'
-			},
-			{
-				series: '3060ti',
-				url:
-					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti'
 			}
 		]
 	},

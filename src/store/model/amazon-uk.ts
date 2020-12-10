@@ -5,10 +5,6 @@ import {parseCard} from './helpers/card';
 export const AmazonUk: Store = {
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
-		captcha: {
-			container: 'body',
-			text: ['enter the characters you see below']
-		},
 		inStock: {
 			container: '#availability',
 			text: ['in stock']

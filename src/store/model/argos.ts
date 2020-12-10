@@ -18,16 +18,16 @@ export const Argos: Store = {
 			url: 'https://www.argos.co.uk/product/5718469'
 		},
 		{
-			brand: 'asus',
+			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5c',
-			url: 'https://www.argos.co.uk/product/6795199'
+			url: 'https://www.argos.co.uk/product/8349000'
 		},
 		{
 			brand: 'sony',
 			model: 'ps5 digital',
 			series: 'sonyps5de',
-			url: 'https://www.argos.co.uk/product/6795151'
+			url: 'https://www.argos.co.uk/product/8349024'
 		}
 	],
 	name: 'argos'
