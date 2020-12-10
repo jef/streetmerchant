@@ -2,7 +2,7 @@
 name: "\U0001F41B Bug report"
 about: Report a bug for this project
 title: ''
-labels: 'type: bug'
+labels: ''
 assignees: jef
 
 ---
