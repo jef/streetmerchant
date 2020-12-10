@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Megekko: Store = {
+	name: 'megekko',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.product-order .text_green',
@@ -154,6 +156,5 @@ export const Megekko: Store = {
 			series: '3080',
 			url: 'https://www.megekko.nl/product/295473/'
 		}
-	],
-	name: 'megekko'
+	]
 };

@@ -2,6 +2,9 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ebuyer: Store = {
+	name: 'ebuyer',
+	currency: '£',
+	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '.purchase-info__cta',
@@ -111,7 +114,5 @@ export const Ebuyer: Store = {
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3090'
 			}
 		]
-	},
-	name: 'ebuyer',
-	waitUntil: 'domcontentloaded'
+	}
 };

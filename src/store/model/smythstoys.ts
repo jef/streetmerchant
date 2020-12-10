@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const SmythsToys: Store = {
+	name: 'smythstoys',
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#addToCartButton',
@@ -37,6 +39,5 @@ export const SmythsToys: Store = {
 			url:
 				'https://www.smythstoys.com/uk/en-gb/video-games-and-tablets/playstation-5/playstation-5-consoles/playstation-5-digital-edition-console/p/191430'
 		}
-	],
-	name: 'smythstoys'
+	]
 };

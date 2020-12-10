@@ -203,6 +203,8 @@ for (const microCenterLocation of microCenterLocations) {
 }
 
 export const MicroCenter: Store = {
+	name: 'microcenter',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#cart-options',
@@ -213,6 +215,5 @@ export const MicroCenter: Store = {
 			euroFormat: false
 		}
 	},
-	links,
-	name: 'microcenter'
+	links
 };

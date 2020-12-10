@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Nvidia: Store = {
+	name: 'nvidia',
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -73,6 +75,5 @@ export const Nvidia: Store = {
 			url:
 				'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070'
 		}
-	],
-	name: 'nvidia'
+	]
 };

@@ -2,6 +2,9 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Box: Store = {
+	name: 'box',
+	currency: '£',
+	waitUntil: 'domcontentloaded',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		inStock: {
@@ -78,7 +81,5 @@ export const Box: Store = {
 				url: 'https://www.box.co.uk/rtx-3090-graphics-cards'
 			}
 		]
-	},
-	name: 'box',
-	waitUntil: 'domcontentloaded'
+	}
 };

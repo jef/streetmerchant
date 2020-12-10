@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const BAndH: Store = {
+	name: 'bandh',
+	currency: '$',
 	backoffStatusCodes: [403, 429],
 	labels: {
 		inStock: {
@@ -238,6 +240,5 @@ export const BAndH: Store = {
 			url:
 				'https://www.bhphotovideo.com/c/product/1560680-REG/corsair_cp_9020186_na_corsair_sf750_power_supply.html'
 		}
-	],
-	name: 'bandh'
+	]
 };

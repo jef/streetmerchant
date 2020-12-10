@@ -18,12 +18,12 @@ import {sendTwitchMessage} from './twitch';
 export function sendNotification(link: Link, store: Store) {
 	// Priority
 	playSound();
+	sendDiscordMessage(link, store);
+	sendDesktopNotification(link, store);
 	sendEmail(link, store);
 	sendSms(link, store);
-	sendDesktopNotification(link, store);
 	// Non-priority
 	adjustPhilipsHueLights();
-	sendDiscordMessage(link, store);
 	sendMqttMessage(link, store);
 	sendPagerDutyNotification(link, store);
 	sendPushbulletNotification(link, store);

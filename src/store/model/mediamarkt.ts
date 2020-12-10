@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Mediamarkt: Store = {
+	name: 'mediamarkt',
+	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		captcha: {
@@ -275,6 +277,5 @@ export const Mediamarkt: Store = {
 			series: 'xboxss',
 			url: 'https://www.mediamarkt.de/de/product/-2677359.html'
 		}
-	],
-	name: 'mediamarkt'
+	]
 };

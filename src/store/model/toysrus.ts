@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const ToysRUs: Store = {
+	name: 'toysrus',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: 'li.b-product_status',
@@ -43,6 +45,5 @@ export const ToysRUs: Store = {
 			series: 'xboxss',
 			url: 'https://www.toysrus.ca/en/XBOX-Series-S-Console/A43E2AF7.html'
 		}
-	],
-	name: 'toysrus'
+	]
 };

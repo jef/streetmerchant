@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const VsGamers: Store = {
+	name: 'vsgamers',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '#vs-product-sheet-dashboard',
@@ -257,6 +259,5 @@ export const VsGamers: Store = {
 			url:
 				'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-geforce-rtx-3090-gaming-oc-24g-24-gb-gddr6x'
 		}
-	],
-	name: 'vsgamers'
+	]
 };

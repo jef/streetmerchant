@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const AntOnline: Store = {
+	name: 'antonline',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.uk-button',
@@ -37,6 +39,5 @@ export const AntOnline: Store = {
 			url:
 				'https://www.antonline.com/Microsoft/Electronics/Gaming_Devices/Gaming_Consoles/1409527'
 		}
-	],
-	name: 'antonline'
+	]
 };

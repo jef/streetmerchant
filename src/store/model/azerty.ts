@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Azerty: Store = {
+	name: 'azerty',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.orderdelay',
@@ -184,6 +186,5 @@ export const Azerty: Store = {
 			url:
 				'https://azerty.nl/product/evga/4377252/xc3-black-geforce-rtx-3070-videokaart-8-gb-gddr6'
 		}
-	],
-	name: 'azerty'
+	]
 };

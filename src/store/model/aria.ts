@@ -2,6 +2,9 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Aria: Store = {
+	name: 'aria',
+	currency: '£',
+	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#addQuantity',
@@ -60,7 +63,5 @@ export const Aria: Store = {
 					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3090'
 			}
 		]
-	},
-	name: 'aria',
-	waitUntil: 'domcontentloaded'
+	}
 };

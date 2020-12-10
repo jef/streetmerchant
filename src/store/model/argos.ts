@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Argos: Store = {
+	name: 'argos',
+	currency: '£',
 	labels: {
 		inStock: {
 			container: 'button[data-test="add-to-trolley-button-button"',
@@ -29,6 +31,5 @@ export const Argos: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.argos.co.uk/product/8349024'
 		}
-	],
-	name: 'argos'
+	]
 };

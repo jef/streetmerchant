@@ -2,6 +2,8 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const Asus: Store = {
+	name: 'asus',
+	currency: '$',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
 		inStock: {
@@ -53,7 +55,6 @@ export const Asus: Store = {
 			url: 'https://store.asus.com/us/item/202009AM290000002'
 		}
 	],
-	name: 'asus',
 	realTimeInventoryLookup: async (itemNumber: string) => {
 		const request_url =
 			'https://store.asus.com/us/category/get_real_time_data';

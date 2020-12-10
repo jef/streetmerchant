@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Wipoid: Store = {
+	name: 'wipoid',
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#add_to_cart',
@@ -168,6 +170,5 @@ export const Wipoid: Store = {
 			series: 'ryzen5800',
 			url: 'https://www.wipoid.com/amd-ryzen-7-5800x-3-8ghz.html'
 		}
-	],
-	name: 'wipoid'
+	]
 };

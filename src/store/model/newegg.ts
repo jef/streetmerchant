@@ -2,6 +2,8 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const Newegg: Store = {
+	name: 'newegg',
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -1013,7 +1015,6 @@ export const Newegg: Store = {
 				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-3dhr-oc/p/N82E16814131773'
 		}
 	],
-	name: 'newegg',
 	realTimeInventoryLookup: async (itemNumber: string) => {
 		const request_url =
 			'https://www.newegg.com/product/api/ProductRealtime?ItemNumber=' +

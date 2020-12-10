@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const Eprice: Store = {
+	name: 'eprice',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.topSideDx',
@@ -82,6 +84,5 @@ export const Eprice: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.eprice.it/playstation-5-SONY/d-13981613'
 		}
-	],
-	name: 'eprice'
+	]
 };

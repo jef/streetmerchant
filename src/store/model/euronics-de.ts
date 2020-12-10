@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const EuronicsDE: Store = {
+	name: 'euronics-de',
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.buy-btn--cart-text',
@@ -55,6 +57,5 @@ export const EuronicsDE: Store = {
 			url:
 				'https://www.euronics.de/spiele-und-konsolen-film-und-musik/spiele-und-konsolen/playstation-5/spielekonsole/playstation-5-konsole-4061856837826'
 		}
-	],
-	name: 'euronics-de'
+	]
 };
