@@ -8,6 +8,7 @@ You can test your notification configuration by running `npm run test:notificati
 |---|---|
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier). |
 | `PLAY_SOUND` | Play this sound notification if a product is found. Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
+| `SOUND_PLAYER` | Override the default sound player using the specified executable. |
 
 ???+ attention
     If you're on Windows, you must have the proper library to run.

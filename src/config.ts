@@ -270,6 +270,7 @@ const notifications = {
 		channel: envOrString(process.env.SLACK_CHANNEL),
 		token: envOrString(process.env.SLACK_TOKEN)
 	},
+	soundPlayer: envOrString(process.env.SOUND_PLAYER),
 	telegram: {
 		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
 		chatId: envOrArray(process.env.TELEGRAM_CHAT_ID)
