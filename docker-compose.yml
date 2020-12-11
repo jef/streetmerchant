@@ -1,10 +1,10 @@
 version: '3.0'
 services:
   streetmerchant:
+    image: ghcr.io/jef/streetmerchant:latest
     build:
       context: .
       dockerfile: Dockerfile
     container_name: streetmerchant
-    env_file: .env
-    # ports:
-    #   - 7997:7997
+    env_file:
+      - dotenv
