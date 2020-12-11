@@ -82,7 +82,7 @@ Used with the `STORES` variable.
 | Gamestop | DE | `gamestop-de`|
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
-| Medimax | US | `medimax`|
+| Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
 | Micro Center | US | `microcenter`|
