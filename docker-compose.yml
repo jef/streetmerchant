@@ -1,11 +1,10 @@
 version: '3.0'
 services:
-  streetmerchant-shop-bot:
+  streetmerchant:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: streetmerchant-shop-bot
-    hostname: streetmerchant-shop-bot
+    container_name: streetmerchant
     env_file: .env
     # ports:
     #   - 7997:7997
