@@ -1013,6 +1013,15 @@ export const Newegg: Store = {
 			series: 'rx6800',
 			url:
 				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-3dhr-oc/p/N82E16814131773'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16813119362',
+			model: 'crosshair viii',
+			series: 'darkhero',
+			url:
+				'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16813119362'
 		}
 	],
 	realTimeInventoryLookup: async (itemNumber: string) => {

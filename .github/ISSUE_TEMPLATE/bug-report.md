@@ -27,7 +27,7 @@ assignees: jef
 ## Environment
 
 **OS:**
-**.env file:**
+**dotenv file:**
 
 ```dotenv
 

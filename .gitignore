@@ -3,10 +3,10 @@
 .vscode/
 build/
 node_modules/
+src/config/*.yaml
 
-.env*
-.*env
-!.env-example
+.env
+dotenv
 success-*.png
 
 *.wav

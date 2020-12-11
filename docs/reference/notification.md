@@ -26,6 +26,7 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
+| `DISCORD_NOTIFY_GROUP_DARKHERO` | Discord group to notify on Dark Hero stock |
 | `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
