@@ -63,7 +63,7 @@
     "@types/node-fetch": "^2.5.7",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",
-    "@types/puppeteer": "^5.4.1",
+    "@types/puppeteer": "^5.4.2",
     "@types/twitter": "^1.7.0",
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
