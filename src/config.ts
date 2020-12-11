@@ -1,10 +1,10 @@
 import {banner} from './banner';
 
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import path from 'path';
 import {readFileSync} from 'fs';
 
-if (path.resolve(__dirname, '../dotenv').length !== 0) {
+if (path.resolve(__dirname, '../dotenv').length > 0) {
 	dotenv.config({path: path.resolve(__dirname, '../dotenv')});
 } else {
 	dotenv.config({path: path.resolve(__dirname, '../.env')});
