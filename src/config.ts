@@ -1,10 +1,14 @@
 import {banner} from './banner';
 
-import {config as config_} from 'dotenv';
+import dotenv from 'dotenv';
 import path from 'path';
 import {readFileSync} from 'fs';
 
-config_({path: path.resolve(__dirname, '../.env')});
+if (path.resolve(__dirname, '../dotenv').length > 0) {
+	dotenv.config({path: path.resolve(__dirname, '../dotenv')});
+} else {
+	dotenv.config({path: path.resolve(__dirname, '../.env')});
+}
 
 console.info(
 	banner.render(
@@ -66,8 +70,8 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 
 /**
  * Returns environment variable, given number, or default number,
- * while handling .env input errors for a Min/Max pair.
- * .env errors handled:
+ * while handling dotenv input errors for a Min/Max pair.
+ * dotenv errors handled:
  * - Min/Max swapped (Min larger than Max, Max smaller than Min)
  * - Min larger than default Max when no Max defined
  * - Max smaller than default Min when no Min defined
@@ -106,8 +110,8 @@ function envOrNumberMin(
 
 /**
  * Returns environment variable, given number, or default number,
- * while handling .env input errors for a Min/Max pair.
- * .env errors handled:
+ * while handling dotenv input errors for a Min/Max pair.
+ * dotenv errors handled:
  * - Min/Max swapped (Min larger than Max, Max smaller than Min)
  * - Min larger than default Max when no Max defined
  * - Max smaller than default Min when no Min defined

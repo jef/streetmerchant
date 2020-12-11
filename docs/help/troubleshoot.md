@@ -18,7 +18,7 @@ As a last case scenario, use `PUPPETEER_EXECUTABLE_PATH`. This will use your com
 
 For example:
 
-`.env`:
+`dotenv`:
 
 ```
 PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
