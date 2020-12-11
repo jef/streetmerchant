@@ -11,7 +11,7 @@ export const PlayStation: Store = {
 			{
 				container: '.bulleted-info.queue',
 				text: ['queue']
-			},
+			}
 		],
 		outOfStock: {
 			container: '.productHero-info .out-stock-wrpr:not(.hide)',
