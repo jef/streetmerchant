@@ -27,6 +27,7 @@
   "dependencies": {
     "@jef/pushbullet": "^2.4.3",
     "@slack/web-api": "^5.14.0",
+    "@types/random-useragent": "^0.3.0",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.5.1",
@@ -47,6 +48,7 @@
     "puppeteer-extra-plugin-stealth": "^2.6.5",
     "puppeteer-page-proxy": "^1.2.8",
     "pushover-notifications": "^1.2.2",
+    "random-useragent": "^0.5.0",
     "twilio": "^3.53.0",
     "twitch": "^4.3.5",
     "twitch-auth": "^4.3.5",

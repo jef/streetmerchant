@@ -4,19 +4,11 @@
 
 ### Option 1
 
-If you're running into _a lot_ of captcha problems, be sure to update your user agent by searching ["what's my user agent" on Google](https://www.google.com/search?q=whats+my+user+agent).
-
-![image](https://user-images.githubusercontent.com/12074633/101272427-07a88100-375a-11eb-9cb3-4e8783db6ae5.png)
-
-You can update your user agent by using `USER_AGENT="your-result"`.
-
-### Option 2
-
-If you're _still_ running into problems, try running in headful mode: `HEADLESS="false"`.
+If you're running into problems, try running in headful mode: `HEADLESS="false"`.
 
 This will open a browser and run streetmerchant. Note that this isn't a great solution for those running in a headless environment, i.e.: VPS, cloud, docker. Instead, it would be a good solution for those running on separate computer that won't be blocked by running in the background.
 
-### Option 3
+### Option 2
 
 As a last case scenario, use `PUPPETEER_EXECUTABLE_PATH`. This will use your computer's Chrome browser. You can run this is headless or headful mode.
 

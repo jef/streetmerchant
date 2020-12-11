@@ -162,7 +162,7 @@ async function lookup(browser: Browser, store: Store) {
 		const page = await context.newPage();
 
 		page.setDefaultNavigationTimeout(config.page.timeout);
-		await page.setUserAgent(getRandomUserAgent());
+		await page.setUserAgent(await getRandomUserAgent(browser));
 
 		let adBlockRequestHandler: any;
 		let pageProxy;
