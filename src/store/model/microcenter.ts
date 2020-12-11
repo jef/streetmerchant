@@ -200,7 +200,7 @@ for (const microCenterLocation of microCenterLocations) {
 			},
 			{
 				brand: 'asus',
-				model: 'dark hero',
+				model: 'crosshair viii',
 				series: 'darkhero',
 				url: `https://www.microcenter.com/product/631349/asus-x570-rog-crosshair-viii-dark-hero-amd-am4-atx-motherboard/?storeid=${storeId}`
 			}

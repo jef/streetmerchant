@@ -55,7 +55,7 @@ export const Asus: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '202011AM200000003',
-			model: 'dark hero',
+			model: 'crosshair viii',
 			series: 'darkhero',
 			url: 'https://store.asus.com/us/item/202011AM200000003'
 		}

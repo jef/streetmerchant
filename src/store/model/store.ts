@@ -68,7 +68,7 @@ export type Model =
 	| 'aorus xtreme waterforce'
 	| 'aorus'
 	| 'challenger'
-	| 'dark hero'
+	| 'crosshair viii'
 	| 'dual fan'
 	| 'dual oc'
 	| 'dual'
