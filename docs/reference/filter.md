@@ -139,7 +139,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | Brand | Model |
 |:---:|---|
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
-| `asus` | `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
+| `asus` | `crosshair viii`, `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `evga` | `ftw3`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
@@ -159,25 +159,25 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 
 Used with the `SHOW_ONLY_SERIES` variable.
 
-| Series | Environment variable |
+| Series | Value |
 |:---:|:---:|
-| `AMD Ryzen 5600x` | `ryzen5600` |
-| `AMD Ryzen 5800x` | `ryzen5800` |
-| `AMD Ryzen 5900x` | `ryzen5900` |
-| `AMD Ryzen 5950x` | `ryzen5950` |
-| `AMD RX 6800` | `rx6800` |
-| `AMD RX 6800XT` | `rx6800xt` |
-| `AMD RX 6900XT` | `rx6900xt` |
-| `Nvidia RTX 3060 Ti` | `3060ti` |
-| `Nvidia RTX 3070` | `3070` |
-| `Nvidia RTX 3080` | `3080` |
-| `Nvidia RTX 3090` | `3090` |
-| `Corsair SFX PSU` | `sf` |
-| `Crosshair VIII` | `darkhero` |
-| `Sony PS5` | `sonyps5c` |
-| `Sony PS5 Digital Edition` | `sonyps5de` |
-| `Xbox Series S` | `xboxss` |
-| `Xbox Series X` | `xboxsx` |
+| AMD Ryzen 5600x | `ryzen5600` |
+| AMD Ryzen 5800x | `ryzen5800` |
+| AMD Ryzen 5900x | `ryzen5900` |
+| AMD Ryzen 5950x | `ryzen5950` |
+| AMD RX 6800 | `rx6800` |
+| AMD RX 6800XT | `rx6800xt` |
+| AMD RX 6900XT | `rx6900xt` |
+| Nvidia RTX 3060 Ti | `3060ti` |
+| Nvidia RTX 3070 | `3070` |
+| Nvidia RTX 3080 | `3080` |
+| Nvidia RTX 3090 | `3090` |
+| Corsair SFX PSU | `sf` |
+| Crosshair VIII | `darkhero` |
+| Sony PS5 | `sonyps5c` |
+| Sony PS5 Digital Edition | `sonyps5de` |
+| Xbox Series S | `xboxss` |
+| Xbox Series X | `xboxsx` |
 
 ## Supported countries
 
@@ -188,22 +188,22 @@ Used with the `COUNTRY` variable.
 
 | Country | 3080 FE | 3090 FE | Test Card | Notes |
 |:---:|:---:|:---:|:---:|:---:|
-| austria | `✔` | `✔` | `✔` | |
-| belgium | `✔` | `✔` | `✔` | |
-| canada | `✔` | `✔` | `✔` | |
-| czechia | `✔` | `✔` | `✔` | |
-| denmark | `✔` | | `✔` | Missing RTX 3090 |
-| finland | `✔` | | `✔` | Missing RTX 3090 |
-| france | `✔` | `✔` | `✔` | |
-| germany | `✔` | `✔` | `✔` | |
-| great_britain | `✔` | `✔` | `✔` | |
-| ireland | `✔` | `✔` | `✔` | |
-| italy | `✔` | `✔` | `✔` | |
-| luxembourg | `✔` | `✔` | `✔` | |
-| netherlands | `✔` | `✔` | `✔` | |
-| norway | `✔` | `✔` | `✔` | |
-| poland | `✔` | `✔` | `✔` | |
-| portugal | `✔` | | | RTX 3080 only |
-| spain | `✔` | `✔` | `✔` | |
-| sweden | `✔` | `✔` | `✔` | |
-| usa | `✔` | `✔` | `✔` | |
+| `austria` | `✔` | `✔` | `✔` | |
+| `belgium` | `✔` | `✔` | `✔` | |
+| `canada` | `✔` | `✔` | `✔` | |
+| `czechia` | `✔` | `✔` | `✔` | |
+| `denmark` | `✔` | | `✔` | Missing RTX 3090 |
+| `finland` | `✔` | | `✔` | Missing RTX 3090 |
+| `france` | `✔` | `✔` | `✔` | |
+| `germany` | `✔` | `✔` | `✔` | |
+| `great_britain` | `✔` | `✔` | `✔` | |
+| `ireland` | `✔` | `✔` | `✔` | |
+| `italy` | `✔` | `✔` | `✔` | |
+| `luxembourg` | `✔` | `✔` | `✔` | |
+| `netherlands` | `✔` | `✔` | `✔` | |
+| `norway` | `✔` | `✔` | `✔` | |
+| `poland` | `✔` | `✔` | `✔` | |
+| `portugal` | `✔` | | | RTX 3080 only |
+| `spain` | `✔` | `✔` | `✔` | |
+| `sweden` | `✔` | `✔` | `✔` | |
+| `usa` | `✔` | `✔` | `✔` | |
