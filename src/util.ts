@@ -2,6 +2,7 @@ import {Browser, Page, Response} from 'puppeteer';
 import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
+import {getRandom} from 'random-useragent';
 import {logger} from './logger';
 
 export function getSleepTime(store: Store) {
@@ -79,7 +80,18 @@ export async function closePage(page: Page) {
 }
 
 export function getRandomUserAgent(): string {
-	return config.page.userAgents[
-		Math.floor(Math.random() * config.page.userAgents.length)
-	];
+	if (config.page.userAgents.length > 1) {
+		return config.page.userAgents[
+			Math.floor(Math.random() * config.page.userAgents.length)
+		];
+	}
+
+	const userAgent =
+		getRandom((ua) => {
+			return ua.browserName === 'Chrome' && ua.browserVersion > '20';
+		}) ?? config.page.userAgents[0];
+
+	logger.info(userAgent);
+
+	return userAgent;
 }
