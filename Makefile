@@ -1,22 +1,17 @@
-.DEFAULT_GOAL := go
-export all
-SHELL := /usr/bin/env bash
+.DEFAULT_GOAL := run
 
-go : build run
-
+.PHONY: build
 build:
-	docker-compose build streetmerchant-shop-bot
+	docker-compose build streetmerchant
 
-
+.PHONY: run
 run:
 	docker-compose up
-	# docker-compose --env-file .env up -d
 
+.PHONY: run-detached
+run-detached:
+	docker-compose up -d
 
+.PHONY: stop
 stop:
-	docker-compose stop
-
-clean:
-	docker-compose kill
 	docker-compose down
-	docker-compose rm -f
