@@ -42,8 +42,11 @@ async function main() {
 		);
 	}
 
+	if (args.length > 0) {
+		logger.info('ℹ puppeteer config: ', args);
+	}
+
 	await stop();
-	logger.warn('ℹ printing puppeteer configs::', args);
 	browser = await puppeteer.launch({
 		args,
 		defaultViewport: {

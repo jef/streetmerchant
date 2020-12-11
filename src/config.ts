@@ -176,7 +176,7 @@ const browser = {
 	userAgent: ''
 };
 
-const docker = envOrBoolean(process.env.DOCKER);
+const docker = envOrBoolean(process.env.DOCKER, false);
 
 const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
