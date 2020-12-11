@@ -76,7 +76,7 @@ Use `npm run lint` to see any linting uses and `npm run lint:fix` to automatical
 - [Docker Compose](https://docs.docker.com/compose/install/)
     - Depending on your system, you may already have this. Check before installing.
 
-#### How
+#### Starting with `docker-compose`
 
 1. Make a copy of `dotenv-example` and name it `dotenv`.
 1. Edit the `dotenv` file to your liking using a text editor (like [vscode](https://code.visualstudio.com/)).
