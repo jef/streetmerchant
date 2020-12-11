@@ -1,6 +1,7 @@
 # ** All configuration variables are optional **
-# Read https://github.com/jef/streetmerchant#customization for help on customizing this file
-#############################################################################################
+# Copy this file and name it as `dotenv` (without backticks)
+# Read https://jef.codes/streetmerchant/getting-started/#customization for help on customizing this file
+########################################################################################################
 
 ASCII_BANNER=""
 ASCII_COLOR=""

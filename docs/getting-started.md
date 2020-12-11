@@ -19,8 +19,8 @@ You do not need any computer skills, smarts, or anything of that nature. You are
     - To checkout a particular reference, use `git checkout <ref name>` after cloning.
 - Navigate to this project by entering `cd streetmerchant`.
 - Run `npm install`.
-- Make a copy of `.env-example` and name it `.env`.
-- Edit the `.env` file to your liking using a text editor (like [vscode](https://code.visualstudio.com/)).
+- Make a copy of `dotenv-example` and name it `dotenv`.
+- Edit the `dotenv` file to your liking using a text editor (like [vscode](https://code.visualstudio.com/)).
 - Run `npm run start` to start.
 
 At any point you want the program to stop, use ++ctrl+c++.
@@ -40,22 +40,22 @@ Available via GitHub Container Registry.
 ```sh
 # to run docker nightly
 docker run --cap-add=SYS_ADMIN \
-  -it --rm --env-file ./.env \
+  -it --rm --env-file ./dotenv \
   ghcr.io/jef/streetmerchant:nightly
 
 # to test notifications
 docker run --cap-add=SYS_ADMIN \
-  -it --rm --env-file ./.env \
+  -it --rm --env-file ./dotenv \
   ghcr.io/jef/streetmerchant:nightly test:notification:production
 ```
 
 ## Customization
 
-To customize streetmerchant, make a copy of `.env-example` as `.env` and make any changes to your liking. View [Reference](reference/application.md) for more information on variables and their usage.
+To customize streetmerchant, make a copy of `dotenv-example` as `dotenv` and make any changes to your liking. View [Reference](reference/application.md) for more information on variables and their usage.
 
 ???+ tip
     All environment variables are optional.
 
 ## For developers
 
-The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `.env` file.
+The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `dotenv` file.

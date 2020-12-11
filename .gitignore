@@ -4,9 +4,8 @@
 build/
 node_modules/
 
-.env*
-.*env
-!.env-example
+.env
+dotenv
 success-*.png
 
 *.wav

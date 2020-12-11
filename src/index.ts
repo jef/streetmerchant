@@ -1,6 +1,6 @@
-import {startAPIServer, stopAPIServer} from './web';
+import {config} from './config'; // Needs to be loaded first
+import {startAPIServer, stopAPIServer} from './web'; // eslint-disable-line sort-imports
 import {Browser} from 'puppeteer';
-import {config} from './config';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
