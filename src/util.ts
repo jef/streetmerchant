@@ -58,7 +58,7 @@ export async function usingPage<T>(
 ): Promise<T> {
 	const page = await browser.newPage();
 	page.setDefaultNavigationTimeout(config.page.timeout);
-	await page.setUserAgent(getRandomUserAgent());
+	await page.setUserAgent(await getRandomUserAgent(browser));
 
 	try {
 		return await cb(page, browser);
@@ -79,19 +79,13 @@ export async function closePage(page: Page) {
 	await page.close();
 }
 
-export function getRandomUserAgent(): string {
-	if (config.page.userAgents.length > 1) {
-		return config.page.userAgents[
-			Math.floor(Math.random() * config.page.userAgents.length)
-		];
-	}
-
+export async function getRandomUserAgent(browser: Browser): Promise<string> {
 	const userAgent =
 		getRandom((ua) => {
 			return ua.browserName === 'Chrome' && ua.browserVersion > '20';
-		}) ?? config.page.userAgents[0];
+		}) ?? (await browser.userAgent());
 
-	logger.info(userAgent);
+	logger.debug('user agent', userAgent);
 
 	return userAgent;
 }

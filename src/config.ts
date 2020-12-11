@@ -307,7 +307,6 @@ const page = {
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
 	screenshot: envOrBoolean(process.env.SCREENSHOT),
 	timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
-	userAgents: envOrArray(process.env.USER_AGENT),
 	width: 1920
 };
 

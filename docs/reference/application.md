@@ -19,7 +19,6 @@
 | `PROXY_ADDRESS` | IP Address or fqdn of proxy server |
 | `PROXY_PORT` | TCP Port number on which the proxy is listening for connections. Default: `80` |
 | `SCREENSHOT` | Capture screenshot of page if a card is found. Default: `true` |
-| `USER_AGENT` | Custom User-Agents headers for HTTP requests. Newline separated, e.g.: `USER_AGENT_STRING1 \n USER_AGENT_STRING2`. Default: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36` |
 | `WEB_PORT` | Starts a webserver to be able to control the bot while it is running. Setting this value starts this service. |
 
 ???+ info
