@@ -6,9 +6,6 @@ services:
       dockerfile: Dockerfile
     container_name: streetmerchant-shop-bot
     hostname: streetmerchant-shop-bot
-    environment:
-      - "ENV=dev"
-    volumes:
-      - ".env:/app/.env:ro"
+    env_file: .env
     # ports:
     #   - 7997:7997
