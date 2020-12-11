@@ -160,6 +160,7 @@ async function lookup(browser: Browser, store: Store) {
 			? await browser.createIncognitoBrowserContext()
 			: browser.defaultBrowserContext();
 		const page = await context.newPage();
+		await page.setRequestInterception(true);
 
 		page.setDefaultNavigationTimeout(config.page.timeout);
 		await page.setUserAgent(await getRandomUserAgent(browser));
