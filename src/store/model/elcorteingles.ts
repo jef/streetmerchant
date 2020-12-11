@@ -1,9 +1,8 @@
 import {Store} from './store';
 
 export const Elcorteingles: Store = {
-	name: 'elcorteingles',
-	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
+	currency: '€',
 	labels: {
 		// Captcha: {
 		// 	container: 'body',
@@ -67,5 +66,6 @@ export const Elcorteingles: Store = {
 			series: 'xboxss',
 			url: 'https://www.elcorteingles.es/videojuegos/A37047080'
 		}
-	]
+	],
+	name: 'elcorteingles'
 };

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const EvgaEu: Store = {
-	name: 'evga-eu',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -70,5 +69,6 @@ export const EvgaEu: Store = {
 			series: '3090',
 			url: 'https://eu.evga.com/products/product.aspx?pn=24G-P5-3975-KR'
 		}
-	]
+	],
+	name: 'evga-eu'
 };

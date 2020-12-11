@@ -1,9 +1,7 @@
 import {Store} from './store';
 
 export const CanadaComputers: Store = {
-	name: 'canadacomputers',
 	currency: '$',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: 'div[class="pi-prod-availability"]',
@@ -484,5 +482,7 @@ export const CanadaComputers: Store = {
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183427&language=en'
 		}
-	]
+	],
+	name: 'canadacomputers',
+	waitUntil: 'domcontentloaded'
 };

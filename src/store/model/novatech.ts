@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Novatech: Store = {
-	name: 'novatech',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '.newspec-specprice',
@@ -90,5 +88,7 @@ export const Novatech: Store = {
 					'https://www.novatech.co.uk/products/components/nvidiageforcegraphicscards/nvidiartxseries/nvidiartx3060ti/'
 			}
 		]
-	}
+	},
+	name: 'novatech',
+	waitUntil: 'domcontentloaded'
 };

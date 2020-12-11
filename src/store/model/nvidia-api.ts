@@ -237,7 +237,6 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 ]);
 
 export const NvidiaApi: Store = {
-	name: 'nvidia-api',
 	currency: '',
 	labels: {
 		inStock: {
@@ -246,5 +245,6 @@ export const NvidiaApi: Store = {
 		}
 	},
 	links: generateLinks(),
+	name: 'nvidia-api',
 	setupAction: generateSetupAction()
 };

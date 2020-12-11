@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const ProshopDE: Store = {
-	name: 'proshop-de',
 	currency: '€',
 	labels: {
 		maxPrice: {
@@ -279,5 +278,6 @@ export const ProshopDE: Store = {
 			series: 'ryzen5950',
 			url: 'https://www.proshop.de/2884175'
 		}
-	]
+	],
+	name: 'proshop-de'
 };

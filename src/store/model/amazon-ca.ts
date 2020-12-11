@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const AmazonCa: Store = {
-	name: 'amazon-ca',
 	currency: '$',
 	labels: {
 		captcha: {
@@ -273,5 +272,6 @@ export const AmazonCa: Store = {
 			series: 'xboxss',
 			url: 'https://www.amazon.ca/dp/B08G9J44ZN'
 		}
-	]
+	],
+	name: 'amazon-ca'
 };

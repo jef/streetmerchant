@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Unieuro: Store = {
-	name: 'unieuro',
 	currency: '€',
 	labels: {
 		captcha: {
@@ -42,5 +41,6 @@ export const Unieuro: Store = {
 			url:
 				'https://www.unieuro.it/online/Xbox-Series/Xbox-Series-S-pidDBLRRS00008'
 		}
-	]
+	],
+	name: 'unieuro'
 };

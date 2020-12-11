@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Arlt: Store = {
-	name: 'arlt',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -137,5 +136,6 @@ export const Arlt: Store = {
 			url:
 				'https://www.arlt.com/Hardware/PC-Komponenten/Prozessoren-arlt/AMD-Ryzen-9-5950X-boxed.html'
 		}
-	]
+	],
+	name: 'arlt'
 };

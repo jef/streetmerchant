@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Mindfactory: Store = {
-	name: 'mindfactory',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -151,5 +150,6 @@ export const Mindfactory: Store = {
 			url:
 				'https://www.mindfactory.de/product_info.php/16GB-ASRock-Radeon-6900-XT--Retail-_1388342.html'
 		}
-	]
+	],
+	name: 'mindfactory'
 };

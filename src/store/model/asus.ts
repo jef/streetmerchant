@@ -2,9 +2,8 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const Asus: Store = {
-	name: 'asus',
-	currency: '$',
 	backoffStatusCodes: [403, 429, 503],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#item_add_cart',
@@ -86,5 +85,6 @@ export const Asus: Store = {
 
 		return false;
 	},
-	successStatusCodes: [[0, 399], 404]
+	successStatusCodes: [[0, 399], 404],
+	name: 'asus'
 };

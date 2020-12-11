@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Pny: Store = {
-	name: 'pny',
 	currency: '$',
 	labels: {
 		inStock: {
@@ -61,5 +60,6 @@ export const Pny: Store = {
 			url:
 				'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-p'
 		}
-	]
+	],
+	name: 'pny'
 };

@@ -1,9 +1,7 @@
 import {Store} from './store';
 
 export const Gamestop: Store = {
-	name: 'gamestop',
 	currency: '$',
-	successStatusCodes: [[0, 399], 404],
 	labels: {
 		inStock: [
 			{
@@ -67,5 +65,7 @@ export const Gamestop: Store = {
 			url:
 				'https://www.gamestop.com/video-games/xbox-series-x/consoles/products/xbox-series-s-digital-edition/11108372.html?condition=New'
 		}
-	]
+	],
+	name: 'gamestop',
+	successStatusCodes: [[0, 399], 404]
 };

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Coolblue: Store = {
-	name: 'coolblue',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -120,5 +119,6 @@ export const Coolblue: Store = {
 			series: '3090',
 			url: 'https://www.coolblue.nl/product/868735/'
 		}
-	]
+	],
+	name: 'coolblue'
 };

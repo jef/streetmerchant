@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
-	name: 'bestbuy',
 	currency: '$',
 	labels: {
 		inStock: {
@@ -502,5 +501,6 @@ export const BestBuy: Store = {
 			url:
 				'https://www.bestbuy.com/site/msi-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black-black/6441172.p?skuId=6441172&intl=nosplash'
 		}
-	]
+	],
+	name: 'bestbuy'
 };

@@ -1,9 +1,8 @@
 import {Store} from './store';
 
 export const Zotac: Store = {
-	name: 'zotac',
-	currency: '$',
 	backoffStatusCodes: [403, 503],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.add-to-cart-wrapper',
@@ -78,5 +77,6 @@ export const Zotac: Store = {
 			url:
 				'https://store.zotac.com/zotac-gaming-geforce-rtx-3090-trinity-zt-a30900d-10p'
 		}
-	]
+	],
+	name: 'zotac'
 };

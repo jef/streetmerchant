@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Scan: Store = {
-	name: 'scan',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	disableAdBlocker: true,
 	labels: {
 		captcha: [
@@ -152,5 +150,7 @@ export const Scan: Store = {
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
 			}
 		]
-	}
+	},
+	name: 'scan',
+	waitUntil: 'domcontentloaded'
 };

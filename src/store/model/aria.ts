@@ -2,7 +2,6 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Aria: Store = {
-	name: 'aria',
 	currency: '£',
 	waitUntil: 'domcontentloaded',
 	labels: {
@@ -63,5 +62,6 @@ export const Aria: Store = {
 					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3060+Ti'
 			}
 		]
-	}
+	},
+	name: 'aria'
 };

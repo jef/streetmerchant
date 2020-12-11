@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Currys: Store = {
-	name: 'currys',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#product-actions button',
@@ -91,5 +89,7 @@ export const Currys: Store = {
 					'https://www.currys.co.uk/gbuk/rtx-3060-ti/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00313952/xx-criteria.html'
 			}
 		]
-	}
+	},
+	name: 'currys',
+	waitUntil: 'domcontentloaded'
 };

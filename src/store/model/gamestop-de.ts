@@ -1,9 +1,7 @@
 import {Store} from './store';
 
 export const GamestopDE: Store = {
-	name: 'gamestop-de',
 	currency: '€',
-	successStatusCodes: [[0, 399], 404],
 	labels: {
 		inStock: [
 			{
@@ -37,5 +35,7 @@ export const GamestopDE: Store = {
 			series: 'sonyps5de',
 			url: 'https://www.gamestop.de/PS5/Games/60315'
 		}
-	]
+	],
+	name: 'gamestop-de',
+	successStatusCodes: [[0, 399], 404]
 };

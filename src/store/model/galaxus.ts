@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Galaxus: Store = {
-	name: 'galaxus',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -44,5 +43,6 @@ export const Galaxus: Store = {
 			series: 'ryzen5950',
 			url: 'https://www.galaxus.de/de/product/13987916'
 		}
-	]
+	],
+	name: 'galaxus'
 };

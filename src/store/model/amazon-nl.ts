@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const AmazonNl: Store = {
-	name: 'amazon-nl',
 	currency: '€',
 	labels: {
 		captcha: {
@@ -115,5 +114,6 @@ export const AmazonNl: Store = {
 			series: 'ryzen5950',
 			url: 'https://www.amazon.nl/dp/B0815Y8J9N'
 		}
-	]
+	],
+	name: 'amazon-nl'
 };

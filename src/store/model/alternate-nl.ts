@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const AlternateNL: Store = {
-	name: 'alternate-nl',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -168,5 +167,6 @@ export const AlternateNL: Store = {
 			series: '3080',
 			url: 'https://www.alternate.nl/product/1673134'
 		}
-	]
+	],
+	name: 'alternate-nl'
 };

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Otto: Store = {
-	name: 'otto',
 	currency: '€',
 	labels: {
 		inStock: [
@@ -86,5 +85,6 @@ export const Otto: Store = {
 			url:
 				'https://www.otto.de/p/xbox-series-x-1229057353#variationId=1229057354'
 		}
-	]
+	],
+	name: 'otto'
 };

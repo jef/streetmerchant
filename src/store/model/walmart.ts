@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Walmart: Store = {
-	name: 'walmart',
 	currency: '$',
 	labels: {
 		inStock: {
@@ -66,5 +65,6 @@ export const Walmart: Store = {
 			url:
 				'https://www.walmart.com/ip/AMD-Ryzen-9-5900X-12-core-24-thread-Desktop-Processor/159710953'
 		}
-	]
+	],
+	name: 'walmart'
 };

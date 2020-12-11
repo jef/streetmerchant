@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const AmazonDeWarehouse: Store = {
-	name: 'amazon-de-warehouse',
 	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
@@ -60,5 +59,6 @@ export const AmazonDeWarehouse: Store = {
 			series: 'xboxsx',
 			url: 'https://www.amazon.de/gp/offer-listing/B08H93ZRLL'
 		}
-	]
+	],
+	name: 'amazon-de-warehouse'
 };

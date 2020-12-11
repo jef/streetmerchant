@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const PCComponentes: Store = {
-	name: 'pccomponentes',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -315,5 +314,6 @@ export const PCComponentes: Store = {
 			url:
 				'https://www.pccomponentes.com/asus-rog-strix-gaming-geforce-rtx-3070-8gb-gddr6'
 		}
-	]
+	],
+	name: 'pccomponentes'
 };

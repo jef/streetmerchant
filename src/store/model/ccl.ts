@@ -2,10 +2,8 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ccl: Store = {
-	name: 'ccl',
-	currency: '£',
-	waitUntil: 'domcontentloaded',
 	backoffStatusCodes: [403, 429, 503],
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#pnlAddToBasket',
@@ -96,5 +94,7 @@ export const Ccl: Store = {
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-Ti-Graphics-Cards/'
 			}
 		]
-	}
+	},
+	name: 'ccl',
+	waitUntil: 'domcontentloaded'
 };

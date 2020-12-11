@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Comet: Store = {
-	name: 'comet',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -37,5 +36,6 @@ export const Comet: Store = {
 			series: 'xboxss',
 			url: 'https://www.comet.it/xbox-serie-x/xbox-series-s'
 		}
-	]
+	],
+	name: 'comet'
 };

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Coolmod: Store = {
-	name: 'coolmod',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -291,5 +290,6 @@ export const Coolmod: Store = {
 			url:
 				'https://www.coolmod.com/kfa2-geforce-rtx-3070-sg-1-click-oc-8gb-gddr6-tarjeta-grafica-precio'
 		}
-	]
+	],
+	name: 'coolmod'
 };

@@ -209,7 +209,6 @@ for (const microCenterLocation of microCenterLocations) {
 }
 
 export const MicroCenter: Store = {
-	name: 'microcenter',
 	currency: '$',
 	labels: {
 		inStock: {
@@ -221,5 +220,6 @@ export const MicroCenter: Store = {
 			euroFormat: false
 		}
 	},
-	links
+	links,
+	name: 'microcenter'
 };

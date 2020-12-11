@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const AmazonIt: Store = {
-	name: 'amazon-it',
 	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
 	labels: {
@@ -413,5 +412,6 @@ export const AmazonIt: Store = {
 			series: 'sf',
 			url: 'https://www.amazon.it/dp/B07M63H81H'
 		}
-	]
+	],
+	name: 'amazon-it'
 };

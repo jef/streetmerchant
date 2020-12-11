@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const TopAchat: Store = {
-	name: 'topachat',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -293,5 +292,6 @@ export const TopAchat: Store = {
 			url:
 				'https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_ref_est_in20005257.html'
 		}
-	]
+	],
+	name: 'topachat'
 };

@@ -2,7 +2,6 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const Newegg: Store = {
-	name: 'newegg',
 	currency: '$',
 	labels: {
 		captcha: {
@@ -1024,6 +1023,7 @@ export const Newegg: Store = {
 				'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16813119362'
 		}
 	],
+	name: 'newegg',
 	realTimeInventoryLookup: async (itemNumber: string) => {
 		const request_url =
 			'https://www.newegg.com/product/api/ProductRealtime?ItemNumber=' +

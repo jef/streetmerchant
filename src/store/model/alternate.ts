@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Alternate: Store = {
-	name: 'alternate',
 	currency: '€',
 	labels: {
 		inStock: {
@@ -425,5 +424,6 @@ export const Alternate: Store = {
 			series: 'sonyps5c',
 			url: 'https://www.alternate.de/product/1676874'
 		}
-	]
+	],
+	name: 'alternate'
 };

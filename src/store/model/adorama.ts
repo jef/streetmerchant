@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Adorama: Store = {
-	name: 'adorama',
 	currency: '$',
 	labels: {
 		captcha: {
@@ -126,5 +125,6 @@ export const Adorama: Store = {
 			series: '3090',
 			url: 'https://www.adorama.com/asrx3090o24g.html'
 		}
-	]
+	],
+	name: 'adorama'
 };

@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Corsair: Store = {
-	name: 'corsair',
 	currency: '$',
 	labels: {
 		inStock: {
@@ -35,5 +34,6 @@ export const Corsair: Store = {
 			url:
 				'https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020182-NA'
 		}
-	]
+	],
+	name: 'corsair'
 };

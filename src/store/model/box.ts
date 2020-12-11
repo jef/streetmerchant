@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Box: Store = {
-	name: 'box',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#divBuyButton',
@@ -55,5 +53,7 @@ export const Box: Store = {
 				url: 'https://www.box.co.uk/rtx-3060-ti-graphics-cards'
 			}
 		]
-	}
+	},
+	name: 'box',
+	waitUntil: 'domcontentloaded'
 };

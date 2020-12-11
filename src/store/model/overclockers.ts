@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Overclockers: Store = {
-	name: 'overclockers',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#detailbox',
@@ -103,5 +101,7 @@ export const Overclockers: Store = {
 					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3060-ti'
 			}
 		]
-	}
+	},
+	name: 'overclockers',
+	waitUntil: 'domcontentloaded'
 };

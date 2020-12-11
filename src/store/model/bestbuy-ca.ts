@@ -1,9 +1,7 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
-	name: 'bestbuy-ca',
 	currency: '$',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '.addToCartContainer_2uzan',
@@ -180,5 +178,7 @@ export const BestBuyCa: Store = {
 			url:
 				'https://www.bestbuy.ca/en-ca/product/xbox-series-s-512gb-console-new-model-online-only/14964950'
 		}
-	]
+	],
+	name: 'bestbuy-ca',
+	waitUntil: 'domcontentloaded'
 };

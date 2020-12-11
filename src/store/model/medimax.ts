@@ -1,7 +1,6 @@
 import {Store} from './store';
 
 export const Medimax: Store = {
-	name: 'medimax',
 	currency: '€',
 	labels: {
 		inStock: [
@@ -43,5 +42,6 @@ export const Medimax: Store = {
 			url:
 				'https://www.medimax.de/p/1315337/play-station-5-digital-edition-825gb-ssd'
 		}
-	]
+	],
+	name: 'medimax'
 };

@@ -2,9 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ebuyer: Store = {
-	name: 'ebuyer',
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '.purchase-info',
@@ -114,5 +112,7 @@ export const Ebuyer: Store = {
 					'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti'
 			}
 		]
-	}
+	},
+	name: 'ebuyer',
+	waitUntil: 'domcontentloaded'
 };
