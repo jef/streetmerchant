@@ -173,7 +173,8 @@ const browser = {
 		process.env.PAGE_SLEEP_MAX,
 		5000
 	),
-	open: envOrBoolean(process.env.OPEN_BROWSER)
+	open: envOrBoolean(process.env.OPEN_BROWSER),
+	userAgent: ''
 };
 
 const docker = envOrBoolean(process.env.DOCKER);

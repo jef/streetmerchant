@@ -48,6 +48,8 @@ async function main() {
 		headless: config.browser.isHeadless
 	});
 
+	config.browser.userAgent = await browser.userAgent();
+
 	for (const store of storeList.values()) {
 		logger.debug('store links', {meta: {links: store.links}});
 		if (store.setupAction !== undefined) {

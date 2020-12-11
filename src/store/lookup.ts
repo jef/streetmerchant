@@ -163,7 +163,7 @@ async function lookup(browser: Browser, store: Store) {
 		await page.setRequestInterception(true);
 
 		page.setDefaultNavigationTimeout(config.page.timeout);
-		await page.setUserAgent(await getRandomUserAgent(browser));
+		await page.setUserAgent(await getRandomUserAgent());
 
 		let adBlockRequestHandler: any;
 		let pageProxy;

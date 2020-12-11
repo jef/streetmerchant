@@ -3,6 +3,7 @@
 .vscode/
 build/
 node_modules/
+src/config/*.yaml
 
 .env
 dotenv
