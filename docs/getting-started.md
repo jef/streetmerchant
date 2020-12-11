@@ -53,6 +53,11 @@ docker run --cap-add=SYS_ADMIN \
 
 To customize streetmerchant, make a copy of `dotenv-example` as `dotenv` and make any changes to your liking. View [Reference](reference/application.md) for more information on variables and their usage.
 
+
+## Building docker
+
+[Docker-Docs](docs/docker.md)
+
 ???+ tip
     All environment variables are optional.
 
