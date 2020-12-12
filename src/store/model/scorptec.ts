@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Scorptec: Store = {
 	backoffStatusCodes: [403, 429],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#delivery-wrapper > div.product-stock-text',

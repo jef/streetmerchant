@@ -2,7 +2,8 @@ import {Store} from './store';
 
 export const Bpctech: Store = {
 	backoffStatusCodes: [403, 429],
-	labels: {
+	currency: '$',
+	labels: {		
 		inStock: {
 			container: '.productStockStatus',
 			text: ['In Stock at BPC Tech']

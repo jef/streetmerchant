@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Centrecom: Store = {
 	backoffStatusCodes: [403, 429],
+	currency: '$',
 	labels: {
 		inStock: {
 			container:
