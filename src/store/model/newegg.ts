@@ -818,7 +818,7 @@ export const Newegg: Store = {
 			brand: 'sapphire',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202390',
-			model: 'nitro+ SE',
+			model: 'nitro+ se',
 			series: 'rx6800xt',
 			url:
 				'https://www.newegg.com/sapphire-radeon-rx-6800-xt-11304-01-20g/p/N82E16814202390'
