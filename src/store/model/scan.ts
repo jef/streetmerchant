@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Scan: Store = {
+	currency: '£',
 	disableAdBlocker: true,
 	labels: {
 		captcha: [
@@ -29,7 +30,7 @@ export const Scan: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.scan.co.uk/products/msi-geforce-rtx-2060-ventus-xs-oc-6gb-gddr6-vr-ready-graphics-card-1920-core-1710mhz-boost'
+				'https://www.scan.co.uk/products/nvidia-shield-tv-media-streamer-tegra-x1plus-processor-8gb-storage-2gb-ram-4k-hdr-ready-ai-upscaling'
 		},
 		{
 			brand: 'sony',

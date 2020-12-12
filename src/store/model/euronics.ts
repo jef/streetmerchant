@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Euronics: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.purchaseButtonsWidth',

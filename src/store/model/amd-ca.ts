@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AmdCa: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.btn-shopping-cart',

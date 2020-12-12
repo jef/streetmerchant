@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const WalmartCa: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '[data-automation="cta-button"]',

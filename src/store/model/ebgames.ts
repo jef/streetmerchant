@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const EbGames: Store = {
+	currency: '$',
 	labels: {
 		maxPrice: {
 			container: '.singleVariantText .prodPriceCont'

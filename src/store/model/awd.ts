@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Awd: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.vs-stock .ty-qty-in-stock',

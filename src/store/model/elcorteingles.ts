@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Elcorteingles: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '€',
 	labels: {
 		// Captcha: {
 		// 	container: 'body',

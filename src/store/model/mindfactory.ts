@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Mindfactory: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.pshipping',

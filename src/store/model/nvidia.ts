@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Nvidia: Store = {
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',

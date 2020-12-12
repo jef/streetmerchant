@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const ProshopDK: Store = {
+	currency: 'kr.',
 	labels: {
 		inStock: {
 			container: '.site-stock',
