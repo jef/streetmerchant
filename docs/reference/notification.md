@@ -8,6 +8,7 @@ You can test your notification configuration by running `npm run test:notificati
 |---|---|
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier). |
 | `PLAY_SOUND` | Play this sound notification if a product is found. Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
+| `SOUND_PLAYER` | Override the default sound player using the specified executable. |
 
 ???+ attention
     If you're on Windows, you must have the proper library to run.
@@ -16,7 +17,7 @@ You can test your notification configuration by running `npm run test:notificati
 
 | Environment variable | Description |
 |:---:|---|
-| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify. Can be comma separated |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify |
 | `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
@@ -25,6 +26,7 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
+| `DISCORD_NOTIFY_GROUP_DARKHERO` | Discord group to notify on Dark Hero stock |
 | `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
@@ -32,9 +34,8 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 
 ???+ note
-    If you don't assign a value to a series group it will always fallback to `DISCORD_NOTIFY_GROUP`.
+    All ground can be comma separated. `DISCORD_NOTIFY_GROUP` is always used if set.
 
-???+ note
     - If you're using a role, please use `<@&2834729847239842>`
     - If you're using a user, please use `<@2834729847239842>`
 

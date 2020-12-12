@@ -197,6 +197,12 @@ for (const microCenterLocation of microCenterLocations) {
 				model: 'amd reference',
 				series: 'rx6900xt',
 				url: `https://www.microcenter.com/product/632048/asrock-amd-radeon-rx-6900-xt-triple-fan-16gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
+				brand: 'asus',
+				model: 'crosshair viii',
+				series: 'darkhero',
+				url: `https://www.microcenter.com/product/631349/asus-x570-rog-crosshair-viii-dark-hero-amd-am4-atx-motherboard/?storeid=${storeId}`
 			}
 		]);
 	}

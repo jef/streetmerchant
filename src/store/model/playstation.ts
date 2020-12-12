@@ -3,10 +3,16 @@ import fetch from 'node-fetch';
 
 export const PlayStation: Store = {
 	labels: {
-		inStock: {
-			container: '.productHero-info .add-to-cart:not(.hide)',
-			text: ['Add']
-		},
+		inStock: [
+			{
+				container: '.productHero-info .add-to-cart:not(.hide)',
+				text: ['Add']
+			},
+			{
+				container: '.bulleted-info.queue',
+				text: ['queue']
+			}
+		],
 		outOfStock: {
 			container: '.productHero-info .out-stock-wrpr:not(.hide)',
 			text: ['Out of Stock']

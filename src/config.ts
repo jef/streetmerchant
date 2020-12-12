@@ -1,10 +1,13 @@
+import {existsSync, readFileSync} from 'fs';
 import {banner} from './banner';
-
-import {config as config_} from 'dotenv';
+import dotenv from 'dotenv';
 import path from 'path';
-import {readFileSync} from 'fs';
 
-config_({path: path.resolve(__dirname, '../.env')});
+if (existsSync(path.resolve(__dirname, '../dotenv'))) {
+	dotenv.config({path: path.resolve(__dirname, '../dotenv')});
+} else {
+	dotenv.config({path: path.resolve(__dirname, '../.env')});
+}
 
 console.info(
 	banner.render(
@@ -66,8 +69,8 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 
 /**
  * Returns environment variable, given number, or default number,
- * while handling .env input errors for a Min/Max pair.
- * .env errors handled:
+ * while handling dotenv input errors for a Min/Max pair.
+ * dotenv errors handled:
  * - Min/Max swapped (Min larger than Max, Max smaller than Min)
  * - Min larger than default Max when no Max defined
  * - Max smaller than default Min when no Min defined
@@ -106,8 +109,8 @@ function envOrNumberMin(
 
 /**
  * Returns environment variable, given number, or default number,
- * while handling .env input errors for a Min/Max pair.
- * .env errors handled:
+ * while handling dotenv input errors for a Min/Max pair.
+ * dotenv errors handled:
  * - Min/Max swapped (Min larger than Max, Max smaller than Min)
  * - Min larger than default Max when no Max defined
  * - Max smaller than default Min when no Min defined
@@ -169,10 +172,11 @@ const browser = {
 		process.env.PAGE_SLEEP_MAX,
 		5000
 	),
-	open: envOrBoolean(process.env.OPEN_BROWSER)
+	open: envOrBoolean(process.env.OPEN_BROWSER),
+	userAgent: ''
 };
 
-const docker = envOrBoolean(process.env.DOCKER);
+const docker = envOrBoolean(process.env.DOCKER, false);
 
 const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
@@ -185,6 +189,7 @@ const notifications = {
 			3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
 			3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
 			3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
+			darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
 			rx6800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800),
 			rx6800xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800XT),
 			rx6900xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6900XT),
@@ -270,6 +275,7 @@ const notifications = {
 		channel: envOrString(process.env.SLACK_CHANNEL),
 		token: envOrString(process.env.SLACK_TOKEN)
 	},
+	soundPlayer: envOrString(process.env.SOUND_PLAYER),
 	telegram: {
 		accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
 		chatId: envOrArray(process.env.TELEGRAM_CHAT_ID)
@@ -306,9 +312,6 @@ const page = {
 	inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
 	screenshot: envOrBoolean(process.env.SCREENSHOT),
 	timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
-	userAgents: envOrArray(process.env.USER_AGENT, [
-		'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
-	]),
 	width: 1920
 };
 
@@ -334,6 +337,7 @@ const store = {
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
 			3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+			darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
 			rx6800: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800),
 			rx6800xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800XT),
 			rx6900xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6900XT),

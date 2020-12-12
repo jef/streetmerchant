@@ -394,6 +394,18 @@ export const Alternate: Store = {
 			url: 'https://www.alternate.de/product/1697044'
 		},
 		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: 'rx6900xt',
+			url: 'https://www.alternate.de/product/1702773'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url: 'https://www.alternate.de/product/1700508'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',
