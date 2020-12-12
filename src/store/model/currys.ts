@@ -81,7 +81,7 @@ export const Currys: Store = {
 			series: 'xboxss',
 			url:
 				'https://www.currys.co.uk/gbuk/gaming/console-gaming/consoles/microsoft-xbox-series-s-512-gb-ssd-10205195-pdt.html'
-		},
+		}
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
