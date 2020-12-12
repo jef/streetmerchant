@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container:

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Azerty: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.orderdelay',

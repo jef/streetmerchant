@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Currys: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#product-actions button',

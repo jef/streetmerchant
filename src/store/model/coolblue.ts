@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Coolblue: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.product-order',

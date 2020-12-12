@@ -209,6 +209,7 @@ for (const microCenterLocation of microCenterLocations) {
 }
 
 export const MicroCenter: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#cart-options',

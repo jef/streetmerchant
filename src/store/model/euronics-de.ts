@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const EuronicsDE: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.buy-btn--cart-text',

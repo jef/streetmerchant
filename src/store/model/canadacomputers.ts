@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const CanadaComputers: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: 'div[class="pi-prod-availability"]',

@@ -2,10 +2,11 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ebuyer: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.purchase-info',
-			text: ['add to basket', 'in stock']
+			text: ['add to basket', 'in stock', 'pre-order']
 		},
 		maxPrice: {
 			container: '.purchase-info__price .price',

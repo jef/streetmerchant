@@ -3,6 +3,7 @@ import {logger} from '../../logger';
 import {parseCard} from './helpers/card';
 
 export const Very: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.stockMessaging .indicator',
