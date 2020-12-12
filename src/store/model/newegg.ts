@@ -598,6 +598,51 @@ export const Newegg: Store = {
 			url: 'https://www.newegg.com/p/N82E16868105274'
 		},
 		{
+			brand: 'asrock',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930051',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/asrock-radeon-rx-6900-xt-rx6900xt-16g/p/N82E16814930051'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932384',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6900-xt-gv-r69xt-16gc-b/p/N82E16814932384'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137618',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/msi-radeon-rx-6900-xt-rx-6900-xt-16g/p/N82E16814137618'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131774',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6900-xt-axrx-6900xt-16gbd6-m2dhc/p/N82E16814131774'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202393',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6900-xt-21308-01-20g/p/N82E16814202393'
+		},
+		{
 			brand: 'gigabyte',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932373',
@@ -939,6 +984,42 @@ export const Newegg: Store = {
 			series: '3060ti',
 			url:
 				'https://www.newegg.com/asus-geforce-rtx-3060-ti-ko-rtx3060ti-o8g-gaming/p/N82E16814126474'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131767',
+			model: 'red devil',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-xt-axrx-6800xt-16gbd6-2dhce-oc/p/N82E16814131767'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131770',
+			model: 'red devil',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-2dhce-oc/p/N82E16814131770'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131773',
+			model: 'red dragon',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-3dhr-oc/p/N82E16814131773'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16813119362',
+			model: 'crosshair viii',
+			series: 'darkhero',
+			url:
+				'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16813119362'
 		}
 	],
 	name: 'newegg',

@@ -1,6 +1,6 @@
-import {startAPIServer, stopAPIServer} from './web';
+import {config} from './config'; // Needs to be loaded first
+import {startAPIServer, stopAPIServer} from './web'; // eslint-disable-line sort-imports
 import {Browser} from 'puppeteer';
-import {config} from './config';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
@@ -26,8 +26,13 @@ async function main() {
 	}
 
 	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	// https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
 	if (config.docker) {
 		args.push('--disable-dev-shm-usage');
+		args.push('--no-sandbox');
+		args.push('--disable-setuid-sandbox');
+		args.push('--headless');
+		args.push('--disable-gpu');
 	}
 
 	// Add the address of the proxy server if defined
@@ -37,8 +42,11 @@ async function main() {
 		);
 	}
 
-	await stop();
+	if (args.length > 0) {
+		logger.info('ℹ puppeteer config: ', args);
+	}
 
+	await stop();
 	browser = await puppeteer.launch({
 		args,
 		defaultViewport: {
@@ -47,6 +55,8 @@ async function main() {
 		},
 		headless: config.browser.isHeadless
 	});
+
+	config.browser.userAgent = await browser.userAgent();
 
 	for (const store of storeList.values()) {
 		logger.debug('store links', {meta: {links: store.links}});

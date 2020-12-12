@@ -1,14 +1,11 @@
 ---
-name: 🐛 Bug report
+name: "\U0001F41B Bug report"
 about: Report a bug for this project
 title: ''
-labels: 'type: bug'
+labels: ''
 assignees: jef
 
 ---
-
-<!--- Feel free to join our discord server (https://discord.gg/gbVY4vB9JF) for general support --->
-<!--- If this acts as a feature request please ask yourself if this modification is something the whole userbase will benefit from --->
 
 ## Expected Behavior
 
@@ -30,7 +27,7 @@ assignees: jef
 ## Environment
 
 **OS:**
-**.env file:**
+**dotenv file:**
 
 ```dotenv
 

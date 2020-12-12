@@ -120,6 +120,34 @@ export const Mindfactory: Store = {
 			series: 'ryzen5950',
 			url:
 				'https://www.mindfactory.de/product_info.php/AMD-Ryzen-9-5950X-16x-3-40GHz-So-AM4-WOF_1380729.html'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro oc',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Sapphire-Radeon-RX-6800-NITRO--OC-HDMI-3xDP_1388341.html'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6800-Drei-Luefter-256bit-DDR6--Retail-_1388348.html'
+		},
+		{
+			brand: 'asrock',
+			model: 'phantom gaming',
+			series: 'rx6800xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-ASRock-Radeon-RX-6800-XT-PHANTOM-GAMING-DDR6_1386619.html'
+		},
+		{
+			brand: 'asrock',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-ASRock-Radeon-6900-XT--Retail-_1388342.html'
 		}
 	],
 	name: 'mindfactory'
