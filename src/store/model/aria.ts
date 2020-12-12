@@ -3,7 +3,6 @@ import {getProductLinksBuilder} from './helpers/card';
 
 export const Aria: Store = {
 	currency: '£',
-	waitUntil: 'domcontentloaded',
 	labels: {
 		inStock: {
 			container: '#addQuantity',
@@ -63,5 +62,6 @@ export const Aria: Store = {
 			}
 		]
 	},
-	name: 'aria'
+	name: 'aria',
+	waitUntil: 'domcontentloaded'
 };

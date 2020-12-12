@@ -1,8 +1,8 @@
 import {Store} from './store';
 
 export const AmazonEs: Store = {
-	currency: '€',
 	backoffStatusCodes: [403, 429, 503],
+	currency: '€',
 	labels: {
 		captcha: {
 			container: 'body',
