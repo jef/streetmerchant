@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Game: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.buyingOptions',

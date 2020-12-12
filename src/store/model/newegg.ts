@@ -2,6 +2,7 @@ import {Store} from './store';
 import fetch from 'node-fetch';
 
 export const Newegg: Store = {
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',

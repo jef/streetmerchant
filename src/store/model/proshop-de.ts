@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const ProshopDE: Store = {
+	currency: '€',
 	labels: {
 		maxPrice: {
 			container:

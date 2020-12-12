@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.addToCartContainer_2uzan',

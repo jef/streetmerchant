@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Kabum: Store = {
+	currency: 'R$',
 	labels: {
 		inStock: {
 			container: '.botao-comprar',

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AmazonNl: Store = {
+	currency: '€',
 	labels: {
 		captcha: {
 			container: 'body',

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AntOnline: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.uk-button',

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const GamestopDE: Store = {
+	currency: '€',
 	labels: {
 		inStock: [
 			{

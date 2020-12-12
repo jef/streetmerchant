@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AsusDe: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.buybox--button',

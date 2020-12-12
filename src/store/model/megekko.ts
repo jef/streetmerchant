@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Megekko: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.product-order .text_green',
