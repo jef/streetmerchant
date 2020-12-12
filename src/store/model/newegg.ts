@@ -8,23 +8,27 @@ export const Newegg: Store = {
 			container: 'body',
 			text: ['are you a human?']
 		},
-		inStock: {
-			container: '#ProductBuy',
-			text: ['add to cart']
-		},
+		inStock: [
+			{
+				container: '.product-buy',
+				text: ['add to cart']
+			},
+			{
+				container: '.loading-text',
+				text: ['add to cart']
+			}
+		],
 		maxPrice: {
-			container:
-				'#app > div.page-content > div.page-section > div > div > div.row-side > div.product-buy-box > div:nth-child(3) > div.product-price > ul > li.price-current'
+			container: '.price-current'
 		}
 	},
 	links: [
 		{
 			brand: 'test:brand',
-			itemNumber: '14-500-495',
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.newegg.com/zotac-geforce-rtx-2060-zt-t20600k-10m/p/N82E16814500495'
+				'https://www.newegg.com/western-digital-blue-500gb/p/N82E16820250087?Item=N82E16820250087'
 		},
 		{
 			brand: 'msi',
