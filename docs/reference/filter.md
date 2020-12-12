@@ -69,7 +69,7 @@ Used with the `STORES` variable.
 | Cyberport | DE | `cyberport` |
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
-| El Corte Inglés | US | `elcorteingles`|
+| El Corte Inglés | ES | `elcorteingles`|
 | ePrice | IT | `eprice`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
