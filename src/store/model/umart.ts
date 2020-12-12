@@ -6,7 +6,7 @@ export const Umart: Store = {
 	labels: {
 		inStock: {
 			container: '#youhuo_delivery',
-			text: ['In Stock - for Delivery']
+			text: ['in stock']
 		},
 		maxPrice: {
 			container: '.goods-price',
@@ -14,7 +14,7 @@ export const Umart: Store = {
 		},
 		outOfStock: {
 			container: 'div.price-box > div.stock-label',
-			text: ['Out Of Stock - for Delivery']
+			text: ['out of stock']
 		}
 	},
 	links: [

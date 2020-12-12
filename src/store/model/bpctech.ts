@@ -6,7 +6,7 @@ export const Bpctech: Store = {
 	labels: {
 		inStock: {
 			container: '.productStockStatus',
-			text: ['In Stock at BPC Tech']
+			text: ['in stock']
 		},
 		maxPrice: {
 			container: 'div.price-box.price-final_price > span > span',

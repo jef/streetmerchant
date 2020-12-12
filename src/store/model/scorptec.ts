@@ -6,11 +6,11 @@ export const Scorptec: Store = {
 	labels: {
 		inStock: {
 			container: '#delivery-wrapper > div.product-stock-text',
-			text: [' IN STOCK']
+			text: ['in stock']
 		},
 		outOfStock: {
 			container: '#delivery-wrapper > div.product-stock-text',
-			text: [' SOLD OUT ']
+			text: ['sold out']
 		}
 	},
 	links: [
