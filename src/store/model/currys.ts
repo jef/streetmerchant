@@ -53,7 +53,35 @@ export const Currys: Store = {
 			series: 'ryzen5950',
 			url:
 				'https://www.currys.co.uk/gbuk/computing-accessories/components-upgrades/processors/amd-ryzen-9-5950x-processor-10216688-pdt.html'
-		}
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url:
+				'https://www.currys.co.uk/gbuk/gaming/console-gaming/consoles/sony-playstation-5-825-gb-10203370-pdt.html'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url:
+				'https://www.currys.co.uk/gbuk/playstation-5-sony-1714-commercial.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url:
+				'https://www.currys.co.uk/gbuk/gaming/console-gaming/consoles/microsoft-xbox-series-x-1-tb-10203371-pdt.html'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url:
+				'https://www.currys.co.uk/gbuk/gaming/console-gaming/consoles/microsoft-xbox-series-s-512-gb-ssd-10205195-pdt.html'
+		},
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
