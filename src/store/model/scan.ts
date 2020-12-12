@@ -30,7 +30,7 @@ export const Scan: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.scan.co.uk/products/nvidia-shield-tv-media-streamer-tegra-x1plus-processor-8gb-storage-2gb-ram-4k-hdr-ready-ai-upscaling'
+				'https://www.scan.co.uk/products/msi-geforce-rtx-2060-ventus-xs-oc-6gb-gddr6-vr-ready-graphics-card-1920-core-1710mhz-boost'
 		},
 		{
 			brand: 'sony',
@@ -43,48 +43,6 @@ export const Scan: Store = {
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.scan.co.uk/products/playstation-5-digital-edition'
-		},
-		{
-			brand: 'powercolor',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams'
-		},
-		{
-			brand: 'sapphire',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu'
-		},
-		{
-			brand: 'asus',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.scan.co.uk/products/asus-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1815mhz-gpu-2105mhz'
-		},
-		{
-			brand: 'msi',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.scan.co.uk/products/msi-radeon-rx-6800-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-3840-streams-1700mhz-gpu'
-		},
-		{
-			brand: 'powercolor',
-			model: 'amd reference',
-			series: 'rx6800xt',
-			url:
-				'https://www.scan.co.uk/products/powercolor-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams'
-		},
-		{
-			brand: 'sapphire',
-			model: 'amd reference',
-			series: 'rx6800xt',
-			url:
-				'https://www.scan.co.uk/products/sapphire-radeon-rx-6800-xt-16gb-gddr6-ray-tracing-graphics-card-7nm-rdna2-4608-streams-2015mhz'
 		},
 		{
 			brand: 'amd',
@@ -125,6 +83,21 @@ export const Scan: Store = {
 		ttl: 300000,
 		urls: [
 			{
+				series: 'rx6800',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6800-pcie-40-graphics-cards'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6800-xt-pcie-40-graphics-cards'
+			},
+			{
+				series: 'rx6900xt',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6900-xt-pcie-40-graphics-cards'
+			},
+			{
 				series: '3060ti',
 				url:
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
@@ -143,11 +116,6 @@ export const Scan: Store = {
 				series: '3090',
 				url:
 					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/nvidia-geforce-rtx-3090-graphics-cards'
-			},
-			{
-				series: '3060ti',
-				url:
-					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
 			}
 		]
 	},
