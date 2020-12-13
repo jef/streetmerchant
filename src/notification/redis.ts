@@ -6,7 +6,7 @@ import redis from 'redis';
 const {url} = config.notifications.redis;
 
 const client = redis.createClient({
-    url
+	url,
 });
 
 const updateRedis = (link: Link, store: Store) => {
@@ -25,13 +25,13 @@ const updateRedis = (link: Link, store: Store) => {
 			const redisUpdated = client.set(key, JSON.stringify(value));
 
 			if (redisUpdated) {
-				logger.error('✖ couldn\'t update redis');
+				logger.error("✖·couldn't update redis");
 			} else {
 				logger.info('✔ redis updated');
 			}
 		}
 	} catch (error: unknown) {
-		logger.error('✖ couldn\'t update redis', error);
+		logger.error("✖·couldn't update redis", error);
 	}
 };
 
