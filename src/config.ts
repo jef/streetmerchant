@@ -293,16 +293,15 @@ const notifications = {
 		clientSecret: envOrString(process.env.TWITCH_CLIENT_SECRET),
 		refreshToken: envOrString(process.env.TWITCH_REFRESH_TOKEN)
 	},
+	redis: {
+		url: envOrString(process.env.REDIS_URL)
+	},
 	twitter: {
 		accessTokenKey: envOrString(process.env.TWITTER_ACCESS_TOKEN_KEY),
 		accessTokenSecret: envOrString(process.env.TWITTER_ACCESS_TOKEN_SECRET),
 		consumerKey: envOrString(process.env.TWITTER_CONSUMER_KEY),
 		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
-	},
-	redis: {
-		host: envOrString(process.env.REDIS_HOST),
-		databaseId: envOrNumber(process.env.REDIS_DATABASE_ID)
 	}
 };
 
