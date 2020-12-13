@@ -3,10 +3,10 @@ import {config} from '../config';
 import {logger} from '../logger';
 import redis from 'redis';
 
-const { url } = config.notifications.redis;
+const {url} = config.notifications.redis;
 
 const client = redis.createClient({
-	url: url,
+    url
 });
 
 const updateRedis = (link: Link, store: Store) => {
@@ -19,19 +19,19 @@ const updateRedis = (link: Link, store: Store) => {
 				labels: store.labels,
 				links: store.links,
 				name: store.name,
-				updatedAt: new Date().toUTCString(),
+				updatedAt: new Date().toUTCString()
 			};
 
 			const redisUpdated = client.set(key, JSON.stringify(value));
 
 			if (redisUpdated) {
-				logger.error("✖ couldn't update redis");
+				logger.error('✖ couldn\'t update redis');
 			} else {
-				logger.info("✔ redis updated");
+				logger.info('✔ redis updated');
 			}
 		}
-	} catch (error) {
-		logger.error("✖ couldn't update redis", error);
+	} catch (error: unknown) {
+		logger.error('✖ couldn\'t update redis', error);
 	}
 };
 
