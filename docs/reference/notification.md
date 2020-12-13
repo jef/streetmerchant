@@ -30,6 +30,8 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
+| `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
+| `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
 | `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 

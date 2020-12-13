@@ -15,8 +15,10 @@ import {Amd} from './amd';
 import {AmdCa} from './amd-ca';
 import {AmdDe} from './amd-de';
 import {AmdIt} from './amd-it';
+import {AmdUk} from './amd-uk';
 import {AntOnline} from './antonline';
 import {Argos} from './argos';
+import {ArgosIE} from './argos-ie';
 import {Aria} from './aria';
 import {Arlt} from './arlt';
 import {Asus} from './asus';
@@ -53,6 +55,8 @@ import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
+import {GamestopIE} from './gamestop-ie';
+import {HarveyNormanIE} from './harveynorman-ie';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
@@ -80,9 +84,11 @@ import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
 import {SmythsToys} from './smythstoys';
+import {SmythsToysIE} from './smythstoys-ie';
 import {Spielegrotte} from './spielegrotte';
 import {Store} from './store';
 import {Target} from './target';
+import {TescoIE} from './tesco-ie';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
 import {Umart} from './umart';
@@ -113,8 +119,10 @@ export const storeList = new Map([
 	[AmdCa.name, AmdCa],
 	[AmdDe.name, AmdDe],
 	[AmdIt.name, AmdIt],
+	[AmdUk.name, AmdUk],
 	[AntOnline.name, AntOnline],
 	[Argos.name, Argos],
+	[ArgosIE.name, Argos],
 	[Aria.name, Aria],
 	[Arlt.name, Arlt],
 	[Asus.name, Asus],
@@ -151,6 +159,8 @@ export const storeList = new Map([
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
 	[GamestopDE.name, GamestopDE],
+	[GamestopIE.name, GamestopIE],
+	[HarveyNormanIE.name, HarveyNormanIE],
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[Medimax.name, Medimax],
@@ -177,9 +187,11 @@ export const storeList = new Map([
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Scorptec.name, Scorptec],
+	[SmythsToysIE.name, SmythsToysIE],
 	[SmythsToys.name, SmythsToys],
 	[Spielegrotte.name, Spielegrotte],
 	[Target.name, Target],
+	[TescoIE.name, TescoIE],
 	[TopAchat.name, TopAchat],
 	[ToysRUs.name, ToysRUs],
 	[Umart.name, Umart],

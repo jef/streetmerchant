@@ -48,6 +48,7 @@ Used with the `STORES` variable.
 | AMD | IT | `amd-it`|
 | AntOnline | US | `antonline`|
 | Argos | UK | `argos`|
+| Argos | IE | `argos-ie`|
 | Aria PC | UK | `aria`|
 | ARLT | DE | `arlt`|
 | ASUS | US | `asus` |
@@ -72,7 +73,7 @@ Used with the `STORES` variable.
 | Cyberport | DE | `cyberport` |
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
-| El Corte Inglés | US | `elcorteingles`|
+| El Corte Inglés | ES | `elcorteingles`|
 | ePrice | IT | `eprice`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
@@ -83,6 +84,8 @@ Used with the `STORES` variable.
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
+| Gamestop | IE | `gamestop-ie`|
+| Harvey Normans | IE | | `harveynorman-ie` |
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
@@ -110,8 +113,10 @@ Used with the `STORES` variable.
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
 | Smyths Toys | UK | `smythstoys`|
+| Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
 | Target | US | `target`|
+| Tesco | IE | `tesco-ie`|
 | Toys R Us | US | `toysrus` |
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
