@@ -1,4 +1,11 @@
-import {Browser, Page, PageEventObj, Request, Response} from 'puppeteer';
+import {
+	Browser,
+	Page,
+	PageEventObj,
+	Request,
+	RespondOptions,
+	Response
+} from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
 import {Selector, getPrice, pageIncludesLabels} from './includes-labels';
@@ -95,6 +102,14 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
 			resolve(true);
 		};
 
+		const respondFunc = async (response: RespondOptions) => {
+			try {
+				await request.respond(response);
+			} catch {}
+
+			resolve(true);
+		};
+
 		const requestProxy = new Proxy(request, {
 			get(target, prop, receiver) {
 				if (prop === 'continue') {
@@ -105,9 +120,14 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
 					return abortFunc;
 				}
 
+				if (prop === 'respond') {
+					return respondFunc;
+				}
+
 				return Reflect.get(target, prop, receiver);
 			}
 		});
+
 		adBlockRequestHandler(requestProxy);
 	});
 }
@@ -220,7 +240,6 @@ async function lookup(browser: Browser, store: Store) {
 			);
 			const client = await page.target().createCDPSession();
 			await client.send('Network.clearBrowserCookies');
-			// Await client.send('Network.clearBrowserCache');
 		}
 
 		if (pageProxy) {
