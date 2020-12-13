@@ -64,6 +64,11 @@ export const Ccl: Store = {
 		}),
 		urls: [
 			{
+				series: '3060ti',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-Ti-Graphics-Cards/'
+			},
+			{
 				series: '3070',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3070-Graphics-Cards/'
@@ -89,9 +94,9 @@ export const Ccl: Store = {
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-XT-Graphics-Cards/'
 			},
 			{
-				series: '3060ti',
+				series: 'rx6900xt',
 				url:
-					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-Ti-Graphics-Cards/'
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/attributeslist/1268064/'
 			}
 		]
 	},
