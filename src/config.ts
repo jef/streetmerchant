@@ -301,8 +301,7 @@ const notifications = {
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
 	},
 	redis: {
-		host: envOrString(process.env.REDIS_HOST),
-		databaseId: envOrNumber(process.env.REDIS_DATABASE_ID)
+		url: envOrString(process.env.REDIS_URL)
 	}
 };
 

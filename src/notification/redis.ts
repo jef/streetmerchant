@@ -1,39 +1,41 @@
 import { config } from "../config";
 import {Link, Store} from '../store/model';
-import redis, { Callback } from 'redis';
+import redis from 'redis';
 import { logger } from "../logger";
 
-const {host, databaseId} = config.notifications.redis;
+const {url} = config.notifications.redis;
 
 const client = redis.createClient({
-    host: host,
-    db: databaseId ?? 1
+    url: url
 });
 
 const updateRedis = (link: Link, store: Store) => {
-    try {
-        if(host && databaseId)
+
+    try 
     {
-        const key = `${store.name}:${link.brand}:${link.model}`;
+        if(url)
+        {
+            const key = `${store.name}:${link.brand}:${link.model}`;
 
-        const value = {
-            ...link,
-            labels: store.labels,
-            name: store.name,
-            links: store.links,
-            updatedAt: new Date().toUTCString()
-        };
+            const value = {
+                ...link,
+                labels: store.labels,
+                name: store.name,
+                links: store.links,
+                updatedAt: new Date().toUTCString()
+            };
 
-        const redisUpdated = client.set(key, JSON.stringify(value));
+            const redisUpdated = client.set(key, JSON.stringify(value));
 
-        if (redisUpdated) {
-            logger.error("✖ couldn't update redis");
-        }
-        else {
-            logger.info('✔ redis updated');
+            if (redisUpdated) {
+                logger.error("✖ couldn't update redis");
+            }
+            else {
+                logger.info('✔ redis updated');
+            }
         }
     }
-    } catch (error) {
+    catch (error) {
         logger.error("✖ couldn't update redis", error);
     }
 }
