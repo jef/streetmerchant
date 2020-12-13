@@ -1,7 +1,7 @@
-import {config} from "../config";
-import {Link, Store} from "../store/model";
-import {logger} from "../logger";
-import redis from "redis";
+import {Link, Store} from '../store/model';
+import {config} from '../config';
+import {logger} from '../logger';
+import redis from 'redis';
 
 const {url} = config.notifications.redis;
 
@@ -13,15 +13,15 @@ const updateRedis = (link: Link, store: Store) => {
 
     try 
     {
-        if(url)
+        if (url)
         {
             const key = `${store.name}:${link.brand}:${link.model}`;
 
             const value = {
                 ...link,
                 labels: store.labels,
-                name: store.name,
                 links: store.links,
+                name: store.name,
                 updatedAt: new Date().toUTCString()
             };
 
