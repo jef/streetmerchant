@@ -299,6 +299,10 @@ const notifications = {
 		consumerKey: envOrString(process.env.TWITTER_CONSUMER_KEY),
 		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
+	},
+	redis: {
+		host: envOrString(process.env.REDIS_HOST),
+		databaseId: envOrNumber(process.env.REDIS_DATABASE_ID)
 	}
 };
 
