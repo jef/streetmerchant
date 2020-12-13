@@ -12,7 +12,9 @@ const client = redis.createClient({
 const updateRedis = (link: Link, store: Store) => {
 	try {
 		if (url) {
-			const key = `${store.name}:${link.brand}:${link.model}`;
+			const key = `${store.name}:${link.brand}:${link.model}`
+				.split(' ')
+				.join('-');
 
 			const value = {
 				...link,
@@ -24,14 +26,14 @@ const updateRedis = (link: Link, store: Store) => {
 
 			const redisUpdated = client.set(key, JSON.stringify(value));
 
-			if (redisUpdated) {
-				logger.error("✖·couldn't update redis");
+			if (!redisUpdated) {
+				logger.error(`✖ couldn't update redis for key (${key})`);
 			} else {
 				logger.info('✔ redis updated');
 			}
 		}
 	} catch (error: unknown) {
-		logger.error("✖·couldn't update redis", error);
+		logger.error("✖ couldn't update redis", error);
 	}
 };
 
