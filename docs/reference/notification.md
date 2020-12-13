@@ -146,7 +146,7 @@ Generate token at https://pushover.net/apps/build.
 
 | Environment variable | Description |
 |:---:|---|
-| `REDIS_URL` | Connection string in format (redis://[username]:[password]@[host][:port]/[database-id]) |
+| `REDIS_URL` | Connection string in format (redis://[username]:[password]@[host][:port]/[database-id]) (redis://localhost:6379/1) |
 
 ## Slack
 
