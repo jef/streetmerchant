@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Adorama: Store = {
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',

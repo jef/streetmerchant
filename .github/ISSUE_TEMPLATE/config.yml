@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💡 Have an idea for a new feature?
+    url: https://github.com/jef/streetmerchant/discussions
+    about: Create a new idea discussion!
+  - name: 🙇 Need help with streetmerchant?
+    url: https://github.com/jef/streetmerchant/discussions
+    about: Create a new help discussion if it hasn't been asked before!
+  - name: 💬 Want to talk with others that use streetmerchant?
+    url: https://discord.gg/gbVY4vB9JF
+    about: Join our Discord to hangout and talk shop!

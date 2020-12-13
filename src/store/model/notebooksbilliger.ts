@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Notebooksbilliger: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.warehouse',
@@ -271,7 +272,8 @@ export const Notebooksbilliger: Store = {
 			brand: 'amd',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 'https://www.notebooksbilliger.de/amd+ryzen+ryzen+7+5800x+cpu+684018'
+			url:
+				'https://www.notebooksbilliger.de/amd+ryzen+ryzen+7+5800x+cpu+684018'
 		},
 		{
 			brand: 'amd',

@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 export const Asus: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#item_add_cart',
@@ -51,17 +52,26 @@ export const Asus: Store = {
 			model: 'strix oc',
 			series: '3080',
 			url: 'https://store.asus.com/us/item/202009AM290000002'
+		},
+		{
+			brand: 'asus',
+			itemNumber: '202011AM200000003',
+			model: 'crosshair viii',
+			series: 'darkhero',
+			url: 'https://store.asus.com/us/item/202011AM200000003'
 		}
 	],
 	name: 'asus',
 	realTimeInventoryLookup: async (itemNumber: string) => {
-		const request_url = 'https://store.asus.com/us/category/get_real_time_data';
+		const request_url =
+			'https://store.asus.com/us/category/get_real_time_data';
 		const response = await fetch(request_url, {
 			body: 'sm_seq_list%5B%5D=' + itemNumber,
 			headers: {
 				'accept-language': 'en-US,en;q=0.9',
 				'cache-control': 'no-cache',
-				'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+				'content-type':
+					'application/x-www-form-urlencoded; charset=UTF-8'
 			},
 			method: 'POST'
 		});

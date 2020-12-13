@@ -1,0 +1,91 @@
+# Project information
+site_name: streetmerchant
+site_url: https://jef.codes/streetmerchant
+site_author: Jef LeCompte
+site_description: The world's easiest, most powerful stock checker
+
+# Repository
+repo_name: jef/streetmerchant
+repo_url: https://github.com/jef/streetmerchant
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
+
+# Configuration
+theme:
+  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png
+  features:
+    - search.suggest
+  font:
+    text: Noto Sans
+    code: JetBrains Mono
+  icon:
+    repo: octicons/octoface-24
+    logo: octicons/book-24
+  language: en
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+
+# Plugins
+plugins:
+  - git-revision-date
+  - macros
+  - search
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jef
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hijxf
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jeflecompte/
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Reference:
+    - Application: reference/application.md
+    - Filter: reference/filter.md
+    - Notification: reference/notification.md
+  - Help:
+      - General: help/general.md
+      - Troubleshoot: help/troubleshoot.md
+  - FAQ: faq.md
+  - Changelog: changelog.md
+  - About: about.md

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Pny: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#ctl01_lbtnAddToCart',

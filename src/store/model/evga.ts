@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Evga: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.product-buy-specs',
@@ -41,6 +42,12 @@ export const Evga: Store = {
 		{
 			brand: 'evga',
 			model: 'ftw3 ultra',
+			series: '3080',
+			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra hydro copper',
 			series: '3080',
 			url: 'https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR'
 		},

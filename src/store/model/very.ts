@@ -3,6 +3,7 @@ import {logger} from '../../logger';
 import {parseCard} from './helpers/card';
 
 export const Very: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.stockMessaging .indicator',
@@ -32,13 +33,17 @@ export const Very: Store = {
 			const links: Link[] = [];
 			for (let i = 0; i < productElements.length; i++) {
 				const productElement = productElements.eq(i);
-				const titleElement = productElement.find('.productTitle').first();
+				const titleElement = productElement
+					.find('.productTitle')
+					.first();
 				const title = titleElement.text()?.replace(/\n/g, ' ').trim();
 
 				if (
 					!title ||
 					['RTX', series]
-						.map((x) => title.toLowerCase().includes(x.toLowerCase()))
+						.map((x) =>
+							title.toLowerCase().includes(x.toLowerCase())
+						)
 						.filter((x) => !x).length > 0
 				) {
 					continue;
@@ -68,6 +73,11 @@ export const Very: Store = {
 		},
 		ttl: 300000,
 		urls: [
+			{
+				series: '3060ti',
+				url:
+					'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100'
+			},
 			{
 				series: '3070',
 				url:

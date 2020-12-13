@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Computeruniverse: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.availability',
@@ -13,6 +14,10 @@ export const Computeruniverse: Store = {
 		maxPrice: {
 			container: '.product-price',
 			euroFormat: true
+		},
+		outOfStock: {
+			container: '.availability',
+			text: ['nicht verfügbar']
 		}
 	},
 	links: [
@@ -55,7 +60,8 @@ export const Computeruniverse: Store = {
 			brand: 'evga',
 			model: 'xc3 black',
 			series: '3070',
-			url: 'https://www.computeruniverse.net/de/evga-geforce-rtx3070-xc3-black'
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3070-xc3-black'
 		},
 		{
 			brand: 'gainward',
@@ -138,7 +144,8 @@ export const Computeruniverse: Store = {
 			brand: 'pny',
 			model: 'dual fan',
 			series: '3070',
-			url: 'https://www.computeruniverse.net/de/pny-geforce-rtx3070-m-dual-8-gb'
+			url:
+				'https://www.computeruniverse.net/de/pny-geforce-rtx3070-m-dual-8-gb'
 		},
 		{
 			brand: 'pny',
@@ -552,6 +559,20 @@ export const Computeruniverse: Store = {
 			series: 'ryzen5950',
 			url:
 				'https://www.computeruniverse.net/de/amd-ryzen-9-5950x-box-ohne-kuehler'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 console',
+			series: 'sonyps5c',
+			url:
+				'https://www.computeruniverse.net/de/sony-playstation-5-weiss-schwarz-825gb-ssd'
+		},
+		{
+			brand: 'sony',
+			model: 'ps5 digital',
+			series: 'sonyps5de',
+			url:
+				'https://www.computeruniverse.net/de/sony-playstation-5-digital-edition-weiss-schwarz-825gb-ssd'
 		}
 	],
 	name: 'computeruniverse'

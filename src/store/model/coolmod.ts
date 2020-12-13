@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Coolmod: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.product-availability',
