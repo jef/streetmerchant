@@ -142,6 +142,12 @@ Generate token at https://pushover.net/apps/build.
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
 
+## Redis
+
+| Environment variable | Description |
+|:---:|---|
+| `REDIS_URL` | Connection string in format (redis://[username]:[password]@[host][:port]/[database-id]) |
+
 ## Slack
 
 | Environment variable | Description |
@@ -191,10 +197,3 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITCH_ACCESS_TOKEN` | Twitch access token |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token |
 | `TWITCH_CHANNEL` | Twitch channel |
-
-## Redis
-
-| Environment variable | Description |
-|:---:|---|
-| `REDIS_HOST` | IP Address of instance |
-| `REDIS_DATABASE_ID`| Database Id |
