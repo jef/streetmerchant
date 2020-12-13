@@ -1,4 +1,4 @@
-[![streetmerchant](assets/images/streetmerchant.png)](https://jef.codes/streetmerchant)
+[![streetmerchant](assets/images/streetmerchant-banner.png)](https://jef.codes/streetmerchant)
 
 ## Features
 
