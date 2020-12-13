@@ -6,7 +6,7 @@ import redis from 'redis';
 const {url} = config.notifications.redis;
 
 const client = redis.createClient({
-	url,
+	url
 });
 
 const updateRedis = (link: Link, store: Store) => {
