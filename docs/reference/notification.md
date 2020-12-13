@@ -191,3 +191,10 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITCH_ACCESS_TOKEN` | Twitch access token |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token |
 | `TWITCH_CHANNEL` | Twitch channel |
+
+## Redis
+
+| Environment variable | Description |
+|:---:|---|
+| `REDIS_HOST` | IP Address of instance |
+| `REDIS_DATABASE_ID`| Database Id |
