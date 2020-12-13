@@ -1,7 +1,7 @@
-import redis from 'redis';
-import { config } from '../config';
-import { logger } from '../logger';
-import { Link, Store } from '../store/model';
+import {config} from "../config";
+import {Link, Store} from "../store/model";
+import {logger} from "../logger";
+import redis from "redis";
 
 const {url} = config.notifications.redis;
 
