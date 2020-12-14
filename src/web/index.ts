@@ -8,7 +8,8 @@ import {
 	storeList,
 	updateStores
 } from '../store/model';
-import {join, normalize} from 'path';
+import {isAbsolute, join, normalize, relative} from 'path';
+import {logger} from '../logger';
 
 const approot = join(__dirname, '../../');
 const webroot = join(approot, './web');
@@ -33,14 +34,29 @@ function sendFile(
 	path = normalize(`./${path}`);
 
 	const fsPath = join(relativeTo, path);
+
+	const relPath = relative(relativeTo, fsPath);
+	if (!relPath || relPath.startsWith('..') || isAbsolute(relPath)) {
+		sendError(response, 'Bad request', 400);
+		return;
+	}
+
 	try {
 		const stream = createReadStream(fsPath);
-		stream.on('error', (error) => {
-			sendError(response, error.message);
+
+		let responseDead = false;
+		stream.on('error', (err) => {
+			responseDead = true;
+			logger.error(`Error in WebUI stream ${err.message}`);
+			sendError(response, 'Not found', 404);
 		});
 
 		const pathSplit = path.split('.');
 		const ext = pathSplit[pathSplit.length - 1].toLowerCase();
+
+		if (responseDead) {
+			return;
+		}
 
 		response.setHeader(
 			'Content-Type',
@@ -50,7 +66,8 @@ function sendFile(
 		stream.on('end', () => response.end());
 		stream.pipe(response);
 	} catch (error: unknown) {
-		sendError(response, (error as Error).message);
+		logger.error(`Error in WebUI ${(error as Error).message}`);
+		sendError(response, 'Internal server error');
 	}
 }
 

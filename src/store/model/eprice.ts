@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Eprice: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.topSideDx',

@@ -13,7 +13,7 @@ copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
 
 # Configuration
 theme:
-  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png
+  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png
   features:
     - search.suggest
   font:
@@ -21,7 +21,7 @@ theme:
     code: JetBrains Mono
   icon:
     repo: octicons/octoface-24
-    logo: octicons/book-24
+  logo: assets/images/streetmerchant-logo.png
   language: en
   name: material
   palette:

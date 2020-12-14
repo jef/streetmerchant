@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const PCComponentes: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '#btnsWishAddBuy',

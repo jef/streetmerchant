@@ -2,18 +2,19 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Awd: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '.vs-stock .ty-qty-in-stock',
 			text: ['item(s)']
 		},
 		maxPrice: {
-			container: '.product-info .ty-price-num',
+			container: '.ty-price',
 			euroFormat: false // Note: Awd uses non-euroFromat as price seperator
 		},
 		outOfStock: {
-			container: '.vs-stock',
-			text: ['out of stock']
+			container: '.vs-stock.ty-float-left',
+			text: ['Out-of-stock']
 		}
 	},
 	links: [
@@ -23,34 +24,6 @@ export const Awd: Store = {
 			series: 'test:series',
 			url:
 				'https://www.awd-it.co.uk/asus-nvidia-geforce-gt-710-silent-low-profile-2gb-gddr5-graphics-card-pci-e.html'
-		},
-		{
-			brand: 'asus',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.awd-it.co.uk/asus-tuf-gaming-radeon-rx-6800-oc-edition-16gb-gddr6-graphics-card.html'
-		},
-		{
-			brand: 'asus',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.awd-it.co.uk/asus-rog-strix-radeon-rx-6800-oc-edition-16gb-gddr6-graphics-card.html'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'amd reference',
-			series: 'rx6800',
-			url:
-				'https://www.awd-it.co.uk/gigabyte-radeon-rx-6800-gaming-oc-16gb-gddr6-graphics-card.html'
-		},
-		{
-			brand: 'gigabyte',
-			model: 'amd reference',
-			series: 'rx6800xt',
-			url:
-				'https://www.awd-it.co.uk/gigabyte-radeon-rx-6800-xt-gaming-oc-16gb-gddr6-graphics-card.html'
 		},
 		{
 			brand: 'amd',
@@ -85,10 +58,19 @@ export const Awd: Store = {
 		builder: getProductLinksBuilder({
 			productsSelector: '.grid-list .ty-grid-list__item',
 			sitePrefix: 'https://www.awd-it.co.uk',
-			titleSelector: '.title-price-wrapper',
-			urlSelector: 'a[href]'
+			titleSelector: '.product-title'
 		}),
 		urls: [
+			{
+				series: 'rx6800',
+				url:
+					'https://www.awd-it.co.uk/components/graphics-cards/ati/amd-radeon-6800-6800xt.html'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.awd-it.co.uk/components/graphics-cards/nvidia/nvidia-geforce-rtx-3060ti.html'
+			},
 			{
 				series: '3070',
 				url:
@@ -103,11 +85,6 @@ export const Awd: Store = {
 				series: '3090',
 				url:
 					'https://www.awd-it.co.uk/components/graphics-cards/nvidia/nvidia-geforce-rtx-3090.html'
-			},
-			{
-				series: '3060ti',
-				url:
-					'https://www.awd-it.co.uk/components/graphics-cards/nvidia/nvidia-geforce-rtx-3060ti.html'
 			}
 		]
 	},

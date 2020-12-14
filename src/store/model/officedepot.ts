@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const OfficeDepot: Store = {
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',

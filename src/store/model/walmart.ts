@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Walmart: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container:

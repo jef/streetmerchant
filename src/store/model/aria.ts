@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Aria: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#addQuantity',
@@ -45,6 +46,11 @@ export const Aria: Store = {
 					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3060+Ti'
 			},
 			{
+				series: '3070',
+				url:
+					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3070'
+			},
+			{
 				series: '3080',
 				url:
 					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3080'
@@ -53,11 +59,6 @@ export const Aria: Store = {
 				series: '3090',
 				url:
 					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3090'
-			},
-			{
-				series: '3060ti',
-				url:
-					'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+3060+Ti'
 			}
 		]
 	},

@@ -1,18 +1,15 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
+	currency: '$',
 	labels: {
-		inStock: {
-			container: '.addToCartContainer_2uzan',
-			text: ['add to cart']
-		},
 		maxPrice: {
-			container: '.pricingContainer_25k3c',
+			container: 'div[class*="pricingContainer"]',
 			euroFormat: false
 		},
 		outOfStock: {
-			container: '.shippingAvailability_2RMa1',
-			text: ['coming soon', 'sold out']
+			container: '.addToCartButton:disabled',
+			text: ['add to cart']
 		}
 	},
 	links: [
