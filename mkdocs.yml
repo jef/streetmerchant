@@ -83,6 +83,7 @@ nav:
     - Application: reference/application.md
     - Filter: reference/filter.md
     - Notification: reference/notification.md
+    - Proxy: reference/proxy.md
   - Help:
       - General: help/general.md
       - Troubleshoot: help/troubleshoot.md
