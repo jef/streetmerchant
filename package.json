@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "scripts": {
     "all": "npm run build && npm run lint",
-    "build": "tsc",
+//    "build": "tsc",
     "lint": "xo",
     "lint:fix": "xo --fix",
     "start": "npm run build && node build/index.js",
