@@ -67,7 +67,7 @@
     "@types/twitter": "^1.7.0",
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.2",
+    "typescript": "^4.1.3",
     "webpack": "^5.10.0",
     "xo": "^0.36.1"
   },
