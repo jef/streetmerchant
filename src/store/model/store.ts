@@ -192,4 +192,6 @@ export type Store = {
 
 	proxyList?: string[];
 	currentProxyIndex?: number;
+	
+	playSound?: string;
 };

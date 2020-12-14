@@ -1,5 +1,6 @@
 import playerLib, {PlaySound} from 'play-sound';
 import {config} from '../config';
+import {Store} from '../store/model';
 import fs from 'fs';
 import {logger} from '../logger';
 
@@ -18,29 +19,33 @@ if (config.notifications.playSound) {
 	}
 }
 
-export function playSound() {
-	if (config.notifications.playSound && player.player !== null) {
-		logger.debug('↗ playing sound');
+export function playSound(store: Store) {
+	const playSound = store.playSound || config.notifications.playSound
 
-		fs.access(
-			config.notifications.playSound,
-			fs.constants.F_OK,
-			(error) => {
+	if (!playSound || player.player === null) {
+		return
+	}
+
+	logger.debug('↗ playing sound');
+
+	fs.access(
+		playSound,
+		fs.constants.F_OK,
+		(error) => {
+			if (error) {
+				logger.error(
+					`✖ error opening sound file: ${error.message}`
+				);
+				return;
+			}
+
+			player.play(playSound, (error: Error) => {
 				if (error) {
-					logger.error(
-						`✖ error opening sound file: ${error.message}`
-					);
-					return;
+					logger.error("✖ couldn't play sound", error);
 				}
 
-				player.play(config.notifications.playSound, (error: Error) => {
-					if (error) {
-						logger.error("✖ couldn't play sound", error);
-					}
-
-					logger.info('✔ played sound');
-				});
-			}
-		);
-	}
+				logger.info('✔ played sound');
+			});
+		}
+	);
 }

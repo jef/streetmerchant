@@ -17,7 +17,7 @@ import {sendTwitchMessage} from './twitch';
 
 export function sendNotification(link: Link, store: Store) {
 	// Priority
-	playSound();
+	playSound(store);
 	sendEmail(link, store);
 	sendSms(link, store);
 	sendDesktopNotification(link, store);
