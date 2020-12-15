@@ -486,7 +486,7 @@ export const Amazon: Store = {
 			model: 'ftw3 ultra',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08J5F3G18'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			cartUrl:
