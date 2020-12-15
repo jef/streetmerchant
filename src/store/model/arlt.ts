@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Arlt: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.articleDesc .shippingtext',

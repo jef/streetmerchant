@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const ToysRUs: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: 'li.b-product_status',

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const VsGamers: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '#vs-product-sheet-dashboard',

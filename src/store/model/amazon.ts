@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Amazon: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -50,7 +51,7 @@ export const Amazon: Store = {
 			brand: 'gigabyte',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NYPLXPJ&Quantity.1=1',
-			model: 'gaming oc',
+			model: 'gaming oc pro',
 			series: '3060ti',
 			url: 'https://www.amazon.com/dp/B08NYPLXPJ'
 		},
@@ -250,7 +251,7 @@ export const Amazon: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08L8L9TCZ&Quantity.1=1',
-			model: 'ftw3',
+			model: 'ftw3 ultra',
 			series: '3070',
 			url: 'https://www.amazon.com/dp/B08L8L9TCZ'
 		},

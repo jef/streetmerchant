@@ -60,7 +60,7 @@ This is what it will look like:
  	[Nvidia.name, Nvidia],
 ```
 
-After that, you're pretty much set. If you plan on adding new models or series, you will have to add them to `src/store/model/store.ts`.
+After that, you're pretty much set. If you plan on adding new models or series, you will have to add them to `src/store/model/store.ts` and `src/config.ts`.
 
 Here's an example:
 
@@ -93,10 +93,32 @@ Here's an example:
  	| 'nitro oc'
 ```
 
+```diff
+--- a/src/config.ts
++++ b/src/config.ts
+@@ -308,6 +308,7 @@ const store = {
+        country: envOrString(process.env.COUNTRY, 'usa'),
+        maxPrice: {
+                series: {
++                       'new series': -1,
+                        '3060ti': envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
+                        3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
+                        3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
+@@ -337,6 +338,7 @@ const store = {
+                };
+        }),
+        showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
++               'new series',
+                '3060ti',
+                '3070',
+                '3080',
+
+```
+
 And voila! You're done! If you'd like to contribute to the project, feel free to create a [Pull Request](https://github.com/jef/streetmerchant/compare)! Don't forget to add the store (and brand, model, and series if you added) to the `README.md`.
 
 ???+ tip
-    Here's an [example](https://github.com/jef/streetmerchant/commit/af96c5f2e808af7496f3c3299e4cf173105de48b).
+    Here's an [example](https://github.com/jef/streetmerchant/commit/af96c5f2e808af7496f3c3299e4cf173105de48b). If you'd like to include a max price, you can add `MAX_PRICE_SERIES_NEW_SERIES` to the above instead of the `-1`.
 
 ## Creating a Discord webhook
 

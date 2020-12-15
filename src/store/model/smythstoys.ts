@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const SmythsToys: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#addToCartButton',

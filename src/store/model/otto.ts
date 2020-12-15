@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Otto: Store = {
+	currency: '€',
 	labels: {
 		inStock: [
 			{

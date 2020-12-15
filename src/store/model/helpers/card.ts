@@ -75,6 +75,8 @@ export function parseCard(name: string): Card | null {
 	name = name.replace(/\([^(]*\)/g, '');
 	name = name.replace(/, .+$/, '');
 	name = name.replace(/ with .+$/, '');
+	name = name.replace(/pci-express/gi, '');
+	name = name.replace(/ - .*$/g, '');
 
 	// Account for incorrect titles, e.g. MSIGeforce
 	name = name.replace(/geforce/i, '');
@@ -83,7 +85,7 @@ export function parseCard(name: string): Card | null {
 	name = name.replace(/\bgraphics card\b/gi, '');
 	name = name.replace(/\b(?<!founders) edition\b/gi, '');
 	name = name.replace(/\b(series )?bundle\b/gi, '');
-	name = name.replace(/\b\w+ fan\b/gi, '');
+	name = name.replace(/\bfan\b/gi, '');
 	name = name.replace(/\s{2,}/g, ' ').trim();
 
 	let model = name.split(' ');

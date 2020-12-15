@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Target: Store = {
+	currency: '$',
 	labels: {
 		inStock: [
 			{

@@ -8,11 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: GoogleCloudPlatform/release-please-action@v2.10
+      - uses: google-github-actions/release-please-action@v2.12.2
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
+          changelog-path: docs/changelog.md
           package-name: streetmerchant
       - name: login into github package registry
         run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin

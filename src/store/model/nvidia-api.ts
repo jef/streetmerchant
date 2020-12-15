@@ -237,6 +237,7 @@ export const regionInfos = new Map<string, NvidiaRegionInfo>([
 ]);
 
 export const NvidiaApi: Store = {
+	currency: '',
 	labels: {
 		inStock: {
 			container: 'body',

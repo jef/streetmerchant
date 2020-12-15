@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://jef.codes/streetmerchant"
     ><img
-      src="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant.png"
+      src="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-banner.png"
       alt="streetmerchant"
   /></a>
 </p>
