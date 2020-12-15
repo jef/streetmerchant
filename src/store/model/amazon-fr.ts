@@ -1,6 +1,8 @@
 import {Store} from './store';
 
 export const AmazonFr: Store = {
+	backoffStatusCodes: [403, 429, 503],
+	currency: '€',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -11,16 +13,22 @@ export const AmazonFr: Store = {
 			text: ['ajouter au panier']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]',
-			euroFormat: false
-		}
+			container: '#priceblock_ourprice',
+			euroFormat: true
+		},
+		outOfStock: [
+			{
+				container: '#availability',
+				text: ['Actuellement indisponible']
+			}
+		]
 	},
 	links: [
 		{
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.fr/dp/B07PBLD2MX'
+			url: 'https://www.amazon.fr/dp/B07PW9VBK5'
 		},
 		{
 			brand: 'msi',
@@ -158,13 +166,25 @@ export const AmazonFr: Store = {
 			brand: 'sony',
 			model: 'ps5 console',
 			series: 'sonyps5c',
-			url: 'https://www.amazon.fr/dp/B08GSC5D9G'
+			url: 'https://www.amazon.fr/dp/B08H93ZRK9'
 		},
 		{
 			brand: 'sony',
 			model: 'ps5 digital',
 			series: 'sonyps5de',
-			url: 'https://www.amazon.fr/dp/B08GS1N24H'
+			url: 'https://www.amazon.fr/dp/B08H98GVK8'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.amazon.fr/dp/B08H93ZRLL'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.amazon.fr/dp/B087VM5XC6'
 		}
 	],
 	name: 'amazon-fr'

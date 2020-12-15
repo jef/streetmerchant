@@ -1,15 +1,16 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
-			container: '[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
+			container:
+				'[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
 			text: ['add to cart']
 		},
 		maxPrice: {
 			container:
-				'[data-sticky-media-gallery] .priceView-price .priceView-hero-price span',
-			euroFormat: false
+				'[data-sticky-media-gallery] .priceView-price .priceView-hero-price span'
 		}
 	},
 	links: [
@@ -18,7 +19,7 @@ export const BestBuy: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.bestbuy.com/site/evga-ko-ultra-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-pci-express-3-0-graphics-card-black-gray/6403801.p?skuId=6403801&intl=nosplash'
+				'https://www.bestbuy.com/site/insignia-8qt-digital-multi-cooker-stainless-steel/6258941.p?skuId=6258941&intl=nosplash'
 		},
 		{
 			brand: 'nvidia',
@@ -317,6 +318,38 @@ export const BestBuy: Store = {
 				'https://www.bestbuy.com/site/pny-geforce-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-triple-fan-graphics-card/6432657.p?skuId=6432657&intl=nosplash'
 		},
 		{
+			brand: 'nvidia',
+			cartUrl: 'https://api.bestbuy.com/click/-/6439402/cart',
+			model: 'founders edition',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/nvidia-geforce-rtx-3060-ti-8gb-gddr6-pci-express-4-0-graphics-card-steel-and-black/6439402.p?skuId=6439402&intl=nosplash'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6441172/cart',
+			model: 'ventus 2x',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/msi-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black-black/6441172.p?skuId=6441172&intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442484/cart',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-gaming-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442484.p?skuId=6442484?intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442485/cart',
+			model: 'eagle',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-eagle-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442485.p?skuId=6442485?intl=nosplash'
+		},
+		{
 			brand: 'amd',
 			cartUrl: 'https://api.bestbuy.com/click/-/6438942/cart',
 			model: '5900x',
@@ -388,7 +421,7 @@ export const BestBuy: Store = {
 		{
 			brand: 'msi',
 			model: 'amd reference',
-			series: 'rx6800xt',
+			series: 'rx6800',
 			url:
 				'https://www.bestbuy.com/site/msi-radeon-rx-6800-16g-16gb-gddr6-pci-express-4-0-graphics-card-black-black/6441020.p?skuId=6441020'
 		},
@@ -405,6 +438,82 @@ export const BestBuy: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6441226.p?skuId=6441226'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-merc-319-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6442585.p?skuId=6442585'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6900-xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6444358.p?skuId=6444358'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/msi-radeon-rx-6900-xt-16g-gddr6-pci-express-4-0-graphics-card-black-silver/6444716.p?skuId=6444716'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-speedster-merc319-amd-radeon-rx-6900-xt-ultra-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6445157.p?skuId=6445157'
+		},
+		{
+			brand: 'corsair',
+			cartUrl: 'https://api.bestbuy.com/click/-/6351845/cart',
+			model: '750 platinum',
+			series: 'sf',
+			url:
+				'https://www.bestbuy.com/site/corsair-sf-series-750w-atx12v-2-4-eps12v-2-92-sfx12v-80-plus-platinum-modular-power-supply-black/6351845.p?skuId=6351845'
+		},
+		{
+			brand: 'corsair',
+			cartUrl: 'https://api.bestbuy.com/click/-/6351844/cart',
+			model: '600 platinum',
+			series: 'sf',
+			url:
+				'https://www.bestbuy.com/site/corsair-sf-series-600w-atx12v-2-4-eps12v-2-92-sfx12v-80-plus-platinum-modular-power-supply-black/6351844.p?skuId=6351844'
+		},
+		{
+			brand: 'nvidia',
+			cartUrl: 'https://api.bestbuy.com/click/-/6439402/cart',
+			model: 'founders edition',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/nvidia-geforce-rtx-3060-ti-8gb-gddr6-pci-express-4-0-graphics-card-steel-and-black/6439402.p?skuId=6439402&intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442484/cart',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-gaming-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442484.p?skuId=6442484&intl=nosplash'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442485/cart',
+			model: 'eagle oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3060-ti-eagle-oc-8g-gddr6-pci-express-4-0-graphics-card-black/6442485.p?skuId=6442485&intl=nosplash'
+		},
+		{
+			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6441172/cart',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.bestbuy.com/site/msi-geforce-rtx-3060-ti-ventus-2x-oc-bv-8gb-gddr6-pci-express-4-0-graphics-card-black-black/6441172.p?skuId=6441172&intl=nosplash'
 		}
 	],
 	name: 'bestbuy'

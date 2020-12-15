@@ -1,5 +1,137 @@
 # Changelog
 
+## [3.3.0](https://www.github.com/jef/streetmerchant/compare/v3.2.0...v3.3.0) (2020-12-13)
+
+
+### Features
+
+* **discord:** dynamic currency symbol ([#1328](https://www.github.com/jef/streetmerchant/issues/1328)) ([cccfde2](https://www.github.com/jef/streetmerchant/commit/cccfde245affc11506c69d1ef6c30c09953307d4))
+* **docs:** add mkdocs ([243109a](https://www.github.com/jef/streetmerchant/commit/243109a4ffdfe1d1efe961af0b5cf28fd7e6ef1d))
+* **docs:** add table sorting ([#1258](https://www.github.com/jef/streetmerchant/issues/1258)) ([5955d10](https://www.github.com/jef/streetmerchant/commit/5955d10a7f2106c5ae1275fadacf2945626ca008))
+* **lookup:** use random user agents ([#1335](https://www.github.com/jef/streetmerchant/issues/1335)) ([b599c23](https://www.github.com/jef/streetmerchant/commit/b599c23b51735212e5369ce03a44bbd1bccafa42))
+* **notification:** add discord groups ([#1211](https://www.github.com/jef/streetmerchant/issues/1211)) ([2632386](https://www.github.com/jef/streetmerchant/commit/2632386a5b99f3b23166e88f92af809f0036a6b7))
+* **notification:** add sound player executable option ([#1301](https://www.github.com/jef/streetmerchant/issues/1301)) ([8d19231](https://www.github.com/jef/streetmerchant/commit/8d192317badfd71a7cd8f0115ba9e6fc951c1874))
+* **playstation:** add queuing selector ([#1173](https://www.github.com/jef/streetmerchant/issues/1173)) ([67b19a7](https://www.github.com/jef/streetmerchant/commit/67b19a7a8b3dead5f5ab9575ee2b4f09924ce851))
+* **store:** add darkhero motherboard to asus and microcenter ([#1336](https://www.github.com/jef/streetmerchant/issues/1336)) ([29175c7](https://www.github.com/jef/streetmerchant/commit/29175c77a8fcbc082c944b057a919dfcc22ba606))
+* **store:** add EBGames ([#1281](https://www.github.com/jef/streetmerchant/issues/1281)) ([27cfb94](https://www.github.com/jef/streetmerchant/commit/27cfb94de8d9ccef3c7fc76b250aee17d7c80257))
+* **store:** add Irish store variants ([#1373](https://www.github.com/jef/streetmerchant/issues/1373)) ([f70998f](https://www.github.com/jef/streetmerchant/commit/f70998f0d9a6cdfbc59fb31fecb87f801b0b3037))
+* **store:** add Megekko ([#1216](https://www.github.com/jef/streetmerchant/issues/1216)) ([30bed2a](https://www.github.com/jef/streetmerchant/commit/30bed2ac016e9e543f67b1098819a484bc1394c3))
+* **store:** add several Australian stores, add some 3080 brands/models ([#1367](https://www.github.com/jef/streetmerchant/issues/1367)) ([579cb97](https://www.github.com/jef/streetmerchant/commit/579cb97a0d151cc374a37493b043ba4a399b55db))
+* **store:** add Toys R Us ([#1257](https://www.github.com/jef/streetmerchant/issues/1257)) ([ac0bd2a](https://www.github.com/jef/streetmerchant/commit/ac0bd2ac14d686a0f30931e885da65a1d7af6856))
+* **store:** add Walmart (CA) ([#1253](https://www.github.com/jef/streetmerchant/issues/1253)) ([b535b47](https://www.github.com/jef/streetmerchant/commit/b535b470cad38af034889b4d27578b20136e166d))
+
+
+### Bug Fixes
+
+* **adblock:** proxy another function to produce less errors ([#1379](https://www.github.com/jef/streetmerchant/issues/1379)) ([eb70076](https://www.github.com/jef/streetmerchant/commit/eb700762a4eee3a802bd81f0fb62e76243027c42))
+* **amazon-it:** maxPrice selector and links ([#1239](https://www.github.com/jef/streetmerchant/issues/1239)) ([84f2cb7](https://www.github.com/jef/streetmerchant/commit/84f2cb7d52fac7c3dbdd31318a51330e25808784))
+* **amazon-nl:** inStock selector ([b6964b0](https://www.github.com/jef/streetmerchant/commit/b6964b02f38c947fd476d86de35d5983e5b229dd)), closes [#1366](https://www.github.com/jef/streetmerchant/issues/1366)
+* **bestbuy-ca:** add outOfStock text ([58f0a9c](https://www.github.com/jef/streetmerchant/commit/58f0a9c7740c46f3d820c8765dee5b0fc8516353)), closes [#1269](https://www.github.com/jef/streetmerchant/issues/1269)
+* **bestbuy-ca:** update selectors to help false positives ([#1278](https://www.github.com/jef/streetmerchant/issues/1278)) ([0525119](https://www.github.com/jef/streetmerchant/commit/0525119b9bae47425a6c01720d6a1ea6ab8e6a02)), closes [#895](https://www.github.com/jef/streetmerchant/issues/895)
+* **ci:** mkdocs deps ([1f63e99](https://www.github.com/jef/streetmerchant/commit/1f63e9980499ac567845473dc48e51cab78c838e))
+* **config:** disable docker by default ([dca916b](https://www.github.com/jef/streetmerchant/commit/dca916b64e9ac2d05d5e6af19e5466b8a0623ed5))
+* **config:** remove quotes ([ef452d8](https://www.github.com/jef/streetmerchant/commit/ef452d8e586536a5039ee532d655d2951d551ac3))
+* **discord:** notification groupings ([ad0b2fe](https://www.github.com/jef/streetmerchant/commit/ad0b2fe525d6403735ddcbf4ef55b91eb36ac10a))
+* **docker:** run in docker, and build scripts for docker ([#1291](https://www.github.com/jef/streetmerchant/issues/1291)) ([c74ea28](https://www.github.com/jef/streetmerchant/commit/c74ea28014ee0d827ea216083844f92e30f142c9))
+* **eprice:** inStock selector ([5e1dfc3](https://www.github.com/jef/streetmerchant/commit/5e1dfc35680029620a1de7bc7a523140f2dae8af)), closes [#1067](https://www.github.com/jef/streetmerchant/issues/1067)
+* **newegg:** dedupe nitro+ models ([#1300](https://www.github.com/jef/streetmerchant/issues/1300)) ([7329c6e](https://www.github.com/jef/streetmerchant/commit/7329c6ede0a5ab6d644b30ac878f4e7da11e43a8)), closes [#1230](https://www.github.com/jef/streetmerchant/issues/1230)
+* **newegg:** price selector and mobile inStock ([c3beedc](https://www.github.com/jef/streetmerchant/commit/c3beedced82141e6bbb0735b3edb7c573907aa7a)), closes [#1356](https://www.github.com/jef/streetmerchant/issues/1356)
+* **pushover:** add `expire` and `retry` ([0072dda](https://www.github.com/jef/streetmerchant/commit/0072dda90b637b93647cf3a35dc612cf43d89445)), closes [#983](https://www.github.com/jef/streetmerchant/issues/983)
+* **store:** update UK stores ([#1372](https://www.github.com/jef/streetmerchant/issues/1372)) ([02825d0](https://www.github.com/jef/streetmerchant/commit/02825d009bd028f6dcdca02e2c155e77a7df8654))
+* `.env` backwards compatibility ([9b7c7e2](https://www.github.com/jef/streetmerchant/commit/9b7c7e2881d756909af191094bda435ca7ef7e9b))
+* add setRequestInterception ([#1312](https://www.github.com/jef/streetmerchant/issues/1312)) ([a44621f](https://www.github.com/jef/streetmerchant/commit/a44621f8f50cac9ba6614b0f89320d210370047a)), closes [#826](https://www.github.com/jef/streetmerchant/issues/826)
+* **store:** italian store checks ([#1212](https://www.github.com/jef/streetmerchant/issues/1212)) ([e3eb386](https://www.github.com/jef/streetmerchant/commit/e3eb38655a3cefb85c4dbd573494955e06c72f71))
+
+
+### Reverts
+
+* allow users to still use `USER_AGENT` ([3386e8f](https://www.github.com/jef/streetmerchant/commit/3386e8f50da27a800c5289c3b6bd7a1f76e77a49))
+
+## [3.2.0](https://www.github.com/jef/streetmerchant/compare/v3.1.0...v3.2.0) (2020-12-06)
+
+
+### Features
+
+* **bestbuy:** add 3060 series ([#1074](https://www.github.com/jef/streetmerchant/issues/1074)) ([e9a39c4](https://www.github.com/jef/streetmerchant/commit/e9a39c40925736a2126f6138c369710989904d1d))
+* **bestbuy-ca:** add 3060ti cards ([29478bf](https://www.github.com/jef/streetmerchant/commit/29478bff2d27d780cc6142526f3970b4a87290bc))
+* **notification:** add price to links ([#1209](https://www.github.com/jef/streetmerchant/issues/1209)) ([15ec12b](https://www.github.com/jef/streetmerchant/commit/15ec12b0a3a95716243bfd06f6d41959bff7c36e)), closes [#1188](https://www.github.com/jef/streetmerchant/issues/1188) [#673](https://www.github.com/jef/streetmerchant/issues/673) [#1187](https://www.github.com/jef/streetmerchant/issues/1187)
+* **proxy:** socks5 support ([#933](https://www.github.com/jef/streetmerchant/issues/933)) ([364c6c2](https://www.github.com/jef/streetmerchant/commit/364c6c25dfe9dcbeb29cb20cb46e9e8dcc2fe86b))
+* **store:** add 3060ti to newegg-ca, canadacomputer, memoryexpress ([#1172](https://www.github.com/jef/streetmerchant/issues/1172)) ([09f0236](https://www.github.com/jef/streetmerchant/commit/09f0236086c59b25ebe611041bf063d536e3cc3d))
+* **store:** add amazon-de-warehouse ([#1102](https://www.github.com/jef/streetmerchant/issues/1102)) ([6de8c4a](https://www.github.com/jef/streetmerchant/commit/6de8c4a5eec8d66fb47d87e309866ba18f3e28c7))
+* **store:** add antonline store ([#1042](https://www.github.com/jef/streetmerchant/issues/1042)) ([19eece1](https://www.github.com/jef/streetmerchant/commit/19eece18dccd4489e1e441b92061fc3b5743e4cd))
+* **store:** add argos with ps5 ([b2f5c1a](https://www.github.com/jef/streetmerchant/commit/b2f5c1a3ed93cfd56e575ec634d235565a17b6bc))
+* **store:** add awd(uk), add 3060ti link builders ([#1114](https://www.github.com/jef/streetmerchant/issues/1114)) ([36e3806](https://www.github.com/jef/streetmerchant/commit/36e38068d8cd284c741d4906d5ba5fe8cff85d24))
+* **store:** add custom labels for links ([#1183](https://www.github.com/jef/streetmerchant/issues/1183)) ([f7b32e8](https://www.github.com/jef/streetmerchant/commit/f7b32e8ac56c29207c6b30b9168c34c021a5e227)), closes [#1132](https://www.github.com/jef/streetmerchant/issues/1132) [#1163](https://www.github.com/jef/streetmerchant/issues/1163)
+* **store:** add el corte ingles ([#1107](https://www.github.com/jef/streetmerchant/issues/1107)) ([75ee95b](https://www.github.com/jef/streetmerchant/commit/75ee95b2217fb4bf667869011a009210ff8c22e7))
+* **store:** add ePrice store ([#1016](https://www.github.com/jef/streetmerchant/issues/1016)) ([30a51a3](https://www.github.com/jef/streetmerchant/commit/30a51a38bee1c399276466e5db457bbe702edd5c))
+* **store:** add Euronics DE ([#1045](https://www.github.com/jef/streetmerchant/issues/1045)) ([1774afc](https://www.github.com/jef/streetmerchant/commit/1774afc1c3010bd0b183907baa4f3486dc9e8c23))
+* **store:** add expert ([#1105](https://www.github.com/jef/streetmerchant/issues/1105)) ([202698f](https://www.github.com/jef/streetmerchant/commit/202698f9179b081bd4214979f054e5ff7c805621))
+* **store:** add Gamestop DE ([#1046](https://www.github.com/jef/streetmerchant/issues/1046)) ([79a3f33](https://www.github.com/jef/streetmerchant/commit/79a3f33150188c7ff0228a38f276ae1fe88b9714))
+* **store:** add Medimax ([#1057](https://www.github.com/jef/streetmerchant/issues/1057)) ([7d29ef8](https://www.github.com/jef/streetmerchant/commit/7d29ef80ba1ae6682b486ac0b65a516b15a19f93))
+* **store:** add Otto ([#1096](https://www.github.com/jef/streetmerchant/issues/1096)) ([af96c5f](https://www.github.com/jef/streetmerchant/commit/af96c5f2e808af7496f3c3299e4cf173105de48b))
+* **store:** add smythstoys ([1ed0593](https://www.github.com/jef/streetmerchant/commit/1ed05937676c3b6961fcbbb1f3aa80afc3411ac3))
+* **store:** add some italian stores with ps5 links ([#976](https://www.github.com/jef/streetmerchant/issues/976)) ([f663579](https://www.github.com/jef/streetmerchant/commit/f663579f3d744a5270878975407ad30b31ee0c0a))
+* **store:** add spielegrotte ([#1056](https://www.github.com/jef/streetmerchant/issues/1056)) ([cf70f1f](https://www.github.com/jef/streetmerchant/commit/cf70f1ff4f942922bfa52adcd5b905e0b39c812a))
+* **store:** add wipoid store ([#1018](https://www.github.com/jef/streetmerchant/issues/1018)) ([feae978](https://www.github.com/jef/streetmerchant/commit/feae978de9e90b96f542d2e53807144d82e380a4))
+* **store:** update the italian store links ([#1002](https://www.github.com/jef/streetmerchant/issues/1002)) ([de7036c](https://www.github.com/jef/streetmerchant/commit/de7036c7cc6dd7e436ad1d31b988d9d56ad31f76))
+* **topachat:** add `maxPrice` ([d7f2427](https://www.github.com/jef/streetmerchant/commit/d7f242780ef1a0a06d5b65ccfc0999e36a87d49d)), closes [#1097](https://www.github.com/jef/streetmerchant/issues/1097)
+* add proxy rotation (settable per store) ([#1026](https://www.github.com/jef/streetmerchant/issues/1026)) ([490d44e](https://www.github.com/jef/streetmerchant/commit/490d44e1fdfdf91db7344dd3050ba8fd8d069631))
+
+
+### Bug Fixes
+
+* **amazon:** price and cart buttons ([6fd023e](https://www.github.com/jef/streetmerchant/commit/6fd023e81e0c54e8fb53b45817b63cb49b8a37ce)), closes [#1125](https://www.github.com/jef/streetmerchant/issues/1125)
+* **amazon-de:** `inStock` selector ([14cbd5a](https://www.github.com/jef/streetmerchant/commit/14cbd5a05b6f9c3a3ebbc5978156ff2b090efd32)), closes [#1178](https://www.github.com/jef/streetmerchant/issues/1178)
+* **amazon-de:** remove xbox cart links ([cbc4330](https://www.github.com/jef/streetmerchant/commit/cbc43304bf49863000f422fbff4ed200ea610914)), closes [#1095](https://www.github.com/jef/streetmerchant/issues/1095)
+* **bestbuy-ca:** model always indicating in stock ([#1145](https://www.github.com/jef/streetmerchant/issues/1145)) ([06f3aaf](https://www.github.com/jef/streetmerchant/commit/06f3aafae6ec460c6227a92e6105639be71fc9b3))
+* **bestbuy-ca:** replace old evga xc3 ultra ([#1058](https://www.github.com/jef/streetmerchant/issues/1058)) ([65df944](https://www.github.com/jef/streetmerchant/commit/65df9449730bce2acb82f5edac25a91bdddd94db))
+* **canadacomputers:** add `inStock` selector, use english links ([#889](https://www.github.com/jef/streetmerchant/issues/889)) ([06214eb](https://www.github.com/jef/streetmerchant/commit/06214eb4a8a5c2d8a180e8dcf846f828d5cce2ed))
+* **memoryexpress:** add backorder to `outOfStock` selector ([#890](https://www.github.com/jef/streetmerchant/issues/890)) ([67605a6](https://www.github.com/jef/streetmerchant/commit/67605a6e280af35f210c536bc03571a84ea1a7e9))
+* **newegg:** maxPrice selector using used price ([feddac7](https://www.github.com/jef/streetmerchant/commit/feddac76d3824e947b0a96524cd940e6b45ffe70)), closes [#1052](https://www.github.com/jef/streetmerchant/issues/1052)
+* **newegg:** typo in 5800x url([#903](https://www.github.com/jef/streetmerchant/issues/903)) ([a99eecb](https://www.github.com/jef/streetmerchant/commit/a99eecb4613bc136e65afe4e5e8788316beae39e))
+* **scan:** links builder ([#1161](https://www.github.com/jef/streetmerchant/issues/1161)) ([ca5553c](https://www.github.com/jef/streetmerchant/commit/ca5553cb2044c00857412a2af009e5e7f2c1aabf))
+* **smythstoys:** add out of stock label ([5bbdfa2](https://www.github.com/jef/streetmerchant/commit/5bbdfa2abc23c2e1fb1c606227754a1701cab194))
+* **store:** add backoffStatusCodes and new captcha container ([#1110](https://www.github.com/jef/streetmerchant/issues/1110)) ([0b11238](https://www.github.com/jef/streetmerchant/commit/0b11238370040e9cd31e793e9a782ad384c22abf))
+* **store:** removes unnecessary newegg links from bestbuy ([#1126](https://www.github.com/jef/streetmerchant/issues/1126)) ([f2ae423](https://www.github.com/jef/streetmerchant/commit/f2ae423fa83d1671a98b9cf3733e587d33727a59)), closes [#1119](https://www.github.com/jef/streetmerchant/issues/1119)
+* **store:** update euroFormat for expert and otto ([#1108](https://www.github.com/jef/streetmerchant/issues/1108)) ([e198e44](https://www.github.com/jef/streetmerchant/commit/e198e44613cda27c0e67dc7e42ca514e66e9cf48))
+* **walmart:** instock container and add test:series ([21e74cf](https://www.github.com/jef/streetmerchant/commit/21e74cfe76a5ccf82247315c9951a25e44bb1ce5)), closes [#1106](https://www.github.com/jef/streetmerchant/issues/1106)
+* related products being picked up on scan ([#954](https://www.github.com/jef/streetmerchant/issues/954)) ([db18157](https://www.github.com/jef/streetmerchant/commit/db18157a490b9c9672c32de3372bff0b472a48f3))
+
+## [3.1.0](https://www.github.com/jef/streetmerchant/compare/v3.0.0...v3.1.0) (2020-11-22)
+
+
+### Features
+
+* **asus:** add backoff codes ([#790](https://www.github.com/jef/streetmerchant/issues/790)) ([501ea34](https://www.github.com/jef/streetmerchant/commit/501ea34a54e877600050d5a99fd3b71ec799e96a))
+* **canadacomputers:** add ryzen 5000 series ([#842](https://www.github.com/jef/streetmerchant/issues/842)) ([6f27330](https://www.github.com/jef/streetmerchant/commit/6f273305df69ac7b420b5446b4c6824866821a7e))
+* **coolmod:** add `maxPrice` ([#862](https://www.github.com/jef/streetmerchant/issues/862)) ([4b689cb](https://www.github.com/jef/streetmerchant/commit/4b689cb94e99b83c8829c11d1bfe4cd6db9fbd7a))
+* **newegg-ca:** add big navi links ([#843](https://www.github.com/jef/streetmerchant/issues/843)) ([6d292a1](https://www.github.com/jef/streetmerchant/commit/6d292a11cd53bd3893d4a0ff5d13eb2ce3319faa))
+* **notification:** add product link to email and telegram ([#816](https://www.github.com/jef/streetmerchant/issues/816)) ([777c31b](https://www.github.com/jef/streetmerchant/commit/777c31b420a38cab860d98bc6bd8b7ba990c55e7))
+* **playstation:** add `outOfStock` label ([#812](https://www.github.com/jef/streetmerchant/issues/812)) ([eb314af](https://www.github.com/jef/streetmerchant/commit/eb314afda557369dd27266429ac991c47ecc6375))
+* **store:** add `PlayStation` store ([#806](https://www.github.com/jef/streetmerchant/issues/806)) ([7c28c7f](https://www.github.com/jef/streetmerchant/commit/7c28c7f72b171ce914aba770d88e8b1213c41233))
+* **store:** add 3070 models to pccomponentes & coolmod ([#820](https://www.github.com/jef/streetmerchant/issues/820)) ([d0ebffd](https://www.github.com/jef/streetmerchant/commit/d0ebffd056dc166e3557ccf694379bf8c10148b5))
+* **store:** add amd rx 6000 series model ([#832](https://www.github.com/jef/streetmerchant/issues/832)) ([89a762e](https://www.github.com/jef/streetmerchant/commit/89a762e2f5cd2ebd56c2586b1ebead4171b67153))
+* **store:** add captcha check to saturn and mediamarkt ([#876](https://www.github.com/jef/streetmerchant/issues/876)) ([2d01cfd](https://www.github.com/jef/streetmerchant/commit/2d01cfddff557f112c6d53473dad25eb299f2fc0))
+* **store:** add corsair sfx PSUs ([#881](https://www.github.com/jef/streetmerchant/issues/881)) ([e552c91](https://www.github.com/jef/streetmerchant/commit/e552c9102dd9801dcfc35652f2aaa0b1eea18ebb))
+* **store:** add topachat ([#776](https://www.github.com/jef/streetmerchant/issues/776)) ([c38bebb](https://www.github.com/jef/streetmerchant/commit/c38bebb49dbe8243d0e3f1205150a33f9ce745aa))
+* **store:** add vsgamers ([#767](https://www.github.com/jef/streetmerchant/issues/767)) ([53739e0](https://www.github.com/jef/streetmerchant/commit/53739e05abf50bbaddb8079087339c9f353096c8))
+* add amazon-fr to stores. ([#766](https://www.github.com/jef/streetmerchant/issues/766)) ([02d7c47](https://www.github.com/jef/streetmerchant/commit/02d7c47c4093ad71dfab31f93a9b1390f4cad8a0))
+* **store:** support for canadacomputers ([#772](https://www.github.com/jef/streetmerchant/issues/772)) ([bd69e47](https://www.github.com/jef/streetmerchant/commit/bd69e471f7b47e7faf1d9858992d4157145518aa))
+
+
+### Bug Fixes
+
+* **amazon:** add 5800x and 5600x ([#802](https://www.github.com/jef/streetmerchant/issues/802)) ([167713b](https://www.github.com/jef/streetmerchant/commit/167713bb14080e5e1d2f77c7ee933918b6fd5cfc))
+* **bestbuy-ca:** use proper selector ([#801](https://www.github.com/jef/streetmerchant/issues/801)) ([63d550c](https://www.github.com/jef/streetmerchant/commit/63d550ca63b9bfd534f37b7747a1fae057abedb4))
+* **config:** correcting newline split for multiple user agents ([#824](https://www.github.com/jef/streetmerchant/issues/824)) ([f16a9fb](https://www.github.com/jef/streetmerchant/commit/f16a9fb331fd38590325f399bde369ffa17dbe10))
+* **store:** generate links only for selected stores ([292e360](https://www.github.com/jef/streetmerchant/commit/292e3603fd527a4454639c9abb73bd80a8a95fae)), closes [#694](https://www.github.com/jef/streetmerchant/issues/694)
+
+
+### Reverts
+
+* correcting newline split for multiple user agents ([af631c8](https://www.github.com/jef/streetmerchant/commit/af631c86f1a74d810cabf2d0de1b7bb31d350095)), closes [#824](https://www.github.com/jef/streetmerchant/issues/824)
+* pipeline changes ([efe0d64](https://www.github.com/jef/streetmerchant/commit/efe0d64f060e812fd9846073a13837a3f2a27862))
+
 ## [3.0.0](https://www.github.com/jef/streetmerchant/compare/v2.0.0...v3.0.0) (2020-11-12)
 
 

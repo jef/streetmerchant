@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const AmazonDe: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '€',
 	labels: {
 		captcha: {
 			container: 'body',
@@ -11,22 +12,28 @@ export const AmazonDe: Store = {
 			]
 		},
 		inStock: {
-			container: '#desktop_buybox',
+			container: '#add-to-cart-button',
 			text: ['in den einkaufswagen']
 		},
 		maxPrice: {
-			container: 'span[class*="PriceString"]',
+			container: '#priceblock_ourprice',
 			euroFormat: true
-		}
+		},
+		outOfStock: [
+			{
+				container: '#availability',
+				text: ['Derzeit nicht verfügbar']
+			}
+		]
 	},
 	links: [
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B083JX52VG&Quantity.1=1',
+				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B07PW9VBK5&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.de/dp/B083JX52VG'
+			url: 'https://www.amazon.de/dp/B07PW9VBK5'
 		},
 		{
 			brand: 'asus',
@@ -504,6 +511,12 @@ export const AmazonDe: Store = {
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRK9&Quantity.1=1',
+			labels: {
+				inStock: {
+					container: '#productTitle',
+					text: ['sony playstation 5']
+				}
+			},
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url: 'https://www.amazon.de/dp/B08H93ZRK9'
@@ -512,9 +525,33 @@ export const AmazonDe: Store = {
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H98GVK8&Quantity.1=1',
+			labels: {
+				inStock: {
+					container: '#productTitle',
+					text: ['sony playstation 5']
+				}
+			},
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url: 'https://www.amazon.de/dp/B08H98GVK8'
+		},
+		{
+			brand: 'microsoft',
+			// Fixme: disabled because of #1095, enable when working again
+			// cartUrl:
+			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H93ZRLL&Quantity.1=1',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url: 'https://www.amazon.de/dp/B08H93ZRLL'
+		},
+		{
+			brand: 'microsoft',
+			// Fixme: disabled because of #1095, enable when working again
+			// cartUrl:
+			// 	'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B087VM5XC6&Quantity.1=1',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url: 'https://www.amazon.de/dp/B087VM5XC6'
 		}
 	],
 	name: 'amazon-de'

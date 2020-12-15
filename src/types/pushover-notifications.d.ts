@@ -37,15 +37,17 @@ declare module 'pushover-notifications' {
 	}
 
 	export interface PushoverMessage {
-		message: string;
-		file?: string | {name: string; data: string};
 		device?: string;
+		expire?: number;
+		file?: string | {name: string; data: string};
+		message: string;
+		priority?: number;
+		retry?: number;
+		sound?: Sound;
+		timestamp?: number;
 		title?: string;
 		url?: string;
 		url_title?: string;
-		priority?: number;
-		sound?: Sound;
-		timestamp?: number;
 	}
 
 	export class Pushover {

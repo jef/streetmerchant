@@ -29,7 +29,10 @@ function filterModel(model: Link['model'], series: Link['series']): boolean {
 	const sanitizedSeries = series.replace(/\s/g, '');
 	for (const configModelEntry of config.store.showOnlyModels) {
 		const sanitizedConfigModel = configModelEntry.name.replace(/\s/g, '');
-		const sanitizedConfigSeries = configModelEntry.series.replace(/\s/g, '');
+		const sanitizedConfigSeries = configModelEntry.series.replace(
+			/\s/g,
+			''
+		);
 		if (sanitizedConfigSeries) {
 			if (
 				sanitizedSeries === sanitizedConfigSeries &&

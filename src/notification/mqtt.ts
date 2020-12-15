@@ -65,7 +65,7 @@ function generateTopic(link: Link, store: Store, topic: string): string {
 
 /**
  * Basic protection against sending credentials in the clear over public networks.
- *	- Returns 'true' if password is supplied in .env but address/URL is not part of a private network
+ *	- Returns 'true' if password is supplied in dotenv but address/URL is not part of a private network
  *	- Private networks evaluated:	Class A, B, or C private IP's or linklocal URL ("*.local")
  *	- TLS could be implemented, however, the majority of MQTT services on the internet do not require user authentication.
  *	- If you find a 'cloud' MQTT broker requiring authentication for publishing alerts, consider using another MQTT service (for now).

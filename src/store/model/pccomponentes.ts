@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const PCComponentes: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '#btnsWishAddBuy',
@@ -41,7 +42,8 @@ export const PCComponentes: Store = {
 			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
-			url: 'https://www.pccomponentes.com/asus-tuf-geforce-rtx-3080-10gb-gddr6x'
+			url:
+				'https://www.pccomponentes.com/asus-tuf-geforce-rtx-3080-10gb-gddr6x'
 		},
 		{
 			brand: 'gigabyte',
@@ -246,7 +248,8 @@ export const PCComponentes: Store = {
 			brand: 'asus',
 			model: 'dual',
 			series: '3070',
-			url: 'https://www.pccomponentes.com/asus-geforce-rtx-3070-dual-8gb-gddr6'
+			url:
+				'https://www.pccomponentes.com/asus-geforce-rtx-3070-dual-8gb-gddr6'
 		},
 		{
 			brand: 'asus',

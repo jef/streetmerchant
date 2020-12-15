@@ -20,7 +20,9 @@ const prettyJson = winston.format.printf((info) => {
 export const logger = winston.createLogger({
 	format: winston.format.combine(
 		winston.format.colorize(),
-		winston.format.metadata({fillExcept: ['level', 'message', 'timestamp']}),
+		winston.format.metadata({
+			fillExcept: ['level', 'message', 'timestamp']
+		}),
 		prettyJson
 	),
 	level: config.logLevel,
@@ -121,7 +123,6 @@ export const Print = {
 	maxPrice(
 		link: Link,
 		store: Store,
-		price: number,
 		maxPrice: number,
 		color?: boolean
 	): string {
@@ -130,14 +131,15 @@ export const Print = {
 				'✖ ' +
 				buildProductString(link, store, true) +
 				' :: ' +
-				chalk.yellow(`PRICE ${price} EXCEEDS LIMIT ${maxPrice}`)
+				chalk.yellow(
+					`PRICE ${link.price ?? ''} EXCEEDS LIMIT ${maxPrice}`
+				)
 			);
 		}
 
-		return `✖ ${buildProductString(
-			link,
-			store
-		)} :: PRICE ${price} EXCEEDS LIMIT ${maxPrice}`;
+		return `✖ ${buildProductString(link, store)} :: PRICE ${
+			link.price ?? ''
+		} EXCEEDS LIMIT ${maxPrice}`;
 	},
 	message(
 		message: string,
@@ -182,7 +184,8 @@ export const Print = {
 	},
 	productInStock(link: Link): string {
 		let productString = `Product Page: ${link.url}`;
-		if (link.cartUrl) productString += `\nAdd To Cart Link: ${link.cartUrl}`;
+		if (link.cartUrl)
+			productString += `\nAdd To Cart Link: ${link.cartUrl}`;
 
 		return productString;
 	},
@@ -206,7 +209,9 @@ function buildSetupString(
 	color?: boolean
 ): string {
 	if (color) {
-		return chalk.cyan(`[${store.name}]`) + chalk.grey(` [setup (${topic})]`);
+		return (
+			chalk.cyan(`[${store.name}]`) + chalk.grey(` [setup (${topic})]`)
+		);
 	}
 
 	return `[${store.name}] [setup (${topic})]`;

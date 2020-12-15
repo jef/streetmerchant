@@ -2,27 +2,138 @@ import {Store} from './store';
 
 export const Amazon: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '$',
 	labels: {
 		captcha: {
 			container: 'body',
 			text: ['enter the characters you see below']
 		},
-		inStock: {
-			container: '#desktop_buybox',
-			text: ['add to cart']
-		},
+		inStock: [
+			{
+				container: '#add-to-cart-button',
+				text: ['add to cart']
+			},
+			{
+				container: '#buy-now-button',
+				text: ['buy now']
+			}
+		],
 		maxPrice: {
-			container: 'span[class*="PriceString"]'
+			container: '#priceblock_ourprice'
 		}
 	},
 	links: [
 		{
 			brand: 'test:brand',
 			cartUrl:
-				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07TDN1SC5&Quantity.1=1',
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B083248S3B&Quantity.1=1',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.amazon.com/dp/B07TDN1SC5'
+			url: 'https://www.amazon.com/dp/B083248S3B'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P2HBBLX&Quantity.1=1',
+			model: 'dual',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P2HBBLX'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NYP7KG6&Quantity.1=1',
+			model: 'gaming oc',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08NYP7KG6'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NYPLXPJ&Quantity.1=1',
+			model: 'gaming oc pro',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08NYPLXPJ'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NYNJ6RC&Quantity.1=1',
+			model: 'eagle',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08NYNJ6RC'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B083Z5P6TX&Quantity.1=1',
+			model: 'tuf',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B083Z5P6TX'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P2D3JSG&Quantity.1=1',
+			model: 'gaming x trio',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P2D3JSG'
+		},
+		{
+			brand: 'msi',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P2DQ28S&Quantity.1=1',
+			model: 'ventus 2x',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P2DQ28S'
+		},
+		{
+			brand: 'zotac',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P3XJLJJ&Quantity.1=1',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P3XJLJJ'
+		},
+		{
+			brand: 'zotac',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P3V572B&Quantity.1=1',
+			model: 'twin edge',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P3V572B'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P2D1JZZ&Quantity.1=1',
+			model: 'ko',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P2D1JZZ'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B083Z7TR8Z&Quantity.1=1',
+			model: 'strix',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B083Z7TR8Z'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P2H5LW2&Quantity.1=1',
+			model: 'ftw3',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08P2H5LW2'
+		},
+		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NYPKW1Z&Quantity.1=1',
+			model: 'eagle oc',
+			series: '3060ti',
+			url: 'https://www.amazon.com/dp/B08NYPKW1Z'
 		},
 		{
 			brand: 'asus',
@@ -140,7 +251,7 @@ export const Amazon: Store = {
 			brand: 'evga',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08L8L9TCZ&Quantity.1=1',
-			model: 'ftw3',
+			model: 'ftw3 ultra',
 			series: '3070',
 			url: 'https://www.amazon.com/dp/B08L8L9TCZ'
 		},
@@ -425,6 +536,134 @@ export const Amazon: Store = {
 			url: 'https://www.amazon.com/dp/B0815Y8J9N'
 		},
 		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NS4W2ZY&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NS4W2ZY'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MVC76SR&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08MVC76SR'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXXT7WN&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXXT7WN'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXYNLMR&Quantity.1=1',
+			model: 'pulse',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXYNLMR'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXVNMPQ&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NXVNMPQ'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08N6ZLX9B&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08N6ZLX9B'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NX14LV1&Quantity.1=1',
+			model: 'merc',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NX14LV1'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NN76VJD&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NN76VJD'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P5YFZCY&Quantity.1=1',
+			model: 'merc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08P5YFZCY'
+		},
+		{
+			brand: 'powercolor',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MNZM5TK&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08MNZM5TK'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08MVCLBWK&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08MVCLBWK'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXZSPMY&Quantity.1=1',
+			model: 'nitro+',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NXZSPMY'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NXYBVDB&Quantity.1=1',
+			model: 'pulse',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NXYBVDB'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NWJ29NB&Quantity.1=1',
+			model: 'strix oc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08NWJ29NB'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08P3YT3MY&Quantity.1=1',
+			model: 'tuf oc',
+			series: 'rx6800',
+			url: 'https://www.amazon.com/dp/B08P3YT3MY'
+		},
+		{
+			brand: 'asus',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08NWHKGS9&Quantity.1=1',
+			model: 'strix lc',
+			series: 'rx6800xt',
+			url: 'https://www.amazon.com/dp/B08NWHKGS9'
+		},
+		{
 			brand: 'sony',
 			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08FC5L3RG&Quantity.1=1',
@@ -451,6 +690,22 @@ export const Amazon: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.amazon.com/dp/B08G9J44ZN'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07M63H81H&Quantity.1=1',
+			model: '750 platinum',
+			series: 'sf',
+			url: 'https://www.amazon.com/dp/B07M63H81H'
+		},
+		{
+			brand: 'corsair',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B07F84FJ1G&Quantity.1=1',
+			model: '600 platinum',
+			series: 'sf',
+			url: 'https://www.amazon.com/dp/B07F84FJ1G'
 		}
 	],
 	name: 'amazon'

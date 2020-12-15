@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Scan: Store = {
+	currency: '£',
 	disableAdBlocker: true,
 	labels: {
 		captcha: [
@@ -74,13 +75,33 @@ export const Scan: Store = {
 	],
 	linksBuilder: {
 		builder: getProductLinksBuilder({
-			productsSelector: 'ul.productColumns li.product',
+			productsSelector: 'div.productList ul.productColumns li.product',
 			sitePrefix: 'https://www.scan.co.uk',
 			titleSelector: '.details .description',
 			urlSelector: 'a[href]'
 		}),
 		ttl: 300000,
 		urls: [
+			{
+				series: 'rx6800',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6800-pcie-40-graphics-cards'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6800-xt-pcie-40-graphics-cards'
+			},
+			{
+				series: 'rx6900xt',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6900-xt-pcie-40-graphics-cards'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards'
+			},
 			{
 				series: '3070',
 				url:

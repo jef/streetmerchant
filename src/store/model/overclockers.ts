@@ -2,6 +2,7 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Overclockers: Store = {
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#detailbox',
@@ -61,6 +62,26 @@ export const Overclockers: Store = {
 			titleSelector: 'a[href].producttitles'
 		}),
 		urls: [
+			{
+				series: 'rx6800',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-series'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6800-xt-series'
+			},
+			{
+				series: 'rx6900xt',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/amd/radeon-rx-6900-xt-series'
+			},
+			{
+				series: '3060ti',
+				url:
+					'https://www.overclockers.co.uk/pc-components/graphics-cards/nvidia/geforce-rtx-3060-ti'
+			},
 			{
 				series: '3070',
 				url:

@@ -1,25 +1,14 @@
-import {startAPIServer, stopAPIServer} from './web';
+import {config} from './config'; // Needs to be loaded first
+import {startAPIServer, stopAPIServer} from './web'; // eslint-disable-line sort-imports
 import {Browser} from 'puppeteer';
-import {adBlocker} from './adblocker';
-import {config} from './config';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import puppeteer from 'puppeteer-extra';
-import resourceBlock from 'puppeteer-extra-plugin-block-resources';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {storeList} from './store/model';
 import {tryLookupAndLoop} from './store';
 
 puppeteer.use(stealthPlugin());
-if (config.browser.lowBandwidth) {
-	puppeteer.use(
-		resourceBlock({
-			blockedTypes: new Set(['image', 'font'] as const)
-		})
-	);
-} else {
-	puppeteer.use(adBlocker);
-}
 
 let browser: Browser | undefined;
 
@@ -37,19 +26,27 @@ async function main() {
 	}
 
 	// https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+	// https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
 	if (config.docker) {
 		args.push('--disable-dev-shm-usage');
+		args.push('--no-sandbox');
+		args.push('--disable-setuid-sandbox');
+		args.push('--headless');
+		args.push('--disable-gpu');
 	}
 
 	// Add the address of the proxy server if defined
 	if (config.proxy.address) {
 		args.push(
-			`--proxy-server=http://${config.proxy.address}:${config.proxy.port}`
+			`--proxy-server=${config.proxy.protocol}://${config.proxy.address}:${config.proxy.port}`
 		);
 	}
 
-	await stop();
+	if (args.length > 0) {
+		logger.info('ℹ puppeteer config: ', args);
+	}
 
+	await stop();
 	browser = await puppeteer.launch({
 		args,
 		defaultViewport: {
@@ -58,6 +55,8 @@ async function main() {
 		},
 		headless: config.browser.isHeadless
 	});
+
+	config.browser.userAgent = await browser.userAgent();
 
 	for (const store of storeList.values()) {
 		logger.debug('store links', {meta: {links: store.links}});

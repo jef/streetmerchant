@@ -15,11 +15,15 @@ export type Brand =
 	| 'amd'
 	| 'asrock'
 	| 'asus'
+	| 'colorful'
+	| 'corsair'
 	| 'evga'
 	| 'gainward'
+	| 'galax'
 	| 'gigabyte'
 	| 'inno3d'
 	| 'kfa2'
+	| 'leadtek'
 	| 'microsoft'
 	| 'msi'
 	| 'nvidia'
@@ -28,13 +32,16 @@ export type Brand =
 	| 'sapphire'
 	| 'sony'
 	| 'xfx'
+	| 'powercolor'
 	| 'zotac';
 
 export type Series =
 	| 'test:series'
+	| '3060ti'
 	| '3070'
 	| '3080'
 	| '3090'
+	| 'darkhero'
 	| 'rx6800'
 	| 'rx6800xt'
 	| 'rx6900xt'
@@ -44,6 +51,7 @@ export type Series =
 	| 'ryzen5950'
 	| 'sonyps5c'
 	| 'sonyps5de'
+	| 'sf'
 	| 'xboxsx'
 	| 'xboxss';
 
@@ -53,43 +61,65 @@ export type Model =
 	| '5800x'
 	| '5900x'
 	| '5950x'
+	| '600 platinum'
+	| '750 platinum'
 	| 'amd reference'
 	| 'amp extreme holo'
 	| 'amp holo'
 	| 'aorus master'
 	| 'aorus xtreme'
+	| 'aorus xtreme waterforce'
+	| 'aorus xtreme waterforce wb'
 	| 'aorus'
+	| 'challenger'
+	| 'crosshair viii'
 	| 'dual fan'
 	| 'dual oc'
 	| 'dual'
 	| 'eagle oc'
 	| 'eagle'
 	| 'founders edition'
-	| 'ftw3 ultra'
 	| 'ftw3'
+	| 'ftw3 ultra'
+	| 'ftw3 ultra hydro copper'
 	| 'gamerock oc'
 	| 'gaming oc'
+	| 'gaming oc pro'
 	| 'gaming pro oc'
 	| 'gaming pro'
 	| 'gaming x trio'
 	| 'gaming x3'
+	| 'suprim x'
 	| 'gaming'
+	| 'hurricane'
 	| 'ichill x2'
 	| 'ichill x3'
 	| 'ichill x4'
+	| 'ichill frostbite'
+	| 'igame advanced oc'
+	| 'igame vulcan oc'
+	| 'ko'
+	| 'nitro+'
+	| 'nitro+ se'
 	| 'nitro oc se'
 	| 'nitro oc'
+	| 'phantom gaming'
 	| 'phantom gs'
 	| 'phoenix gs oc'
 	| 'phoenix gs'
 	| 'phoenix'
 	| 'ps5 console'
 	| 'ps5 digital'
+	| 'pulse'
+	| 'red devil'
+	| 'red dragon'
 	| 'sg oc'
 	| 'sg'
+	| 'merc'
 	| 'strix lc'
 	| 'strix oc'
 	| 'strix'
+	| 'taichi'
 	| 'trinity oc'
 	| 'trinity'
 	| 'tuf oc'
@@ -108,6 +138,7 @@ export type Model =
 	| 'vision'
 	| 'xbox series s'
 	| 'xbox series x'
+	| 'xc gaming'
 	| 'xc3 black'
 	| 'xc3 ultra'
 	| 'xc3'
@@ -116,13 +147,15 @@ export type Model =
 
 export type Link = {
 	brand: Brand;
-	itemNumber?: string;
-	series: Series;
-	model: Model;
-	url: string;
 	cartUrl?: string;
+	itemNumber?: string;
+	labels?: Labels;
+	model: Model;
 	openCartAction?: (browser: Browser) => Promise<string>;
+	price?: number | null;
+	series: Series;
 	screenshot?: string;
+	url: string;
 };
 
 export type LabelQuery = Element[] | Element | string[];
@@ -155,6 +188,7 @@ export type Store = {
 	};
 	labels: Labels;
 	name: string;
+	currency: '£' | '$' | '€' | 'R$' | 'kr.' | '';
 	setupAction?: (browser: Browser) => void;
 	/**
 	 * The range of status codes which considered successful, i.e. without error
@@ -166,4 +200,7 @@ export type Store = {
 	waitUntil?: LoadEvent;
 	minPageSleep?: number;
 	maxPageSleep?: number;
+
+	proxyList?: string[];
+	currentProxyIndex?: number;
 };

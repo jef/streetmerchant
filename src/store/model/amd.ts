@@ -1,6 +1,7 @@
 import {Store} from './store';
 
-export const AMD: Store = {
+export const Amd: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.btn-shopping-cart',
@@ -53,10 +54,26 @@ export const AMD: Store = {
 		{
 			brand: 'amd',
 			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458372200/us?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url: 'https://www.amd.com/en/direct-buy/5458372200/us'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
 				'https://www.amd.com/en/direct-buy/5458372800/us?add-to-cart=true',
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url: 'https://www.amd.com/en/direct-buy/5458372800/us'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458373400/us?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6800',
+			url: 'https://www.amd.com/en/direct-buy/5458373400/us'
 		}
 	],
 	name: 'amd'

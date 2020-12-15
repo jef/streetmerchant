@@ -1,6 +1,6 @@
 FROM node:14.15.0-alpine3.12 AS builder
 
-LABEL org.opencontainers.image.source=https://github.com/jef/streetmerchant
+LABEL org.opencontainers.image.source="https://github.com/jef/streetmerchant"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 

@@ -2,6 +2,8 @@ import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
 
 export const Ccl: Store = {
+	backoffStatusCodes: [403, 429, 503],
+	currency: '£',
 	labels: {
 		inStock: {
 			container: '#pnlAddToBasket',
@@ -62,6 +64,11 @@ export const Ccl: Store = {
 		}),
 		urls: [
 			{
+				series: '3060ti',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3060-Ti-Graphics-Cards/'
+			},
+			{
 				series: '3070',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3070-Graphics-Cards/'
@@ -75,6 +82,21 @@ export const Ccl: Store = {
 				series: '3090',
 				url:
 					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/GeForce-RTX-3090-Graphics-Cards/'
+			},
+			{
+				series: 'rx6800',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-Graphics-Cards/'
+			},
+			{
+				series: 'rx6800xt',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/AMD-Radeon-RX-6800-XT-Graphics-Cards/'
+			},
+			{
+				series: 'rx6900xt',
+				url:
+					'https://www.cclonline.com/category/430/PC-Components/Graphics-Cards/attributeslist/1268064/'
 			}
 		]
 	},

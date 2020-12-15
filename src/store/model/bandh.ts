@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const BAndH: Store = {
 	backoffStatusCodes: [403, 429],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: 'div[data-selenium="addToCartSection"]',
@@ -69,6 +70,42 @@ export const BAndH: Store = {
 		// 	series: '3080',
 		// 	url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
 		// },
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606948-REG/gigabyte_gv_n306teagle_oc_8gd_rtx_3060_ti_eagle.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606949-REG/gigabyte_gv_n306teagle_8gd_rtx_3060_ti_eagle.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606945-REG/gigabyte_gv_n306taorus_m_8gd_aorus_rtx_3060_ti.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606947-REG/gigabyte_gv_n306tgaming_oc_8gd_rtx_3060_ti_gaming.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming pro',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606946-REG/gigabyte_gv_n306tgamingoc_pro_8gd_rtx_3060_ti_gaming.html'
+		},
+
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -187,6 +224,20 @@ export const BAndH: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.bhphotovideo.com/c/product/1598377-REG/amd_100_100000065box_ryzen_5_5600x_3_7.html'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url:
+				'https://www.bhphotovideo.com/c/product/1598377-REG/amd_100_100000065box_ryzen_5_5600x_3_7.html'
+		},
+		{
+			brand: 'corsair',
+			model: '750 platinum',
+			series: 'sf',
+			url:
+				'https://www.bhphotovideo.com/c/product/1560680-REG/corsair_cp_9020186_na_corsair_sf750_power_supply.html'
 		}
 	],
 	name: 'bandh'

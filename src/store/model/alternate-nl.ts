@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AlternateNL: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.stockStatus',
