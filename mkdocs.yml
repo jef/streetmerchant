@@ -13,12 +13,13 @@ copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
 
 # Configuration
 theme:
+  custom_dir: docs/overrides
   favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png
   features:
     - search.suggest
   font:
     text: Noto Sans
-    code: JetBrains Mono
+    code: Space Mono
   icon:
     repo: octicons/octoface-24
   logo: assets/images/streetmerchant-logo.png
