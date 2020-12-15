@@ -353,6 +353,15 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		}
 	}
 
+	if (store.labels.outOfStock) {
+		if (
+			await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)
+		) {
+			logger.info(Print.outOfStock(link, store, true));
+			return false;
+		}
+	}
+
 	if (store.labels.maxPrice) {
 		const maxPrice = config.store.maxPrice.series[link.series];
 
@@ -372,15 +381,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	// ) {
 	// 	return store.realTimeInventoryLookup(link.itemNumber);
 	// }
-
-	if (store.labels.outOfStock) {
-		if (
-			await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)
-		) {
-			logger.info(Print.outOfStock(link, store, true));
-			return false;
-		}
-	}
 
 	if (store.labels.inStock) {
 		const options = {
