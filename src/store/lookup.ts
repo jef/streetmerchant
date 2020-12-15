@@ -14,7 +14,8 @@ import {
 	delay,
 	getRandomUserAgent,
 	getSleepTime,
-	isStatusCodeInRange
+	isStatusCodeInRange,
+	noop
 } from '../util';
 import {disableBlockerInPage, enableBlockerInPage} from '../adblocker';
 import {config} from '../config';
@@ -23,7 +24,7 @@ import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
-import useProxy from 'puppeteer-page-proxy';
+import useProxy from '@doridian/puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
 
@@ -75,7 +76,7 @@ async function handleProxy(request: Request, proxy?: string) {
 	try {
 		await useProxy(request, proxy);
 	} catch (error: unknown) {
-		logger.error(error);
+		logger.error('handleProxy', error);
 		try {
 			await request.abort();
 		} catch {}
@@ -201,6 +202,11 @@ async function lookup(browser: Browser, store: Store) {
 				get(target, prop, receiver) {
 					if (prop === 'on') {
 						return onProxyFunc;
+					}
+
+					// Give dummy setRequestInterception to avoid AdBlock from messing with it
+					if (prop === 'setRequestInterception') {
+						return noop;
 					}
 
 					return Reflect.get(target, prop, receiver);

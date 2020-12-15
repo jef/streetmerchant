@@ -18,6 +18,10 @@ export async function delay(ms: number) {
 	});
 }
 
+export function noop() {
+	// Do nothing
+}
+
 export function isStatusCodeInRange(
 	statusCode: number,
 	range: StatusCodeRangeArray
@@ -66,7 +70,7 @@ export async function usingPage<T>(
 		try {
 			await closePage(page);
 		} catch (error: unknown) {
-			logger.error(error);
+			logger.error('usingPage', error);
 		}
 	}
 }
