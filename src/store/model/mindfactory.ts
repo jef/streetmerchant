@@ -122,6 +122,42 @@ export const Mindfactory: Store = {
 			url:
 				'https://www.mindfactory.de/product_info.php/AMD-Ryzen-9-5950X-16x-3-40GHz-So-AM4-WOF_1380729.html'
 		},
+		// #region 6800
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Gigabyte-Radeon-RX-6800-GAMING-OC-16G_1387544.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Gigabyte-Radeon-RX-6800--Retail-_1387542.html'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Powercolor-Radeon-RX-6800-Fighter-DDR6-Drei-Luefter-256bit--Retail_1388356.html'
+		},
+		{
+			brand: 'powercolor',
+			model: 'red dragon',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-PowerColor-Radeon-RX-6800-Red-Dragon-DDR6-retail_1387556.html'
+		},
+		{
+			brand: 'sapphire',
+			model: 'amd reference',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Sapphire-Radeon-RX-6800-GDDR6-HDMI-DUAL-DP-USB-C--Retail-_1383029.html'
+		},
 		{
 			brand: 'sapphire',
 			model: 'nitro oc',
@@ -137,6 +173,15 @@ export const Mindfactory: Store = {
 				'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6800-Drei-Luefter-256bit-DDR6--Retail-_1388348.html'
 		},
 		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6800-Speedster-MERC319-DDR6-Black-Gaming_1386624.html'
+		},
+		// #endregion
+		// #region 6800xt
+		{
 			brand: 'asrock',
 			model: 'phantom gaming',
 			series: 'rx6800xt',
@@ -144,12 +189,50 @@ export const Mindfactory: Store = {
 				'https://www.mindfactory.de/product_info.php/16GB-ASRock-Radeon-RX-6800-XT-PHANTOM-GAMING-DDR6_1386619.html'
 		},
 		{
+			brand: 'sapphire',
+			model: 'nitro oc',
+			series: 'rx6800xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-Sapphire-Radeon-RX-6800-XT-NITRO--OC-HDMI-3xDP_1388340.html'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6800-XT-Speedster-MERC319-DDR6-Black-Gaming-retail_1386623.html'
+		},
+		// #endregion
+		// #region 6900xt
+		{
 			brand: 'asrock',
 			model: 'amd reference',
 			series: 'rx6900xt',
 			url:
 				'https://www.mindfactory.de/product_info.php/16GB-ASRock-Radeon-6900-XT--Retail-_1388342.html'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-MSI-Radeon-6900-XT--Retail-_1388361.html'
+		},
+		{
+			brand: 'powercolor',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-PowerColor-Radeon-RX-6900XT-DDR6-Drei-Luefter-256bit--Retail-_1388355.html'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6900-XT-DDR6-Drei-Luefter-256bit_1388333.html'
 		}
+		// #endregion
 	],
 	name: 'mindfactory'
 };
