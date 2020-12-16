@@ -348,7 +348,8 @@ async function handleResponse(
 					store,
 					page,
 					link,
-					response);
+					response
+				);
 			} else {
 				logger.warn(Print.badStatusCode(link, store, statusCode, true));
 			}
