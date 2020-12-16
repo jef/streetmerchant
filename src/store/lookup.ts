@@ -275,19 +275,16 @@ async function lookupCard(
 		waitUntil: givenWaitFor
 	});
 
-	if (!response) {
-		logger.debug(Print.noResponse(link, store, true));
-	}
-
 	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
-	const statusCode = response?.status() ?? 0;
-	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
-		if (statusCode === 429) {
-			logger.warn(Print.rateLimit(link, store, true));
-		} else {
-			logger.warn(Print.badStatusCode(link, store, statusCode, true));
-		}
+	const statusCode = await handleResponse(
+		browser,
+		store,
+		page,
+		link,
+		response
+	);
 
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
 		return statusCode;
 	}
 
@@ -323,6 +320,64 @@ async function lookupCard(
 	}
 
 	return statusCode;
+}
+
+async function handleResponse(
+	browser: Browser,
+	store: Store,
+	page: Page,
+	link: Link,
+	response?: Response | null
+) {
+	if (!response) {
+		logger.debug(Print.noResponse(link, store, true));
+	}
+
+	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
+	let statusCode = response?.status() ?? 0;
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+		if (statusCode === 429) {
+			logger.warn(Print.rateLimit(link, store, true));
+		} else if (statusCode === 503) {
+			if (await checkIsCloudflare(store, page, link)) {
+				const response: Response | null = await page.waitForNavigation({
+					waitUntil: 'networkidle0'
+				});
+				statusCode = await handleResponse(
+					browser,
+					store,
+					page,
+					link,
+					response);
+			} else {
+				logger.warn(Print.badStatusCode(link, store, statusCode, true));
+			}
+		} else {
+			logger.warn(Print.badStatusCode(link, store, statusCode, true));
+		}
+	}
+
+	return statusCode;
+}
+
+async function checkIsCloudflare(store: Store, page: Page, link: Link) {
+	const baseOptions: Selector = {
+		requireVisible: true,
+		selector: 'body',
+		type: 'textContent'
+	};
+
+	const cloudflareLabel = {
+		container: 'div[class="attribution"] a[rel="noopener noreferrer"]',
+		text: ['Cloudflare']
+	};
+
+	if (await pageIncludesLabels(page, cloudflareLabel, baseOptions)) {
+		logger.warn(Print.cloudflare(link, store, true));
+		return true;
+	}
+
+	return false;
 }
 
 async function lookupCardInStock(store: Store, page: Page, link: Link) {
