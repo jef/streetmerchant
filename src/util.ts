@@ -97,12 +97,19 @@ export async function getRandomUserAgent(): Promise<string> {
 		];
 	}
 
-	const userAgent =
+	return (
 		getRandom((ua) => {
-			return ua.browserName === 'Chrome' && ua.browserVersion > '20';
-		}) ?? config.browser.userAgent;
+			if (
+				ua.browserName === 'Chrome' &&
+				ua.browserVersion > '40' &&
+				ua.osName !== 'Android' &&
+				ua.osName !== 'iOS'
+			) {
+				logger.debug('user agent', ua);
+				return true;
+			}
 
-	logger.debug('user agent', userAgent);
-
-	return userAgent;
+			return false;
+		}) ?? config.browser.userAgent
+	);
 }
