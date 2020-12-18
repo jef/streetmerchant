@@ -17,7 +17,7 @@ export function sendTwilioMessage(link: Link, store: Store) {
 		(async () => {
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 			const message = `${Print.inStock(link, store)}\n${givenUrl}`;
-			const numbers = twilio.to.split(",")
+			const numbers = twilio.to.split(',')
 			for (const number of numbers) {
 				try {
 					await client.messages.create({
