@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/jef/streetmerchant#readme",
   "dependencies": {
-    "@doridian/puppeteer-page-proxy": "^1.2.10",
+    "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
     "@slack/web-api": "^5.14.0",
     "@types/random-useragent": "^0.3.0",
