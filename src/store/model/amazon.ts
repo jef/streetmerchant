@@ -434,6 +434,14 @@ export const Amazon: Store = {
 		{
 			brand: 'zotac',
 			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HVV2P4Z&Quantity.1=1',
+			model: 'trinity oc',
+			series: '3080',
+			url: 'https://www.amazon.com/dp/B08HVV2P4Z'
+		},
+		{
+			brand: 'zotac',
+			cartUrl:
 				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08HJQ182D&Quantity.1=1',
 			model: 'trinity',
 			series: '3090',
@@ -470,6 +478,14 @@ export const Amazon: Store = {
 			model: 'ventus 3x',
 			series: '3090',
 			url: 'https://www.amazon.com/dp/B08HR9D2JS'
+		},
+		{
+			brand: 'evga',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08J5F3G18&Quantity.1=1',
+			model: 'ftw3 ultra',
+			series: '3090',
+			url: 'https://www.amazon.com/dp/B08J5F3G18'
 		},
 		{
 			brand: 'gigabyte',
@@ -534,6 +550,22 @@ export const Amazon: Store = {
 			model: '5950x',
 			series: 'ryzen5950',
 			url: 'https://www.amazon.com/dp/B0815Y8J9N'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08PHWJC8X&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url: 'https://www.amazon.com/dp/B08PHWJC8X'
+		},
+		{
+			brand: 'xfx',
+			cartUrl:
+				'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08PDQJVD9&Quantity.1=1',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url: 'https://www.amazon.com/dp/B08PDQJVD9'
 		},
 		{
 			brand: 'gigabyte',
