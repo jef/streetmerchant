@@ -322,6 +322,7 @@ async function lookupCard(
 	return statusCode;
 }
 
+// eslint-disable-next-line max-params
 async function handleResponse(
 	browser: Browser,
 	store: Store,

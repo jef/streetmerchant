@@ -48,7 +48,7 @@
     "puppeteer-extra-plugin-block-resources": "^2.2.7",
     "puppeteer-extra-plugin-stealth": "^2.6.5",
     "pushover-notifications": "^1.2.2",
-    "random-useragent": "^0.5.0",
+    "top-user-agents": "^1.0.19",
     "twilio": "^3.54.1",
     "twitch": "^4.3.6",
     "twitch-auth": "^4.3.6",

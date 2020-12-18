@@ -2,8 +2,8 @@ import {Browser, Page, Response} from 'puppeteer';
 import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
-import {getRandom} from 'random-useragent';
 import {logger} from './logger';
+import topUserAgents from 'top-user-agents';
 
 export function getSleepTime(store: Store) {
 	const minSleep = store.minPageSleep as number;
@@ -97,19 +97,8 @@ export async function getRandomUserAgent(): Promise<string> {
 		];
 	}
 
-	return (
-		getRandom((ua) => {
-			if (
-				ua.browserName === 'Chrome' &&
-				ua.browserVersion > '40' &&
-				ua.osName !== 'Android' &&
-				ua.osName !== 'iOS'
-			) {
-				logger.debug('user agent', ua);
-				return true;
-			}
-
-			return false;
-		}) ?? config.browser.userAgent
-	);
+	const userAgent =
+		topUserAgents[Math.floor(Math.random() * topUserAgents.length)];
+	logger.debug('user agent', {userAgent});
+	return userAgent;
 }
