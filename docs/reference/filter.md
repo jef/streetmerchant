@@ -57,6 +57,7 @@ Used with the `STORES` variable.
 | ARLT | DE | `arlt`|
 | ASUS | US | `asus` |
 | ASUS | DE | `asus-de` |
+| AWD-IT | UK | `awd` |
 | Azerty | NL | `azerty`|
 | B&H | US | `bandh`|
 | Best Buy | US | `bestbuy`|
