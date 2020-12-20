@@ -118,6 +118,7 @@ Used with the `STORES` variable.
 | Saturn | DE | `saturn`|
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
+| ShopTo | UK | `shopto`|
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
