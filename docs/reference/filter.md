@@ -91,6 +91,7 @@ Used with the `STORES` variable.
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Harvey Normans | IE | | `harveynorman-ie` |
+| John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
