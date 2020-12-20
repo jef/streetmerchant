@@ -48,9 +48,11 @@ import {Elcorteingles} from './elcorteingles';
 import {Eprice} from './eprice';
 import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
+import {Equippr} from './equippr';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Expert} from './expert';
+import {Futurex} from './futurex';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
@@ -80,6 +82,7 @@ import {PlayStation} from './playstation';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
+import {Reichelt} from './reichelt';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
@@ -151,10 +154,12 @@ export const storeList = new Map([
 	[Elcorteingles.name, Elcorteingles],
 	[Eprice.name, Eprice],
 	[Euronics.name, Euronics],
+	[Equippr.name, Equippr],
 	[EuronicsDE.name, EuronicsDE],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Expert.name, Expert],
+	[Futurex.name, Futurex],
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],
@@ -184,6 +189,7 @@ export const storeList = new Map([
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
+	[Reichelt.name, Reichelt],
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Scorptec.name, Scorptec],
