@@ -28,7 +28,7 @@ export const Futurex: Store = {
 		{
 			brand: 'test:brand',
 			model: 'test:model',
-			series: 'test:sereis',
+			series: 'test:series',
 			url:
 				'https://www.future-x.de/corsair-vengeance-lpx-ddr4-32-gb%3A-2-x-16-gb-dimm-288-pin-3200-mhz-pc4-25600-cl16-135-v-ungepuffert-nicht-ecc-schwarz-p-494897/'
 		},

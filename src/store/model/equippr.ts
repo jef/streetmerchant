@@ -25,7 +25,7 @@ export const Equippr: Store = {
 			{
 			brand: 'test:brand',
 			model: 'test:model',
-			series: 'test:sereis',
+			series: 'test:series',
 			url:
 				'https://www.equippr.de/corsair-vengeance-lpx-32-gb-ddr4-3200-dimm-cl16-dual-kit-schwarz-cmk32gx4m2b3200c16-2011145.html'
 		},
