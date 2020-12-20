@@ -2,7 +2,7 @@
 site_name: streetmerchant
 site_url: https://jef.codes/streetmerchant
 site_author: Jef LeCompte
-site_description: The world's easiest, most powerful stock checker
+site_description: 🤖 The world's easiest, most powerful stock checker
 
 # Repository
 repo_name: jef/streetmerchant
@@ -13,7 +13,8 @@ copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
 
 # Configuration
 theme:
-  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png
+  custom_dir: docs/overrides
+  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png
   features:
     - search.suggest
   font:
@@ -21,7 +22,7 @@ theme:
     code: JetBrains Mono
   icon:
     repo: octicons/octoface-24
-    logo: octicons/book-24
+  logo: assets/images/streetmerchant-logo.png
   language: en
   name: material
   palette:
@@ -43,7 +44,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/hijxf
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/jeflecompte/
+      link: https://www.linkedin.com/in/jeflecompte
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -83,6 +84,7 @@ nav:
     - Application: reference/application.md
     - Filter: reference/filter.md
     - Notification: reference/notification.md
+    - Proxy: reference/proxy.md
   - Help:
       - General: help/general.md
       - Troubleshoot: help/troubleshoot.md

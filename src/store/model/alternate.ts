@@ -407,6 +407,12 @@ export const Alternate: Store = {
 			url: 'https://www.alternate.de/product/1700508'
 		},
 		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6900xt',
+			url: 'https://www.alternate.de/product/1704614'
+		},
+		{
 			brand: 'microsoft',
 			model: 'xbox series x',
 			series: 'xboxsx',

@@ -22,7 +22,7 @@
 | `WEB_PORT` | Starts a webserver to be able to control the bot while it is running. Setting this value starts this service. |
 
 ???+ info
-    You can also have a list of proxies that are rotated while searching stores. Proxies can be read from a file named `STORENAME.proxies` in the format of `socks5://username:password@ip`; one per line. In this case, there is no need to use the `PROXY_*` environments.
+    There is more information on proxy settings in the [Proxy documentation](proxy.md).
 
 ???+ tip
     - You can also have a list of proxies that are rotated while searching stores. Proxies can be read from a file named `STORENAME.proxies` in the format of `socks5://username:password@ip`; one per line.
