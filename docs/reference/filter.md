@@ -110,6 +110,7 @@ Used with the `STORES` variable.
 | Overclockers | UK | `overclockers`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|
 | Proshop | DE | `proshop-de`|
