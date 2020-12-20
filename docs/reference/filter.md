@@ -13,8 +13,11 @@
 | `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_RX6800` | Maximum price allowed for a match, applies AMD RX 6800 | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - GPUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_RX6800XT` | Maximum price allowed for a match,applies AMD RX 6800 XT | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - GPUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - GPUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - GPUs above `1234` will be skipped. |
+| `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - GPUs above `1234` will be skipped. |
 | `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search | Comma separated, e.g.: `marietta,duluth`, default: `web` |
 | `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
@@ -54,6 +57,7 @@ Used with the `STORES` variable.
 | ARLT | DE | `arlt`|
 | ASUS | US | `asus` |
 | ASUS | DE | `asus-de` |
+| AWD-IT | UK | `awd` |
 | Azerty | NL | `azerty`|
 | B&H | US | `bandh`|
 | Best Buy | US | `bestbuy`|
@@ -223,3 +227,4 @@ Used with the `COUNTRY` variable.
 | `spain` | `✔` | `✔` | `✔` | |
 | `sweden` | `✔` | `✔` | `✔` | |
 | `usa` | `✔` | `✔` | `✔` | |
+
