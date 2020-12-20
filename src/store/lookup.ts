@@ -1,4 +1,11 @@
-import {Browser, Page, PageEventObj, Request, Response} from 'puppeteer';
+import {
+	Browser,
+	Page,
+	PageEventObj,
+	Request,
+	RespondOptions,
+	Response
+} from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
 import {Selector, getPrice, pageIncludesLabels} from './includes-labels';
@@ -7,7 +14,8 @@ import {
 	delay,
 	getRandomUserAgent,
 	getSleepTime,
-	isStatusCodeInRange
+	isStatusCodeInRange,
+	noop
 } from '../util';
 import {disableBlockerInPage, enableBlockerInPage} from '../adblocker';
 import {config} from '../config';
@@ -16,7 +24,7 @@ import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
-import useProxy from 'puppeteer-page-proxy';
+import useProxy from '@doridian/puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
 
@@ -68,7 +76,7 @@ async function handleProxy(request: Request, proxy?: string) {
 	try {
 		await useProxy(request, proxy);
 	} catch (error: unknown) {
-		logger.error(error);
+		logger.error('handleProxy', error);
 		try {
 			await request.abort();
 		} catch {}
@@ -95,6 +103,14 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
 			resolve(true);
 		};
 
+		const respondFunc = async (response: RespondOptions) => {
+			try {
+				await request.respond(response);
+			} catch {}
+
+			resolve(true);
+		};
+
 		const requestProxy = new Proxy(request, {
 			get(target, prop, receiver) {
 				if (prop === 'continue') {
@@ -105,9 +121,14 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
 					return abortFunc;
 				}
 
+				if (prop === 'respond') {
+					return respondFunc;
+				}
+
 				return Reflect.get(target, prop, receiver);
 			}
 		});
+
 		adBlockRequestHandler(requestProxy);
 	});
 }
@@ -126,10 +147,10 @@ async function lookup(browser: Browser, store: Store) {
 	}
 
 	if (store.linksBuilder) {
-		logger.info(`[${store.name}] Running linksBuilder...`);
 		const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
 		const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
 		if (lastRunTime === -1 || Date.now() - lastRunTime > ttl) {
+			logger.info(`[${store.name}] Running linksBuilder...`);
 			try {
 				await fetchLinks(store, browser);
 				linkBuilderLastRunTimes[store.name] = Date.now();
@@ -160,9 +181,10 @@ async function lookup(browser: Browser, store: Store) {
 			? await browser.createIncognitoBrowserContext()
 			: browser.defaultBrowserContext();
 		const page = await context.newPage();
+		await page.setRequestInterception(true);
 
 		page.setDefaultNavigationTimeout(config.page.timeout);
-		await page.setUserAgent(getRandomUserAgent());
+		await page.setUserAgent(await getRandomUserAgent());
 
 		let adBlockRequestHandler: any;
 		let pageProxy;
@@ -180,6 +202,11 @@ async function lookup(browser: Browser, store: Store) {
 				get(target, prop, receiver) {
 					if (prop === 'on') {
 						return onProxyFunc;
+					}
+
+					// Give dummy setRequestInterception to avoid AdBlock from messing with it
+					if (prop === 'setRequestInterception') {
+						return noop;
 					}
 
 					return Reflect.get(target, prop, receiver);
@@ -219,7 +246,6 @@ async function lookup(browser: Browser, store: Store) {
 			);
 			const client = await page.target().createCDPSession();
 			await client.send('Network.clearBrowserCookies');
-			// Await client.send('Network.clearBrowserCache');
 		}
 
 		if (pageProxy) {
@@ -249,19 +275,16 @@ async function lookupCard(
 		waitUntil: givenWaitFor
 	});
 
-	if (!response) {
-		logger.debug(Print.noResponse(link, store, true));
-	}
-
 	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
-	const statusCode = response?.status() ?? 0;
-	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
-		if (statusCode === 429) {
-			logger.warn(Print.rateLimit(link, store, true));
-		} else {
-			logger.warn(Print.badStatusCode(link, store, statusCode, true));
-		}
+	const statusCode = await handleResponse(
+		browser,
+		store,
+		page,
+		link,
+		response
+	);
 
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
 		return statusCode;
 	}
 
@@ -299,6 +322,66 @@ async function lookupCard(
 	return statusCode;
 }
 
+// eslint-disable-next-line max-params
+async function handleResponse(
+	browser: Browser,
+	store: Store,
+	page: Page,
+	link: Link,
+	response?: Response | null
+) {
+	if (!response) {
+		logger.debug(Print.noResponse(link, store, true));
+	}
+
+	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
+	let statusCode = response?.status() ?? 0;
+	if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+		if (statusCode === 429) {
+			logger.warn(Print.rateLimit(link, store, true));
+		} else if (statusCode === 503) {
+			if (await checkIsCloudflare(store, page, link)) {
+				const response: Response | null = await page.waitForNavigation({
+					waitUntil: 'networkidle0'
+				});
+				statusCode = await handleResponse(
+					browser,
+					store,
+					page,
+					link,
+					response
+				);
+			} else {
+				logger.warn(Print.badStatusCode(link, store, statusCode, true));
+			}
+		} else {
+			logger.warn(Print.badStatusCode(link, store, statusCode, true));
+		}
+	}
+
+	return statusCode;
+}
+
+async function checkIsCloudflare(store: Store, page: Page, link: Link) {
+	const baseOptions: Selector = {
+		requireVisible: true,
+		selector: 'body',
+		type: 'textContent'
+	};
+
+	const cloudflareLabel = {
+		container: 'div[class="attribution"] a[rel="noopener noreferrer"]',
+		text: ['Cloudflare']
+	};
+
+	if (await pageIncludesLabels(page, cloudflareLabel, baseOptions)) {
+		logger.warn(Print.cloudflare(link, store, true));
+		return true;
+	}
+
+	return false;
+}
+
 async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	const baseOptions: Selector = {
 		requireVisible: false,
@@ -323,6 +406,15 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 			)
 		) {
 			logger.warn(Print.bannedSeller(link, store, true));
+			return false;
+		}
+	}
+
+	if (store.labels.outOfStock) {
+		if (
+			await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)
+		) {
+			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}
 	}
@@ -368,15 +460,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 		};
 
 		if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
-			logger.info(Print.outOfStock(link, store, true));
-			return false;
-		}
-	}
-
-	if (store.labels.outOfStock) {
-		if (
-			await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)
-		) {
 			logger.info(Print.outOfStock(link, store, true));
 			return false;
 		}

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const EvgaEu: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.product-buy-specs',

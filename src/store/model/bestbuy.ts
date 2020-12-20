@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const BestBuy: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container:
@@ -9,8 +10,7 @@ export const BestBuy: Store = {
 		},
 		maxPrice: {
 			container:
-				'[data-sticky-media-gallery] .priceView-price .priceView-hero-price span',
-			euroFormat: false
+				'[data-sticky-media-gallery] .priceView-price .priceView-hero-price span'
 		}
 	},
 	links: [
@@ -445,6 +445,27 @@ export const BestBuy: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.bestbuy.com/site/xfx-merc-319-amd-radeon-rx-6800xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6442585.p?skuId=6442585'
+		},
+		{
+			brand: 'xfx',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-amd-radeon-rx-6900-xt-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6444358.p?skuId=6444358'
+		},
+		{
+			brand: 'msi',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/msi-radeon-rx-6900-xt-16g-gddr6-pci-express-4-0-graphics-card-black-silver/6444716.p?skuId=6444716'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6900xt',
+			url:
+				'https://www.bestbuy.com/site/xfx-speedster-merc319-amd-radeon-rx-6900-xt-ultra-16gb-gddr6-pci-express-4-0-gaming-graphics-card-black/6445157.p?skuId=6445157'
 		},
 		{
 			brand: 'corsair',

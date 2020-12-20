@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Notebooksbilliger: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.warehouse',

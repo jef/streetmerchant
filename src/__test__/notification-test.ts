@@ -11,6 +11,7 @@ const link: Link = {
 };
 
 const store: Store = {
+	currency: '',
 	labels: {
 		inStock: {
 			container: 'test:container',

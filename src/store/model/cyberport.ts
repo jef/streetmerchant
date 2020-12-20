@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Cyberport: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.tooltipAvailabilityParent',

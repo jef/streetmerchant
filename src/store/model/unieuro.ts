@@ -1,7 +1,12 @@
 import {Store} from './store';
 
 export const Unieuro: Store = {
+	currency: '€',
 	labels: {
+		captcha: {
+			container: 'body',
+			text: ['Too Many Requests.']
+		},
 		inStock: {
 			container: '.price-container',
 			text: ['Aggiungi al carrello']

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Azerty: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.orderdelay',
@@ -183,6 +184,34 @@ export const Azerty: Store = {
 			series: '3070',
 			url:
 				'https://azerty.nl/product/evga/4377252/xc3-black-geforce-rtx-3070-videokaart-8-gb-gddr6'
+		},
+		{
+			brand: 'amd',
+			model: '5600x',
+			series: 'ryzen5600',
+			url:
+				'https://azerty.nl/product/amd/4368019/ryzen-5-5600x-processor-3-7-ghz-4-6-ghz-'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url:
+				'https://azerty.nl/product/amd/4368018/ryzen-7-5800x-processor-3-8-ghz-4-7-ghz-'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url:
+				'https://azerty.nl/product/amd/4368017/ryzen-9-5900x-processor-3-7-ghz-4-8-ghz-'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url:
+				'https://azerty.nl/product/amd/4368016/ryzen-9-5950x-processor-3-4-ghz-4-9-ghz-'
 		}
 	],
 	name: 'azerty'

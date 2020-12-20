@@ -1,4 +1,4 @@
-[![streetmerchant](assets/images/streetmerchant.png)](https://jef.codes/streetmerchant)
+[![streetmerchant](assets/images/streetmerchant-banner.png)](https://jef.codes/streetmerchant)
 
 ## Features
 
@@ -20,8 +20,9 @@ You'll find most of the content on the left sidebar. The right sidebar will help
 
 ### Looking for help
 
-- File a [GitHub issue](https://github.com/jef/streetmerchant/issues/new/choose).
-- Join us on [Discord](https://discord.gg/gbVY4vB9JF).
+- Have an idea, question, or need help? Visit our [GitHub discussion board](https://github.com/jef/streetmerchant/discussions).
+- Ran into a bug? File a [GitHub issue](https://github.com/jef/streetmerchant/issues/new/choose).
+- Looking to hang out and talk shop? Join us on [Discord](https://discord.gg/gbVY4vB9JF).
 
 ### Supporting the project
 

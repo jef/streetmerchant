@@ -4,7 +4,7 @@ import {config} from '../config';
 import {logger} from '../logger';
 
 const discord = config.notifications.discord;
-const {notifyGroup, webhooks} = discord;
+const {notifyGroup, webhooks, notifyGroupSeries} = discord;
 
 function getIdAndToken(webhook: string) {
 	const match = /.*\/webhooks\/(\d+)\/(.+)/.exec(webhook);
@@ -31,26 +31,46 @@ export function sendDiscordMessage(link: Link, store: Store) {
 						'> provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
 					)
 					.setThumbnail(
-						'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png'
+						'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png'
 					)
 					.setColor('#52b788')
 					.setTimestamp();
 
 				embed.addField('Store', store.name, true);
-				if (link.price) embed.addField('Price', `$${link.price}`, true);
+				if (link.price)
+					embed.addField(
+						'Price',
+						`${store.currency}${link.price}`,
+						true
+					);
 				embed.addField('Product Page', link.url);
 				if (link.cartUrl) embed.addField('Add to Cart', link.cartUrl);
 				embed.addField('Brand', link.brand, true);
 				embed.addField('Model', link.model, true);
 				embed.addField('Series', link.series, true);
 
+				embed.setTimestamp();
+
+				let notifyText: string[] = [];
+
+				if (notifyGroup) {
+					notifyText = notifyText.concat(notifyGroup);
+				}
+
+				if (Object.keys(notifyGroupSeries).indexOf(link.series) !== 0) {
+					notifyText = notifyText.concat(
+						notifyGroupSeries[link.series]
+					);
+				}
+
 				const promises = [];
 				for (const webhook of webhooks) {
 					const {id, token} = getIdAndToken(webhook);
 					const client = new Discord.WebhookClient(id, token);
+
 					promises.push({
 						client,
-						message: client.send(notifyGroup.join(' '), {
+						message: client.send(notifyText.join(' '), {
 							embeds: [embed],
 							username: 'streetmerchant'
 						})

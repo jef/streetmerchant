@@ -8,6 +8,7 @@ You can test your notification configuration by running `npm run test:notificati
 |---|---|
 | `DESKTOP_NOTIFICATIONS` | Display desktop notifications using [node-notifier](https://www.npmjs.com/package/node-notifier). |
 | `PLAY_SOUND` | Play this sound notification if a product is found. Relative path accepted, valid formats: wav, mp3, flac, E.g.: `path/to/notification.wav`, [free sounds available](https://notificationsounds.com/) |
+| `SOUND_PLAYER` | Override the default sound player using the specified executable. |
 
 ???+ attention
     If you're on Windows, you must have the proper library to run.
@@ -16,10 +17,27 @@ You can test your notification configuration by running `npm run test:notificati
 
 | Environment variable | Description |
 |:---:|---|
-| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify. Can be comma separated |
+| `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify |
+| `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
+| `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
+| `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
+| `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
+| `DISCORD_NOTIFY_GROUP_DARKHERO` | Discord group to notify on Dark Hero stock |
+| `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
+| `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
+| `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
+| `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
+| `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
+| `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 
 ???+ note
+    All groups can be comma separated. `DISCORD_NOTIFY_GROUP` is always used if set.
+
     - If you're using a role, please use `<@&2834729847239842>`
     - If you're using a user, please use `<@2834729847239842>`
 
@@ -87,6 +105,8 @@ Generate required keys using [instructions](https://developers.meethue.com/devel
 
 For cloud only usage, instructions to generate are located [here](https://developers.meethue.com/develop/hue-api/remote-authentication/).
 
+> :point_right: Here's a [video demonstration](https://vimeo.com/476083242).
+
 | Environment variable | Description |
 |:---:|---|
 | `PHILIPS_HUE_API_KEY` | Hue Bridge API Key |
@@ -99,15 +119,13 @@ For cloud only usage, instructions to generate are located [here](https://develo
 | `PHILIPS_HUE_CLOUD_CLIENT_ID` | Cloud Client ID. Cloud only |
 | `PHILIPS_HUE_CLOUD_CLIENT_SECRET` | Cloud Client Secret. Cloud only |
 
-> :point_right: Here's a [video demonstration](https://vimeo.com/476083242).
-
 ## Pushbullet
 
 Generate token at https://www.pushbullet.com/#settings/account.
 
 | Environment variable | Description |
 |:---:|---|
-| `PUSHBULLET` | PushBullet API key |
+| `PUSHBULLET` | API key |
 
 ## Pushover
 
@@ -115,23 +133,28 @@ Generate token at https://pushover.net/apps/build.
 
 | Environment variable | Description |
 |:---:|---|
-| `PUSHOVER_TOKEN` | Pushover access token |
-| `PUSHOVER_USER` | Pushover username |
-| `PUSHOVER_PRIORITY` | Pushover message priority |
+| `PUSHOVER_EXPIRE` | How many seconds your notification will continue to be retried for (every `PUSHOVER_RETRY` seconds) |
+| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user |
+| `PUSHOVER_PRIORITY` | Message priority |
+| `PUSHOVER_TOKEN` | API token |
+| `PUSHOVER_USER` | Username |
+
+???+ note
+    `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
 
 ## Slack
 
 | Environment variable | Description |
 |:---:|---|
-| `SLACK_CHANNEL` | Slack channel for posting |
-| `SLACK_TOKEN` | Slack API token |
+| `SLACK_CHANNEL` | Channel for posting |
+| `SLACK_TOKEN` | API token |
 
 ## Telegram
 
 | Environment variable | Description |
 |:---:|---|
-| `TELEGRAM_ACCESS_TOKEN` | Telegram access token |
-| `TELEGRAM_CHAT_ID` | Telegram chat ID. Can be comma separated, e.g.: `123456789,987654321` |
+| `TELEGRAM_ACCESS_TOKEN` | Access token |
+| `TELEGRAM_CHAT_ID` | Chat ID. Can be comma separated, e.g.: `123456789,987654321` |
 
 ## Twilio
 
@@ -139,9 +162,9 @@ Token generation can be found at https://twilio.com/console.
 
 | Environment variable | Description |
 |:---:|---|
-| `TWILIO_ACCOUNT_SID` | Twilio Account SID |
-| `TWILIO_AUTH_TOKEN` | Twilio Auth Token |
-| `TWILIO_FROM_NUMBER` | Twilio provided phone number to send messages from |
+| `TWILIO_ACCOUNT_SID` | Account SID |
+| `TWILIO_AUTH_TOKEN` | Auth Token |
+| `TWILIO_FROM_NUMBER` | Provided phone number to send messages from |
 | `TWILIO_TO_NUMBER` | Mobile number to send SMS to |
 
 ???+ note

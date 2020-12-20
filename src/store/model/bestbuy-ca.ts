@@ -1,19 +1,15 @@
 import {Store} from './store';
 
 export const BestBuyCa: Store = {
+	currency: '$',
 	labels: {
-		inStock: {
-			container: '.x-checkout-experience-new',
-			text: ['add to cart']
-		},
 		maxPrice: {
-			container:
-				'div[class^="productPricingContainer"] span[class^="screenReaderOnly_"',
+			container: 'div[class*="pricingContainer"]',
 			euroFormat: false
 		},
 		outOfStock: {
-			container: 'button.addToCartButton.disabled_XY3i_',
-			text: ['Add to Cart']
+			container: '.addToCartButton:disabled',
+			text: ['add to cart']
 		}
 	},
 	links: [
@@ -22,7 +18,7 @@ export const BestBuyCa: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.bestbuy.ca/en-ca/product/evga-geforce-gtx-1660-xc-ultra-6gb-gddr5-video-card/14119081?intl=nosplash'
+				'https://www.bestbuy.ca/en-ca/product/zotac-nvidia-geforce-gtx-1660-super-twin-fan-6gb-gddr6-video-card/14415897'
 		},
 		{
 			brand: 'msi',
@@ -163,6 +159,20 @@ export const BestBuyCa: Store = {
 			series: 'sonyps5de',
 			url:
 				'https://www.bestbuy.ca/en-ca/product/playstation-5-digital-edition-console-online-only/14962184?intl=nosplash'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/xbox-series-x-1tb-console-new-model-online-only/14964951'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series s',
+			series: 'xboxss',
+			url:
+				'https://www.bestbuy.ca/en-ca/product/xbox-series-s-512gb-console-new-model-online-only/14964950'
 		}
 	],
 	name: 'bestbuy-ca',

@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://jef.codes/streetmerchant"
     ><img
-      src="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant.png"
+      src="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-banner.png"
       alt="streetmerchant"
   /></a>
 </p>
@@ -38,11 +38,11 @@ First and foremost, this service _will not_ automatically buy for you.
 
 ## Quick start
 
-streetmerchant can ran with Node.js 14:
+streetmerchant runs on Node.js 14:
 
 ```shell
 git clone https://github.com/jef/streetmerchant.git
 cd streetmerchant && npm i && npm run start
 ```
 
-For more customization and information, visit [jef.codes/streetmerchant/getting-started](https://jef.codes/streetmerchant/getting-started).
+For more information and customization, visit [jef.codes/streetmerchant/getting-started](https://jef.codes/streetmerchant/getting-started).

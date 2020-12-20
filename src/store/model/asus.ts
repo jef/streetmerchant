@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 export const Asus: Store = {
 	backoffStatusCodes: [403, 429, 503],
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '#item_add_cart',
@@ -51,6 +52,13 @@ export const Asus: Store = {
 			model: 'strix oc',
 			series: '3080',
 			url: 'https://store.asus.com/us/item/202009AM290000002'
+		},
+		{
+			brand: 'asus',
+			itemNumber: '202011AM200000003',
+			model: 'crosshair viii',
+			series: 'darkhero',
+			url: 'https://store.asus.com/us/item/202011AM200000003'
 		}
 	],
 	name: 'asus',

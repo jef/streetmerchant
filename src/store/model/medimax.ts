@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Medimax: Store = {
+	currency: '€',
 	labels: {
 		inStock: [
 			{

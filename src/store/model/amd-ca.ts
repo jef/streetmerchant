@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const AmdCa: Store = {
+	currency: '$',
 	labels: {
 		inStock: {
 			container: '.btn-shopping-cart',
@@ -33,6 +34,14 @@ export const AmdCa: Store = {
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url: 'https://www.amd.com/en/direct-buy/5458372800/ca'
+		},
+		{
+			brand: 'amd',
+			cartUrl:
+				'https://www.amd.com/en/direct-buy/5458372200/ca?add-to-cart=true',
+			model: 'amd reference',
+			series: 'rx6900xt',
+			url: 'https://www.amd.com/en/direct-buy/5458372200/ca'
 		}
 	],
 	name: 'amd-ca'

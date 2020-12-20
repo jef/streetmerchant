@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Comet: Store = {
+	currency: '€',
 	labels: {
 		inStock: {
 			container: '.caption',
