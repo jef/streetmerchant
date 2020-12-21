@@ -33,6 +33,7 @@ Used with the `STORES` variable.
 
 | Stores | Country | Environment variable |
 |---|---|---|
+| AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
@@ -111,6 +112,7 @@ Used with the `STORES` variable.
 | Overclockers | UK | `overclockers`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|
 | Proshop | DE | `proshop-de`|

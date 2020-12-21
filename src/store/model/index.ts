@@ -1,4 +1,5 @@
 import {config, defaultStoreData} from '../../config';
+import {AComPC} from './acompc';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -76,6 +77,7 @@ import {OfficeDepot} from './officedepot';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
+import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
 import {Pny} from './pny';
@@ -105,6 +107,7 @@ import {Zotac} from './zotac';
 import {logger} from '../../logger';
 
 export const storeList = new Map([
+	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
@@ -182,6 +185,7 @@ export const storeList = new Map([
 	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[Pccg.name, Pccg],
+	[PCKing.name, PCKing],
 	[PCComponentes.name, PCComponentes],
 	[PlayStation.name, PlayStation],
 	[Pny.name, Pny],
