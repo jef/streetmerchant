@@ -5,10 +5,7 @@ export const AComPC: Store = {
 	labels: {
 		inStock: {
 			container: '.filial_stock',
-			text: [
-				'lagernd',
-				'im Zulauf',
-			]
+			text: ['lagernd', 'im Zulauf']
 		},
 		maxPrice: {
 			container: '.price',
@@ -131,7 +128,8 @@ export const AComPC: Store = {
 			brand: 'zotac',
 			model: 'trinity',
 			series: '3080',
-			url: 'https://www.acom-pc.de/Hardware-Software/Grafikkarten-Zubehoer/Grafikkarten-NVIDIA-PCI-Express/ZOTAC-GAMING-GeForce-RTX-3080-Trinity-Grafikkarten-GF-RTX-3080-10-GB-GDDR6X-PCIe-4.0-HDMI-3x-DisplayPort.html'
+			url:
+				'https://www.acom-pc.de/Hardware-Software/Grafikkarten-Zubehoer/Grafikkarten-NVIDIA-PCI-Express/ZOTAC-GAMING-GeForce-RTX-3080-Trinity-Grafikkarten-GF-RTX-3080-10-GB-GDDR6X-PCIe-4.0-HDMI-3x-DisplayPort.html'
 		},
 		{
 			brand: 'asus',
@@ -230,7 +228,7 @@ export const AComPC: Store = {
 			series: 'ryzen5950',
 			url:
 				'https://www.acom-pc.de/Hardware-Software/CPU-Prozessor-/-CPU-Kuehler-Zubehoer/AMD-CPU/AMD-CPU-Socket-AM4/AMD-RYZEN-9-5950X-4.90GHZ-16-CORE-SKT-AM4-72MB-105W-WOF.html'
-		},
+		}
 	],
 	name: 'acompc'
 };
