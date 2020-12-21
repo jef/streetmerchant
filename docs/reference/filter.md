@@ -92,6 +92,7 @@ Used with the `STORES` variable.
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Harvey Normans | IE | | `harveynorman-ie` |
+| John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
@@ -119,6 +120,7 @@ Used with the `STORES` variable.
 | Saturn | DE | `saturn`|
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
+| ShopTo | UK | `shopto`|
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|

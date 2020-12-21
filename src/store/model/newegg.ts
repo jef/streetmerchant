@@ -675,6 +675,24 @@ export const Newegg: Store = {
 				'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373'
 		},
 		{
+			brand: 'gigabyte',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932381',
+			model: 'gaming oc',
+			series: 'rx6800xt',
+			url:
+				'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xtgaming-oc-16gd/p/N82E16814932381'
+		},
+		{
+			brand: 'sapphire',
+			cartUrl:
+				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202394',
+			model: 'pulse',
+			series: 'rx6800',
+			url:
+				'https://www.newegg.com/sapphire-radeon-rx-6800-11305-02-20g/p/N82E16814202394'
+		},
+		{
 			brand: 'msi',
 			cartUrl:
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137607',
