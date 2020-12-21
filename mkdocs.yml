@@ -17,9 +17,8 @@ theme:
   favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png
   features:
     - search.suggest
-  font:
-    text: Noto Sans
-    code: JetBrains Mono
+    text: Roboto
+    code: Roboto Mono
   icon:
     repo: octicons/octoface-24
   logo: assets/images/streetmerchant-logo.png
