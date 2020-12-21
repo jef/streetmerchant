@@ -33,6 +33,7 @@ Used with the `STORES` variable.
 
 | Stores | Country | Environment variable |
 |---|---|---|
+| AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
