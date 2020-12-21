@@ -1,4 +1,5 @@
 import {config, defaultStoreData} from '../../config';
+import {AComPC} from './acompc';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -104,6 +105,7 @@ import {Zotac} from './zotac';
 import {logger} from '../../logger';
 
 export const storeList = new Map([
+	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
