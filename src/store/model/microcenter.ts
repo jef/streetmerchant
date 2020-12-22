@@ -199,6 +199,12 @@ for (const microCenterLocation of microCenterLocations) {
 				url: `https://www.microcenter.com/product/632048/asrock-amd-radeon-rx-6900-xt-triple-fan-16gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
 			},
 			{
+				brand: 'powercolor',
+				model: 'amd reference',
+				series: 'rx6900xt',
+				url: `https://www.microcenter.com/product/632091/powercolor-amd-radeon-rx-6900-xt-triple-fan-16gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`
+			},
+			{
 				brand: 'asus',
 				model: 'crosshair viii',
 				series: 'darkhero',

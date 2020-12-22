@@ -1,4 +1,5 @@
 import {config, defaultStoreData} from '../../config';
+import {AComPC} from './acompc';
 import {Adorama} from './adorama';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -57,6 +58,7 @@ import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {HarveyNormanIE} from './harveynorman-ie';
+import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
@@ -75,6 +77,7 @@ import {OfficeDepot} from './officedepot';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
+import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
 import {Pny} from './pny';
@@ -83,6 +86,7 @@ import {ProshopDK} from './proshop-dk';
 import {Saturn} from './saturn';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
+import {ShopTo} from './shopto';
 import {SmythsToys} from './smythstoys';
 import {SmythsToysIE} from './smythstoys-ie';
 import {Spielegrotte} from './spielegrotte';
@@ -103,6 +107,7 @@ import {Zotac} from './zotac';
 import {logger} from '../../logger';
 
 export const storeList = new Map([
+	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
@@ -161,6 +166,7 @@ export const storeList = new Map([
 	[GamestopDE.name, GamestopDE],
 	[GamestopIE.name, GamestopIE],
 	[HarveyNormanIE.name, HarveyNormanIE],
+	[JohnLewis.name, JohnLewis],
 	[Kabum.name, Kabum],
 	[Mediamarkt.name, Mediamarkt],
 	[Medimax.name, Medimax],
@@ -179,6 +185,7 @@ export const storeList = new Map([
 	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[Pccg.name, Pccg],
+	[PCKing.name, PCKing],
 	[PCComponentes.name, PCComponentes],
 	[PlayStation.name, PlayStation],
 	[Pny.name, Pny],
@@ -187,6 +194,7 @@ export const storeList = new Map([
 	[Saturn.name, Saturn],
 	[Scan.name, Scan],
 	[Scorptec.name, Scorptec],
+	[ShopTo.name, ShopTo],
 	[SmythsToysIE.name, SmythsToysIE],
 	[SmythsToys.name, SmythsToys],
 	[Spielegrotte.name, Spielegrotte],
