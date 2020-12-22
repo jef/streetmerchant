@@ -212,6 +212,24 @@ export const MemoryExpress: Store = {
 			model: 'aorus xtreme',
 			series: '3080',
 			url: 'https://www.memoryexpress.com/Products/MX00114404'
+		},
+		{
+			brand: 'sapphire',
+			model: 'pulse',
+			series: 'rx6800xt',
+			url: 'https://www.memoryexpress.com/Products/MX00114404'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: 'rx6800xt',
+			url: 'https://www.memoryexpress.com/Products/MX00114404'
+		},
+		{
+			brand: 'xfx',
+			model: 'merc',
+			series: 'rx6800xt',
+			url: 'https://www.memoryexpress.com/Products/MX00114404'
 		}
 	],
 	name: 'memoryexpress',
