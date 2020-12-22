@@ -1,9 +1,9 @@
 import {Browser, Page, Response} from 'puppeteer';
 import {StatusCodeRangeArray, Store} from './store/model';
+import UserAgent from 'user-agents';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
 import {logger} from './logger';
-import topUserAgents from 'top-user-agents';
 
 export function getSleepTime(store: Store) {
 	const minSleep = store.minPageSleep as number;
@@ -84,21 +84,7 @@ export async function closePage(page: Page) {
 }
 
 export async function getRandomUserAgent(): Promise<string> {
-	const deprecatedUserAgent = (process.env.USER_AGENT
-		? process.env.USER_AGENT.includes('\n')
-			? process.env.USER_AGENT.split('\n')
-			: process.env.USER_AGENT.split(',')
-		: []
-	).map((s) => s.trim());
-
-	if (deprecatedUserAgent.length > 0) {
-		return deprecatedUserAgent[
-			Math.floor(Math.random() * deprecatedUserAgent.length)
-		];
-	}
-
-	const userAgent =
-		topUserAgents[Math.floor(Math.random() * topUserAgents.length)];
+	const userAgent = new UserAgent({platform: 'Win32'}).toString();
 	logger.debug('user agent', {userAgent});
 	return userAgent;
 }
