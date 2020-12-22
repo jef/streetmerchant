@@ -17,7 +17,7 @@ export const Evga: Store = {
 		},
 		{
 			brand: 'evga',
-			model: 'xc',
+			model: 'xc gaming',
 			series: '3060ti',
 			url: 'https://www.evga.com/products/product.aspx?pn=08G-P5-3663-KR'
 		},
