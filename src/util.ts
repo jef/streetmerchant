@@ -84,6 +84,19 @@ export async function closePage(page: Page) {
 }
 
 export async function getRandomUserAgent(): Promise<string> {
+	const deprecatedUserAgent = (process.env.USER_AGENT
+		? process.env.USER_AGENT.includes('\n')
+			? process.env.USER_AGENT.split('\n')
+			: process.env.USER_AGENT.split(',')
+		: []
+	).map((s) => s.trim());
+
+	if (deprecatedUserAgent.length > 0) {
+		return deprecatedUserAgent[
+			Math.floor(Math.random() * deprecatedUserAgent.length)
+		];
+	}
+	
 	const userAgent = new UserAgent({platform: 'Win32'}).toString();
 	logger.debug('user agent', {userAgent});
 	return userAgent;
