@@ -47,9 +47,9 @@ import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
 import {Eprice} from './eprice';
+import {Equippr} from './equippr';
 import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
-import {Equippr} from './equippr';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Expert} from './expert';
@@ -156,9 +156,9 @@ export const storeList = new Map([
 	[Ebuyer.name, Ebuyer],
 	[Elcorteingles.name, Elcorteingles],
 	[Eprice.name, Eprice],
+	[Equippr.name, Equippr],
 	[Euronics.name, Euronics],
 	[EuronicsDE.name, EuronicsDE],
-	[Equippr.name, Equippr],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Expert.name, Expert],
