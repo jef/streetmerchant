@@ -212,6 +212,21 @@ export const Print = {
 		}
 
 		return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
+	},
+	recursionLimit(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return (
+				'✖ ' +
+				buildProductString(link, store, true) +
+				' :: ' +
+				chalk.yellow('CLOUDFLARE RETRY LIMIT REACHED, ABORT')
+			);
+		}
+
+		return `✖ ${buildProductString(
+			link,
+			store
+		)} :: CLOUDFLARE RETRY LIMIT REACHED, ABORT`;
 	}
 };
 
