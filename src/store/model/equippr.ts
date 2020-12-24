@@ -4,15 +4,15 @@ export const Equippr: Store = {
 	currency: '€',
 	labels: {
 		inStock: {
-			container: '.buybox--button .btn',
+			container: 'buybox--button-container',
 			text: ['in den warenkorb']
 		},
 		maxPrice: {
-			container: '.product--price .price--default',
+			container: '.product--price',
 			euroFormat: true
 		},
 		outOfStock: {
-			container: '.product--buybox .block',
+			container: '.product--buybox',
 			text: ['bald verfügbar']
 		}
 	},
