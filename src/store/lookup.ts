@@ -329,7 +329,7 @@ async function handleResponse(
 	page: Page,
 	link: Link,
 	response?: Response | null,
-	recursionDepth: number = 0
+	recursionDepth = 0
 ) {
 	if (!response) {
 		logger.debug(Print.noResponse(link, store, true));
@@ -343,11 +343,13 @@ async function handleResponse(
 		} else if (statusCode === 503) {
 			if (await checkIsCloudflare(store, page, link)) {
 				if (recursionDepth > 4) {
-					logger.warn(Print.recursionLimit(link, store, true))
+					logger.warn(Print.recursionLimit(link, store, true));
 				} else {
-					const response: Response | null = await page.waitForNavigation({
-						waitUntil: 'networkidle0'
-					});
+					const response: Response | null = await page.waitForNavigation(
+						{
+							waitUntil: 'networkidle0'
+						}
+					);
 					recursionDepth++;
 					statusCode = await handleResponse(
 						browser,
