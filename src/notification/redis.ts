@@ -4,19 +4,18 @@ import {config} from '../config';
 import {logger} from '../logger';
 
 const {url} = config.notifications.redis;
+let client: RedisClient;
 
 function initRedis(): RedisClient | null {
 	if (url) {
-		return redis.createClient({url});
+		client = redis.createClient({url});
 	}
 
 	return null;
 }
 
-function updateRedis(link: Link, store: Store) {
+export function updateRedis(link: Link, store: Store) {
 	try {
-		const client = initRedis();
-
 		if (client) {
 			const key = `${store.name}:${link.brand}:${link.model}`
 				.split(' ')
@@ -43,4 +42,4 @@ function updateRedis(link: Link, store: Store) {
 	}
 }
 
-export default updateRedis;
+initRedis();

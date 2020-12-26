@@ -14,7 +14,7 @@ import {sendTelegramMessage} from './telegram';
 import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
-import updateRedis from './redis';
+import {updateRedis} from './redis';
 
 export function sendNotification(link: Link, store: Store) {
 	// Priority
