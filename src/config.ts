@@ -279,6 +279,9 @@ const notifications = {
 		token: envOrString(process.env.PUSHOVER_TOKEN),
 		username: envOrString(process.env.PUSHOVER_USER)
 	},
+	redis: {
+		url: envOrString(process.env.REDIS_URL)
+	},
 	slack: {
 		channel: envOrString(process.env.SLACK_CHANNEL),
 		token: envOrString(process.env.SLACK_TOKEN)
