@@ -30,14 +30,14 @@ export const Ebuyer: Store = {
 			model: 'ps5 console',
 			series: 'sonyps5c',
 			url:
-				'https://www.ebuyer.com/1125329-sony-playstation-5-console-cfi-1015a'
+				'https://www.ebuyer.com/1133940-sony-playstation-5-console-cfi-1016a'
 		},
 		{
 			brand: 'sony',
 			model: 'ps5 digital',
 			series: 'sonyps5de',
 			url:
-				'https://www.ebuyer.com/1125332-sony-playstation-5-digital-edition-cfi-1015b'
+				'https://www.ebuyer.com/1133942-sony-playstation-5-digital-edition-cfi-1016b-'
 		},
 		{
 			brand: 'microsoft',

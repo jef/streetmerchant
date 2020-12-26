@@ -1,28 +1,36 @@
 # Filter
 
-| Environment variable | Description | Notes |
-|:---:|---|---|
+| Environment variable | Description |
+|:---:|---|
 | `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Only used with `nvidia-api`, default: `usa` |
-| `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - Cards above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PSUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_DARKHERO` | Maximum price allowed for a match, applies to ASUS Dark Hero motherboards | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PSUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_RYZEN5600` | Maximum price allowed for a match, applies AMD 5600 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - CPUs above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
-| `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` | Default: leave empty for no limit, otherwise enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods.) e.g.: `1234` - PS5 above `1234` will be skipped. |
-| `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search | Comma separated, e.g.: `marietta,duluth`, default: `web` |
-| `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing | Default: `10` |
-| `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api` | Default: `60000` |
-| `SHOW_ONLY_BRANDS` | Filter to show specified brands | Comma separated, e.g.: `evga,zotac` |
-| `SHOW_ONLY_MODELS` | Filter to show specified models | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `founders edition,rog strix` <br/><br/> 2. Advanced E.g: `MODEL:SERIES`, E.g: `founders edition:3090,rog strix` |
-| `SHOW_ONLY_SERIES` | Filter to show specified series | Comma separated, e.g.: `3080,ryzen5900` |
-| `STORES` | [Supported stores](#supported-stores) you want to be scraped | Both supported formats are comma separated <br/><br/>1. Standard  E.g.: `"nvidia"` <br/><br/> 2. Advanced E.g: `STORE:PAGE_SLEEP_MIN:PAGE_SLEEP_MAX`, E.g: `nvidia:10000:30000` <br/><br/>Default: `nvidia` |
+| `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs |
+| `MAX_PRICE_SERIES_DARKHERO` | Maximum price allowed for a match, applies to ASUS Dark Hero motherboards |
+| `MAX_PRICE_SERIES_RYZEN5600` | Maximum price allowed for a match, applies AMD 5600 series cpus |
+| `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus |
+| `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus |
+| `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus |
+| `MAX_PRICE_SERIES_RX6800` | Maximum price allowed for a match, applies AMD RX 6800 |
+| `MAX_PRICE_SERIES_RX6800XT` | Maximum price allowed for a match,applies AMD RX 6800 XT |
+| `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
+| `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
+| `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` |
+| `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search. Comma separated, e.g.: `marietta,duluth`, default: `web` |
+| `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing. Default: `10` |
+| `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api`. Default: `60000` |
+| `SHOW_ONLY_BRANDS` | Filter to show specified brands. Comma separated, e.g.: `evga,zotac` |
+| `SHOW_ONLY_MODELS` | Filter to show specified models. Comma separated, can include series. E.g.: `founders edition:3090,rog strix` |
+| `SHOW_ONLY_SERIES` | Filter to show specified series. Comma separated, e.g.: `3080,ryzen5900` |
+| `STORES` | [Supported stores](#supported-stores) you want to be scraped. Default: `amazon,bestbuy`. Comma separated, can include `PAGE_SLEEP_MIN` and `PAGE_SLEEP_MAX` values. E.g.: `amazon:10000:30000,bestbuy,newegg:50000:80000`. |
+
+???+ note
+    For `MAX_PRICE_SERIES_*` variables: enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods). E.g.: `1234`. Merchandise found above this price will be skipped.
 
 ## Supported stores
 
@@ -30,6 +38,7 @@ Used with the `STORES` variable.
 
 | Stores | Country | Environment variable |
 |---|---|---|
+| AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
@@ -54,6 +63,7 @@ Used with the `STORES` variable.
 | ARLT | DE | `arlt`|
 | ASUS | US | `asus` |
 | ASUS | DE | `asus-de` |
+| AWD-IT | UK | `awd` |
 | Azerty | NL | `azerty`|
 | B&H | US | `bandh`|
 | Best Buy | US | `bestbuy`|
@@ -78,15 +88,18 @@ Used with the `STORES` variable.
 | ePrice | IT | `eprice`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
+| Equippr | DE | `equippr`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
 | Expert | DE | `expert`|
+| Futurex | DE | `futurex`|
 | Galaxus | DE | `galaxus`|
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Harvey Normans | IE | | `harveynorman-ie` |
+| John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
@@ -106,6 +119,7 @@ Used with the `STORES` variable.
 | Overclockers | UK | `overclockers`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|
 | Proshop | DE | `proshop-de`|
@@ -113,6 +127,7 @@ Used with the `STORES` variable.
 | Saturn | DE | `saturn`|
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
+| ShopTo | UK | `shopto`|
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
@@ -223,3 +238,4 @@ Used with the `COUNTRY` variable.
 | `spain` | `✔` | `✔` | `✔` | |
 | `sweden` | `✔` | `✔` | `✔` | |
 | `usa` | `✔` | `✔` | `✔` | |
+

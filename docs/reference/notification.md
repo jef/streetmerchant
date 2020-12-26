@@ -36,7 +36,7 @@ You can test your notification configuration by running `npm run test:notificati
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 
 ???+ note
-    All ground can be comma separated. `DISCORD_NOTIFY_GROUP` is always used if set.
+    All groups can be comma separated. `DISCORD_NOTIFY_GROUP` is always used if set.
 
     - If you're using a role, please use `<@&2834729847239842>`
     - If you're using a user, please use `<@2834729847239842>`

@@ -95,6 +95,18 @@ export const Print = {
 
 		return `✖ ${buildProductString(link, store)} :: CAPTCHA`;
 	},
+	cloudflare(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return (
+				'✖ ' +
+				buildProductString(link, store, true) +
+				' :: ' +
+				chalk.yellow('CLOUDFLARE, WAITING')
+			);
+		}
+
+		return `✖ ${buildProductString(link, store)} :: CLOUDFLARE, WAITING`;
+	},
 	inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
 		const productString = `${buildProductString(link, store)} :: IN STOCK`;
 
@@ -200,6 +212,21 @@ export const Print = {
 		}
 
 		return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
+	},
+	recursionLimit(link: Link, store: Store, color?: boolean): string {
+		if (color) {
+			return (
+				'✖ ' +
+				buildProductString(link, store, true) +
+				' :: ' +
+				chalk.yellow('CLOUDFLARE RETRY LIMIT REACHED, ABORT')
+			);
+		}
+
+		return `✖ ${buildProductString(
+			link,
+			store
+		)} :: CLOUDFLARE RETRY LIMIT REACHED, ABORT`;
 	}
 };
 
