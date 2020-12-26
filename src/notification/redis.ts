@@ -26,10 +26,10 @@ const updateRedis = (link: Link, store: Store) => {
 
 			const redisUpdated = client.set(key, JSON.stringify(value));
 
-			if (!redisUpdated) {
-				logger.error(`✖ couldn't update redis for key (${key})`);
-			} else {
+			if (redisUpdated) {
 				logger.info('✔ redis updated');
+			} else {
+				logger.error(`✖ couldn't update redis for key (${key})`);
 			}
 		}
 	} catch (error: unknown) {
