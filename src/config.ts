@@ -387,35 +387,38 @@ const store = {
 		'xboxss',
 		'xboxsx'
 	]),
-	stores: envOrArray(process.env.STORES, ['amazon,bestbuy']).map((entry) => {
-		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
+	stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(
+		(entry) => {
+			const [name, minPageSleep, maxPageSleep] =
+				entry.match(/[^:]+/g) ?? [];
 
-		let proxyList;
-		try {
-			proxyList = loadProxyList(name);
-		} catch {}
-
-		if (!proxyList) {
+			let proxyList;
 			try {
-				proxyList = loadProxyList('global');
+				proxyList = loadProxyList(name);
 			} catch {}
-		}
 
-		return {
-			maxPageSleep: envOrNumberMax(
-				minPageSleep,
-				maxPageSleep,
-				browser.maxSleep
-			),
-			minPageSleep: envOrNumberMin(
-				minPageSleep,
-				maxPageSleep,
-				browser.minSleep
-			),
-			name: envOrString(name),
-			proxyList
-		};
-	})
+			if (!proxyList) {
+				try {
+					proxyList = loadProxyList('global');
+				} catch {}
+			}
+
+			return {
+				maxPageSleep: envOrNumberMax(
+					minPageSleep,
+					maxPageSleep,
+					browser.maxSleep
+				),
+				minPageSleep: envOrNumberMin(
+					minPageSleep,
+					maxPageSleep,
+					browser.minSleep
+				),
+				name: envOrString(name),
+				proxyList
+			};
+		}
+	)
 };
 
 export const defaultStoreData = {
