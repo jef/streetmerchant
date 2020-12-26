@@ -1,17 +1,23 @@
 import {Link, Store} from '../store/model';
+import redis, {RedisClient} from 'redis';
 import {config} from '../config';
 import {logger} from '../logger';
-import redis from 'redis';
 
 const {url} = config.notifications.redis;
 
-const client = redis.createClient({
-	url
-});
+function initRedis(): RedisClient | null {
+	if (url) {
+		return redis.createClient({url});
+	}
 
-const updateRedis = (link: Link, store: Store) => {
+	return null;
+}
+
+function updateRedis(link: Link, store: Store) {
 	try {
-		if (url) {
+		const client = initRedis();
+
+		if (client) {
 			const key = `${store.name}:${link.brand}:${link.model}`
 				.split(' ')
 				.join('-');
@@ -35,6 +41,6 @@ const updateRedis = (link: Link, store: Store) => {
 	} catch (error: unknown) {
 		logger.error("✖ couldn't update redis", error);
 	}
-};
+}
 
 export default updateRedis;
