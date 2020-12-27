@@ -44,7 +44,7 @@ const adjustLightsWithAPI = (hueBridge: Api) => {
 	if (lightIds) {
 		const arrayOfIDs = lightIds.split(',');
 		arrayOfIDs.forEach((light) => {
-			logger.debug('Adjusting specified lights');
+			logger.debug('adjusting specified lights');
 			(hueBridge.lights.setLightState(
 				light,
 				lightState
@@ -60,7 +60,7 @@ const adjustLightsWithAPI = (hueBridge: Api) => {
 			.getAll()
 			.then((allLights: any[]) => {
 				allLights.forEach((light: any) => {
-					logger.debug('Adjusting all hue lights');
+					logger.debug('adjusting all hue lights');
 					(hueBridge.lights.setLightState(
 						light,
 						lightState
