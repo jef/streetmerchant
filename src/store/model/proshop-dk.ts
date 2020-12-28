@@ -605,6 +605,24 @@ export const ProshopDK: Store = {
 			model: 'gamerock oc',
 			series: '3090',
 			url: 'https://www.proshop.dk/2911898'
+		},
+		{
+			brand: 'amd',
+			model: '5800x',
+			series: 'ryzen5800',
+			url: 'https://www.proshop.dk/2884171'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.proshop.dk/2884173'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.proshop.dk/2884175'
 		}
 	],
 	name: 'proshop-dk'
