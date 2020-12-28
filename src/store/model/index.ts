@@ -47,11 +47,13 @@ import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
 import {Eprice} from './eprice';
+import {Equippr} from './equippr';
 import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Expert} from './expert';
+import {Futurex} from './futurex';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {Gamestop} from './gamestop';
@@ -155,11 +157,13 @@ export const storeList = new Map([
 	[Ebuyer.name, Ebuyer],
 	[Elcorteingles.name, Elcorteingles],
 	[Eprice.name, Eprice],
+	[Equippr.name, Equippr],
 	[Euronics.name, Euronics],
 	[EuronicsDE.name, EuronicsDE],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Expert.name, Expert],
+	[Futurex.name, Futurex],
 	[Galaxus.name, Galaxus],
 	[Game.name, Game],
 	[Gamestop.name, Gamestop],

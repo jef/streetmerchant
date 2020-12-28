@@ -88,9 +88,11 @@ Used with the `STORES` variable.
 | ePrice | IT | `eprice`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
+| Equippr | DE | `equippr`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
 | Expert | DE | `expert`|
+| Futurex | DE | `futurex`|
 | Galaxus | DE | `galaxus`|
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|

@@ -279,6 +279,9 @@ const notifications = {
 		token: envOrString(process.env.PUSHOVER_TOKEN),
 		username: envOrString(process.env.PUSHOVER_USER)
 	},
+	redis: {
+		url: envOrString(process.env.REDIS_URL)
+	},
 	slack: {
 		channel: envOrString(process.env.SLACK_CHANNEL),
 		token: envOrString(process.env.SLACK_TOKEN)
@@ -387,35 +390,38 @@ const store = {
 		'xboxss',
 		'xboxsx'
 	]),
-	stores: envOrArray(process.env.STORES, ['amazon,bestbuy']).map((entry) => {
-		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
+	stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(
+		(entry) => {
+			const [name, minPageSleep, maxPageSleep] =
+				entry.match(/[^:]+/g) ?? [];
 
-		let proxyList;
-		try {
-			proxyList = loadProxyList(name);
-		} catch {}
-
-		if (!proxyList) {
+			let proxyList;
 			try {
-				proxyList = loadProxyList('global');
+				proxyList = loadProxyList(name);
 			} catch {}
-		}
 
-		return {
-			maxPageSleep: envOrNumberMax(
-				minPageSleep,
-				maxPageSleep,
-				browser.maxSleep
-			),
-			minPageSleep: envOrNumberMin(
-				minPageSleep,
-				maxPageSleep,
-				browser.minSleep
-			),
-			name: envOrString(name),
-			proxyList
-		};
-	})
+			if (!proxyList) {
+				try {
+					proxyList = loadProxyList('global');
+				} catch {}
+			}
+
+			return {
+				maxPageSleep: envOrNumberMax(
+					minPageSleep,
+					maxPageSleep,
+					browser.maxSleep
+				),
+				minPageSleep: envOrNumberMin(
+					minPageSleep,
+					maxPageSleep,
+					browser.minSleep
+				),
+				name: envOrString(name),
+				proxyList
+			};
+		}
+	)
 };
 
 export const defaultStoreData = {
