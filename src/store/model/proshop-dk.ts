@@ -88,11 +88,11 @@ export const ProshopDK: Store = {
 			brand: 'gigabyte',
 			model: 'gaming oc pro',
 			series: '3060ti',
-			url: 'https://www.proshop.dk/2887736'
+			url: 'https://www.proshop.dk/2887738'
 		},
 		{
 			brand: 'gigabyte',
-			model: 'gaming oc pro',
+			model: 'eagle oc',
 			series: '3060ti',
 			url: 'https://www.proshop.dk/2887736'
 		},
