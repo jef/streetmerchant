@@ -143,7 +143,7 @@ export type Model =
 	| 'xc3 black'
 	| 'xc3 ultra'
 	| 'xc3'
-	| 'xlr8 epicx'
+	| 'xlr8 epic x'
 	| 'xlr8 revel'
 	| 'xlr8 uprising';
 
