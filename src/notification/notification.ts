@@ -15,6 +15,7 @@ import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
+import { sendWhatsAppMessage } from "./whatsapp";
 
 export function sendNotification(link: Link, store: Store) {
 	// Priority
@@ -34,5 +35,6 @@ export function sendNotification(link: Link, store: Store) {
 	sendTweet(link, store);
 	sendTwilioMessage(link, store);
 	sendTwitchMessage(link, store);
+	sendWhatsAppMessage(link, store);
 	updateRedis(link, store);
 }

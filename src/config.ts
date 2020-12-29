@@ -311,6 +311,11 @@ const notifications = {
 		consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
 		tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS)
 	}
+	},
+	whatsapp: {
+		callMeBotApiKey: envOrString(process.env.WHATSAPP_CALLMEBOT_API_KEY),
+		phoneNumber: envOrString(process.env.WHATSAPP_PHONE_NUMBER),
+	},
 };
 
 const nvidia = {

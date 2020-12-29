@@ -197,3 +197,16 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITCH_ACCESS_TOKEN` | Twitch access token |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token |
 | `TWITCH_CHANNEL` | Twitch channel |
+
+## WhatsApp
+
+Uses [CallMeBot](https://www.callmebot.com/) service.  
+Generate the api key by following the `Setup` instructions here: https://www.callmebot.com/blog/free-api-whatsapp-messages/
+
+| Environment variable | Description |
+|:---:|---|
+| `WHATSAPP_CALLMEBOT_API_KEY` | APIKEY given by CallMeBot after registration |
+| `WHATSAPP_PHONE_NUMBER`| Phone number registered with CallMeBot service |
+
+???+ note
+    Include country codes in phone numbers. Example: `+4401234567890`
