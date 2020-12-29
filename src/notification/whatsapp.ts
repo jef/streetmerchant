@@ -1,7 +1,7 @@
-import fetch from "node-fetch";
-import { config } from "../config";
-import { logger, Print } from "../logger";
-import { Link, Store } from "../store/model";
+import fetch from 'node-fetch';
+import {config} from '../config';
+import {Print, logger} from '../logger';
+import {Link, Store} from '../store/model';
 
 const whatsapp = config.notifications.whatsapp;
 
@@ -15,9 +15,9 @@ export function sendWhatsAppMessage(link: Link, store: Store) {
 	}&text=${encodeURIComponent(message)}&apikey=${whatsapp.callMeBotApiKey}`;
 
 	fetch(url, {
-		method: "GET",
+		method: 'GET'
 	})
-		.then(() => logger.info("✔ whatsapp message sent"))
+		.then(() => logger.info('✔ whatsapp message sent'))
 		.catch((error) =>
 			logger.error("✖ couldn't send whatsapp message", error)
 		);
