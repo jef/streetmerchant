@@ -137,6 +137,7 @@ Used with the `STORES` variable.
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
 | Very | UK | `very`|
+| Vuugo | CA | `vuugo` |
 | Walmart | US | `walmart`|
 | Walmart | CA | `walmart-ca`|
 | Wipoid | ES | `wipoid`|

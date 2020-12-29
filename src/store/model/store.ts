@@ -78,6 +78,7 @@ export type Model =
 	| 'dual'
 	| 'eagle oc'
 	| 'eagle'
+	| 'ekwb'
 	| 'founders edition'
 	| 'ftw3'
 	| 'ftw3 ultra'
@@ -143,7 +144,8 @@ export type Model =
 	| 'xc3 ultra'
 	| 'xc3'
 	| 'xlr8 revel'
-	| 'xlr8 uprising';
+	| 'xlr8 uprising'
+	| 'xlr8 epic x';
 
 export type Link = {
 	brand: Brand;
