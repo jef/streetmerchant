@@ -20,7 +20,15 @@ export const Mediamarkt: Store = {
 			{
 				container: '#root',
 				text: ['Leider keine Lieferung möglich']
-			}
+			},
+  			{
+  				container: '#root',
+  				text: ['Nicht verfügbar']
+  			},
+  			{
+  				container: '#root',
+  				text: ['Dieser Artikel ist dauerhaft ausverkauft']
+  			}
 		]
 	},
 	links: [
