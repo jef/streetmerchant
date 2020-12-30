@@ -21,7 +21,8 @@ function getQueryAsElementArray(
 	if (isElementArray(query)) {
 		return query.map((x) => ({
 			container: x.container ?? defaultContainer,
-			text: x.text
+			regex: x.regex ?? [],
+			text: x.text ?? []
 		}));
 	}
 
@@ -29,6 +30,7 @@ function getQueryAsElementArray(
 		return [
 			{
 				container: defaultContainer,
+				regex: [],
 				text: query
 			}
 		];
@@ -37,7 +39,8 @@ function getQueryAsElementArray(
 	return [
 		{
 			container: query.container ?? defaultContainer,
-			text: query.text
+			regex: query.regex ?? [],
+			text: query.text ?? []
 		}
 	];
 }
@@ -60,7 +63,10 @@ export async function pageIncludesLabels(
 
 			logger.debug(contents);
 
-			return includesLabels(contents, query.text);
+			return (
+				includesLabels(contents, query.text) ||
+				includesRegex(contents, query.regex)
+			);
 		})
 	);
 
@@ -114,6 +120,19 @@ export function includesLabels(
 	return searchLabels.some((label) =>
 		domTextLowerCase.includes(label.toLowerCase())
 	);
+}
+
+/**
+ * Checks if DOM has any text matching a regex.
+ *
+ * @param domText Complete DOM of website.
+ * @param regexStrings Regex strings to search for a match.
+ */
+export function includesRegex(
+	domText: string,
+	regexStrings: RegExp[]
+): boolean {
+	return regexStrings.some((regex) => regex.test(domText));
 }
 
 export async function getPrice(

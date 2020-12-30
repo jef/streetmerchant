@@ -2,7 +2,8 @@ import {Browser, LoadEvent} from 'puppeteer';
 
 export type Element = {
 	container?: string;
-	text: string[];
+	text?: string[];
+	regex?: RegExp[];
 };
 
 export type Pricing = {
