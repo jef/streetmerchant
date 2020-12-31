@@ -21,11 +21,10 @@ export const NeweggCa: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			itemNumber: '14-500-495',
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.newegg.ca/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
+				'https://www.newegg.ca/p/N82E16824475043?Item=N82E16824475043&cm_sp=Homepage_MKPL-_-P3_24-475-043-_-12302020'
 		},
 		{
 			brand: 'asus',
@@ -227,7 +226,7 @@ export const NeweggCa: Store = {
 			brand: 'msi',
 			model: 'ventus 3x',
 			series: '3090',
-			url:	
+			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3090-rtx-3090-ventus-3x-24g/p/N82E16814137599'
 		},
 		{

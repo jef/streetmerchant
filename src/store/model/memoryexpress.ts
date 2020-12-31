@@ -304,12 +304,12 @@ export const MemoryExpress: Store = {
 			url: 'https://www.memoryexpress.com/Products/MX00114449'
 		},
 		// TODO: uncomment this when #1555 is merged
-		/*{
+		/* {
 			brand: 'asus',
 			model: 'ekwb',
 			series: '3090',
 			url: 'https://www.memoryexpress.com/Products/MX00115135'
-		},*/
+		}, */
 		{
 			brand: 'asus',
 			model: 'strix oc',
