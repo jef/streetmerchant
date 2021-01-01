@@ -7,9 +7,9 @@ export const CanadaComputers: Store = {
 			container: 'div[class="pi-prod-availability"]',
 			text: ['Online In Stock']
 		},
-		outOfStock: {
-			container: 'div[class="pi-prod-availability"]',
-			text: ['Not Available Online']
+		maxPrice: {
+			container: '.h2-big > strong:nth-child(1)',
+			euroFormat: false
 		}
 	},
 	links: [
