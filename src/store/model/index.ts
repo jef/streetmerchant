@@ -101,6 +101,7 @@ import {Umart} from './umart';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
 import {VsGamers} from './vsgamers';
+import {Vuugo} from './vuugo';
 import {Walmart} from './walmart';
 import {WalmartCa} from './walmart-ca';
 import {Wipoid} from './wipoid';
@@ -210,6 +211,7 @@ export const storeList = new Map([
 	[Unieuro.name, Unieuro],
 	[Very.name, Very],
 	[VsGamers.name, VsGamers],
+	[Vuugo.name, Vuugo],
 	[Walmart.name, Walmart],
 	[WalmartCa.name, WalmartCa],
 	[Wipoid.name, Wipoid],
