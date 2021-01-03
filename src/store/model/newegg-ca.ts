@@ -21,11 +21,10 @@ export const NeweggCa: Store = {
 	links: [
 		{
 			brand: 'test:brand',
-			itemNumber: '14-500-495',
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.newegg.ca/evga-geforce-rtx-2060-06g-p4-2066-kr/p/N82E16814487488'
+				'https://www.newegg.ca/p/N82E16824475043?Item=N82E16824475043&cm_sp=Homepage_MKPL-_-P3_24-475-043-_-12302020'
 		},
 		{
 			brand: 'asus',
@@ -100,6 +99,13 @@ export const NeweggCa: Store = {
 				'https://www.newegg.ca/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597'
 		},
 		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080',
+			url:
+				'https://www.newegg.ca/msi-geforce-rtx-3080-rtx3080-suprim-x-10g/p/N82E16814137609'
+		},
+		{
 			brand: 'gigabyte',
 			itemNumber: '149-32-329',
 			model: 'gaming oc',
@@ -117,11 +123,25 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3080',
+			url:
+				'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080eagle-10gd/p/N82E16814932367'
+		},
+		{
+			brand: 'gigabyte',
 			itemNumber: '14-932-336',
 			model: 'aorus master',
 			series: '3080',
 			url:
 				'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3080',
+			url:
+				'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-x-10gd/p/N82E16814932345'
 		},
 		{
 			brand: 'zotac',
@@ -134,7 +154,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-457',
-			model: 'strix',
+			model: 'strix oc',
 			series: '3080',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457'
@@ -188,12 +208,33 @@ export const NeweggCa: Store = {
 				'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090gaming-oc-24gd/p/N82E16814932327'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url:
+				'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090aorus-m-24gd/p/N82E16814932341'
+		},
+		{
 			brand: 'msi',
 			itemNumber: '14-137-596',
 			model: 'ventus 3x oc',
 			series: '3090',
 			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3090-rtx-3090-ventus-3x-24g-oc/p/N82E16814137596'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x',
+			series: '3090',
+			url:
+				'https://www.newegg.ca/msi-geforce-rtx-3090-rtx-3090-ventus-3x-24g/p/N82E16814137599'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3090',
+			url:
+				'https://www.newegg.ca/msi-geforce-rtx-3090-rtx3090-suprim-x-24g/p/N82E16814137610'
 		},
 		{
 			brand: 'zotac',
@@ -206,15 +247,22 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-454',
-			model: 'tuf',
+			model: 'tuf oc',
 			series: '3090',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454'
 		},
 		{
 			brand: 'asus',
+			model: 'tuf',
+			series: '3090',
+			url:
+				'https://www.newegg.ca/asus-geforce-rtx-3090-tuf-rtx3090-24g-gaming/p/N82E16814126455'
+		},
+		{
+			brand: 'asus',
 			itemNumber: '14-126-456',
-			model: 'strix',
+			model: 'strix oc',
 			series: '3090',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456'
@@ -254,15 +302,22 @@ export const NeweggCa: Store = {
 		{
 			brand: 'msi',
 			itemNumber: '14-137-602',
-			model: 'ventus 2x',
+			model: 'ventus 2x oc',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-ventus-2x-oc/p/N82E16814137602'
 		},
 		{
 			brand: 'msi',
+			model: 'ventus 2x',
+			series: '3070',
+			url:
+				'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-ventus-2x/p/N82E16814137605'
+		},
+		{
+			brand: 'msi',
 			itemNumber: '14-137-601',
-			model: 'ventus 3x',
+			model: 'ventus 3x oc',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-ventus-3x-oc/p/N82E16814137601'
@@ -274,6 +329,13 @@ export const NeweggCa: Store = {
 			series: '3070',
 			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-gaming-x-trio/p/N82E16814137603'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3070',
+			url:
+				'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-suprim-x-8g/p/N82E16814137620'
 		},
 		{
 			brand: 'asus',
@@ -302,10 +364,17 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-458',
-			model: 'strix',
+			model: 'strix oc',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3070-rog-strix-rtx3070-o8g-gaming/p/N82E16814126458'
+		},
+		{
+			brand: 'asus',
+			model: 'ko',
+			series: '3070',
+			url:
+				'https://www.newegg.ca/asus-geforce-rtx-3070-ko-rtx3070-o8g-gamin/p/N82E16814126466'
 		},
 		{
 			brand: 'zotac',
@@ -374,7 +443,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'gigabyte',
 			itemNumber: '14-932-359',
-			model: 'aorus',
+			model: 'aorus master',
 			series: '3070',
 			url:
 				'https://www.newegg.ca/gigabyte-geforce-rtx-3070-gv-n3070aorus-m-8gd/p/N82E16814932359'
@@ -422,7 +491,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-471',
-			model: 'tuf',
+			model: 'tuf oc',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3060-ti-tuf-rtx3060ti-o8g-gaming/p/N82E16814126471'
@@ -438,7 +507,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'gigabyte',
 			itemNumber: '14-932-375',
-			model: 'aorus',
+			model: 'aorus master',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/gigabyte-geforce-rtx-3060-ti-gv-n306taorus-m-8gd/p/N82E16814932375'
@@ -446,7 +515,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-468',
-			model: 'dual',
+			model: 'dual oc',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3060-ti-dual-rtx3060ti-o8g/p/N82E16814126468'
@@ -454,7 +523,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'asus',
 			itemNumber: '14-126-470',
-			model: 'strix',
+			model: 'strix oc',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/asus-geforce-rtx-3060-ti-rog-strix-rtx3060ti-o8g-gaming/p/N82E16814126470'
@@ -476,14 +545,6 @@ export const NeweggCa: Store = {
 				'https://www.newegg.ca/gigabyte-geforce-rtx-3060-ti-gv-n306tgamingoc-pro-8gd/p/N82E16814932376'
 		},
 		{
-			brand: 'zotac',
-			itemNumber: '14-500-507',
-			model: 'gaming',
-			series: '3060ti',
-			url:
-				'https://www.newegg.ca/zotac-geforce-rtx-3060-ti-zt-a30610h-10m/p/N82E16814500507'
-		},
-		{
 			brand: 'evga',
 			itemNumber: '14-487-537',
 			model: 'ftw3 ultra',
@@ -494,7 +555,7 @@ export const NeweggCa: Store = {
 		{
 			brand: 'msi',
 			itemNumber: '14-137-612',
-			model: 'ventus 2x',
+			model: 'ventus 2x oc',
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/msi-geforce-rtx-3060-ti-rtx-3060-ti-ventus-2x-oc/p/N82E16814137612'
@@ -538,6 +599,14 @@ export const NeweggCa: Store = {
 			series: '3060ti',
 			url:
 				'https://www.newegg.ca/zotac-geforce-rtx-3060-ti-zt-a30610e-10m/p/N82E16814500506'
+		},
+		{
+			brand: 'zotac',
+			itemNumber: '14-500-507',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://www.newegg.ca/zotac-geforce-rtx-3060-ti-zt-a30610h-10m/p/N82E16814500507'
 		},
 		{
 			brand: 'amd',
@@ -660,7 +729,7 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
+			model: 'tuf oc',
 			series: 'rx6800xt',
 			url:
 				'https://www.newegg.ca/asus-radeon-rx-6800-xt-tuf-rx6800xt-o16g-gaming/p/N82E16814126476'
@@ -674,7 +743,7 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'strix',
+			model: 'strix oc',
 			series: 'rx6800',
 			url:
 				'https://www.newegg.ca/asus-radeon-rx-6800-rog-strix-rx6800-o16g-gaming/p/N82E16814126477'
@@ -688,14 +757,14 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'sapphire',
-			model: 'nitro+',
+			model: 'nitro+ se',
 			series: 'rx6800xt',
 			url:
 				'https://www.newegg.ca/sapphire-radeon-rx-6800-xt-11304-01-20g/p/N82E16814202390'
 		},
 		{
 			brand: 'asus',
-			model: 'strix',
+			model: 'strix oc',
 			series: 'rx6800xt',
 			url:
 				'https://www.newegg.ca/asus-radeon-rx-6800-xt-rog-strix-lc-rx6800xt-o16g-gaming/p/N82E16814126475'
@@ -716,7 +785,7 @@ export const NeweggCa: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
+			model: 'tuf oc',
 			series: 'rx6800',
 			url:
 				'https://www.newegg.ca/asus-radeon-rx-6800-tuf-rx6800-o16g-gaming/p/N82E16814126478'
@@ -769,6 +838,13 @@ export const NeweggCa: Store = {
 			series: 'rx6900xt',
 			url:
 				'https://www.newegg.ca/powercolor-radeon-rx-6900-xt-axrx-6900xt-16gbd6-m2dhc/p/N82E16814131774'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6900xt',
+			url:
+				'https://www.newegg.ca/sapphire-radeon-rx-6900-xt-11308-01-20g/p/N82E16814202395'
 		}
 	],
 	name: 'newegg-ca',

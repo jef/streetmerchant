@@ -53,15 +53,15 @@
     "top-user-agents": "^1.0.19",
     "twilio": "^3.54.1",
     "twitch": "^4.3.6",
-    "twitch-auth": "^4.3.6",
-    "twitch-chat-client": "^4.3.6",
+    "twitch-auth": "^4.3.8",
+    "twitch-chat-client": "^4.3.8",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/async": "^3.2.5",
     "@types/cheerio": "^0.22.23",
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.19",
     "@types/node-fetch": "^2.5.7",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.0",

@@ -19,14 +19,16 @@ export function sendPushoverNotification(link: Link, store: Store) {
 				? {
 						message: link.cartUrl ? link.cartUrl : link.url,
 						priority: pushover.priority,
-						title: Print.inStock(link, store)
+						title: Print.inStock(link, store),
+						...(link.screenshot && {file: `./${link.screenshot}`})
 				  }
 				: {
 						expire: pushover.expire,
 						message: link.cartUrl ? link.cartUrl : link.url,
 						priority: pushover.priority,
 						retry: pushover.retry,
-						title: Print.inStock(link, store)
+						title: Print.inStock(link, store),
+						...(link.screenshot && {file: `./${link.screenshot}`})
 				  };
 
 		push.send(message, (error: Error) => {
