@@ -596,8 +596,7 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105273',
 			model: 'xbox series x',
 			series: 'xboxsx',
-			url:
-				'https://www.newegg.com/global/sg-en/p/N82E16868105273'
+			url: 'https://www.newegg.com/global/sg-en/p/N82E16868105273'
 		},
 		{
 			brand: 'microsoft',
@@ -605,8 +604,7 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105274',
 			model: 'xbox series s',
 			series: 'xboxss',
-			url:
-				'https://www.newegg.com/global/sg-en/p/N82E16868105274'
+			url: 'https://www.newegg.com/global/sg-en/p/N82E16868105274'
 		},
 		{
 			brand: 'asrock',
