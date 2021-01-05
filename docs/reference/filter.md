@@ -50,6 +50,7 @@ Used with the `STORES` variable.
 | Amazon | FR | `amazon-fr`|
 | Amazon | IT | `amazon-it`|
 | Amazon | NL | `amazon-nl`|
+| Amazon | SG | `amazon-sg`|
 | Amazon | UK | `amazon-uk`|
 | AMD | US | `amd`|
 | AMD | CA | `amd-ca`|
@@ -110,6 +111,7 @@ Used with the `STORES` variable.
 | Mwave | AU | `mwave`|
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
+| Newegg | SG | `newegg-sg`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
 | Nvidia | US | `nvidia`|
