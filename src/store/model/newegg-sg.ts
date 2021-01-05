@@ -557,7 +557,7 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-663',
 			model: '5950x',
 			series: 'ryzen5950',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/amd-ryzen-9-5950x/p/N82E16819113663'
 		},
 		{
@@ -567,7 +567,7 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-664',
 			model: '5900x',
 			series: 'ryzen5900',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/amd-ryzen-9-5900x/p/N82E16819113664'
 		},
 		{
@@ -577,7 +577,7 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-665',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/amd-ryzen-7-5800x/p/N82E16819113665'
 		},
 		{
@@ -587,7 +587,7 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-666',
 			model: '5600x',
 			series: 'ryzen5600',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/amd-ryzen-5-5600x/p/N82E16819113666'
 		},
 		{
@@ -596,7 +596,7 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105273',
 			model: 'xbox series x',
 			series: 'xboxsx',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/p/N82E16868105273'
 		},
 		{
@@ -605,7 +605,7 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105274',
 			model: 'xbox series s',
 			series: 'xboxss',
-			url: 
+			url:
 				'https://www.newegg.com/global/sg-en/p/N82E16868105274'
 		},
 		{
