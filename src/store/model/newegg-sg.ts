@@ -557,7 +557,8 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-663',
 			model: '5950x',
 			series: 'ryzen5950',
-			url: 'https://www.newegg.com/global/sg-en/amd-ryzen-9-5950x/p/N82E16819113663'
+			url: 
+				'https://www.newegg.com/global/sg-en/amd-ryzen-9-5950x/p/N82E16819113663'
 		},
 		{
 			brand: 'amd',
@@ -566,7 +567,8 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-664',
 			model: '5900x',
 			series: 'ryzen5900',
-			url: 'https://www.newegg.com/global/sg-en/amd-ryzen-9-5900x/p/N82E16819113664'
+			url: 
+				'https://www.newegg.com/global/sg-en/amd-ryzen-9-5900x/p/N82E16819113664'
 		},
 		{
 			brand: 'amd',
@@ -575,7 +577,8 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-665',
 			model: '5800x',
 			series: 'ryzen5800',
-			url: 'https://www.newegg.com/global/sg-en/amd-ryzen-7-5800x/p/N82E16819113665'
+			url: 
+				'https://www.newegg.com/global/sg-en/amd-ryzen-7-5800x/p/N82E16819113665'
 		},
 		{
 			brand: 'amd',
@@ -584,7 +587,8 @@ export const NeweggSg: Store = {
 			itemNumber: '19-113-666',
 			model: '5600x',
 			series: 'ryzen5600',
-			url: 'https://www.newegg.com/global/sg-en/amd-ryzen-5-5600x/p/N82E16819113666'
+			url: 
+				'https://www.newegg.com/global/sg-en/amd-ryzen-5-5600x/p/N82E16819113666'
 		},
 		{
 			brand: 'microsoft',
@@ -592,7 +596,8 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105273',
 			model: 'xbox series x',
 			series: 'xboxsx',
-			url: 'https://www.newegg.com/global/sg-en/p/N82E16868105273'
+			url: 
+				'https://www.newegg.com/global/sg-en/p/N82E16868105273'
 		},
 		{
 			brand: 'microsoft',
@@ -600,7 +605,8 @@ export const NeweggSg: Store = {
 				'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105274',
 			model: 'xbox series s',
 			series: 'xboxss',
-			url: 'https://www.newegg.com/global/sg-en/p/N82E16868105274'
+			url: 
+				'https://www.newegg.com/global/sg-en/p/N82E16868105274'
 		},
 		{
 			brand: 'asrock',
