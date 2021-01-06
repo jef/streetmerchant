@@ -398,6 +398,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'microsoft',
+			cartUrl: 'https://api.bestbuy.com/click/-/6428324/cart',
 			model: 'xbox series x',
 			series: 'xboxsx',
 			url:
@@ -405,6 +406,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'microsoft',
+			cartUrl: 'https://api.bestbuy.com/click/-/6430277/cart',
 			model: 'xbox series s',
 			series: 'xboxss',
 			url:
@@ -412,6 +414,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6440913/cart',
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url:
@@ -419,6 +422,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6441020/cart',
 			model: 'amd reference',
 			series: 'rx6800',
 			url:
@@ -426,6 +430,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'xfx',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442077/cart',
 			model: 'amd reference',
 			series: 'rx6800',
 			url:
@@ -433,6 +438,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'xfx',
+			cartUrl: 'https://api.bestbuy.com/click/-/6441226/cart',
 			model: 'amd reference',
 			series: 'rx6800xt',
 			url:
@@ -440,6 +446,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'xfx',
+			cartUrl: 'https://api.bestbuy.com/click/-/6442585/cart',
 			model: 'merc',
 			series: 'rx6800xt',
 			url:
@@ -447,6 +454,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'xfx',
+			cartUrl: 'https://api.bestbuy.com/click/-/6444358/cart',
 			model: 'amd reference',
 			series: 'rx6900xt',
 			url:
@@ -454,6 +462,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'msi',
+			cartUrl: 'https://api.bestbuy.com/click/-/6444716/cart',
 			model: 'amd reference',
 			series: 'rx6900xt',
 			url:
@@ -461,6 +470,7 @@ export const BestBuy: Store = {
 		},
 		{
 			brand: 'xfx',
+			cartUrl: 'https://api.bestbuy.com/click/-/6445157/cart',
 			model: 'merc',
 			series: 'rx6900xt',
 			url:
