@@ -332,6 +332,7 @@ export const BestBuy: Store = {
 			series: '3060ti',
 			url:
 				'https://api.bestbuy.com/click/-/6441172/pdp'
+		},
 		{
 			brand: 'gigabyte',
 			cartUrl: 'https://api.bestbuy.com/click/-/6442484/cart',
