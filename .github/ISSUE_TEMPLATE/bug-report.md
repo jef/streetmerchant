@@ -9,30 +9,25 @@ assignees: ''
 
 ## Expected Behavior
 
-<!--- Tell us what should happen -->
+<!-- Tell us what should happen -->
 
 ## Current Behavior
 
-<!--- Tell us what happens instead of the expected behavior -->
+<!-- Tell us what happens instead of the expected behavior -->
 
 ## Steps to Reproduce
 
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
-1.
-2.
-3.
-4.
+<!-- Provide a link to a live example, or an unambiguous set of steps to reproduce this bug. -->
+<!-- Include code to reproduce, if relevant -->
 
 ## Environment
 
-**OS:**
-**dotenv file:**
+- OS:
 
+<!-- Put your dotenv within backticks below. Be sure to remove any secrets/passwords. -->
 ```dotenv
-
 ```
 
 ## Logs
 
-<!--- Provide a brief log -->
+<!-- Provide a brief log -->
