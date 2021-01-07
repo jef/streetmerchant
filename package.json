@@ -27,7 +27,7 @@
   "dependencies": {
     "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
-    "@slack/web-api": "^5.14.0",
+    "@slack/web-api": "^5.15.0",
     "@types/random-useragent": "^0.3.0",
     "@types/redis": "^2.8.28",
     "chalk": "^4.1.0",
