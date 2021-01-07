@@ -137,6 +137,7 @@ Used with the `STORES` variable.
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
 | Very | UK | `very`|
+| Vuugo | CA | `vuugo` |
 | Walmart | US | `walmart`|
 | Walmart | CA | `walmart-ca`|
 | Wipoid | ES | `wipoid`|
@@ -170,7 +171,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `asus` | `crosshair viii`, `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `colorful` | `igame advanced oc`, `igame vulcan oc` |
-| `evga` | `ftw3`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc3 black`, `xc3 ultra` |
+| `evga` | `ftw3`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc gaming`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
 | `galax` | `sg`, `sg oc` |
