@@ -3,6 +3,10 @@ import {Store} from './store';
 export const ProshopDE: Store = {
 	currency: '€',
 	labels: {
+		inStock: {
+			container: 'button[data-form-action="addToBasket"]',
+			text: ['bestellen']
+		},
 		maxPrice: {
 			container:
 				'.site-currency-wrapper > span[class="site-currency-attention"]',
@@ -10,7 +14,7 @@ export const ProshopDE: Store = {
 		},
 		outOfStock: {
 			container: '.site-currency-attention',
-			text: ['die ware ist leider nicht mehr verfügbar.']
+			text: ['Die Ware ist leider nicht mehr verfügbar.']
 		}
 	},
 	links: [
