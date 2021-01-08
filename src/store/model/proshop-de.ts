@@ -15,7 +15,7 @@ export const ProshopDE: Store = {
 		outOfStock: {
 			container: '.site-currency-attention',
 			text: ['die ware ist leider nicht mehr verfügbar.']
-		}		
+		}
 	},
 	links: [
 		{
