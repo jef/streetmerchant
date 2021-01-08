@@ -3,14 +3,14 @@ import {Store} from './store';
 export const ProshopDE: Store = {
 	currency: '€',
 	labels: {
+		inStock: {
+			container: 'button[data-form-action="addToBasket"]',
+			text: ['bestellen']
+		},
 		maxPrice: {
 			container:
 				'.site-currency-wrapper > span[class="site-currency-attention"]',
 			euroFormat: true
-		},
-		inStock: {
-			container: 'button[data-form-action="addToBasket"]',
-			text: ['bestellen']
 		},
 		outOfStock: {
 			container: '.site-currency-attention',
