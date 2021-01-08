@@ -45,14 +45,14 @@ export const Asus: Store = {
 			model: 'ko',
 			series: '3060ti',
 			url: 'https://store.asus.com/us/item/202012AM030000002'
-		},		
+		},
 		{
 			brand: 'asus',
 			itemNumber: '202010AM310000002',
 			model: 'tuf oc',
 			series: '3070',
 			url: 'https://store.asus.com/us/item/202010AM310000002'
-		},	
+		},
 		{
 			brand: 'asus',
 			itemNumber: '202011AM240000001',
