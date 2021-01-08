@@ -8,17 +8,21 @@ export const ProshopDE: Store = {
 				'.site-currency-wrapper > span[class="site-currency-attention"]',
 			euroFormat: true
 		},
+		inStock: {
+			container: 'button[data-form-action="addToBasket"]',
+			text: ['bestellen']
+		},
 		outOfStock: {
 			container: '.site-currency-attention',
 			text: ['die ware ist leider nicht mehr verfügbar.']
-		}
+		}		
 	},
 	links: [
 		{
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://www.proshop.de/2797958'
+			url: 'https://www.proshop.de/2776912'
 		},
 		{
 			brand: 'asus',
