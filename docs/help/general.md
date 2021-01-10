@@ -130,4 +130,4 @@ This is the main portion:
 
 ![image](https://user-images.githubusercontent.com/12074633/101225550-b87e2580-365f-11eb-8be6-48b324b37916.png)
 
-Use the full URL that you just copied and set that value to `DISOCRD_WEB_HOOK`.
+Use the full URL that you just copied and set that value to `DISCORD_WEB_HOOK`.
