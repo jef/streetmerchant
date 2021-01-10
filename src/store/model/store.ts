@@ -103,6 +103,7 @@ export type Model =
 	| 'ichill frostbite'
 	| 'igame advanced oc'
 	| 'igame vulcan oc'
+	| 'ko oc'
 	| 'ko'
 	| 'nitro+'
 	| 'nitro+ se'
