@@ -34,7 +34,7 @@
     "cheerio": "^1.0.0-rc.5",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "messaging-api-telegram": "^1.0.1",
+    "messaging-api-telegram": "^1.0.4",
     "mqtt": "^4.2.6",
     "node-fetch": "^2.6.1",
     "node-hue-api": "^4.0.9",
