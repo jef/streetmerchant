@@ -6,15 +6,31 @@ export const RosmanMelb: Store = {
 	labels: {
 		inStock: {
 			container: '#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
-			text: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14']
-			},			
+			text: [
+				'1',
+				'2',
+				'3',
+				'4',
+				'5',
+				'6',
+				'7',
+				'8',
+				'9',
+				'10',
+				'11',
+				'12',
+				'13',
+				'14'
+			]
+			},
 		maxPrice: {
 			container: 'span.price.price--withTax.price--main',
 			euroFormat: false
 		},		
 		outOfStock: {
-			container: '#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
-			text: ['ETA','Call Us','0']
+			container: 
+				'#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
+			text: ['ETA', 'Call Us', '0']
 		}
 	},
 	links: [
@@ -59,7 +75,7 @@ export const RosmanMelb: Store = {
 			series: '3080',
 			url:
 				'https://rosmancomputers.com.au/gigabyte-nvidia-gv-n3080aorusm-10gd1/'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme',
@@ -80,7 +96,7 @@ export const RosmanMelb: Store = {
 			series: '3080',
 			url:
 				'https://rosmancomputers.com.au/gigabyte-gv-n3080aorusx-wb-10gd-nvidia/'
-		},		
+		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x4',
@@ -122,7 +138,7 @@ export const RosmanMelb: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://rosmancomputers.com.au/amd-ryzen-5-5600x-6-core-12-threads-max-freq-4-6ghz-35mb-cache-socket-am4-105w-with-wraith-stealth-cooler/'
-		}		
+		}
 	],
 	name: 'rosman-melb'
 };

@@ -22,8 +22,8 @@ export const Rosman: Store = {
 				'12',
 				'13',
 				'14'
-				]
-		},		
+			]
+		},
 		maxPrice: {
 			container: 'span.price.price--withTax.price--main',
 			euroFormat: false

@@ -184,8 +184,7 @@ export const Dcomp: Store = {
 			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: 'rx6800xt',
-			url:
-				'https://dcomp.com.au/productdetail/3421'
+			url: 'https://dcomp.com.au/productdetail/3421'
 		},
 		{
 			brand: 'msi',

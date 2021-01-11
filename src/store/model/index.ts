@@ -76,7 +76,7 @@ import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
-import {MSY} from './msy';
+import {Msy} from './msy';
 import {Mwave} from './mwave';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
@@ -194,7 +194,7 @@ export const storeList = new Map([
 	[GamestopIE.name, GamestopIE],
 	[HarrisTechnology.name, HarrisTechnology],
 	[HarveyNormanIE.name, HarveyNormanIE],
-	[iGameComputer.name, iGameComputer],
+	[IGameComputer.name, IGameComputer],
 	[JohnLewis.name, JohnLewis],
 	[Kabum.name, Kabum],
 	[LandmarkComputers.name, LandmarkComputers],
@@ -204,7 +204,7 @@ export const storeList = new Map([
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
-	[MSY.name, MSY],
+	[Msy.name, Msy],
 	[Mwave.name, Mwave],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],

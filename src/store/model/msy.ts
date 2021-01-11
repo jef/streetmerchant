@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const MSY: Store = {
+export const Msy: Store = {
 	backoffStatusCodes: [403, 429],
 	currency: '$',
 	labels: {
