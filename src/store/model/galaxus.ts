@@ -10,7 +10,17 @@ export const Galaxus: Store = {
 		maxPrice: {
 			container: '.productDetail .Z1fe',
 			euroFormat: true
-		}
+		},
+		outOfStock: [
+			{ 
+				container: '.availabilityText',
+				text: ['aktuell nicht lieferbar und kein liefertermin vorhanden']
+			},
+			{ 
+				container: '.availabilityText',
+				text: ['der liefertermin ist beim lieferanten in abklärung und wird aktualisiert.']
+			}
+		]
 	},
 	links: [
 		{
