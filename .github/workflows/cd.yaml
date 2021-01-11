@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: google-github-actions/release-please-action@v2.12.2
+      - uses: google-github-actions/release-please-action@v2.14
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

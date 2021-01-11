@@ -7,9 +7,9 @@ export const CanadaComputers: Store = {
 			container: 'div[class="pi-prod-availability"]',
 			text: ['Online In Stock']
 		},
-		outOfStock: {
-			container: 'div[class="pi-prod-availability"]',
-			text: ['Not Available Online']
+		maxPrice: {
+			container: '.h2-big > strong:nth-child(1)',
+			euroFormat: false
 		}
 	},
 	links: [
@@ -18,7 +18,7 @@ export const CanadaComputers: Store = {
 			model: 'test:model',
 			series: 'test:series',
 			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en'
+				'https://www.canadacomputers.com/product_info.php?item_id=167320&cPath=27_1046_365&language=en'
 		},
 		{
 			brand: 'gigabyte',
@@ -47,13 +47,6 @@ export const CanadaComputers: Store = {
 			series: '3070',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183210&language=en'
-		},
-		{
-			brand: 'asus',
-			model: 'dual',
-			series: '3070',
-			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183635&language=en'
 		},
 		{
 			brand: 'asus',
@@ -91,6 +84,13 @@ export const CanadaComputers: Store = {
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183561&language=en'
 		},
 		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3070',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=185675&language=en'
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 2x oc',
 			series: '3070',
@@ -106,7 +106,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'gaming oc',
+			model: 'tuf oc',
 			series: '3070',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638&language=en'
@@ -140,11 +140,18 @@ export const CanadaComputers: Store = {
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183499&language=en'
 		},
 		{
-			brand: 'asus',
-			model: 'gaming',
+			brand: 'msi',
+			model: 'suprim x',
 			series: '3070',
 			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184743&language=en'
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=186197&language=en'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3070',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=186310&language=en'
 		},
 		{
 			brand: 'evga',
@@ -175,13 +182,6 @@ export const CanadaComputers: Store = {
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181354&language=en'
 		},
 		{
-			brand: 'asus',
-			model: 'gaming',
-			series: '3080',
-			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181416&language=en'
-		},
-		{
 			brand: 'evga',
 			model: 'xc3 ultra',
 			series: '3080',
@@ -204,7 +204,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'gaming oc',
+			model: 'tuf oc',
 			series: '3080',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415&language=en'
@@ -215,13 +215,6 @@ export const CanadaComputers: Store = {
 			series: '3080',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353&language=en'
-		},
-		{
-			brand: 'asus',
-			model: 'gaming',
-			series: '3080',
-			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184743&language=en'
 		},
 		{
 			brand: 'msi',
@@ -281,6 +274,34 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'strix',
+			series: '3080',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=186309&language=en'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=185084&language=en'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3080',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=186345&language=en'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3080',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=186344&language=en'
+		},
+		{
+			brand: 'asus',
 			model: 'strix oc',
 			series: '3090',
 			url:
@@ -295,7 +316,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'gaming oc',
+			model: 'tuf oc',
 			series: '3090',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181413&language=en'
@@ -320,13 +341,6 @@ export const CanadaComputers: Store = {
 			series: '3090',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181350&language=en'
-		},
-		{
-			brand: 'asus',
-			model: 'gaming',
-			series: '3090',
-			url:
-				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181414&language=en'
 		},
 		{
 			brand: 'msi',
@@ -357,6 +371,20 @@ export const CanadaComputers: Store = {
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181352&language=en'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183097&language=en'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3090',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184164&language=en'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3060ti',
@@ -365,7 +393,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'tuf',
+			model: 'tuf oc',
 			series: '3060ti',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184759&language=en'
@@ -379,7 +407,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'dual',
+			model: 'dual oc',
 			series: '3060ti',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184760&language=en'
@@ -400,7 +428,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'asus',
-			model: 'strix',
+			model: 'strix oc',
 			series: '3060ti',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184431&language=en'
@@ -442,7 +470,7 @@ export const CanadaComputers: Store = {
 		},
 		{
 			brand: 'gigabyte',
-			model: 'aorus',
+			model: 'aorus master',
 			series: '3060ti',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=185405&language=en'
@@ -453,6 +481,83 @@ export const CanadaComputers: Store = {
 			series: '3060ti',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=185168&language=en'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: 'rx6800',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=186527&language=en'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6800',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185755&language=en'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: 'rx6800',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185459&language=en'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: 'rx6800',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185460&language=en'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: 'rx6800xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=186526&language=en'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6800xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185754&language=en'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+ se',
+			series: 'rx6800xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185753&language=en'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: 'rx6800xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185891&language=en'
+		},
+		{
+			brand: 'asus',
+			model: 'strix lc',
+			series: 'rx6800xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=185458&language=en'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: 'rx6900xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=186610&language=en'
+		},
+		{
+			brand: 'sapphire',
+			model: 'nitro+',
+			series: 'rx6900xt',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=43_557_558&item_id=186614&language=en'
 		},
 		{
 			brand: 'amd',
@@ -481,6 +586,13 @@ export const CanadaComputers: Store = {
 			series: 'ryzen5950',
 			url:
 				'https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183427&language=en'
+		},
+		{
+			brand: 'microsoft',
+			model: 'xbox series x',
+			series: 'xboxsx',
+			url:
+				'https://www.canadacomputers.com/product_info.php?cPath=13_1860_1862&item_id=184244&language=en'
 		}
 	],
 	name: 'canadacomputers',
