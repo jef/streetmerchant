@@ -8,15 +8,19 @@ export const Asus: Store = {
 		inStock: {
 			container: '#item_add_cart',
 			text: ['add to cart']
+		},
+		outOfStock: {
+			container: '#off_sale',
+			text: ['sold out']
 		}
 	},
 	links: [
 		{
 			brand: 'test:brand',
-			itemNumber: '202007AM020000005',
+			itemNumber: '202006AM260000003',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://store.asus.com/us/item/202007AM020000005'
+			url: 'https://store.asus.com/us/item/202006AM260000003'
 		},
 		{
 			brand: 'asus',
