@@ -5,7 +5,8 @@ export const RosmanMelb: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
+			container:
+				'#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
 			text: [
 				'1',
 				'2',
@@ -22,13 +23,13 @@ export const RosmanMelb: Store = {
 				'13',
 				'14'
 			]
-			},
+		},
 		maxPrice: {
 			container: 'span.price.price--withTax.price--main',
 			euroFormat: false
-		},		
+		},
 		outOfStock: {
-			container: 
+			container:
 				'#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
 			text: ['ETA', 'Call Us', '0']
 		}
