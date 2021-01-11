@@ -18,18 +18,20 @@ export function sendTwilioMessage(link: Link, store: Store) {
 			const givenUrl = link.cartUrl ? link.cartUrl : link.url;
 			const message = `${Print.inStock(link, store)}\n${givenUrl}`;
 			const numbers = twilio.to.split(',');
+			let results = [];
 			for (const number of numbers) {
 				try {
-					await client.messages.create({
+					results.push(client.messages.create({
 						body: message,
 						from: twilio.from,
 						to: number
-					});
+					}));
 					logger.info('✔ twilio message sent');
 				} catch (error: unknown) {
 					logger.error("✖ couldn't send twilio message", error);
 				}
 			}
+			await Promise.all(results);
 		})();
 	}
 }
