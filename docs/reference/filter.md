@@ -105,10 +105,10 @@ Used with the `STORES` variable.
 | Gamestop | IE | `gamestop-ie`|
 | HarrisTechnology | AU |  `harristechnology`|
 | Harvey Normans | IE | `harveynorman-ie` |
-| iGame Computer | AU |  `igame`|
+| iGame Computer | AU |  `igame-computer`|
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
-| Landmark Computers | AU |  `lmc`|
+| Landmark Computers | AU |  `landmark-computers`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
@@ -146,7 +146,7 @@ Used with the `STORES` variable.
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
-| Storm Computers | AU |  `storm`|
+| Storm Computers | AU |  `storm-computer`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
 | Toys R Us | US | `toysrus` |

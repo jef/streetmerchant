@@ -100,6 +100,7 @@ import {ProshopDK} from './proshop-dk';
 import {Rosman} from './rosman';
 import {RosmanMelb} from './rosman-melb';
 import {Saturn} from './saturn';
+import {SaveOnIt} from './saveonit';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
 import {ShopTo} from './shopto';
@@ -227,6 +228,7 @@ export const storeList = new Map([
 	[Rosman.name, Rosman],
 	[RosmanMelb.name, RosmanMelb],
 	[Saturn.name, Saturn],
+	[SaveOnIt.name, SaveOnIt],
 	[Scan.name, Scan],
 	[Scorptec.name, Scorptec],
 	[ShopTo.name, ShopTo],
