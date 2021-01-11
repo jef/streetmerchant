@@ -29,7 +29,7 @@
 					}
 					list.appendChild(htmlElement);
 					const htmlLabelElement = document.createElement('label');
-					htmlLabelElement.for = name;
+					htmlLabelElement.setAttribute('for', name);
 					htmlLabelElement.innerText = element;
 					list.appendChild(htmlLabelElement);
 					list.appendChild(document.createElement('br'));

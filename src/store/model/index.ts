@@ -11,6 +11,7 @@ import {AmazonEs} from './amazon-es';
 import {AmazonFr} from './amazon-fr';
 import {AmazonIt} from './amazon-it';
 import {AmazonNl} from './amazon-nl';
+import {AmazonSg} from './amazon-sg';
 import {AmazonUk} from './amazon-uk';
 import {Amd} from './amd';
 import {AmdCa} from './amd-ca';
@@ -71,6 +72,7 @@ import {Mindfactory} from './mindfactory';
 import {Mwave} from './mwave';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
+import {NeweggSg} from './newegg-sg';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
@@ -122,6 +124,7 @@ export const storeList = new Map([
 	[AmazonFr.name, AmazonFr],
 	[AmazonNl.name, AmazonNl],
 	[AmazonUk.name, AmazonUk],
+	[AmazonSg.name, AmazonSg],
 	[AmazonIt.name, AmazonIt],
 	[Amd.name, Amd],
 	[AmdCa.name, AmdCa],
@@ -182,6 +185,7 @@ export const storeList = new Map([
 	[Mwave.name, Mwave],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
+	[NeweggSg.name, NeweggSg],
 	[Notebooksbilliger.name, Notebooksbilliger],
 	[Novatech.name, Novatech],
 	[Nvidia.name, Nvidia],
