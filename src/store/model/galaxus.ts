@@ -22,7 +22,7 @@ export const Galaxus: Store = {
 				container: '.availabilityText',
 				text: [
 					'der liefertermin ist beim lieferanten in abklärung und wird aktualisiert.'
-					]
+				]
 			}
 		]
 	},
