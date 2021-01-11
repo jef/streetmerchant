@@ -12,13 +12,17 @@ export const Galaxus: Store = {
 			euroFormat: true
 		},
 		outOfStock: [
-			{ 
+			{
 				container: '.availabilityText',
-				text: ['aktuell nicht lieferbar und kein liefertermin vorhanden']
+				text: [
+					'aktuell nicht lieferbar und kein liefertermin vorhanden'
+				]
 			},
-			{ 
+			{
 				container: '.availabilityText',
-				text: ['der liefertermin ist beim lieferanten in abklärung und wird aktualisiert.']
+				text: [
+					'der liefertermin ist beim lieferanten in abklärung und wird aktualisiert.'
+					]
 			}
 		]
 	},
