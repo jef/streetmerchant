@@ -38,14 +38,14 @@ export const Evatech: Store = {
 			series: '3080',
 			url:
 				'https://evatech.com.au/product/6514/colorful-igame-rtx-3080-vulcan-oc-10g'
-		},			
+		},
 		{
 			brand: 'msi',
 			model: 'suprim x',
 			series: '3080',
 			url:
 				'https://evatech.com.au/product/6574/msi-geforce-rtx-3080-suprim-x-10g'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -73,14 +73,14 @@ export const Evatech: Store = {
 			series: '3090',
 			url:
 				'https://evatech.com.au/product/6513/colorful-igame-rtx-3090-advance-oc-24g'
-		},	
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3090',
 			url:
 				'https://evatech.com.au/product/6524/msi-geforce-rtx-3090-ventus-3x-oc-24gb'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',

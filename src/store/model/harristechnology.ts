@@ -5,11 +5,13 @@ export const HarrisTechnology: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '#content_tab-description > div.desc2 > p.product-availability',
+			container:
+				'#content_tab-description > div.desc2 > p.product-availability',
 			text: ['in stock']
 		},
 		outOfStock: {
-			container: '#content_tab-description > div.desc2 > p.product-availability',
+			container:
+				'#content_tab-description > div.desc2 > p.product-availability',
 			text: ['Please call or e-mail us for availability']
 		}
 	},
@@ -41,14 +43,14 @@ export const HarrisTechnology: Store = {
 			series: '3080',
 			url:
 				'https://www.ht.com.au/part/BY193-MSI-GeForce-RTX-3080-GAMING-X-TRIO-10GB-Video-Card/detail.hts'
-		},		
+		},
 		{
 			brand: 'amd',
 			model: '5600x',
 			series: 'ryzen5600',
 			url:
 				'https://www.ht.com.au/part/CA093-AMD-Ryzen-5-5600X-6-Core-3.7-GHz-Desktop-Processor-with-AM4-Socket-65W-Thermal-Design-Power/detail.hts'
-		}		
+		}
 	],
 	name: 'harristechnology'
 };

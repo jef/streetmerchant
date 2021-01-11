@@ -5,7 +5,8 @@ export const WellsTechnology: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '#addToCartForm-product-template > div.payment-buttons.payment-buttons--small > div > div > div > div',
+			container:
+				'#addToCartForm-product-template > div.payment-buttons.payment-buttons--small > div > div > div > div',
 			text: ['Buy it now']
 		},
 		maxPrice: {
@@ -45,14 +46,14 @@ export const WellsTechnology: Store = {
 			series: '3080',
 			url:
 				'https://wellstechnology.com.au/products/gigabyte-aorus-rtx3080-xtreme-waterforce-wb?_pos=1&_sid=fd83b064b&_ss=r'
-		},		
+		},
 		{
 			brand: 'amd',
 			model: '5900x',
 			series: 'ryzen5900',
 			url:
 				'https://wellstechnology.com.au/products/amd-ryzen-9-5950x-cpu?_pos=1&_sid=cc7b6903f&_ss=r&variant=37019002339494'
-		},		
+		},
 		{
 			brand: 'amd',
 			model: '5900x',
@@ -73,7 +74,7 @@ export const WellsTechnology: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://wellstechnology.com.au/products/amd-ryzen-5-5600x-cpu?_pos=1&_sid=3f4c61e03&_ss=r&variant=36941063422118'
-		}		
+		}
 	],
 	name: 'wellstechnology'
 };

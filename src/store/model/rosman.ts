@@ -5,16 +5,33 @@ export const Rosman: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
-			text: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14']
-			},		
+			container:
+				'#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
+			text: [
+				'1',
+				'2',
+				'3',
+				'4',
+				'5',
+				'6',
+				'7',
+				'8',
+				'9',
+				'10',
+				'11',
+				'12',
+				'13',
+				'14'
+				]
+		},		
 		maxPrice: {
 			container: 'span.price.price--withTax.price--main',
 			euroFormat: false
-		},		
+		},
 		outOfStock: {
-			container: '#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
-			text: ['ETA','Call Us','0']
+			container:
+				'#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
+			text: ['ETA', 'Call Us', '0']
 		}
 	},
 	links: [
@@ -59,7 +76,7 @@ export const Rosman: Store = {
 			series: '3080',
 			url:
 				'https://rosmancomputers.com.au/gigabyte-nvidia-gv-n3080aorusm-10gd1/'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme',
@@ -80,7 +97,7 @@ export const Rosman: Store = {
 			series: '3080',
 			url:
 				'https://rosmancomputers.com.au/gigabyte-gv-n3080aorusx-wb-10gd-nvidia/'
-		},		
+		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x4',
@@ -122,7 +139,7 @@ export const Rosman: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://rosmancomputers.com.au/amd-ryzen-5-5600x-6-core-12-threads-max-freq-4-6ghz-35mb-cache-socket-am4-105w-with-wraith-stealth-cooler/'
-		}		
+		}
 	],
 	name: 'rosman'
 };

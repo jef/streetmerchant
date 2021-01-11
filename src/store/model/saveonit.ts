@@ -6,15 +6,27 @@ export const SaveOnIt: Store = {
 	labels: {
 		inStock: {
 			container: '.supplier',
-			text: ['In Stock','1','2','3','4','5','6','7','9','9','10+']
-		},		
+			text: [
+				'In Stock',
+				'1',
+				'2',
+				'3',
+				'4',
+				'5',
+				'6',
+				'7',
+				'9',
+				'9',
+				'10+'
+			]
+		},
 		maxPrice: {
 			container: '.money',
 			euroFormat: false
 		},
 		outOfStock: {
 			container: '.supplier',
-			text: ['Pre-Order','On Order']
+			text: ['Pre-Order', 'On Order']
 		}
 	},
 	links: [
@@ -22,127 +34,109 @@ export const SaveOnIt: Store = {
 			brand: 'asus',
 			model: 'tuf',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165506'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165506'
 		},
 		{
 			brand: 'asus',
 			model: 'tuf oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165507'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165507'
 		},
 		{
 			brand: 'asus',
 			model: 'strix oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165536'
-		},	
+			url: 'https://www.saveonit.com.au/products/productdetails/65165536'
+		},
 		{
 			brand: 'evga',
 			model: 'ftw3 ultra',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165879'
-		},					
+			url: 'https://www.saveonit.com.au/products/productdetails/65165879'
+		},
 		{
 			brand: 'galax',
 			model: 'sg oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165599'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165599'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165501'
-		},		
+			url: 'https://www.saveonit.com.au/products/productdetails/65165501'
+		},
 		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165504'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165504'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'vision oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165520'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165520'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus master',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165519'
-		},		
+			url: 'https://www.saveonit.com.au/products/productdetails/65165519'
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165578'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165578'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme waterforce',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165691'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165691'
 		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme waterforce wb',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165692'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165692'
 		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x4',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165575'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165575'
 		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x3',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165564'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165564'
 		},
 		{
 			brand: 'inno3d',
 			model: 'twin x2 oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165576'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165576'
 		},
 		{
 			brand: 'msi',
 			model: 'suprim x',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165827'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165827'
 		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165514'
-		},		
+			url: 'https://www.saveonit.com.au/products/productdetails/65165514'
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
-			url:
-				'https://www.saveonit.com.au/products/productdetails/65165505'
+			url: 'https://www.saveonit.com.au/products/productdetails/65165505'
 		},
 		{
 			brand: 'asrock',
@@ -157,7 +151,7 @@ export const SaveOnIt: Store = {
 			series: 'rx6900xt',
 			url:
 				'https://www.saveonit.com.au/product/gigabyte-gv-r69xt-16gc-b-rx6900xt-16gb-video-card'
-		},		
+		},
 		{
 			brand: 'amd',
 			model: '5950x',
@@ -185,7 +179,7 @@ export const SaveOnIt: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.saveonit.com.au/product/amd-ryzen-5-5600x-6-core-3-7-ghz-cpu-100-100000065box'
-		}		
+		}
 	],
 	name: 'saveonit'
 };

@@ -14,7 +14,7 @@ export const StormComputers: Store = {
 		},
 		outOfStock: {
 			container: 'div.summary.entry-summary > p.stock.out-of-stock',
-			text: ['Out of stock','pre-order','preorder']
+			text: ['Out of stock', 'pre-order', 'preorder']
 		}
 	},
 	links: [
@@ -38,7 +38,7 @@ export const StormComputers: Store = {
 			series: '3080',
 			url:
 				'https://www.stormcomputers.com.au/product/igame-geforce-rtx-3080-vulcan-oc-10g-v/'
-		},			
+		},
 		{
 			brand: 'asus',
 			model: 'strix oc',
@@ -80,7 +80,7 @@ export const StormComputers: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.stormcomputers.com.au/product/amd-ryzen-5-5600x-zen-3-cpu-6c-12t-tdp-65w-boost-up-to-4-6ghz-base-3-7ghz-total-cache-35mb-wraith-stealth-cooler/'
-		}		
+		}
 	],
 	name: 'storm-computer'
 };

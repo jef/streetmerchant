@@ -5,7 +5,8 @@ export const ComputerAlliance: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '#main > div.col-md-12 > div:nth-child(1) > div.col-sm-7.product-information > div:nth-child(5) > div > ul > li:nth-child(1) > a',
+			container:
+				'#main > div.col-md-12 > div:nth-child(1) > div.col-sm-7.product-information > div:nth-child(5) > div > ul > li:nth-child(1) > a',
 			text: ['In Stock']
 		},
 		maxPrice: {
@@ -13,7 +14,8 @@ export const ComputerAlliance: Store = {
 			euroFormat: false
 		},
 		outOfStock: {
-			container: '#main > div.col-md-12 > div:nth-child(1) > div.col-sm-7.product-information > div:nth-child(5) > div > ul > li:nth-child(1) > a',
+			container:
+				'#main > div.col-md-12 > div:nth-child(1) > div.col-sm-7.product-information > div:nth-child(5) > div > ul > li:nth-child(1) > a',
 			text: ['Out of Stock']
 		}
 	},
@@ -38,14 +40,14 @@ export const ComputerAlliance: Store = {
 			series: '3080',
 			url:
 				'https://www.computeralliance.com.au/asus-rtx3080-10gb-rog-strix-oc-gaming-pcie-video-card-rog-strix-rtx3080-o10g-gaming'
-		},		
+		},
 		{
 			brand: 'evga',
 			model: 'ftw3 ultra',
 			series: '3080',
 			url:
 				'https://www.computeralliance.com.au/evga-rtx3080-10gb-ftw3-ultra-gaming-pcie-video-card-10g-p5-3897-kr'
-		},	
+		},
 		{
 			brand: 'evga',
 			model: 'xc3 ultra',
@@ -136,7 +138,7 @@ export const ComputerAlliance: Store = {
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/asus-rtx3090-24gb-tuf-gaming-pcie-oc-video-card-tuf-rtx3090-o24g-gaming'
-		},		
+		},
 		{
 			brand: 'asus',
 			model: 'strix oc',
@@ -150,7 +152,7 @@ export const ComputerAlliance: Store = {
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/galax-rtx3090-24gb-sg-1-click-oc-pcie-video-card-39nsm5md1gna'
-		},	
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus master',
@@ -185,21 +187,21 @@ export const ComputerAlliance: Store = {
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/gigabyte-rtx3090-24gb-vision-oc-pcie-video-card-gv-n3090vision-oc-24gd'
-		},		
+		},
 		{
 			brand: 'inno3d',
 			model: 'ichill x4',
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/inno3d-geforce-rtx-3090-ichill-x4-24gb-video-card-c30904-246xx-1880va36'
-		},	
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/msi-rtx3090-24gb-ventus-3x-oc-pcie-video-card'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -213,7 +215,7 @@ export const ComputerAlliance: Store = {
 			series: '3090',
 			url:
 				'https://www.computeralliance.com.au/msi-rtx3090-24gb-suprim-x-pcie-video-card'
-		},				
+		},
 		{
 			brand: 'asrock',
 			model: 'amd reference',
@@ -227,7 +229,7 @@ export const ComputerAlliance: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.computeralliance.com.au/asus-rx6800xt-16gb-rog-strix-liquid-cooled-oc-gaming-pcie-video-card'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
@@ -241,7 +243,7 @@ export const ComputerAlliance: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.computeralliance.com.au/gigabyte-rx6800xt-16gb-gaming-oc-pcie-video-card-gv-r68xtgaming-oc-16gd'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'amd reference',
@@ -255,7 +257,7 @@ export const ComputerAlliance: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.computeralliance.com.au/msi-rx6800xt-16gb-gaming-x-trio-pcie-video-card'
-		},		
+		},
 		{
 			brand: 'asus',
 			model: 'amd reference',
@@ -290,7 +292,7 @@ export const ComputerAlliance: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.computeralliance.com.au/amd-am4-ryzen-5-5600x-6-core-4.6ghz-cpu-100-100000065box'
-		}		
+		}
 	],
 	name: 'computeralliance'
 };

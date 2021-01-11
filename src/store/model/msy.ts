@@ -5,11 +5,13 @@ export const MSY: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: '.product-collateral > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > b:nth-child(1)',
+			container:
+				'.product-collateral > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > b:nth-child(1)',
 			text: ['In Stock']
 		},
 		maxPrice: {
-			container: '#product-details-form > div > div.product-essential > div.overview > div.prices > div > span',
+			container:
+				'#product-details-form > div > div.product-essential > div.overview > div.prices > div > span',
 			euroFormat: false
 		},
 		outOfStock: {
@@ -73,21 +75,21 @@ export const MSY: Store = {
 			series: '3080',
 			url:
 				'https://www.msy.com.au/msi-nvidia-geforce-rtx-3080-gaming-x-trio-10g-10gb-rtx-3080-gaming-x-trio-pci-e-vga-card'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080',
 			url:
 				'https://www.msy.com.au/msi-nvidia-geforce-rtx-3080-ventus-3x-10g-oc-10gb-rtx-3080-ventus-3x-oc-pci-e-vga-card'
-		},		
+		},
 		{
 			brand: 'asus',
 			model: 'tuf oc',
 			series: '3090',
 			url:
 				'https://www.msy.com.au/asus-nvidia-geforce-tuf-rtx3090-o24g-gaming-24gb-rtx-3090-tuf-gaming-oc-pci-e-vga-card'
-		},	
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus master',
@@ -122,14 +124,14 @@ export const MSY: Store = {
 			series: '3090',
 			url:
 				'https://www.msy.com.au/gigabyte-nvidia-geforce-n3090vision-oc-24gd-24gb-rtx-3090-vision-oc-vga-card'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3090',
 			url:
 				'https://www.msy.com.au/msi-nvidia-geforce-rtx-3090-ventus-3x-24g-oc-24gb-rtx-3090-ventus-3x-oc-pci-e-vga-card'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
@@ -185,7 +187,7 @@ export const MSY: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.msy.com.au/amd-ryzen-5-5600x-100-100000065box-up-to-46ghz-base-clock-37ghzam46-cores12-threads32mb65w-unlocked-boxed-cpu-without-cpu-cooler'
-		}		
+		}
 	],
 	name: 'msy'
 };

@@ -5,15 +5,18 @@ export const iGameComputer: Store = {
 	currency: '$',
 	labels: {
 		inStock: {
-			container: 'div.product-form__controls-group.product-form__controls-group--submit > div > button',
+			container:
+				'div.product-form__controls-group.product-form__controls-group--submit > div > button',
 			text: ['ADD TO CART']
 		},
 		maxPrice: {
-			container: 'div.price__pricing-group > div.price__regular > dd > span',
+			container:
+				'div.price__pricing-group > div.price__regular > dd > span',
 			euroFormat: false
 		},
 		outOfStock: {
-			container: '#product_form_6084255350971 > div.product-form__controls-group.product-form__controls-group--submit > div > button',
+			container:
+				'#product_form_6084255350971 > div.product-form__controls-group.product-form__controls-group--submit > div > button',
 			text: ['SOLD OUT']
 		}
 	},
@@ -52,7 +55,7 @@ export const iGameComputer: Store = {
 			series: '3080',
 			url:
 				'https://www.igamecomputer.com.au/products/mc023?_pos=1&_sid=42c0f4fc6&_ss=r'
-		},			
+		},
 		{
 			brand: 'colorful',
 			model: 'battle-ax',
@@ -87,7 +90,7 @@ export const iGameComputer: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.igamecomputer.com.au/products/a0124?_pos=1&_psq=5600x&_ss=e&_v=1.0'
-		}		
+		}
 	],
 	name: 'igame-computer'
 };

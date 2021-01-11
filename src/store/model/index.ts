@@ -166,7 +166,7 @@ export const storeList = new Map([
 	[Ccl.name, Ccl],
 	[Centrecom.name, Centrecom],
 	[Comet.name, Comet],
-	[ComputerAlliance.name, ComputerAlliance],	
+	[ComputerAlliance.name, ComputerAlliance],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
 	[Coolmod.name, Coolmod],

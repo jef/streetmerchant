@@ -6,15 +6,16 @@ export const PCByte: Store = {
 	labels: {
 		inStock: {
 			container: '.in-stock-label',
-			text: ['In Stock','IN STOCK']
+			text: ['In Stock', 'IN STOCK']
 		},
 		maxPrice: {
-			container: 'div.price-line.d-flex.mb-3 > div:nth-child(1) > span > span',
+			container:
+				'div.price-line.d-flex.mb-3 > div:nth-child(1) > span > span',
 			euroFormat: false
 		},
 		outOfStock: {
 			container: 'a.btn:nth-child(3)',
-			text: ['Pre Order','Pre-Order']
+			text: ['Pre Order', 'Pre-Order']
 		}
 	},
 	links: [
@@ -45,7 +46,7 @@ export const PCByte: Store = {
 			series: '3080',
 			url:
 				'https://www.pcbyte.com.au/store/product/asus-nvidia-geforce-rtx-3080-rog-strix-oc-10gb-video-card-white-rog-strix-rtx3080-o10g-white-151575'
-		},			
+		},
 		{
 			brand: 'galax',
 			model: 'sg oc',
@@ -66,7 +67,7 @@ export const PCByte: Store = {
 			series: '3080',
 			url:
 				'https://www.pcbyte.com.au/store/product/gigabyte-nvidia-geforce-rtx-3080-eagle-oc-10gb-video-card-gv-n3080eagle-oc-10gd-24750'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'vision oc',
@@ -87,7 +88,7 @@ export const PCByte: Store = {
 			series: '3080',
 			url:
 				'https://www.pcbyte.com.au/store/product/gigabyte-nvidia-geforce-rtx-3080-aorus-master-10g-video-card-gv-n3080aorus-m-10gd-57539'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus xtreme',
@@ -115,7 +116,7 @@ export const PCByte: Store = {
 			series: '3080',
 			url:
 				'https://www.pcbyte.com.au/store/product/msi-nvidia-geforce-rtx-3080-suprim-x-10g-video-card-64075'
-		},		
+		},
 		{
 			brand: 'asrock',
 			model: 'taichi',
@@ -157,35 +158,35 @@ export const PCByte: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.pcbyte.com.au/store/product/gigabyte-amd-radeon-rx-6800-xt-gaming-oc-16gb-video-card-gv-r68xtgaming-oc-16gd-78453'
-		},		
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus master',
 			series: 'rx6800xt',
 			url:
 				'https://www.pcbyte.com.au/store/product/gigabyte-amd-radeon-rx-6800-xt-aorus-master-16g-video-card-gv-r68xtaorus-m-16gd-151405'
-		},	
+		},
 		{
 			brand: 'gigabyte',
 			model: 'aorus master type-c',
 			series: 'rx6800xt',
 			url:
 				'https://www.pcbyte.com.au/store/product/gigabyte-amd-radeon-rx-6800-xt-aorus-master-type-c-16g-video-card-gv-r68xtaorus-m-16gc-151404'
-		},		
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: 'rx6800',
 			url:
 				'https://www.pcbyte.com.au/store/product/msi-amd-radeon-rx-6800-gaming-x-trio-16g-video-card-151402'
-		},			
+		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: 'rx6800xt',
 			url:
 				'https://www.pcbyte.com.au/store/product/msi-amd-radeon-rx-6800-xt-gaming-x-trio-16gb-video-card-152871'
-		},		
+		},
 		{
 			brand: 'sapphire',
 			model: 'nitro+',
@@ -199,7 +200,7 @@ export const PCByte: Store = {
 			series: 'rx6800xt',
 			url:
 				'https://www.pcbyte.com.au/store/product/sapphire-amd-radeon-rx-6800-xt-nitro-se-16gb-video-card-11304-01-20g-185859'
-		},	
+		},
 		{
 			brand: 'gigabyte',
 			model: 'gaming oc',
@@ -241,7 +242,7 @@ export const PCByte: Store = {
 			series: 'ryzen5600',
 			url:
 				'https://www.pcbyte.com.au/store/product/amd-ryzen-5-5600x-6-core-12-threads-3-7-4-6ghz-am4-cpu-processor-100-100000065box-61099'
-		}		
+		}
 	],
 	name: 'pcbyte'
 };
