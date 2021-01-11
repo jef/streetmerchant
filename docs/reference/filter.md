@@ -40,6 +40,7 @@ Used with the `STORES` variable.
 |---|---|---|
 | AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
+| Allneeds | AU | `allneeds`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
 | Amazon | US | `amazon`|
@@ -76,6 +77,7 @@ Used with the `STORES` variable.
 | CCL | UK | `ccl`|
 | Centrecom | AU | `centrecom`|
 | Comet | IT | `comet`|
+| ComputerAlliance | AU | `computeralliance`|
 | Computeruniverse | DE | `computeruniverse` |
 | Coolblue | NL | `coolblue`|
 | Coolmod | ES | `coolmod`|
@@ -83,6 +85,7 @@ Used with the `STORES` variable.
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| DComp | AU | `dcomp`|
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
@@ -90,6 +93,7 @@ Used with the `STORES` variable.
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
 | Equippr | DE | `equippr`|
+| Evatech | AU |  `evatech`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
 | Expert | DE | `expert`|
@@ -99,15 +103,19 @@ Used with the `STORES` variable.
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
-| Harvey Normans | IE | | `harveynorman-ie` |
+| HarrisTechnology | AU |  `harristechnology`|
+| Harvey Normans | IE | `harveynorman-ie` |
+| iGame Computer | AU |  `igame`|
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
+| Landmark Computers | AU |  `lmc`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
 | Micro Center | US | `microcenter`|
 | Mindfactory | DE | `mindfactory` |
+| MSY | AU |  `msy`|
 | Mwave | AU | `mwave`|
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
@@ -119,6 +127,8 @@ Used with the `STORES` variable.
 | Office Depot | US | `officedepot`|
 | Otto | DE | `otto`|
 | Overclockers | UK | `overclockers`|
+| PBTech | AU |  `pbtech`|
+| PCByte | AU |  `pcbyte`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
 | PCKing | DE | `pcking` |
@@ -126,13 +136,17 @@ Used with the `STORES` variable.
 | PNY | US | `pny`|
 | Proshop | DE | `proshop-de`|
 | Proshop | DK | `proshop-dk`|
+| Rosman | AU |  `rosman`|
+| Rosman-Melb | AU |  `rosman-melb`|
 | Saturn | DE | `saturn`|
+| Save On It | AU |  `saveonit`|
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
 | ShopTo | UK | `shopto`|
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
+| Storm Computers | AU |  `storm`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
 | Toys R Us | US | `toysrus` |
@@ -142,6 +156,7 @@ Used with the `STORES` variable.
 | Vuugo | CA | `vuugo` |
 | Walmart | US | `walmart`|
 | Walmart | CA | `walmart-ca`|
+| Wells Technology | AU |  `wellstechnology`|
 | Wipoid | ES | `wipoid`|
 | Zotac | US | `zotac`|
 | TopAchat | GR | `topachat`|
