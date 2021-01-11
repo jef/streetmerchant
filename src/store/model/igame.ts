@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const IGameComputer: Store = {
+export const Igamecomputer: Store = {
 	backoffStatusCodes: [403, 429],
 	currency: '$',
 	labels: {
