@@ -197,7 +197,7 @@ const notifications = {
 			3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
 			3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
 			3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
-			'captcha-deterrent': '',
+			'captcha-deterrent': [],
 			darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
 			rx6800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800),
 			rx6800xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800XT),
