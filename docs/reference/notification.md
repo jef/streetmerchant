@@ -178,7 +178,7 @@ Token generation can be found at https://twilio.com/console.
 
 ## Twitter
 
-Generate all Twitter keys at: https://developer.twitter.com/
+Generate all Twitter keys at https://developer.twitter.com.
 
 | Environment variable | Description |
 |:---:|---|
@@ -189,6 +189,8 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITTER_TWEET_TAGS` | List of hashtags to append to the tweet message, e.g.: `#nvidia #nvidiastock` |
 
 ## Twitch
+
+Instructions on how to set up tokens can be found at https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot.
 
 | Environment variable | Description |
 |:---:|---|
