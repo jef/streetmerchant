@@ -65,7 +65,7 @@ chatClient.onJoin((channel: string, user: string) => {
 
 			if (message !== undefined) {
 				try {
-					chatClient.say(channel, message);
+					void chatClient.say(channel, message);
 					logger.info('✔ twitch message sent');
 				} catch (error: unknown) {
 					logger.error("✖ couldn't send twitch message", error);
