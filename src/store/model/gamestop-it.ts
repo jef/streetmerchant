@@ -12,7 +12,7 @@ export const GamestopIT: Store = {
 			container: '.buySection .prodPriceCont',
 			euroFormat: true
 		},
-		outOfStock: {
+			outOfStock: {
 			container: '.megaButton .buyDisabled',
 			text: ['Esaurito']
 		}
