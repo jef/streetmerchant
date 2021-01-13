@@ -170,7 +170,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | Brand | Model |
 |:---:|---|
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
-| `asus` | `crosshair viii`, `dual`, `dual oc`, `ekwb`, `strix`, `strix oc`, `strix white`, `tuf`, `tuf oc` |
+| `asus` | `crosshair viii`, `dual`, `dual oc`, `ekwb`, `ko`, `ko oc`, `strix`, `strix oc`, `strix white`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `colorful` | `igame advanced oc`, `igame vulcan oc` |
 | `evga` | `ftw3`, `ftw3 black`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc gaming`, `xc black`, `xc3 black`, `xc3 ultra` |
