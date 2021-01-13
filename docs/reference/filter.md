@@ -99,6 +99,7 @@ Used with the `STORES` variable.
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
+| Gamestop | IT | `gamestop-it`|
 | Harvey Normans | IE | | `harveynorman-ie` |
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
