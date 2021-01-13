@@ -215,6 +215,27 @@ export const BAndH: Store = {
 				'https://www.bhphotovideo.com/c/product/1594451-REG/asus_90yv0fd1_m0am00_tuf_gaming_geforce_rtx.html'
 		},
 		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1607043-REG/asus_rtx3090_24g_ek_geforce_rtx_3090_24g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1601764-REG/asus_rog_strix_rtx3090_o24g_gaming_rog_strix_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614302-REG/asus_rog_strix_rtx3090_o24g_white_rog_strix_geforce_rtx.html'
+		},
+		{
 			brand: 'amd',
 			model: '5950x',
 			series: 'ryzen5950',
