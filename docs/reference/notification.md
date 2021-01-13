@@ -121,7 +121,7 @@ For cloud only usage, instructions to generate are located [here](https://develo
 
 ## Pushbullet
 
-Generate token at https://www.pushbullet.com/#settings/account.
+Generate token at [pushbullet.com/#settings/account](https://pushbullet.com/#settings/account).
 
 | Environment variable | Description |
 |:---:|---|
@@ -129,7 +129,7 @@ Generate token at https://www.pushbullet.com/#settings/account.
 
 ## Pushover
 
-Generate token at https://pushover.net/apps/build.
+Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 
 | Environment variable | Description |
 |:---:|---|
@@ -164,7 +164,7 @@ Generate token at https://pushover.net/apps/build.
 
 ## Twilio
 
-Token generation can be found at https://twilio.com/console.
+Token generation can be found at [twilio.com/console](https://twilio.com/console).
 
 | Environment variable | Description |
 |:---:|---|
@@ -178,7 +178,7 @@ Token generation can be found at https://twilio.com/console.
 
 ## Twitter
 
-Generate all Twitter keys at: https://developer.twitter.com/
+Generate all Twitter keys at [developer.twitter.com](https://developer.twitter.com).
 
 | Environment variable | Description |
 |:---:|---|
@@ -189,6 +189,8 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITTER_TWEET_TAGS` | List of hashtags to append to the tweet message, e.g.: `#nvidia #nvidiastock` |
 
 ## Twitch
+
+Instructions on how to set up tokens can be found at [d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot](https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot).
 
 | Environment variable | Description |
 |:---:|---|
