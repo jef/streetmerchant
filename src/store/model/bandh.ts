@@ -103,40 +103,46 @@ export const BAndH: Store = {
 				'https://www.bhphotovideo.com/c/product/1592969-REG/zotac_zt_a30800d_10p_gaming_geforce_rtx_3080.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'tuf oc',
-		 	series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'strix oc',
-		 	series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1603617-REG/asus_rog_strix_rtx3080_o10g_gaming_rog_strix_geforce_rtx.html'
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1603617-REG/asus_rog_strix_rtx3080_o10g_gaming_rog_strix_geforce_rtx.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'strix white',
-		 	series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1614301-REG/asus_rog_strix_rtx3080_o10g_white_rog_strix_geforce_rtx.html'
+			brand: 'asus',
+			model: 'strix white',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614301-REG/asus_rog_strix_rtx3080_o10g_white_rog_strix_geforce_rtx.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'ekwb',
-		 	series: '3080',
-			url: 'https://www.bhphotovideo.com/c/product/1614303-REG/asus_rtx3080_10g_ek_ekwb_geforce_rtx_3080.html'
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614303-REG/asus_rtx3080_10g_ek_ekwb_geforce_rtx_3080.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'ko oc',
-		 	series: '3060ti',
-			url: 'https://www.bhphotovideo.com/c/product/1609756-REG/asus_ko_rtx3060ti_o8g_gaming_ko_geforce_rtx_3060.html'
+			brand: 'asus',
+			model: 'ko oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1609756-REG/asus_ko_rtx3060ti_o8g_gaming_ko_geforce_rtx_3060.html'
 		},
 		{
-		 	brand: 'asus',
-		 	model: 'tuf oc',
-		 	series: '3060ti',
-			url: 'https://www.bhphotovideo.com/c/product/1607025-REG/asus_tuf_rtx3060ti_o8g_gaming_geforce_rtx_3060_ti.html'
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1607025-REG/asus_tuf_rtx3060ti_o8g_gaming_geforce_rtx_3060_ti.html'
 		},
 		{
 			brand: 'gigabyte',
