@@ -1,6 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Adorama} from './adorama';
+import {AKinformatica} from './akinformatica';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
