@@ -158,6 +158,34 @@ export const Wipoid: Store = {
 				'https://www.wipoid.com/pny-geforce-rtx-3080-10gb-xlr8-gaming-epic-x-rgb-10gb-gddr6x.html'
 		},
 		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080',
+			url:
+				'https://www.wipoid.com/msi-geforce-rtx-3080-suprim-x-10gb-gddr6x.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'amp holo',
+			series: '3080',
+			url:
+				'https://www.wipoid.com/zotac-gaming-geforce-rtx-3080-amp-holo-10gb-gddr6x.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3080',
+			url:
+				'https://www.wipoid.com/evga-geforce-rtx-3080-ftw3-gaming-10gb-gddr6x.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080',
+			url:
+				'https://www.wipoid.com/evga-geforce-rtx-3080-xc3-gaming-10gb-gddr6x.html'
+		},
+		{
 			brand: 'evga',
 			model: 'ftw3 ultra',
 			series: '3090',
