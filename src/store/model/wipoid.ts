@@ -168,6 +168,18 @@ export const Wipoid: Store = {
 			model: '5800x',
 			series: 'ryzen5800',
 			url: 'https://www.wipoid.com/amd-ryzen-7-5800x-3-8ghz.html'
+		},
+		{
+			brand: 'amd',
+			model: '5900x',
+			series: 'ryzen5900',
+			url: 'https://www.wipoid.com/amd-ryzen-9-5900x-3-7ghz.html'
+		},
+		{
+			brand: 'amd',
+			model: '5950x',
+			series: 'ryzen5950',
+			url: 'https://www.wipoid.com/amd-ryzen-9-5950x-3-4ghz.html'
 		}
 	],
 	name: 'wipoid'
