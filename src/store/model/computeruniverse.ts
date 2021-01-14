@@ -31,6 +31,209 @@ export const Computeruniverse: Store = {
 		{
 			brand: 'asus',
 			model: 'dual',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/asus-geforce-rtx3060-ti-dual-8-gb'
+		},
+		{
+			brand: 'palit',
+			model: 'dual',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/palit-geforce-rtx3060-ti-dual-8-gb'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/inno3d-geforce-rtx-3060-ti-ichill-x3-8-gb-oc'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/msi-geforce-rtx3060-ti-ventus-2x-oc-8-gb-oc'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/msi-geforce-rtx3060-ti-gaming-x-trio-8-gb-oc'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gigabyte-geforce-rtx-3060-ti-gaming-oc-8-gb-oc'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3060-ti-eagle-oc-8-gb-oc'
+		},
+		{
+			brand: 'evga',
+			model: 'xc gaming',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3060-ti-xc-gaming-8-gb'
+		},
+		{
+			brand: 'gainward',
+			model: 'phoenix',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gainward-geforce-rtx3060-ti-phoenix-8-gb'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/inno3d-geforce-rtx-3060-ti-twin-x2-oc-8-gb-oc'
+		},
+		{
+			brand: 'gainward',
+			model: 'ghost oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gainward-geforce-rtx-3060-ti-ghost-oc-8-gb-oc'
+		},
+		{
+			brand: 'palit',
+			model: 'dual oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/palit-geforce-rtx-3060-ti-dual-oc-8-gb-oc'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/zotac-gaming-geforce-rtx-3060-ti-twin-edge-oc-8-gb-oc'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/zotac-gaming-geforce-rtx3060-ti-twin-edge-8-gb'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3060-ti-ftw3-ultra-gaming-8-gb-oc'
+		},
+		{
+			brand: 'gainward',
+			model: 'phantom gs',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gainward-geforce-rtx3060-ti-phoenix-gs-8-gb-oc'
+		},
+		{
+			brand: 'pny',
+			model: 'uprising',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/pny-geforce-rtx3060-ti-uprising-x8g-8-gb'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/asus-rog-strix-geforce-rtx3060-ti-gaming-oc-8-gb-oc'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3060-ti-eagle-8-gb'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc pro',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gigabyte-geforce-rtx3060-ti-gaming-oc-pro-8-gb-oc'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/inno3d-geforce-rtx-3060-ti-twin-x2-8-gb'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/asus-tuf-geforce-rtx3060-ti-gaming-oc-tuf-o8g-gaming-8-gb'
+		},
+		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/asus-geforce-rtx3060-ti-dual-oc-o8g-dual-o8g-8-gb'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/msi-geforce-rtx3060-ti-ventus-3x-oc-8-gb-oc'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/gigabyte-aorus-geforce-rtx3060-ti-master-8-gb'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 gaming',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/pny-geforce-rtx3060-ti-xlr8-gaming-8-gb'
+		},
+		{
+			brand: 'evga',
+			model: 'xc black',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3060-ti-xc-black-gaming-8-gb'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3060-ti-ftw3-gaming-8-gb'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 black',
+			series: '3060ti',
+			url:
+				'https://www.computeruniverse.net/de/evga-geforce-rtx3060-ti-ftw3-black-gaming-8-gb'
+		},
+		{
+			brand: 'asus',
+			model: 'dual',
 			series: '3070',
 			url:
 				'https://www.computeruniverse.net/de/asus-geforce-rtx3070-dual-rtx3070-8g-8-gb-enthusiast-grafikkarte'
