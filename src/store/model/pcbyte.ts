@@ -6,7 +6,7 @@ export const PCByte: Store = {
 	labels: {
 		inStock: {
 			container: '.in-stock-label',
-			text: ['In Stock', 'IN STOCK']
+			text: ['in stock']
 		},
 		maxPrice: {
 			container:

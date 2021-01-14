@@ -14,7 +14,7 @@ export const Allneeds: Store = {
 		},
 		outOfStock: {
 			container: '.amstockstatus',
-			text: ['Sold Out', 'Sold Out - Check back or email us for updates']
+			text: ['sold out']
 		}
 	},
 	links: [

@@ -16,12 +16,7 @@ export const RosmanMelb: Store = {
 				'6',
 				'7',
 				'8',
-				'9',
-				'10',
-				'11',
-				'12',
-				'13',
-				'14'
+				'9'
 			]
 		},
 		maxPrice: {
@@ -31,7 +26,7 @@ export const RosmanMelb: Store = {
 		outOfStock: {
 			container:
 				'#Availability > div > table > tbody > tr:nth-child(2) > td:nth-child(1)',
-			text: ['ETA', 'Call Us', '0']
+			text: ['ETA', 'Call Us']
 		}
 	},
 	links: [

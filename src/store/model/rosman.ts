@@ -16,12 +16,7 @@ export const Rosman: Store = {
 				'6',
 				'7',
 				'8',
-				'9',
-				'10',
-				'11',
-				'12',
-				'13',
-				'14'
+				'9'
 			]
 		},
 		maxPrice: {
@@ -31,7 +26,7 @@ export const Rosman: Store = {
 		outOfStock: {
 			container:
 				'#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
-			text: ['ETA', 'Call Us', '0']
+			text: ['ETA', 'Call Us']
 		}
 	},
 	links: [

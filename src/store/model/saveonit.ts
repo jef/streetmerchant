@@ -16,8 +16,7 @@ export const SaveOnIt: Store = {
 				'6',
 				'7',
 				'9',
-				'9',
-				'10+'
+				'9'
 			]
 		},
 		maxPrice: {
