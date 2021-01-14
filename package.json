@@ -47,7 +47,7 @@
     "puppeteer-extra": "^3.1.15",
     "puppeteer-extra-plugin-adblocker": "^2.11.9",
     "puppeteer-extra-plugin-block-resources": "^2.2.7",
-    "puppeteer-extra-plugin-stealth": "^2.6.5",
+    "puppeteer-extra-plugin-stealth": "^2.6.6",
     "pushover-notifications": "^1.2.2",
     "redis": "^3.0.2",
     "top-user-agents": "^1.0.19",
