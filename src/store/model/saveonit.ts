@@ -6,18 +6,7 @@ export const SaveOnIt: Store = {
 	labels: {
 		inStock: {
 			container: '.supplier',
-			text: [
-				'In Stock',
-				'1',
-				'2',
-				'3',
-				'4',
-				'5',
-				'6',
-				'7',
-				'9',
-				'9'
-			]
+			text: ['In Stock', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 		},
 		maxPrice: {
 			container: '.money',

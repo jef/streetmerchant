@@ -7,17 +7,7 @@ export const Rosman: Store = {
 		inStock: {
 			container:
 				'#Availability > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(4)',
-			text: [
-				'1',
-				'2',
-				'3',
-				'4',
-				'5',
-				'6',
-				'7',
-				'8',
-				'9'
-			]
+			text: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 		},
 		maxPrice: {
 			container: 'span.price.price--withTax.price--main',
