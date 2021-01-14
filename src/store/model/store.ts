@@ -125,6 +125,7 @@ export type Model =
 	| 'strix lc'
 	| 'strix oc'
 	| 'strix'
+	| 'strix white'
 	| 'taichi'
 	| 'trinity oc'
 	| 'trinity'
