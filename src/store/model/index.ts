@@ -1,7 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Adorama} from './adorama';
-import {AKinformatica} from './akinformatica';
+import {Akinformatica} from './akinformatica';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
@@ -115,6 +115,7 @@ import {logger} from '../../logger';
 export const storeList = new Map([
 	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
+	[Akinformatica.name, Akinformatica],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],

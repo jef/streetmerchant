@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const AKinformatica: Store = {
+export const Akinformatica: Store = {
 	currency: '€',
 	labels: {
 		inStock: [
@@ -11,7 +11,7 @@ export const AKinformatica: Store = {
 			{
 				container: '#addCartLinkButton',
 				text: ['Aggiungi al carrello']
-			},
+			}
 		],
 		maxPrice: {
 			container: '#PrezzoListinoIvatoLabel',
@@ -33,7 +33,8 @@ export const AKinformatica: Store = {
 			brand: 'test:brand',
 			model: 'test:model',
 			series: 'test:series',
-			url: 'https://shop.akinformatica.it/catalogo/adata-xpg/mouse-gaming-adata-xpg-primer---wired--rgb_4710273777139.aspx'
+			url:
+				'https://shop.akinformatica.it/catalogo/adata-xpg/mouse-gaming-adata-xpg-primer---wired--rgb_4710273777139.aspx'
 		},
 		{
 			brand: 'palit',

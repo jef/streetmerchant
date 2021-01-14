@@ -40,7 +40,7 @@ Used with the `STORES` variable.
 |---|---|---|
 | AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
-| AKinformatica | IT | `akinformatica`|
+| Akinformatica | IT | `akinformatica`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
 | Amazon | US | `amazon`|
