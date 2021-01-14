@@ -7,6 +7,10 @@ export const VsGamers: Store = {
 			container: '#vs-product-sheet-dashboard',
 			text: ['COMPRAR', 'RESERVAR']
 		},
+		maxPrice: {
+			container: 'div[class="current ng-binding"]',
+			euroFormat: true
+		},
 		outOfStock: {
 			container: '#vs-product-sheet-dashboard',
 			text: ['Avísame']
