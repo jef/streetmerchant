@@ -4,10 +4,9 @@ export const GamestopIT: Store = {
 	currency: '€',
 	labels: {
 		inStock: {
-				container: '#btnAddToCart',
-				text: ['Aggiungi al Carrello']
-			}
-		,
+			container: '#btnAddToCart',
+			text: ['Aggiungi al Carrello']
+		},
 		maxPrice: {
 			container: '.buySection .prodPriceCont',
 			euroFormat: true
@@ -29,7 +28,7 @@ export const GamestopIT: Store = {
 			model: 'xbox series s',
 			series: 'xboxss',
 			url: 'https://www.gamestop.it/XboxSeriesX/Games/128220'
-		},
+		}
 	],
 	name: 'gamestop-it'
 };
