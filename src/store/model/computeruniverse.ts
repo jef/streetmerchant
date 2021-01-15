@@ -17,7 +17,10 @@ export const Computeruniverse: Store = {
 		},
 		outOfStock: {
 			container: '.availability',
-			text: ['nicht verfügbar']
+			text: [
+				'nicht verfügbar',
+				'liefertermin hat erhebliche schwankungen'
+			]
 		}
 	},
 	links: [
