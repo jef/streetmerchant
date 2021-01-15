@@ -237,42 +237,42 @@ export const Akinformatica: Store = {
 			model: 'trinity',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-zotac-geforce-rtx-3080-trinity-10g---consegne-da-marzo_4895173622403.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-zotac-geforce-rtx-3080-trinity-10g_4895173622403.aspx'
 		},
 		{
 			brand: 'asus',
 			model: 'strix oc',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-asus-geforce-rtx-3080-rog-strix-gaming-oc-10g---consegne-da-marzo_4718017928786.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-asus-geforce-rtx-3080-rog-strix-gaming-oc-10g_4718017928786.aspx'
 		},
 		{
 			brand: 'msi',
 			model: 'gaming x trio',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-msi-geforce-rtx-3080-gaming-x-trio-10g---consegne-da-marzo_4719072762544.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-msi-geforce-rtx-3080-gaming-x-trio-10g_4719072762544.aspx'
 		},
 		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-asus-geforce-rtx-3080-rog-strix-gaming-10g---consegne-da-marzo_4718017909150.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-asus-geforce-rtx-3080-rog-strix-gaming-10g_4718017909150.aspx'
 		},
 		{
 			brand: 'pny',
 			model: 'xlr8 epic x',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-pny-geforce-rtx-3080-epic-x-xlr8-gaming-10g---consegne-da-marzo_0751492639567.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-pny-geforce-rtx-3080-epic-x-xlr8-gaming-10g_0751492639567.aspx'
 		},
 		{
 			brand: 'pny',
 			model: 'xlr8 epic x',
 			series: '3080',
 			url:
-				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-pny-geforce-rtx-3080-epic-x-xlr8-gaming-10g---consegne-da-marzo_0751492639550.aspx'
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-pny-geforce-rtx-3080-epic-x-xlr8-gaming-10g_0751492639550.aspx'
 		},
 		{
 			brand: 'palit',
@@ -280,6 +280,48 @@ export const Akinformatica: Store = {
 			series: '3080',
 			url:
 				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3080/vga-palit-geforce-rtx3080-gamingpro-oc-10gb-gddr6x_4710562242003.aspx'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-msi-geforce-rtx-3060ti-ventus-2x-oc-8g-_4719072763121.aspx'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-msi-geforce-rtx-3060ti-gaming-x-trio-8g-_4719072763145.aspx'
+		},
+		{
+			brand: 'palit',
+			model: 'dual oc',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-palit-geforce-rtx-3060ti-dual-oc-8g-gddr6-256bit-3xdp--hdmi-_4710562242287.aspx'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-msi-geforce-rtx-3060ti-ventus-3x-oc-8g_4719072763152.aspx'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-zotac-gaming-geforce-rtx-3060ti-twin-edge-8g_4895173622502.aspx'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://shop.akinformatica.it/catalogo/nvidia-rtx-3060ti/vga-zotac-gaming-geforce-rtx-3060ti-twin-edge-oc-8g_4895173622519.aspx'
 		}
 	],
 	name: 'akinformatica',
