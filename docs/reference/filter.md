@@ -84,6 +84,7 @@ Used with the `STORES` variable.
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| Drako | IT | `drako` |
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
