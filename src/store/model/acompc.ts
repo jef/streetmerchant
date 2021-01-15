@@ -13,7 +13,7 @@ export const AComPC: Store = {
 		},
 		outOfStock: [
 			{
-				container: '.stockStatus',
+				container: '.filial_stock',
 				text: ['nicht lieferbar']
 			}
 		]
