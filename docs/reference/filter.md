@@ -72,6 +72,7 @@ Used with the `STORES` variable.
 | Best Buy | CA | `bestbuy-ca`|
 | Box | UK | `box`|
 | BPCTech | AU | `bpctech`|
+| BPM-Power | IT | `bpm-power`|
 | CanadaComputers | CA | `canadacomputers` |
 | Caseking | DE | `caseking`|
 | CCL | UK | `ccl`|
