@@ -158,7 +158,7 @@ function envOrNumberMax(
   return number ?? 0;
 }
 
-function loadProxyList(filename: string): string[] {
+function loadProxyList(filename: string): string[] | undefined {
   try {
     return readFileSync(`${filename}.proxies`)
       .toString()
@@ -166,7 +166,7 @@ function loadProxyList(filename: string): string[] {
       .split('\n')
       .map(x => x.trim());
   } catch {
-    return [];
+    return undefined;
   }
 }
 
@@ -412,7 +412,7 @@ const store = {
 
     let proxyList = loadProxyList(name);
 
-    if (proxyList.length === 0) {
+    if (!proxyList) {
       proxyList = loadProxyList('global');
     }
 
