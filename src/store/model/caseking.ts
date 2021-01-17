@@ -103,6 +103,42 @@ export const Caseking: Store = {
 				'https://www.caseking.de/evga-geforce-rtx-3060-ti-ftw3-gaming-8192-mb-gddr6-gcev-429.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-eagle-oc-8g-8192-mb-gddr6-gcgb-349.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3060-ti-master-8g-8192-mb-gddr6-gcgb-346.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc pro',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-gaming-oc-pro-8g-8192-mb-gddr6-gcgb-347.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-gaming-oc-8g-8192-mb-gddr6-gcgb-348.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-eagle-8g-8192-mb-gddr6-gcgb-350.html
+'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
