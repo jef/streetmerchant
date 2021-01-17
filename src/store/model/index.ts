@@ -1,6 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Adorama} from './adorama';
+import {Akinformatica} from './akinformatica';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
@@ -32,6 +33,7 @@ import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Bpctech} from './bpctech';
+import {BpmPower} from './bpmpower';
 import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
@@ -44,6 +46,7 @@ import {Corsair} from './corsair';
 import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
+import {Drako} from './drako';
 import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
@@ -60,6 +63,8 @@ import {Game} from './game';
 import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
+import {GamestopIT} from './gamestop-it';
+import {HardwarePlanet} from './hardware-planet';
 import {HarveyNormanIE} from './harveynorman-ie';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
@@ -78,6 +83,7 @@ import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Ollo} from './ollo';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PCComponentes} from './pccomponentes';
@@ -114,6 +120,7 @@ import {logger} from '../../logger';
 export const storeList = new Map([
 	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
+	[Akinformatica.name, Akinformatica],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],
@@ -145,6 +152,7 @@ export const storeList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Bpctech.name, Bpctech],
+	[BpmPower.name, BpmPower],
 	[Caseking.name, Caseking],
 	[CanadaComputers.name, CanadaComputers],
 	[Ccl.name, Ccl],
@@ -157,6 +165,7 @@ export const storeList = new Map([
 	[Cpl.name, Cpl],
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
+	[Drako.name, Drako],
 	[EbGames.name, EbGames],
 	[Ebuyer.name, Ebuyer],
 	[Elcorteingles.name, Elcorteingles],
@@ -173,6 +182,8 @@ export const storeList = new Map([
 	[Gamestop.name, Gamestop],
 	[GamestopDE.name, GamestopDE],
 	[GamestopIE.name, GamestopIE],
+	[GamestopIT.name, GamestopIT],
+	[HardwarePlanet.name, HardwarePlanet],
 	[HarveyNormanIE.name, HarveyNormanIE],
 	[JohnLewis.name, JohnLewis],
 	[Kabum.name, Kabum],
@@ -191,6 +202,7 @@ export const storeList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Ollo.name, Ollo],
 	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[Pccg.name, Pccg],

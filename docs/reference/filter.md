@@ -40,6 +40,7 @@ Used with the `STORES` variable.
 |---|---|---|
 | AComPC | DE | `acompc` |
 | Adorama | US | `adorama`|
+| Akinformatica | IT | `akinformatica`|
 | Alternate | DE | `alternate`|
 | Alternate | NL | `alternate-nl`|
 | Amazon | US | `amazon`|
@@ -71,6 +72,7 @@ Used with the `STORES` variable.
 | Best Buy | CA | `bestbuy-ca`|
 | Box | UK | `box`|
 | BPCTech | AU | `bpctech`|
+| BPM-Power | IT | `bpm-power`|
 | CanadaComputers | CA | `canadacomputers` |
 | Caseking | DE | `caseking`|
 | CCL | UK | `ccl`|
@@ -83,6 +85,7 @@ Used with the `STORES` variable.
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| Drako | IT | `drako` |
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
@@ -99,6 +102,8 @@ Used with the `STORES` variable.
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
+| Gamestop | IT | `gamestop-it`|
+| Hardware Planet | IT | | `hardware-planet` |
 | Harvey Normans | IE | | `harveynorman-ie` |
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
@@ -117,6 +122,7 @@ Used with the `STORES` variable.
 | Nvidia | US | `nvidia`|
 | Nvidia API | | `nvidia-api`|
 | Office Depot | US | `officedepot`|
+| Ollo | IT | `ollo`|
 | Otto | DE | `otto`|
 | Overclockers | UK | `overclockers`|
 | PCCG | AU | `pccg`|
