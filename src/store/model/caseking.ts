@@ -194,6 +194,20 @@ export const Caseking: Store = {
 				'https://www.caseking.de/pny-geforce-rtx-3060-ti-uprising-8g-8192-mb-gddr6-gcpn-079.html'
 		},
 		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/zotac-gaming-geforce-rtx-3060-ti-twin-edge-8192-mb-gddr6-gczt-169.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/zotac-gaming-geforce-rtx-3060-ti-twin-edge-oc-8192-mb-gddr6-gczt-170.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
