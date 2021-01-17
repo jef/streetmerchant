@@ -209,6 +209,41 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'dual',
+			series: '3070',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3070-dual-8g-8192-mb-gddr6-gcas-404.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3070-tuf-o8g-8192-mb-gddr6-gcas-406.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3070-rog-strix-o8g-8192-mb-gddr6-gcas-403.html'
+		},
+		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3070-dual-o8g-8192-mb-gddr6-gcas-405.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3070',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3070-rog-strix-8g-8192-mb-gddr6-gcas-415.html'
+		},
+		{
+			brand: 'asus',
 			model: 'strix',
 			series: '3080',
 			url:
