@@ -27,6 +27,48 @@ export const Caseking: Store = {
 		},
 		{
 			brand: 'asus',
+			model: 'strix oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-rog-strix-o8g-8192-mb-gddr6-gcas-407.html'
+		},
+		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-dual-o8g-8192-mb-gddr6-gcas-410.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-tuf-o8g-8192-mb-gddr6-gcas-412.html'
+		},
+		{
+			brand: 'asus',
+			model: 'dual',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-dual-8g-8192-mb-gddr6-gcas-411.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-tuf-8g-8192-mb-gddr6-gcas-408.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3060-ti-rog-strix-8g-8192-mb-gddr6-gcas-409.html'
+		},
+		{
+			brand: 'asus',
 			model: 'strix',
 			series: '3080',
 			url:
