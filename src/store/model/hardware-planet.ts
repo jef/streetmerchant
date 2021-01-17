@@ -79,6 +79,6 @@ export const HardwarePlanet: Store = {
 			}
 		]
 	},
-	name: 'ccl',
+	name: 'hardware-planet',
 	waitUntil: 'domcontentloaded'
 };
