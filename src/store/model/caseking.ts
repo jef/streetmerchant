@@ -761,6 +761,97 @@ export const Caseking: Store = {
 				'https://www.caseking.de/zotac-gaming-geforce-rtx-3090-trinity-24576-mb-gddr6x-gczt-162.html'
 		},
 		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3090',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3090-ekwb-24g-24576-mb-gddr6x-gcas-414.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3090-ventus-3x-24g-oc-24576-mb-gddr6x-gcmc-243.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3090-xtreme-waterforce-wb-24g-24576-mb-gddr6x-gcgb-355.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3090-xtreme-waterforce-24g-24576-mb-gddr6x-gcgb-354.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3090-xtreme-24g-24576-mb-gddr6x-gcgb-335.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra hybrid',
+			series: '3090',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3090-ftw3-ultra-hybrid-gaming-24576-mb-gddr6x-gcev-434.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra hybrid',
+			series: '3090',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3090-xc3-ultra-hybrid-gaming-24576-mb-gddr6x-gcev-433.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3090-master-24g-24576-mb-gddr6x-gcgb-334.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill frostbite',
+			series: '3090',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3090-ichill-frostbite-24576-mb-gddr6x-gci3-178.html'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3090',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3090-ichill-frostbite-24576-mb-gddr6x-gci3-178.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3090-vision-oc-24g-24576-mb-gddr6x-gcgb-341.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3090-turbo-24g-24576-mb-gddr6x-gcgb-330.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3090',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3090-eagle-24g-24576-mb-gddr6x-gcgb-342.html'
+		},
+		{
 			brand: 'amd',
 			model: '5600x',
 			series: 'ryzen5600',
