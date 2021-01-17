@@ -2,6 +2,7 @@ import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
+import {Allneeds} from './allneeds';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
@@ -39,6 +40,7 @@ import {Caseking} from './caseking';
 import {Ccl} from './ccl';
 import {Centrecom} from './centrecom';
 import {Comet} from './comet';
+import {ComputerAlliance} from './computeralliance';
 import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
 import {Coolmod} from './coolmod';
@@ -46,6 +48,7 @@ import {Corsair} from './corsair';
 import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
+import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
@@ -54,6 +57,7 @@ import {Eprice} from './eprice';
 import {Equippr} from './equippr';
 import {Euronics} from './euronics';
 import {EuronicsDE} from './euronics-de';
+import {Evatech} from './evatech';
 import {Evga} from './evga';
 import {EvgaEu} from './evga-eu';
 import {Expert} from './expert';
@@ -65,15 +69,19 @@ import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
 import {HardwarePlanet} from './hardware-planet';
+import {HarrisTechnology} from './harristechnology';
 import {HarveyNormanIE} from './harveynorman-ie';
+import {Igamecomputer} from './igame';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
+import {LandmarkComputers} from './lmc';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
 import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
+import {Msy} from './msy';
 import {Mwave} from './mwave';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
@@ -86,6 +94,8 @@ import {OfficeDepot} from './officedepot';
 import {Ollo} from './ollo';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
+import {PBTech} from './pbtech';
+import {PCByte} from './pcbyte';
 import {PCComponentes} from './pccomponentes';
 import {PCKing} from './pcking';
 import {Pccg} from './pccg';
@@ -93,7 +103,10 @@ import {PlayStation} from './playstation';
 import {Pny} from './pny';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
+import {Rosman} from './rosman';
+import {RosmanMelb} from './rosman-melb';
 import {Saturn} from './saturn';
+import {SaveOnIt} from './saveonit';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
 import {ShopTo} from './shopto';
@@ -101,6 +114,7 @@ import {SmythsToys} from './smythstoys';
 import {SmythsToysIE} from './smythstoys-ie';
 import {Spielegrotte} from './spielegrotte';
 import {Store} from './store';
+import {StormComputers} from './storm';
 import {Target} from './target';
 import {TescoIE} from './tesco-ie';
 import {TopAchat} from './topachat';
@@ -112,6 +126,7 @@ import {VsGamers} from './vsgamers';
 import {Vuugo} from './vuugo';
 import {Walmart} from './walmart';
 import {WalmartCa} from './walmart-ca';
+import {WellsTechnology} from './wellstechnology';
 import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
@@ -120,6 +135,7 @@ import {logger} from '../../logger';
 export const storeList = new Map([
 	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
+	[Allneeds.name, Allneeds],
 	[Akinformatica.name, Akinformatica],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
@@ -158,6 +174,7 @@ export const storeList = new Map([
 	[Ccl.name, Ccl],
 	[Centrecom.name, Centrecom],
 	[Comet.name, Comet],
+	[ComputerAlliance.name, ComputerAlliance],
 	[Computeruniverse.name, Computeruniverse],
 	[Coolblue.name, Coolblue],
 	[Coolmod.name, Coolmod],
@@ -165,6 +182,7 @@ export const storeList = new Map([
 	[Cpl.name, Cpl],
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
+	[Dcomp.name, Dcomp],
 	[Drako.name, Drako],
 	[EbGames.name, EbGames],
 	[Ebuyer.name, Ebuyer],
@@ -173,6 +191,7 @@ export const storeList = new Map([
 	[Equippr.name, Equippr],
 	[Euronics.name, Euronics],
 	[EuronicsDE.name, EuronicsDE],
+	[Evatech.name, Evatech],
 	[Evga.name, Evga],
 	[EvgaEu.name, EvgaEu],
 	[Expert.name, Expert],
@@ -184,15 +203,19 @@ export const storeList = new Map([
 	[GamestopIE.name, GamestopIE],
 	[GamestopIT.name, GamestopIT],
 	[HardwarePlanet.name, HardwarePlanet],
+	[HarrisTechnology.name, HarrisTechnology],
 	[HarveyNormanIE.name, HarveyNormanIE],
+	[Igamecomputer.name, Igamecomputer],
 	[JohnLewis.name, JohnLewis],
 	[Kabum.name, Kabum],
+	[LandmarkComputers.name, LandmarkComputers],
 	[Mediamarkt.name, Mediamarkt],
 	[Medimax.name, Medimax],
 	[Megekko.name, Megekko],
 	[MemoryExpress.name, MemoryExpress],
 	[MicroCenter.name, MicroCenter],
 	[Mindfactory.name, Mindfactory],
+	[Msy.name, Msy],
 	[Mwave.name, Mwave],
 	[Newegg.name, Newegg],
 	[NeweggCa.name, NeweggCa],
@@ -205,6 +228,8 @@ export const storeList = new Map([
 	[Ollo.name, Ollo],
 	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
+	[PBTech.name, PBTech],
+	[PCByte.name, PCByte],
 	[Pccg.name, Pccg],
 	[PCKing.name, PCKing],
 	[PCComponentes.name, PCComponentes],
@@ -212,13 +237,17 @@ export const storeList = new Map([
 	[Pny.name, Pny],
 	[ProshopDE.name, ProshopDE],
 	[ProshopDK.name, ProshopDK],
+	[Rosman.name, Rosman],
+	[RosmanMelb.name, RosmanMelb],
 	[Saturn.name, Saturn],
+	[SaveOnIt.name, SaveOnIt],
 	[Scan.name, Scan],
 	[Scorptec.name, Scorptec],
 	[ShopTo.name, ShopTo],
 	[SmythsToysIE.name, SmythsToysIE],
 	[SmythsToys.name, SmythsToys],
 	[Spielegrotte.name, Spielegrotte],
+	[StormComputers.name, StormComputers],
 	[Target.name, Target],
 	[TescoIE.name, TescoIE],
 	[TopAchat.name, TopAchat],
@@ -230,6 +259,7 @@ export const storeList = new Map([
 	[Vuugo.name, Vuugo],
 	[Walmart.name, Walmart],
 	[WalmartCa.name, WalmartCa],
+	[WellsTechnology.name, WellsTechnology],
 	[Wipoid.name, Wipoid],
 	[Xbox.name, Xbox],
 	[Zotac.name, Zotac]
