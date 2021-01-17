@@ -16,7 +16,17 @@ export const NeweggCa: Store = {
 			container:
 				'div#app div.product-price > ul > li.price-current > strong',
 			euroFormat: false
-		}
+		},
+		outOfStock: [
+			{
+				container: '.product-inventory',
+				text: [' out of stock.']
+			},
+			{
+				container: '.product-flag',
+				text: ['out of stock ']
+			}
+		]
 	},
 	links: [
 		{

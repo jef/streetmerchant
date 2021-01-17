@@ -170,21 +170,21 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | Brand | Model |
 |:---:|---|
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `amd reference` |
-| `asus` | `crosshair viii`, `dual`, `dual oc`, `strix`, `strix oc`, `tuf`, `tuf oc` |
+| `asus` | `crosshair viii`, `dual`, `dual oc`, `ekwb`, `ko`, `ko oc`, `strix`, `strix oc`, `strix white`, `tuf`, `tuf oc` |
 | `corsair` | `750 platinum`, `600 platinum` |
 | `colorful` | `igame advanced oc`, `igame vulcan oc` |
-| `evga` | `ftw3`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc gaming`, `xc3 black`, `xc3 ultra` |
+| `evga` | `ftw3`, `ftw3 black`, `ftw3 ultra`, `ftw3 ultra hydro copper`, `xc3`, `xc gaming`, `xc black`, `xc3 black`, `xc3 ultra` |
 | `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
-| `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `turbo`, `vision`, `vision oc` |
+| `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `gaming oc pro`, `turbo`, `vision`, `vision oc` |
 | `galax` | `sg`, `sg oc` |
-| `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2 oc` |
+| `inno3d` | `gaming x3`, `ghost oc`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2`, `twin x2 oc` |
 | `kfa2` | `sg`, `sg oc` |
 | `leadtek` | `hurricane` |
 | `microsoft` | `xbox series x`, `xbox series s` |
 | `msi` | `gaming x trio`, `suprim x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc` |
 | `nvidia` | `founders edition` |
-| `palit` | `gamerock oc`, `gaming pro`, `gaming pro oc` |
-| `pny` | `dual fan`, `xlr8 revel`, `xlr8 uprising` |
+| `palit` | `dual oc`, `gamerock oc`, `gaming pro`, `gaming pro oc` |
+| `pny` | `dual fan`, `uprising`, `xlr8 gaming`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `xfx` | `merc`, `amd reference` |
 | `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc` |

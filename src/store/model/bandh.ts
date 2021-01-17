@@ -11,6 +11,10 @@ export const BAndH: Store = {
 		maxPrice: {
 			container: 'div[data-selenium="pricingPrice"]',
 			euroFormat: false
+		},
+		outOfStock: {
+			container: 'button[data-selenium="notifyAvailabilityButton"]',
+			text: ['notify when available']
 		}
 	},
 	links: [
@@ -42,6 +46,41 @@ export const BAndH: Store = {
 			url:
 				'https://www.bhphotovideo.com/c/product/1602756-REG/asus_strixrtx3070o8_rog_strix_geforce_rtx.html'
 		},
+		{
+			brand: 'asus',
+			model: 'dual oc',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1603974-REG/asus_dualrtx3070o8g_dual_geforce_rtx_3070.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ko oc',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606745-REG/asus_90yv0fq2_m0aa00_ko_nvidia_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1606746-REG/asus_tuf_rtx3070_o8g_gaming_tuf_gaming_nvidia_geforce.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614305-REG/asus_rtx3070_8g_ek_ekwb_geforce_rtx_3070.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3070',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614300-REG/asus_rog_strix_rtx3070_o8g_white_rog_strix_geforce_rtx.html'
+		},
 		// TUF was removed from BH, not sure why so commenting out listing for now
 		// {
 		// 	brand: 'asus',
@@ -63,13 +102,48 @@ export const BAndH: Store = {
 			url:
 				'https://www.bhphotovideo.com/c/product/1592969-REG/zotac_zt_a30800d_10p_gaming_geforce_rtx_3080.html'
 		},
-		// TUF was removed from BH, not sure why so commenting out listing for now
-		// {
-		// 	brand: 'asus',
-		// 	model: 'tuf oc',
-		// 	series: '3080',
-		// 	url: 'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
-		// },
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1593650-REG/asus_tuf_rtx3080_o10g_gaming_tuf_gaming_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1603617-REG/asus_rog_strix_rtx3080_o10g_gaming_rog_strix_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614301-REG/asus_rog_strix_rtx3080_o10g_white_rog_strix_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3080',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614303-REG/asus_rtx3080_10g_ek_ekwb_geforce_rtx_3080.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ko oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1609756-REG/asus_ko_rtx3060ti_o8g_gaming_ko_geforce_rtx_3060.html'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3060ti',
+			url:
+				'https://www.bhphotovideo.com/c/product/1607025-REG/asus_tuf_rtx3060ti_o8g_gaming_geforce_rtx_3060_ti.html'
+		},
 		{
 			brand: 'gigabyte',
 			model: 'eagle oc',
@@ -196,6 +270,27 @@ export const BAndH: Store = {
 			series: '3090',
 			url:
 				'https://www.bhphotovideo.com/c/product/1594451-REG/asus_90yv0fd1_m0am00_tuf_gaming_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1607043-REG/asus_rtx3090_24g_ek_geforce_rtx_3090_24g.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1601764-REG/asus_rog_strix_rtx3090_o24g_gaming_rog_strix_geforce_rtx.html'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3090',
+			url:
+				'https://www.bhphotovideo.com/c/product/1614302-REG/asus_rog_strix_rtx3090_o24g_white_rog_strix_geforce_rtx.html'
 		},
 		{
 			brand: 'amd',
