@@ -278,6 +278,41 @@ export const Caseking: Store = {
 				'https://www.caseking.de/evga-geforce-rtx-3070-ftw3-8192-mb-gddr6-gcev-427.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3070-gaming-oc-8g-8192-mb-gddr6-gcgb-338.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3070',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3070-master-8g-8192-mb-gddr6-gcgb-343.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3070-vision-oc-8g-8192-mb-gddr6-gcgb-344.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3070',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3070-eagle-8g-8192-mb-gddr6-gcgb-340.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3070-eagle-oc-8g-8192-mb-gddr6-gcgb-339.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
