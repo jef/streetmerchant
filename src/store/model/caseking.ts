@@ -572,6 +572,69 @@ export const Caseking: Store = {
 				'https://www.caseking.de/zotac-gaming-geforce-rtx-3080-trinity-10240-mb-gddr6x-gczt-163.html'
 		},
 		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3080',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3080-xtreme-10g-10240-mb-gddr6x-gcgb-333.html'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3080-suprim-x-10g-10240-mb-gddr6x-gcmc-253.html'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3080',
+			url:
+				'https://www.caseking.de/asus-geforce-rtx-3080-ekwb-10g-10240-mb-gddr6x-gcas-413.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill frostbite',
+			series: '3080',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3080-ichill-frostbite-10240-mb-gddr6x-gci3-177.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3080',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3080-xtreme-waterforce-wb-10g-10240-mb-gddr6x-gcgb-352.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce',
+			series: '3080',
+			url:
+				'https://www.caseking.de/gigabyte-aorus-geforce-rtx-3080-xtreme-waterforce-10g-10240-mb-gddr6x-gcgb-351.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra hybrid',
+			series: '3080',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3080-xc3-ultra-hybrid-gaming-10240-mb-gddr6x-gcev-435.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra hybrid',
+			series: '3080',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3080-ftw3-ultra-hybrid-gaming-10240-mb-gddr6x-gcev-436.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle',
+			series: '3080',
+			url:
+				'https://www.caseking.de/gigabyte-geforce-rtx-3080-eagle-10g-10240-mb-gddr6x-gcgb-353.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3090',

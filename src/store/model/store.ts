@@ -151,6 +151,7 @@ export type Model =
 	| 'xc black'
 	| 'xc3 black'
 	| 'xc3 ultra'
+	| 'xc3 ultra hybrid'
 	| 'xc3'
 	| 'xlr8 epic x'
 	| 'xlr8 revel'
