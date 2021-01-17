@@ -1,7 +1,6 @@
 import {Store} from './store';
-import {getProductLinksBuilder} from './helpers/card';
 
-export const BPMPower: Store = {
+export const BpmPower: Store = {
 	currency: '€',
 	labels: {
 		inStock: {

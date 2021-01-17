@@ -64,6 +64,7 @@ import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
+import {HardwarePlanet} from './hardware-planet';
 import {HarveyNormanIE} from './harveynorman-ie';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
@@ -182,6 +183,7 @@ export const storeList = new Map([
 	[GamestopDE.name, GamestopDE],
 	[GamestopIE.name, GamestopIE],
 	[GamestopIT.name, GamestopIT],
+	[HardwarePlanet.name, HardwarePlanet],
 	[HarveyNormanIE.name, HarveyNormanIE],
 	[JohnLewis.name, JohnLewis],
 	[Kabum.name, Kabum],
