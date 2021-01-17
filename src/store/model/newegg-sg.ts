@@ -20,7 +20,17 @@ export const NeweggSg: Store = {
 		],
 		maxPrice: {
 			container: '.price-current'
-		}
+		},
+		outOfStock: [
+			{
+				container: '.product-inventory',
+				text: [' out of stock.']
+			},
+			{
+				container: '.product-flag',
+				text: ['out of stock ']
+			}
+		]
 	},
 	links: [
 		{
