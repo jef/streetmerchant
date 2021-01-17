@@ -135,8 +135,28 @@ export const Caseking: Store = {
 			model: 'eagle',
 			series: '3060ti',
 			url:
-				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-eagle-8g-8192-mb-gddr6-gcgb-350.html
-'
+				'https://www.caseking.de/gigabyte-geforce-rtx-3060-ti-eagle-8g-8192-mb-gddr6-gcgb-350.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3060-ti-twin-x2-oc-8192-mb-gddr6-gci3-180.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3060-ti-ichill-x3-8192-mb-gddr6-gci3-179.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3060-ti-twin-x2-8192-mb-gddr6-gci3-181.html'
 		},
 		{
 			brand: 'asus',
