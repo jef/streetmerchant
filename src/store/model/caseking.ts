@@ -159,6 +159,27 @@ export const Caseking: Store = {
 				'https://www.caseking.de/inno3d-geforce-rtx-3060-ti-twin-x2-8192-mb-gddr6-gci3-181.html'
 		},
 		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3060-ti-gaming-x-trio-8192-mb-gddr6-gcmc-255.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3060-ti-ventus-2x-oc-8192-mb-gddr6-gcmc-246.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3060-ti-ventus-3x-oc-8192-mb-gddr6-gcmc-245.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
