@@ -313,6 +313,34 @@ export const Caseking: Store = {
 				'https://www.caseking.de/gigabyte-geforce-rtx-3070-eagle-oc-8g-8192-mb-gddr6-gcgb-339.html'
 		},
 		{
+			brand: 'inno3d',
+			model: 'twin x2',
+			series: '3070',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3070-twin-x2-8192-mb-gddr6-gci3-176.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3070',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3070-ichill-x3-8192-mb-gddr6-gci3-174.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'ichill x4',
+			series: '3070',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3070-ichill-x4-8192-mb-gddr6-gci3-173.html'
+		},
+		{
+			brand: 'inno3d',
+			model: 'twin x2 oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/inno3d-geforce-rtx-3070-twin-x2-oc-8192-mb-gddr6-gci3-175.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
