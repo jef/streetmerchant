@@ -91,6 +91,7 @@ export type Model =
 	| 'ftw3'
 	| 'ftw3 black'
 	| 'ftw3 ultra'
+	| 'ftw3 ultra hybrid'
 	| 'ftw3 ultra hydro copper'
 	| 'gamerock'
 	| 'gamerock oc'
@@ -144,6 +145,7 @@ export type Model =
 	| 'tuf oc'
 	| 'tuf'
 	| 'turbo'
+	| 'twin edge oc white'
 	| 'twin edge oc'
 	| 'twin edge'
 	| 'twin x2 oc'
@@ -161,6 +163,7 @@ export type Model =
 	| 'xc gaming'
 	| 'xc3 black'
 	| 'xc3 ultra'
+	| 'xc3 ultra hybrid'
 	| 'xc3'
 	| 'xlr8 epic x'
 	| 'xlr8 gaming'
@@ -231,6 +234,5 @@ export type Store = {
 
 	proxyList?: string[];
 	currentProxyIndex?: number;
-
 	captchaDeterrent?: CaptchaDeterrent;
 };
