@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.4.1](https://www.github.com/jef/streetmerchant/compare/v3.4.0...v3.4.1) (2021-01-17)
+
+
+### Bug Fixes
+
+* **proxy:** build proxyList correctly ([c177aed](https://www.github.com/jef/streetmerchant/commit/c177aedd210e14cb7d401295cb16ece1dfb1ebe7))
+
 ## [3.4.0](https://www.github.com/jef/streetmerchant/compare/v3.3.0...v3.4.0) (2021-01-17)
 
 
