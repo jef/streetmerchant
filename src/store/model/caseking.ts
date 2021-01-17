@@ -68,6 +68,41 @@ export const Caseking: Store = {
 				'https://www.caseking.de/asus-geforce-rtx-3060-ti-rog-strix-8g-8192-mb-gddr6-gcas-409.html'
 		},
 		{
+			brand: 'evga',
+			model: 'xc gaming',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3060-ti-xc-gaming-8192-mb-gddr6-gcev-431.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3060-ti-ftw3-ultra-gaming-8192-mb-gddr6-gcev-403.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 black',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3060-ti-ftw3-black-gaming-8192-mb-gddr6-gcev-430.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc black',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3060-ti-xc-black-gaming-8192-mb-gddr6-gcev-432.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3060-ti-ftw3-gaming-8192-mb-gddr6-gcev-429.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',

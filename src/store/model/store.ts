@@ -94,7 +94,6 @@ export type Model =
 	| 'gaming trio'
 	| 'gaming x trio'
 	| 'gaming x3'
-	| 'ghost oc'
 	| 'suprim x'
 	| 'suprim'
 	| 'gaming'
@@ -147,13 +146,12 @@ export type Model =
 	| 'vision'
 	| 'xbox series s'
 	| 'xbox series x'
-	| 'xc black'
 	| 'xc gaming'
+	| 'xc black'
 	| 'xc3 black'
 	| 'xc3 ultra'
 	| 'xc3'
 	| 'xlr8 epic x'
-	| 'xlr8 gaming'
 	| 'xlr8 revel'
 	| 'xlr8 uprising';
 
