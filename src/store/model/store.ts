@@ -85,6 +85,7 @@ export type Model =
 	| 'ftw3'
 	| 'ftw3 black'
 	| 'ftw3 ultra'
+	| 'ftw3 ultra hybrid'
 	| 'ftw3 ultra hydro copper'
 	| 'gamerock oc'
 	| 'gaming oc'
