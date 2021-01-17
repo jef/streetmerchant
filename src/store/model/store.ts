@@ -95,6 +95,7 @@ export type Model =
 	| 'gaming trio'
 	| 'gaming x trio'
 	| 'gaming x3'
+	| 'ghost oc'
 	| 'suprim x'
 	| 'suprim'
 	| 'gaming'
@@ -155,6 +156,7 @@ export type Model =
 	| 'xc3 ultra hybrid'
 	| 'xc3'
 	| 'xlr8 epic x'
+	| 'xlr8 gaming'
 	| 'xlr8 revel'
 	| 'xlr8 uprising';
 
