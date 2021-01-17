@@ -180,6 +180,20 @@ export const Caseking: Store = {
 				'https://www.caseking.de/msi-geforce-rtx-3060-ti-ventus-3x-oc-8192-mb-gddr6-gcmc-245.html'
 		},
 		{
+			brand: 'pny',
+			model: 'xlr8 epic x',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/pny-geforce-rtx-3060-ti-xlr8-gaming-revel-epic-x-8192-mb-gddr6-gcpn-080.html'
+		},
+		{
+			brand: 'pny',
+			model: 'xlr8 uprising',
+			series: '3060ti',
+			url:
+				'https://www.caseking.de/pny-geforce-rtx-3060-ti-uprising-8g-8192-mb-gddr6-gcpn-079.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
