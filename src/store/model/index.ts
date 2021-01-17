@@ -366,15 +366,15 @@ export function updateStores() {
 updateStores();
 
 export function getAllBrands() {
-	return Array.from(brands);
+	return [...brands];
 }
 
 export function getAllSeries() {
-	return Array.from(series);
+	return [...series];
 }
 
 export function getAllModels() {
-	return Array.from(models);
+	return [...models];
 }
 
 export function getStores() {

@@ -4,7 +4,7 @@ import {config} from '../config';
 import {join} from 'path';
 import notifier from 'node-notifier';
 
-const desktop = config.notifications.desktop;
+const {desktop} = config.notifications;
 
 export function sendDesktopNotification(link: Link, store: Store) {
 	if (desktop) {

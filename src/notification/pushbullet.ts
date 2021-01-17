@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import PushBullet from '@jef/pushbullet';
 import {config} from '../config';
 
-const pushbullet = config.notifications.pushbullet;
+const {pushbullet} = config.notifications;
 
 export function sendPushbulletNotification(link: Link, store: Store) {
 	if (pushbullet) {

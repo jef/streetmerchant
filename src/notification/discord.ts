@@ -3,8 +3,7 @@ import Discord from 'discord.js';
 import {config} from '../config';
 import {logger} from '../logger';
 
-const discord = config.notifications.discord;
-const {notifyGroup, webhooks, notifyGroupSeries} = discord;
+const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
 
 function getIdAndToken(webhook: string) {
 	const match = /.*\/webhooks\/(\d+)\/(.+)/.exec(webhook);
