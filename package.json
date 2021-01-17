@@ -3,7 +3,6 @@
   "description": "The world's easiest, most powerful stock checker",
   "main": "src/index.ts",
   "scripts": {
-    "all": "npm run compile && npm run lint && npm run test",
     "fix": "gts fix",
     "lint": "gts lint",
     "clean": "gts clean",
