@@ -1,23 +1,25 @@
-name: ci
+name: Continuous Integration
 on:
   pull_request:
     branches:
       - main
 jobs:
   build-lint:
+    name: Build and lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.4
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: 14.15.4
-      - uses: actions/cache@v2
+      - name: Setup build cache
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
-      - name: Add problem matcher
-        run: echo "::add-matcher::.github/xo-problem-matcher.json"
       - name: Install dependencies
         run: npm ci
       - name: Compile TypeScript
@@ -25,16 +27,19 @@ jobs:
       - name: Run linter
         run: npm run lint
   build-docker:
+    name: Build Docker image
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2.7.0
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run paths filter
+        uses: dorny/paths-filter@v2.7.0
         id: filter
         with:
           filters: |
             build:
               - 'Dockerfile'
               - 'package*.json'
-      - name: Build image
+      - name: Build Docker image
         if: steps.filter.outputs.build == 'true'
         run: docker build .
