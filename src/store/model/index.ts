@@ -1,6 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Adorama} from './adorama';
+import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
 import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
@@ -33,6 +34,7 @@ import {BestBuy} from './bestbuy';
 import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Bpctech} from './bpctech';
+import {BpmPower} from './bpmpower';
 import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
@@ -47,6 +49,7 @@ import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
 import {Dcomp} from './dcomp';
+import {Drako} from './drako';
 import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
@@ -64,7 +67,9 @@ import {Game} from './game';
 import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
+import {GamestopIT} from './gamestop-it';
 import {HarrisTechnology} from './harristechnology';
+import {HardwarePlanet} from './hardware-planet';
 import {HarveyNormanIE} from './harveynorman-ie';
 import {Igamecomputer} from './igame';
 import {JohnLewis} from './johnlewis';
@@ -86,6 +91,7 @@ import {Novatech} from './novatech';
 import {Nvidia} from './nvidia';
 import {NvidiaApi} from './nvidia-api';
 import {OfficeDepot} from './officedepot';
+import {Ollo} from './ollo';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
@@ -130,6 +136,7 @@ export const storeList = new Map([
 	[AComPC.name, AComPC],
 	[Adorama.name, Adorama],
 	[Allneeds.name, Allneeds],
+	[Akinformatica.name, Akinformatica],
 	[Alternate.name, Alternate],
 	[AlternateNL.name, AlternateNL],
 	[Amazon.name, Amazon],
@@ -161,6 +168,7 @@ export const storeList = new Map([
 	[BestBuyCa.name, BestBuyCa],
 	[Box.name, Box],
 	[Bpctech.name, Bpctech],
+	[BpmPower.name, BpmPower],
 	[Caseking.name, Caseking],
 	[CanadaComputers.name, CanadaComputers],
 	[Ccl.name, Ccl],
@@ -175,6 +183,7 @@ export const storeList = new Map([
 	[Currys.name, Currys],
 	[Cyberport.name, Cyberport],
 	[Dcomp.name, Dcomp],
+	[Drako.name, Drako],
 	[EbGames.name, EbGames],
 	[Ebuyer.name, Ebuyer],
 	[Elcorteingles.name, Elcorteingles],
@@ -192,7 +201,9 @@ export const storeList = new Map([
 	[Gamestop.name, Gamestop],
 	[GamestopDE.name, GamestopDE],
 	[GamestopIE.name, GamestopIE],
-	[HarrisTechnology.name, HarrisTechnology],
+  [GamestopIT.name, GamestopIT],
+	[HardwarePlanet.name, HardwarePlanet],
+  [HarrisTechnology.name, HarrisTechnology],
 	[HarveyNormanIE.name, HarveyNormanIE],
 	[Igamecomputer.name, Igamecomputer],
 	[JohnLewis.name, JohnLewis],
@@ -214,6 +225,7 @@ export const storeList = new Map([
 	[Nvidia.name, Nvidia],
 	[NvidiaApi.name, NvidiaApi],
 	[OfficeDepot.name, OfficeDepot],
+	[Ollo.name, Ollo],
 	[Otto.name, Otto],
 	[Overclockers.name, Overclockers],
 	[PBTech.name, PBTech],
