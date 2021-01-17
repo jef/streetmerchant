@@ -341,6 +341,41 @@ export const Caseking: Store = {
 				'https://www.caseking.de/inno3d-geforce-rtx-3070-twin-x2-oc-8192-mb-gddr6-gci3-175.html'
 		},
 		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3070',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3070-gaming-x-trio-8192-mb-gddr6-gcmc-250.html'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim',
+			series: '3070',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3070-suprim-8g-8192-mb-gddr6-gcmc-256.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 2x oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3070-ventus-2x-oc-8192-mb-gddr6-gcmc-249.html'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3070-ventus-3x-oc-8192-mb-gddr6-gcmc-251.html'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3070',
+			url:
+				'https://www.caseking.de/msi-geforce-rtx-3070-suprim-x-8g-8192-mb-gddr6-gcmc-254.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
