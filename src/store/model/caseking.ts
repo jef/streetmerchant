@@ -376,6 +376,20 @@ export const Caseking: Store = {
 				'https://www.caseking.de/msi-geforce-rtx-3070-suprim-x-8g-8192-mb-gddr6-gcmc-254.html'
 		},
 		{
+			brand: 'pny',
+			model: 'xlr8 epic x',
+			series: '3070',
+			url:
+				'https://www.caseking.de/pny-geforce-rtx-3070-xlr8-gaming-revel-epic-x-rgb-8192-mb-gddr6-gcpn-078.html'
+		},
+		{
+			brand: 'pny',
+			model: 'dual fan',
+			series: '3070',
+			url:
+				'https://www.caseking.de/pny-geforce-rtx-3070-dual-fan-8192-mb-gddr6-gcpn-077.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
