@@ -29,7 +29,7 @@ export const Newegg: Store = {
 			{
 				container: '.product-flag',
 				text: ['out of stock ']
-			},
+			}
 		]
 	},
 	links: [

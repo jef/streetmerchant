@@ -25,7 +25,7 @@ export const NeweggCa: Store = {
 			{
 				container: '.product-flag',
 				text: ['out of stock ']
-			},
+			}
 		]
 	},
 	links: [
