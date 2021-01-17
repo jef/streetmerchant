@@ -42,13 +42,6 @@ export const HardwarePlanet: Store = {
 		},
 		{
 			brand: 'amd',
-			model: '5900x',
-			series: 'ryzen5800',
-			url:
-				'https://www.hardware-planet.it/cpu-socket-am4/74772-vendita-cpu-socket-am4-cpu-am4-ryzen-7-5800x-4700ghz-wof-box-offerta-del-mese-100-100000063wof-730143312714.html'
-		},
-		{
-			brand: 'amd',
 			model: '5950x',
 			series: 'ryzen5950',
 			url:
