@@ -4,5 +4,5 @@
  * @return string in format &=1111111111111 (time since epoch in ms)
  */
 export function timestampUrlParameter(): string {
-	return `&_=${Date.now()}`;
+  return `&_=${Date.now()}`;
 }

@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-and-lint:
+  build-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,11 +18,12 @@ jobs:
           restore-keys: ${{ runner.os }}-node-
       - name: Add problem matcher
         run: echo "::add-matcher::.github/xo-problem-matcher.json"
-      - name: Pull dependencies
-        run: |
-          npm ci
-          npm run build
-          npm run lint
+      - name: Install dependencies
+        run: npm ci
+      - name: Compile TypeScript
+        run: npm run compile
+      - name: Run linter
+        run: npm run lint
   build-docker:
     runs-on: ubuntu-latest
     steps:

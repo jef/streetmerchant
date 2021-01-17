@@ -1,4 +1,4 @@
-FROM node:14.15.0-alpine3.12 AS builder
+FROM node:14.15.4-alpine3.12 AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/jef/streetmerchant"
 
@@ -12,20 +12,20 @@ COPY tsconfig.json tsconfig.json
 RUN npm ci
 
 COPY src/ src/
-RUN npm run build
+RUN npm run compile
 RUN npm prune --production
 
-FROM node:14.15.0-alpine3.12
+FROM node:14.15.4-alpine3.12
 
 RUN apk add --no-cache chromium
 
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
-	DOCKER=true
+  DOCKER=true
 
 RUN addgroup -S appuser && adduser -S -g appuser appuser \
-	&& mkdir -p /home/appuser/Downloads /app \
-	&& chown -R appuser:appuser /home/appuser \
-	&& chown -R appuser:appuser /app
+  && mkdir -p /home/appuser/Downloads /app \
+  && chown -R appuser:appuser /home/appuser \
+  && chown -R appuser:appuser /app
 
 USER appuser
 

@@ -64,7 +64,7 @@ To customize streetmerchant, make a copy of `dotenv-example` as `dotenv` and mak
 
 The command `npm run start:dev` can be used instead of `npm run start` to automatically restart the project when filesystem changes are detected in the `src/` folder or `dotenv` file.
 
-Use `npm run lint` to see any linting uses and `npm run lint:fix` to automatically fix the issues it can.
+Use `npm run lint` to see any linting uses and `npm run fix` to automatically fix the issues it can.
 
 ### Developing in Docker
 

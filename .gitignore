@@ -2,8 +2,8 @@
 .vs/
 .vscode/
 build/
+coverage/
 node_modules/
-src/config/*.yaml
 
 .env
 dotenv

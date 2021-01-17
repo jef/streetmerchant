@@ -1,18 +1,15 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "target": "es2019",
-    "module": "commonjs",
-    "lib": ["dom", "es2019", "es2020.bigint", "es2020.string", "es2020.symbol.wellknown"],
-    "allowJs": true,
-    "outDir": "build",
-    "rootDir": "src",
-    "strict": true,
-    "noImplicitAny": true,
     "esModuleInterop": true,
+    "outDir": "build",
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true
+    "rootDir": ".",
+    // todo: remove
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
 }
