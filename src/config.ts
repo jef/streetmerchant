@@ -3,7 +3,17 @@ import {banner} from './banner';
 import dotenv from 'dotenv';
 import path from 'path';
 
-if (existsSync(path.resolve(__dirname, '../dotenv'))) {
+if (process.env.npm_config_conf) {
+	if (
+		existsSync(path.resolve(__dirname, '../' + process.env.npm_config_conf))
+	) {
+		dotenv.config({
+			path: path.resolve(__dirname, '../' + process.env.npm_config_conf)
+		});
+	} else {
+		dotenv.config({path: path.resolve(__dirname, '../.env')});
+	}
+} else if (existsSync(path.resolve(__dirname, '../dotenv'))) {
 	dotenv.config({path: path.resolve(__dirname, '../dotenv')});
 } else {
 	dotenv.config({path: path.resolve(__dirname, '../.env')});
