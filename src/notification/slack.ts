@@ -3,13 +3,11 @@ import {Print, logger} from '../logger';
 import {WebClient} from '@slack/web-api';
 import {config} from '../config';
 
-const slack = config.notifications.slack;
-const channel = slack.channel.replace('#', '');
-const token = slack.token;
+const {channel, token} = config.notifications.slack;
 const web = new WebClient(token);
 
 export function sendSlackMessage(link: Link, store: Store) {
-	if (slack.channel && slack.token) {
+	if (channel && token) {
 		logger.debug('↗ sending slack message');
 
 		(async () => {
@@ -17,7 +15,7 @@ export function sendSlackMessage(link: Link, store: Store) {
 
 			try {
 				const result = await web.chat.postMessage({
-					channel,
+					channel: channel.replace('#', ''),
 					text: `${Print.inStock(link, store)}\n${givenUrl}`
 				});
 

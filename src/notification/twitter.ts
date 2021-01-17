@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import Twitter from 'twitter';
 import {config} from '../config';
 
-const twitter = config.notifications.twitter;
+const {twitter} = config.notifications;
 
 const client = new Twitter({
 	access_token_key: twitter.accessTokenKey,

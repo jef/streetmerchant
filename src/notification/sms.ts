@@ -4,7 +4,7 @@ import Mail from 'nodemailer/lib/mailer';
 import {config} from '../config';
 import {transporter} from './email';
 
-const [email, phone] = [config.notifications.email, config.notifications.phone];
+const {email, phone} = config.notifications;
 
 if (phone.number.length > 0 && (!email.username || !email.password)) {
 	logger.warn(

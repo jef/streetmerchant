@@ -3,18 +3,19 @@ import {config} from '../config';
 import {v3 as hueAPI} from 'node-hue-api';
 import {logger} from '../logger';
 
-const hue = config.notifications.philips_hue;
-const apiKey = hue.apiKey;
-const bridgeIp = hue.bridgeIp;
-const lightIds = hue.lightIds;
-const lightColor = hue.lightColor;
-const lightPattern = hue.lightPattern;
-const LightState = hueAPI.lightStates.LightState;
-const clientId = hue.clientId;
-const clientSecret = hue.clientSecret;
-const accessToken = hue.accessToken;
-const refreshToken = hue.refreshToken;
-const remoteApiUsername = hue.remoteApiUsername;
+const {LightState} = hueAPI.lightStates;
+const {
+	apiKey,
+	bridgeIp,
+	lightIds,
+	lightColor,
+	lightPattern,
+	clientId,
+	clientSecret,
+	accessToken,
+	refreshToken,
+	remoteApiUsername
+} = config.notifications.philips_hue;
 
 // Default Light State
 const lightState = new LightState()
@@ -81,7 +82,7 @@ const adjustLightsWithAPI = (hueBridge: Api) => {
 
 export function adjustPhilipsHueLights() {
 	// Check if the required variables have been set
-	if (hue.apiKey && hue.bridgeIp) {
+	if (apiKey && bridgeIp) {
 		logger.info('↗ adjusting Philips Hue lights over LAN');
 		(async () => {
 			logger.debug(
@@ -100,7 +101,7 @@ export function adjustPhilipsHueLights() {
 					}
 				);
 		})();
-	} else if (hue.apiKey && hue.clientId && hue.clientSecret) {
+	} else if (apiKey && clientId && clientSecret) {
 		logger.info('↗ adjusting Philips Hue lights over cloud');
 		(async () => {
 			logger.debug(
@@ -110,7 +111,7 @@ export function adjustPhilipsHueLights() {
 				clientId,
 				clientSecret
 			);
-			if (hue.accessToken && hue.refreshToken) {
+			if (accessToken && refreshToken) {
 				remoteBootstrap
 					.connectWithTokens(
 						accessToken,

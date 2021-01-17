@@ -120,7 +120,7 @@ function handleAPI(
 			sendConfig(response);
 			return;
 		case 'stores':
-			sendJSON(response, Array.from(storeList.keys()));
+			sendJSON(response, [...storeList.keys()]);
 			return;
 		case 'brands':
 			sendJSON(response, getAllBrands());

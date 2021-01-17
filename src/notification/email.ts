@@ -4,7 +4,7 @@ import Mail from 'nodemailer/lib/mailer';
 import {config} from '../config';
 import nodemailer from 'nodemailer';
 
-const email = config.notifications.email;
+const {email} = config.notifications;
 
 const transportOptions: any = {};
 

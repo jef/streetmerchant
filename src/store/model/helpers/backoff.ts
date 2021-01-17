@@ -21,7 +21,7 @@ export async function processBackoffDelay(
 	 * the page renders fine and its content is accessible.
 	 */
 
-	let backoffStatusCodes = store.backoffStatusCodes;
+	let {backoffStatusCodes} = store;
 
 	if (!backoffStatusCodes) {
 		backoffStatusCodes = [403];

@@ -5,7 +5,7 @@ import {existsSync, promises, readFileSync} from 'fs';
 import {ChatClient} from 'twitch-chat-client';
 import {config} from '../config';
 
-const twitch = config.notifications.twitch;
+const {twitch} = config.notifications;
 
 const messages: string[] = [];
 let alreadySaying = false;

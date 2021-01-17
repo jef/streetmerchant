@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import {TelegramClient} from 'messaging-api-telegram';
 import {config} from '../config';
 
-const telegram = config.notifications.telegram;
+const {telegram} = config.notifications;
 
 const client = new TelegramClient({
 	accessToken: telegram.accessToken

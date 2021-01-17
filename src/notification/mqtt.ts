@@ -3,7 +3,7 @@ import MqttClient, {IClientOptions, IClientPublishOptions} from 'mqtt';
 import {Print, logger} from '../logger';
 import {config} from '../config';
 
-const mqtt = config.notifications.mqtt;
+const {mqtt} = config.notifications;
 let client: MqttClient.Client;
 
 if (mqtt.broker) {

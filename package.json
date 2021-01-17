@@ -1,6 +1,6 @@
 {
   "name": "streetmerchant",
-  "description": "🔮 For all your Nvidia needs",
+  "description": "The world's easiest, most powerful stock checker",
   "main": "src/index.ts",
   "scripts": {
     "all": "npm run build && npm run lint",

@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import Push, {PushoverMessage} from 'pushover-notifications';
 import {config} from '../config';
 
-const pushover = config.notifications.pushover;
+const {pushover} = config.notifications;
 
 export function sendPushoverNotification(link: Link, store: Store) {
 	if (pushover.token && pushover.username) {

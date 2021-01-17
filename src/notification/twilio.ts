@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import {Twilio} from 'twilio';
 import {config} from '../config';
 
-const twilio = config.notifications.twilio;
+const {twilio} = config.notifications;
 let client: Twilio;
 
 if (twilio.accountSid && twilio.authToken) {
