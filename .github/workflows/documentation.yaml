@@ -1,19 +1,20 @@
-name: documentation
+name: Documentation
 on:
   push:
     branches:
       - main
 jobs:
-  deploy:
+  build-deploy:
+    name: Build and publish documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Setup Python runtime
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - name: Install Python dependencies
+      - name: Install Python packages
         run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-macros-plugin
-      - name: Deploy documentation
+      - name: Build and publish documentation
         run: mkdocs gh-deploy --force
