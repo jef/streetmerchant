@@ -234,6 +234,10 @@ async function lookup(browser: Browser, store: Store) {
 			} catch {}
 		});
 
+		if (store.captchaDeterrent) {
+			await runCaptchaDeterrent(browser, store, page);
+		}
+
 		let statusCode = 0;
 
 		try {
@@ -475,6 +479,75 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 	}
 
 	return true;
+}
+
+async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
+	const successStatusCodes = store.successStatusCodes ?? [[0, 399]];
+	let statusCode = 0;
+	let deterrentLinks: string[] = [];
+
+	logger.debug(`[${store.name}] Navigating to random anti-captcha page...`);
+
+	if (store.captchaDeterrent?.hardLinks?.length) {
+		deterrentLinks = deterrentLinks.concat(
+			store.captchaDeterrent.hardLinks
+		);
+	}
+
+	if (store.captchaDeterrent?.searchUrl) {
+		if (store.captchaDeterrent.searchTerms) {
+			store.captchaDeterrent.searchTerms.forEach((element) =>
+				deterrentLinks.push(
+					store.captchaDeterrent?.searchUrl
+						? store.captchaDeterrent.searchUrl.replace(
+								'%%s',
+								element
+						  )
+						: ''
+				)
+			);
+		}
+	}
+
+	if (deterrentLinks.length > 0) {
+		const link: Link = {
+			brand: 'captcha-deterrent',
+			model: 'captcha-deterrent',
+			series: 'captcha-deterrent',
+			url:
+				deterrentLinks[
+					Math.floor(Math.random() * deterrentLinks.length)
+				]
+		};
+		logger.debug(`Selected captcha-deterrent link: ${link.url}`);
+
+		try {
+			const givenWaitFor = store.waitUntil
+				? store.waitUntil
+				: 'networkidle0';
+			const response: Response | null = await page.goto(link.url, {
+				waitUntil: givenWaitFor
+			});
+			statusCode = await handleResponse(
+				browser,
+				store,
+				page,
+				link,
+				response
+			);
+			setTimeout(() => {
+				// Do nothing
+			}, 3000);
+		} catch (error: unknown) {
+			logger.error(error);
+		}
+
+		if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+			logger.warn(
+				`✖ [${store.name}] - Failed to navigate to anti-captcha target: ${link.url}`
+			);
+		}
+	}
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
