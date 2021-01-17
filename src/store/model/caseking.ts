@@ -390,6 +390,27 @@ export const Caseking: Store = {
 				'https://www.caseking.de/pny-geforce-rtx-3070-dual-fan-8192-mb-gddr6-gcpn-077.html'
 		},
 		{
+			brand: 'zotac',
+			model: 'twin edge',
+			series: '3070',
+			url:
+				'https://www.caseking.de/zotac-gaming-geforce-rtx-3070-twin-edge-8192-mb-gddr6-gczt-164.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc',
+			series: '3070',
+			url:
+				'https://www.caseking.de/zotac-gaming-geforce-rtx-3070-twin-edge-oc-8192-mb-gddr6-gczt-168.html'
+		},
+		{
+			brand: 'zotac',
+			model: 'twin edge oc white',
+			series: '3070',
+			url:
+				'https://www.caseking.de/zotac-gaming-geforce-rtx-3070-twin-edge-oc-white-8192-mb-gddr6-gczt-171.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',

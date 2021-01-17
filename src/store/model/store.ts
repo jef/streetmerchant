@@ -12,7 +12,6 @@ export type Pricing = {
 
 export type Brand =
 	| 'test:brand'
-	| 'captcha-deterrent'
 	| 'amd'
 	| 'asrock'
 	| 'asus'
@@ -38,7 +37,6 @@ export type Brand =
 
 export type Series =
 	| 'test:series'
-	| 'captcha-deterrent'
 	| '3060ti'
 	| '3070'
 	| '3080'
@@ -59,7 +57,6 @@ export type Series =
 
 export type Model =
 	| 'test:model'
-	| 'captcha-deterrent'
 	| '5600x'
 	| '5800x'
 	| '5900x'
@@ -136,6 +133,7 @@ export type Model =
 	| 'tuf oc'
 	| 'tuf'
 	| 'turbo'
+	| 'twin edge oc white'
 	| 'twin edge oc'
 	| 'twin edge'
 	| 'twin x2 oc'
@@ -182,12 +180,6 @@ export type Labels = {
 	maxPrice?: Pricing;
 };
 
-export type CaptchaDeterrent = {
-	hardLinks?: string[];
-	searchUrl?: string;
-	searchTerms?: string[];
-};
-
 export type StatusCodeRangeArray = Array<number | [number, number]>;
 
 export type Store = {
@@ -222,6 +214,4 @@ export type Store = {
 
 	proxyList?: string[];
 	currentProxyIndex?: number;
-
-	captchaDeterrent?: CaptchaDeterrent;
 };
