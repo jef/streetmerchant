@@ -243,6 +243,41 @@ export const Caseking: Store = {
 				'https://www.caseking.de/asus-geforce-rtx-3070-rog-strix-8g-8192-mb-gddr6-gcas-415.html'
 		},
 		{
+			brand: 'evga',
+			model: 'xc3 black',
+			series: '3070',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3070-xc3-black-gaming-8192-mb-gddr6-gcev-424.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3070',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3070-xc3-ultra-gaming-8192-mb-gddr6-gcev-426.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3070',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3070-ftw3-ultra-8192-mb-gddr6-gcev-428.html'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3070',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3070-xc3-8192-mb-gddr6-gcev-425.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3',
+			series: '3070',
+			url:
+				'https://www.caseking.de/evga-geforce-rtx-3070-ftw3-8192-mb-gddr6-gcev-427.html'
+		},
+		{
 			brand: 'asus',
 			model: 'strix',
 			series: '3080',
