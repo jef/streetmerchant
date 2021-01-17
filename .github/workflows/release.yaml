@@ -4,7 +4,8 @@ on:
     branches:
       - main
 jobs:
-  publish:
+  build-tag-release:
+    name: Build, tag, and release Docker image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -28,6 +29,6 @@ jobs:
           -t "ghcr.io/${GITHUB_REPOSITORY}:latest" .
         env:
           TAG_NAME: ${{ steps.release.outputs.tag_name }}
-      - name: Publish Docker image
+      - name: Release Docker image
         if: ${{ steps.release.outputs.release_created }}
         run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
