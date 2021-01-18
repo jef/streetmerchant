@@ -84,6 +84,7 @@ Used with the `STORES` variable.
 | Coolblue | NL | `coolblue`|
 | Coolmod | ES | `coolmod`|
 | Corsair | US | `corsair`|
+| Corsair | UK | `corsair-uk`|
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
