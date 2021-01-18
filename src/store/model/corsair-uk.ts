@@ -3,11 +3,11 @@ import {Store} from './store';
 export const CorsairUK: Store = {
   currency: '£',
   labels: {
-    outOfStock: {
+    inStock: {
       container: '#addToCartForm',
       text: ['add to cart'],
     },
-    inStock: {
+    outOfStock: {
       container: '#addToCartForm',
       text: ['notify me when in stock'],
     },
