@@ -11,9 +11,9 @@ export const Vuugo: Store = {
       container: 'div.price:nth-child(12)',
     },
     outOfStock: {
-        container: '.description .red',
-        text: ['Back Order'],
-    }
+      container: '.description .red',
+      text: ['Back Order'],
+    },
   },
   links: [
     {
