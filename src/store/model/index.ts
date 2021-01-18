@@ -45,6 +45,7 @@ import {Computeruniverse} from './computeruniverse';
 import {Coolblue} from './coolblue';
 import {Coolmod} from './coolmod';
 import {Corsair} from './corsair';
+import {CorsairUK} from './corsair-uk';
 import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
@@ -179,6 +180,7 @@ export const storeList = new Map([
   [Coolblue.name, Coolblue],
   [Coolmod.name, Coolmod],
   [Corsair.name, Corsair],
+  [CorsairUK.name, CorsairUK],
   [Cpl.name, Cpl],
   [Currys.name, Currys],
   [Cyberport.name, Cyberport],
