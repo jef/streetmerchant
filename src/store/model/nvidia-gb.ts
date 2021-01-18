@@ -4,13 +4,13 @@ export const NvidiaGB: Store = {
   currency: '£',
   labels: {
     inStock: {
-        container: '.buy',
-        text: ['add to cart'],
+      container: '.buy',
+      text: ['add to cart'],
     },
     outOfStock: {
       container: '.buy',
       text: ['out of stock'],
-    }
+    },
   },
   links: [
     {
@@ -47,7 +47,7 @@ export const NvidiaGB: Store = {
       series: '3090',
       url:
         'https://www.nvidia.com/en-gb/shop/geforce/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203090&manufacturer=NVIDIA',
-    }
+    },
   ],
   name: 'nvidia-gb',
 };

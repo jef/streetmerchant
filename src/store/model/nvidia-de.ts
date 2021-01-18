@@ -1,16 +1,16 @@
 import {Store} from './store';
 
 export const NvidiaDE: Store = {
-  currency: '£',
+  currency: '€',
   labels: {
     inStock: {
-        container: '.buy',
-        text: ['In den Einkaufswagen'],
+      container: '.buy',
+      text: ['In den Einkaufswagen'],
     },
     outOfStock: {
       container: '.buy',
       text: ['DERZEIT NICHT VERFÜGBAR'],
-    }
+    },
   },
   links: [
     {
@@ -47,7 +47,7 @@ export const NvidiaDE: Store = {
       series: '3090',
       url:
         'https://www.nvidia.com/de-de/shop/geforce/gpu/?page=1&limit=9&locale=de-de&category=GPU&gpu=RTX%203090&manufacturer=NVIDIA',
-    }
+    },
   ],
   name: 'nvidia-de',
 };
