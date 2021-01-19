@@ -10,6 +10,10 @@ export const Vuugo: Store = {
     maxPrice: {
       container: 'div.price:nth-child(12)',
     },
+    outOfStock: {
+      container: '.description .red',
+      text: ['Back Order'],
+    },
   },
   links: [
     {
