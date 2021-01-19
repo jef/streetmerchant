@@ -46,6 +46,13 @@ export const Notebooksbilliger: Store = {
         'https://www.notebooksbilliger.de/gainward+geforce+rtx+2070+super+phoenix+v1+grafikkarte+656238',
     },
     {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3060ti',
+      url:
+        'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3060+ti+founders+edition+695677',
+    },
+    {
       brand: 'inno3d',
       model: 'ichill x3',
       series: '3070',
