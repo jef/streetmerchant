@@ -618,6 +618,90 @@ export const NeweggCa: Store = {
         'https://www.newegg.ca/zotac-geforce-rtx-3060-ti-zt-a30610h-10m/p/N82E16814500507',
     },
     {
+      brand: 'asus',
+      model: 'dual',
+      series: '3060ti',
+      url:
+        'https://www.newegg.ca/asus-geforce-rtx-3060-ti-dual-rtx3060ti-8g/p/N82E16814126480',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim',
+      series: '3070',
+      url:
+        'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-suprim-8g/p/N82E16814137623',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus xtreme waterforce',
+      series: '3080',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorusx-w-10gd/p/N82E16814932372',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus xtreme waterforce wb',
+      series: '3080',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorusx-wb-10gd/p/N82E16814932371',
+    },
+    {
+      brand: 'asus',
+      model: 'strix white',
+      series: '3080',
+      url:
+        'https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-white/p/N82E16814126483',
+    },
+    {
+      brand: 'asus',
+      model: 'ekwb',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/asus-geforce-rtx-3090-rtx3090-24g-ek/p/N82E16814126485',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus xtreme waterforce',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090aorusx-w-24gd/p/N82E16814932387',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus xtreme waterforce wb',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090aorusx-wb-24gd/p/N82E16814932386',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus xtreme',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090aorus-x-24gd/p/N82E16814932340',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'vision oc',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090vision-oc-24gd/p/N82E16814932365',
+    },
+    {
+      brand: 'asus',
+      model: 'strix white',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-white/p/N82E16814126482',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'eagle',
+      series: '3090',
+      url:
+        'https://www.newegg.ca/gigabyte-geforce-rtx-3090-gv-n3090eagle-24gd/p/N82E16814932366',
+    },
+    {
       brand: 'amd',
       itemNumber: '19-113-663',
       model: '5950x',
