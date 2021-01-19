@@ -1041,6 +1041,177 @@ export const NeweggSg: Store = {
         'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3060-ti-ko-rtx3060ti-o8g-gaming/p/N82E16814126474',
     },
     {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126480',
+      model: 'dual',
+      series: '3060ti',
+      url:
+        'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3060-ti-dual-rtx3060ti-8g/p/N82E16814126480',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137620',
+      model: 'suprim x',
+      series: '3070',
+      url:
+        'https://www.newegg.com/global/sg-en/msi-geforce-rtx-3070-rtx-3070-suprim-x-8g/p/N82E16814137620',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137623',
+      model: 'suprim',
+      series: '3070',
+      url:
+        'https://www.newegg.com/global/sg-en/msi-geforce-rtx-3070-rtx-3070-suprim-8g/p/N82E16814137623',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932345',
+      model: 'aorus xtreme',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3080-gv-n3080aorus-x-10gd/p/N82E16814932345',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932372',
+      model: 'aorus xtreme waterforce',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3080-gv-n3080aorusx-w-10gd/p/N82E16814932372',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932371',
+      model: 'aorus xtreme waterforce wb',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3080-gv-n3080aorusx-wb-10gd/p/N82E16814932371',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126483',
+      model: 'strix white',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-white/p/N82E16814126483',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137609',
+      model: 'suprim x',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/msi-geforce-rtx-3080-rtx3080-suprim-x-10g/p/N82E16814137609',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932367',
+      model: 'eagle',
+      series: '3080',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3080-gv-n3080eagle-10gd/p/N82E16814932367',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126485',
+      model: 'ekwb',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3090-rtx3090-24g-ek/p/N82E16814126485',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932341',
+      model: 'aorus master',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090aorus-m-24gd/p/N82E16814932341',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932387',
+      model: 'aorus xtreme waterforce',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090aorusx-w-24gd/p/N82E16814932387',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126454',
+      model: 'tuf oc',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932386',
+      model: 'aorus xtreme waterforce wb',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090aorusx-wb-24gd/p/N82E16814932386',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932340',
+      model: 'aorus xtreme',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090aorus-x-24gd/p/N82E16814932340',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932365',
+      model: 'vision oc',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090vision-oc-24gd/p/N82E16814932365',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126482',
+      model: 'strix white',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-white/p/N82E16814126482',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137610',
+      model: 'suprim x',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/msi-geforce-rtx-3090-rtx3090-suprim-x-24g/p/N82E16814137610',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932366',
+      model: 'eagle',
+      series: '3090',
+      url:
+        'https://www.newegg.com/global/sg-en/gigabyte-geforce-rtx-3090-gv-n3090eagle-24gd/p/N82E16814932366',
+    },
+    {
       brand: 'powercolor',
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131767',
