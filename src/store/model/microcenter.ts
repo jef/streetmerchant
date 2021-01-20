@@ -218,7 +218,7 @@ export const MicroCenter: Store = {
   currency: '$',
   labels: {
     inStock: {
-      container: '#cart-options',
+      container: '#pnlInventory',
       text: ['in stock'],
     },
     maxPrice: {
