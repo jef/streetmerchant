@@ -237,7 +237,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
     Use the Nvidia Store to check stock for Founders Edition cards only (3060 Ti/3070/3080/3090). For USA use `bestbuy` instead.
 
 ???+ info
-    Use the `store` variable for your chosen country. For example, to check for a FE card in Belgium you would use the `nvidia-fr` store.
+    Use the `STORE` variable for your chosen country. For example, to check for a FE card in Belgium you would use the `nvidia-fr` store.
 
 | Country | Store | Retailer
 |:---:|:---:|:---:|
