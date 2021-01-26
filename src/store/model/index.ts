@@ -89,8 +89,10 @@ import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
-import {Nvidia} from './nvidia';
-import {NvidiaApi} from './nvidia-api';
+import {NvidiaDE} from './nvidia-de';
+import {NvidiaES} from './nvidia-es';
+import {NvidiaFR} from './nvidia-fr';
+import {NvidiaGB} from './nvidia-gb';
 import {OfficeDepot} from './officedepot';
 import {Ollo} from './ollo';
 import {Otto} from './otto';
@@ -224,8 +226,10 @@ export const storeList = new Map([
   [NeweggSg.name, NeweggSg],
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
-  [Nvidia.name, Nvidia],
-  [NvidiaApi.name, NvidiaApi],
+  [NvidiaDE.name, NvidiaDE],
+  [NvidiaES.name, NvidiaES],
+  [NvidiaFR.name, NvidiaFR],
+  [NvidiaGB.name, NvidiaGB],
   [OfficeDepot.name, OfficeDepot],
   [Ollo.name, Ollo],
   [Otto.name, Otto],
@@ -326,11 +330,6 @@ function printConfig() {
 
 function warnIfStoreDeprecated(store: Store) {
   switch (store.name) {
-    case 'nvidia':
-    case 'nvidia-api':
-      if (config.store.country === 'usa')
-        logger.warn(`${store.name} is deprecated in favor of bestbuy`);
-      break;
     case 'evga':
       logger.warn(
         `${store.name} is deprecated since they only support queuing`

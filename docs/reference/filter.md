@@ -2,7 +2,6 @@
 
 | Environment variable | Description |
 |:---:|---|
-| `COUNTRY` | [Supported country](#supported-countries) you want to be scraped | Only used with `nvidia-api`, default: `usa` |
 | `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
@@ -22,15 +21,13 @@
 | `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies PS5 digital edition |
 | `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search. Comma separated, e.g.: `marietta,duluth`, default: `web` |
-| `NVIDIA_ADD_TO_CART_ATTEMPTS` | The maximum number of times the `nvidia-api` add to cart feature will be attempted before failing. Default: `10` |
-| `NVIDIA_SESSION_TTL` | The time in milliseconds to keep the cart active while using `nvidia-api`. Default: `60000` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands. Comma separated, e.g.: `evga,zotac` |
 | `SHOW_ONLY_MODELS` | Filter to show specified models. Comma separated, can include series. E.g.: `founders edition:3090,rog strix` |
 | `SHOW_ONLY_SERIES` | Filter to show specified series. Comma separated, e.g.: `3080,ryzen5900` |
 | `STORES` | [Supported stores](#supported-stores) you want to be scraped. Default: `amazon,bestbuy`. Comma separated, can include `PAGE_SLEEP_MIN` and `PAGE_SLEEP_MAX` values. E.g.: `amazon:10000:30000,bestbuy,newegg:50000:80000`. |
 
 ???+ note
-    For `MAX_PRICE_SERIES_*` variables: enter a price (enter whole dollar amounts only, avoid use of: dollar symbols, commas, and periods). E.g.: `1234`. Merchandise found above this price will be skipped.
+    For `MAX_PRICE_SERIES_*` variables: Use whole numbers only (no currency symbol is required). Avoid using any commas or decimal points. Example: `1234`. Merchandise found above this price will be skipped.
 
 ## Supported stores
 
@@ -128,8 +125,7 @@ Used with the `STORES` variable.
 | Newegg | SG | `newegg-sg`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
-| Nvidia | US | `nvidia`|
-| Nvidia API | | `nvidia-api`|
+| Nvidia | EU/UK/USA | [See below](#Nvidia-Store-Reference) |
 | Office Depot | US | `officedepot`|
 | Ollo | IT | `ollo`|
 | Otto | DE | `otto`|
@@ -235,32 +231,21 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Xbox Series S | `xboxss` |
 | Xbox Series X | `xboxsx` |
 
-## Supported countries
+## Nvidia Store Reference
 
-Used with the `COUNTRY` variable.
+???+ note
+    For Founders Edition cards. Use the `store` variable for your chosen country.
+    For example, to buy a FE card in Belgium you would use the `nvidia-fr` store.
 
-???+ attention
-    Used _only_ with `nvidia` and `nvidia-api`.
-
-| Country | 3080 FE | 3090 FE | Test Card | Notes |
-|:---:|:---:|:---:|:---:|:---:|
-| `austria` | `✔` | `✔` | `✔` | |
-| `belgium` | `✔` | `✔` | `✔` | |
-| `canada` | `✔` | `✔` | `✔` | |
-| `czechia` | `✔` | `✔` | `✔` | |
-| `denmark` | `✔` | | `✔` | Missing RTX 3090 |
-| `finland` | `✔` | | `✔` | Missing RTX 3090 |
-| `france` | `✔` | `✔` | `✔` | |
-| `germany` | `✔` | `✔` | `✔` | |
-| `great_britain` | `✔` | `✔` | `✔` | |
-| `ireland` | `✔` | `✔` | `✔` | |
-| `italy` | `✔` | `✔` | `✔` | |
-| `luxembourg` | `✔` | `✔` | `✔` | |
-| `netherlands` | `✔` | `✔` | `✔` | |
-| `norway` | `✔` | `✔` | `✔` | |
-| `poland` | `✔` | `✔` | `✔` | |
-| `portugal` | `✔` | | | RTX 3080 only |
-| `spain` | `✔` | `✔` | `✔` | |
-| `sweden` | `✔` | `✔` | `✔` | |
-| `usa` | `✔` | `✔` | `✔` | |
+| Country | 3060 Ti | 3070 | 3080 | 3090 | Store | Retailer
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Austria | `✔` | `✔` | `✔` | `✔` | `nvidia-de`| NBB |
+| Belgium | `✔` | `✔` | `✔` | `✔` | `nvidia-fr` | LDLC |
+| France | `✔` | `✔` | `✔` | `✔`  | `nvidia-fr` | LDLC |
+| Germany | `✔` | `✔` | `✔` | `✔`  | `nvidia-de` | NBB |
+| Ireland | `✔` | `✔` | `✔` | `✔`  | `nvidia-gb` | Scan |
+| Luxembourg | `✔` | `✔` | `✔` | `✔`  | `nvidia-fr` | LDLC |
+| Spain | `✔` | `✔` | `✔` | `✔`  | `nvidia-es` | LDLC |
+| United Kingdom | `✔` | `✔` | `✔` | `✔`  | `nvidia-gb` | Scan |
+| USA | `✔` | `✔` | `✔` | `✔`  | `bestbuy` | BestBuy |
 
