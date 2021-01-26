@@ -125,7 +125,7 @@ Used with the `STORES` variable.
 | Newegg | SG | `newegg-sg`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
-| Nvidia | EU/UK/USA | [See below](#Nvidia-Store-Reference) |
+| Nvidia | EU/UK | [See below](#nvidia-store-reference) |
 | Office Depot | US | `officedepot`|
 | Ollo | IT | `ollo`|
 | Otto | DE | `otto`|
@@ -234,18 +234,18 @@ Used with the `SHOW_ONLY_SERIES` variable.
 ## Nvidia Store Reference
 
 ???+ note
-    For Founders Edition cards. Use the `store` variable for your chosen country.
-    For example, to buy a FE card in Belgium you would use the `nvidia-fr` store.
+    Use the Nvidia Store to check stock for Founders Edition cards only (3060 Ti/3070/3080/3090). For USA use `bestbuy` instead.
 
-| Country | 3060 Ti | 3070 | 3080 | 3090 | Store | Retailer
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Austria | `✔` | `✔` | `✔` | `✔` | `nvidia-de`| NBB |
-| Belgium | `✔` | `✔` | `✔` | `✔` | `nvidia-fr` | LDLC |
-| France | `✔` | `✔` | `✔` | `✔`  | `nvidia-fr` | LDLC |
-| Germany | `✔` | `✔` | `✔` | `✔`  | `nvidia-de` | NBB |
-| Ireland | `✔` | `✔` | `✔` | `✔`  | `nvidia-gb` | Scan |
-| Luxembourg | `✔` | `✔` | `✔` | `✔`  | `nvidia-fr` | LDLC |
-| Spain | `✔` | `✔` | `✔` | `✔`  | `nvidia-es` | LDLC |
-| United Kingdom | `✔` | `✔` | `✔` | `✔`  | `nvidia-gb` | Scan |
-| USA | `✔` | `✔` | `✔` | `✔`  | `bestbuy` | BestBuy |
+???+ info
+    Use the `store` variable for your chosen country. For example, to check for a FE card in Belgium you would use the `nvidia-fr` store.
 
+| Country | Store | Retailer
+|:---:|:---:|:---:|
+| Austria | `nvidia-de`| NBB |
+| Belgium | `nvidia-fr` | LDLC |
+| France | `nvidia-fr` | LDLC |
+| Germany | `nvidia-de` | NBB |
+| Ireland | `nvidia-gb` | Scan |
+| Luxembourg | `nvidia-fr` | LDLC |
+| Spain | `nvidia-es` | LDLC |
+| United Kingdom | `nvidia-gb` | Scan |
