@@ -5,7 +5,7 @@ export const NvidiaGB: Store = {
   labels: {
     inStock: {
       container: '.buy',
-      text: ['add to cart'],
+      text: ['add to cart', 'buy now'],
     },
     outOfStock: {
       container: '.buy',
