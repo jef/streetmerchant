@@ -424,6 +424,12 @@ export const Alternate: Store = {
       series: 'xboxss',
       url: 'https://www.alternate.de/html/product/1675117',
     },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.alternate.de/html/product/1651220',
+    },
   ],
   name: 'alternate',
 };
