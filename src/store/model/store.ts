@@ -43,6 +43,10 @@ export type Series =
   | '3070'
   | '3080'
   | '3090'
+  | '3060TITRY'
+  | '3070TRY'
+  | '3080TRY'
+  | '3090TRY'
   | 'darkhero'
   | 'rx6800'
   | 'rx6800xt'
@@ -102,6 +106,7 @@ export type Model =
   | 'gaming pro'
   | 'gaming trio'
   | 'gaming x trio'
+  | 'gaming x trio oc'
   | 'gaming x3'
   | 'ghost oc'
   | 'suprim x'
@@ -148,6 +153,8 @@ export type Model =
   | 'turbo'
   | 'twin edge oc white'
   | 'twin edge oc'
+  | 'twin fan'
+  | 'twin fan oc'
   | 'twin edge'
   | 'twin x2 oc'
   | 'twin x2'
@@ -220,7 +227,7 @@ export type Store = {
   };
   labels: Labels;
   name: string;
-  currency: '£' | '$' | '€' | 'R$' | 'kr.' | '';
+  currency: '£' | '$' | '€' | 'R$' | 'kr.' | '₺' | '';
   setupAction?: (browser: Browser) => void;
   /**
    * The range of status codes which considered successful, i.e. without error

@@ -134,7 +134,20 @@ import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
-
+// ----------- TURKEY STORES ----------- //
+import { Hepsiburada } from './hepsiburada';
+import { Hepsiburada2 } from './hepsiburada2';
+import { Itopya } from './itopya';
+import { Vatan } from './vatan';
+import { Sinerji } from './sinerji';
+import { Qp } from './qp';
+import { GameGraj } from './game-garaj';
+import { Incehesap } from './incehesap';
+import { Ebrar } from './ebrar';
+import { Nova } from './nova';
+import { Gaming } from './gaming';
+import { AmazonTr } from './amazon-tr';
+// -------- END OF TURKEY STORES -------- //
 export const storeList = new Map([
   [AComPC.name, AComPC],
   [Adorama.name, Adorama],
@@ -269,6 +282,20 @@ export const storeList = new Map([
   [Wipoid.name, Wipoid],
   [Xbox.name, Xbox],
   [Zotac.name, Zotac],
+  // ----------- TURKEY STORES ----------- //
+	[Hepsiburada.name, Hepsiburada],
+	[Hepsiburada2.name, Hepsiburada2],
+	[Sinerji.name, Sinerji],
+	[Qp.name, Qp],
+	[GameGraj.name, GameGraj],
+	[Incehesap.name, Incehesap],
+	[Ebrar.name, Ebrar],
+	[Nova.name, Nova],
+	[Gaming.name, Gaming],
+	[AmazonTr.name, AmazonTr],
+	[Itopya.name, Itopya],
+  [Vatan.name, Vatan],
+  // -------- END OF TURKEY STORES -------- //
 ]);
 
 const brands = new Set();

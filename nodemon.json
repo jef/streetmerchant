@@ -3,6 +3,7 @@
   "ext": "ts",
   "watch": [
     "src/",
-    "dotenv"
+    "dotenv",
+    ".env"
   ]
 }
