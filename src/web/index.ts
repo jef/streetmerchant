@@ -11,7 +11,7 @@ import {
 import {isAbsolute, join, normalize, relative} from 'path';
 import {logger} from '../logger';
 
-const approot = join(__dirname, '../../');
+const approot = join(__dirname, '../../../');
 const webroot = join(approot, './web');
 
 const contentTypeMap: Record<string, string> = {
