@@ -58,7 +58,7 @@
     "redis": "^3.0.2",
     "top-user-agents": "^1.0.19",
     "twilio": "^3.55.1",
-    "twitch": "^4.4.5",
+    "twitch": "^4.4.6",
     "twitch-auth": "^4.4.5",
     "twitch-chat-client": "^4.4.5",
     "twitter": "^1.7.1",
