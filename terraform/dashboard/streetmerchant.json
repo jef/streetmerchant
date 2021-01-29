@@ -1,0 +1,32 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 18,
+      "height": 12,
+      "properties": {
+        "metrics": [
+          [ "ps5-streetmerchant", "stock-poll-store-smythstoys" ],
+          [ ".", "stock-poll-store-amazon-uk" ],
+          [ ".", "stock-poll-store-argos" ],
+          [ ".", "stock-poll-store-box" ],
+          [ ".", "stock-poll-store-currys" ],
+          [ ".", "stock-poll-store-game" ],
+          [ ".", "stock-poll-store-johnlewis" ],
+          [ ".", "stock-poll-store-shopto" ],
+          [ ".", "stock-poll-store-very" ]
+        ],
+        "view": "timeSeries",
+        "stacked": false,
+        "region": "eu-west-2",
+        "start": "-PT1H",
+        "end": "P0D",
+        "stat": "Sum",
+        "period": 300,
+        "title": "out of stock"
+      }
+    }
+  ]
+}
