@@ -252,11 +252,19 @@ async function lookup(browser: Browser, store: Store) {
     try {
       statusCode = await lookupCard(browser, store, page, link);
     } catch (error: unknown) {
-      logger.error(
-        `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
-          (error as Error).message
-        }`
-      );
+      if (store.currentProxyIndex && store.proxyList) {
+        logger.error(
+          `✖ [${store.currentProxyIndex}/${store.proxyList.length}] [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+            (error as Error).message
+          }`
+        );
+      } else {
+        logger.error(
+          `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+            (error as Error).message
+          }`
+        );
+      }
       const client = await page.target().createCDPSession();
       await client.send('Network.clearBrowserCookies');
     }
