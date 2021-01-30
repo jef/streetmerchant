@@ -241,9 +241,9 @@ function buildSetupString(
 
 function buildProductString(link: Link, store: Store, color?: boolean): string {
   if (color) {
-    if (store.currentProxyIndex && store.proxyList) {
+    if (store.currentProxyIndex !== undefined && store.proxyList) {
       return (
-        chalk.gray(`[${store.currentProxyIndex}/${store.proxyList.length}]`) +
+        chalk.gray(`[${store.currentProxyIndex+1}/${store.proxyList.length}]`) +
         chalk.cyan(` [${store.name}]`) +
         chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
       );
@@ -255,8 +255,8 @@ function buildProductString(link: Link, store: Store, color?: boolean): string {
     }
   }
 
-  if (store.currentProxyIndex && store.proxyList) {
-    return `[${store.currentProxyIndex}/${store.proxyList.length}] [${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+  if (store.currentProxyIndex !== undefined && store.proxyList) {
+    return `[${store.currentProxyIndex+1}/${store.proxyList.length}] [${store.name}] [${link.brand} (${link.series})] ${link.model}`;
   } else {
     return `[${store.name}] [${link.brand} (${link.series})] ${link.model}`;
   }

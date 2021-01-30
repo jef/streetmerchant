@@ -37,15 +37,16 @@ function nextProxy(store: Store) {
 
   if (store.currentProxyIndex === undefined) {
     store.currentProxyIndex = 0;
+  } else {
+    store.currentProxyIndex++;
   }
 
-  store.currentProxyIndex++;
   if (store.currentProxyIndex >= store.proxyList.length) {
     store.currentProxyIndex = 0;
   }
 
   logger.debug(
-    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`
+    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length} (${store.proxyList[store.currentProxyIndex]})`
   );
 
   return store.proxyList[store.currentProxyIndex];
@@ -252,9 +253,9 @@ async function lookup(browser: Browser, store: Store) {
     try {
       statusCode = await lookupCard(browser, store, page, link);
     } catch (error: unknown) {
-      if (store.currentProxyIndex && store.proxyList) {
+      if (store.currentProxyIndex !== undefined && store.proxyList) {
         logger.error(
-          `✖ [${store.currentProxyIndex}/${store.proxyList.length}] [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+          `✖ [${store.currentProxyIndex+1}/${store.proxyList.length}] [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
             (error as Error).message
           }`
         );
