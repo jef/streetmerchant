@@ -242,8 +242,9 @@ function buildSetupString(
 function buildProductString(link: Link, store: Store, color?: boolean): string {
   if (color) {
     if (store.currentProxyIndex !== undefined && store.proxyList) {
+      const proxy = `${store.currentProxyIndex + 1}/${store.proxyList.length}`;
       return (
-        chalk.gray(`[${store.currentProxyIndex+1}/${store.proxyList.length}]`) +
+        chalk.gray(`[${proxy}]`) +
         chalk.cyan(` [${store.name}]`) +
         chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
       );
@@ -251,12 +252,13 @@ function buildProductString(link: Link, store: Store, color?: boolean): string {
       return (
         chalk.cyan(`[${store.name}]`) +
         chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
-      );      
+      );
     }
   }
 
   if (store.currentProxyIndex !== undefined && store.proxyList) {
-    return `[${store.currentProxyIndex+1}/${store.proxyList.length}] [${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+    const proxy = `${store.currentProxyIndex + 1}/${store.proxyList.length}`;
+    return `[${proxy}] [${store.name}] [${link.brand} (${link.series})] ${link.model}`;
   } else {
     return `[${store.name}] [${link.brand} (${link.series})] ${link.model}`;
   }
