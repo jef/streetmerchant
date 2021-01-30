@@ -241,11 +241,23 @@ function buildSetupString(
 
 function buildProductString(link: Link, store: Store, color?: boolean): string {
   if (color) {
-    return (
-      chalk.cyan(`[${store.name}]`) +
-      chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
-    );
+    if (store.currentProxyIndex && store.proxyList) {
+      return (
+        chalk.gray(`[${store.currentProxyIndex}/${store.proxyList.length}]`) +
+        chalk.cyan(` [${store.name}]`) +
+        chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
+      );
+    } else {
+      return (
+        chalk.cyan(`[${store.name}]`) +
+        chalk.grey(` [${link.brand} (${link.series})] ${link.model}`)
+      );      
+    }
   }
 
-  return `[${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+  if (store.currentProxyIndex && store.proxyList) {
+    return `[${store.currentProxyIndex}/${store.proxyList.length}] [${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+  } else {
+    return `[${store.name}] [${link.brand} (${link.series})] ${link.model}`;
+  }
 }
