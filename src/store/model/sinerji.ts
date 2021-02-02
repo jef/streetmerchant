@@ -263,6 +263,12 @@ export const Sinerji: Store = {
 		},
 		// 3080, 3090
 		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3080TRY',
+			url : 'https://www.sinerji.gen.tr/gigabyte-geforce-rtx3080-xtreme-waterforce-wb-10g-10gb-gddr6x-320-bit-ekran-karti-p-38081'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming trio',
 			series: '3080TRY',

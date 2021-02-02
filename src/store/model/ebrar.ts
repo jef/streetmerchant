@@ -168,6 +168,12 @@ export const Ebrar: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080TRY',
+			url: 'https://www.ebrarbilgisayar.com/gigbayte-geforce-rtx-3080-gaming-oc-10g-10gb-320bit-gddr6x-pmu365528'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'eagle oc',
 			series: '3090TRY',
 			url: 'https://www.ebrarbilgisayar.com/gigabyte-geforce-rtx-3090-eagle-oc-24g-24gb-384bit-gddr6x-pmu365529'
@@ -177,6 +183,24 @@ export const Ebrar: Store = {
 			model: 'tuf',
 			series: '3080TRY',
 			url: 'https://www.ebrarbilgisayar.com/asus-tuf-gaming-geforce-rtx-3080-10gb-320bit-gddr6x-pmu365517'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3080TRY',
+			url: 'https://www.ebrarbilgisayar.com/asus-rog-strix-geforce-rtx-3080-oc-10gb-320bit-gddr6x-pmu365515'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3080TRY',
+			url: 'https://www.ebrarbilgisayar.com/asus-rog-strix-geforce-rtx-3080-10gb-320bit-gddr6x-pmu365516'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim',
+			series: '3080TRY',
+			url: 'https://www.ebrarbilgisayar.com/msi-geforce-rtx-3080-suprim-x-10g-10gb-320bit-gddr6x-pmu366530'
 		},
 		// 3090
 		{

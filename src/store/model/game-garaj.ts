@@ -96,10 +96,34 @@ export const GameGraj: Store = {
 			url: 'https://www.gamegaraj.com/urun/asus-tuf-rtx3090-o24g-gaming-24gb-384bit-gddr6x-2/'
 		},
 		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3080TRY',
+			url: 'https://www.gamegaraj.com/urun/asus-rog-strix-rtx3080-o10g-gaming-10gb-320bit-2/'
+		},
+		{
+			brand: 'palit',
+			model: 'gamerock oc',
+			series: '3080TRY',
+			url: 'https://www.gamegaraj.com/urun/palit-rtx3080-gamerock-10gb-320bit-gddr6x/'
+		},
+		{
+			brand: 'palit',
+			model: 'gamerock',
+			series: '3080TRY',
+			url: 'https://www.gamegaraj.com/urun/palit-rtx3080-gamerock-oc-10gb-320bit-gddr6x/'
+		},
+		{
 			brand: 'palit',
 			model: 'gaming pro',
 			series: '3080TRY',
 			url: 'https://www.gamegaraj.com/urun/palit-rtx3080-gamingpro-10gb-320bit-gddr6x-2/'
+		},
+		{
+			brand: 'palit',
+			model: 'gaming pro oc',
+			series: '3080TRY',
+			url: 'https://www.gamegaraj.com/urun/palit-rtx3080-gamingpro-oc-10gb-320bit-gddr6x/'
 		},
 		{
 			brand: 'palit',

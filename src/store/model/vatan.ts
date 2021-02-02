@@ -142,6 +142,24 @@ export const Vatan: Store = {
 		},
 		// 3080, 3090
 		{
+			brand: 'evga',
+			model: 'xc3',
+			series: '3080TRY',
+			url: 'https://www.vatanbilgisayar.com/evga-geforce-rtx-3080-xc3-gaming-10gb-gddrx-320bit-nvidia-ekran-karti.html'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080TRY',
+			url: 'https://www.vatanbilgisayar.com/evga-geforce-rtx-3080-ftw3-ultra-gaming-10gb-gddr6x-320bit-nvidia-ekran-karti.html'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080TRY',
+			url: 'https://www.vatanbilgisayar.com/gigabyte-geforce-rtx-3080-vision-oc-10gb-gddr6x-320bit-dx12-nvidia-ekran-karti.html'
+		},
+		{
 			brand: 'msi',
 			model: 'ventus 3x oc',
 			series: '3080TRY',

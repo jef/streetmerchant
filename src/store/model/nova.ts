@@ -186,6 +186,12 @@ export const Nova: Store = {
 		},
 		{
 			brand: 'msi',
+			model: 'suprim',
+			series: '3080TRY',
+			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13212'
+		},
+		{
+			brand: 'msi',
 			model: 'ventus 3x',
 			series: '3080TRY',
 			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13059'
@@ -213,6 +219,12 @@ export const Nova: Store = {
 			model: 'gaming oc',
 			series: '3080TRY',
 			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13077'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080TRY',
+			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13196'
 		},
 		{
 			brand: 'gigabyte',
@@ -255,6 +267,18 @@ export const Nova: Store = {
 			model: 'strix oc',
 			series: '3090TRY',
 			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13047'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc',
+			series: '3090TRY',
+			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13087'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3090TRY',
+			url: 'https://www.novabilgisayar.com/bilgi.asp?ID=13086'
 		},
 		// {
 		// 	brand: 'xxx',

@@ -137,10 +137,40 @@ export const Hepsiburada2: Store = {
 			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3080-oc-10gb-384bit-gddr6x-dx12-pci-express-4-0-ekran-karti-rog-strix-rtx-3080-o10g-gaming-p-HBV00000XATX4'
 		},
 		{
+			brand: 'galax',
+			model: 'sg',
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/galax-geforce-rtx3080-seious-gaming-sg-edition-10gb-320bit-gddr6x-dx12-pci-express-4-0-ekran-karti-38nwm3md99nn-p-HBV000019UZ88'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3080-10gb-320bit-gddr6x-dx12-pci-express-4-0-ekran-karti-tuf-rtx-3080-10g-gaming-p-HBV00000XATX2'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3080-oc-10gb-320bit-gddr6x-dx12-pci-express-4-0-ekran-karti-tuf-rtx-3080-o10g-gaming-p-HBV00000XATX0'
+		},
+		{
 			brand: 'asus',
 			model: 'strix oc',
-			series: '3090TRY',
-			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3090-oc-24gb-384bit-gddr6x-dx12-pci-express-4-0-ekran-karti-tuf-rtx-3090-o24g-gaming-p-HBV00000XATWW'
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3080-oc-10gb-320bit-gddr6x-dx12-pci-express-4-0-ekran-karti-rog-strix-rtx-3080-10g-gaming-p-HBV00000XATXA'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/msi-geforce-rtx-3080-gaming-x-trio-10gb-1440mhz-oc-gddr6x-dx-12-pci-express-4-0-ekran-karti-geforce-rtx-3080-gaming-x-trio-10g-p-HBV00000Y4NXR'
+		},
+		{
+			brand: 'asus',
+			model: 'strix',
+			series: '3080TRY',
+			url: 'https://www.hepsiburada.com/asus-geforce-rtx-3080-oc-10gb-320bit-gddr6x-dx12-pci-express-4-0-ekran-karti-rog-strix-rtx-3080-o10g-gaming-p-HBV00000XATX4'
 		}
 		// {
 		// 	brand: 'XXX',
