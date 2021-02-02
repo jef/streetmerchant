@@ -197,6 +197,12 @@ export const Qp: Store = {
 		},
 		// 3080,3090
 		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3080TRY',
+			url : 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3080-xtreme-waterforce-wb-10g-320-bit-ekran-karti'
+		},
+		{
 			brand: 'msi',
 			model: 'gaming trio',
 			series: '3080TRY',
