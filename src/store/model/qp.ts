@@ -45,10 +45,22 @@ export const Qp: Store = {
 			url: 'https://www.qp.com.tr/inno3d-geforce-rtx-3060-ti-twin-x2-oc-8gb-256-bit-ekran-karti'
 		},
 		{
+			brand: 'inno3d',
+			model: 'ichill x3',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/inno3d-geforce-rtx-3080-ichill-x3-10gb-320-bit-ekran-karti'
+		},
+		{
 			brand: 'palit',
 			model: 'gaming pro oc',
 			series: '3060TITRY',
 			url: 'https://www.qp.com.tr/palit-geforce-rtx-3060-ti-gamingpro-oc-8gb-256-bit-ekran-karti'
+		},
+		{
+			brand: 'palit',
+			model: 'gaming pro',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/palit-geforce-rtx3080-gamingpro-10gb-320-bit-ekran-karti'
 		},
 		{
 			brand: 'gigabyte',
@@ -198,9 +210,27 @@ export const Qp: Store = {
 		// 3080,3090
 		{
 			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/gigabyte-geforce-rtx-3080-vision-oc-10g-320-bit-ekran-karti'
+		},
+		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/msi-geforce-rtx-3080-suprim-x-10g-320-bit-ekran-karti'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'aorus xtreme waterforce wb',
 			series: '3080TRY',
 			url : 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3080-xtreme-waterforce-wb-10g-320-bit-ekran-karti'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce',
+			series: '3080TRY',
+			url : 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3080-xtreme-waterforce-10g-320-bit-ekran-karti'
 		},
 		{
 			brand: 'msi',
@@ -253,6 +283,12 @@ export const Qp: Store = {
 		},
 		{
 			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/gigabyte-geforce-rtx-3080-gaming-oc-10g-320-bit-ekran-karti'
+		},
+		{
+			brand: 'gigabyte',
 			model: 'aorus xtreme',
 			series: '3080TRY',
 			url: 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3080-xtreme-10g-320-bit-ekran-karti'
@@ -274,6 +310,12 @@ export const Qp: Store = {
 			model: 'aorus master',
 			series: '3090TRY',
 			url: 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3090-master-24g-384-bit-ekran-karti'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3080TRY',
+			url: 'https://www.qp.com.tr/gigabyte-geforce-rtx-3080-eagle-oc-10g-320-bit-ekran-karti'
 		},
 		{
 			brand: 'asus',
@@ -329,6 +371,24 @@ export const Qp: Store = {
 			series: '3090TRY',
 			url: 'https://www.qp.com.tr/palit-geforce-rtx-3090-gamingpro-24gb-384-bit-ekran-karti'
 		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090TRY',
+			url: 'https://www.qp.com.tr/zotac-gaming-geforce-rtx-3090-trinity-24gb-384-bit-ekran-karti'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme waterforce wb',
+			series: '3090TRY',
+			url: 'https://www.qp.com.tr/gigabyte-aorus-geforce-rtx-3090-xtreme-waterforce-wb-24g-384-bit-ekran-karti'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3090TRY',
+			url: 'https://www.qp.com.tr/catalog/product/view/id/4366/s/asus-ekwb-geforce-rtx-3070-8gb-256-bit-sivi-sogutma-bloklu-ekran-karti/category/8/'
+		}
 		// {
 		// 	brand: 'XXX',
 		// 	model: 'XXX',
