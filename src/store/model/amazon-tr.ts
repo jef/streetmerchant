@@ -170,6 +170,126 @@ export const AmazonTr: Store = {
 		
 		// RTX 3080
 		{
+			brand: 'asus',
+			model: 'tuf oc',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HN5B8FJ/'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HR9JSMS/'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HGS1SXH/'
+		},
+		{
+			brand: 'asus',
+			model: 'tuf',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HN4FLFJ/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08KHJS572/'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08J5F3G18/'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HJQ182D/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'eagle oc',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HHZSQVF/'
+		},
+		{
+			brand: 'asus',
+			model: 'strix oc white',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08R133PYZ/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio oc',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HRBW6VB/'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08P94FVLV/'
+		},
+		{
+			brand: 'palit',
+			model: 'gamerock',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08N7V679F/'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HGTNDL4/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x oc',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HR9D2JS/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'turbo',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08KHKDTSJ/'
+		},
+		{
+			brand: 'palit',
+			model: 'gamerock',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08MQ2BFLK/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HLYQ9XL/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming x trio',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HM6D7TM/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08KH7R4FQ/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x',
+			series: '3090TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HM661YM/'
+		},
+		{
 			brand: 'palit',
 			model: 'gamerock',
 			series: '3080TRY',
