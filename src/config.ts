@@ -450,7 +450,7 @@ export const config = {
   page,
   proxy,
   store,
-  restartTime
+  restartTime,
 };
 
 export function setConfig(newConfig: any) {

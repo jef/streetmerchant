@@ -102,7 +102,6 @@ async function stopAndExit() {
   Process.exit(0);
 }
 
-
 /**
  * Will continually run until user interferes.
  */
