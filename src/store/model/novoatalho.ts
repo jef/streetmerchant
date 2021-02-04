@@ -74,7 +74,7 @@ export const NovoAtalho: Store = {
         {
             brand: 'asus',
             model: 'strix oc',
-            series: '3060',
+            series: '3060ti',
             url: 'https://www.novoatalho.pt/pt-PT/produto/46701/Placa-Grafica-Asus-GeForce-RTX-3060-ROG-STRIX-OC-12GB/90YV0GC2-M0NA00.html',
         },
         {

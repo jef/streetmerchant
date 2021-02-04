@@ -237,14 +237,14 @@ export const PCDiga: Store = {
     {
       brand: 'zotac',
       model: 'twin edge',
-      series: '3060',
+      series: '3060ti',
       url:
         'https://www.pcdiga.com/placa-grafica-zotac-gaming-geforce-rtx-3060-12gb-gddr6-twin-edge-zt-a30600e-10m',
     },
     {
       brand: 'zotac',
       model: 'twin edge oc',
-      series: '3060',
+      series: '3060ti',
       url:
         'https://www.pcdiga.com/placa-grafica-zotac-gaming-geforce-rtx-3060-12gb-gddr6-twin-edge-oc-zt-a30600h-10m',
     },
@@ -258,7 +258,7 @@ export const PCDiga: Store = {
     {
       brand: 'zotac',
       model: 'amp white edition',
-      series: '3060',
+      series: '3060ti',
       url:
         'https://www.pcdiga.com/placa-grafica-zotac-gaming-geforce-rtx-3060-amp-12gb-gddr6-white-edition-zt-a30600f-10p',
     },
