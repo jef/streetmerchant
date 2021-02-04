@@ -16,8 +16,8 @@ export const AmazonCa: Store = {
     },
     outOfStock: {
       container: '.a-color-price',
-	  text: ['currently unavailable.'],
-	},
+      text: ['currently unavailable.'],
+    },
   },
   links: [
     {
