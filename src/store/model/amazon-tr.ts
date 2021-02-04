@@ -176,6 +176,84 @@ export const AmazonTr: Store = {
 			url: 'https://www.amazon.com.tr/Palit-RTX3080-GAMEROCK-320Bit-GDDR6X/dp/B08MKSYYZ4/'
 		},
 		{
+			brand: 'msi',
+			model: 'suprim x',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/GEFORCE-RTX-3080-SUPRIM-10G/dp/B08LTKLG5K/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus xtreme',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Gigabyte-AORUS-GeForce-Xtreme-GDDR6X/dp/B08M5ZFNTT/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'aorus master',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Gigabyte-AORUS-GeForce-Master-grafik/dp/B08KHLDS72'
+		},
+		{
+			brand: 'asus',
+			model: 'strix white',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Asus-GeForce-DisplayPort-eksenel-teknoloji/dp/B08BL495XS/'
+		},
+		{
+			brand: 'asus',
+			model: 'ekwb',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/GeForce-DisplayPort-Auto-Extreme-Teknoloji-Koruyucu/dp/B08R5WDMZC/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'vision oc',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/GIGABYTE-GVN3080VISIONOC10G-RTX3080-VISION-DP-HDMI/dp/B08KH7RL89/'
+		},
+		{
+			brand: 'gigabyte',
+			model: 'gaming oc',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/dp/B08HLZXHZY/'
+		},
+		{
+			brand: 'msi',
+			model: 'gaming',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Gaming-GeForce-GDRR6X-320-Bit-Tri-Frozr/dp/B08HR7SV3M/'
+		},
+		{
+			brand: 'msi',
+			model: 'ventus 3x',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Gaming-GeForce-GDRR6X-320-Bit-Nvlink/dp/B08HR5SXPS/'
+		},
+		{
+			brand: 'zotac',
+			model: 'trinity',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/Zotac-GeForce-Trinity-GDDR6X-ZT-A30800J-10P/dp/B08K3PDL9K/'
+		},
+		{
+			brand: 'evga',
+			model: 'xc3 ultra',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/EVGA-10G-P5-3885-KR-GeForce-GAMING-Soğutma/dp/B08HR55YB5/'
+		},
+		{
+			brand: 'evga',
+			model: 'ftw3 ultra',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/EVGA-10G-P5-3897-KR-GeForce-GAMING-Teknolojisi/dp/B08HR3Y5GQ/'
+		},
+		{
+			brand: 'zotac',
+			model: 'amp holo',
+			series: '3080TRY',
+			url: 'https://www.amazon.com.tr/ZOTAC-GeForce-RTX-3080-Holo/dp/B08KGVL9JQ/'
+		},
+		{
 			brand: 'asus',
 			model: 'tuf oc',
 			series: '3080TRY',
@@ -198,12 +276,6 @@ export const AmazonTr: Store = {
 			model: 'strix oc',
 			series: '3080TRY',
 			url: 'https://www.amazon.com.tr/GEFORCE-ROG-STRIX-RTX3080-O10G-GAMING-GDD6X-320bit-2xHDMI/dp/B08HN6KYS3/'
-		},
-		{
-			brand: 'msi',
-			model: 'suprim x',
-			series: '3080TRY',
-			url: 'https://www.amazon.com.tr/GEFORCE-RTX-3080-SUPRIM-10G/dp/B08LTKLG5K/'
 		},
 		{
 			brand: 'gigabyte',
