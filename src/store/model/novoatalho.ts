@@ -25,11 +25,60 @@ export const NovoAtalho: Store = {
                 'https://www.novoatalho.pt/pt-PT/produto/45060/Processador-AMD-Ryzen-9-5900X-3-7Ghz-12-Core-SktAM4/100-100000061WOF.html',
         },
         {
-            brand: 'amd',
+            brand: 'msi',
             model: 'amd reference',
             series: 'rx6800xt',
             url:
                 'https://www.novoatalho.pt/pt-PT/produto/46279/Placa-Grafica-MSI-Radeon-RX-6800-XT-GAMING-X-TRIO-16GB/912-V395-001.html',
+        },
+        {
+            brand: 'asus',
+            model: 'strix oc',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/44399/Placa-Grafica-Asus-GeForce-RTX-3080-ROG-STRIX-OC-10GB/90YV0FA1-M0NM00.html',
+        },
+        {
+            brand: 'asus',
+            model: 'tuf',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/44312/Placa-Grafica-Asus-GeForce-RTX-3080-TUF-GAMING-10GB/90YV0FB0-M0NM00.html',
+        },
+        {
+            brand: 'asus',
+            model: 'tuf oc',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/44313/Placa-Grafica-Asus-GeForce-RTX-3080-TUF-GAMING-OC-10GB/90YV0FB1-M0NM00.html',
+        },
+        {
+            brand: 'gigabyte',
+            model: 'aorus master',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/46733/Placa-Grafica-Gigabyte-GeForce-RTX-3080-AORUS-MASTER-10GB-Re/GV-N3080AORUS%20M-10GD%202.0.html',
+        },
+        {
+            brand: 'gigabyte',
+            model: 'gaming oc',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/45863/Placa-Grafica-Gigabyte-GeForce-RTX-3080-Gaming-OC-10GB/GVN3080GO-00-G.html',
+        },
+        {
+            brand: 'msi',
+            model: 'gaming x trio',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/44314/Placa-Grafica-MSI-GeForce-RTX-3080-GAMING-X-TRIO-10GB/912-V389-005.html',
+        },
+        {
+            brand: 'msi',
+            model: 'ventus 3x oc',
+            series: '3080',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/44315/Placa-Grafica-MSI-GeForce-RTX-3080-VENTUS-3X-OC-10GB/912-V389-001.html',
         },
     ],
     name: 'novoatalho',
