@@ -4,8 +4,8 @@ export const NanoChip: Store = {
     currency: '€',
     labels: {
         inStock: {
-            container: 'span.input-group-btn.buy_btn',
-            text: ['Comprar'],
+            container: 'span.green',
+            text: ['EM STOCK'],
         },
         maxPrice: {
             container: '#price_two',

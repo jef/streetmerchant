@@ -7,6 +7,14 @@ export const Globaldata: Store = {
             container: '.js-ck-addto-cart-wrapper__btn',
             text: ['Adicionar ao Carrinho'],
         },
+        maxPrice: {
+            container: '#price__amount',
+            euroFormat: true,
+        },
+        outOfStock: {
+            container: '#js-backInStock',
+            text: ['Notifique-me quando estiver em stock'],
+        },
     },
     links: [
         {
