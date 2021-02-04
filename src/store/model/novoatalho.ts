@@ -80,6 +80,27 @@ export const NovoAtalho: Store = {
             url:
                 'https://www.novoatalho.pt/pt-PT/produto/44315/Placa-Grafica-MSI-GeForce-RTX-3080-VENTUS-3X-OC-10GB/912-V389-001.html',
         },
+        {
+            brand: 'asus',
+            model: 'strix oc',
+            series: '3060',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/46701/Placa-Grafica-Asus-GeForce-RTX-3060-ROG-STRIX-OC-12GB/90YV0GC2-M0NA00.html',
+        },
+        {
+            brand: 'asus',
+            model: 'dual oc',
+            series: '3060ti',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/46052/Placa-Grafica-Asus-GeForce-RTX-3060-Ti-DUAL-OC-8GB/90YV0G12-M0NA00.html',
+        },
+        {
+            brand: 'gigabyte',
+            model: 'gaming oc',
+            series: '3060ti',
+            url:
+                'https://www.novoatalho.pt/pt-PT/produto/46071/Placa-Grafica-Gigabyte-GeForce-RTX-3060-Ti-Gaming-OC-8GB/GVN306TGO-00-10.html',
+        },
     ],
     name: 'novoatalho',
 };
