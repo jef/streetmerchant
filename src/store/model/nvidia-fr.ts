@@ -5,7 +5,7 @@ export const NvidiaFR: Store = {
   labels: {
     inStock: {
       container: '.buy',
-      text: ['ajouter au panier'],
+      text: ['ajouter au panier', 'acheter maintenant'],
     },
     outOfStock: {
       container: '.buy',
