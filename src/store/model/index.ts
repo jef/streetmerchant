@@ -69,6 +69,7 @@ import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
+import {Globaldata} from './globaldata';
 import {HardwarePlanet} from './hardware-planet';
 import {HarrisTechnology} from './harristechnology';
 import {HarveyNormanIE} from './harveynorman-ie';
@@ -84,6 +85,7 @@ import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
 import {Msy} from './msy';
 import {Mwave} from './mwave';
+import {NanoChip} from './nanochip';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
@@ -99,7 +101,9 @@ import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
 import {PCByte} from './pcbyte';
+import {PCDiga} from './pcdiga';
 import {PCComponentes} from './pccomponentes';
+import {PCComponentesPt} from './pccomponentes-pt';
 import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
@@ -131,6 +135,7 @@ import {Walmart} from './walmart';
 import {WalmartCa} from './walmart-ca';
 import {WellsTechnology} from './wellstechnology';
 import {Wipoid} from './wipoid';
+import {Worten} from './worten';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
@@ -206,6 +211,7 @@ export const storeList = new Map([
   [GamestopDE.name, GamestopDE],
   [GamestopIE.name, GamestopIE],
   [GamestopIT.name, GamestopIT],
+  [Globaldata.name, Globaldata],
   [HardwarePlanet.name, HardwarePlanet],
   [HarrisTechnology.name, HarrisTechnology],
   [HarveyNormanIE.name, HarveyNormanIE],
@@ -221,6 +227,7 @@ export const storeList = new Map([
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
   [Mwave.name, Mwave],
+  [NanoChip.name, NanoChip],
   [Newegg.name, Newegg],
   [NeweggCa.name, NeweggCa],
   [NeweggSg.name, NeweggSg],
@@ -236,9 +243,11 @@ export const storeList = new Map([
   [Overclockers.name, Overclockers],
   [PBTech.name, PBTech],
   [PCByte.name, PCByte],
+  [PCDiga.name, PCDiga],
   [Pccg.name, Pccg],
   [PCKing.name, PCKing],
   [PCComponentes.name, PCComponentes],
+  [PCComponentesPt.name, PCComponentesPt],
   [PlayStation.name, PlayStation],
   [Pny.name, Pny],
   [ProshopDE.name, ProshopDE],
@@ -267,6 +276,7 @@ export const storeList = new Map([
   [WalmartCa.name, WalmartCa],
   [WellsTechnology.name, WellsTechnology],
   [Wipoid.name, Wipoid],
+  [Worten.name, Worten],
   [Xbox.name, Xbox],
   [Zotac.name, Zotac],
 ]);
