@@ -8,7 +8,7 @@ export const PCDiga: Store = {
       text: ['ADICIONAR AO CARRINHO'],
     },
     maxPrice: {
-      container: '#price-box price-final_price',
+      container: 'span.price',
       euroFormat: true,
     },
     outOfStock: {
@@ -17,6 +17,13 @@ export const PCDiga: Store = {
     },
   },
   links: [
+    {
+      brand: 'msi',
+      model: 'amd reference',
+      series: 'rx6800xt',
+      url:
+        'https://www.pcdiga.com/televis-o-plana-samsung-q800t-smarttv-65-qled-8k-uhd-qe65q800tatxxc?search=8k',
+    },
     {
       brand: 'msi',
       model: 'amd reference',

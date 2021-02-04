@@ -8,7 +8,7 @@ export const Chiptec: Store = {
             text: ['Disponível'],
         },
         maxPrice: {
-            container: '#price',
+            container: 'span.price',
             euroFormat: true,
         },
         outOfStock: {

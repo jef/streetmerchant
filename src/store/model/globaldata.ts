@@ -8,7 +8,7 @@ export const Globaldata: Store = {
             text: ['Adicionar ao Carrinho'],
         },
         maxPrice: {
-            container: '#price__amount',
+            container: 'span.price__amount',
             euroFormat: true,
         },
         outOfStock: {
