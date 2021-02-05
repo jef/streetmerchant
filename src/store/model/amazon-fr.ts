@@ -164,12 +164,24 @@ export const AmazonFr: Store = {
     },
     {
       brand: 'sony',
+      labels: {
+        inStock: {
+          container: '#variation_edition .selection',
+          text: ['PS5']
+        }
+      },
       model: 'ps5 console',
       series: 'sonyps5c',
       url: 'https://www.amazon.fr/dp/B08H93ZRK9',
     },
     {
       brand: 'sony',
+      labels: {
+        inStock: {
+          container: '#variation_edition .selection',
+          text: ['PS5']
+        }
+      },
       model: 'ps5 digital',
       series: 'sonyps5de',
       url: 'https://www.amazon.fr/dp/B08H98GVK8',
