@@ -278,6 +278,7 @@ const notifications = {
       ['sprint', 'messaging.sprintpcs.com'],
       ['telus', 'msg.telus.com'],
       ['tmobile', 'tmomail.net'],
+      ['uscc', 'mms.uscc.net'],
       ['verizon', 'vtext.com'],
       ['virgin', 'vmobl.com'],
       ['virgin-ca', 'vmobile.ca'],
