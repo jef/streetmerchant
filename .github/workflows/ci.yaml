@@ -33,7 +33,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run paths filter
-        uses: dorny/paths-filter@v2.7.0
+        uses: dorny/paths-filter@v2.8.0
         id: filter
         with:
           filters: |

@@ -73,6 +73,7 @@ Default provider is Gmail. If you use a different email provider, you must provi
 | Sprint | `sprint`|
 | Telus | `telus`|
 | T-Mobile | `tmobile`|
+| USCC | `uscc`|
 | Verizon | `verizon`|
 | Virgin | `virgin`|
 | Virgin (CA) | `virgin-ca`|

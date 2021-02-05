@@ -37,15 +37,18 @@ function nextProxy(store: Store) {
 
   if (store.currentProxyIndex === undefined) {
     store.currentProxyIndex = 0;
+  } else {
+    store.currentProxyIndex++;
   }
 
-  store.currentProxyIndex++;
   if (store.currentProxyIndex >= store.proxyList.length) {
     store.currentProxyIndex = 0;
   }
 
-  logger.info(
-    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`
+  logger.debug(
+    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${
+      store.proxyList.length
+    } (${store.proxyList[store.currentProxyIndex]})`
   );
 
   return store.proxyList[store.currentProxyIndex];
@@ -252,11 +255,22 @@ async function lookup(browser: Browser, store: Store) {
     try {
       statusCode = await lookupCard(browser, store, page, link);
     } catch (error: unknown) {
-      logger.error(
-        `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
-          (error as Error).message
-        }`
-      );
+      if (store.currentProxyIndex !== undefined && store.proxyList) {
+        const proxy = `${store.currentProxyIndex + 1}/${
+          store.proxyList.length
+        }`;
+        logger.error(
+          `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${
+            link.model
+          } - ${(error as Error).message}`
+        );
+      } else {
+        logger.error(
+          `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+            (error as Error).message
+          }`
+        );
+      }
       const client = await page.target().createCDPSession();
       await client.send('Network.clearBrowserCookies');
     }
