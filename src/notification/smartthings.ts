@@ -13,19 +13,19 @@ export async function activateSmartthingsSwitch() {
   ) {
     return;
   }
-  let st = new SmartThings(smartthings.token);
-  let match: boolean = false
+  const st = new SmartThings(smartthings.token);
+  let match = false;
   try {
     await st.devices.getList().then(res => {
       res.data.items.forEach(
-        async (item: { label: string; deviceId: string }) => {
+        async (item: {label: string; deviceId: string}) => {
           if (smartthings.device === item.label) {
             match = true;
-            var device_status = (await st.devices.getStatus(item.deviceId)).data
-              .components.main.switch.switch.value
+            let device_status = (await st.devices.getStatus(item.deviceId)).data
+              .components.main.switch.switch.value;
             if (device_status === 'on') {
               device_status = true;
-            } else device_status = false
+            } else device_status = false;
             if (!device_status) {
               logger.debug(`Turning on ${smartthings.device}`);
               st.devices.commands(item.deviceId, 'on');
