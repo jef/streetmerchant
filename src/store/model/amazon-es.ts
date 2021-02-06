@@ -32,6 +32,14 @@ export const AmazonEs: Store = {
       url: 'https://www.amazon.es/dp/B07PW9VBK5',
     },
     {
+      brand: 'pny',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HBQWBHH&Quantity.1=1',
+      model: 'xlr8 revel',
+      series: '3090',
+      url: 'https://www.amazon.es/_itm/dp/B08HBQWBHH',
+    },
+    {
       brand: 'msi',
       cartUrl:
         'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HM4V2DH&Quantity.1=1',

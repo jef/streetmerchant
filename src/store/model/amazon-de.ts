@@ -340,6 +340,14 @@ export const AmazonDe: Store = {
       url: 'https://www.amazon.de/dp/B08HJQ182D',
     },
     {
+      brand: 'pny',
+      cartUrl:
+        'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HBQWBHH&Quantity.1=1',
+      model: 'xlr8 revel',
+      series: '3090',
+      url: 'https://www.amazon.de/-/tr/dp/B08HBQWBHH/',
+    },
+    {
       brand: 'asus',
       cartUrl:
         'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08HSJ1622&Quantity.1=1',

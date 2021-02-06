@@ -31,6 +31,12 @@ export const AmazonFr: Store = {
       url: 'https://www.amazon.fr/dp/B07PW9VBK5',
     },
     {
+      brand: 'pny',
+      model: 'xlr8 revel',
+      series: '3090',
+      url: 'https://www.amazon.fr/_itm/dp/B08HBQWBHH',
+    },
+    {
       brand: 'msi',
       model: 'gaming x trio',
       series: '3080',
