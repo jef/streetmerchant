@@ -25,11 +25,11 @@ export async function sendSmartthingsNotification(link: Link, store: Store) {
       })
     })
   } catch (TypeError) {
-    logger.debug("SmartThings : Problem getting data");
+    logger.warn("SmartThings : Problem getting data from hub, check SMARTTHINGS_TOKEN");
     return;
   }
   if (!match) {
-    logger.debug(`SmartThings : No switch called ${smartthings.device}`)
+    logger.warn(`SmartThings : No switch called ${smartthings.device}, check SMARTTHINGS_SWITCH_LABEL`)
     return;
   }
 }

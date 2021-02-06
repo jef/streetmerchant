@@ -35,7 +35,6 @@ export function sendNotification(link: Link, store: Store) {
   sendTelegramMessage(link, store);
   sendTweet(link, store);
   sendTwilioMessage(link, store);
-  sendSmartthingsNotification(link,store);
   sendTwitchMessage(link, store);
   updateRedis(link, store);
 }
