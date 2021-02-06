@@ -5,6 +5,7 @@ import {config} from '../config';
 const {smartthings} = config.notifications;
 
 export async function activateSmartthingsSwitch() {
+  if (!smartthings.token && !smartthings.device){return;}
   let st = new SmartThings(smartthings.token);
   let match: boolean = false
   try {
