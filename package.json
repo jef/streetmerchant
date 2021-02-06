@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/jef/streetmerchant#readme",
   "dependencies": {
+    "@bridgerakol/samsung-smart-api": "^2.8.1",
     "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
     "@slack/web-api": "^6.0.0",

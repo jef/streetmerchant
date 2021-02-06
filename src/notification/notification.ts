@@ -15,6 +15,7 @@ import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
+import {sendSmartthingsNotification} from "./smartthings"
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
@@ -30,9 +31,11 @@ export function sendNotification(link: Link, store: Store) {
   sendPushbulletNotification(link, store);
   sendPushoverNotification(link, store);
   sendSlackMessage(link, store);
+  sendSmartthingsNotification(link,store);
   sendTelegramMessage(link, store);
   sendTweet(link, store);
   sendTwilioMessage(link, store);
+  sendSmartthingsNotification(link,store);
   sendTwitchMessage(link, store);
   updateRedis(link, store);
 }
