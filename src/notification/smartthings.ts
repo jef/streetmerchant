@@ -11,9 +11,7 @@ export async function activateSmartthingsSwitch() {
       !smartthings.token &&
       'device' in smartthings &&
       !smartthings.device) ||
-    (
-      !('token' in smartthings) && !('device' in smartthings)
-    )
+    (!('token' in smartthings) && !('device' in smartthings))
 
   ) {
     return;
