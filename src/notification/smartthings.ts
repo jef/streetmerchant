@@ -10,7 +10,7 @@ export async function activateSmartthingsSwitch() {
     !smartthings.token &&
     'device' in smartthings &&
     !smartthings.device
-  ){
+  ) {
     return;
   }
   let st = new SmartThings(smartthings.token);
@@ -18,21 +18,22 @@ export async function activateSmartthingsSwitch() {
   try {
     await st.devices.getList().then(res => {
       res.data.items.forEach(
-        async (item: { label: string; deviceId: string; }) => {
-        if (smartthings.device === item.label) {
-          match = true;
-          var device_status = (await st.devices.getStatus(item.deviceId)).data
-            .components.main.switch.switch.value
-          if (device_status == 'on') {
-            device_status = true;
-          } else device_status = false
-          if (!device_status) {
-            logger.debug(`Turning on ${smartthings.device}`);
-            st.devices.commands(item.deviceId, 'on');
+        async (item: { label: string; deviceId: string }) => {
+          if (smartthings.device === item.label) {
+            match = true;
+            var device_status = (await st.devices.getStatus(item.deviceId)).data
+              .components.main.switch.switch.value
+            if (device_status === 'on') {
+              device_status = true;
+            } else device_status = false
+            if (!device_status) {
+              logger.debug(`Turning on ${smartthings.device}`);
+              st.devices.commands(item.deviceId, 'on');
+            }
           }
         }
-      })
-    })
+      );
+    });
   } catch (TypeError) {
     logger.warn(
       'SmartThings : Problem getting data from hub, check SMARTTHINGS_TOKEN'
@@ -46,4 +47,3 @@ export async function activateSmartthingsSwitch() {
     return;
   }
 }
-
