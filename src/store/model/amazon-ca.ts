@@ -14,6 +14,10 @@ export const AmazonCa: Store = {
     maxPrice: {
       container: '.a-color-price',
     },
+    outOfStock: {
+      container: '.a-color-price',
+      text: ['currently unavailable.'],
+    },
   },
   links: [
     {
