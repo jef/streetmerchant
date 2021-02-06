@@ -6,10 +6,17 @@ const {smartthings} = config.notifications;
 
 export async function activateSmartthingsSwitch() {
   if (
-    'token' in smartthings &&
-    !smartthings.token &&
-    'device' in smartthings &&
-    !smartthings.device
+    (
+      'token' in smartthings &&
+      !smartthings.token &&
+      'device' in smartthings &&
+      !smartthings.device
+    ) ||
+    (
+      !('token in smartthings') &&
+      !('device in smartthings')
+    )
+
   ) {
     return;
   }
@@ -18,7 +25,7 @@ export async function activateSmartthingsSwitch() {
   try {
     await st.devices.getList().then(res => {
       res.data.items.forEach(
-        async (item: {label: string; deviceId: string}) => {
+        async (item: { label: string; deviceId: string }) => {
           if (smartthings.device === item.label) {
             match = true;
             let device_status = (await st.devices.getStatus(item.deviceId)).data
