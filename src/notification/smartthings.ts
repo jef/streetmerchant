@@ -13,8 +13,8 @@ export async function activateSmartthingsSwitch() {
       !smartthings.device
     ) ||
     (
-      !('token in smartthings') &&
-      !('device in smartthings')
+      !('token' in smartthings) &&
+      !('device' in smartthings)
     )
 
   ) {
