@@ -1,11 +1,10 @@
 import {SmartThings} from "@bridgerakol/samsung-smart-api";
 import {logger} from '../logger';
-import {Link, Store} from "../store/model";
 import {config} from '../config';
 
 const {smartthings} = config.notifications;
 
-export async function sendSmartthingsNotification(link: Link, store: Store) {
+export async function activateSmartthingsSwitch() {
   let st = new SmartThings(smartthings.token);
   let match: boolean = false
   try {
