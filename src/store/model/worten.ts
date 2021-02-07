@@ -11,6 +11,10 @@ export const Worten: Store = {
       container: 'span.w-product__price__current',
       euroFormat: true,
     },
+    outOfStock: {
+      container: '.w-product__unavailability-title',
+      text: ['Indisponível'],
+  },
   },
   links: [
     {

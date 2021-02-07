@@ -12,8 +12,8 @@ export const Chiptec: Store = {
             euroFormat: true,
         },
         outOfStock: {
-            container: 'span.amstockstatus.amsts_1007',
-            text: ['Brevemente'],
+            container: 'p[class="availability out-of-stock"]',
+            text: ['Brevemente', 'Indisponível'],
         },
     },
     links: [
