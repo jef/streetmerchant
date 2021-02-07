@@ -39,6 +39,7 @@ import { CanadaComputers } from './canadacomputers';
 import { Caseking } from './caseking';
 import { Ccl } from './ccl';
 import { Centrecom } from './centrecom';
+import { Chip7 } from './chip7';
 import { Chiptec } from './chiptec';
 import { Comet } from './comet';
 import { ComputerAlliance } from './computeralliance';
@@ -183,6 +184,7 @@ export const storeList = new Map([
   [CanadaComputers.name, CanadaComputers],
   [Ccl.name, Ccl],
   [Centrecom.name, Centrecom],
+  [Chip7.name, Chip7],
   [Chiptec.name, Chiptec],
   [Comet.name, Comet],
   [ComputerAlliance.name, ComputerAlliance],

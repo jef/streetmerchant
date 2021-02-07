@@ -12,7 +12,7 @@ export const PCDiga: Store = {
       euroFormat: true,
     },
     outOfStock: {
-      container: '#product alert stock',
+      container: 'div[class="product alert stock"]',
       text: ['Notificar-me quando este produto se encontrar em stock'],
     },
   },
