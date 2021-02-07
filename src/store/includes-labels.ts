@@ -123,14 +123,14 @@ export async function getPrice(
 ): Promise<number | null> {
   const selector = {...options, selector: query.container};
   const priceString = await extractPageContents(page, selector);
-
+  logger.debug('received priceString :' + priceString);
   if (priceString) {
+    const formattedPriceString = priceString.replace(/\s/g,'');
     const priceSeparator = query.euroFormat ? /\./g : /,/g;
     const price = Number.parseFloat(
-      priceString.replace(priceSeparator, '').match(/\d+/g)!.join('.')
+      formattedPriceString.replace(priceSeparator, '').match(/\d+/g)!.join('.')
     );
-
-    logger.debug('received price', price);
+    logger.debug('formatted price: ' + price);
     return price;
   }
 
