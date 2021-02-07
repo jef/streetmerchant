@@ -4,11 +4,11 @@ export const Chiptec: Store = {
     currency: '€',
     labels: {
         inStock: {
-            container: 'span.amstockstatus.amsts_1006',
-            text: ['Disponível'],
+            container: '.add-to-cart',
+            text: ['Adicionar ao Carrinho'],
         },
         maxPrice: {
-            container: 'span.price',
+            container: 'span.regular-price',
             euroFormat: true,
         },
         outOfStock: {
