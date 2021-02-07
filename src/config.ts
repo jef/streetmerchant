@@ -197,6 +197,7 @@ const browser = {
   ),
   open: envOrBoolean(process.env.OPEN_BROWSER),
   userAgent: '',
+  executablePath : envOrString(process.env.EXECUTABLE_PATH, ''),
 };
 
 const docker = envOrBoolean(process.env.DOCKER, false);

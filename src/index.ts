@@ -49,6 +49,7 @@ async function main() {
 
   await stop();
   browser = await puppeteer.launch({
+    executablePath : config.browser.executablePath,
     args,
     defaultViewport: {
       height: config.page.height,
