@@ -5,13 +5,7 @@ import {config} from '../config';
 const {smartthings} = config.notifications;
 
 export async function activateSmartthingsSwitch() {
-  if (
-    ('token' in smartthings &&
-      !smartthings.token &&
-      'device' in smartthings &&
-      !smartthings.device) ||
-    (!('token' in smartthings) && !('device' in smartthings))
-  ) {
+  if (!smartthings.token || !smartthings.device) {
     return;
   }
   const st = new SmartThings(smartthings.token);
