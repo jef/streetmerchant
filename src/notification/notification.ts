@@ -15,6 +15,7 @@ import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
+import {activateSmartthingsSwitch} from './smartthings';
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
@@ -24,6 +25,7 @@ export function sendNotification(link: Link, store: Store) {
   sendEmail(link, store);
   sendSms(link, store);
   // Non-priority
+  activateSmartthingsSwitch();
   adjustPhilipsHueLights();
   sendMqttMessage(link, store);
   sendPagerDutyNotification(link, store);
