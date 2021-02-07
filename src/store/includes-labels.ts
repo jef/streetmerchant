@@ -123,7 +123,7 @@ export async function getPrice(
 ): Promise<number | null> {
   const selector = {...options, selector: query.container};
   const priceString = await extractPageContents(page, selector);
-  logger.debug('received priceString :' + priceString);
+  logger.debug('received priceString: ' + priceString);
   if (priceString) {
     const formattedPriceString = priceString.replace(/\s/g,'');
     const priceSeparator = query.euroFormat ? /\./g : /,/g;
