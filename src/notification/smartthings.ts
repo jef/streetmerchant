@@ -16,8 +16,8 @@ export async function activateSmartthingsSwitch() {
         async (item: {label: string; deviceId: string}) => {
           if (smartthings.device === item.label) {
             match = true;
-            const device_status = (await st.devices.getStatus(item.deviceId)).data
-              .components.main.switch.switch.value;
+            const device_status = (await st.devices.getStatus(item.deviceId))
+              .data.components.main.switch.switch.value;
             if (device_status !== 'on') {
               logger.debug(`Turning on ${smartthings.device}`);
               st.devices.commands(item.deviceId, 'on');
