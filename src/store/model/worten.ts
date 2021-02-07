@@ -4,9 +4,12 @@ export const Worten: Store = {
   currency: '€',
   labels: {
     inStock: {
-      /* FIXME: THIS IS NOT WORKING */
       container: '.qa-product-options__add-cart-linkto',
       text: ['Adicionar ao Carrinho'],
+    },
+    maxPrice: {
+      container: 'span.w-product__price__current',
+      euroFormat: true,
     },
   },
   links: [
