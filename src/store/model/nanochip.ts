@@ -25,6 +25,42 @@ export const NanoChip: Store = {
         },
         {
             brand: 'asus',
+            model: 'tuf',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/asus-geforce-rtx3080-tuf-gaming-10gb-gddr6-asusrtx3080tuf10gb',
+        },
+        {
+            brand: 'asus',
+            model: 'tuf oc',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/asus-geforce-rtx3080-tuf-gaming-oc-10gb-gddr6-asusrtx3080tufoc10',
+        },
+        {
+            brand: 'gigabyte',
+            model: 'eagle oc',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/gigabyte-geforce-rtx-3080-gaming-oc-10gb-ddr6-gigabytegvn3080gam',
+        },
+        {
+            brand: 'msi',
+            model: 'ventus 3x',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/msi-geforce-rtx3080-ventus-3x-10g-oc-ddr6-msirtx3080vent3x10',
+        },
+        {
+            brand: 'msi',
+            model: 'gaming x trio',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/msi-geforce-rtx3080-gaming-x-trio-10g-msirtx3080gamx10gb',
+        },
+        {
+            brand: 'msi',
+            model: 'suprim x',
+            series: '3080',
+            url: 'https://www.nanochip.pt/pt-pt/produto/componentes/placas-graficas/nvidia/msi-geforce-rtx3080-suprim-x-10g-ddr6-msirtx3080supx10gb',
+        },
+        {
+            brand: 'asus',
             model: 'strix',
             series: '3080',
             url: 'https://www.nanochip.pt/pt-pt/produto/asus-geforce-rtx-3080-rog-strix-10gb-asusrtx3080ro10g',
