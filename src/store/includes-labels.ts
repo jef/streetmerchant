@@ -1,6 +1,6 @@
-import {Element, LabelQuery, Pricing} from './model';
-import {Page} from 'puppeteer';
-import {logger} from '../logger';
+import { Element, LabelQuery, Pricing } from './model';
+import { Page } from 'puppeteer';
+import { logger } from '../logger';
 
 export type Selector = {
   requireVisible: boolean;
@@ -51,7 +51,7 @@ export async function pageIncludesLabels(
 
   const resolved = await Promise.all(
     elementQueries.map(async query => {
-      const selector = {...options, selector: query.container};
+      const selector = { ...options, selector: query.container };
       const contents = (await extractPageContents(page, selector)) ?? '';
 
       if (!contents) {
@@ -121,11 +121,11 @@ export async function getPrice(
   query: Pricing,
   options: Selector
 ): Promise<number | null> {
-  const selector = {...options, selector: query.container};
+  const selector = { ...options, selector: query.container };
   const priceString = await extractPageContents(page, selector);
   logger.debug('received priceString: ' + priceString);
   if (priceString) {
-    const formattedPriceString = priceString.replace(/\s/g,'');
+    const formattedPriceString = priceString.replace(/\s/g, '');
     const priceSeparator = query.euroFormat ? /\./g : /,/g;
     const price = Number.parseFloat(
       formattedPriceString.replace(priceSeparator, '').match(/\d+/g)!.join('.')

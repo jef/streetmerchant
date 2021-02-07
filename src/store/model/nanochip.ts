@@ -8,8 +8,8 @@ export const NanoChip: Store = {
             text: ['EM STOCK'],
         },
         maxPrice: {
-            container: '#price_two',
-            euroFormat: true,
+            container: '.price_two',
+            euroFormat: false,
         },
         outOfStock: {
             container: 'span.red',
