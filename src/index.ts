@@ -13,6 +13,21 @@ puppeteer.use(stealthPlugin());
 
 let browser: Browser | undefined;
 
+async function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Schedules a restart of the bot
+ */
+async function restartMain() {
+  if (config.restartTime > 0) {
+    await sleep(config.restartTime);
+    await stop();
+    loopMain();
+  }
+}
+
 /**
  * Starts the bot.
  */
@@ -92,6 +107,7 @@ async function stopAndExit() {
  */
 async function loopMain() {
   try {
+    restartMain();
     await main();
   } catch (error: unknown) {
     logger.error(

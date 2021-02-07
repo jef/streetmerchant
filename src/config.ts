@@ -439,6 +439,8 @@ const store = {
   }),
 };
 
+const restartTime = envOrNumber(process.env.RESTART_TIME, 0);
+
 export const defaultStoreData = {
   maxPageSleep: browser.maxSleep,
   minPageSleep: browser.minSleep,
@@ -453,6 +455,7 @@ export const config = {
   page,
   proxy,
   store,
+  restartTime,
 };
 
 export function setConfig(newConfig: any) {
