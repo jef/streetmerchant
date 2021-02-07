@@ -279,6 +279,7 @@ const notifications = {
       ['sprint', 'messaging.sprintpcs.com'],
       ['telus', 'msg.telus.com'],
       ['tmobile', 'tmomail.net'],
+      ['uscc', 'mms.uscc.net'],
       ['verizon', 'vtext.com'],
       ['virgin', 'vmobl.com'],
       ['virgin-ca', 'vmobile.ca'],
@@ -302,6 +303,10 @@ const notifications = {
   slack: {
     channel: envOrString(process.env.SLACK_CHANNEL),
     token: envOrString(process.env.SLACK_TOKEN),
+  },
+  smartthings: {
+    token: envOrString(process.env.SMARTTHINGS_TOKEN),
+    device: envOrString(process.env.SMARTTHINGS_SWITCH_LABEL),
   },
   soundPlayer: envOrString(process.env.SOUND_PLAYER),
   telegram: {
@@ -435,6 +440,8 @@ const store = {
   }),
 };
 
+const restartTime = envOrNumber(process.env.RESTART_TIME, 0);
+
 export const defaultStoreData = {
   maxPageSleep: browser.maxSleep,
   minPageSleep: browser.minSleep,
@@ -449,6 +456,7 @@ export const config = {
   page,
   proxy,
   store,
+  restartTime,
 };
 
 export function setConfig(newConfig: any) {
