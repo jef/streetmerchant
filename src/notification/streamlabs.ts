@@ -22,10 +22,8 @@ export function sendStreamLabsAlert(link: Link, store: Store) {
       formdata.append('message', message);
 
       try {
-        const response = await fetch(
-          'https://streamlabs.com/api/v1.0/alerts',
-          {
-            method: 'POST',
+        const response = await fetch('https://streamlabs.com/api/v1.0/alerts', {
+          method: 'POST',
             body: formdata,
           }
         );
