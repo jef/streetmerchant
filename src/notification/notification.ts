@@ -16,6 +16,7 @@ import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
 import {activateSmartthingsSwitch} from './smartthings';
+import {sendStreamLabsAlert} from './streamlabs';
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
@@ -37,4 +38,5 @@ export function sendNotification(link: Link, store: Store) {
   sendTwilioMessage(link, store);
   sendTwitchMessage(link, store);
   updateRedis(link, store);
+  sendStreamLabsAlert(link, store);
 }
