@@ -221,4 +221,4 @@ You don't need to submit your application for review, just whitelist yourself!
 | `STREAMLABS_TYPE` | StreamLabs alert type |
 | `STREAMLABS_IMAGE`| Custom image to display. Leave it blank for default |
 | `STREAMLABS_SOUND` | Custom image to play. Leave it blank for default |
-| `STREAMLABS_DURATION` | StreamLabs alert duration |
+| `STREAMLABS_DURATION` | StreamLabs alert duration (in milliseconds) |
