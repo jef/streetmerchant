@@ -7,7 +7,7 @@ import fetch from 'node-fetch';
 const {streamlabs} = config.notifications;
 let requestParams: URLSearchParams;
 
-if (streamlabs.accessToken) {
+if (streamlabs.accessToken && streamlabs.type) {
   requestParams = new URLSearchParams();
   requestParams.append('access_token', streamlabs.accessToken);
   requestParams.append('type', streamlabs.type);
