@@ -312,6 +312,10 @@ async function lookupCard(
   if (await lookupCardInStock(store, page, link)) {
     const givenUrl =
       link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url;
+    // If autoAddToCart is disabled we should only send link.url as a notification
+    if (!config.store.autoAddToCart) {
+      link.cartUrl = undefined
+    }
     logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
     if (config.browser.open) {
