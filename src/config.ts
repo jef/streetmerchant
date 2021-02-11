@@ -333,6 +333,13 @@ const notifications = {
     consumerSecret: envOrString(process.env.TWITTER_CONSUMER_SECRET),
     tweetTags: envOrString(process.env.TWITTER_TWEET_TAGS),
   },
+  streamlabs: {
+    accessToken: envOrString(process.env.STREAMLABS_ACCESS_TOKEN),
+    type: envOrString(process.env.STREAMLABS_TYPE),
+    imageHref: envOrString(process.env.STREAMLABS_IMAGE),
+    soundHref: envOrString(process.env.STREAMLABS_SOUND),
+    duration: envOrNumber(process.env.STREAMLABS_DURATION),
+  },
 };
 
 const nvidia = {
