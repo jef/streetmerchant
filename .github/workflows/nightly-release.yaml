@@ -1,19 +1,21 @@
-name: nightly
+name: Nightly Release
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
 jobs:
-  publish:
+  build-release:
+    name: Build and release Docker image
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: login into github package registry
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Login into GitHub Container Registry
         run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-      - name: build nightly docker image
+      - name: Build Docker image
         run: |
           docker build \
           -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
           -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
-      - name: publish nightly image
+      - name: Release Docker image
         run: docker push "ghcr.io/${GITHUB_REPOSITORY}"

@@ -73,6 +73,7 @@ Default provider is Gmail. If you use a different email provider, you must provi
 | Sprint | `sprint`|
 | Telus | `telus`|
 | T-Mobile | `tmobile`|
+| USCC | `uscc`|
 | Verizon | `verizon`|
 | Virgin | `virgin`|
 | Virgin (CA) | `virgin-ca`|
@@ -121,7 +122,7 @@ For cloud only usage, instructions to generate are located [here](https://develo
 
 ## Pushbullet
 
-Generate token at https://www.pushbullet.com/#settings/account.
+Generate token at [pushbullet.com/#settings/account](https://pushbullet.com/#settings/account).
 
 | Environment variable | Description |
 |:---:|---|
@@ -129,7 +130,7 @@ Generate token at https://www.pushbullet.com/#settings/account.
 
 ## Pushover
 
-Generate token at https://pushover.net/apps/build.
+Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 
 | Environment variable | Description |
 |:---:|---|
@@ -142,12 +143,27 @@ Generate token at https://pushover.net/apps/build.
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
 
+## Redis
+
+| Environment variable | Description |
+|:---:|---|
+| `REDIS_URL` | Connection string in format (redis://[username]:[password]@[host][:port]/[database-id]) (redis://localhost:6379/1) |
+
 ## Slack
 
 | Environment variable | Description |
 |:---:|---|
 | `SLACK_CHANNEL` | Channel for posting |
 | `SLACK_TOKEN` | API token |
+
+## SmartThings
+
+Generate token at [account.smartthings.com/tokens](https://account.smartthings.com/tokens).
+
+| Environment variable | Description |
+|:---:|---|
+| `SMARTTHINGS_TOKEN` | Access token |
+| `SMARTTHINGS_SWITCH_LABEL` | Switch Label of switch to activate|
 
 ## Telegram
 
@@ -158,7 +174,7 @@ Generate token at https://pushover.net/apps/build.
 
 ## Twilio
 
-Token generation can be found at https://twilio.com/console.
+Token generation can be found at [twilio.com/console](https://twilio.com/console).
 
 | Environment variable | Description |
 |:---:|---|
@@ -172,7 +188,7 @@ Token generation can be found at https://twilio.com/console.
 
 ## Twitter
 
-Generate all Twitter keys at: https://developer.twitter.com/
+Generate all Twitter keys at [developer.twitter.com](https://developer.twitter.com).
 
 | Environment variable | Description |
 |:---:|---|
@@ -184,6 +200,8 @@ Generate all Twitter keys at: https://developer.twitter.com/
 
 ## Twitch
 
+Instructions on how to set up tokens can be found at [d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot](https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot).
+
 | Environment variable | Description |
 |:---:|---|
 | `TWITCH_CLIENT_ID` | Twitch client ID |
@@ -191,3 +209,16 @@ Generate all Twitter keys at: https://developer.twitter.com/
 | `TWITCH_ACCESS_TOKEN` | Twitch access token |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token |
 | `TWITCH_CHANNEL` | Twitch channel |
+
+## StreamLabs
+
+Instructions on how to set up tokens can be found at [dev.streamlabs.com](https://dev.streamlabs.com/docs/register-your-application).
+You don't need to submit your application for review, just whitelist yourself!
+
+| Environment variable | Description |
+|:---:|---|
+| `STREAMLABS_ACCESS_TOKEN` | StreamLabs access token |
+| `STREAMLABS_TYPE` | StreamLabs alert type |
+| `STREAMLABS_IMAGE`| Custom image to display. Leave it blank for default |
+| `STREAMLABS_SOUND` | Custom image to play. Leave it blank for default |
+| `STREAMLABS_DURATION` | StreamLabs alert duration (in milliseconds) |

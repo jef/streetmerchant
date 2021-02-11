@@ -18,8 +18,8 @@ theme:
   features:
     - search.suggest
   font:
-    text: Noto Sans
-    code: JetBrains Mono
+    text: Roboto
+    code: Fira Code
   icon:
     repo: octicons/octoface-24
   logo: assets/images/streetmerchant-logo.png

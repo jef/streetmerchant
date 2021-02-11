@@ -14,23 +14,29 @@ import {sendTelegramMessage} from './telegram';
 import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
+import {updateRedis} from './redis';
+import {activateSmartthingsSwitch} from './smartthings';
+import {sendStreamLabsAlert} from './streamlabs';
 
 export function sendNotification(link: Link, store: Store) {
-	// Priority
-	playSound();
-	sendDiscordMessage(link, store);
-	sendDesktopNotification(link, store);
-	sendEmail(link, store);
-	sendSms(link, store);
-	// Non-priority
-	adjustPhilipsHueLights();
-	sendMqttMessage(link, store);
-	sendPagerDutyNotification(link, store);
-	sendPushbulletNotification(link, store);
-	sendPushoverNotification(link, store);
-	sendSlackMessage(link, store);
-	sendTelegramMessage(link, store);
-	sendTweet(link, store);
-	sendTwilioMessage(link, store);
-	sendTwitchMessage(link, store);
+  // Priority
+  playSound();
+  sendDiscordMessage(link, store);
+  sendDesktopNotification(link, store);
+  sendEmail(link, store);
+  sendSms(link, store);
+  // Non-priority
+  activateSmartthingsSwitch();
+  adjustPhilipsHueLights();
+  sendMqttMessage(link, store);
+  sendPagerDutyNotification(link, store);
+  sendPushbulletNotification(link, store);
+  sendPushoverNotification(link, store);
+  sendSlackMessage(link, store);
+  sendTelegramMessage(link, store);
+  sendTweet(link, store);
+  sendTwilioMessage(link, store);
+  sendTwitchMessage(link, store);
+  updateRedis(link, store);
+  sendStreamLabsAlert(link, store);
 }

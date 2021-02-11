@@ -9,8 +9,8 @@
   <strong>The world's easiest, most powerful stock checker</strong>
 </p>
 <p align="center">
-  <a href="https://github.com/jef/streetmerchant/actions?query=workflow%3Aci"
-    ><img src="https://github.com/jef/streetmerchant/workflows/ci/badge.svg"
+  <a href="https://github.com/jef/streetmerchant/actions?query=workflow%3ARelease"
+    ><img src="https://github.com/jef/streetmerchant/workflows/Release/badge.svg"
   /></a>
   <a href="https://discord.gg/gbVY4vB9JF"
     ><img
