@@ -56,7 +56,7 @@
     "pushover-notifications": "^1.2.2",
     "redis": "^3.0.2",
     "top-user-agents": "^1.0.21",
-    "twilio": "^3.55.1",
+    "twilio": "^3.56.0",
     "twitch": "^4.4.9",
     "twitch-auth": "^4.4.9",
     "twitch-chat-client": "^4.4.9",
