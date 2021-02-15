@@ -23,6 +23,13 @@ export const JohnLewis: Store = {
       url:
         'https://www.johnlewis.com/sony-playstation-5-console-with-dualsense-controller/white/p5115192',
     },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url:
+        'https://www.johnlewis.com/microsoft-xbox-series-x-console-1tb-with-wireless-controller-black/p5151987',
+    },
   ],
   name: 'johnlewis',
 };

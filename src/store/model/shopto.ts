@@ -29,6 +29,12 @@ export const ShopTo: Store = {
       url:
         'https://www.shopto.net/en/ps5hw02-playstation-5-digital-console-p195341/',
     },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.shopto.net/en/xbxhw01-xbox-series-x-p191471/',
+    },
   ],
   name: 'shopto',
 };
