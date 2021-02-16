@@ -33,3 +33,4 @@ export const MediamarktES: Store = {
   ],
   name: 'mediamarktES',
 };
+,␍⏎;
