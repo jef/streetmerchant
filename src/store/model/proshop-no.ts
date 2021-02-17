@@ -7,11 +7,6 @@ export const ProshopNO: Store = {
       container: '.site-stock',
       text: ['1-3 dager til levering', 'Fjernlager'],
     },
-    maxPrice: {
-      container:
-        '.site-currency-wrapper > span[class="site-currency-attention"]',
-      euroFormat: true,
-    },
     outOfStock: {
       container: '.site-stock',
       text: ['Bestilt'],

@@ -7,10 +7,6 @@ export const PowerNO: Store = {
       container: '#product-intro > div.container.old-product-page.ng-star-inserted > div > div > div.col-md-7 > div > div.product-control > div.buy-area.ng-star-inserted > div.buy-area__webshop > button',
       text: ['Legg til handlekurv'],
     },
-    maxPrice: {
-      container:
-        '#product-intro > div.container.old-product-page.ng-star-inserted > div > div > div.col-md-7 > div > div.product-control > div.product-pricing.product-page-b-test.ng-star-inserted > div.price-block > div > div > div > span',
-    },
     outOfStock: {
       container: '#product-intro > div.container.old-product-page.ng-star-inserted > div > div > div.col-md-7 > div > div.product-control > div.buy-area.ng-star-inserted > div > button',
       text: ['Ikke på lager'],
