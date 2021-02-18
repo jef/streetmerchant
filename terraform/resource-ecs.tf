@@ -1,6 +1,5 @@
 resource "aws_ecs_cluster" "main" {
   name = "ps5-cluster"
-
 }
 
 resource "aws_ecs_service" "main" {
@@ -29,6 +28,6 @@ resource "aws_ecs_task_definition" "main" {
   requires_compatibilities = ["FARGATE"]
   network_mode = "awsvpc"
   cpu = 1024
-  memory = "8192"
+  memory = "2048"
   execution_role_arn = data.aws_iam_role.ecs_task_execution_role.arn
 }

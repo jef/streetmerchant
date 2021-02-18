@@ -18,15 +18,30 @@ locals {
   ]
 }
 
-resource "aws_cloudwatch_log_metric_filter" "main" {
+resource "aws_cloudwatch_log_metric_filter" "out_of_stock" {
   for_each = toset(local.stores)
 
   log_group_name = aws_cloudwatch_log_group.main.name
-  name = "stock-poll-${each.key}"
+  name = "${each.key}-out-of-stock"
 
-  pattern = each.key
+  pattern = "${each.key} \"OUT OF STOCK\""
   metric_transformation {
-    name = "stock-poll-store-${each.key}"
+    name = "${each.key}-out-of-stock"
+    namespace = "ps5-streetmerchant"
+    value = 1
+    default_value = 0
+  }
+}
+
+resource "aws_cloudwatch_log_metric_filter" "error" {
+  for_each = toset(local.stores)
+
+  log_group_name = aws_cloudwatch_log_group.main.name
+  name = "${each.key}-error"
+
+  pattern = "${each.key} \"ERROR\""
+  metric_transformation {
+    name = "${each.key}-error"
     namespace = "ps5-streetmerchant"
     value = 1
     default_value = 0

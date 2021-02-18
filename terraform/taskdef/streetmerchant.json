@@ -2,8 +2,8 @@
   {
     "name": "streetmerchant",
     "image": "ghcr.io/jef/streetmerchant:latest",
-    "cpu": 10,
-    "memory": 512,
+    "cpu": 50,
+    "memory": 2048,
     "essential": true,
     "environment": [
       {
