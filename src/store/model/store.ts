@@ -1,4 +1,4 @@
-import {Browser, LoadEvent} from 'puppeteer';
+import {Browser, PuppeteerLifeCycleEvent} from 'puppeteer';
 
 export type Element = {
   container?: string;
@@ -229,7 +229,7 @@ export type Store = {
    * 0 -> 399 inclusive.
    */
   successStatusCodes?: StatusCodeRangeArray;
-  waitUntil?: LoadEvent;
+  waitUntil?: PuppeteerLifeCycleEvent;
   minPageSleep?: number;
   maxPageSleep?: number;
 

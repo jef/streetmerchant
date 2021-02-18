@@ -52,7 +52,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
           notifyText = notifyText.concat(notifyGroup);
         }
 
-        if (Object.keys(notifyGroupSeries).indexOf(link.series) !== 0) {
+        if (Object.keys(notifyGroupSeries).indexOf(link.series) !== -1) {
           notifyText = notifyText.concat(notifyGroupSeries[link.series]);
         }
 

@@ -12,7 +12,11 @@ export const AmazonCa: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '#priceblock_ourprice',
+      container: '.a-color-price',
+    },
+    outOfStock: {
+      container: '.a-color-price',
+      text: ['currently unavailable.'],
     },
   },
   links: [

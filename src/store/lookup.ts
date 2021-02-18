@@ -1,10 +1,9 @@
 import {
   Browser,
   Page,
-  PageEventObj,
-  Request,
-  RespondOptions,
-  Response,
+  HTTPRequest,
+  HTTPResponse,
+  ResponseForRequest,
 } from 'puppeteer';
 import {Link, Store, getStores} from './model';
 import {Print, logger} from '../logger';
@@ -37,21 +36,24 @@ function nextProxy(store: Store) {
 
   if (store.currentProxyIndex === undefined) {
     store.currentProxyIndex = 0;
+  } else {
+    store.currentProxyIndex++;
   }
 
-  store.currentProxyIndex++;
   if (store.currentProxyIndex >= store.proxyList.length) {
     store.currentProxyIndex = 0;
   }
 
-  logger.info(
-    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${store.proxyList.length}`
+  logger.debug(
+    `ℹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${
+      store.proxyList.length
+    } (${store.proxyList[store.currentProxyIndex]})`
   );
 
   return store.proxyList[store.currentProxyIndex];
 }
 
-async function handleLowBandwidth(request: Request) {
+async function handleLowBandwidth(request: HTTPRequest) {
   if (!config.browser.lowBandwidth) {
     return false;
   }
@@ -70,7 +72,7 @@ async function handleLowBandwidth(request: Request) {
   return false;
 }
 
-async function handleProxy(request: Request, proxy?: string) {
+async function handleProxy(request: HTTPRequest, proxy?: string) {
   if (!proxy) {
     return false;
   }
@@ -89,7 +91,7 @@ async function handleProxy(request: Request, proxy?: string) {
   return true;
 }
 
-async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
+async function handleAdBlock(request: HTTPRequest, adBlockRequestHandler: any) {
   if (!adBlockRequestHandler) {
     return false;
   }
@@ -109,7 +111,7 @@ async function handleAdBlock(request: Request, adBlockRequestHandler: any) {
       resolve(true);
     };
 
-    const respondFunc = async (response: RespondOptions) => {
+    const respondFunc = async (response: ResponseForRequest) => {
       try {
         await request.respond(response);
       } catch {
@@ -196,7 +198,7 @@ async function lookup(browser: Browser, store: Store) {
     let adBlockRequestHandler: any;
     let pageProxy;
     if (useAdBlock) {
-      const onProxyFunc = (event: keyof PageEventObj, handler: any) => {
+      const onProxyFunc = (event: string, handler: any) => {
         if (event !== 'request') {
           page.on(event, handler);
           return;
@@ -252,11 +254,22 @@ async function lookup(browser: Browser, store: Store) {
     try {
       statusCode = await lookupCard(browser, store, page, link);
     } catch (error: unknown) {
-      logger.error(
-        `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
-          (error as Error).message
-        }`
-      );
+      if (store.currentProxyIndex !== undefined && store.proxyList) {
+        const proxy = `${store.currentProxyIndex + 1}/${
+          store.proxyList.length
+        }`;
+        logger.error(
+          `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${
+            link.model
+          } - ${(error as Error).message}`
+        );
+      } else {
+        logger.error(
+          `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+            (error as Error).message
+          }`
+        );
+      }
       const client = await page.target().createCDPSession();
       await client.send('Network.clearBrowserCookies');
     }
@@ -284,7 +297,7 @@ async function lookupCard(
   link: Link
 ): Promise<number> {
   const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
-  const response: Response | null = await page.goto(link.url, {
+  const response: HTTPResponse | null = await page.goto(link.url, {
     waitUntil: givenWaitFor,
   });
 
@@ -333,7 +346,7 @@ async function handleResponse(
   store: Store,
   page: Page,
   link: Link,
-  response?: Response | null,
+  response?: HTTPResponse | null,
   recursionDepth = 0
 ) {
   if (!response) {
@@ -350,7 +363,7 @@ async function handleResponse(
         if (recursionDepth > 4) {
           logger.warn(Print.recursionLimit(link, store, true));
         } else {
-          const response: Response | null = await page.waitForNavigation({
+          const response: HTTPResponse | null = await page.waitForNavigation({
             waitUntil: 'networkidle0',
           });
           recursionDepth++;
@@ -508,7 +521,7 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
 
     try {
       const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
-      const response: Response | null = await page.goto(link.url, {
+      const response: HTTPResponse | null = await page.goto(link.url, {
         waitUntil: givenWaitFor,
       });
       statusCode = await handleResponse(browser, store, page, link, response);

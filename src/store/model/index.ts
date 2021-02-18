@@ -51,9 +51,11 @@ import {Currys} from './currys';
 import {Cyberport} from './cyberport';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
+import {DustinHomeNO} from './dustinhome-no';
 import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
+import {Elkjop} from './elkjop';
 import {Eprice} from './eprice';
 import {Equippr} from './equippr';
 import {Euronics} from './euronics';
@@ -75,6 +77,7 @@ import {HarveyNormanIE} from './harveynorman-ie';
 import {Igamecomputer} from './igame';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
+import {KomplettNO} from './komplett-no';
 import {LandmarkComputers} from './lmc';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
@@ -89,8 +92,10 @@ import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
-import {Nvidia} from './nvidia';
-import {NvidiaApi} from './nvidia-api';
+import {NvidiaDE} from './nvidia-de';
+import {NvidiaES} from './nvidia-es';
+import {NvidiaFR} from './nvidia-fr';
+import {NvidiaGB} from './nvidia-gb';
 import {OfficeDepot} from './officedepot';
 import {Ollo} from './ollo';
 import {Otto} from './otto';
@@ -102,8 +107,10 @@ import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
 import {Pny} from './pny';
+import {PowerNO} from './power-no';
 import {ProshopDE} from './proshop-de';
 import {ProshopDK} from './proshop-dk';
+import {ProshopNO} from './proshop-no';
 import {Rosman} from './rosman';
 import {RosmanMelb} from './rosman-melb';
 import {Saturn} from './saturn';
@@ -186,9 +193,11 @@ export const storeList = new Map([
   [Cyberport.name, Cyberport],
   [Dcomp.name, Dcomp],
   [Drako.name, Drako],
+  [DustinHomeNO.name, DustinHomeNO],
   [EbGames.name, EbGames],
   [Ebuyer.name, Ebuyer],
   [Elcorteingles.name, Elcorteingles],
+  [Elkjop.name, Elkjop],
   [Eprice.name, Eprice],
   [Equippr.name, Equippr],
   [Euronics.name, Euronics],
@@ -210,6 +219,7 @@ export const storeList = new Map([
   [Igamecomputer.name, Igamecomputer],
   [JohnLewis.name, JohnLewis],
   [Kabum.name, Kabum],
+  [KomplettNO.name, KomplettNO],
   [LandmarkComputers.name, LandmarkComputers],
   [Mediamarkt.name, Mediamarkt],
   [Medimax.name, Medimax],
@@ -224,8 +234,10 @@ export const storeList = new Map([
   [NeweggSg.name, NeweggSg],
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
-  [Nvidia.name, Nvidia],
-  [NvidiaApi.name, NvidiaApi],
+  [NvidiaDE.name, NvidiaDE],
+  [NvidiaES.name, NvidiaES],
+  [NvidiaFR.name, NvidiaFR],
+  [NvidiaGB.name, NvidiaGB],
   [OfficeDepot.name, OfficeDepot],
   [Ollo.name, Ollo],
   [Otto.name, Otto],
@@ -237,8 +249,10 @@ export const storeList = new Map([
   [PCComponentes.name, PCComponentes],
   [PlayStation.name, PlayStation],
   [Pny.name, Pny],
+  [PowerNO.name, PowerNO],
   [ProshopDE.name, ProshopDE],
   [ProshopDK.name, ProshopDK],
+  [ProshopNO.name, ProshopNO],
   [Rosman.name, Rosman],
   [RosmanMelb.name, RosmanMelb],
   [Saturn.name, Saturn],
@@ -326,11 +340,6 @@ function printConfig() {
 
 function warnIfStoreDeprecated(store: Store) {
   switch (store.name) {
-    case 'nvidia':
-    case 'nvidia-api':
-      if (config.store.country === 'usa')
-        logger.warn(`${store.name} is deprecated in favor of bestbuy`);
-      break;
     case 'evga':
       logger.warn(
         `${store.name} is deprecated since they only support queuing`

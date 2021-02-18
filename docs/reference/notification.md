@@ -73,6 +73,7 @@ Default provider is Gmail. If you use a different email provider, you must provi
 | Sprint | `sprint`|
 | Telus | `telus`|
 | T-Mobile | `tmobile`|
+| USCC | `uscc`|
 | Verizon | `verizon`|
 | Virgin | `virgin`|
 | Virgin (CA) | `virgin-ca`|
@@ -155,6 +156,15 @@ Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 | `SLACK_CHANNEL` | Channel for posting |
 | `SLACK_TOKEN` | API token |
 
+## SmartThings
+
+Generate token at [account.smartthings.com/tokens](https://account.smartthings.com/tokens).
+
+| Environment variable | Description |
+|:---:|---|
+| `SMARTTHINGS_TOKEN` | Access token |
+| `SMARTTHINGS_SWITCH_LABEL` | Switch Label of switch to activate|
+
 ## Telegram
 
 | Environment variable | Description |
@@ -199,3 +209,16 @@ Instructions on how to set up tokens can be found at [d-fischer.github.io/twitch
 | `TWITCH_ACCESS_TOKEN` | Twitch access token |
 | `TWITCH_REFRESH_TOKEN` | Twitch refresh token |
 | `TWITCH_CHANNEL` | Twitch channel |
+
+## StreamLabs
+
+Instructions on how to set up tokens can be found at [dev.streamlabs.com](https://dev.streamlabs.com/docs/register-your-application).
+You don't need to submit your application for review, just whitelist yourself!
+
+| Environment variable | Description |
+|:---:|---|
+| `STREAMLABS_ACCESS_TOKEN` | StreamLabs access token |
+| `STREAMLABS_TYPE` | StreamLabs alert type |
+| `STREAMLABS_IMAGE`| Custom image to display. Leave it blank for default |
+| `STREAMLABS_SOUND` | Custom image to play. Leave it blank for default |
+| `STREAMLABS_DURATION` | StreamLabs alert duration (in milliseconds) |

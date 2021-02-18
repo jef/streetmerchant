@@ -1,17 +1,28 @@
 import * as Process from 'process';
 import {config} from './config'; // Needs to be loaded first
-import {startAPIServer, stopAPIServer} from './web'; // eslint-disable-line sort-imports
-import {Browser} from 'puppeteer';
+import {startAPIServer, stopAPIServer} from './web';
+import {Browser, launch} from 'puppeteer';
 import {getSleepTime} from './util';
 import {logger} from './logger';
-import puppeteer from 'puppeteer-extra';
-import stealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {storeList} from './store/model';
 import {tryLookupAndLoop} from './store';
 
-puppeteer.use(stealthPlugin());
-
 let browser: Browser | undefined;
+
+async function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Schedules a restart of the bot
+ */
+async function restartMain() {
+  if (config.restartTime > 0) {
+    await sleep(config.restartTime);
+    await stop();
+    loopMain();
+  }
+}
 
 /**
  * Starts the bot.
@@ -48,7 +59,7 @@ async function main() {
   }
 
   await stop();
-  browser = await puppeteer.launch({
+  browser = await launch({
     args,
     defaultViewport: {
       height: config.page.height,
@@ -92,6 +103,7 @@ async function stopAndExit() {
  */
 async function loopMain() {
   try {
+    restartMain();
     await main();
   } catch (error: unknown) {
     logger.error(

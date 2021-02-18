@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 14.15.4
       - name: Setup build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run paths filter
-        uses: dorny/paths-filter@v2.7.0
+        uses: dorny/paths-filter@v2.8.0
         id: filter
         with:
           filters: |
