@@ -38,4 +38,3 @@ variable "streetmerchant_env" {
   description = "name/value pairs for .env values"
   default = {}
 }
-
