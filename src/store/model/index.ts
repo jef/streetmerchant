@@ -103,6 +103,7 @@ import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
 import {PCByte} from './pcbyte';
 import {PCComponentes} from './pccomponentes';
+import {PCDiga} from './pcdiga';
 import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
@@ -247,6 +248,7 @@ export const storeList = new Map([
   [Pccg.name, Pccg],
   [PCKing.name, PCKing],
   [PCComponentes.name, PCComponentes],
+  [PCDiga.name, PCDiga],
   [PlayStation.name, PlayStation],
   [Pny.name, Pny],
   [PowerNO.name, PowerNO],
