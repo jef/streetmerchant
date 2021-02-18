@@ -14,7 +14,9 @@
     "start:production": "node build/src/index.js",
     "test": "c8 mocha 'build/test/**/test-*.js' --exclude 'build/test/functional/**/test-*.js'",
     "test:notification": "npm run compile && node build/test/functional/test-notification.js",
-    "test:notification:production": "node build/test/functional/test-notification.js"
+    "test:notification:production": "node build/test/functional/test-notification.js",
+    "deploy:plan": "terraform -chdir=terraform plan",
+    "deploy:apply": "terraform -chdir=terraform apply"
   },
   "engines": {
     "node": ">=12.0.0 <15.0.0"
