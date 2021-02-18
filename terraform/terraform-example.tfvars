@@ -1,3 +1,4 @@
+// rename this to terraform.tfvars if you want tf commands to pick it up automatically
 credential_profile="ps5"
 region="eu-west-2"
 
