@@ -40,7 +40,7 @@ export const MediamarktAt: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.mediamarkt.de/de/product/-2641856.html',
+      url: 'https://www.mediamarkt.at/de/product/-1759580.html',
     },
     {
       brand: 'gainward',
