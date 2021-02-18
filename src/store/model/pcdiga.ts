@@ -13,7 +13,7 @@ export const PCDiga: Store = {
     },
     maxPrice: {
       container: '.price-container.price-final_price > .price-wrapper > span',
-      euroFormat: true
+      euroFormat: true,
     },
   },
   links: [
@@ -163,7 +163,7 @@ export const PCDiga: Store = {
       series: '3080',
       url:
         'https://www.pcdiga.com/placa-grafica-asus-rog-strix-geforce-rtx-3080-10gb-gddr6x-oc-white-edition-90yv0fa5-m0nm00',
-    }
+    },
   ],
   name: 'pcdiga',
   waitUntil: 'domcontentloaded',
