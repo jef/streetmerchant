@@ -1,6 +1,13 @@
+variable "credential_file" {
+  type = string
+  description = "your aws credentials file"
+  default = "~/.aws/credentials"
+}
+
 variable "credential_profile" {
   type = string
   description = "the section in ~/.aws/credentials with your desired aws_access_key_id and aws_secret_access_key values"
+  default = "default"
 }
 
 variable "region" {
@@ -27,8 +34,8 @@ variable "cpu" {
 }
 
 variable "streetmerchant_env" {
-  type = list
+  type = map
   description = "name/value pairs for .env values"
-  default = [{}]
+  default = {}
 }
 

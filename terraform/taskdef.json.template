@@ -1,6 +1,6 @@
 [
   {
-    "name": "streetmerchant",
+    "name": "${name}-task",
     "image": "ghcr.io/jef/streetmerchant:latest",
     "cpu": ${cpu},
     "memory": ${memory},

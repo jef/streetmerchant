@@ -1,21 +1,10 @@
 resource "aws_cloudwatch_log_group" "main" {
   name = var.app_name
-
   retention_in_days = 3
 }
 
 locals {
-  stores = [
-    "amazon-uk",
-    "game",
-    "argos",
-    "box",
-    "currys",
-    "johnlewis",
-    "shopto",
-    "smythstoys",
-    "very"
-  ]
+  stores = split(",",var.streetmerchant_env["STORES"])
 }
 
 resource "aws_cloudwatch_log_metric_filter" "out_of_stock" {
