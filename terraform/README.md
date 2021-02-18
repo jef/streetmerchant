@@ -22,8 +22,8 @@ Then you can:
 cd ./terraform
 terraform init
 
-npm run deploy:plan
-npm run deploy:apply
+terraform plan
+terraform apply
 ```
 
 ## What's included

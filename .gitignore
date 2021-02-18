@@ -19,4 +19,3 @@ desktop.ini
 twitch.json
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
-terraform/terraform.tfvars
