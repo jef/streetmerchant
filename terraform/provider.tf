@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "eu-west-2"
-  shared_credentials_file = "/Users/dan/.aws/credentials"
-  profile                 = "ps5"
+  region                  = var.region
+  shared_credentials_file = "~/.aws/credentials"
+  profile                 = var.credential_profile
 }

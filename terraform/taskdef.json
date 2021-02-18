@@ -2,8 +2,8 @@
   {
     "name": "streetmerchant",
     "image": "ghcr.io/jef/streetmerchant:latest",
-    "cpu": 50,
-    "memory": 2048,
+    "cpu": ${cpu},
+    "memory": ${memory},
     "essential": true,
     "environment": [
       {
@@ -27,7 +27,7 @@
       "logDriver": "awslogs",
       "options": {
         "awslogs-group": "${awslogs-group}",
-        "awslogs-region": "eu-west-2",
+        "awslogs-region": "${region}",
         "awslogs-stream-prefix": "ecs"
       }
     }

@@ -1,9 +1,9 @@
 resource "aws_ecs_cluster" "main" {
-  name = "ps5-cluster"
+  name = "${var.app_name}-ecs-cluster"
 }
 
 resource "aws_ecs_service" "main" {
-  name = "ps5-service"
+  name = "${var.app_name}-ecs-service"
   cluster = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.main.id
   desired_count = 1
@@ -21,13 +21,17 @@ data "aws_iam_role" "ecs_task_execution_role" {
 }
 
 resource "aws_ecs_task_definition" "main" {
-  container_definitions = templatefile("taskdef/streetmerchant.json", {
-   "awslogs-group": aws_cloudwatch_log_group.main.name
+  container_definitions = templatefile("taskdef.json", {
+    "awslogs-group": aws_cloudwatch_log_group.main.name
+    "region": var.region
+    "cpu": var.cpu
+    "memory": parseint(var.memory,10)
+    "environment": var.streetmerchant_env
   })
-  family = "ps5-streetmerchant-task"
+  family = var.app_name
   requires_compatibilities = ["FARGATE"]
   network_mode = "awsvpc"
-  cpu = 1024
-  memory = "2048"
+  cpu = var.cpu
+  memory = var.memory
   execution_role_arn = data.aws_iam_role.ecs_task_execution_role.arn
 }
