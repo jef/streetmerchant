@@ -137,6 +137,7 @@ Used with the `STORES` variable.
 | PCByte | AU |  `pcbyte`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCDiga | PT | `pcdiga`|
 | PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|
