@@ -21,12 +21,12 @@ data "aws_iam_role" "ecs_task_execution_role" {
 }
 
 resource "aws_ecs_task_definition" "main" {
-  container_definitions = templatefile("taskdef.json", {
+  container_definitions = templatefile("taskdef.json.template", {
     "awslogs-group": aws_cloudwatch_log_group.main.name
     "region": var.region
     "cpu": var.cpu
     "memory": parseint(var.memory,10)
-    "environment": var.streetmerchant_env
+    "environment": jsonencode(var.streetmerchant_env)
   })
   family = var.app_name
   requires_compatibilities = ["FARGATE"]

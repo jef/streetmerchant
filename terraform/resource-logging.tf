@@ -50,5 +50,5 @@ resource "aws_cloudwatch_log_metric_filter" "error" {
 
 resource "aws_cloudwatch_dashboard" "main" {
   dashboard_name = "${var.app_name}-dashboard"
-  dashboard_body = templatefile("dashboard.json", {})
+  dashboard_body = templatefile("dashboard.json.template", {})
 }
