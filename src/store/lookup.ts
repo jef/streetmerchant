@@ -254,18 +254,21 @@ async function lookup(browser: Browser, store: Store) {
     while (true) {
       try {
         statusCode = await lookupCard(browser, store, page, link);
-        break
+        break;
       } catch (error: unknown) {
         if (store.currentProxyIndex !== undefined && store.proxyList) {
-          const proxy = `${store.currentProxyIndex + 1}/${store.proxyList.length
-            }`;
+          const proxy = `${store.currentProxyIndex + 1}/${
+              store.proxyList.length
+          }`;
           logger.error(
-            `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${link.model
+            `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${
+              link.model
             } - ${(error as Error).message}`
           );
         } else {
           logger.error(
-            `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${(error as Error).message
+            `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+              (error as Error).message
             }`
           );
         }
