@@ -251,27 +251,27 @@ async function lookup(browser: Browser, store: Store) {
 
     let statusCode = 0;
 
-    try {
-      statusCode = await lookupCard(browser, store, page, link);
-    } catch (error: unknown) {
-      if (store.currentProxyIndex !== undefined && store.proxyList) {
-        const proxy = `${store.currentProxyIndex + 1}/${
-          store.proxyList.length
-        }`;
-        logger.error(
-          `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${
-            link.model
-          } - ${(error as Error).message}`
-        );
-      } else {
-        logger.error(
-          `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
-            (error as Error).message
-          }`
-        );
+    while (true) {
+      try {
+        statusCode = await lookupCard(browser, store, page, link);
+        break
+      } catch (error: unknown) {
+        if (store.currentProxyIndex !== undefined && store.proxyList) {
+          const proxy = `${store.currentProxyIndex + 1}/${store.proxyList.length
+            }`;
+          logger.error(
+            `✖ [${proxy}] [${store.name}] ${link.brand} ${link.series} ${link.model
+            } - ${(error as Error).message}`
+          );
+        } else {
+          logger.error(
+            `✖ [${store.name}] ${link.brand} ${link.series} ${link.model} - ${(error as Error).message
+            }`
+          );
+        }
+        const client = await page.target().createCDPSession();
+        await client.send('Network.clearBrowserCookies');
       }
-      const client = await page.target().createCDPSession();
-      await client.send('Network.clearBrowserCookies');
     }
 
     if (pageProxy) {
