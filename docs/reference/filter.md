@@ -123,6 +123,7 @@ Used with the `STORES` variable.
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
 | Mwave | AU | `mwave`|
+| Netonnet | NO | `netonnet-no`|
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
 | Newegg | SG | `newegg-sg`|
@@ -137,6 +138,7 @@ Used with the `STORES` variable.
 | PCByte | AU |  `pcbyte`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCDiga | PT | `pcdiga`|
 | PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|

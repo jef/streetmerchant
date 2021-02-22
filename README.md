@@ -9,20 +9,9 @@
   <strong>The world's easiest, most powerful stock checker</strong>
 </p>
 <p align="center">
-  <a href="https://github.com/jef/streetmerchant/actions?query=workflow%3ARelease"
-    ><img src="https://github.com/jef/streetmerchant/workflows/Release/badge.svg"
-  /></a>
-  <a href="https://discord.gg/gbVY4vB9JF"
-    ><img
-      src="https://img.shields.io/discord/773913070665859073.svg?label=chat&logo=discord&logoColor=ffffff&color=7389D8"
-      alt="Tweet"
-  /></a>
-  <a
-    href="https://twitter.com/intent/tweet?text=Beat%20the%20masses%20with%20streetmerchant&url=https://github.com/jef/streetmerchant&hashtags=typescript,opensource,bot,shopping"
-    ><img
-      src="https://img.shields.io/badge/twitter-share-green?logo=twitter&style=social"
-      alt="Tweet"
-  /></a>
+  <a href="https://github.com/jef/streetmerchant/actions/workflows/release.yaml"><img src="https://img.shields.io/github/workflow/status/jef/streetmerchant/Release?color=24292e&label=Release&logo=github&logoColor=tewt&style=flat-square" /></a>
+  <a href="https://github.com/jef/streetmerchant/actions/workflows/nightly-release.yaml"><img src="https://img.shields.io/github/workflow/status/jef/streetmerchant/Nightly%20Release?color=24292e&label=Nightly%20Release&logo=github&logoColor=tewt&style=flat-square" /></a>
+  <a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073.svg?color=24292e&label=%20&logo=discord&logoColor=ffffff&style=flat-square" /></a>
 </p>
 <p align="center">
   <em>To get started, visit <a href="https://jef.codes/streetmerchant">jef.codes/streetmerchant</a></em>

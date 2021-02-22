@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup release please
-        uses: google-github-actions/release-please-action@v2.17
+        uses: google-github-actions/release-please-action@v2
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -31,4 +31,6 @@ jobs:
           TAG_NAME: ${{ steps.release.outputs.tag_name }}
       - name: Release Docker image
         if: ${{ steps.release.outputs.release_created }}
-        run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
+        run: |
+          docker push "ghcr.io/${GITHUB_REPOSITORY}:${TAG_NAME}"
+          docker push "ghcr.io/${GITHUB_REPOSITORY}:latest"
