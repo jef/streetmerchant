@@ -18,4 +18,6 @@ jobs:
           -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
           -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
       - name: Release Docker image
-        run: docker push "ghcr.io/${GITHUB_REPOSITORY}"
+        run: |
+          docker push "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}"
+          docker push "ghcr.io/${GITHUB_REPOSITORY}:nightly"
