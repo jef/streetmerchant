@@ -85,6 +85,7 @@ nav:
     - Filter: reference/filter.md
     - Notification: reference/notification.md
     - Proxy: reference/proxy.md
+    - Terraform: reference/terraform.md
   - Help:
       - General: help/general.md
       - Troubleshoot: help/troubleshoot.md
