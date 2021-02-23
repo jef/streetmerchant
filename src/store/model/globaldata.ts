@@ -20,7 +20,7 @@ export const Globaldata: Store = {
       model: 'test:model',
       series: 'test:series',
       url:
-        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3080-ek-10gd6x-90yv0f60-m0nm00',
+        'https://www.globaldata.pt/drive-externa-dvdr-asus-sdrw-08d2s-u-lite-8x-branco-usb-20-90-dq0436-ua221kz',
     },
     {
       brand: 'asus',
