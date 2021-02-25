@@ -87,9 +87,11 @@ Used with the `STORES` variable.
 | Cyberport | DE | `cyberport` |
 | DComp | AU | `dcomp`|
 | Drako | IT | `drako` |
+| DustinHome | NO | `dustinhome-no` |
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
+| Elkjop | NO | `elkjop`|
 | ePrice | IT | `eprice`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
@@ -111,6 +113,7 @@ Used with the `STORES` variable.
 | iGame Computer | AU |  `igame-computer`|
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
+| Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
@@ -120,6 +123,7 @@ Used with the `STORES` variable.
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
 | Mwave | AU | `mwave`|
+| Netonnet | NO | `netonnet-no`|
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
 | Newegg | SG | `newegg-sg`|
@@ -134,11 +138,14 @@ Used with the `STORES` variable.
 | PCByte | AU |  `pcbyte`|
 | PCCG | AU | `pccg`|
 | PCComponentes | ES | `pccomponentes`|
+| PCDiga | PT | `pcdiga`|
 | PCKing | DE | `pcking` |
 | PlayStation | US | `playstation`|
 | PNY | US | `pny`|
+| Power | NO | `power-no`|
 | Proshop | DE | `proshop-de`|
 | Proshop | DK | `proshop-dk`|
+| Proshop | NO | `proshop-no`|
 | Rosman | AU |  `rosman`|
 | Rosman-Melb | AU |  `rosman-melb`|
 | Saturn | DE | `saturn`|
