@@ -2,6 +2,7 @@
 
 | Environment variable | Description |
 |:---:|---|
+| `MAX_PRICE_SERIES_3060` | Maximum price allowed for a match, applies 3060 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
@@ -227,6 +228,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD RX 6800 | `rx6800` |
 | AMD RX 6800XT | `rx6800xt` |
 | AMD RX 6900XT | `rx6900xt` |
+| Nvidia RTX 3060 | `3060` |
 | Nvidia RTX 3060 Ti | `3060ti` |
 | Nvidia RTX 3070 | `3070` |
 | Nvidia RTX 3080 | `3080` |
