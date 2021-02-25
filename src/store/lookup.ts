@@ -22,7 +22,7 @@ import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
-import {sendNotification} from '../notification';
+import {SendNotification} from '../notification';
 import useProxy from '@doridian/puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
@@ -151,7 +151,11 @@ async function handleAdBlock(request: HTTPRequest, adBlockRequestHandler: any) {
  * @param browser Puppeteer browser.
  * @param store Vendor of graphics cards.
  */
-async function lookup(browser: Browser, store: Store) {
+async function lookup(
+  browser: Browser,
+  store: Store,
+  sendNotification: SendNotification
+) {
   if (!getStores().has(store.name)) {
     return;
   }
@@ -252,7 +256,13 @@ async function lookup(browser: Browser, store: Store) {
     let statusCode = 0;
 
     try {
-      statusCode = await lookupCard(browser, store, page, link);
+      statusCode = await lookupCard(
+        browser,
+        store,
+        page,
+        link,
+        sendNotification
+      );
     } catch (error: unknown) {
       if (store.currentProxyIndex !== undefined && store.proxyList) {
         const proxy = `${store.currentProxyIndex + 1}/${
@@ -294,7 +304,8 @@ async function lookupCard(
   browser: Browser,
   store: Store,
   page: Page,
-  link: Link
+  link: Link,
+  sendNotification: SendNotification
 ): Promise<number> {
   const givenWaitFor = store.waitUntil ? store.waitUntil : 'networkidle0';
   const response: HTTPResponse | null = await page.goto(link.url, {
@@ -305,10 +316,17 @@ async function lookupCard(
   const statusCode = await handleResponse(browser, store, page, link, response);
 
   if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
+    sendNotification({
+      result: 'failure',
+      failureReason: 'request_failed',
+      statusCode,
+      link,
+      store,
+    });
     return statusCode;
   }
 
-  if (await lookupCardInStock(store, page, link)) {
+  if (await lookupCardInStock(store, page, link, sendNotification)) {
     const givenUrl =
       link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url;
     logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
@@ -319,7 +337,11 @@ async function lookupCard(
         : link.openCartAction(browser));
     }
 
-    sendNotification(link, store);
+    sendNotification({
+      result: 'in_stock',
+      link,
+      store,
+    });
 
     if (config.page.inStockWaitTime) {
       inStock[link.url] = true;
@@ -407,7 +429,12 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
   return false;
 }
 
-async function lookupCardInStock(store: Store, page: Page, link: Link) {
+async function lookupCardInStock(
+  store: Store,
+  page: Page,
+  link: Link,
+  sendNotification: SendNotification
+) {
   const baseOptions: Selector = {
     requireVisible: false,
     selector: store.labels.container ?? 'body',
@@ -416,7 +443,12 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
   if (store.labels.captcha) {
     if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
-      logger.warn(Print.captcha(link, store, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'captcha',
+        link,
+        store,
+      });
       await delay(getSleepTime(store));
       return false;
     }
@@ -426,14 +458,24 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     if (
       await pageIncludesLabels(page, store.labels.bannedSeller, baseOptions)
     ) {
-      logger.warn(Print.bannedSeller(link, store, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'banned_seller',
+        link,
+        store,
+      });
       return false;
     }
   }
 
   if (store.labels.outOfStock) {
     if (await pageIncludesLabels(page, store.labels.outOfStock, baseOptions)) {
-      logger.info(Print.outOfStock(link, store, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'out_of_stock',
+        link,
+        store,
+      });
       return false;
     }
   }
@@ -444,7 +486,13 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
 
     if (link.price && link.price > maxPrice && maxPrice > 0) {
-      logger.info(Print.maxPrice(link, store, maxPrice, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'max_price',
+        maxPrice,
+        link,
+        store,
+      });
       return false;
     }
   }
@@ -466,7 +514,12 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     };
 
     if (!(await pageIncludesLabels(page, store.labels.inStock, options))) {
-      logger.info(Print.outOfStock(link, store, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'out_of_stock',
+        link,
+        store,
+      });
       return false;
     }
   }
@@ -479,7 +532,12 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     };
 
     if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
-      logger.info(Print.outOfStock(link, store, true));
+      sendNotification({
+        result: 'failure',
+        failureReason: 'out_of_stock',
+        link,
+        store,
+      });
       return false;
     }
   }
@@ -540,7 +598,11 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
   }
 }
 
-export async function tryLookupAndLoop(browser: Browser, store: Store) {
+export async function tryLookupAndLoop(
+  browser: Browser,
+  store: Store,
+  sendNotification: SendNotification
+) {
   if (!browser.isConnected()) {
     logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
     return;
@@ -548,12 +610,12 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
 
   logger.debug(`[${store.name}] Starting lookup...`);
   try {
-    await lookup(browser, store);
+    await lookup(browser, store, sendNotification);
   } catch (error: unknown) {
     logger.error(error);
   }
 
   const sleepTime = getSleepTime(store);
   logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
-  setTimeout(tryLookupAndLoop, sleepTime, browser, store);
+  setTimeout(tryLookupAndLoop, sleepTime, browser, store, sendNotification);
 }

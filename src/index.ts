@@ -6,6 +6,7 @@ import {getSleepTime} from './util';
 import {logger} from './logger';
 import {storeList} from './store/model';
 import {tryLookupAndLoop} from './store';
+import {sendNotification} from './notification';
 
 let browser: Browser | undefined;
 
@@ -76,7 +77,13 @@ async function main() {
       store.setupAction(browser);
     }
 
-    setTimeout(tryLookupAndLoop, getSleepTime(store), browser, store);
+    setTimeout(
+      tryLookupAndLoop,
+      getSleepTime(store),
+      browser,
+      store,
+      sendNotification
+    );
   }
 
   await startAPIServer();
