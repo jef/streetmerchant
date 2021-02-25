@@ -87,6 +87,7 @@ import {MicroCenter} from './microcenter';
 import {Mindfactory} from './mindfactory';
 import {Msy} from './msy';
 import {Mwave} from './mwave';
+import {NetonnetNO} from './netonnet-no';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
@@ -103,6 +104,7 @@ import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
 import {PCByte} from './pcbyte';
 import {PCComponentes} from './pccomponentes';
+import {PCDiga} from './pcdiga';
 import {PCKing} from './pcking';
 import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
@@ -229,6 +231,7 @@ export const storeList = new Map([
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
   [Mwave.name, Mwave],
+  [NetonnetNO.name, NetonnetNO],
   [Newegg.name, Newegg],
   [NeweggCa.name, NeweggCa],
   [NeweggSg.name, NeweggSg],
@@ -247,6 +250,7 @@ export const storeList = new Map([
   [Pccg.name, Pccg],
   [PCKing.name, PCKing],
   [PCComponentes.name, PCComponentes],
+  [PCDiga.name, PCDiga],
   [PlayStation.name, PlayStation],
   [Pny.name, Pny],
   [PowerNO.name, PowerNO],
