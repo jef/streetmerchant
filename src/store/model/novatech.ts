@@ -68,6 +68,11 @@ export const Novatech: Store = {
     }),
     urls: [
       {
+        series: '3060',
+        url:
+          'https://www.novatech.co.uk/products/components/nvidiageforcegraphicscards/nvidiartxseries/nvidiartx3060/?i=200',
+      },
+      {
         series: '3060ti',
         url:
           'https://www.novatech.co.uk/products/components/nvidiageforcegraphicscards/nvidiartxseries/nvidiartx3060ti/?i=200',

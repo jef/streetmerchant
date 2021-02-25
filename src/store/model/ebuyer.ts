@@ -107,7 +107,17 @@ export const Ebuyer: Store = {
       {
         series: '3060ti',
         url:
-          'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti',
+          'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia?q=3060',
+      },
+      {
+        series: '3060ti',
+        url:
+          'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060-Ti?page=2',
+      },
+      {
+        series: '3060',
+        url:
+          'https://www.ebuyer.com/store/Components/cat/Graphics-Cards-Nvidia/subcat/GeForce-RTX-3060',
       },
       {
         series: '3070',
