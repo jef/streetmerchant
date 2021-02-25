@@ -103,6 +103,7 @@ export type Model =
   | 'gaming pro'
   | 'gaming trio'
   | 'gaming x trio'
+  | 'gaming x'
   | 'gaming x3'
   | 'ghost oc'
   | 'suprim x'
