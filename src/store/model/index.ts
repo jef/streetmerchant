@@ -1,5 +1,6 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
+import {Ldlc} from './ldlc';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
@@ -71,7 +72,6 @@ import {Gamestop} from './gamestop';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
-import {Globaldata} from './globaldata';
 import {HardwarePlanet} from './hardware-planet';
 import {HarrisTechnology} from './harristechnology';
 import {HarveyNormanIE} from './harveynorman-ie';
@@ -216,7 +216,6 @@ export const storeList = new Map([
   [GamestopDE.name, GamestopDE],
   [GamestopIE.name, GamestopIE],
   [GamestopIT.name, GamestopIT],
-  [Globaldata.name, Globaldata],
   [HardwarePlanet.name, HardwarePlanet],
   [HarrisTechnology.name, HarrisTechnology],
   [HarveyNormanIE.name, HarveyNormanIE],
@@ -228,6 +227,7 @@ export const storeList = new Map([
   [Mediamarkt.name, Mediamarkt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
+  [Ldlc.name, Ldlc],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
   [Mindfactory.name, Mindfactory],
