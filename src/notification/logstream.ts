@@ -7,7 +7,9 @@ function assertNever(x: never): never {
 
 export function sendLogstream(pollEvent: LinkPollEvent) {
   const {link, store} = pollEvent;
-  if (pollEvent.result === 'failure') {
+  if (pollEvent.result === 'in_stock') {
+    logger.info(`${Print.inStock(link, store, true)}\n${pollEvent.url}`);
+  } else {
     switch (pollEvent.failureReason) {
       case 'captcha':
         logger.warn(Print.captcha(link, store, true));

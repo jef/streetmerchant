@@ -23,7 +23,7 @@ import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import useProxy from '@doridian/puppeteer-page-proxy';
-import {LinkPollEvent} from "../notification/link_poll_event";
+import {LinkPollEvent} from '../notification/link_poll_event';
 
 const inStock: Record<string, boolean> = {};
 
@@ -331,7 +331,6 @@ async function lookupCard(
   if (await lookupCardInStock(store, page, link, sendNotification)) {
     const givenUrl =
       link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url;
-    logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
 
     if (config.browser.open) {
       await (link.openCartAction === undefined
@@ -341,6 +340,7 @@ async function lookupCard(
 
     sendNotification({
       result: 'in_stock',
+      url: givenUrl,
       link,
       store,
     });

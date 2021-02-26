@@ -15,7 +15,7 @@ type LinkPollError = {result: 'failure'} & (
   | OutOfStock
   | BannedSeller
 );
-type LinkPollSuccess = {result: 'in_stock'};
+type LinkPollSuccess = {result: 'in_stock'; url: string};
 
 export type LinkPollEvent = (LinkPollError | LinkPollSuccess) & {
   link: Link;

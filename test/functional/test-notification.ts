@@ -27,7 +27,7 @@ const store: Store = {
 /**
  * Send test email.
  */
-sendNotification({result: 'in_stock', link, store});
+sendNotification({result: 'in_stock', url: 'test:url', link, store});
 
 /**
  * Open browser.
