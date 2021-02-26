@@ -1,7 +1,8 @@
 import chalk from 'chalk';
 import {readFileSync} from 'fs';
+import path from 'path';
 
-const version = readFileSync('version.txt', 'utf8');
+const version = readFileSync(path.join(__dirname, '../../version.txt'), 'utf8');
 
 export const banner = {
   asciiVersion: `
