@@ -71,6 +71,7 @@ export type Model =
   | 'amd reference'
   | 'amp extreme holo'
   | 'amp holo'
+  | 'amp white'
   | 'aorus master'
   | 'aorus master type-c'
   | 'aorus xtreme'
