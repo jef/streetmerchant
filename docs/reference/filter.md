@@ -108,6 +108,7 @@ Used with the `STORES` variable.
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Gamestop | IT | `gamestop-it`|
+| Globaldata | PT | `globaldata`|
 | HarrisTechnology | AU |  `harristechnology`|
 | Harvey Normans | IE | `harveynorman-ie` |
 | Hardware Planet | IT | | `hardware-planet` |
