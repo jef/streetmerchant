@@ -22,12 +22,14 @@ import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
-import {SendNotification} from '../notification';
 import useProxy from '@doridian/puppeteer-page-proxy';
+import {LinkPollEvent} from "../notification/link_poll_event";
 
 const inStock: Record<string, boolean> = {};
 
 const linkBuilderLastRunTimes: Record<string, number> = {};
+
+export type SendNotification = (pollEvent: LinkPollEvent) => void;
 
 function nextProxy(store: Store) {
   if (!store.proxyList) {
