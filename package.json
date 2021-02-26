@@ -80,7 +80,7 @@
     "nodemon": "^2.0.7",
     "sinon": "^9.2.4",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.5",
+    "typescript": "^4.2.2",
     "webpack": "^5.24.0"
   }
 }
