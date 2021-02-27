@@ -117,6 +117,7 @@ Used with the `STORES` variable.
 | Kabum | BR | `kabum`|
 | Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
+| Ldlc | FR |  `ldlc`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
