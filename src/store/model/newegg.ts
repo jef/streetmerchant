@@ -892,7 +892,7 @@ export const Newegg: Store = {
       url:
         'https://www.newegg.com/corsair-sf750-cp-9020186-na-750w/p/N82E16817139080',
     },
-        {
+    {
       brand: 'gigabyte',
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932401',
