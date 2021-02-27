@@ -5,6 +5,7 @@ on:
       - opened
       - edited
       - reopened
+      - synchronized
 jobs:
   lint-pr:
     name: Lint pull request title
@@ -13,4 +14,5 @@ jobs:
       - name: Lint pull request title
         uses: jef/conventional-commits-pr-action@v1
         with:
+          comment: false
           token: ${{ secrets.GITHUB_TOKEN }}
