@@ -109,6 +109,7 @@ Used with the `STORES` variable.
 | Gamestop | IE | `gamestop-ie`|
 | Gamestop | IT | `gamestop-it`|
 | Globaldata | PT | `globaldata`|
+| Hardware Planet | IT | | `hardware-planet` |
 | HarrisTechnology | AU |  `harristechnology`|
 | Harvey Normans | IE | `harveynorman-ie` |
 | iGame Computer | AU |  `igame-computer`|
