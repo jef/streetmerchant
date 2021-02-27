@@ -323,6 +323,258 @@ export const Globaldata: Store = {
       url:
         'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3070-twin-edge-white-oc-8gb-gd6-zt-a30700j-10p',
     },
+    {
+      brand: 'gigabyte',
+      model: 'aorus master',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-aorus-master-8gb-gd6-gvn306tam-00-10',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'eagle',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-eagle-8gb-gd6-gvn306te-00-10',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'eagle oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-eagle-oc-8gb-gd6-gvn306teo-00-10',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-gaming-oc-8gb-gd6-gvn306tgo-00-10',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc pro',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-gaming-oc-pro-8gb-gd6-gvn306tgop-00-10',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ti-ventus-3x-oc-8g-4719072763152',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ti-gaming-x-trio-8g-912-v390-053',
+    },
+    {
+      brand: 'asus',
+      model: 'strix',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-rog-strix-8gb-gd6-90yv0g00-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'dual',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-dual-8gb-gd6-90yv0g13-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'dual oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-dual-oc-8gb-gd6-90yv0g12-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-tuf-gaming-8gb-gd6-90yv0g11-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-tuf-gaming-oc-8gb-gd6-90yv0g10-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'strix oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-rog-strix-oc-8gb-gd6-90yv0g02-m0na00',
+    },
+    {
+      brand: 'zotac',
+      model: 'twin edge',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3060-ti-twin-edge-8gb-gd6-zt-a30610e-10m',
+    },
+    {
+      brand: 'zotac',
+      model: 'twin edge oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3060-ti-twin-edge-oc-8gb-gd6-zt-a30610h-10m',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 2x',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ti-ventus-2x-ocv1-8g-912-v397-003',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'vision oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-ti-vision-oc-8gb-gd6-gv-n306tvisoc-8gd',
+    },
+    {
+      brand: 'asus',
+      model: 'strix',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-rog-strix-12gb-gd6-90yv0gc4-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'strix oc',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-rog-strix-oc-12gb-gd6-90yv0gc2-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-tuf-gaming-12gb-gd6-90yv0gc1-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-tuf-gaming-oc-12gb-gd6-90yv0gc0-m0na00',
+    },
+    {
+      brand: 'asus',
+      model: 'dual mini oc',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-asus-geforce-rtx-3060-ti-dual-mini-oc-8gb-gd6-90yv0ft0-m0na00',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x',
+      series: '3060ti',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ti-gaming-x-8g-4719072781767',
+    },
+    {
+      brand: 'zotac',
+      model: 'twin edge',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3060-twin-edge-12gb-gd6-zt-a30600e-10m',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp holo',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3060-amp-edition-white-12gb-gd6-zt-a30600f-10p',
+    },
+    {
+      brand: 'zotac',
+      model: 'twin edge oc',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-zotac-geforce-rtx-3060-twin-edge-oc-12gb-gd6-zt-a30600h-10m',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-gaming-x-trio-12g-912-v390-081',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-gaming-x-12g-912-v397-037',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 2x',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ventus-2x-12g-oc-912-v397-039',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-gigabyte-geforce-rtx-3060-gaming-oc-12gb-gd6-gvn3060go-00-10',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ventus-3x-12g-oc-912-v397-038',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 2x',
+      series: '3060',
+      url:
+        'https://www.globaldata.pt/grafica-msi-geforce-rtx-3060-ventus-2x-12g-4719072803407',
+    },
+    {
+      brand: 'amd',
+      model: '5600x',
+      series: 'ryzen5600',
+      url:
+        'https://www.globaldata.pt/processador-amd-ryzen-5-5600x-6-core-37ghz-46ghz-35mb-am4-100-100000065box',
+    },
+    {
+      brand: 'amd',
+      model: '5800x',
+      series: 'ryzen5800',
+      url:
+        'https://www.globaldata.pt/processador-amd-ryzen-7-5800x-8-core-38ghz-47ghz-36mb-am4-100-100000063wof',
+    },
+    {
+      brand: 'amd',
+      model: '5900x',
+      series: 'ryzen5900',
+      url:
+        'https://www.globaldata.pt/processador-amd-ryzen-9-5900x-12-core-37ghz-48ghz-70mb-am4-100-100000061wof',
+    },
+    {
+      brand: 'amd',
+      model: '5950x',
+      series: 'ryzen5950',
+      url:
+        'https://www.globaldata.pt/processador-amd-ryzen-9-5950x-16-core-34ghz-49ghz-72mb-am4-100-100000059wof',
+    },
   ],
   name: 'globaldata',
   waitUntil: 'domcontentloaded',
