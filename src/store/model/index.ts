@@ -79,6 +79,7 @@ import {Igamecomputer} from './igame';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
 import {KomplettNO} from './komplett-no';
+import {LaptopsdirectIE} from './laptopsdirect-ie';
 import {LandmarkComputers} from './lmc';
 import {Mediamarkt} from './mediamarkt';
 import {Medimax} from './medimax';
@@ -225,6 +226,7 @@ export const storeList = new Map([
   [JohnLewis.name, JohnLewis],
   [Kabum.name, Kabum],
   [KomplettNO.name, KomplettNO],
+  [LaptopsdirectIE.name, LaptopsdirectIE],
   [LandmarkComputers.name, LandmarkComputers],
   [Mediamarkt.name, Mediamarkt],
   [Medimax.name, Medimax],
