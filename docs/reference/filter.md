@@ -116,6 +116,7 @@ Used with the `STORES` variable.
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Komplett | NO | `komplett-no`|
+| Laptopsdirect | IE | `laptopsdirect-ie`|
 | Landmark Computers | AU |  `landmark-computers`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
