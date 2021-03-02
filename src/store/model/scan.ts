@@ -98,6 +98,12 @@ export const Scan: Store = {
           'https://www.scan.co.uk/shop/computer-hardware/gpu-amd/amd-radeon-rx-6900-xt-pcie-40-graphics-cards',
       },
       {
+        series: '3060',
+        url:
+          //3060 is in gaming section not computer-hardware
+          'https://www.scan.co.uk/shop/gaming/gpu-nvidia/nvidia-geforce-rtx-3060-graphics-cards',
+      },
+      {
         series: '3060ti',
         url:
           'https://www.scan.co.uk/shop/computer-hardware/gpu-nvidia/geforce-rtx-3060-ti-graphics-cards',

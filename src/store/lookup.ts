@@ -452,14 +452,18 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  // Fixme: currently causing issues
-  // Do API inventory validation in realtime (no cache) if available
-  // if (
-  // 	store.realTimeInventoryLookup !== undefined &&
-  // 	link.itemNumber !== undefined
-  // ) {
-  // 	return store.realTimeInventoryLookup(link.itemNumber);
-  // }
+  if (link.labels?.inStock) {
+    const options = {
+      ...baseOptions,
+      requireVisible: true,
+      type: 'outerHTML' as const,
+    };
+
+    if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
+      logger.info(Print.outOfStock(link, store, true));
+      return false;
+    }
+  }
 
   if (store.labels.inStock) {
     const options = {
@@ -469,19 +473,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     };
 
     if (!(await pageIncludesLabels(page, store.labels.inStock, options))) {
-      logger.info(Print.outOfStock(link, store, true));
-      return false;
-    }
-  }
-
-  if (link.labels?.inStock) {
-    const options = {
-      ...baseOptions,
-      requireVisible: true,
-      type: 'outerHTML' as const,
-    };
-
-    if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
       logger.info(Print.outOfStock(link, store, true));
       return false;
     }

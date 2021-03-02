@@ -2,6 +2,7 @@
 
 | Environment variable | Description |
 |:---:|---|
+| `MAX_PRICE_SERIES_3060` | Maximum price allowed for a match, applies 3060 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
@@ -93,9 +94,9 @@ Used with the `STORES` variable.
 | El Corte Inglés | ES | `elcorteingles`|
 | Elkjop | NO | `elkjop`|
 | ePrice | IT | `eprice`|
+| Equippr | DE | `equippr`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
-| Equippr | DE | `equippr`|
 | Evatech | AU |  `evatech`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
@@ -107,14 +108,16 @@ Used with the `STORES` variable.
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Gamestop | IT | `gamestop-it`|
+| Globaldata | PT | `globaldata`|
+| Hardware Planet | IT | | `hardware-planet` |
 | HarrisTechnology | AU |  `harristechnology`|
 | Harvey Normans | IE | `harveynorman-ie` |
-| Hardware Planet | IT | | `hardware-planet` |
 | iGame Computer | AU |  `igame-computer`|
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
+| Ldlc | FR |  `ldlc`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
@@ -129,6 +132,7 @@ Used with the `STORES` variable.
 | Newegg | SG | `newegg-sg`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
+| Novo Atalho | PT | `novoatalho`|
 | Nvidia | EU/UK | [See below](#nvidia-store-reference) |
 | Office Depot | US | `officedepot`|
 | Ollo | IT | `ollo`|
@@ -159,6 +163,7 @@ Used with the `STORES` variable.
 | Storm Computers | AU |  `storm-computer`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
+| TopAchat | GR | `topachat`|
 | Toys R Us | US | `toysrus` |
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
@@ -169,7 +174,6 @@ Used with the `STORES` variable.
 | Wells Technology | AU |  `wellstechnology`|
 | Wipoid | ES | `wipoid`|
 | Zotac | US | `zotac`|
-| TopAchat | GR | `topachat`|
 
 ### Micro Center stores
 
@@ -212,7 +216,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `pny` | `dual fan`, `xlr8 epic x`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `xfx` | `merc`, `amd reference` |
-| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc`, `twin edge oc white` |
+| `zotac` | `amp holo`, `amp extreme holo`, `amp white`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc`, `twin edge oc white` |
 
 ## Supported series
 
@@ -227,6 +231,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD RX 6800 | `rx6800` |
 | AMD RX 6800XT | `rx6800xt` |
 | AMD RX 6900XT | `rx6900xt` |
+| Nvidia RTX 3060 | `3060` |
 | Nvidia RTX 3060 Ti | `3060ti` |
 | Nvidia RTX 3070 | `3070` |
 | Nvidia RTX 3080 | `3080` |

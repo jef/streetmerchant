@@ -18,6 +18,7 @@ You can test your notification configuration by running `npm run test:notificati
 | Environment variable | Description |
 |:---:|---|
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify |
+| `DISCORD_NOTIFY_GROUP_3060` | Discord group to notify on 3060 stock |
 | `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
