@@ -5,7 +5,7 @@ on:
       - opened
       - edited
       - reopened
-      - synchronized
+      - synchronize
 jobs:
   lint-pr:
     name: Lint pull request title
