@@ -20,7 +20,7 @@ export const Ldlc: Store = {
     {
       brand: 'test:brand',
       model: 'test:model',
-      series': 'test:series',
+      series: 'test:series',
       url: 'https://www.ldlc.com/fr-be/fiche/PB00317660.html',
     },
     {
