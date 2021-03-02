@@ -4,8 +4,8 @@ export const Ldlc: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: '.stock-1',
-      text: ['en', 'stock'],
+      container: '.stock',
+      text: ['stock'],
     },
     maxPrice: {
       container: '.price .price',
