@@ -12,8 +12,8 @@ export const Ldlc: Store = {
       euroFormat: true,
     },
     outOfStock: {
-      container: '.stock-4 .stock-7',
-      text: ['RUPTURE'],
+      container: '.stock',
+      text: ['rupture'],
     },
   },
   links: [
