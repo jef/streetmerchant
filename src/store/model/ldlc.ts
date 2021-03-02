@@ -18,6 +18,12 @@ export const Ldlc: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series': 'test:series',
+      url: 'https://www.ldlc.com/fr-be/fiche/PB00317660.html',
+    },
+    {
       brand: 'evga',
       model: 'xc3 ultra',
       series: '3080',
