@@ -449,19 +449,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  if (store.labels.inStock) {
-    const options = {
-      ...baseOptions,
-      requireVisible: true,
-      type: 'outerHTML' as const,
-    };
-
-    if (!(await pageIncludesLabels(page, store.labels.inStock, options))) {
-      logger.info(Print.outOfStock(link, store, true));
-      return false;
-    }
-  }
-
   if (link.labels?.inStock) {
     const options = {
       ...baseOptions,
@@ -470,6 +457,19 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     };
 
     if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
+      logger.info(Print.outOfStock(link, store, true));
+      return false;
+    }
+  }
+
+  if (store.labels.inStock) {
+    const options = {
+      ...baseOptions,
+      requireVisible: true,
+      type: 'outerHTML' as const,
+    };
+
+    if (!(await pageIncludesLabels(page, store.labels.inStock, options))) {
       logger.info(Print.outOfStock(link, store, true));
       return false;
     }
