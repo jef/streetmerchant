@@ -449,15 +449,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  // Fixme: currently causing issues
-  // Do API inventory validation in realtime (no cache) if available
-  // if (
-  // 	store.realTimeInventoryLookup !== undefined &&
-  // 	link.itemNumber !== undefined
-  // ) {
-  // 	return store.realTimeInventoryLookup(link.itemNumber);
-  // }
-
   if (store.labels.inStock) {
     const options = {
       ...baseOptions,
