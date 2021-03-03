@@ -205,6 +205,14 @@ const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
 const notifications = {
   desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
+  apns: {
+    apnsAuthKey: envOrString(process.env.APNSAUTHKEY),
+    apnsKeyId: envOrString(process.env.APNSKEYID),
+    apnsTeamId: envOrString(process.env.APNSTEAMID),
+    apnsProduction: envOrBoolean(process.env.APNSPRODUCTION),
+    apnsDeviceToken: envOrString(process.env.APNSDEVICETOKEN),
+    apnsBundleId: envOrString(process.env.APNSBUNDLEID)
+  },
   discord: {
     notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
     notifyGroupSeries: {
@@ -413,17 +421,17 @@ const store = {
     'rx6800',
     'rx6800xt',
     'rx6900xt',
-    'ryzen5600',
-    'ryzen5800',
-    'ryzen5900',
-    'ryzen5950',
-    'sf',
+    //'ryzen5600',
+    //'ryzen5800',
+    //'ryzen5900',
+    //'ryzen5950',
+    //'sf',
     'sonyps5c',
-    'sonyps5de',
-    'xboxss',
-    'xboxsx',
+    //'sonyps5de',
+    //'xboxss',
+    //'xboxsx',
   ]),
-  stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
+  stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy', 'newegg', 'nvidia-gb', 'memoryexpress', 'canadacomputers']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
     let proxyList = loadProxyList(name);
