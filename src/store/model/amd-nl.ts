@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const AmdDe: Store = {
+export const AmdNl: Store = {
   currency: '€',
   labels: {
     inStock: {
