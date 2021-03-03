@@ -1,4 +1,4 @@
-import {Browser, Page, Response} from 'puppeteer';
+import {Browser, Page, HTTPResponse} from 'puppeteer';
 import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
 import {disableBlockerInPage} from './adblocker';
@@ -45,7 +45,11 @@ export function isStatusCodeInRange(
 export async function usingResponse<T>(
   browser: Browser,
   url: string,
-  cb: (response: Response | null, page: Page, browser: Browser) => Promise<T>
+  cb: (
+    response: HTTPResponse | null,
+    page: Page,
+    browser: Browser
+  ) => Promise<T>
 ): Promise<T> {
   return usingPage(browser, async (page, browser) => {
     const response = await page.goto(url, {waitUntil: 'domcontentloaded'});
