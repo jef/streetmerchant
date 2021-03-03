@@ -427,7 +427,7 @@ const store = {
     'ryzen5950',
     'sf',
     'sonyps5c',
-    //'sonyps5de',
+    'sonyps5de',
     'xboxss',
     'xboxsx',
   ]),
