@@ -3,29 +3,29 @@ import {Print, logger} from '../logger';
 import * as apn from 'apn';
 import {config} from '../config';
 
-const { apns } = config.notifications;
+const {apns} = config.notifications;
 
 export function sendApns(link: Link, store: Store) {
   const options = {
     token: {
       key: apns.apnsAuthKey,
       keyId: apns.apnsKeyId,
-      teamId: apns.apnsTeamId
+      teamId: apns.apnsTeamId,
     },
-    production: apns.apnsProduction
+    production: apns.apnsProduction,
   };
-   
-  var apnProvider = new apn.Provider(options);
 
-  var note = new apn.Notification();
- 
+  const apnProvider = new apn.Provider(options);
+
+  const note = new apn.Notification();
+
   note.badge = 1;
-  note.sound = "ping.aiff";
-  note.alert = "\uD83D\uDCE7 \u2709 You have a new message";
-  note.payload = {'label': '1'};
+  note.sound = 'ping.aiff';
+  note.alert = '\uD83D\uDCE7 \u2709 You have a new message';
+  note.payload = {label: '1'};
   note.topic = apns.apnsBundleId;
 
-  apnProvider.send(note, apns.apnsDeviceToken).then( (result) => {
+  apnProvider.send(note, apns.apnsDeviceToken).then(result => {
     // see documentation for an explanation of result
     if (result.sent) {
       logger.info('✔ push notification sent');
@@ -34,5 +34,4 @@ export function sendApns(link: Link, store: Store) {
     }
     apnProvider.shutdown();
   });
-
 }

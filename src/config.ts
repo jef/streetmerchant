@@ -211,7 +211,7 @@ const notifications = {
     apnsTeamId: envOrString(process.env.APNS_TEAMID),
     apnsProduction: envOrBoolean(process.env.APNS_PRODUCTION),
     apnsDeviceToken: envOrString(process.env.APNS_DEVICETOKEN),
-    apnsBundleId: envOrString(process.env.APNS_BUNDLEID)
+    apnsBundleId: envOrString(process.env.APNS_BUNDLEID),
   },
   discord: {
     notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
