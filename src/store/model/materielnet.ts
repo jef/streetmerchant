@@ -293,235 +293,235 @@ export const Materielnet: Store = {
       series: '3070',
       url: 'https://www.materiel.net/produit/202012220093.html',
     },
-	{
+    {
       brand: 'asus',
       model: 'rog strix',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010140550.html',
     },
-	{
+    {
       brand: 'asus',
       model: 'rog strix oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090076.html',
     },
-	{
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009010057.html',
     },
-	{
+    {
       brand: 'asus',
       model: 'tuf oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009030080.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'ftw3',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090100.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'ftw3 ultra',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090101.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'ftw3 ultra hybrid',
       series: '3080',
       url: 'https://www.materiel.net/produit/202012070098.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'xc3 black',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090098.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'xc3',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090099.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'xc3 ultra',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009100088.html',
     },
-	{
+    {
       brand: 'evga',
       model: 'xc3 ultra hybrid',
       series: '3080',
       url: 'https://www.materiel.net/produit/202012070099.html',
     },
-	{
+    {
       brand: 'gainward',
       model: 'phantom',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010260052.html',
     },
-	{
+    {
       brand: 'gainward',
       model: 'phantom gs',
       series: '3080',
       url: 'https://www.materiel.net/produit/202011090017.html',
     },
-	{
+    {
       brand: 'gainward',
       model: 'phoenix',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080104.html',
     },
-	{
+    {
       brand: 'gainward',
       model: 'phoenix gs',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080103.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'master 10g',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009290084.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'xtreme 10g',
       series: '3080',
       url: 'https://www.materiel.net/produit/202011060056.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'xtreme waterforce 10g',
       series: '3080',
       url: 'https://www.materiel.net/produit/202011240219.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'eagle',
       series: '3080',
       url: 'https://www.materiel.net/produit/202101050079.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'eagle oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080086.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080083.html',
     },
-	{
+    {
       brand: 'gigabyte',
       model: 'vision oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009300085.html',
     },
-	{
+    {
       brand: 'inno3d',
       model: 'ichill x3',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009030073.html',
     },
-	{
+    {
       brand: 'inno3d',
       model: 'ichill x4',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009030072.html',
     },
-	{
+    {
       brand: 'inno3d',
       model: 'twin x2 oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009030079.html',
     },
-	{
+    {
       brand: 'kfa2',
       model: 'ex gamer',
       series: '3080',
       url: 'https://www.materiel.net/produit/202012080025.html',
     },
-	{
+    {
       brand: 'kfa2',
       model: 'sg (1-click oc)',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080052.html',
     },
-	{
+    {
       brand: 'msi',
       model: 'x trio',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009070052.html',
     },
-	{
+    {
       brand: 'msi',
       model: 'suprim x',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010220025.html',
     },
-	{
+    {
       brand: 'msi',
       model: 'ventus 3x',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009070053.html',
     },
-	{
+    {
       brand: 'palit',
       model: 'gamerock',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010260054.html',
     },
-	{
+    {
       brand: 'palit',
       model: 'gamerock oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010260053.html',
     },
-	{
+    {
       brand: 'palit',
       model: 'gaming pro',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080100.html',
     },
-	{
+    {
       brand: 'palit',
       model: 'gaming pro oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009080099.html',
     },
-	{
+    {
       brand: 'pny',
       model: 'epic x',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009070040.html',
     },
-	{
+    {
       brand: 'pny',
       model: 'epic x',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009070041.html',
     },
-	{
+    {
       brand: 'zotac',
       model: 'amp holo',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009180077.html',
     },
-	{
+    {
       brand: 'zotac',
       model: 'trinity',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009030021.html',
     },
-	{
+    {
       brand: 'zotac',
       model: 'trinity oc',
       series: '3080',
