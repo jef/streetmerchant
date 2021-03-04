@@ -2,11 +2,11 @@
 
 You can test your notification configuration by running `npm run test:notification`.
 
-## APNS
+## Apple Push Notification Service 
 
 | Environment variable | Description |
 |---|---|
-| `APNS_AUTHKEY` | Path to authkey on users machine. |
+| `APNS_AUTHKEY` | Path to authkey on users machine |
 | `APNS_BUNDLEID` | iOS app bundle id |
 | `APNS_DEVICETOKEN` | iOS device token|
 | `APNS_KEYID` | Apple developer's key id |
