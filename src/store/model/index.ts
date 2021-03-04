@@ -22,6 +22,7 @@ import {AmdDe} from './amd-de';
 import {AmdIt} from './amd-it';
 import {AmdUk} from './amd-uk';
 import {AntOnline} from './antonline';
+import {AO} from './ao';
 import {Argos} from './argos';
 import {ArgosIE} from './argos-ie';
 import {Aria} from './aria';
@@ -36,6 +37,7 @@ import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Bpctech} from './bpctech';
 import {BpmPower} from './bpmpower';
+import {BT} from './bt';
 import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
@@ -168,6 +170,7 @@ export const storeList = new Map([
   [AmdIt.name, AmdIt],
   [AmdUk.name, AmdUk],
   [AntOnline.name, AntOnline],
+  [AO.name, AO],
   [Argos.name, Argos],
   [ArgosIE.name, Argos],
   [Aria.name, Aria],
@@ -182,6 +185,7 @@ export const storeList = new Map([
   [Box.name, Box],
   [Bpctech.name, Bpctech],
   [BpmPower.name, BpmPower],
+  [BT.name, BT],
   [CanadaComputers.name, CanadaComputers],
   [Caseking.name, Caseking],
   [Ccl.name, Ccl],
