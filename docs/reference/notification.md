@@ -13,6 +13,9 @@ You can test your notification configuration by running `npm run test:notificati
 | `APNS_PRODUCTION` | true/false for production |
 | `APNS_TEAMID` | Apple developer's team id |
 
+Change your notification alert/payload/etc in apns.ts in the note object. 
+Refer to https://github.com/node-apn/node-apn for config options.
+
 ## Desktop
 
 | Environment variable | Description |
