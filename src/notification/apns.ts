@@ -6,7 +6,7 @@ import {config} from '../config';
 const { apns } = config.notifications;
 
 export function sendApns(link: Link, store: Store) {
-  var options = {
+  const options = {
     token: {
       key: apns.apnsAuthKey,
       keyId: apns.apnsKeyId,
@@ -17,8 +17,6 @@ export function sendApns(link: Link, store: Store) {
    
   var apnProvider = new apn.Provider(options);
 
-  let deviceToken = apns.apnsDeviceToken;
-
   var note = new apn.Notification();
  
   note.badge = 1;
@@ -27,7 +25,7 @@ export function sendApns(link: Link, store: Store) {
   note.payload = {'label': '1'};
   note.topic = apns.apnsBundleId;
 
-  apnProvider.send(note, deviceToken).then( (result) => {
+  apnProvider.send(note, apns.apnsDeviceToken).then( (result) => {
     // see documentation for an explanation of result
     if (result.sent) {
       logger.info('✔ push notification sent');
