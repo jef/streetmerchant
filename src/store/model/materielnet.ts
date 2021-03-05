@@ -4,7 +4,7 @@ export const Materielnet: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container:'.o-availability__value.o-availability__value--stock_1.o-modal__opener',
+      container: '.o-availability__value.o-availability__value--stock_1.o-modal__opener',
       text: ['stock'],
     },
     maxPrice: {
