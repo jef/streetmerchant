@@ -118,6 +118,7 @@ Used with the `STORES` variable.
 | Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
 | Ldlc | FR |  `ldlc`|
+| Materiel.net | FR | `materielnet`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
