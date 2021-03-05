@@ -22,7 +22,7 @@ First and foremost, this service _will not_ automatically buy for you.
 
 ## Quick start
 
-streetmerchant runs on Node.js 14:
+streetmerchant runs on Node.js:
 
 ```shell
 git clone https://github.com/jef/streetmerchant.git
