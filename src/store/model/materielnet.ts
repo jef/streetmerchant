@@ -5,7 +5,7 @@ export const Materielnet: Store = {
   labels: {
     inStock: {
       container:
-       '.o-availability__value.o-availability__value--stock_1.o-modal__opener',
+        '.o-availability__value.o-availability__value--stock_1.o-modal__opener',
       text: ['stock'],
     },
     maxPrice: {
@@ -14,7 +14,7 @@ export const Materielnet: Store = {
     },
     outOfStock: {
       container:
-       '.o-availability__value.o-availability__value--stock_1.o-modal__opener',
+        '.o-availability__value.o-availability__value--stock_1.o-modal__opener',
       text: ['rupture'],
     },
   },
