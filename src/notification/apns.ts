@@ -1,6 +1,6 @@
 import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
-import * as apn from 'apn';
+import * as apn from '@parse/node-apn';
 import {config} from '../config';
 
 const {apns} = config.notifications;
