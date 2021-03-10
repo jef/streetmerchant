@@ -68,6 +68,10 @@ export const Box: Store = {
     }),
     urls: [
       {
+        series: '3060',
+        url: 'https://www.box.co.uk/rtx-3060-graphics-cards',
+      },
+      {
         series: '3060ti',
         url: 'https://www.box.co.uk/rtx-3060-ti-graphics-cards',
       },

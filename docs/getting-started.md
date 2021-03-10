@@ -5,7 +5,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 ## Prerequisites
 
 - [git](https://git-scm.com/)
-- Either [Node.js 14](https://nodejs.org/en/) or [Docker (1.13.0+)](https://docs.docker.com/get-docker/) (advanced users)
+- Either [Node.js 15](https://nodejs.org/en/) or [Docker (1.13.0+)](https://docs.docker.com/get-docker/) (advanced users)
 
 ## Using Node.js
 
@@ -14,7 +14,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 | tag | Example, `v1.0.0`; stable |
 | `main` | Latest HEAD; not tagged, could be unstable |
 
-1. Download [Node.js 14](https://nodejs.org/en/)
+1. Download [Node.js 15](https://nodejs.org/en/)
 1. Clone this project `git clone https://github.com/jef/streetmerchant.git`.
     1. To checkout a particular reference, use `git checkout <ref name>` after cloning.
 1. Navigate to this project by entering `cd streetmerchant`.

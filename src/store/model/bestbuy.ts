@@ -307,6 +307,20 @@ export const BestBuy: Store = {
       url: 'https://api.bestbuy.com/click/-/6442485/pdp',
     },
     {
+      brand: 'msi',
+      cartUrl: 'https://api.bestbuy.com/click/-/6452940/cart',
+      model: 'ventus 3x',
+      series: '3060',
+      url: 'https://api.bestbuy.com/click/-/6452940/pdp',
+    },
+    {
+      brand: 'evga',
+      cartUrl: 'https://api.bestbuy.com/click/-/6454328/cart',
+      model: 'xc gaming',
+      series: '3060',
+      url: 'https://api.bestbuy.com/click/-/6454328/pdp',
+    },
+    {
       brand: 'amd',
       cartUrl: 'https://api.bestbuy.com/click/-/6438942/cart',
       model: '5900x',
