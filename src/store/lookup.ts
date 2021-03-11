@@ -408,6 +408,10 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
 }
 
 async function lookupCardInStock(store: Store, page: Page, link: Link) {
+  if (store.lookupDelay) {
+    await delay(store.lookupDelay);
+  }
+
   const baseOptions: Selector = {
     requireVisible: false,
     selector: store.labels.container ?? 'body',

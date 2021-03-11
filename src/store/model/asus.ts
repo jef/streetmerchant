@@ -163,6 +163,7 @@ export const Asus: Store = {
       url: 'https://store.asus.com/us/item/202011AM200000003',
     },
   ],
+  lookupDelay: 3000,
   name: 'asus',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url = 'https://store.asus.com/us/category/get_real_time_data';

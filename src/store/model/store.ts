@@ -222,6 +222,7 @@ export type Store = {
     urls: Array<{series: Series; url: string | string[]}>;
   };
   labels: Labels;
+  lookupDelay: number;
   name: string;
   currency: '£' | '$' | '€' | 'R$' | 'kr.' | '';
   setupAction?: (browser: Browser) => void;
