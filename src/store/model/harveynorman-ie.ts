@@ -9,7 +9,6 @@ export const HarveyNormanIE: Store = {
     },
     maxPrice: {
       container: '.price',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.product-highlight-text',

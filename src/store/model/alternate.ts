@@ -14,7 +14,6 @@ export const Alternate: Store = {
     },
     maxPrice: {
       container: 'div.price > span',
-      euroFormat: true,
     },
     outOfStock: [
       {

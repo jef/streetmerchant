@@ -14,7 +14,6 @@ export const Notebooksbilliger: Store = {
     maxPrice: {
       container:
         'form[name="cart_quantity"]  span[class*="product-price__regular"]',
-      euroFormat: true,
     },
     outOfStock: [
       {

@@ -10,7 +10,6 @@ export const Bpctech: Store = {
     },
     maxPrice: {
       container: 'div.price-box.price-final_price > span > span',
-      euroFormat: false,
     },
   },
   links: [
