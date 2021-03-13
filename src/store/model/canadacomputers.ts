@@ -9,7 +9,6 @@ export const CanadaComputers: Store = {
     },
     maxPrice: {
       container: '.h2-big > strong:nth-child(1)',
-      euroFormat: false,
     },
   },
   links: [

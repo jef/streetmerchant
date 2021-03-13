@@ -9,7 +9,6 @@ export const BpmPower: Store = {
     },
     maxPrice: {
       container: 'p.prezzoScheda:nth-child(1)',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.dispoSiProd >span',

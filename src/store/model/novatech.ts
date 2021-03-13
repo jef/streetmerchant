@@ -10,7 +10,6 @@ export const Novatech: Store = {
     },
     maxPrice: {
       container: 'p[class="newspec-price"]',
-      euroFormat: false, // Note: Novatech uses non-euroFromat as price seperator
     },
     outOfStock: {
       container: '.newspec-pricesection',

@@ -9,7 +9,6 @@ export const Wipoid: Store = {
     },
     maxPrice: {
       container: '#our_price_display',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.buttons_bottom_block no-print',

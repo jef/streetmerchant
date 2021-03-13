@@ -9,7 +9,6 @@ export const Futurex: Store = {
     },
     maxPrice: {
       container: '.price',
-      euroFormat: true,
     },
     outOfStock: [
       {

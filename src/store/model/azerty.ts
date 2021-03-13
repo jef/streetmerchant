@@ -9,7 +9,6 @@ export const Azerty: Store = {
     },
     maxPrice: {
       container: '.mod_article .price',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.orderdelay',

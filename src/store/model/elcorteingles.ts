@@ -19,7 +19,6 @@ export const Elcorteingles: Store = {
     ],
     maxPrice: {
       container: '.product_detail-buy-price-container .price._big',
-      euroFormat: true,
     },
     outOfStock: [
       {
