@@ -9,8 +9,7 @@ export const Evatech: Store = {
       text: ['ADD TO CART'],
     },
     maxPrice: {
-      container: '.product_detail_price',
-      euroFormat: false,
+      container: '.product_detail_price'
     },
     outOfStock: {
       container: '.product_detail_add_to_cart > div:nth-child(2)',

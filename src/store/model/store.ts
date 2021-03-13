@@ -7,7 +7,6 @@ export type Element = {
 
 export type Pricing = {
   container: string;
-  euroFormat?: boolean;
 };
 
 export type Brand =

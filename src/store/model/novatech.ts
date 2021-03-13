@@ -9,8 +9,7 @@ export const Novatech: Store = {
       text: ['add to basket'],
     },
     maxPrice: {
-      container: 'p[class="newspec-price"]',
-      euroFormat: false, // Note: Novatech uses non-euroFromat as price seperator
+      container: 'p[class="newspec-price"]'
     },
     outOfStock: {
       container: '.newspec-pricesection',

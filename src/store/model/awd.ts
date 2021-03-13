@@ -9,8 +9,7 @@ export const Awd: Store = {
       text: ['item(s)'],
     },
     maxPrice: {
-      container: '.ty-price',
-      euroFormat: false, // Note: Awd uses non-euroFromat as price seperator
+      container: '.ty-price'
     },
     outOfStock: {
       container: '.vs-stock.ty-float-left',

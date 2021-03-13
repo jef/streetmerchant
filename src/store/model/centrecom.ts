@@ -9,8 +9,7 @@ export const Centrecom: Store = {
       text: ['In Stock'],
     },
     maxPrice: {
-      container: 'div.prod_price_current.product-price > span',
-      euroFormat: false,
+      container: 'div.prod_price_current.product-price > span'
     },
     outOfStock: {
       container: '.prod_stores_stock > li:nth-child(1) > span:nth-child(2)',

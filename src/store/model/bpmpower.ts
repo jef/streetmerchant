@@ -8,8 +8,7 @@ export const BpmPower: Store = {
       text: ['Disponibile'],
     },
     maxPrice: {
-      container: 'p.prezzoScheda:nth-child(1)',
-      euroFormat: true,
+      container: 'p.prezzoScheda:nth-child(1)'
     },
     outOfStock: {
       container: '.dispoSiProd >span',

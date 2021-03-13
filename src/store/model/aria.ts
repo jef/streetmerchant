@@ -9,8 +9,7 @@ export const Aria: Store = {
       text: ['add to shopping basket'],
     },
     maxPrice: {
-      container: '.priceBig',
-      euroFormat: false, // Note: Aria uses non-euroFromat as price seperator
+      container: '.priceBig'
     },
     outOfStock: {
       container: '.fBox',

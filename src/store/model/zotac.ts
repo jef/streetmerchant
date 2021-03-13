@@ -9,8 +9,7 @@ export const Zotac: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: 'div[class="product-shop"] span[class="price"]',
-      euroFormat: false,
+      container: 'div[class="product-shop"] span[class="price"]'
     },
   },
   links: [

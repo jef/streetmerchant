@@ -14,8 +14,7 @@ export const Gamestop: Store = {
       },
     ],
     maxPrice: {
-      container: '.primary-details-row .actual-price',
-      euroFormat: false,
+      container: '.primary-details-row .actual-price'
     },
     outOfStock: {
       container: '.add-to-cart',

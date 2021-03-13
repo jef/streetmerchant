@@ -9,8 +9,7 @@ export const Saturn: Store = {
       text: ['Das ging uns leider zu schnell.'],
     },
     maxPrice: {
-      container: 'span[font-family="price"]',
-      euroFormat: false,
+      container: 'span[font-family="price"]'
     },
     outOfStock: [
       {

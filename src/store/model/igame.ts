@@ -10,8 +10,7 @@ export const Igamecomputer: Store = {
       text: ['ADD TO CART'],
     },
     maxPrice: {
-      container: 'div.price__pricing-group > div.price__regular > dd > span',
-      euroFormat: false,
+      container: 'div.price__pricing-group > div.price__regular > dd > span'
     },
     outOfStock: {
       container:

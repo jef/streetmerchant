@@ -12,8 +12,7 @@ export const PCDiga: Store = {
       text: ['Sem stock'],
     },
     maxPrice: {
-      container: '.price-container.price-final_price > .price-wrapper > span',
-      euroFormat: true,
+      container: '.price-container.price-final_price > .price-wrapper > span'
     },
   },
   links: [

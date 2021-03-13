@@ -9,8 +9,7 @@ export const Dcomp: Store = {
       text: ['Add to', ''],
     },
     maxPrice: {
-      container: '#prodprice',
-      euroFormat: false,
+      container: '#prodprice'
     },
     outOfStock: {
       container: '#cart-info > button.btn.notifyMe',

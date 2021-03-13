@@ -8,8 +8,7 @@ export const Cyberport: Store = {
       text: ['sofort verfügbar'],
     },
     maxPrice: {
-      container: '#productDetailOverview .price',
-      euroFormat: true,
+      container: '#productDetailOverview .price'
     },
     outOfStock: {
       container: '.tooltipAvailabilityParent',

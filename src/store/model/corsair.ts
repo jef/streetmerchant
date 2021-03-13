@@ -8,8 +8,7 @@ export const Corsair: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '.product-price',
-      euroFormat: false,
+      container: '.product-price'
     },
   },
   links: [

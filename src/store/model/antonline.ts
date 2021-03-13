@@ -8,8 +8,7 @@ export const AntOnline: Store = {
       text: ['Add to Cart'],
     },
     maxPrice: {
-      container: '.cPrice',
-      euroFormat: false,
+      container: '.cPrice'
     },
     outOfStock: {
       container: '.priceView-price .priceView-hero-price span',

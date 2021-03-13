@@ -12,8 +12,7 @@ export const Spielegrotte: Store = {
     ],
     maxPrice: {
       container:
-        'html > body > table > tbody > tr > td > div > table > tbody > tr > td > center > table > tbody > tr > td > font > b',
-      euroFormat: true,
+        'html > body > table > tbody > tr > td > div > table > tbody > tr > td > center > table > tbody > tr > td > font > b'
     },
     outOfStock: {
       container:

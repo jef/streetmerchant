@@ -4,8 +4,7 @@ export const BestBuyCa: Store = {
   currency: '$',
   labels: {
     maxPrice: {
-      container: 'div[class*="pricingContainer"]',
-      euroFormat: false,
+      container: 'div[class*="pricingContainer"]'
     },
     outOfStock: {
       container: '.addToCartButton:disabled',

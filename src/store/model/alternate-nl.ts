@@ -8,8 +8,7 @@ export const AlternateNL: Store = {
       text: ['Direct leverbaar'],
     },
     maxPrice: {
-      container: 'div.price > span',
-      euroFormat: true,
+      container: 'div.price > span'
     },
     outOfStock: {
       container: '.stockStatus',

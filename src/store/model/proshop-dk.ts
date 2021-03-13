@@ -9,8 +9,7 @@ export const ProshopDK: Store = {
     },
     maxPrice: {
       container:
-        '.site-currency-wrapper > span[class="site-currency-attention"]',
-      euroFormat: true,
+        '.site-currency-wrapper > span[class="site-currency-attention"]'
     },
     outOfStock: {
       container: '.site-stock',

@@ -11,8 +11,7 @@ export const Msy: Store = {
     },
     maxPrice: {
       container:
-        '#product-details-form > div > div.product-essential > div.overview > div.prices > div > span',
-      euroFormat: false,
+        '#product-details-form > div > div.product-essential > div.overview > div.prices > div > span'
     },
     outOfStock: {
       container: 'td.spec-name:nth-child(2)',

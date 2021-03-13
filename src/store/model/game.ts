@@ -8,8 +8,7 @@ export const Game: Store = {
       text: ['Pre-order Now', 'Buy New'],
     },
     maxPrice: {
-      container: '.buyingOptions .btnPrice',
-      euroFormat: false,
+      container: '.buyingOptions .btnPrice'
     },
     outOfStock: {
       container: '.buyingOptions',

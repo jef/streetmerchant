@@ -9,8 +9,7 @@ export const Allneeds: Store = {
       text: ['In Stock'],
     },
     maxPrice: {
-      container: 'span.price',
-      euroFormat: false,
+      container: 'span.price'
     },
     outOfStock: {
       container: '.amstockstatus',

@@ -8,8 +8,7 @@ export const CanadaComputers: Store = {
       text: ['Online In Stock'],
     },
     maxPrice: {
-      container: '.h2-big > strong:nth-child(1)',
-      euroFormat: false,
+      container: '.h2-big > strong:nth-child(1)'
     },
   },
   links: [

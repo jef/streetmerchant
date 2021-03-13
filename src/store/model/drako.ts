@@ -10,8 +10,7 @@ export const Drako: Store = {
       },
     ],
     maxPrice: {
-      container: '.price',
-      euroFormat: true,
+      container: '.price'
     },
   },
   links: [

@@ -9,8 +9,7 @@ export const Umart: Store = {
       text: ['in stock'],
     },
     maxPrice: {
-      container: '.goods-price',
-      euroFormat: false,
+      container: '.goods-price'
     },
     outOfStock: {
       container: 'div.price-box > div.stock-label',

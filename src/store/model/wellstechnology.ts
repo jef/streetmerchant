@@ -10,8 +10,7 @@ export const WellsTechnology: Store = {
       text: ['Buy it now'],
     },
     maxPrice: {
-      container: '#productPrice-product-template *',
-      euroFormat: false,
+      container: '#productPrice-product-template *'
     },
     outOfStock: {
       container: '#addToCartText-product-template',

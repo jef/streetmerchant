@@ -10,8 +10,7 @@ export const HardwarePlanet: Store = {
       text: ['Aggiungi al carrello'],
     },
     maxPrice: {
-      container: '.product-price',
-      euroFormat: true,
+      container: '.product-price'
     },
     outOfStock: {
       container: '#product-availability',

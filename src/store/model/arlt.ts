@@ -8,8 +8,7 @@ export const Arlt: Store = {
       text: ['auf Lager', 'Lieferzeit 2-3 Werktage', 'Ware im Zulauf'],
     },
     maxPrice: {
-      container: '.articleprice .price',
-      euroFormat: true,
+      container: '.articleprice .price'
     },
     outOfStock: {
       container: '.articleDesc .shippingtext',

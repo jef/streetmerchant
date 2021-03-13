@@ -8,8 +8,7 @@ export const SmythsToys: Store = {
       text: ['add to basket'],
     },
     maxPrice: {
-      container: '.price_tag',
-      euroFormat: false,
+      container: '.price_tag'
     },
     outOfStock: {
       container: '.instoreMessage',

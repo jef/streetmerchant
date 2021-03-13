@@ -9,8 +9,7 @@ export const LandmarkComputers: Store = {
       text: ['In Stock', 'Low In Stock', 'Stock in warehouse'],
     },
     maxPrice: {
-      container: '.product-views-price-lead',
-      euroFormat: false,
+      container: '.product-views-price-lead'
     },
     outOfStock: {
       container: '.stock-info-message',

@@ -9,8 +9,7 @@ export const PCByte: Store = {
       text: ['in stock'],
     },
     maxPrice: {
-      container: 'div.price-line.d-flex.mb-3 > div:nth-child(1) > span > span',
-      euroFormat: false,
+      container: 'div.price-line.d-flex.mb-3 > div:nth-child(1) > span > span'
     },
     outOfStock: {
       container: 'a.btn:nth-child(3)',

@@ -10,8 +10,7 @@ export const Ccl: Store = {
       text: ['add to basket'],
     },
     maxPrice: {
-      container: '#pnlPriceText > p',
-      euroFormat: false, // Note: CCL uses non-euroFromat as price seperator
+      container: '#pnlPriceText > p'
     },
     outOfStock: {
       container: '#pnlSoldOut',

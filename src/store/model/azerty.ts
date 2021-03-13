@@ -8,8 +8,7 @@ export const Azerty: Store = {
       text: ['Volgende werkdag in huis', '1 werkdag', '2-3 werkdagen'],
     },
     maxPrice: {
-      container: '.mod_article .price',
-      euroFormat: true,
+      container: '.mod_article .price'
     },
     outOfStock: {
       container: '.orderdelay',

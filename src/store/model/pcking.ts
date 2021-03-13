@@ -8,8 +8,7 @@ export const PCKing: Store = {
       text: ['sofort lieferbar [Versand]', 'abholbereit [PC-KING]'],
     },
     maxPrice: {
-      container: 'div.es_product_price-article_detail > b',
-      euroFormat: true,
+      container: 'div.es_product_price-article_detail > b'
     },
     outOfStock: [
       {

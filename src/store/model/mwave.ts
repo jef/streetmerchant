@@ -5,8 +5,7 @@ export const Mwave: Store = {
   currency: '$',
   labels: {
     maxPrice: {
-      container: 'div.divPriceNormal > div',
-      euroFormat: false,
+      container: 'div.divPriceNormal > div'
     },
     outOfStock: {
       container: '.stockAndDelivery > li:nth-child(1) > dl > dd',

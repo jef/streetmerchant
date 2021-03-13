@@ -12,8 +12,7 @@ export const OfficeDepot: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: 'span[class^="price_column right"]',
-      euroFormat: false,
+      container: 'span[class^="price_column right"]'
     },
   },
   links: [

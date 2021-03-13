@@ -8,8 +8,7 @@ export const Megekko: Store = {
       text: ['dag', 'werkdag'],
     },
     maxPrice: {
-      container: '.col_right_container .euro',
-      euroFormat: false,
+      container: '.col_right_container .euro'
     },
     outOfStock: {
       container: '.product_detail .text_red',

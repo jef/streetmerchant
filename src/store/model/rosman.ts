@@ -10,8 +10,7 @@ export const Rosman: Store = {
       text: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
     },
     maxPrice: {
-      container: 'span.price.price--withTax.price--main',
-      euroFormat: false,
+      container: 'span.price.price--withTax.price--main'
     },
     outOfStock: {
       container:

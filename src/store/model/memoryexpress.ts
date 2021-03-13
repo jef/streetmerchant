@@ -5,8 +5,7 @@ export const MemoryExpress: Store = {
   labels: {
     maxPrice: {
       container:
-        '#ProductPricing .GrandTotal.c-capr-pricing__grand-total > div',
-      euroFormat: false,
+        '#ProductPricing .GrandTotal.c-capr-pricing__grand-total > div'
     },
     outOfStock: {
       container:

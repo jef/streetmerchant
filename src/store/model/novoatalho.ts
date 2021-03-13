@@ -15,8 +15,7 @@ export const NovoAtalho: Store = {
     },
     maxPrice: {
       container:
-        'div.line > div.pull-right > div.text-right > span.product-price',
-      euroFormat: true,
+        'div.line > div.pull-right > div.text-right > span.product-price'
     },
   },
   links: [

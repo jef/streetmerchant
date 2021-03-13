@@ -14,8 +14,7 @@ export const GamestopDE: Store = {
       },
     ],
     maxPrice: {
-      container: '.buySection .prodPriceCont',
-      euroFormat: true,
+      container: '.buySection .prodPriceCont'
     },
     outOfStock: {
       container: '.megaButton',

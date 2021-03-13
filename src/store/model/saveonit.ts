@@ -9,8 +9,7 @@ export const SaveOnIt: Store = {
       text: ['In Stock', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
     },
     maxPrice: {
-      container: '.money',
-      euroFormat: false,
+      container: '.money'
     },
     outOfStock: {
       container: '.supplier',

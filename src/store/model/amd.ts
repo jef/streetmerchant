@@ -8,8 +8,7 @@ export const Amd: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '.product-page-description h4',
-      euroFormat: false,
+      container: '.product-page-description h4'
     },
   },
   links: [

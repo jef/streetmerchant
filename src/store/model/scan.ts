@@ -16,8 +16,7 @@ export const Scan: Store = {
       text: ['add to basket', 'in stock'],
     },
     maxPrice: {
-      container: '.buyPanel .price',
-      euroFormat: false, // Note: Scan uses non-euroFromat as price seperator
+      container: '.buyPanel .price'
     },
     outOfStock: {
       container: '.buyPanel .priceAvailability',

@@ -8,8 +8,7 @@ export const Eprice: Store = {
       text: ['disponibile', 'pochi pezzi'],
     },
     maxPrice: {
-      container: '#PrezzoClasic span[class*="big"]',
-      euroFormat: true,
+      container: '#PrezzoClasic span[class*="big"]'
     },
     outOfStock: {
       container: '.dispo',

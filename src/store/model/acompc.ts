@@ -8,8 +8,7 @@ export const AComPC: Store = {
       text: ['lagernd', 'im Zulauf'],
     },
     maxPrice: {
-      container: '.price',
-      euroFormat: true,
+      container: '.price'
     },
     outOfStock: [
       {

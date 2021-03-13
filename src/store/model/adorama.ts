@@ -12,8 +12,7 @@ export const Adorama: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '.your-price',
-      euroFormat: false,
+      container: '.your-price'
     },
   },
   links: [

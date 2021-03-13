@@ -14,8 +14,7 @@ export const Medimax: Store = {
       },
     ],
     maxPrice: {
-      container: '.priceOfProduct',
-      euroFormat: true,
+      container: '.priceOfProduct'
     },
     outOfStock: {
       container: '.content .large',

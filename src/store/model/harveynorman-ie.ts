@@ -8,8 +8,7 @@ export const HarveyNormanIE: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '.price',
-      euroFormat: false,
+      container: '.price'
     },
     outOfStock: {
       container: '.product-highlight-text',

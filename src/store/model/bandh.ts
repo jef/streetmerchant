@@ -9,8 +9,7 @@ export const BAndH: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: 'div[data-selenium="pricingPrice"]',
-      euroFormat: false,
+      container: 'div[data-selenium="pricingPrice"]'
     },
     outOfStock: {
       container: 'button[data-selenium="notifyAvailabilityButton"]',

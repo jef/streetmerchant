@@ -8,8 +8,7 @@ export const Ldlc: Store = {
       text: ['stock'],
     },
     maxPrice: {
-      container: '.price .price',
-      euroFormat: true,
+      container: '.price .price'
     },
     outOfStock: {
       container: '.stock',

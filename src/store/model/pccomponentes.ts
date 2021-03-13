@@ -8,8 +8,7 @@ export const PCComponentes: Store = {
       text: ['Comprar'],
     },
     maxPrice: {
-      container: '#precio-main',
-      euroFormat: true,
+      container: '#precio-main'
     },
     outOfStock: {
       container: '#btnsWishAddBuy',

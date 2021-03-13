@@ -8,8 +8,7 @@ export const Equippr: Store = {
       text: ['in den warenkorb'],
     },
     maxPrice: {
-      container: '.product--price',
-      euroFormat: true,
+      container: '.product--price'
     },
     outOfStock: {
       container: '.product--buybox',

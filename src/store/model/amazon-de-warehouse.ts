@@ -16,8 +16,7 @@ export const AmazonDeWarehouse: Store = {
       text: ['In den Einkaufswagen'],
     },
     maxPrice: {
-      container: '.olpOfferPrice',
-      euroFormat: true,
+      container: '.olpOfferPrice'
     },
     outOfStock: [
       {

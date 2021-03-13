@@ -9,8 +9,7 @@ export const Overclockers: Store = {
       text: ['add to basket', 'in stock'],
     },
     maxPrice: {
-      container: 'div[class="article_details_price"]',
-      euroFormat: false, // Note: Overclockers uses non-euroFromat as price seperator
+      container: 'div[class="article_details_price"]'
     },
     outOfStock: {
       container: '#detailbox',

@@ -9,8 +9,7 @@ export const Ebuyer: Store = {
       text: ['add to basket', 'pre-order'],
     },
     maxPrice: {
-      container: '.purchase-info__price .price',
-      euroFormat: false, // Note: ebuyer uses non-euroFromat as price seperator
+      container: '.purchase-info__price .price'
     },
     outOfStock: {
       container: '.purchase-info',

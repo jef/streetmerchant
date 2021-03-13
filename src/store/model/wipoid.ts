@@ -8,8 +8,7 @@ export const Wipoid: Store = {
       text: ['COMPRAR'],
     },
     maxPrice: {
-      container: '#our_price_display',
-      euroFormat: true,
+      container: '#our_price_display'
     },
     outOfStock: {
       container: '.buttons_bottom_block no-print',

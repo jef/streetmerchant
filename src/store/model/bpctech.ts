@@ -9,8 +9,7 @@ export const Bpctech: Store = {
       text: ['in stock'],
     },
     maxPrice: {
-      container: 'div.price-box.price-final_price > span > span',
-      euroFormat: false,
+      container: 'div.price-box.price-final_price > span > span'
     },
   },
   links: [

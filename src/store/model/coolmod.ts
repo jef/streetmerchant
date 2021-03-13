@@ -8,8 +8,7 @@ export const Coolmod: Store = {
       text: ['Envío'],
     },
     maxPrice: {
-      container: '.text-price-total',
-      euroFormat: true,
+      container: '.text-price-total'
     },
     outOfStock: {
       container: '.product-availability',

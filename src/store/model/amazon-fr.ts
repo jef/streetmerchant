@@ -13,8 +13,7 @@ export const AmazonFr: Store = {
       text: ['ajouter au panier'],
     },
     maxPrice: {
-      container: '#priceblock_ourprice',
-      euroFormat: true,
+      container: '#priceblock_ourprice'
     },
     outOfStock: [
       {

@@ -9,8 +9,7 @@ export const StormComputers: Store = {
       text: ['ADD TO CART'],
     },
     maxPrice: {
-      container: '.price',
-      euroFormat: false,
+      container: '.price'
     },
     outOfStock: {
       container: 'div.summary.entry-summary > p.stock.out-of-stock',

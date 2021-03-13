@@ -8,8 +8,7 @@ export const Futurex: Store = {
       text: ['Auf Lager'],
     },
     maxPrice: {
-      container: '.price',
-      euroFormat: true,
+      container: '.price'
     },
     outOfStock: [
       {

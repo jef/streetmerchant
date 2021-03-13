@@ -8,8 +8,7 @@ export const GamestopIT: Store = {
       text: ['Aggiungi al Carrello'],
     },
     maxPrice: {
-      container: '.buySection .prodPriceCont',
-      euroFormat: true,
+      container: '.buySection .prodPriceCont'
     },
     outOfStock: {
       container: '.megaButton .buyDisabled',

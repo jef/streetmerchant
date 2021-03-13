@@ -10,8 +10,7 @@ export const Box: Store = {
       text: ['add to basket'],
     },
     maxPrice: {
-      container: '.p-price',
-      euroFormat: false, // Note: Box uses non-euroFromat as price seperator
+      container: '.p-price'
     },
     outOfStock: {
       container: '#divBuyButton',

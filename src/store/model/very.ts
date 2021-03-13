@@ -10,8 +10,7 @@ export const Very: Store = {
       text: ['available', 'low stock'],
     },
     maxPrice: {
-      container: '.priceNow',
-      euroFormat: false, // Note: Very uses non-euroFromat as price seperator
+      container: '.priceNow'
     },
     outOfStock: {
       container: '.stockMessaging .indicator',

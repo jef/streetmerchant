@@ -282,8 +282,7 @@ export const MicroCenter: Store = {
       text: ['in stock'],
     },
     maxPrice: {
-      container: 'span[id="pricing"]',
-      euroFormat: false,
+      container: 'span[id="pricing"]'
     },
   },
   links,

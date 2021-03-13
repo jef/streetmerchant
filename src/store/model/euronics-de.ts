@@ -8,8 +8,7 @@ export const EuronicsDE: Store = {
       text: ['Warenkorb'],
     },
     maxPrice: {
-      container: '.price--content',
-      euroFormat: true,
+      container: '.price--content'
     },
     outOfStock: {
       container:

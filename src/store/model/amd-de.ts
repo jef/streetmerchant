@@ -8,8 +8,7 @@ export const AmdDe: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: '.product-page-description h4',
-      euroFormat: true,
+      container: '.product-page-description h4'
     },
     outOfStock: {
       container: '.btn-radeon',

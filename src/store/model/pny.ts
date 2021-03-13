@@ -8,8 +8,7 @@ export const Pny: Store = {
       text: ['add to cart'],
     },
     maxPrice: {
-      container: 'span[itemprop="price"]',
-      euroFormat: false,
+      container: 'span[itemprop="price"]'
     },
   },
   links: [

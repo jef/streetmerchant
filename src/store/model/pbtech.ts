@@ -16,8 +16,7 @@ export const PBTech: Store = {
       },
     ],
     maxPrice: {
-      container: 'div.p_price_dd > div.p_price > span.ginc',
-      euroFormat: false,
+      container: 'div.p_price_dd > div.p_price > span.ginc'
     },
     outOfStock: {
       container:
