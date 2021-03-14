@@ -6,7 +6,6 @@ export const Mwave: Store = {
   labels: {
     maxPrice: {
       container: 'div.divPriceNormal > div',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.stockAndDelivery > li:nth-child(1) > dl > dd',

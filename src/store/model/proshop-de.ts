@@ -10,7 +10,6 @@ export const ProshopDE: Store = {
     maxPrice: {
       container:
         '.site-currency-wrapper > span[class="site-currency-attention"]',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.site-currency-attention',

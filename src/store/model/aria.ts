@@ -10,7 +10,6 @@ export const Aria: Store = {
     },
     maxPrice: {
       container: '.priceBig',
-      euroFormat: false, // Note: Aria uses non-euroFromat as price seperator
     },
     outOfStock: {
       container: '.fBox',

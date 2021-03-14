@@ -9,7 +9,6 @@ export const Eprice: Store = {
     },
     maxPrice: {
       container: '#PrezzoClasic span[class*="big"]',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.dispo',

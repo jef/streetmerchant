@@ -9,7 +9,6 @@ export const Game: Store = {
     },
     maxPrice: {
       container: '.buyingOptions .btnPrice',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.buyingOptions',

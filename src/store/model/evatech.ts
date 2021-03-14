@@ -10,7 +10,6 @@ export const Evatech: Store = {
     },
     maxPrice: {
       container: '.product_detail_price',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.product_detail_add_to_cart > div:nth-child(2)',

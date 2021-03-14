@@ -10,7 +10,6 @@ export const Umart: Store = {
     },
     maxPrice: {
       container: '.goods-price',
-      euroFormat: false,
     },
     outOfStock: {
       container: 'div.price-box > div.stock-label',

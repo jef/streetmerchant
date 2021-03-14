@@ -15,7 +15,6 @@ export const Akinformatica: Store = {
     ],
     maxPrice: {
       container: '#PrezzoListinoIvatoLabel',
-      euroFormat: true,
     },
     outOfStock: [
       {
