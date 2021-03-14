@@ -16,7 +16,7 @@ export const MightyApe: Store = {
           'body > div.page-container > div.page.listing.details.not-in-trolley.category.category-games.category-ps5-consoles > div > main > section.product-summary-top > div > div > div.product-summary.unavailable > div.pricing-stock > div > div.status',
         text: [' Unavailable '],
       },
-    ]
+    ],
   },
   links: [
     {
@@ -37,8 +37,7 @@ export const MightyApe: Store = {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
-      url:
-        'https://www.mightyape.co.nz/product/xbox-series-x-console/30472387',
+      url:'https://www.mightyape.co.nz/product/xbox-series-x-console/30472387',
     },
     {
       brand: 'microsoft',
@@ -46,7 +45,7 @@ export const MightyApe: Store = {
       series: 'xboxss',
       url:
         'https://www.mightyape.co.nz/product/xbox-series-s-all-digital-console/33856647',
-    }
+    },
   ],
   name: 'mightyApe',
 };
