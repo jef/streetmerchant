@@ -47,5 +47,5 @@ export const MightyApe: Store = {
         'https://www.mightyape.co.nz/product/xbox-series-s-all-digital-console/33856647',
     },
   ],
-  name: 'mightyApe',
+  name: 'mightyape',
 };
