@@ -11,7 +11,6 @@ export const ComputerAlliance: Store = {
     },
     maxPrice: {
       container: 'span.price',
-      euroFormat: false,
     },
     outOfStock: {
       container:

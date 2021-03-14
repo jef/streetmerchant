@@ -9,7 +9,6 @@ export const Corsair: Store = {
     },
     maxPrice: {
       container: '.product-price',
-      euroFormat: false,
     },
   },
   links: [

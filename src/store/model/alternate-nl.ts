@@ -9,7 +9,6 @@ export const AlternateNL: Store = {
     },
     maxPrice: {
       container: 'div.price > span',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.stockStatus',

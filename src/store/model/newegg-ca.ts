@@ -14,7 +14,6 @@ export const NeweggCa: Store = {
     },
     maxPrice: {
       container: 'div#app div.product-price > ul > li.price-current > strong',
-      euroFormat: false,
     },
     outOfStock: [
       {

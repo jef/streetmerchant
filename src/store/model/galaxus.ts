@@ -9,7 +9,6 @@ export const Galaxus: Store = {
     },
     maxPrice: {
       container: '.productDetail .Z1c8',
-      euroFormat: true,
     },
     outOfStock: [
       {

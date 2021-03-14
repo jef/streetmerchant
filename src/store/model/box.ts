@@ -11,7 +11,6 @@ export const Box: Store = {
     },
     maxPrice: {
       container: '.p-price',
-      euroFormat: false, // Note: Box uses non-euroFromat as price seperator
     },
     outOfStock: {
       container: '#divBuyButton',

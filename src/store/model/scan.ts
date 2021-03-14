@@ -17,7 +17,6 @@ export const Scan: Store = {
     },
     maxPrice: {
       container: '.buyPanel .price',
-      euroFormat: false, // Note: Scan uses non-euroFromat as price seperator
     },
     outOfStock: {
       container: '.buyPanel .priceAvailability',

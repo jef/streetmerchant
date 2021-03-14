@@ -11,7 +11,6 @@ export const HardwarePlanet: Store = {
     },
     maxPrice: {
       container: '.product-price',
-      euroFormat: true,
     },
     outOfStock: {
       container: '#product-availability',

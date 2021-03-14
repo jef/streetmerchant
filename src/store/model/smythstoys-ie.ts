@@ -10,7 +10,6 @@ export const SmythsToysIE: Store = {
     },
     maxPrice: {
       container: '.price_tag',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.instoreMessage',
