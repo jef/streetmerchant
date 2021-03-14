@@ -38,7 +38,7 @@ export const TheWarehouse: Store = {
       model: 'xbox series s',
       series: 'xboxss',
       url: 'https://www.thewarehouse.co.nz/R2708604.html',
-    }
+    },
   ],
   name: 'thewarehouse',
 };
