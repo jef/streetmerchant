@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Arlt: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.articleDesc .shippingtext',

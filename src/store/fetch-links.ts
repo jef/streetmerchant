@@ -48,7 +48,7 @@ export async function fetchLinks(store: Store, browser: Browser) {
 
     url.map(x =>
       promises.push(
-        usingResponse(browser, x, async response => {
+        usingResponse(browser, x, store, async response => {
           const text = await response?.text();
 
           if (!text) {

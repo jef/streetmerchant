@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Elcorteingles: Store = {
   backoffStatusCodes: [403, 429, 503],
   currency: '€',
+  lowBandwidth: false,
   labels: {
     // Captcha: {
     // 	container: 'body',

@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Ldlc: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.stock',

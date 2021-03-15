@@ -45,13 +45,14 @@ export function isStatusCodeInRange(
 export async function usingResponse<T>(
   browser: Browser,
   url: string,
+  store: Store,
   cb: (
     response: HTTPResponse | null,
     page: Page,
     browser: Browser
   ) => Promise<T>
 ): Promise<T> {
-  return usingPage(browser, async (page, browser) => {
+  return usingPage(browser, store, async (page, browser) => {
     const response = await page.goto(url, {waitUntil: 'domcontentloaded'});
 
     return cb(response, page, browser);
@@ -60,6 +61,7 @@ export async function usingResponse<T>(
 
 export async function usingPage<T>(
   browser: Browser,
+  store: Store,
   cb: (page: Page, browser: Browser) => Promise<T>
 ): Promise<T> {
   const page = await browser.newPage();
@@ -70,15 +72,15 @@ export async function usingPage<T>(
     return await cb(page, browser);
   } finally {
     try {
-      await closePage(page);
+      await closePage(page, store);
     } catch (error: unknown) {
       logger.error('usingPage', error);
     }
   }
 }
 
-export async function closePage(page: Page) {
-  if (!config.browser.lowBandwidth) {
+export async function closePage(page: Page, store: Store) {
+  if (!store.lowBandwidth) {
     await disableBlockerInPage(page);
   }
 

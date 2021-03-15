@@ -174,7 +174,6 @@ const browser = {
   isHeadless: envOrBoolean(process.env.HEADLESS),
   isIncognito: envOrBoolean(process.env.INCOGNITO, false),
   isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
-  lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
   maxBackoff: envOrNumberMax(
     process.env.PAGE_BACKOFF_MIN,
     process.env.PAGE_BACKOFF_MAX,

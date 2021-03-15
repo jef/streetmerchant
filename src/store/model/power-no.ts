@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const PowerNO: Store = {
   currency: 'kr.',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container:

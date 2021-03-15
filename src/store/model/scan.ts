@@ -3,6 +3,7 @@ import {getProductLinksBuilder} from './helpers/card';
 
 export const Scan: Store = {
   currency: '£',
+  lowBandwidth: false,
   disableAdBlocker: true,
   labels: {
     captcha: [

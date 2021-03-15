@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 export const PlayStation: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: [
       {

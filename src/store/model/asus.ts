@@ -4,6 +4,7 @@ import fetch from 'node-fetch';
 export const Asus: Store = {
   backoffStatusCodes: [403, 429, 503],
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '#item_add_cart',

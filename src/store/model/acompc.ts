@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const AComPC: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.filial_stock',

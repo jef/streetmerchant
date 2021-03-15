@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Zotac: Store = {
   backoffStatusCodes: [403, 503],
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.add-to-cart-wrapper',

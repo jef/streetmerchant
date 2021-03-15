@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const MemoryExpress: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     maxPrice: {
       container:

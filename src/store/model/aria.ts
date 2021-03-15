@@ -3,6 +3,7 @@ import {getProductLinksBuilder} from './helpers/card';
 
 export const Aria: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '#addQuantity',

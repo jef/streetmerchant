@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Mwave: Store = {
   backoffStatusCodes: [403, 429],
   currency: '$',
+  lowBandwidth: false,
   labels: {
     maxPrice: {
       container: 'div.divPriceNormal > div',

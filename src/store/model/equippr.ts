@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Equippr: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: 'buybox--button-container',

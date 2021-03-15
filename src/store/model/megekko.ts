@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Megekko: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.product-order .text_green',

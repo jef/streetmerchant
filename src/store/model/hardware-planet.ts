@@ -4,6 +4,7 @@ import {getProductLinksBuilder} from './helpers/card';
 export const HardwarePlanet: Store = {
   backoffStatusCodes: [404, 429, 503],
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.add >button.add-to-cart',

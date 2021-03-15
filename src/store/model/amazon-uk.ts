@@ -3,6 +3,7 @@ import {Link, Store} from './store';
 export const AmazonUk: Store = {
   backoffStatusCodes: [403, 429, 503],
   currency: '£',
+  lowBandwidth: false,
   labels: {
     captcha: {
       container: 'body',

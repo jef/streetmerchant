@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Centrecom: Store = {
   backoffStatusCodes: [403, 429],
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.prod_stores_stock > li:nth-child(1) > span:nth-child(2)',

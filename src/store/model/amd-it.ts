@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const AmdIt: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.btn-shopping-cart',

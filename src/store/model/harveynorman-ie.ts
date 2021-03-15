@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const HarveyNormanIE: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: 'input.btn-action',

@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const AntOnline: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.uk-button',

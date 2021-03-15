@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Evga: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.product-buy-specs',

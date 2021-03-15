@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Walmart: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.button.spin-button.prod-ProductCTA--primary.button--primary',

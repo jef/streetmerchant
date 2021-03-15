@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Mindfactory: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.pshipping',

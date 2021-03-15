@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Spielegrotte: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: [
       {

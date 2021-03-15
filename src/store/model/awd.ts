@@ -3,6 +3,7 @@ import {getProductLinksBuilder} from './helpers/card';
 
 export const Awd: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.vs-stock .ty-qty-in-stock',

@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const AmdUk: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: [
       {

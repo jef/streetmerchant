@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Igamecomputer: Store = {
   backoffStatusCodes: [403, 429],
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container:

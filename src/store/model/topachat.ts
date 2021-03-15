@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const TopAchat: Store = {
   currency: '€',
+  lowBandwidth: true,
   labels: {
     inStock: {
       container: 'input.cart.button[value="Ajouter au panier"]',

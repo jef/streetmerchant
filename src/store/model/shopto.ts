@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const ShopTo: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.orderbox_inventory',

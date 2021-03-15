@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Corsair: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.add_to_cart_form',

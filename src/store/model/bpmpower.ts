@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const BpmPower: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.dispoSiProd >span',

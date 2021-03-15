@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Vuugo: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.green',

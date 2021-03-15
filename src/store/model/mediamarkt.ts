@@ -3,6 +3,7 @@ import {Store} from './store';
 export const Mediamarkt: Store = {
   backoffStatusCodes: [403, 429, 503],
   currency: '€',
+  lowBandwidth: false,
   labels: {
     captcha: {
       container: 'p',

@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const JohnLewis: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '#button--add-to-basket',

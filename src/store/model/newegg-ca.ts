@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 
 export const NeweggCa: Store = {
   currency: '$',
+  lowBandwidth: false,
   labels: {
     captcha: {
       container: 'body',

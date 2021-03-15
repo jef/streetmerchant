@@ -12,6 +12,7 @@ export const Amazon: Store = {
     searchUrl: 'https://www.amazon.com/s?k=%%s&i=todays-deals&ref=nb_sb_noss_2',
   },
   currency: '$',
+  lowBandwidth: false,
   labels: {
     captcha: {
       container: 'body',

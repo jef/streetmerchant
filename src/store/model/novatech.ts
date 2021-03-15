@@ -3,6 +3,7 @@ import {getProductLinksBuilder} from './helpers/card';
 
 export const Novatech: Store = {
   currency: '£',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.newspec-specprice',

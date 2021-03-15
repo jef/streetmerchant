@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const Otto: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: [
       {

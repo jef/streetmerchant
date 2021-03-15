@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const ArgosIE: Store = {
   currency: '€',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '.btnbuyreserve',

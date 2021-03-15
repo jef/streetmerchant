@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const SmythsToysIE: Store = {
   currency: '€',
+  lowBandwidth: false,
   disableAdBlocker: true,
   labels: {
     inStock: {

@@ -2,6 +2,7 @@ import {Store} from './store';
 
 export const NetonnetNO: Store = {
   currency: 'kr.',
+  lowBandwidth: false,
   labels: {
     inStock: {
       container: '#productPurchaseBoxContainer > div > button',
