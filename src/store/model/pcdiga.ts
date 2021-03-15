@@ -13,7 +13,6 @@ export const PCDiga: Store = {
     },
     maxPrice: {
       container: '.price-container.price-final_price > .price-wrapper > span',
-      euroFormat: true,
     },
   },
   links: [

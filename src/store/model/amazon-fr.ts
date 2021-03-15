@@ -14,7 +14,6 @@ export const AmazonFr: Store = {
     },
     maxPrice: {
       container: '#priceblock_ourprice',
-      euroFormat: true,
     },
     outOfStock: [
       {

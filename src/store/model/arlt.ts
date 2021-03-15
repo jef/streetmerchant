@@ -9,7 +9,6 @@ export const Arlt: Store = {
     },
     maxPrice: {
       container: '.articleprice .price',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.articleDesc .shippingtext',

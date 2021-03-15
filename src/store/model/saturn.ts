@@ -10,7 +10,6 @@ export const Saturn: Store = {
     },
     maxPrice: {
       container: 'span[font-family="price"]',
-      euroFormat: false,
     },
     outOfStock: [
       {

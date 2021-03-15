@@ -11,7 +11,6 @@ export const Drako: Store = {
     ],
     maxPrice: {
       container: '.price',
-      euroFormat: true,
     },
   },
   links: [

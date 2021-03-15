@@ -10,7 +10,6 @@ export const SaveOnIt: Store = {
     },
     maxPrice: {
       container: '.money',
-      euroFormat: false,
     },
     outOfStock: {
       container: '.supplier',

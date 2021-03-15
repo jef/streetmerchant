@@ -13,7 +13,6 @@ export const Computeruniverse: Store = {
     },
     maxPrice: {
       container: '.product-price',
-      euroFormat: true,
     },
     outOfStock: {
       container: '.availability',

@@ -9,7 +9,6 @@ export const AmdCa: Store = {
     },
     maxPrice: {
       container: '.product-page-description h4',
-      euroFormat: false,
     },
   },
   links: [
