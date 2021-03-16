@@ -125,10 +125,14 @@ export async function getPrice(
   const priceString = await extractPageContents(page, selector);
 
   if (priceString) {
+    const euroFormat = priceString.indexOf('.') < priceString.indexOf(',');
     const price = Number.parseFloat(
-      priceString.replace(/\\.|\\,/g, '').match(/\d+/g)!.join('.') // eslint-disable-line
+      priceString
+        .replace(/\\/g, '')
+        .replace(euroFormat ? /\./g : /,/g, '')
+        .match(/\d+/g)!
+        .join('.')
     );
-
     logger.debug('received price', price);
     return price;
   }
