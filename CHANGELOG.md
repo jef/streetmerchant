@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.5.1](https://www.github.com/jef/streetmerchant/compare/v3.5.0...v3.5.1) (2021-03-17)
+
+
+### Bug Fixes
+
+* parsing prices with thousands separator and European format ([#2153](https://www.github.com/jef/streetmerchant/issues/2153)) ([61f8e3a](https://www.github.com/jef/streetmerchant/commit/61f8e3a9a03136682035881fce6d14356717d1ac))
+
 ## [3.5.0](https://www.github.com/jef/streetmerchant/compare/v3.4.1...v3.5.0) (2021-03-02)
 
 
