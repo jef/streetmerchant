@@ -15,6 +15,7 @@ export const AmdUk: Store = {
     ],
     maxPrice: {
       container: '.product-page-description h4',
+      euroFormat: false,
     },
     outOfStock: [
       {

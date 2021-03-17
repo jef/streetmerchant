@@ -9,6 +9,7 @@ export const Ldlc: Store = {
     },
     maxPrice: {
       container: '.price .price',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.stock',

@@ -9,6 +9,7 @@ export const EuronicsDE: Store = {
     },
     maxPrice: {
       container: '.price--content',
+      euroFormat: true,
     },
     outOfStock: {
       container:

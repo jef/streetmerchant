@@ -9,6 +9,7 @@ export const AComPC: Store = {
     },
     maxPrice: {
       container: '.price',
+      euroFormat: true,
     },
     outOfStock: [
       {

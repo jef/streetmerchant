@@ -12,6 +12,7 @@ export const Ollo: Store = {
     ],
     maxPrice: {
       container: '.main-product-price',
+      euroFormat: true,
     },
     outOfStock: {
       container:

@@ -10,6 +10,7 @@ export const Allneeds: Store = {
     },
     maxPrice: {
       container: 'span.price',
+      euroFormat: false,
     },
     outOfStock: {
       container: '.amstockstatus',

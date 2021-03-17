@@ -10,6 +10,7 @@ export const StormComputers: Store = {
     },
     maxPrice: {
       container: '.price',
+      euroFormat: false,
     },
     outOfStock: {
       container: 'div.summary.entry-summary > p.stock.out-of-stock',

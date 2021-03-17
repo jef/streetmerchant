@@ -9,6 +9,7 @@ export const Pny: Store = {
     },
     maxPrice: {
       container: 'span[itemprop="price"]',
+      euroFormat: false,
     },
   },
   links: [

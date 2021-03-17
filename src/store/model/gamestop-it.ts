@@ -9,6 +9,7 @@ export const GamestopIT: Store = {
     },
     maxPrice: {
       container: '.buySection .prodPriceCont',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.megaButton .buyDisabled',

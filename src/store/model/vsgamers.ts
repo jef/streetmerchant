@@ -9,6 +9,7 @@ export const VsGamers: Store = {
     },
     maxPrice: {
       container: 'div[class="current ng-binding"]',
+      euroFormat: true,
     },
     outOfStock: {
       container: '#vs-product-sheet-dashboard',
