@@ -10,6 +10,7 @@ export const LandmarkComputers: Store = {
     },
     maxPrice: {
       container: '.product-views-price-lead',
+      euroFormat: false,
     },
     outOfStock: {
       container: '.stock-info-message',

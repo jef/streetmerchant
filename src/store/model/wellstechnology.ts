@@ -11,6 +11,7 @@ export const WellsTechnology: Store = {
     },
     maxPrice: {
       container: '#productPrice-product-template *',
+      euroFormat: false,
     },
     outOfStock: {
       container: '#addToCartText-product-template',

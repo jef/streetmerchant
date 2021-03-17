@@ -10,6 +10,7 @@ export const Ebuyer: Store = {
     },
     maxPrice: {
       container: '.purchase-info__price .price',
+      euroFormat: false, // Note: ebuyer uses non-euroFromat as price seperator
     },
     outOfStock: {
       container: '.purchase-info',

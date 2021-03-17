@@ -9,6 +9,7 @@ export const Coolblue: Store = {
     },
     maxPrice: {
       container: '.js-order-block .sales-price__current',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.product-order',

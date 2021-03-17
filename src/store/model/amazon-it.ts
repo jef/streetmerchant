@@ -14,6 +14,7 @@ export const AmazonIt: Store = {
     },
     maxPrice: {
       container: '#priceblock_ourprice',
+      euroFormat: true,
     },
   },
   links: [

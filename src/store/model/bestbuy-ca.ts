@@ -5,6 +5,7 @@ export const BestBuyCa: Store = {
   labels: {
     maxPrice: {
       container: 'div[class*="pricingContainer"]',
+      euroFormat: false,
     },
     outOfStock: {
       container: '.addToCartButton:disabled',

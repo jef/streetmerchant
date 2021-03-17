@@ -11,6 +11,7 @@ export const Igamecomputer: Store = {
     },
     maxPrice: {
       container: 'div.price__pricing-group > div.price__regular > dd > span',
+      euroFormat: false,
     },
     outOfStock: {
       container:

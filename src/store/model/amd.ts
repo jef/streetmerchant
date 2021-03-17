@@ -9,6 +9,7 @@ export const Amd: Store = {
     },
     maxPrice: {
       container: '.product-page-description h4',
+      euroFormat: false,
     },
   },
   links: [
@@ -53,10 +54,10 @@ export const Amd: Store = {
     {
       brand: 'amd',
       cartUrl:
-        'https://www.amd.com/en/direct-buy/5458372200/us?add-to-cart=true',
+        'https://www.amd.com/en/direct-buy/5458374200/us?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6900xt',
-      url: 'https://www.amd.com/en/direct-buy/5458372200/us',
+      url: 'https://www.amd.com/en/direct-buy/5458374200/us',
     },
     {
       brand: 'amd',

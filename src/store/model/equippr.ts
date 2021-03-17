@@ -9,6 +9,7 @@ export const Equippr: Store = {
     },
     maxPrice: {
       container: '.product--price',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.product--buybox',

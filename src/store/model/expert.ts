@@ -12,6 +12,7 @@ export const Expert: Store = {
     ],
     maxPrice: {
       container: '.widget-Container-subContent .widget-ArticlePrice-price',
+      euroFormat: false,
     },
     outOfStock: [
       {

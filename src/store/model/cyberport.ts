@@ -9,6 +9,7 @@ export const Cyberport: Store = {
     },
     maxPrice: {
       container: '#productDetailOverview .price',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.tooltipAvailabilityParent',
