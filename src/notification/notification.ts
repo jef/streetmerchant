@@ -17,6 +17,7 @@ import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
 import {activateSmartthingsSwitch} from './smartthings';
 import {sendStreamLabsAlert} from './streamlabs';
+import {sendApns} from './apns';
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
@@ -25,6 +26,7 @@ export function sendNotification(link: Link, store: Store) {
   sendDesktopNotification(link, store);
   sendEmail(link, store);
   sendSms(link, store);
+  sendApns(link, store);
   // Non-priority
   activateSmartthingsSwitch();
   adjustPhilipsHueLights();

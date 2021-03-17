@@ -205,6 +205,14 @@ const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
 
 const notifications = {
   desktop: process.env.DESKTOP_NOTIFICATIONS === 'true',
+  apns: {
+    apnsAuthKey: envOrString(process.env.APNS_AUTHKEY),
+    apnsKeyId: envOrString(process.env.APNS_KEYID),
+    apnsTeamId: envOrString(process.env.APNS_TEAMID),
+    apnsProduction: envOrBoolean(process.env.APNS_PRODUCTION),
+    apnsDeviceToken: envOrString(process.env.APNS_DEVICETOKEN),
+    apnsBundleId: envOrString(process.env.APNS_BUNDLEID),
+  },
   discord: {
     notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
     notifyGroupSeries: {
