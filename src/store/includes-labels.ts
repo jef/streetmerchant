@@ -125,14 +125,8 @@ export async function getPrice(
   const priceString = await extractPageContents(page, selector);
 
   if (priceString) {
-    const thousandsSeparator =
-      priceString.search(/\d+\.\d{3}|\d+,\d{2}$/) > -1 ? /\./g : /,/g;
     const price = Number.parseFloat(
-      priceString
-        .replace(/\\/g, '')
-        .replace(thousandsSeparator, '')
-        .match(/\d+/g)!
-        .join('.')
+      priceString.replace(/\\.|\\,/g, '').match(/\d+/g)!.join('.') // eslint-disable-line
     );
 
     logger.debug('received price', price);
