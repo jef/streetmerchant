@@ -6,6 +6,10 @@ import {config} from '../config';
 const {apns} = config.notifications;
 
 export function sendApns(link: Link, store: Store) {
+  if (apns.apnsAuthKey.length === 0) {
+    return;
+  }
+
   const options = {
     token: {
       key: apns.apnsAuthKey,
