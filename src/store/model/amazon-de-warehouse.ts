@@ -17,6 +17,7 @@ export const AmazonDeWarehouse: Store = {
     },
     maxPrice: {
       container: '.olpOfferPrice',
+      euroFormat: true,
     },
     outOfStock: [
       {

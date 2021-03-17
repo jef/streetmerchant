@@ -6,6 +6,7 @@ export const MemoryExpress: Store = {
     maxPrice: {
       container:
         '#ProductPricing .GrandTotal.c-capr-pricing__grand-total > div',
+      euroFormat: false,
     },
     outOfStock: {
       container:

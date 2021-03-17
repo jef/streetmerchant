@@ -10,6 +10,7 @@ export const Dcomp: Store = {
     },
     maxPrice: {
       container: '#prodprice',
+      euroFormat: false,
     },
     outOfStock: {
       container: '#cart-info > button.btn.notifyMe',

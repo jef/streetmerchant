@@ -9,6 +9,7 @@ export const Megekko: Store = {
     },
     maxPrice: {
       container: '.col_right_container .euro',
+      euroFormat: false,
     },
     outOfStock: {
       container: '.product_detail .text_red',

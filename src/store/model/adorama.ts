@@ -13,6 +13,7 @@ export const Adorama: Store = {
     },
     maxPrice: {
       container: '.your-price',
+      euroFormat: false,
     },
   },
   links: [

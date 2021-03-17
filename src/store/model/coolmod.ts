@@ -9,6 +9,7 @@ export const Coolmod: Store = {
     },
     maxPrice: {
       container: '.text-price-total',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.product-availability',

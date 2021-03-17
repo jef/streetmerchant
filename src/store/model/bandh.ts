@@ -10,6 +10,7 @@ export const BAndH: Store = {
     },
     maxPrice: {
       container: 'div[data-selenium="pricingPrice"]',
+      euroFormat: false,
     },
     outOfStock: {
       container: 'button[data-selenium="notifyAvailabilityButton"]',

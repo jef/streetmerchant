@@ -9,6 +9,7 @@ export const PCComponentes: Store = {
     },
     maxPrice: {
       container: '#precio-main',
+      euroFormat: true,
     },
     outOfStock: {
       container: '#btnsWishAddBuy',

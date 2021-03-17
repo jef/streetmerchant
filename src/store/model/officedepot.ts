@@ -13,6 +13,7 @@ export const OfficeDepot: Store = {
     },
     maxPrice: {
       container: 'span[class^="price_column right"]',
+      euroFormat: false,
     },
   },
   links: [

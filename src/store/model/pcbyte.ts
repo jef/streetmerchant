@@ -10,6 +10,7 @@ export const PCByte: Store = {
     },
     maxPrice: {
       container: 'div.price-line.d-flex.mb-3 > div:nth-child(1) > span > span',
+      euroFormat: false,
     },
     outOfStock: {
       container: 'a.btn:nth-child(3)',

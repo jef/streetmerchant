@@ -9,6 +9,7 @@ export const PCKing: Store = {
     },
     maxPrice: {
       container: 'div.es_product_price-article_detail > b',
+      euroFormat: true,
     },
     outOfStock: [
       {

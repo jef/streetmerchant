@@ -9,6 +9,7 @@ export const Mindfactory: Store = {
     },
     maxPrice: {
       container: 'div[class="pprice"]',
+      euroFormat: true,
     },
     outOfStock: {
       container: '.pshipping',

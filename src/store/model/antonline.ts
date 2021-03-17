@@ -9,6 +9,7 @@ export const AntOnline: Store = {
     },
     maxPrice: {
       container: '.cPrice',
+      euroFormat: false,
     },
     outOfStock: {
       container: '.priceView-price .priceView-hero-price span',

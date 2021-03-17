@@ -11,6 +11,7 @@ export const RosmanMelb: Store = {
     },
     maxPrice: {
       container: 'span.price.price--withTax.price--main',
+      euroFormat: false,
     },
     outOfStock: {
       container:

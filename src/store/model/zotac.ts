@@ -10,6 +10,7 @@ export const Zotac: Store = {
     },
     maxPrice: {
       container: 'div[class="product-shop"] span[class="price"]',
+      euroFormat: false,
     },
   },
   links: [
