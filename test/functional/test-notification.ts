@@ -24,15 +24,19 @@ const store: Store = {
   name: 'test:name',
 };
 
-/**
- * Send test email.
- */
-sendNotification(link, store);
+async function main() {
+  /**
+   * Send test email.
+   */
+  sendNotification(link, store);
 
-/**
- * Open browser.
- */
-if (config.browser.open) {
-  open(link.cartUrl ?? link.url);
-  open(link.url);
+  /**
+   * Open browser.
+   */
+  if (config.browser.open) {
+    await open(link.cartUrl ?? link.url);
+    await open(link.url);
+  }
 }
+
+void main();

@@ -1,6 +1,6 @@
-import {SmartThings} from '@bridgerakol/samsung-smart-api';
-import {logger} from '../logger';
 import {config} from '../config';
+import fetch, {Response} from 'node-fetch';
+import {logger} from '../logger';
 
 const {smartthings} = config.notifications;
 
@@ -8,34 +8,41 @@ export async function activateSmartthingsSwitch() {
   if (!smartthings.token || !smartthings.device) {
     return;
   }
-  const st = new SmartThings(smartthings.token);
-  let match = false;
-  try {
-    await st.devices.getList().then(res => {
-      res.data.items.forEach(
-        async (item: {label: string; deviceId: string}) => {
-          if (smartthings.device === item.label) {
-            match = true;
-            const device_status = (await st.devices.getStatus(item.deviceId))
-              .data.components.main.switch.switch.value;
-            if (device_status !== 'on') {
-              logger.debug(`Turning on ${smartthings.device}`);
-              st.devices.commands(item.deviceId, 'on');
-            }
-          }
-        }
-      );
-    });
-  } catch (TypeError) {
-    logger.warn(
-      'SmartThings : Problem getting data from hub, check SMARTTHINGS_TOKEN'
+  const unmatchedDevices: Array<string> = [];
+
+  const res = await fetch('https://api.smartthings.com/v1/devices', {
+    headers: {Authorization: `Bearer ${smartthings.token}`},
+  });
+  const devices = await res.json();
+
+  const promises: Array<Promise<Response>> = [];
+  for (const {label, deviceId} of devices) {
+    if (smartthings.device !== label) {
+      unmatchedDevices.push(label);
+    }
+
+    promises.push(
+      fetch(`https://api.smartthings.com/v1/devices/${deviceId}/commands`, {
+        method: 'post',
+        headers: {Authorization: `Bearer ${smartthings.token}`},
+        body: JSON.stringify({
+          commands: [
+            {
+              component: 'main',
+              capability: 'switch',
+              command: 'on',
+            },
+          ],
+        }),
+      })
     );
-    return;
   }
-  if (!match) {
+
+  await Promise.all(promises);
+
+  if (unmatchedDevices.length > 0) {
     logger.warn(
-      `SmartThings : No switch called ${smartthings.device}, check SMARTTHINGS_SWITCH_LABEL`
+      `smartthings: cannot find ${unmatchedDevices.toString()}, check SMARTTHINGS_SWITCH_LABEL`
     );
-    return;
   }
 }

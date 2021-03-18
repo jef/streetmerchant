@@ -26,7 +26,7 @@ export function sendNotification(link: Link, store: Store) {
   sendDesktopNotification(link, store);
   sendEmail(link, store);
   sendSms(link, store);
-  sendApns(link, store);
+  sendApns();
   // Non-priority
   activateSmartthingsSwitch();
   adjustPhilipsHueLights();

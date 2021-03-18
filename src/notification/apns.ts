@@ -1,45 +1,43 @@
-import {Link, Store} from '../store/model';
-import {Print, logger} from '../logger';
-import * as apn from '@parse/node-apn';
+import {logger} from '../logger';
+import {Provider, Notification} from '@parse/node-apn';
 import {config} from '../config';
 
 const {apns} = config.notifications;
+let provider: Provider;
+let notification: Notification;
 
-export function sendApns(link: Link, store: Store) {
-  const options = {
+if (
+  apns.apnsAuthKey.length > 0 &&
+  apns.apnsKeyId.length > 0 &&
+  apns.apnsTeamId.length > 0 &&
+  apns.apnsBundleId.length > 0
+) {
+  provider = new Provider({
     token: {
       key: apns.apnsAuthKey,
       keyId: apns.apnsKeyId,
       teamId: apns.apnsTeamId,
     },
-    production: apns.apnsProduction,
-  };
-
-  if (
-    options.token.key.length <= 0 ||
-    options.token.keyId.length <= 0 ||
-    options.token.teamId.length <= 0
-  ) {
-    return;
-  }
-
-  const apnProvider = new apn.Provider(options);
-
-  const note = new apn.Notification();
-
-  note.badge = 1;
-  note.sound = 'ping.aiff';
-  note.alert = '\uD83D\uDCE7 \u2709 You have a new message';
-  note.payload = {label: '1'};
-  note.topic = apns.apnsBundleId;
-
-  apnProvider.send(note, apns.apnsDeviceToken).then(result => {
-    // see documentation for an explanation of result
-    if (result.sent) {
-      logger.info('✔ push notification sent');
-    } else {
-      logger.error("✖ couldn't send push notification", result.failed);
-    }
-    apnProvider.shutdown();
   });
+  notification = new Notification({
+    badge: 1,
+    sound: 'ping.aiff',
+    alert: '\uD83D\uDCE7 \u2709 You have a new message',
+    payload: {label: '1'},
+    topic: apns.apnsBundleId,
+  });
+}
+
+export function sendApns() {
+  if (!provider && !notification) return;
+
+  provider.send(notification, apns.apnsDeviceToken).then(result => {
+    if (result.sent) {
+      logger.info('✔ apple push notification sent');
+    } else {
+      logger.error("✖ couldn't send apple push notification", result.failed);
+    }
+  });
+
+  provider.shutdown();
 }
