@@ -15,6 +15,14 @@ export function sendApns(link: Link, store: Store) {
     production: apns.apnsProduction,
   };
 
+  if (
+    options.token.key.length <= 0 ||
+    options.token.keyId.length <= 0 ||
+    options.token.teamId.length <= 0
+  ) {
+    return;
+  }
+
   const apnProvider = new apn.Provider(options);
 
   const note = new apn.Notification();
