@@ -154,6 +154,7 @@ Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 | `PUSHOVER_PRIORITY` | Message priority |
 | `PUSHOVER_TOKEN` | API token |
 | `PUSHOVER_USER` | Username |
+| `PUSHOVER_SOUND` | Message sound |
 
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
