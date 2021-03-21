@@ -320,6 +320,22 @@ export const BestBuy: Store = {
       series: '3060',
       url: 'https://api.bestbuy.com/click/-/6454328/pdp',
     },
+    // https://www.bestbuy.com/site/pny-nvidia-geforce-rtx-3060-12gb-xlr8-gaming-revel-epic-x-rgb-dual-fan-graphics-card/6454319.p?skuId=6454319
+    {
+      brand: 'pny',
+      cartUrl: 'https://api.bestbuy.com/click/-/6454319/cart',
+      model: '',
+      series: '3060',
+      url: 'https://api.bestbuy.com/click/-/6454319/pdp',
+    },
+    // https://www.bestbuy.com/site/pny-nvidia-geforce-rtx-3060-12gb-xlr8-gaming-revel-epic-x-rgb-single-fan-graphics-card/6454318.p?skuId=6454318
+    {
+      brand: 'pny',
+      cartUrl: 'https://api.bestbuy.com/click/-/6454318/cart',
+      model: '',
+      series: '3060',
+      url: 'https://api.bestbuy.com/click/-/6454318/pdp',
+    },
     {
       brand: 'amd',
       cartUrl: 'https://api.bestbuy.com/click/-/6438942/cart',
