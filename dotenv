@@ -5,9 +5,9 @@ TELEGRAM_CHAT_ID=-488499575
 
 BROWSER_TRUSTED=true
 
-MAX_PRICE_SERIES_3060TI=650
-MAX_PRICE_SERIES_3070=900
-MAX_PRICE_SERIES_3080=1150
+MAX_PRICE_SERIES_3060TI=750
+MAX_PRICE_SERIES_3070=1000
+MAX_PRICE_SERIES_3080=1200
 
 OPEN_BROWSER=false
 STORES=alternate,amazon-de,amazon-de-warehouse,amazon-es,amazon-fr,amazon-it,amazon-uk,caseking,ccl,currys,overclockers,scan
