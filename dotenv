@@ -9,6 +9,8 @@ MAX_PRICE_SERIES_3060TI=800
 MAX_PRICE_SERIES_3070=1000
 MAX_PRICE_SERIES_3080=1200
 
+SCREENSHOT=false
+
 OPEN_BROWSER=false
 STORES=alternate,amazon-de,amazon-de-warehouse,amazon-es,amazon-fr,amazon-it,amazon-uk,caseking,ccl,currys,overclockers,scan
 SHOW_ONLY_SERIES=3060ti,3070,3080
