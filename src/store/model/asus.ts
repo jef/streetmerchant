@@ -66,10 +66,10 @@ export const Asus: Store = {
     },
     {
       brand: 'asus',
-      itemNumber: '202010AM310000001',
-      model: 'strix',
+      itemNumber: '202010AM310000003',
+      model: 'dual',
       series: '3070',
-      url: 'https://store.asus.com/us/item/202010AM310000001',
+      url: 'https://store.asus.com/us/item/202010AM310000003',
     },
     {
       brand: 'asus',
@@ -94,17 +94,17 @@ export const Asus: Store = {
     },
     {
       brand: 'asus',
-      itemNumber: '202012AM160000002',
+      itemNumber: '202009AM290000002',
       model: 'strix',
       series: '3080',
-      url: 'https://store.asus.com/us/item/202012AM160000002',
+      url: 'https://store.asus.com/us/item/202009AM290000002',
     },
     {
       brand: 'asus',
-      itemNumber: '202011AM190000001',
+      itemNumber: '202009AM160000001',
       model: 'tuf oc',
       series: '3080',
-      url: 'https://store.asus.com/us/item/202011AM190000001',
+      url: 'https://store.asus.com/us/item/202009AM160000001',
     },
     {
       brand: 'asus',
@@ -129,10 +129,10 @@ export const Asus: Store = {
     },
     {
       brand: 'asus',
-      itemNumber: '202011AM190000002',
+      itemNumber: '202009AM150000001',
       model: 'tuf oc',
       series: '3090',
-      url: 'https://store.asus.com/us/item/202011AM190000002',
+      url: 'https://store.asus.com/us/item/202009AM150000001',
     },
     {
       brand: 'asus',
@@ -140,13 +140,6 @@ export const Asus: Store = {
       model: 'tuf',
       series: '3090',
       url: 'https://store.asus.com/us/item/202009AM150000003',
-    },
-    {
-      brand: 'asus',
-      itemNumber: '202010AM310000004',
-      model: 'strix oc',
-      series: '3090',
-      url: 'https://store.asus.com/us/item/202010AM310000004',
     },
     {
       brand: 'asus',
