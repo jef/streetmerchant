@@ -1,0 +1,9 @@
+# NOTIFICATION SHITE
+DISCORD_WEB_HOOK=https://discord.com/api/webhooks/824039343563472957/ZPaz-yz5REBaa4j70TwUxpAAkE1I-OebmzbsglQOw95x2doPtC7fd2jcqq7nzEGivPfU
+TELEGRAM_ACCESS_TOKEN=1790205860:AAH2OzL-qTitYuC66x8YjycgveK_RAyNLyk
+TELEGRAM_CHAT_ID=-488499575
+
+BROWSER_TRUSTED=true
+OPEN_BROWSER=false
+STORES=alternate,amazon-de,amazon-de-warehouse,amazon-es,amazon-fr,amazon-it,amazon-uk,caseking,ccl,currys,overclockers,scan
+SHOW_ONLY_SERIES=3060ti,3070,3080
