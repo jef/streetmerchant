@@ -19,7 +19,8 @@
     "test:notification:production": "node build/test/functional/test-notification.js"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=12.0.0",
+    "npm": "6.14.11"
   },
   "repository": {
     "type": "git",
