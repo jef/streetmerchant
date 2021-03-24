@@ -17,8 +17,6 @@
     "test": "c8 mocha 'build/test/**/test-*.js' --exclude 'build/test/functional/**/test-*.js'",
     "test:notification": "npm run compile && node build/test/functional/test-notification.js",
     "test:notification:production": "node build/test/functional/test-notification.js",
-    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
-    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -63,7 +61,25 @@
     "twitch-auth": "^4.5.1",
     "twitch-chat-client": "^4.5.1",
     "twitter": "^1.7.1",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "@types/async": "^3.2.5",
+    "@types/cheerio": "^0.22.27",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.35",
+    "@types/node-fetch": "^2.5.8",
+    "@types/node-notifier": "^8.0.0",
+    "@types/nodemailer": "^6.4.1",
+    "@types/redis": "^2.8.28",
+    "@types/sinon": "^9.0.11",
+    "@types/twitter": "^1.7.0",
+    "c8": "^7.6.0",
+    "gts": "^3.1.0",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "sinon": "^9.2.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.26.3"
   },
   "devDependencies": {
     "@types/async": "^3.2.5",
