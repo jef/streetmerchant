@@ -61,6 +61,7 @@
     "twitch-auth": "^4.5.1",
     "twitch-chat-client": "^4.5.1",
     "twitter": "^1.7.1",
+    "typescript": "^4.2.3",
     "winston": "^3.3.3"
   },
   "devDependencies": {
