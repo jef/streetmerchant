@@ -1,1 +1,1 @@
-worker: npm run compile && npm run start:production
+worker: npm run start:production
