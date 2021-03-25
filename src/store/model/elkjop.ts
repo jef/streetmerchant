@@ -25,7 +25,7 @@ export const Elkjop: Store = {
       model: 'test:model',
       series: 'test:series',
       cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=296618&Quantity=1&AddToCart=true',
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218425&Quantity=1&AddToCart=true',
       url:
         'https://www.elkjop.no/product/mobil-og-gps/mobiltelefon/296618/oneplus-9-pro-5g-smarttelefon-12256gb-stellar-black',
     },
