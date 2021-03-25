@@ -13,6 +13,11 @@ export const Elkjop: Store = {
         '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.buy-button-container.align-left.any-1-1.table-btn > div > div > div.product-price-button-wrap > div > div > span > span',
       text: ['Ikke tilgjengelig'],
     },
+    maxPrice: {
+      container:
+        '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.product-price.align-left.any-1-1.margin-1 > div > div > div.product-price-container > span',
+      euroFormat: true,
+    },
   },
   links: [
     {
@@ -20,9 +25,9 @@ export const Elkjop: Store = {
       model: 'test:model',
       series: 'test:series',
       cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218425&Quantity=1&AddToCart=true',
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=296618&Quantity=1&AddToCart=true',
       url:
-        'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/218425/evga-geforce-rtx-3080-xc3-black',
+        'https://www.elkjop.no/product/mobil-og-gps/mobiltelefon/296618/oneplus-9-pro-5g-smarttelefon-12256gb-stellar-black',
     },
 
     {
@@ -177,6 +182,15 @@ export const Elkjop: Store = {
         'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=228205&Quantity=1&AddToCart=true',
       url:
         'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/228205/asus-geforce-rtx-3070-8gb-gddr6-rog-strix-oc-gaming',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '3070',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=228206&Quantity=1&AddToCart=true',
+      url:
+        'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/228206/asus-tuf-gaming-geforce-rtx-3070-oc-edition-8gb-gddr6',
     },
     {
       brand: 'asus',

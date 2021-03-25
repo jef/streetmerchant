@@ -670,7 +670,6 @@ export const KomplettNO: Store = {
       series: '3060ti',
       url: 'https://www.komplett.no/product/1175535/',
     },
-    
   ],
   name: 'komplett-no',
 };
