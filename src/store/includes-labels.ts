@@ -125,11 +125,15 @@ export async function getPrice(
   const priceString = await extractPageContents(page, selector);
 
   if (priceString) {
+    logger.info('pricestring ' + priceString);
     const priceSeparator = query.euroFormat ? /\./g : /,/g;
     const price = Number.parseFloat(
       priceString.replace(priceSeparator, '').match(/\d+/g)!.join('.')
     );
-
+    const price2 = Number.parseFloat(
+      priceString.replace('&nbsp;', '').match(/\d+/g)!.join('.')
+    );
+    logger.info('pricetwo:' + price2);
     logger.debug('received price', price);
     return price;
   }
