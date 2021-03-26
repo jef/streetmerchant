@@ -125,6 +125,7 @@ Used with the `STORES` variable.
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
 | Micro Center | US | `microcenter`|
+| MightyApe | NZ | `mightyape`|
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
 | Mwave | AU | `mwave`|
@@ -132,6 +133,7 @@ Used with the `STORES` variable.
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
 | Newegg | SG | `newegg-sg`|
+| NoelLeeming | NZ | `noelleeming`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
 | Novo Atalho | PT | `novoatalho`|
@@ -165,6 +167,7 @@ Used with the `STORES` variable.
 | Storm Computers | AU |  `storm-computer`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
+| TheWarehouse | NZ | `thewarehouse`|
 | TopAchat | GR | `topachat`|
 | Toys R Us | US | `toysrus` |
 | Umart | AU | `umart`|
