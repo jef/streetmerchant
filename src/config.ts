@@ -302,6 +302,7 @@ const notifications = {
     expire: envOrNumber(process.env.PUSHOVER_EXPIRE),
     priority: envOrNumber(process.env.PUSHOVER_PRIORITY),
     retry: envOrNumber(process.env.PUSHOVER_RETRY),
+    sound: envOrString(process.env.PUSHOVER_SOUND, 'pushover'),
     token: envOrString(process.env.PUSHOVER_TOKEN),
     username: envOrString(process.env.PUSHOVER_USER),
   },

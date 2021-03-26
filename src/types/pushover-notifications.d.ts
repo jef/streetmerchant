@@ -43,7 +43,7 @@ declare module 'pushover-notifications' {
     message: string;
     priority?: number;
     retry?: number;
-    sound?: Sound;
+    sound?: string;
     timestamp?: number;
     title?: string;
     url?: string;

@@ -138,6 +138,7 @@ export type Model =
   | 'sg oc'
   | 'sg'
   | 'merc'
+  | 'single fan'
   | 'strix lc'
   | 'strix oc'
   | 'strix'
