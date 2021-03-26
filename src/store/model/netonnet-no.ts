@@ -11,11 +11,6 @@ export const NetonnetNO: Store = {
       container: '#productPurchaseBoxContainer > div > button',
       text: ['Overvåk produktet'],
     },
-    maxPrice: {
-      container:
-        '#productPurchaseBoxContainer > div > div > div > div.price-big',
-      euroFormat: true,
-    },
   },
   links: [
     {

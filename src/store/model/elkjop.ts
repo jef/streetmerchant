@@ -13,11 +13,6 @@ export const Elkjop: Store = {
         '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.buy-button-container.align-left.any-1-1.table-btn > div > div > div.product-price-button-wrap > div > div > span > span',
       text: ['Ikke tilgjengelig'],
     },
-    maxPrice: {
-      container:
-        '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.product-price.align-left.any-1-1.margin-1 > div > div > div.product-price-container > span',
-      euroFormat: true,
-    },
   },
   links: [
     {
