@@ -58,6 +58,7 @@ Used with the `STORES` variable.
 | AMD | IT | `amd-it`|
 | AMD | UK | `amd-uk`|
 | AntOnline | US | `antonline`|
+| AO | UK | `ao`|
 | Argos | UK | `argos`|
 | Argos | IE | `argos-ie`|
 | Aria PC | UK | `aria`|
@@ -72,6 +73,7 @@ Used with the `STORES` variable.
 | Box | UK | `box`|
 | BPCTech | AU | `bpctech`|
 | BPM-Power | IT | `bpm-power`|
+| BT | UK | `bt`|
 | CanadaComputers | CA | `canadacomputers` |
 | Caseking | DE | `caseking`|
 | CCL | UK | `ccl`|
