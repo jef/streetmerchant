@@ -113,6 +113,7 @@ Used with the `STORES` variable.
 | Kabum | BR | `kabum`|
 | Landmark Computers | AU |  `landmark-computers`|
 | Mediamarkt | DE | `mediamarkt`|
+| Mediamarkt | AT | `mediamarkt-at`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
