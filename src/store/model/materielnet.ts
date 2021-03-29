@@ -39,19 +39,19 @@ export const Materielnet: Store = {
     },
     {
       brand: 'asus',
-      model: 'rog strix',
+      model: 'strix',
       series: '3070',
       url: 'https://www.materiel.net/produit/202009170013.html',
     },
     {
       brand: 'asus',
-      model: 'rog strix oc',
+      model: 'strix oc',
       series: '3070',
       url: 'https://www.materiel.net/produit/202009170012.html',
     },
     {
       brand: 'asus',
-      model: 'rog strix oc white',
+      model: 'strix oc white',
       series: '3070',
       url: 'https://www.materiel.net/produit/202101130115.html',
     },
@@ -297,13 +297,13 @@ export const Materielnet: Store = {
     },
     {
       brand: 'asus',
-      model: 'rog strix',
+      model: 'strix',
       series: '3080',
       url: 'https://www.materiel.net/produit/202010140550.html',
     },
     {
       brand: 'asus',
-      model: 'rog strix oc',
+      model: 'strix oc',
       series: '3080',
       url: 'https://www.materiel.net/produit/202009090076.html',
     },
