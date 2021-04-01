@@ -20,6 +20,7 @@ import {NvidiaGB} from './nvidia-gb';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Otto} from "./otto"
 import {Scan} from "./scan"
+import {Store} from './store';
 import {logger} from '../../logger';
 
 export const storeList = new Map([
