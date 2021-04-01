@@ -111,14 +111,14 @@ export const Print = {
     const productString = `${buildProductString(link, store)} :: IN STOCK`;
 
     if (color) {
-      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} 🚨🚀`);
+      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} :: IN STOCK 🚨🚀`);
     }
 
     if (sms) {
       return productString;
     }
 
-    return `🚀🚨 ${productString} 🚨🚀`;
+    return `Op voorraad: ${productString} 💶`;
   },
   inStockWaiting(link: Link, store: Store, color?: boolean): string {
     if (color) {
