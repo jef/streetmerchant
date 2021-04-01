@@ -108,17 +108,17 @@ export const Print = {
     return `✖ ${buildProductString(link, store)} :: CLOUDFLARE, WAITING`;
   },
   inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
-    const productString = `${buildProductString(link, store)} :: IN STOCK`;
+    const productString = `${buildProductString(link, store)}`;
 
     if (color) {
-      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} 🚨🚀`);
+      return chalk.bgGreen.white.bold(`🚀🚨 ${productString}  :: IN STOCK 🚨🚀`);
     }
 
     if (sms) {
       return productString;
     }
 
-    return `🚀🚨 ${productString} 🚨🚀`;
+    return `Op voorraad: ${productString} 💶💶💶`;
   },
   inStockWaiting(link: Link, store: Store, color?: boolean): string {
     if (color) {
