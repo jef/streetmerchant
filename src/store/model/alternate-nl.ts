@@ -114,12 +114,6 @@ export const AlternateNL: Store = {
       url: 'https://www.alternate.nl/product/1673520',
     },
     {
-      brand: 'gainward',
-      model: 'phoenix gs',
-      series: '3080',
-      url: 'https://www.alternate.nl/product/1673442',
-    },
-    {
       brand: 'inno3d',
       model: 'ichill x3',
       series: '3080',

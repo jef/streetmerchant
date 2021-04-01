@@ -44,34 +44,6 @@ export const Scan: Store = {
       series: 'sonyps5de',
       url: 'https://www.scan.co.uk/products/playstation-5-digital-edition',
     },
-    {
-      brand: 'amd',
-      model: '5600x',
-      series: 'ryzen5600',
-      url:
-        'https://www.scan.co.uk/products/amd-ryzen-5-5600x-am4-zen-3-6-core-12-thread-37ghz-46ghz-turbo-35mb-cache-pcie-40-65w-cpu',
-    },
-    {
-      brand: 'amd',
-      model: '5800x',
-      series: 'ryzen5800',
-      url:
-        'https://www.scan.co.uk/products/amd-ryzen-7-5800x-am4-zen-3-8-core-16-thread-38ghz-47ghz-turbo-36mb-cache-pcie-40-105w-cpu',
-    },
-    {
-      brand: 'amd',
-      model: '5900x',
-      series: 'ryzen5900',
-      url:
-        'https://www.scan.co.uk/products/amd-ryzen-9-5900x-am4-zen-3-12-core-24-thread-37ghz-48ghz-turbo-70mb-cache-pcie-40-105w-cpu',
-    },
-    {
-      brand: 'amd',
-      model: '5950x',
-      series: 'ryzen5950',
-      url:
-        'https://www.scan.co.uk/products/amd-ryzen-9-5950x-am4-zen-3-16-core-32-thread-34ghz-49ghz-turbo-72mb-cache-pcie-40-105w-cpu',
-    },
   ],
   linksBuilder: {
     builder: getProductLinksBuilder({
@@ -82,6 +54,11 @@ export const Scan: Store = {
     }),
     ttl: 300000,
     urls: [
+      {
+        series: 'rx6700xt',
+        url:
+          'https://www.scan.co.uk/shop/computer-hardware/gpu-amd-gaming/amd-radeon-rx-6700-xt-pcie-40-graphics-cards',
+      },
       {
         series: 'rx6800',
         url:

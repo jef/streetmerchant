@@ -29,7 +29,9 @@ export type Brand =
   | 'sony'
   | 'xfx'
   | 'powercolor'
-  | 'zotac';
+  | 'zotac'
+  | 'gainward'
+  | 'kfa2';
 
 export type Series =
   | 'test:series'
@@ -39,6 +41,7 @@ export type Series =
   | '3070'
   | '3080'
   | '3090'
+  | 'rx6700xt'
   | 'rx6800'
   | 'rx6800xt'
   | 'rx6900xt'
@@ -158,7 +161,10 @@ export type Model =
   | 'xlr8 epic x'
   | 'xlr8 gaming'
   | 'xlr8 revel'
-  | 'xlr8 uprising';
+  | 'xlr8 uprising'
+  | 'phoenix'
+  | 'phoenix gs'
+  | 'phantom gs';
 
 export type Link = {
   brand: Brand;

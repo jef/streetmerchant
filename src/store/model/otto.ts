@@ -69,20 +69,6 @@ export const Otto: Store = {
       url:
         'https://www.otto.de/p/playstation-5-digital-edition-1161042793#variationId=1161042794',
     },
-    {
-      brand: 'microsoft',
-      model: 'xbox series s',
-      series: 'xboxss',
-      url:
-        'https://www.otto.de/p/xbox-series-s-1229056876/#variationId=1229056877',
-    },
-    {
-      brand: 'microsoft',
-      model: 'xbox series x',
-      series: 'xboxsx',
-      url:
-        'https://www.otto.de/p/xbox-series-x-1229057353#variationId=1229057354',
-    },
   ],
   name: 'otto',
 };

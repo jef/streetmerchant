@@ -38,38 +38,6 @@ export const AmdUk: Store = {
     {
       brand: 'amd',
       cartUrl:
-        'https://www.amd.com/en/direct-buy/5450881400/gb?add-to-cart=true',
-      model: '5950x',
-      series: 'ryzen5950',
-      url: 'https://www.amd.com/en/direct-buy/5450881400/gb',
-    },
-    {
-      brand: 'amd',
-      cartUrl:
-        'https://www.amd.com/en/direct-buy/5450881500/gb?add-to-cart=true',
-      model: '5900x',
-      series: 'ryzen5900',
-      url: 'https://www.amd.com/en/direct-buy/5450881500/gb',
-    },
-    {
-      brand: 'amd',
-      cartUrl:
-        'https://www.amd.com/en/direct-buy/5450881600/gb?add-to-cart=true',
-      model: '5800x',
-      series: 'ryzen5800',
-      url: 'https://www.amd.com/en/direct-buy/5450881600/gb',
-    },
-    {
-      brand: 'amd',
-      cartUrl:
-        'https://www.amd.com/en/direct-buy/5450881700/gb?add-to-cart=true',
-      model: '5600x',
-      series: 'ryzen5600',
-      url: 'https://www.amd.com/en/direct-buy/5450881700/gb',
-    },
-    {
-      brand: 'amd',
-      cartUrl:
         'https://www.amd.com/en/direct-buy/5458374000/gb?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6800',
