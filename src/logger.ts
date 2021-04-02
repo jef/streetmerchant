@@ -112,7 +112,7 @@ export const Print = {
     const productString = `${buildProductString(link, store,)}`;
 
     if (color) {
-      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} :: IN STOCK ${link.price ?? ''} 🚨🚀`);
+      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} :: IN STOCK 🚨🚀`);
     }
 
     if (sms) {
