@@ -18,8 +18,8 @@
 | `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
 | `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
 | `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
-| `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies PS5 digital edition |
-| `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies Xbox Series S |
+| `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies Xbox Series X |
 | `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search. Comma separated, e.g.: `marietta,duluth`, default: `web` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands. Comma separated, e.g.: `evga,zotac` |
@@ -58,6 +58,7 @@ Used with the `STORES` variable.
 | AMD | IT | `amd-it`|
 | AMD | UK | `amd-uk`|
 | AntOnline | US | `antonline`|
+| AO | UK | `ao`|
 | Argos | UK | `argos`|
 | Argos | IE | `argos-ie`|
 | Aria PC | UK | `aria`|
@@ -72,6 +73,7 @@ Used with the `STORES` variable.
 | Box | UK | `box`|
 | BPCTech | AU | `bpctech`|
 | BPM-Power | IT | `bpm-power`|
+| BT | UK | `bt`|
 | CanadaComputers | CA | `canadacomputers` |
 | Caseking | DE | `caseking`|
 | CCL | UK | `ccl`|
