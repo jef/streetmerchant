@@ -126,6 +126,7 @@ export type Model =
   | 'nitro oc se'
   | 'nitro oc'
   | 'phantom gaming'
+  | 'phantom'
   | 'phantom gs'
   | 'phoenix gs oc'
   | 'phoenix gs'
