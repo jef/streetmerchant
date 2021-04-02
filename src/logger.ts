@@ -1,7 +1,8 @@
-import {Link, Store} from './store/model';
+import {Link, Pricing, Store} from './store/model';
 import chalk from 'chalk';
 import {config} from './config';
 import winston from 'winston';
+import { PrivilegedChannel } from 'twitch/lib';
 
 const prettyJson = winston.format.printf(info => {
   const timestamp = new Date().toLocaleTimeString();
@@ -108,17 +109,17 @@ export const Print = {
     return `✖ ${buildProductString(link, store)} :: CLOUDFLARE, WAITING`;
   },
   inStock(link: Link, store: Store, color?: boolean, sms?: boolean): string {
-    const productString = `${buildProductString(link, store)}`;
+    const productString = `${buildProductString(link, store,)}`;
 
     if (color) {
-      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} :: IN STOCK 🚨🚀`);
+      return chalk.bgGreen.white.bold(`🚀🚨 ${productString} :: IN STOCK ${link.price ?? ''} 🚨🚀`);
     }
 
     if (sms) {
       return productString;
     }
 
-    return `Op voorraad: ${productString} 💶`;
+    return `Op voorraad: ${link.price ?? ''} ${productString} 💶`;
   },
   inStockWaiting(link: Link, store: Store, color?: boolean): string {
     if (color) {

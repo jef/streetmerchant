@@ -266,14 +266,14 @@ export const AmazonFr: Store = {
       series: '3060ti',
       url: 'https://www.amazon.fr/dp/B08P3BJ9Y8',
     },
-    {
-      brand: 'asus',
-      cartUrl:
-        'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08P2HBBLX&asin=B08P2HBBLX&quantity=1&buyNow=1',
-      model: 'dual oc',
-      series: '3060ti',
-      url: 'https://www.amazon.fr/dp/B08P2HBBLX',
-    },
+    // {
+    //   brand: 'asus',
+    //   cartUrl:
+    //     'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08P2HBBLX&asin=B08P2HBBLX&quantity=1&buyNow=1',
+    //   model: 'dual oc',
+    //   series: '3060ti',
+    //   url: 'https://www.amazon.fr/dp/B08P2HBBLX',
+    // },
     {
       brand: 'asus',
       cartUrl:
@@ -281,14 +281,6 @@ export const AmazonFr: Store = {
       model: 'tuf oc',
       series: '3060ti',
       url: 'https://www.amazon.fr/dp/B083Z5P6TX',
-    },
-    {
-      brand: 'msi',
-      cartUrl:
-        'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08KWPDXJZ&asin=B08KWPDXJZ&quantity=1&buyNow=1',
-      model: 'ventus 2x oc',
-      series: '3070',
-      url: 'https://www.amazon.fr/dp/B08KWPDXJZ',
     },
     {
       brand: 'msi',
@@ -301,26 +293,10 @@ export const AmazonFr: Store = {
     {
       brand: 'msi',
       cartUrl:
-        'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08KWLMZV4&asin=B08KWLMZV4&quantity=1&buyNow=1',
-      model: 'ventus 3x oc',
-      series: '3070',
-      url: 'https://www.amazon.fr/dp/B08KWLMZV4',
-    },
-    {
-      brand: 'msi',
-      cartUrl:
         'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08L6PCZTR&asin=B08L6PCZTR&quantity=1&buyNow=1',
       model: 'ventus 3x oc',
       series: '3070',
       url: 'https://www.amazon.fr/dp/B08L6PCZTR',
-    },
-    {
-      brand: 'msi',
-      cartUrl:
-        'https://www.amazon.fr/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08KWN2LZG&asin=B08KWN2LZG&quantity=1&buyNow=1',
-      model: 'gaming x trio',
-      series: '3070',
-      url: 'https://www.amazon.fr/dp/B08KWN2LZG',
     },
     {
       brand: 'msi',

@@ -438,18 +438,18 @@ export const AmazonEs: Store = {
     {
       brand: 'asus',
       cartUrl:
-        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08L8HPKR6&asin=B08L8HPKR6&quantity=1&buyNow=1',
+        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08HSJ1622&asin=B08HSJ1622&quantity=1&buyNow=1',
       model: 'dual',
       series: '3070',
-      url: 'https://www.amazon.es/dp/B08L8HPKR6',
+      url: 'https://www.amazon.es/dp/B08HSJ1622',
     },
     {
       brand: 'asus',
       cartUrl:
-        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08L8JNTXQ&asin=B08L8JNTXQ&quantity=1&buyNow=1',
+        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08NB3DQVK&asin=B08NB3DQVK&quantity=1&buyNow=1',
       model: 'strix',
       series: '3070',
-      url: 'https://www.amazon.es/dp/B08L8JNTXQ',
+      url: 'https://www.amazon.es/dp/B08NB3DQVK',
     },
     {
       brand: 'asus',

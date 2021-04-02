@@ -280,19 +280,19 @@ export const AmazonNl: Store = {
     {
       brand: 'asus',
       cartUrl:
-        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08P2HBBLX&asin=B08P2HBBLX&quantity=1&buyNow=1',
+        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08NZ523M9&asin=B08NZ523M9&quantity=1&buyNow=1',
       model: 'dual oc',
       series: '3060ti',
-      url: 'https://www.amazon.nl/dp/B08P2HBBLX',
+      url: 'https://www.amazon.nl/dp/B08NZ523M9',
     },
-    {
-      brand: 'asus',
-      cartUrl:
-        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B083Z5P6TX&asin=B083Z5P6TX&quantity=1&buyNow=1',
-      model: 'tuf oc',
-      series: '3060ti',
-      url: 'https://www.amazon.nl/dp/B083Z5P6TX',
-    },
+    // {
+    //   brand: 'asus',
+    //   cartUrl:
+    //     'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B083Z5P6TX&asin=B083Z5P6TX&quantity=1&buyNow=1',
+    //   model: 'tuf oc',
+    //   series: '3060ti',
+    //   url: 'https://www.amazon.nl/dp/B083Z5P6TX',
+    // },
     {
       brand: 'msi',
       cartUrl:
@@ -368,10 +368,10 @@ export const AmazonNl: Store = {
     {
       brand: 'evga',
       cartUrl:
-        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08L8L9TCZ&asin=B08L8L9TCZ&quantity=1&buyNow=1',
+        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08MKWZZ2G&asin=B08MKWZZ2G&quantity=1&buyNow=1',
       model: 'ftw3 ultra',
       series: '3070',
-      url: 'https://www.amazon.nl/dp/B08L8L9TCZ',
+      url: 'https://www.amazon.nl/dp/B08MKWZZ2G',
     },
     {
       brand: 'evga',
@@ -436,14 +436,6 @@ export const AmazonNl: Store = {
       model: 'eagle oc',
       series: '3070',
       url: 'https://www.amazon.nl/dp/B08KHL2J5X',
-    },
-    {
-      brand: 'zotac',
-      cartUrl:
-        'https://www.amazon.nl/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08LF32LJ6&asin=B08LF32LJ6&quantity=1&buyNow=1',
-      model: 'gaming',
-      series: '3070',
-      url: 'https://www.amazon.nl/dp/B08LF32LJ6',
     },
     {
       brand: 'zotac',
