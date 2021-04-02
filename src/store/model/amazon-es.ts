@@ -220,30 +220,6 @@ export const AmazonEs: Store = {
       url: 'https://www.amazon.es/dp/B08PDN36R3',
     },
     {
-      brand: 'gigabyte',
-      cartUrl:
-        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08P3JPX8P&asin=B08P3JPX8P&quantity=1&buyNow=1',
-      model: 'eagle',
-      series: '3060ti',
-      url: 'https://www.amazon.es/dp/B08P3JPX8P',
-    },
-    {
-      brand: 'gigabyte',
-      cartUrl:
-        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08NW2X37Z&asin=B08NW2X37Z&quantity=1&buyNow=1',
-      model: 'gaming oc',
-      series: '3060ti',
-      url: 'https://www.amazon.es/dp/B08NW2X37Z',
-    },
-    {
-      brand: 'gigabyte',
-      cartUrl:
-        'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08NW528S1&asin=B08NW528S1&quantity=1&buyNow=1',
-      model: 'eagle oc',
-      series: '3060ti',
-      url: 'https://www.amazon.es/dp/B08NW528S1',
-    },
-    {
       brand: 'zotac',
       cartUrl:
         'https://www.amazon.es/gp/checkoutportal/enter-checkout.html/?discoveredAsins.1=B08P3XJLJJ&asin=B08P3XJLJJ&quantity=1&buyNow=1',
