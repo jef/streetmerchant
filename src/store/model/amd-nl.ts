@@ -12,8 +12,8 @@ export const AmdNl: Store = {
       euroFormat: true,
     },
     outOfStock: {
-      container: '.btn-radeon',
-      text: ['ausverkauft'],
+      container: '.product-out-of-stock',
+      text: ['out of stock'],
     },
   },
   links: [
@@ -23,7 +23,14 @@ export const AmdNl: Store = {
       series: 'test:series',
       url: 'https://www.amd.com/en/direct-buy/5450881400/',
     },
-
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5496921400/nl?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6700xt',
+      url: 'https://www.amd.com/en/direct-buy/5496921400/',
+    },
     {
       brand: 'amd',
       cartUrl:

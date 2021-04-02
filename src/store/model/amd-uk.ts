@@ -33,31 +33,39 @@ export const AmdUk: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.amd.com/en/direct-buy/5450881400/gb',
+      url: 'https://www.amd.com/en/direct-buy/5450881400/',
     },
     {
       brand: 'amd',
       cartUrl:
-        'https://www.amd.com/en/direct-buy/5458374000/gb?add-to-cart=true',
+        'https://www.amd.com/en/direct-buy/5496921400/en?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6700xt',
+      url: 'https://www.amd.com/en/direct-buy/5496921400/',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5458374000/en?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6800',
-      url: 'https://www.amd.com/en/direct-buy/5458374000/gb',
+      url: 'https://www.amd.com/en/direct-buy/5458374000/',
     },
     {
       brand: 'amd',
       cartUrl:
-        'https://www.amd.com/en/direct-buy/5458374100/gb?add-to-cart=true',
+        'https://www.amd.com/en/direct-buy/5458374100/en?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6800xt',
-      url: 'https://www.amd.com/en/direct-buy/5458374100/gb',
+      url: 'https://www.amd.com/en/direct-buy/5458374100/',
     },
     {
       brand: 'amd',
       cartUrl:
-        'https://www.amd.com/en/direct-buy/5458374200/gb?add-to-cart=true',
+        'https://www.amd.com/en/direct-buy/5458374200/en?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6900xt',
-      url: 'https://www.amd.com/en/direct-buy/5458374200/gb',
+      url: 'https://www.amd.com/en/direct-buy/5458374200/',
     },
   ],
   name: 'amd-uk',

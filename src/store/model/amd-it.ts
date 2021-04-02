@@ -11,6 +11,10 @@ export const AmdIt: Store = {
       container: '.product-page-description h4',
       euroFormat: true,
     },
+    outOfStock: {
+      container: '.product-out-of-stock',
+      text: ['out of stock'],
+    },
   },
   links: [
     {
@@ -22,10 +26,34 @@ export const AmdIt: Store = {
     {
       brand: 'amd',
       cartUrl:
+        'https://www.amd.com/en/direct-buy/5496921400/it?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6700xt',
+      url: 'https://www.amd.com/en/direct-buy/5496921400/',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5458374000/it?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6800',
+      url: 'https://www.amd.com/en/direct-buy/5458374000/',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
         'https://www.amd.com/en/direct-buy/5458374100/it?add-to-cart=true',
       model: 'amd reference',
       series: 'rx6800xt',
-      url: 'https://www.amd.com/en/direct-buy/5458374100/it',
+      url: 'https://www.amd.com/en/direct-buy/5458374100/',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5458374200/it?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6900xt',
+      url: 'https://www.amd.com/en/direct-buy/5458374200/',
     },
   ],
   name: 'amd-it',
