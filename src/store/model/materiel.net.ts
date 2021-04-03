@@ -5,7 +5,7 @@ export const MaterielDotNet: Store = {
   labels: {
     inStock: {
       container: '.product-availability',
-      text: ['EN STOCK']
+      text: ['EN STOCK'],
     },
     maxPrice: {
       container: '.o-product__price',
