@@ -855,7 +855,7 @@ export const Alternate: Store = {
       model: 'qick',
       series: 'rx6800',
       url: 'https://www.alternate.de/html/product/1716091',
-    },   
+    },
     {
       brand: 'asrock',
       model: 'phantom gaming',
