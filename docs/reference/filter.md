@@ -205,7 +205,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `corsair` | `750 platinum`, `600 platinum`, `600 gold` |
 | `colorful` | `igame advanced oc`, `igame vulcan oc` |
 | `evga` | `ftw3`, `ftw3 black`, `ftw3 ultra`, `ftw3 ultra hybrid`, `ftw3 ultra hydro copper`, `xc3`, `xc black`, `xc gaming`, `xc3 black`, `xc3 ultra`, `xc3 ultra hybrid` |
-| `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
+| `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc`, `ghost` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `gaming oc pro`, `turbo`, `vision`, `vision oc` |
 | `galax` | `sg`, `sg oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2`, `twin x2 oc` |

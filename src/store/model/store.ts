@@ -107,6 +107,7 @@ export type Model =
   | 'gaming x'
   | 'gaming x3'
   | 'ghost oc'
+  | 'ghost'
   | 'suprim x'
   | 'suprim'
   | 'gaming'
