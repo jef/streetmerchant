@@ -238,3 +238,17 @@ You don't need to submit your application for review, just whitelist yourself!
 | `STREAMLABS_IMAGE`| Custom image to display. Leave it blank for default |
 | `STREAMLABS_SOUND` | Custom image to play. Leave it blank for default |
 | `STREAMLABS_DURATION` | StreamLabs alert duration (in milliseconds) |
+
+## Free mobile SMS notifications API
+
+For the customers of Free carrier.
+
+Activate the notification service at mobile.free.fr/account/mes-options (option "Notifications par SMS").
+Copy the API key generated with the service activation.
+
+| Environment variable | Description |
+|:---:|---|
+| `FREEMOBILE_ID` | User ID to log into mobile.free.fr |
+| `FREEMOBILE_API_KEY` | API key generated with your notification option activation |
+
+Note: here you do not need to give neither your password nor phone number.
