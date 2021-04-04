@@ -349,6 +349,10 @@ const notifications = {
     soundHref: envOrString(process.env.STREAMLABS_SOUND),
     duration: envOrNumber(process.env.STREAMLABS_DURATION),
   },
+  freemobile: {
+    id: envOrString(process.env.FREEMOBILE_ID),
+    apiKey: envOrString(process.env.FREEMOBILE_API_KEY),
+  },
 };
 
 const nvidia = {
