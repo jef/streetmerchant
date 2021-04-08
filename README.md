@@ -5,7 +5,7 @@
   <strong>The world's easiest, most powerful stock checker</strong>
 </p>
 <p align="center">
-  <a href="https://github.com/jef/streetmerchant/actions/workflows/ci.yaml"><img src="https://img.shields.io/github/workflow/status/jef/streetmerchant/ci?color=24292e&label=ci&logo=github&logoColor=tewt&style=flat-square" /></a>
+  <a href="https://github.com/jef/streetmerchant/actions/workflows/ci.yaml"><img src="https://img.shields.io/github/workflow/status/jef/streetmerchant/ci?color=24292e&label=Continuous%20Integration&logo=github&logoColor=ffffff&style=flat-square" /></a>
   <a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073.svg?color=24292e&label=%20&logo=discord&logoColor=ffffff&style=flat-square" /></a>
 </p>
 <p align="center">
