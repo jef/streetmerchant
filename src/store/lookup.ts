@@ -407,6 +407,26 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
   return false;
 }
 
+async function isAboveMaxPrice(
+  store: Store,
+  page: Page,
+  link: Link,
+  options: Selector
+): Promise<boolean> {
+  if (store.labels.maxPrice) {
+    const maxPrice = config.store.maxPrice.series[link.series];
+
+    link.price = await getPrice(page, store.labels.maxPrice, options);
+
+    if (link.price && link.price > maxPrice && maxPrice > 0) {
+      logger.info(Print.maxPrice(link, store, maxPrice, true));
+      return true;
+    }
+  }
+
+  return false;
+}
+
 async function lookupCardInStock(store: Store, page: Page, link: Link) {
   const baseOptions: Selector = {
     requireVisible: false,
@@ -438,17 +458,6 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  if (store.labels.maxPrice) {
-    const maxPrice = config.store.maxPrice.series[link.series];
-
-    link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
-
-    if (link.price && link.price > maxPrice && maxPrice > 0) {
-      logger.info(Print.maxPrice(link, store, maxPrice, true));
-      return false;
-    }
-  }
-
   if (link.labels?.inStock) {
     const options = {
       ...baseOptions,
@@ -458,6 +467,10 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
     if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
       logger.info(Print.outOfStock(link, store, true));
+      return false;
+    }
+
+    if (await isAboveMaxPrice(store, page, link, options)) {
       return false;
     }
   }
@@ -471,6 +484,10 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
 
     if (!(await pageIncludesLabels(page, store.labels.inStock, options))) {
       logger.info(Print.outOfStock(link, store, true));
+      return false;
+    }
+
+    if (await isAboveMaxPrice(store, page, link, options)) {
       return false;
     }
   }
