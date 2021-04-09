@@ -6,7 +6,7 @@ export const PlayStation: Store = {
   labels: {
     inStock: [
       {
-        container: '.productHero-info .add-to-cart:not(.hide)',
+        container: '.productHero-desc .add-to-cart:not(.hide)',
         text: ['Add'],
       },
       {

@@ -79,6 +79,14 @@ export const AmdDe: Store = {
       series: 'rx6900xt',
       url: 'https://www.amd.com/de/direct-buy/5458374200/de',
     },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/de/direct-buy/5496921500/de?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx6800xt',
+      url: 'https://www.amd.com/de/direct-buy/5496921500/de',
+    },
   ],
   name: 'amd-de',
 };

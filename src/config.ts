@@ -223,6 +223,7 @@ const notifications = {
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
+      rx6700xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6700XT),
       rx6800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800),
       rx6800xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800XT),
       rx6900xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6900XT),
@@ -302,8 +303,10 @@ const notifications = {
     expire: envOrNumber(process.env.PUSHOVER_EXPIRE),
     priority: envOrNumber(process.env.PUSHOVER_PRIORITY),
     retry: envOrNumber(process.env.PUSHOVER_RETRY),
+    sound: envOrString(process.env.PUSHOVER_SOUND, 'pushover'),
     token: envOrString(process.env.PUSHOVER_TOKEN),
     username: envOrString(process.env.PUSHOVER_USER),
+    device: envOrString(process.env.PUSHOVER_DEVICE),
   },
   redis: {
     url: envOrString(process.env.REDIS_URL),
@@ -348,6 +351,10 @@ const notifications = {
     soundHref: envOrString(process.env.STREAMLABS_SOUND),
     duration: envOrNumber(process.env.STREAMLABS_DURATION),
   },
+  freemobile: {
+    id: envOrString(process.env.FREEMOBILE_ID),
+    apiKey: envOrString(process.env.FREEMOBILE_API_KEY),
+  },
 };
 
 const nvidia = {
@@ -388,6 +395,7 @@ const store = {
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
+      rx6700xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6700XT),
       rx6800: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800),
       rx6800xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800XT),
       rx6900xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6900XT),
@@ -418,6 +426,7 @@ const store = {
     '3070',
     '3080',
     '3090',
+    'rx6700xt',
     'rx6800',
     'rx6800xt',
     'rx6900xt',

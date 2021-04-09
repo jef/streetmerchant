@@ -17,6 +17,7 @@ import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
 import {activateSmartthingsSwitch} from './smartthings';
 import {sendStreamLabsAlert} from './streamlabs';
+import {sendFreeMobileAlert} from './freemobile';
 import {sendApns} from './apns';
 
 export function sendNotification(link: Link, store: Store) {
@@ -41,4 +42,5 @@ export function sendNotification(link: Link, store: Store) {
   sendTwitchMessage(link, store);
   updateRedis(link, store);
   sendStreamLabsAlert(link, store);
+  sendFreeMobileAlert(link, store);
 }
