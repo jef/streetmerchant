@@ -306,6 +306,7 @@ const notifications = {
     sound: envOrString(process.env.PUSHOVER_SOUND, 'pushover'),
     token: envOrString(process.env.PUSHOVER_TOKEN),
     username: envOrString(process.env.PUSHOVER_USER),
+    device: envOrString(process.env.PUSHOVER_DEVICE),
   },
   redis: {
     url: envOrString(process.env.REDIS_URL),

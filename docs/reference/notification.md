@@ -147,14 +147,17 @@ Generate token at [pushbullet.com/#settings/account](https://pushbullet.com/#set
 
 Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 
-| Environment variable | Description |
-|:---:|---|
-| `PUSHOVER_EXPIRE` | How many seconds your notification will continue to be retried for (every `PUSHOVER_RETRY` seconds) |
-| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user |
-| `PUSHOVER_PRIORITY` | Message priority |
-| `PUSHOVER_TOKEN` | API token |
-| `PUSHOVER_USER` | Username |
+API Documentation: [pushover.net/api](https://pushover.net/api)
+
+| Environment variable | Description | Required
+|:---:|---|---|
+| `PUSHOVER_EXPIRE` | How many seconds your notification will continue to be retried for (every `PUSHOVER_RETRY` seconds) | false |
+| `PUSHOVER_DEVICE` | Devices to send notificaiton to. Blank will send to all registered devices. | false |
+| `PUSHOVER_PRIORITY` | Message priority | false |
+| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user | false |
 | `PUSHOVER_SOUND` | Message sound |
+| `PUSHOVER_TOKEN` | Application API token | true |
+| `PUSHOVER_USER` | User key | true |
 
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
