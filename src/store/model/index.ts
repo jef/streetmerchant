@@ -1,6 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Ldlc} from './ldlc';
+import {MaterielDotNet} from './materiel.net';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
@@ -236,6 +237,7 @@ export const storeList = new Map([
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
   [Ldlc.name, Ldlc],
+  [MaterielDotNet.name, MaterielDotNet],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
   [Mindfactory.name, Mindfactory],
