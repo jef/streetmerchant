@@ -31,12 +31,12 @@ export function sendFreeMobileAlert(link: Link, store: Store) {
       url.searchParams.append('msg', message);
 
       try {
-        const response = await fetch(url.toString(), {
-          method: 'GET',
-        });
+        const response = await fetch(url.toString(), {method: 'GET'});
 
-        const http200Success = await response.ok;
-        if (!http200Success) throw Error(JSON.stringify(response));
+        if (!response.ok) {
+          logger.error("✖ couldn't send free mobile alert", response);
+          return;
+        }
 
         logger.info('✔ free mobile alert sent');
       } catch (error: unknown) {
