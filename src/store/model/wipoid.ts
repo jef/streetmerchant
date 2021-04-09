@@ -249,8 +249,8 @@ export const Wipoid: Store = {
     },
     {
       brand: 'gigabyte',
-      model: 'eagle oc',
-      series: '3080',
+      model: 'vision oc',
+      series: '3070',
       url:
         'https://www.wipoid.com/gigabyte-geforce-rtx-3080-eagle-oc-10gb-gddr6x.html',
     },

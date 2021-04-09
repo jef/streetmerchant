@@ -85,6 +85,7 @@ import {Kabum} from './kabum';
 import {KomplettNO} from './komplett-no';
 import {LandmarkComputers} from './lmc';
 import {Mediamarkt} from './mediamarkt';
+import {MediamarktAt} from './mediamarkt-at';
 import {Medimax} from './medimax';
 import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
@@ -234,6 +235,7 @@ export const storeList = new Map([
   [KomplettNO.name, KomplettNO],
   [LandmarkComputers.name, LandmarkComputers],
   [Mediamarkt.name, Mediamarkt],
+  [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
   [Ldlc.name, Ldlc],
