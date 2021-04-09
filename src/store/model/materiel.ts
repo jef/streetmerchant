@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const MaterielDotNet: Store = {
+export const Materiel: Store = {
   currency: '€',
   labels: {
     inStock: {
@@ -222,5 +222,5 @@ export const MaterielDotNet: Store = {
       url: 'https://www.materiel.net/produit/202011060033.html',
     },
   ],
-  name: 'materiel.net',
+  name: 'materiel',
 };

@@ -125,6 +125,7 @@ Used with the `STORES` variable.
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
+| Materiel | FR | `materiel` |
 | Micro Center | US | `microcenter`|
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
