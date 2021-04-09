@@ -19,6 +19,7 @@ export function sendPushoverNotification(link: Link, store: Store) {
         ? {
             message: link.cartUrl ? link.cartUrl : link.url,
             priority: pushover.priority,
+            sound: pushover.sound,
             title: Print.inStock(link, store),
             device: pushover.device,
             ...(link.screenshot && {file: `./${link.screenshot}`}),
@@ -27,6 +28,7 @@ export function sendPushoverNotification(link: Link, store: Store) {
             expire: pushover.expire,
             message: link.cartUrl ? link.cartUrl : link.url,
             priority: pushover.priority,
+            sound: pushover.sound,
             retry: pushover.retry,
             title: Print.inStock(link, store),
             device: pushover.device,

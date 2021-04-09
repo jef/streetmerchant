@@ -2,6 +2,20 @@
 
 You can test your notification configuration by running `npm run test:notification`.
 
+## Apple Push Notification Service 
+
+| Environment variable | Description |
+|---|---|
+| `APNS_AUTHKEY` | Path to authkey on users machine |
+| `APNS_BUNDLEID` | iOS app bundle id |
+| `APNS_DEVICETOKEN` | iOS device token|
+| `APNS_KEYID` | Apple developer's key id |
+| `APNS_PRODUCTION` | true/false for production |
+| `APNS_TEAMID` | Apple developer's team id |
+
+Change your notification alert/payload/etc in apns.ts in the note object. 
+Refer to https://github.com/node-apn/node-apn for config options.
+
 ## Desktop
 
 | Environment variable | Description |
@@ -132,16 +146,18 @@ Generate token at [pushbullet.com/#settings/account](https://pushbullet.com/#set
 ## Pushover
 
 Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
+
 API Documentation: [pushover.net/api](https://pushover.net/api)
 
 | Environment variable | Description | Required
 |:---:|---|---|
-| `PUSHOVER_USER` | User key | true |
-| `PUSHOVER_TOKEN` | Application API token | true |
-| `PUSHOVER_PRIORITY` | Message priority | false |
-| `PUSHOVER_DEVICE` | Devices to send notificaiton to. Blank will send to all registered devices. | false |
-| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user | false |
 | `PUSHOVER_EXPIRE` | How many seconds your notification will continue to be retried for (every `PUSHOVER_RETRY` seconds) | false |
+| `PUSHOVER_DEVICE` | Devices to send notificaiton to. Blank will send to all registered devices. | false |
+| `PUSHOVER_PRIORITY` | Message priority | false |
+| `PUSHOVER_RETRY` | How often (in seconds) the Pushover servers will send the same notification to the user | false |
+| `PUSHOVER_SOUND` | Message sound |
+| `PUSHOVER_TOKEN` | Application API token | true |
+| `PUSHOVER_USER` | User key | true |
 
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
