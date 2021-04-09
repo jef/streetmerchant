@@ -90,6 +90,7 @@ import {Medimax} from './medimax';
 import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
+import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
 import {Msy} from './msy';
 import {Mwave} from './mwave';
@@ -97,6 +98,7 @@ import {NetonnetNO} from './netonnet-no';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
+import {NoelLeeming} from './noelleeming';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
 import {NovoAtalho} from './novoatalho';
@@ -134,6 +136,7 @@ import {Store} from './store';
 import {StormComputers} from './storm';
 import {Target} from './target';
 import {TescoIE} from './tesco-ie';
+import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
 import {Umart} from './umart';
@@ -242,6 +245,7 @@ export const storeList = new Map([
   [Materiel.name, Materiel],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
+  [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
   [Mwave.name, Mwave],
@@ -249,6 +253,7 @@ export const storeList = new Map([
   [Newegg.name, Newegg],
   [NeweggCa.name, NeweggCa],
   [NeweggSg.name, NeweggSg],
+  [NoelLeeming.name, NoelLeeming],
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
   [NovoAtalho.name, NovoAtalho],
@@ -285,6 +290,7 @@ export const storeList = new Map([
   [StormComputers.name, StormComputers],
   [Target.name, Target],
   [TescoIE.name, TescoIE],
+  [TheWarehouse.name, TheWarehouse],
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
   [Umart.name, Umart],
