@@ -54,7 +54,6 @@ export function sendDiscordMessage(link: Link, store: Store) {
         const notifyKeys = Object.keys(notifyGroupSeries);
         const notifyIndex = notifyKeys.indexOf(link.series);
         if (notifyIndex !== -1) {
-          // notifyGroupSeries.
           notifyText = notifyText.concat(notifyKeys[notifyIndex]);
         }
 
