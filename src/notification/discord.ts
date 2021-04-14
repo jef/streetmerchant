@@ -51,9 +51,12 @@ export function sendDiscordMessage(link: Link, store: Store) {
         if (notifyGroup) {
           notifyText = notifyText.concat(notifyGroup);
         }
-
-        if (Object.keys(notifyGroupSeries).indexOf(link.series) !== -1) {
-          notifyText = notifyText.concat(notifyGroupSeries[link.series]);
+        const notifyKeys = Object.keys(notifyGroupSeries);
+        const notifyIndex = notifyKeys.indexOf(link.series);
+        if (notifyIndex !== -1) {
+          notifyText = notifyText.concat(
+            Object.values(notifyGroupSeries)[notifyIndex]
+          );
         }
 
         const promises = [];
@@ -61,18 +64,26 @@ export function sendDiscordMessage(link: Link, store: Store) {
           const {id, token} = getIdAndToken(webhook);
           const client = new Discord.WebhookClient(id, token);
 
-          promises.push({
-            client,
-            message: client.send(notifyText.join(' '), {
-              embeds: [embed],
-              username: 'streetmerchant',
-            }),
-          });
+          promises.push(
+            new Promise((resolve, reject) => {
+              client
+                .send(notifyText.join(' '), {
+                  embeds: [embed],
+                  username: 'streetmerchant',
+                })
+                .then(resp => {
+                  logger.info('✔ discord message sent resp.id: ' + resp.id);
+                  resolve(resp);
+                })
+                .catch(err => reject(err))
+                .finally(() => client.destroy());
+            })
+          );
         }
 
-        (await Promise.all(promises)).forEach(({client}) => client.destroy());
-
-        logger.info('✔ discord message sent');
+        await Promise.all(promises).catch(err =>
+          logger.error("✖ couldn't send discord message", err)
+        );
       } catch (error: unknown) {
         logger.error("✖ couldn't send discord message", error);
       }
