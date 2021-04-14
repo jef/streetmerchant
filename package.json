@@ -53,8 +53,8 @@
     "puppeteer": "^8.0.0",
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
     "pushover-notifications": "^1.2.2",
-    "redis": "^3.1.0",
-    "top-user-agents": "^1.0.23",
+    "redis": "^3.1.1",
+    "top-user-agents": "^1.0.24",
     "twilio": "^3.60.0",
     "twitch": "^4.5.5",
     "twitch-auth": "^4.5.5",
@@ -71,7 +71,7 @@
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.1",
     "@types/redis": "^2.8.28",
-    "@types/sinon": "^9.0.11",
+    "@types/sinon": "^10.0.0",
     "@types/twitter": "^1.7.0",
     "c8": "^7.7.1",
     "gts": "^3.1.0",
@@ -80,6 +80,6 @@
     "sinon": "^10.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
-    "webpack": "^5.31.0"
+    "webpack": "^5.32.0"
   }
 }
