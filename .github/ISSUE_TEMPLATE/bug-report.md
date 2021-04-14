@@ -24,9 +24,14 @@ assignees: ''
 
 - OS:
 
-<!-- Put your dotenv within backticks below. Be sure to remove any secrets/passwords. -->
+<details>
+<summary>dotenv</summary>
+
 ```dotenv
+# Place your dotenv within these backticks. Be sure to remove any secrets/passwords.
 ```
+
+</details>
 
 ## Logs
 
