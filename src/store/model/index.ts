@@ -18,10 +18,11 @@ import {AmazonNl} from './amazon-nl';
 import {AmazonSg} from './amazon-sg';
 import {AmazonUk} from './amazon-uk';
 import {Amd} from './amd';
+import {AmdBe} from './amd-be';
 import {AmdCa} from './amd-ca';
 import {AmdDe} from './amd-de';
-import {AmdBe} from './amd-be';
 import {AmdIt} from './amd-it';
+import {AmdNl} from './amd-nl';
 import {AmdUk} from './amd-uk';
 import {AntOnline} from './antonline';
 import {AO} from './ao';
@@ -172,10 +173,11 @@ export const storeList = new Map([
   [AmazonSg.name, AmazonSg],
   [AmazonUk.name, AmazonUk],
   [Amd.name, Amd],
+  [AmdBe.name, AmdBe],
   [AmdCa.name, AmdCa],
   [AmdDe.name, AmdDe],
-  [AmdBe.name, AmdBe],
   [AmdIt.name, AmdIt],
+  [AmdNl.name, AmdNl],
   [AmdUk.name, AmdUk],
   [AntOnline.name, AntOnline],
   [AO.name, AO],
