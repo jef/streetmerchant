@@ -54,9 +54,11 @@ Used with the `STORES` variable.
 | Amazon | SG | `amazon-sg`|
 | Amazon | UK | `amazon-uk`|
 | AMD | US | `amd`|
+| AMD | BE | `amd-be`|
 | AMD | CA | `amd-ca`|
 | AMD | DE | `amd-de`|
 | AMD | IT | `amd-it`|
+| AMD | NL | `amd-nl`|
 | AMD | UK | `amd-uk`|
 | AntOnline | US | `antonline`|
 | AO | UK | `ao`|
