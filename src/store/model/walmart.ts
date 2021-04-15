@@ -62,7 +62,19 @@ export const Walmart: Store = {
       model: '5900x',
       series: 'ryzen5900',
       url:
-        'https://www.walmart.com/ip/AMD-Ryzen-9-5900X-12-core-24-thread-Desktop-Processor/159710953',
+        'https://www.walmart.com/ip/AMD-Ryzen-9-5900X-12-core-24-thread-Desktop-Processor/647899167',
+    },
+    {
+      brand: 'evga',
+      model: 'ftw3 ultra',
+      series: '3060ti',
+      url: 'https://www.walmart.com/ip/912221235',
+    },
+    {
+      brand: 'evga',
+      model: 'ftw3 ultra',
+      series: '3070',
+      url: 'https://www.walmart.com/ip/804934537',
     },
   ],
   name: 'walmart',

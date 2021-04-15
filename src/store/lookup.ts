@@ -149,7 +149,7 @@ async function handleAdBlock(request: HTTPRequest, adBlockRequestHandler: any) {
  * because we don't want to get rate limited within the same store.
  *
  * @param browser Puppeteer browser.
- * @param store Vendor of graphics cards.
+ * @param store Vendor of items.
  */
 async function lookup(browser: Browser, store: Store) {
   if (!getStores().has(store.name)) {
@@ -252,7 +252,7 @@ async function lookup(browser: Browser, store: Store) {
     let statusCode = 0;
 
     try {
-      statusCode = await lookupCard(browser, store, page, link);
+      statusCode = await lookupIem(browser, store, page, link);
     } catch (error: unknown) {
       if (store.currentProxyIndex !== undefined && store.proxyList) {
         const proxy = `${store.currentProxyIndex + 1}/${
@@ -290,7 +290,7 @@ async function lookup(browser: Browser, store: Store) {
   /* eslint-enable no-await-in-loop */
 }
 
-async function lookupCard(
+async function lookupIem(
   browser: Browser,
   store: Store,
   page: Page,
@@ -308,7 +308,7 @@ async function lookupCard(
     return statusCode;
   }
 
-  if (await lookupCardInStock(store, page, link)) {
+  if (await isItemInStock(store, page, link)) {
     const givenUrl =
       link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url;
     logger.info(`${Print.inStock(link, store, true)}\n${givenUrl}`);
@@ -407,7 +407,7 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
   return false;
 }
 
-async function lookupCardInStock(store: Store, page: Page, link: Link) {
+async function isItemInStock(store: Store, page: Page, link: Link) {
   const baseOptions: Selector = {
     requireVisible: false,
     selector: store.labels.container ?? 'body',
@@ -438,25 +438,18 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  if (store.labels.maxPrice) {
-    const maxPrice = config.store.maxPrice.series[link.series];
+  if (link.labels?.inStock) {
+    const options = {
+      ...baseOptions,
+      requireVisible: true,
+      type: 'outerHTML' as const,
+    };
 
-    link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
-
-    if (link.price && link.price > maxPrice && maxPrice > 0) {
-      logger.info(Print.maxPrice(link, store, maxPrice, true));
+    if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
+      logger.info(Print.outOfStock(link, store, true));
       return false;
     }
   }
-
-  // Fixme: currently causing issues
-  // Do API inventory validation in realtime (no cache) if available
-  // if (
-  // 	store.realTimeInventoryLookup !== undefined &&
-  // 	link.itemNumber !== undefined
-  // ) {
-  // 	return store.realTimeInventoryLookup(link.itemNumber);
-  // }
 
   if (store.labels.inStock) {
     const options = {
@@ -471,15 +464,13 @@ async function lookupCardInStock(store: Store, page: Page, link: Link) {
     }
   }
 
-  if (link.labels?.inStock) {
-    const options = {
-      ...baseOptions,
-      requireVisible: true,
-      type: 'outerHTML' as const,
-    };
+  if (store.labels.maxPrice) {
+    const maxPrice = config.store.maxPrice.series[link.series];
 
-    if (!(await pageIncludesLabels(page, link.labels.inStock, options))) {
-      logger.info(Print.outOfStock(link, store, true));
+    link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
+
+    if (link.price && link.price > maxPrice && maxPrice > 0) {
+      logger.info(Print.maxPrice(link, store, maxPrice, true));
       return false;
     }
   }

@@ -15,7 +15,7 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: simple
+          release-type: node
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
       - name: Login into GitHub Container Registry
@@ -25,12 +25,10 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           docker build \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:${TAG_NAME}" \
+          -t "ghcr.io/${GITHUB_REPOSITORY}:${{ steps.release.outputs.tag_name }}" \
           -t "ghcr.io/${GITHUB_REPOSITORY}:latest" .
-        env:
-          TAG_NAME: ${{ steps.release.outputs.tag_name }}
       - name: Release Docker image
         if: ${{ steps.release.outputs.release_created }}
         run: |
-          docker push "ghcr.io/${GITHUB_REPOSITORY}:${TAG_NAME}"
+          docker push "ghcr.io/${GITHUB_REPOSITORY}:${{ steps.release.outputs.tag_name }}"
           docker push "ghcr.io/${GITHUB_REPOSITORY}:latest"
