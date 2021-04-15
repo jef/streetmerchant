@@ -310,6 +310,7 @@ const notifications = {
   },
   redis: {
     url: envOrString(process.env.REDIS_URL),
+    pubchannel: envOrString(process.env.REDIS_PUBCHANNEL),
   },
   slack: {
     channel: envOrString(process.env.SLACK_CHANNEL),

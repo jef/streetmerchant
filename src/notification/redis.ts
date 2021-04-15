@@ -3,7 +3,7 @@ import redis, { RedisClient } from 'redis';
 import { config } from '../config';
 import { logger } from '../logger';
 
-const { url } = config.notifications.redis;
+const { url, pubchannel } = config.notifications.redis;
 let client: RedisClient;
 
 export function updateRedis(link: Link, store: Store) {
@@ -37,6 +37,22 @@ export function updateRedis(link: Link, store: Store) {
           logger.info('✔ redis updated');
         }
       });
+
+      if (pubchannel) {
+        client.publish(pubchannel, JSON.stringify({
+          link: link,
+          url: link.url,
+          cartUrl: link.cartUrl,
+          availableAt: new Date().toUTCString(),
+        }), function (err, res) {
+          if (err) {
+            logger.error(`✖ couldn't publish to redis channel (${pubchannel}))`);
+            logger.error(err);
+          } else {
+            logger.info('✔ redis pubsub published');
+          }
+        });
+      }
     }
   } catch (error: unknown) {
     logger.error("✖ couldn't update redis", error);
