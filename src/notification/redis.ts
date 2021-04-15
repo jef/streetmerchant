@@ -1,21 +1,21 @@
-import {Link, Store} from '../store/model';
-import redis, {RedisClient} from 'redis';
-import {config} from '../config';
-import {logger} from '../logger';
+import { Link, Store } from '../store/model';
+import redis, { RedisClient } from 'redis';
+import { config } from '../config';
+import { logger } from '../logger';
 
-const {url} = config.notifications.redis;
+const { url } = config.notifications.redis;
 let client: RedisClient;
-
-function initRedis(): RedisClient | null {
-  if (url) {
-    client = redis.createClient({url});
-  }
-
-  return null;
-}
 
 export function updateRedis(link: Link, store: Store) {
   try {
+    if (!url || url.trim?.().length === 0) {
+      return;
+    }
+    if (!client) {
+      client = redis.createClient({
+        url,
+      });
+    }
     if (client) {
       const key = `${store.name}:${link.brand}:${link.model}`
         .split(' ')
@@ -29,17 +29,16 @@ export function updateRedis(link: Link, store: Store) {
         updatedAt: new Date().toUTCString(),
       };
 
-      const redisUpdated = client.set(key, JSON.stringify(value));
-
-      if (redisUpdated) {
-        logger.info('✔ redis updated');
-      } else {
-        logger.error(`✖ couldn't update redis for key (${key})`);
-      }
+      client.set(key, JSON.stringify(value), function (err, res) {
+        if (err) {
+          logger.error(`✖ couldn't update redis for key (${key})`);
+          logger.error(err);
+        } else {
+          logger.info('✔ redis updated');
+        }
+      });
     }
   } catch (error: unknown) {
     logger.error("✖ couldn't update redis", error);
   }
 }
-
-initRedis();
