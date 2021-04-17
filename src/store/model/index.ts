@@ -134,7 +134,7 @@ import {ShopTo} from './shopto';
 import {SmythsToys} from './smythstoys';
 import {SmythsToysIE} from './smythstoys-ie';
 import {Spielegrotte} from './spielegrotte';
-import {Store} from './store';
+import {Brand, Model, Series, Store} from './store';
 import {StormComputers} from './storm';
 import {Target} from './target';
 import {TescoIE} from './tesco-ie';
@@ -310,17 +310,17 @@ export const storeList = new Map([
   [Zotac.name, Zotac],
 ]);
 
-const brands = new Set();
-const models = new Set();
-const series = new Set();
-const stores = new Map();
+const brands = new Set<Brand>();
+const models = new Set<Model>();
+const series = new Set<Series>();
+const stores = new Map<string, Store>();
 
 function filterBrandsSeriesModels() {
   brands.clear();
   series.clear();
   models.clear();
 
-  for (const store of storeList.values()) {
+  for (const store of stores.values()) {
     for (const link of store.links) {
       brands.add(link.brand);
       series.add(link.series);
