@@ -14,7 +14,7 @@ interface LinksBuilderOptions {
   urlSelector?: string;
 }
 
-const isPartialUrlRegExp = /^\/[^/]/i;
+const isPartialUrlRegExp = /^(?!https?:).*/i;
 
 export function getProductLinksBuilder(options: LinksBuilderOptions) {
   return (docElement: cheerio.Cheerio, series: Series): Link[] => {
