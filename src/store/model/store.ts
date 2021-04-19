@@ -177,7 +177,6 @@ export type Model =
   | 'twin x2 oc'
   | 'twin x2'
   | 'uprising'
-  | 'uprising dual fan'
   | 'ventus 2x oc'
   | 'ventus 2x'
   | 'ventus 3x oc'
