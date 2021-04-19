@@ -32,7 +32,7 @@ sendNotification(link, store);
 /**
  * Open browser.
  */
-if (config.browser.open) {
+if (!config.docker && config.browser.open) {
   open(link.cartUrl ?? link.url);
   open(link.url);
 }

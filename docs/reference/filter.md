@@ -13,6 +13,7 @@
 | `MAX_PRICE_SERIES_RYZEN5800` | Maximum price allowed for a match, applies AMD 5800 series cpus |
 | `MAX_PRICE_SERIES_RYZEN5900` | Maximum price allowed for a match, applies AMD 5900 series cpus |
 | `MAX_PRICE_SERIES_RYZEN5950` | Maximum price allowed for a match, applies AMD 5950 series cpus |
+| `MAX_PRICE_SERIES_RX6700XT` | Maximum price allowed for a match, applies AMD RX 6700 XT |
 | `MAX_PRICE_SERIES_RX6800` | Maximum price allowed for a match, applies AMD RX 6800 |
 | `MAX_PRICE_SERIES_RX6800XT` | Maximum price allowed for a match,applies AMD RX 6800 XT |
 | `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
@@ -53,9 +54,11 @@ Used with the `STORES` variable.
 | Amazon | SG | `amazon-sg`|
 | Amazon | UK | `amazon-uk`|
 | AMD | US | `amd`|
+| AMD | BE | `amd-be`|
 | AMD | CA | `amd-ca`|
 | AMD | DE | `amd-de`|
 | AMD | IT | `amd-it`|
+| AMD | NL | `amd-nl`|
 | AMD | UK | `amd-uk`|
 | AntOnline | US | `antonline`|
 | AO | UK | `ao`|
@@ -122,10 +125,13 @@ Used with the `STORES` variable.
 | Ldlc | FR |  `ldlc`|
 | Materiel.net | FR | `materielnet`|
 | Mediamarkt | DE | `mediamarkt`|
+| Mediamarkt | AT | `mediamarkt-at`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
+| Materiel | FR | `materiel` |
 | Micro Center | US | `microcenter`|
+| MightyApe | NZ | `mightyape`|
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
 | Mwave | AU | `mwave`|
@@ -133,6 +139,7 @@ Used with the `STORES` variable.
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
 | Newegg | SG | `newegg-sg`|
+| NoelLeeming | NZ | `noelleeming`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
 | Novo Atalho | PT | `novoatalho`|
@@ -166,6 +173,7 @@ Used with the `STORES` variable.
 | Storm Computers | AU |  `storm-computer`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
+| TheWarehouse | NZ | `thewarehouse`|
 | TopAchat | GR | `topachat`|
 | Toys R Us | US | `toysrus` |
 | Umart | AU | `umart`|
@@ -206,7 +214,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `corsair` | `750 platinum`, `600 platinum`, `600 gold` |
 | `colorful` | `igame advanced oc`, `igame vulcan oc` |
 | `evga` | `ftw3`, `ftw3 black`, `ftw3 ultra`, `ftw3 ultra hybrid`, `ftw3 ultra hydro copper`, `xc3`, `xc black`, `xc gaming`, `xc3 black`, `xc3 ultra`, `xc3 ultra hybrid` |
-| `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
+| `gainward` | `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc`, `ghost` |
 | `gigabyte` | `aorus master`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `gaming oc pro`, `turbo`, `vision`, `vision oc` |
 | `galax` | `sg`, `sg oc` |
 | `inno3d` | `gaming x3`, `ichill x3`, `ichill x4`, `ichill frostbite`, `twin x2`, `twin x2 oc` |
@@ -231,6 +239,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD Ryzen 5800x | `ryzen5800` |
 | AMD Ryzen 5900x | `ryzen5900` |
 | AMD Ryzen 5950x | `ryzen5950` |
+| AMD RX 6700XT | `rx6700xt` |
 | AMD RX 6800 | `rx6800` |
 | AMD RX 6800XT | `rx6800xt` |
 | AMD RX 6900XT | `rx6900xt` |

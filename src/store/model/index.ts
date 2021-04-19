@@ -1,6 +1,7 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Ldlc} from './ldlc';
+import {Materiel} from './materiel';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
@@ -17,9 +18,11 @@ import {AmazonNl} from './amazon-nl';
 import {AmazonSg} from './amazon-sg';
 import {AmazonUk} from './amazon-uk';
 import {Amd} from './amd';
+import {AmdBe} from './amd-be';
 import {AmdCa} from './amd-ca';
 import {AmdDe} from './amd-de';
 import {AmdIt} from './amd-it';
+import {AmdNl} from './amd-nl';
 import {AmdUk} from './amd-uk';
 import {AntOnline} from './antonline';
 import {AO} from './ao';
@@ -85,10 +88,12 @@ import {KomplettNO} from './komplett-no';
 import {LandmarkComputers} from './lmc';
 import {Materielnet} from './materielnet';
 import {Mediamarkt} from './mediamarkt';
+import {MediamarktAt} from './mediamarkt-at';
 import {Medimax} from './medimax';
 import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
+import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
 import {Msy} from './msy';
 import {Mwave} from './mwave';
@@ -96,6 +101,7 @@ import {NetonnetNO} from './netonnet-no';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
+import {NoelLeeming} from './noelleeming';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
 import {NovoAtalho} from './novoatalho';
@@ -133,6 +139,7 @@ import {Store} from './store';
 import {StormComputers} from './storm';
 import {Target} from './target';
 import {TescoIE} from './tesco-ie';
+import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
 import {Umart} from './umart';
@@ -147,6 +154,7 @@ import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
+import chalk from 'chalk';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
@@ -166,9 +174,11 @@ export const storeList = new Map([
   [AmazonSg.name, AmazonSg],
   [AmazonUk.name, AmazonUk],
   [Amd.name, Amd],
+  [AmdBe.name, AmdBe],
   [AmdCa.name, AmdCa],
   [AmdDe.name, AmdDe],
   [AmdIt.name, AmdIt],
+  [AmdNl.name, AmdNl],
   [AmdUk.name, AmdUk],
   [AntOnline.name, AntOnline],
   [AO.name, AO],
@@ -234,11 +244,14 @@ export const storeList = new Map([
   [LandmarkComputers.name, LandmarkComputers],
   [Materielnet.name, Materielnet],
   [Mediamarkt.name, Mediamarkt],
+  [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
   [Ldlc.name, Ldlc],
+  [Materiel.name, Materiel],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
+  [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
   [Mwave.name, Mwave],
@@ -246,6 +259,7 @@ export const storeList = new Map([
   [Newegg.name, Newegg],
   [NeweggCa.name, NeweggCa],
   [NeweggSg.name, NeweggSg],
+  [NoelLeeming.name, NoelLeeming],
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
   [NovoAtalho.name, NovoAtalho],
@@ -282,6 +296,7 @@ export const storeList = new Map([
   [StormComputers.name, StormComputers],
   [Target.name, Target],
   [TescoIE.name, TescoIE],
+  [TheWarehouse.name, TheWarehouse],
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
   [Umart.name, Umart],
@@ -325,14 +340,6 @@ function filterBrandsSeriesModels() {
 }
 
 function printConfig() {
-  if (config.store.stores.length > 0) {
-    logger.info(
-      `ℹ selected stores: ${config.store.stores
-        .map(store => store.name)
-        .join(', ')}`
-    );
-  }
-
   if (config.store.showOnlyBrands.length > 0) {
     logger.info(`ℹ selected brands: ${config.store.showOnlyBrands.join(', ')}`);
   }
@@ -352,6 +359,38 @@ function printConfig() {
   if (config.store.showOnlySeries.length > 0) {
     logger.info(`ℹ selected series: ${config.store.showOnlySeries.join(', ')}`);
   }
+
+  if (config.store.stores.length > 0) {
+    const stores = darkenEmptyStores();
+    logger.info(`ℹ selected stores: ${stores.names.join(', ')}`);
+
+    if (stores.anyExcluded) {
+      logger.warn(
+        'ℹ some of the selected stores (grayed out) dont have what you are looking for'
+      );
+    }
+  }
+}
+
+function darkenEmptyStores(): {names: string[]; anyExcluded: boolean} {
+  let anyExcluded = false;
+  const selectedStores = config.store.stores.map(store => store.name);
+
+  const names = selectedStores.map(selected => {
+    const storeConfig = storeList.get(selected);
+    const hasAny =
+      storeConfig?.links.some(
+        l =>
+          (config.store.showOnlySeries?.includes(l.series) ?? false) ||
+          config.store.showOnlyBrands?.includes(l.brand ?? false) ||
+          (config.store.showOnlyModels?.map(m => m.name).includes(l.model) ??
+            false)
+      ) ?? false;
+
+    anyExcluded = anyExcluded || !hasAny;
+    return hasAny ? selected : chalk.gray(selected);
+  });
+  return {names, anyExcluded};
 }
 
 function warnIfStoreDeprecated(store: Store) {

@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 15.11.0
+          node-version: 15.14.0
       - name: Setup build cache
         uses: actions/cache@v2
         with:
