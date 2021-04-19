@@ -463,7 +463,7 @@ export const Materiel: Store = {
     },
     {
       brand: 'pny',
-      model: 'uprising dual fan',
+      model: 'uprising',
       series: '3070',
       url: 'https://www.materiel.net/produit/202009070042.html',
     },
