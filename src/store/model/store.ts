@@ -193,7 +193,8 @@ export type Model =
   | 'xlr8 revel'
   | 'xlr8 uprising'
   | 'xtreme 10g'
-  | 'xtreme waterforce 10g';
+  | 'xtreme waterforce 10g'
+  | 'qick';
 
 export type Link = {
   brand: Brand;
