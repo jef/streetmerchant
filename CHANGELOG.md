@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.6.0](https://www.github.com/sirjeannot/streetmerchant/compare/v3.5.0...v3.6.0) (2021-04-02)
+
+
+### Features
+
+* **notifications:** add apple push notifications ([#2077](https://www.github.com/sirjeannot/streetmerchant/issues/2077)) ([6b78b2e](https://www.github.com/sirjeannot/streetmerchant/commit/6b78b2ee4445ad2b868b6f848730a474ca12d657))
+* **pushover:** add support for sound ([#2203](https://www.github.com/sirjeannot/streetmerchant/issues/2203)) ([83ce922](https://www.github.com/sirjeannot/streetmerchant/commit/83ce922761f85a13424ed43a1961668ffc870485))
+* **store:** Add AO and BT (UK) ([#2089](https://www.github.com/sirjeannot/streetmerchant/issues/2089)) ([1714e89](https://www.github.com/sirjeannot/streetmerchant/commit/1714e89af7964d06b01120fb75595ef8ec8177ba))
+
+
+### Bug Fixes
+
+* **apns:** use when specified ([99a274d](https://www.github.com/sirjeannot/streetmerchant/commit/99a274dbea088a6bcb053b1c1bf7812d0796442a))
+* parsing prices with thousands separator and European format ([#2153](https://www.github.com/sirjeannot/streetmerchant/issues/2153)) ([61f8e3a](https://www.github.com/sirjeannot/streetmerchant/commit/61f8e3a9a03136682035881fce6d14356717d1ac))
+* **playstation:** fix inStock selector ([#2187](https://www.github.com/sirjeannot/streetmerchant/issues/2187)) ([b0efc83](https://www.github.com/sirjeannot/streetmerchant/commit/b0efc837bc554f5c8635e125b67775d8b1f8f6b3))
+
+
+### Reverts
+
+* parsing prices with thousands separator and European format ([#2153](https://www.github.com/sirjeannot/streetmerchant/issues/2153)) ([91c4f12](https://www.github.com/sirjeannot/streetmerchant/commit/91c4f12308905f4e6d65341ba54ae814c8ad94d6))
+* replace euroFormat with regex ([#2131](https://www.github.com/sirjeannot/streetmerchant/issues/2131)) ([0ff8158](https://www.github.com/sirjeannot/streetmerchant/commit/0ff8158511f4f90dc26407fffa22ab0a4ad3aa0b))
+
 ## [3.5.0](https://www.github.com/jef/streetmerchant/compare/v3.4.1...v3.5.0) (2021-03-02)
 
 
