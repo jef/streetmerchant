@@ -212,11 +212,18 @@ export type Link = {
   url: string;
 };
 
+export type CaptchaHandlerElements = {
+  image: string;
+  input: string;
+  submit: string;
+};
+
 export type LabelQuery = Element[] | Element | string[];
 
 export type Labels = {
   bannedSeller?: LabelQuery;
   captcha?: LabelQuery;
+  captchaHandler?: CaptchaHandlerElements;
   container?: string;
   inStock?: LabelQuery;
   outOfStock?: LabelQuery;
