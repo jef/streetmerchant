@@ -1,5 +1,6 @@
 import {
   Browser,
+  PageEventObject,
   Page,
   HTTPRequest,
   HTTPResponse,
@@ -198,7 +199,7 @@ async function lookup(browser: Browser, store: Store) {
     let adBlockRequestHandler: any;
     let pageProxy;
     if (useAdBlock) {
-      const onProxyFunc = (event: string, handler: any) => {
+      const onProxyFunc = (event: keyof PageEventObject, handler: any) => {
         if (event !== 'request') {
           page.on(event, handler);
           return;
