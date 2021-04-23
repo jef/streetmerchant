@@ -152,10 +152,6 @@ async function handleAdBlock(request: HTTPRequest, adBlockRequestHandler: any) {
  * @param store Vendor of items.
  */
 async function lookup(browser: Browser, store: Store) {
-  if (!getStores().has(store.name)) {
-    return;
-  }
-
   if (store.linksBuilder) {
     const lastRunTime = linkBuilderLastRunTimes[store.name] ?? -1;
     const ttl = store.linksBuilder.ttl ?? Number.MAX_SAFE_INTEGER;
@@ -172,6 +168,11 @@ async function lookup(browser: Browser, store: Store) {
 
   /* eslint-disable no-await-in-loop */
   for (const link of store.links) {
+    if (!getStores().has(store.name)) {
+      logger.debug(`[${store.name}] Bailing from remaining links in the loop because store is no longer selected`);
+      return;
+    }
+
     if (!filterStoreLink(link)) {
       continue;
     }
@@ -542,6 +543,11 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
     await lookup(browser, store);
   } catch (error: unknown) {
     logger.error(error);
+  }
+
+  if (!getStores().has(store.name)) {
+    logger.info(`[${store.name}] Ending this loop as store is no longer selected`);
+    return;
   }
 
   const sleepTime = getSleepTime(store);
