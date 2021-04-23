@@ -25,6 +25,10 @@ export const Alternate: Store = {
         container: 'span.d-flex > b:nth-child(1)',
         text: ['Artikel kann nicht gekauft werden'],
       },
+      {
+        container: 'div.col-12 > div:nth-child(1)',
+        text: ['Artikel kann derzeit nicht gekauft werden'],
+      },
     ],
   },
   links: [

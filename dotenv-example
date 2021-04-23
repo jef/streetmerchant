@@ -1,6 +1,6 @@
 # ** All configuration variables are optional **
 # Copy this file and name it as `dotenv` (without backticks)
-# Read https://jef.codes/streetmerchant/getting-started/#customization for help on customizing this file
+# Read https://jef.buzz/streetmerchant/getting-started/#customization for help on customizing this file
 ########################################################################################################
 
 ASCII_BANNER=
@@ -13,6 +13,11 @@ APNS_PRODUCTION=
 APNS_TEAMID=
 AUTO_ADD_TO_CART=
 BROWSER_TRUSTED=
+CAPTCHA_HANDLER_POLL_INTERVAL=
+CAPTCHA_HANDLER_RESPONSE_TIMEOUT=
+CAPTCHA_HANDLER_SERVICE=
+CAPTCHA_HANDLER_TOKEN=
+CAPTCHA_HANDLER_USER_ID=
 DESKTOP_NOTIFICATIONS=
 DISCORD_NOTIFY_GROUP=
 DISCORD_NOTIFY_GROUP_3060=

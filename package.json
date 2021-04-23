@@ -16,7 +16,9 @@
     "start:production": "node build/src/index.js",
     "test": "c8 mocha 'build/test/**/test-*.js' --exclude 'build/test/functional/**/test-*.js'",
     "test:notification": "npm run compile && node build/test/functional/test-notification.js",
-    "test:notification:production": "node build/test/functional/test-notification.js"
+    "test:notification:production": "node build/test/functional/test-notification.js",
+    "test:captcha": "npm run compile && node build/test/functional/test-captcha.js",
+    "test:captcha:production": "node build/test/functional/test-captcha.js"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -36,9 +38,9 @@
     "@bridgerakol/samsung-smart-api": "^2.8.1",
     "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
-    "@parse/node-apn": "^4.0.0",
+    "@parse/node-apn": "^4.1.1",
     "@slack/web-api": "^6.1.0",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.1",
     "cheerio": "^1.0.0-rc.6",
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
@@ -49,14 +51,14 @@
     "node-notifier": "^9.0.1",
     "node-pagerduty": "^1.3.6",
     "nodemailer": "^6.5.0",
-    "open": "^8.0.5",
+    "open": "^8.0.6",
     "play-sound": "^1.1.3",
-    "puppeteer": "^8.0.0",
+    "puppeteer": "^9.0.0",
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
     "pushover-notifications": "^1.2.2",
-    "redis": "^3.1.1",
+    "redis": "^3.1.2",
     "top-user-agents": "^1.0.24",
-    "twilio": "^3.60.0",
+    "twilio": "^3.61.0",
     "twitch": "^4.5.5",
     "twitch-auth": "^4.5.5",
     "twitch-chat-client": "^4.5.5",
@@ -67,7 +69,7 @@
     "@types/async": "^3.2.6",
     "@types/cheerio": "^0.22.28",
     "@types/mocha": "^8.2.2",
-    "@types/node": "^14.14.37",
+    "@types/node": "^14.14.41",
     "@types/node-fetch": "^2.5.10",
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.1",
@@ -81,6 +83,6 @@
     "sinon": "^10.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
-    "webpack": "^5.32.0"
+    "webpack": "^5.35.0"
   }
 }
