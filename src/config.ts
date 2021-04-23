@@ -16,6 +16,8 @@ if (process.env.npm_config_conf) {
   }
 } else if (existsSync(path.resolve(__dirname, '../../dotenv'))) {
   dotenv.config({path: path.resolve(__dirname, '../../dotenv')});
+} else if (existsSync(path.resolve(__dirname, '../dotenv'))) {
+  dotenv.config({path: path.resolve(__dirname, '../dotenv')});
 } else {
   dotenv.config({path: path.resolve(__dirname, '../../.env')});
 }
@@ -197,6 +199,17 @@ const browser = {
   ),
   open: envOrBoolean(process.env.OPEN_BROWSER),
   userAgent: '',
+};
+
+const captchaHandler = {
+  pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5000),
+  responseTimeout: envOrNumber(
+    process.env.CAPTCHA_HANDLER_RESPONSE_TIMEOUT,
+    300000
+  ),
+  service: envOrString(process.env.CAPTCHA_HANDLER_SERVICE),
+  token: envOrString(process.env.CAPTCHA_HANDLER_TOKEN),
+  userId: envOrString(process.env.CAPTCHA_HANDLER_USER_ID),
 };
 
 const docker = envOrBoolean(process.env.DOCKER, false);
@@ -475,6 +488,7 @@ export const defaultStoreData = {
 
 export const config = {
   browser,
+  captchaHandler,
   docker,
   logLevel,
   notifications,
