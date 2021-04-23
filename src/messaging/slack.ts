@@ -72,7 +72,7 @@ export async function getDMResponseAsync(
   dmId: any,
   timeout: number
 ): Promise<string> {
-  const iterations = Math.max(timeout / pollInterval, 1);
+  const iterations = Math.max(Math.floor(timeout / pollInterval), 1);
   let iteration = 0;
   return new Promise(resolve => {
     let response = '';
@@ -132,7 +132,7 @@ export async function getDMResponseAsync(
 
         return finish(response);
       }
-    }, pollInterval);
+    }, pollInterval * 1000);
   });
 }
 
