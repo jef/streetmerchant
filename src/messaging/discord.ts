@@ -122,7 +122,7 @@ export async function getDMResponseAsync(
   botMessage: Discord.Message | undefined,
   timeout: number
 ): Promise<string> {
-  const iterations = Math.max(timeout / pollInterval, 1);
+  const iterations = Math.max(Math.floor(timeout / pollInterval), 1);
   let iteration = 0;
   const client = await getDiscordClientAsync();
   const dmChannel = await getDMChannelAsync(client);
@@ -161,7 +161,7 @@ export async function getDMResponseAsync(
         logger.error("✖ couldn't get captcha response", error);
         return finish(response);
       }
-    }, pollInterval);
+    }, pollInterval * 1000);
   });
 }
 

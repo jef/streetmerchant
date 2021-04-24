@@ -202,10 +202,10 @@ const browser = {
 };
 
 const captchaHandler = {
-  pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5000),
+  pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5),
   responseTimeout: envOrNumber(
     process.env.CAPTCHA_HANDLER_RESPONSE_TIMEOUT,
-    300000
+    300
   ),
   service: envOrString(process.env.CAPTCHA_HANDLER_SERVICE),
   token: envOrString(process.env.CAPTCHA_HANDLER_TOKEN),
