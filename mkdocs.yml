@@ -82,6 +82,7 @@ nav:
   - Getting started: getting-started.md
   - Reference:
     - Application: reference/application.md
+    - Captcha: reference/captcha.md
     - Filter: reference/filter.md
     - Notification: reference/notification.md
     - Proxy: reference/proxy.md

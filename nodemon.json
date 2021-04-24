@@ -1,5 +1,5 @@
 {
-  "exec": "ts-node --files ./src/index",
+  "exec": "npx ts-node --files ./src/index",
   "ext": "ts",
   "watch": [
     "src/",
