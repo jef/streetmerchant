@@ -251,6 +251,8 @@ export type Store = {
   linksBuilder?: {
     builder: (docElement: cheerio.Cheerio, series: Series) => Link[];
     ttl?: number;
+    waitUntil?: PuppeteerLifeCycleEvent;
+    waitForSelector?: string;
     urls: Array<{series: Series; url: string | string[]}>;
   };
   labels: Labels;
