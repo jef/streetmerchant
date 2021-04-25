@@ -3,7 +3,7 @@ import {Print, logger} from '../logger';
 import {Browser} from 'puppeteer';
 import cheerio from 'cheerio';
 import {filterSeries} from './filter';
-import {usingResponse} from '../util';
+import {usingPage} from '../util';
 
 function addNewLinks(store: Store, links: Link[], series: Series) {
   if (links.length === 0) {
@@ -28,14 +28,15 @@ function addNewLinks(store: Store, links: Link[], series: Series) {
 }
 
 export async function fetchLinks(store: Store, browser: Browser) {
-  if (!store.linksBuilder) {
+  const linksBuilder = store.linksBuilder;
+  if (!linksBuilder) {
     return;
   }
 
   const promises: Array<Promise<void>> = [];
 
   // eslint-disable-next-line prefer-const
-  for (let {series, url} of store.linksBuilder.urls) {
+  for (let {series, url} of linksBuilder.urls) {
     if (!filterSeries(series)) {
       continue;
     }
@@ -48,16 +49,25 @@ export async function fetchLinks(store: Store, browser: Browser) {
 
     url.map(x =>
       promises.push(
-        usingResponse(browser, x, async response => {
-          const text = await response?.text();
+        usingPage(browser, async page => {
+          const waitUntil = linksBuilder.waitUntil
+            ? linksBuilder.waitUntil
+            : 'domcontentloaded';
+          await page.goto(x, {waitUntil});
 
-          if (!text) {
+          if (linksBuilder.waitForSelector) {
+            await page.waitForSelector(linksBuilder.waitForSelector);
+          }
+
+          const html = await page.content();
+
+          if (!html) {
             logger.error(Print.message('NO RESPONSE', series, store, true));
             return;
           }
 
-          const docElement = cheerio.load(text).root();
-          const links = store.linksBuilder!.builder(docElement, series);
+          const docElement = cheerio.load(html).root();
+          const links = linksBuilder.builder(docElement, series);
 
           addNewLinks(store, links, series);
         })
