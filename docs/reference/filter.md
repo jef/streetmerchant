@@ -91,6 +91,7 @@ Used with the `STORES` variable.
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| Cyberport | AT | `cyberport-at` |
 | DComp | AU | `dcomp`|
 | Drako | IT | `drako` |
 | DustinHome | NO | `dustinhome-no` |
