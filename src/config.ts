@@ -2,7 +2,6 @@ import {existsSync, readFileSync} from 'fs';
 import {banner} from './banner';
 import dotenv from 'dotenv';
 import path from 'path';
-import * as console from 'console';
 
 if (process.env.npm_config_conf) {
   if (
@@ -202,6 +201,7 @@ const browser = {
 };
 
 const captchaHandler = {
+  captureType: envOrString(process.env.CAPTCHA_HANDLER_CAPTURE_TYPE),
   pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5),
   responseTimeout: envOrNumber(
     process.env.CAPTCHA_HANDLER_RESPONSE_TIMEOUT,

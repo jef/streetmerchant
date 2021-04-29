@@ -11,6 +11,11 @@ export const AmazonDe: Store = {
         'geben sie die zeichen unten ein',
       ],
     },
+    captchaHandler: {
+      challenge: '.a-row > img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
+    },
     inStock: {
       container: '#add-to-cart-button',
       text: ['in den einkaufswagen'],

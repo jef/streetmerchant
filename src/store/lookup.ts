@@ -23,7 +23,8 @@ import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
-import {sendNotification, getCaptchaInputAsync} from '../messaging';
+import {sendNotification} from '../messaging';
+import {handleCaptchaAsync} from './captcha-handler';
 import useProxy from '@doridian/puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
@@ -423,13 +424,16 @@ async function isItemInStock(
     if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
       logger.warn(Print.captcha(link, store, true));
       if (config.captchaHandler.service && store.labels.captchaHandler) {
+        logger.debug(`[${store.name}] captcha handler called`);
         if (!(await handleCaptchaAsync(page, store))) {
           logger.warn(`[${store.name}] captcha handler failed`);
           return false;
         } else {
+          logger.debug(`[${store.name}] captcha handler done, checking item`);
           return await isItemInStock(store, page, link);
         }
       } else {
+        logger.debug(`[${store.name}] captcha handler skipped`);
         await delay(getSleepTime(store));
         return false;
       }
@@ -543,59 +547,6 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
       );
     }
   }
-}
-
-async function handleCaptchaAsync(page: Page, store: Store) {
-  // set up element queries
-  const imageElementQuery = {
-    requireVisible: true,
-    selector: store.labels.captchaHandler?.image || 'img',
-  };
-  const inputElementQuery = {
-    requireVisible: true,
-    selector: store.labels.captchaHandler?.input || 'input',
-  };
-  const submitElementQuery = {
-    requireVisible: true,
-    selector: store.labels.captchaHandler?.submit || 'button[type="submit"]',
-  };
-
-  // get image src for captcha
-  const imgElementSrc = await page.evaluate((selector: string) => {
-    const element = document.querySelector<HTMLImageElement>(selector);
-    return element?.src;
-  }, imageElementQuery.selector);
-
-  const response = await getCaptchaInputAsync(
-    imgElementSrc ||
-      `captcha detected on [${page.url()}] but unable to get captcha image url`
-  );
-
-  if (!response) return false;
-
-  const result = await page.evaluate(
-    (inputSelector, submitSelector, response) => {
-      const inputElement = document.querySelector<HTMLInputElement>(
-        inputSelector
-      );
-      if (!inputElement) return false;
-      inputElement.value = response;
-
-      const submitElement = document.querySelector<HTMLButtonElement>(
-        submitSelector
-      );
-      if (!submitElement) return false;
-      submitElement.click();
-
-      return true;
-    },
-    inputElementQuery.selector,
-    submitElementQuery.selector,
-    response
-  );
-
-  if (result) await delay(3000);
-  return result;
 }
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {

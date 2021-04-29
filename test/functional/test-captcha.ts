@@ -1,8 +1,15 @@
-import {getCaptchaInputAsync} from '../../src/messaging';
+import {handleCaptchaAsync} from '../../src/store/captcha-handler';
+import {getTestStore, launchTestBrowser} from '../util';
+
+const store = getTestStore();
+// uncomment to test global default capture type setting
+// if (store.labels.captchaHandler) store.labels.captchaHandler.captureType = '';
 
 (async () => {
-  await getCaptchaInputAsync(
-    'test https://images-na.ssl-images-amazon.com/captcha/kwizfixk/Captcha_xpdfshjvsb.jpg',
-    30
-  );
+  const browser = await launchTestBrowser();
+  const page = await browser.newPage();
+  page.goto(store.links[1].url, {waitUntil: 'networkidle0'});
+  await page.waitForSelector(store.labels.captchaHandler!.challenge);
+  await handleCaptchaAsync(page, store);
+  await browser.close();
 })();
