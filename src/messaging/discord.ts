@@ -4,7 +4,7 @@ import {config} from '../config';
 import {logger} from '../logger';
 
 const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
-const {pollInterval, responseTimeout, token, userId} = config.captchaHandler;
+const {responseTimeout, token, userId} = config.captchaHandler;
 
 let clientInstance: Discord.Client | undefined;
 let dmChannelInstance: Discord.DMChannel | undefined;
@@ -122,47 +122,31 @@ export async function getDMResponseAsync(
   botMessage: Discord.Message | undefined,
   timeout: number
 ): Promise<string> {
-  const iterations = Math.max(Math.floor(timeout / pollInterval), 1);
-  let iteration = 0;
   const client = await getDiscordClientAsync();
   const dmChannel = await getDMChannelAsync(client);
   if (!dmChannel) {
     logger.error('unable to get discord DM channel');
     return '';
   }
-  return new Promise(resolve => {
-    let response = '';
-    const intervalId = setInterval(async () => {
-      const finish = (result: string) => {
-        clearInterval(intervalId);
-        resolve(result);
-      };
-      try {
-        iteration++;
-        const messages = await dmChannel.messages.fetch({
-          after: botMessage?.id,
-        });
-        const lastUserMessage = messages
-          .filter(message => message.reference?.messageID === botMessage?.id)
-          .last();
-        if (!lastUserMessage) {
-          if (iteration >= iterations) {
-            await dmChannel.send('Timed out waiting for response... 😿');
-            logger.error('✖ no response from user');
-            return finish(response);
-          }
-        } else {
-          response = lastUserMessage.cleanContent;
-          lastUserMessage.react('✅');
-          logger.info(`✔ got captcha response: ${response}`);
-          return finish(response);
-        }
-      } catch (error: unknown) {
-        logger.error("✖ couldn't get captcha response", error);
-        return finish(response);
-      }
-    }, pollInterval * 1000);
-  });
+  let response = '';
+  try {
+    const filter = (message: Discord.Message) =>
+      !message.reference || message.reference?.messageID === botMessage?.id;
+    const messages = await dmChannel.awaitMessages(filter, {
+      max: 1,
+      time: timeout * 1000,
+      errors: ['time', 'max'],
+    });
+    const lastUserMessage = messages.last();
+    response = lastUserMessage?.cleanContent || '';
+    lastUserMessage?.react('✅');
+    logger.info(`✔ got captcha response: ${response}`);
+  } catch (error) {
+    await dmChannel.send('Timed out waiting for response... 😿');
+    logger.error('✖ no response from user');
+  }
+
+  return response;
 }
 
 export async function getDiscordCaptchaInputAsync(
