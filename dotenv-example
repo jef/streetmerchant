@@ -1,6 +1,6 @@
 # ** All configuration variables are optional **
 # Copy this file and name it as `dotenv` (without backticks)
-# Read https://jef.codes/streetmerchant/getting-started/#customization for help on customizing this file
+# Read https://jef.buzz/streetmerchant/getting-started/#customization for help on customizing this file
 ########################################################################################################
 
 ASCII_BANNER=
@@ -13,6 +13,11 @@ APNS_PRODUCTION=
 APNS_TEAMID=
 AUTO_ADD_TO_CART=
 BROWSER_TRUSTED=
+CAPTCHA_HANDLER_POLL_INTERVAL=
+CAPTCHA_HANDLER_RESPONSE_TIMEOUT=
+CAPTCHA_HANDLER_SERVICE=
+CAPTCHA_HANDLER_TOKEN=
+CAPTCHA_HANDLER_USER_ID=
 DESKTOP_NOTIFICATIONS=
 DISCORD_NOTIFY_GROUP=
 DISCORD_NOTIFY_GROUP_3060=
@@ -92,10 +97,12 @@ PROXY_PROTOCOL=
 PROXY_PORT=
 PUSHBULLET=
 PUSHOVER_EXPIRE=
+PUSHOVER_DEVICE=
+PUSHOVER_PRIORITY=
 PUSHOVER_RETRY=
+PUSHOVER_SOUND=
 PUSHOVER_TOKEN=
 PUSHOVER_USER=
-PUSHOVER_PRIORITY=
 RESTART_TIME=
 SCREENSHOT=
 SHOW_ONLY_BRANDS=
@@ -129,4 +136,6 @@ STREAMLABS_TYPE=
 STREAMLABS_IMAGE=
 STREAMLABS_SOUND=
 STREAMLABS_DURATION=
+FREEMOBILE_ID=
+FREEMOBILE_API_KEY=
 WEB_PORT=

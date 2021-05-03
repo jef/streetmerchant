@@ -45,6 +45,7 @@ async function main() {
     args.push('--disable-setuid-sandbox');
     args.push('--headless');
     args.push('--disable-gpu');
+    config.browser.open = false;
   }
 
   // Add the address of the proxy server if defined

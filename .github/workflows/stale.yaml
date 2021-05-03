@@ -4,14 +4,16 @@ on:
     - cron: '0 0 * * *'
 jobs:
   stale:
+    name: Check stale issues
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v3
+      - name: Run stale action
+        uses: actions/stale@v3
         with:
           close-issue-message: ${{ env.CLOSE_MESSAGE }}
           close-pr-message: ${{ env.CLOSE_MESSAGE }}
-          days-before-stale: 30
-          days-before-close: 5
+          days-before-stale: 60
+          days-before-close: 10
           exempt-issue-labels: ${{ env.EXEMPT_LABEL }}
           exempt-pr-labels: ${{ env.EXEMPT_LABEL }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -21,6 +23,6 @@ jobs:
           stale-pr-message: ${{ env.STALE_MESSAGE }}
         env:
           CLOSE_MESSAGE: 'This issue has been closed because it is stale. Reopen if necessary.'
-          EXEMPT_LABEL: 'status: needs discussion,priority: low,priority: medium, priority: high,status: help wanted,status: in progress'
+          EXEMPT_LABEL: 'priority: low,priority: medium, priority: high,status: help wanted,status: in progress,status: needs triage'
           STALE_LABEL: 'status: stale'
-          STALE_MESSAGE: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
+          STALE_MESSAGE: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 10 days'

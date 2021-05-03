@@ -17,6 +17,11 @@ export const Amazon: Store = {
       container: 'body',
       text: ['enter the characters you see below'],
     },
+    captchaHandler: {
+      image: '.a-row > img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
+    },
     inStock: [
       {
         container: '#add-to-cart-button',
@@ -255,6 +260,14 @@ export const Amazon: Store = {
       model: 'xc3 ultra',
       series: '3070',
       url: 'https://www.amazon.com/dp/B08L8L71SM',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B08WM28PVH&Quantity.1=1',
+      model: 'xc gaming',
+      series: '3060',
+      url: 'https://www.amazon.com/dp/B08WM28PVH',
     },
     {
       brand: 'evga',

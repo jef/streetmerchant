@@ -1,6 +1,6 @@
 # Project information
 site_name: streetmerchant
-site_url: https://jef.codes/streetmerchant
+site_url: https://jef.buzz/streetmerchant
 site_author: Jef LeCompte
 site_description: 🤖 The world's easiest, most powerful stock checker
 
@@ -82,6 +82,7 @@ nav:
   - Getting started: getting-started.md
   - Reference:
     - Application: reference/application.md
+    - Captcha: reference/captcha.md
     - Filter: reference/filter.md
     - Notification: reference/notification.md
     - Proxy: reference/proxy.md
