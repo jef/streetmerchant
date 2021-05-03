@@ -95,6 +95,7 @@ import {MicroCenter} from './microcenter';
 import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
 import {Msy} from './msy';
+import {Multicom} from './multicom';
 import {Mwave} from './mwave';
 import {NetonnetNO} from './netonnet-no';
 import {Newegg} from './newegg';
@@ -252,6 +253,7 @@ export const storeList = new Map([
   [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
+  [Multicom.name, Multicom],
   [Mwave.name, Mwave],
   [NetonnetNO.name, NetonnetNO],
   [Newegg.name, Newegg],
