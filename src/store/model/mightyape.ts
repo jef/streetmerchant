@@ -6,14 +6,14 @@ export const MightyApe: Store = {
     inStock: [
       {
         container:
-          'body > div.page-container > div.page.listing.details.not-in-trolley.category.category-games.category-controllers > div > main > section.product-summary-top > div > div > div.product-summary > div.trolley-button-and-product-options > div.trolley-button-section > div.purchase-options > form > div > button',
-        text: ['Add to Trolley'],
+          'div.status',
+        text: [' In stock at '],
       },
     ],
     outOfStock: [
       {
         container:
-          'body > div.page-container > div.page.listing.details.not-in-trolley.category.category-games.category-ps5-consoles > div > main > section.product-summary-top > div > div > div.product-summary.unavailable > div.pricing-stock > div > div.status',
+          'div.status',
         text: [' Unavailable '],
       },
     ],
