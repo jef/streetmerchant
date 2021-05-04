@@ -55,6 +55,7 @@ import {CorsairUK} from './corsair-uk';
 import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
+import {CyberportAt} from './cyberport-at';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {DustinHomeNO} from './dustinhome-no';
@@ -211,6 +212,7 @@ export const storeList = new Map([
   [Cpl.name, Cpl],
   [Currys.name, Currys],
   [Cyberport.name, Cyberport],
+  [CyberportAt.name, CyberportAt],
   [Dcomp.name, Dcomp],
   [Drako.name, Drako],
   [DustinHomeNO.name, DustinHomeNO],
