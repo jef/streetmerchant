@@ -54,6 +54,7 @@ Used with the `STORES` variable.
 | Amazon | SG | `amazon-sg`|
 | Amazon | UK | `amazon-uk`|
 | AMD | US | `amd`|
+| AMD | AT | `amd-at`|
 | AMD | BE | `amd-be`|
 | AMD | CA | `amd-ca`|
 | AMD | DE | `amd-de`|
@@ -91,6 +92,7 @@ Used with the `STORES` variable.
 | CPL | AU | `cpl`|
 | Currys | UK | `currys`|
 | Cyberport | DE | `cyberport` |
+| Cyberport | AT | `cyberport-at` |
 | DComp | AU | `dcomp`|
 | Drako | IT | `drako` |
 | DustinHome | NO | `dustinhome-no` |

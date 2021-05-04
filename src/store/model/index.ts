@@ -18,6 +18,7 @@ import {AmazonNl} from './amazon-nl';
 import {AmazonSg} from './amazon-sg';
 import {AmazonUk} from './amazon-uk';
 import {Amd} from './amd';
+import {AmdAt} from './amd-at';
 import {AmdBe} from './amd-be';
 import {AmdCa} from './amd-ca';
 import {AmdDe} from './amd-de';
@@ -55,6 +56,7 @@ import {CorsairUK} from './corsair-uk';
 import {Cpl} from './cpl';
 import {Currys} from './currys';
 import {Cyberport} from './cyberport';
+import {CyberportAt} from './cyberport-at';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {DustinHomeNO} from './dustinhome-no';
@@ -174,6 +176,7 @@ export const storeList = new Map([
   [AmazonSg.name, AmazonSg],
   [AmazonUk.name, AmazonUk],
   [Amd.name, Amd],
+  [AmdAt.name, AmdAt],
   [AmdBe.name, AmdBe],
   [AmdCa.name, AmdCa],
   [AmdDe.name, AmdDe],
@@ -211,6 +214,7 @@ export const storeList = new Map([
   [Cpl.name, Cpl],
   [Currys.name, Currys],
   [Cyberport.name, Cyberport],
+  [CyberportAt.name, CyberportAt],
   [Dcomp.name, Dcomp],
   [Drako.name, Drako],
   [DustinHomeNO.name, DustinHomeNO],
