@@ -143,7 +143,9 @@ export const Print = {
         '✖ ' +
         buildProductString(link, store, true) +
         ' :: ' +
-        chalk.yellow(`PRICE ${link.price ?? ''} EXCEEDS LIMIT ${maxPrice}`)
+        chalk.yellow(
+          `IN STOCK, PRICE ${link.price ?? ''} EXCEEDS LIMIT ${maxPrice}`
+        )
       );
     }
 

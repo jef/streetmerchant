@@ -208,6 +208,27 @@ export const Saturn: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
+      url:
+        'https://www.saturn.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url:
+        'https://www.saturn.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url:
+        'https://www.saturn.de/de/product/_sony-ps5-assassins-creed-valhalla-2715828.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
       url: 'https://www.saturn.de/de/product/-2661938.html',
     },
     {

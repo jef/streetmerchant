@@ -91,6 +91,21 @@ export const Currys: Store = {
     }),
     urls: [
       {
+        series: 'rx6800',
+        url:
+          'https://www.currys.co.uk/gbuk/radeon-rx-6800/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00313996/xx-criteria.html',
+      },
+      {
+        series: 'rx6800xt',
+        url:
+          'https://www.currys.co.uk/gbuk/radeon-rx-6800-xt/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00314005/xx-criteria.html',
+      },
+      {
+        series: 'rx6900xt',
+        url:
+          'https://www.currys.co.uk/gbuk/radeon-rx-6900-xt/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00314012/xx-criteria.html',
+      },
+      {
         series: '3060',
         url:
           'https://www.currys.co.uk/gbuk/rtx-3060/components-upgrades/graphics-cards/324_3091_30343_xx_ba00013562-bv00314002/xx-criteria.html',

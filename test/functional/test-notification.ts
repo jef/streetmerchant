@@ -1,6 +1,6 @@
 import {Link, Store} from '../../src/store/model';
 import open from 'open';
-import {sendNotification} from '../../src/notification';
+import {sendNotification} from '../../src/messaging';
 import {config} from '../../src/config';
 
 const link: Link = {
@@ -32,7 +32,7 @@ sendNotification(link, store);
 /**
  * Open browser.
  */
-if (config.browser.open) {
+if (!config.docker && config.browser.open) {
   open(link.cartUrl ?? link.url);
   open(link.url);
 }

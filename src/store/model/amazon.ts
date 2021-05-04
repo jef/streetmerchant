@@ -17,6 +17,11 @@ export const Amazon: Store = {
       container: 'body',
       text: ['enter the characters you see below'],
     },
+    captchaHandler: {
+      image: '.a-row > img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
+    },
     inStock: [
       {
         container: '#add-to-cart-button',
