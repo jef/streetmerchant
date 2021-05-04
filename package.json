@@ -50,7 +50,7 @@
     "node-hue-api": "^4.0.10",
     "node-notifier": "^9.0.1",
     "node-pagerduty": "^1.3.6",
-    "nodemailer": "^6.5.0",
+    "nodemailer": "^6.6.0",
     "open": "8.0.2",
     "play-sound": "^1.1.3",
     "puppeteer": "^9.0.0",
