@@ -5,15 +5,13 @@ export const MightyApe: Store = {
   labels: {
     inStock: [
       {
-        container:
-          'div.status',
+        container: 'div.status',
         text: [' In stock at '],
       },
     ],
     outOfStock: [
       {
-        container:
-          'div.status',
+        container: 'div.status',
         text: [' Unavailable '],
       },
     ],
