@@ -134,6 +134,7 @@ Used with the `STORES` variable.
 | MightyApe | NZ | `mightyape`|
 | Mindfactory | DE | `mindfactory` |
 | MSY | AU |  `msy`|
+| Multicom | NO |  `multicom`|
 | Mwave | AU | `mwave`|
 | Netonnet | NO | `netonnet-no`|
 | Newegg | US | `newegg`|
