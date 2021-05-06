@@ -4,12 +4,15 @@ export const Multicom: Store = {
   currency: 'kr.',
   labels: {
     inStock: {
-      container: '#ctl00_ContentMain_skPC_ctl00_ctl52_ctl02_btnBuy',
-      text: ['Legg i handlevogn'],
+      container:
+        '#ctl00_ContentMain_skPC_ctl00_ctl53_ctl02_btnBuy > div:nth-child(1) > span:nth-child(1)',
+      text: ['LEGG I HANDLEVOGN'],
+    },
+    maxPrice: {
+      container: '.b-product-price_',
     },
     outOfStock: {
-      container:
-        '#productCardContent > div.b-product-card > div.b-product-card__block-synopsys > div.b-price-block.b-price-block_visible > div.b-product-stock > div:nth-child(1) > a',
+      container: '.stock-notification-btn',
       text: ['MOTTA VARSEL!'],
     },
   },
