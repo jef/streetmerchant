@@ -51,7 +51,7 @@
     "node-notifier": "^9.0.1",
     "node-pagerduty": "^1.3.6",
     "nodemailer": "^6.5.0",
-    "open": "8.0.2",
+    "open": "8.0.8",
     "play-sound": "^1.1.3",
     "puppeteer": "^9.0.0",
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
