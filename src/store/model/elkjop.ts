@@ -8,6 +8,9 @@ export const Elkjop: Store = {
         '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.buy-button-container.align-left.any-1-1.table-btn > div > div > div.product-price-button-wrap > div > div > span > span',
       text: ['Legg i handlevogn'],
     },
+    maxPrice: {
+      container: '.product-price-container > span:nth-child(1)',
+    },
     outOfStock: {
       container:
         '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.buy-button-container.align-left.any-1-1.table-btn > div > div > div.product-price-button-wrap > div > div > span > span',

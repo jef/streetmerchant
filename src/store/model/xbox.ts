@@ -5,7 +5,7 @@ export const Xbox: Store = {
   labels: {
     outOfStock: {
       container:
-        '.src-pages-BundleBuilder-components-BundleBuilderHeader-__BundleBuilderHeader-module___checkoutButton',
+        '._-_-node_modules--xbox-web-partner-core-build-pages-BundleBuilder-Components-BundleBuilderHeader-__BundleBuilderHeader-module___checkoutButton',
       text: ['out of stock'],
     },
   },
