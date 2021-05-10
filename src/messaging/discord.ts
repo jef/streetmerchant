@@ -114,6 +114,8 @@ export async function sendDMAsync(
     } catch (error: unknown) {
       logger.error("✖ couldn't send discord DM", error);
     }
+  } else {
+    logger.warn("✖ couldn't send discord DM, missing configuration");
   }
   return;
 }
@@ -122,6 +124,7 @@ export async function getDMResponseAsync(
   botMessage: Discord.Message | undefined,
   timeout: number
 ): Promise<string> {
+  if (!botMessage) return '';
   const iterations = Math.max(Math.floor(timeout / pollInterval), 1);
   let iteration = 0;
   const client = await getDiscordClientAsync();
@@ -195,7 +198,7 @@ async function getDiscordClientAsync() {
 }
 
 async function getDMChannelAsync(client?: Discord.Client) {
-  if (!dmChannelInstance && userId && !!client) {
+  if (!dmChannelInstance && userId && client) {
     const user = await new Discord.User(client, {
       id: userId,
     }).fetch();
