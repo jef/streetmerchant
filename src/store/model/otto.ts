@@ -71,6 +71,13 @@ export const Otto: Store = {
     },
     {
       brand: 'microsoft',
+      labels: {
+        inStock: {
+          container:
+            '.js_shortInfo__variationName.prd_shortInfo__variationName',
+          text: ['Xbox Series S'],
+        },
+      },
       model: 'xbox series s',
       series: 'xboxss',
       url:
@@ -78,6 +85,13 @@ export const Otto: Store = {
     },
     {
       brand: 'microsoft',
+      labels: {
+        inStock: {
+          container:
+            '.js_shortInfo__variationName.prd_shortInfo__variationName',
+          text: ['Xbox Series X'],
+        },
+      },
       model: 'xbox series x',
       series: 'xboxsx',
       url:
