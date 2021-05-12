@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run stale action
-        uses: actions/stale@v3
+        uses: actions/stale@v3.0.18
         with:
           close-issue-message: ${{ env.CLOSE_MESSAGE }}
           close-pr-message: ${{ env.CLOSE_MESSAGE }}
