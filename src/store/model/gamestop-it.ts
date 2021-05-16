@@ -18,6 +18,12 @@ export const GamestopIT: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.gamestop.it/Switch/Games/134107',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',

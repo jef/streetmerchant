@@ -17,6 +17,13 @@ export const HarrisTechnology: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.ht.com.au/part/BY216-Gigabyte-GeForce-RTX-3080-GAMING-OC-10GB-Video-Card/detail.hts',
+    },
+    {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3080',

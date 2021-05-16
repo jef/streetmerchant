@@ -21,6 +21,13 @@ export const Igamecomputer: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.igamecomputer.com.au/products/a0068?_pos=5&_sid=42c0f4fc6&_ss=r',
+    },
+    {
       brand: 'asus',
       model: 'tuf oc',
       series: '3080',

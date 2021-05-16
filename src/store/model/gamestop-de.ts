@@ -24,6 +24,12 @@ export const GamestopDE: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.gamestop.de/Switch/Games/62247',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

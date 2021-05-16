@@ -1,4 +1,5 @@
-import {Link, Model, Series} from '../store';
+import {Page} from 'playwright';
+import {Brand, Link, Model, Series} from '../store';
 import {logger} from '../../../logger';
 
 export interface Card {
@@ -17,16 +18,16 @@ interface LinksBuilderOptions {
 const isPartialUrlRegExp = /^\/[^/]/i;
 
 export function getProductLinksBuilder(options: LinksBuilderOptions) {
-  return (docElement: cheerio.Cheerio, series: Series): Link[] => {
-    const productElements = docElement.find(options.productsSelector);
-    const links: Link[] = [];
+  return async (page: Page, series: Series): Promise<Array<Link>> => {
+    const productElements = await page.$$(options.productsSelector);
+    const links: Array<Link> = [];
     for (let i = 0; i < productElements.length; i++) {
-      const productElement = productElements.eq(i);
-      const titleElement = productElement.find(options.titleSelector).first();
+      const productElement = productElements[i];
+      const titleElement = await productElement.$(options.titleSelector);
 
       const title = options.titleAttribute
-        ? titleElement.attr()?.[options.titleAttribute]
-        : titleElement.text()?.replace(/\n/g, ' ').trim();
+        ? await titleElement?.getAttribute(options.titleAttribute)
+        : (await titleElement?.innerText())?.replace(/\n/g, ' ').trim();
 
       if (!title) {
         continue;
@@ -35,10 +36,10 @@ export function getProductLinksBuilder(options: LinksBuilderOptions) {
       let urlElement = titleElement;
 
       if (options.urlSelector) {
-        urlElement = urlElement.find(options.urlSelector).first();
+        urlElement = (await urlElement?.$(options.urlSelector)) || null;
       }
 
-      let url = urlElement.attr()?.href;
+      let url = await urlElement?.getAttribute('href');
 
       if (!url) {
         continue;
@@ -52,7 +53,7 @@ export function getProductLinksBuilder(options: LinksBuilderOptions) {
 
       if (card) {
         links.push({
-          brand: card.brand as any,
+          brand: card.brand as Brand,
           model: card.model,
           series,
           url,

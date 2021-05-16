@@ -13,6 +13,12 @@ export const GamestopIE: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.gamestop.ie/Switch/Games/76704',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',

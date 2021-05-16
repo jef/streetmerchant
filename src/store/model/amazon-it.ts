@@ -19,6 +19,12 @@ export const AmazonIt: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.amazon.it/dp/B083VVZ8VX',
+    },
+    {
       brand: 'asus',
       cartUrl:
         'https://www.amazon.it/gp/aws/cart/add.html?ASIN.1=B08KHFZN9P&Quantity.1=1',

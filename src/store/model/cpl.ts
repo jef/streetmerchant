@@ -17,6 +17,13 @@ export const Cpl: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://cplonline.com.au/mouse/wired-mouse/logitech-m90-optical-usb-mouse-910-001795.html',
+    },
+    {
       brand: 'asus',
       model: 'strix oc',
       series: '3080',

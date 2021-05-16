@@ -15,6 +15,13 @@ export const Mwave: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.mwave.com.au/product/gigabyte-geforce-rtx-3080-vision-oc-10gb-video-card-ac38364',
+    },
+    {
       brand: 'gigabyte',
       model: 'vision oc',
       series: '3080',

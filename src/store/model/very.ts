@@ -1,4 +1,4 @@
-import {Link, Store} from './store';
+import {Brand, Link, Store} from './store';
 import {logger} from '../../logger';
 import {parseCard} from './helpers/card';
 
@@ -28,13 +28,14 @@ export const Very: Store = {
     },
   ],
   linksBuilder: {
-    builder: (docElement, series) => {
-      const productElements = docElement.find('.productList .product');
-      const links: Link[] = [];
-      for (let i = 0; i < productElements.length; i++) {
-        const productElement = productElements.eq(i);
-        const titleElement = productElement.find('.productTitle').first();
-        const title = titleElement.text()?.replace(/\n/g, ' ').trim();
+    builder: async (page, series) => {
+      const productElements = await page.$$('.productList .product');
+      const links: Array<Link> = [];
+      for (const productElement of productElements) {
+        const titleElement = await productElement.$('.productTitle');
+        const title = (await titleElement?.innerText())
+          ?.replace(/\n/g, ' ')
+          .trim();
 
         if (
           !title ||
@@ -45,7 +46,7 @@ export const Very: Store = {
           continue;
         }
 
-        const url = titleElement.attr()?.href;
+        const url = await titleElement?.getAttribute('href');
 
         if (!url) {
           continue;
@@ -55,7 +56,7 @@ export const Very: Store = {
 
         if (card) {
           links.push({
-            brand: card.brand as any,
+            brand: card.brand as Brand,
             model: card.model,
             series,
             url,

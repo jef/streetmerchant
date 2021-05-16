@@ -19,6 +19,12 @@ export const Centrecom: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.centrecom.com.au/logitech-wireless-mouse-m185-grey',
+    },
+    {
       brand: 'asus',
       model: 'tuf oc',
       series: '3080',

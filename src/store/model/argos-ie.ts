@@ -17,6 +17,12 @@ export const ArgosIE: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.argos.ie/static/Product/partNumber/2078195.htm',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',

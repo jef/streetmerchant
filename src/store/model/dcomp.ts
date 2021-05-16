@@ -19,6 +19,12 @@ export const Dcomp: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://dcomp.com.au/productdetail/2439',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',

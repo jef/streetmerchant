@@ -19,6 +19,12 @@ export const Target: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.target.com/p/playstation-5-console/-/A-81114595',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

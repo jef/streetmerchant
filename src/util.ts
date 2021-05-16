@@ -1,7 +1,6 @@
-import {Browser, Page, HTTPResponse} from 'puppeteer';
+import {Browser, Page, Response} from 'playwright';
 import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
-import {disableBlockerInPage} from './adblocker';
 import {logger} from './logger';
 import topUserAgents from 'top-user-agents';
 
@@ -45,11 +44,7 @@ export function isStatusCodeInRange(
 export async function usingResponse<T>(
   browser: Browser,
   url: string,
-  cb: (
-    response: HTTPResponse | null,
-    page: Page,
-    browser: Browser
-  ) => Promise<T>
+  cb: (response: Response | null, page: Page, browser: Browser) => Promise<T>
 ): Promise<T> {
   return usingPage(browser, async (page, browser) => {
     const response = await page.goto(url, {waitUntil: 'domcontentloaded'});
@@ -62,9 +57,10 @@ export async function usingPage<T>(
   browser: Browser,
   cb: (page: Page, browser: Browser) => Promise<T>
 ): Promise<T> {
-  const page = await browser.newPage();
+  const page = await browser.newPage({
+    userAgent: await getRandomUserAgent(),
+  });
   page.setDefaultNavigationTimeout(config.page.timeout);
-  await page.setUserAgent(await getRandomUserAgent());
 
   try {
     return await cb(page, browser);
@@ -78,9 +74,9 @@ export async function usingPage<T>(
 }
 
 export async function closePage(page: Page) {
-  if (!config.browser.lowBandwidth) {
+  /*if (!config.browser.lowBandwidth) {
     await disableBlockerInPage(page);
-  }
+  }*/
 
   await page.close();
 }

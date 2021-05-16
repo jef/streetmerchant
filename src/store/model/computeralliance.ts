@@ -21,6 +21,13 @@ export const ComputerAlliance: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.computeralliance.com.au/logitech-wired-m90-usb-optical-mouse-pn-910-001795',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',

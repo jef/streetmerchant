@@ -1,4 +1,4 @@
-import {Link, Store} from './store';
+import {Store} from './store';
 
 export const AmazonUk: Store = {
   backoffStatusCodes: [403, 429, 503],

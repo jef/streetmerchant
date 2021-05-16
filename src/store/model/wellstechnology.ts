@@ -20,6 +20,13 @@ export const WellsTechnology: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://wellstechnology.com.au/products/evga-geforce-rtx3080-xc3-10gb-gddr6x?_pos=1&_sid=bcf224e44&_ss=r&variant=36272043983014',
+    },
+    {
       brand: 'evga',
       model: 'xc3',
       series: '3080',

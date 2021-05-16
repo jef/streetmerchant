@@ -19,6 +19,13 @@ export const Umart: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.umart.com.au/Asus-ROG-Strix-GeForce-RTX-3080-10G-Graphics-Card_56894G.html',
+    },
+    {
       brand: 'asus',
       model: 'strix',
       series: '3080',

@@ -22,7 +22,7 @@ export const Arlt: Store = {
       model: 'test:model',
       series: 'test:series',
       url:
-        'https://www.arlt.com/ASUS-GeForce-GTX1650-Super-TUF-GTX1650S-O4G-GAMING.html',
+        'https://www.arlt.com/Gaming/Gaming-Zubehoer/Maeuse/ASUS-UT200-Gaming-Maus.html',
     },
     {
       brand: 'asus',

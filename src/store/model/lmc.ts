@@ -19,6 +19,13 @@ export const LandmarkComputers: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.lmc.com.au/msi-geforce-rtx-3080-gaming-x-trio-10g-gaming-graphics-card',
+    },
+    {
       brand: 'msi',
       model: 'gaming x trio',
       series: '3080',

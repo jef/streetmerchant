@@ -18,6 +18,13 @@ export const AntOnline: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.antonline.com/Logitech/Computers/Input_Devices/Pointing_Devices/907955',
+    },
+    {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',

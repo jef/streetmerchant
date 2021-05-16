@@ -10,6 +10,12 @@ export const AO: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://ao.com/brands/nintendo',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

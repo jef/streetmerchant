@@ -18,6 +18,12 @@ export const Materiel: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.materiel.net/produit/202011060098.html',
+    },
+    {
       brand: 'asus',
       model: 'dual',
       series: '3060ti',

@@ -781,4 +781,5 @@ export const Amazon: Store = {
     },
   ],
   name: 'amazon',
+  waitUntil: 'domcontentloaded',
 };

@@ -1,5 +1,5 @@
 import {Element, LabelQuery, Pricing} from './model';
-import {Page} from 'puppeteer';
+import {Page} from 'playwright';
 import {logger} from '../logger';
 
 export type Selector = {

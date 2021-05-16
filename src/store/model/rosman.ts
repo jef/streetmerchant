@@ -21,6 +21,13 @@ export const Rosman: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://rosmancomputers.com.au/gigabyte-nvidia-gv-n3090turbo-24gd1/',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3090',

@@ -10,6 +10,13 @@ export const Comet: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      cartUrl: 'https://www.comet.it/cart/insert/NIN01070Y/online',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.comet.it/nintendo-switch/nintendo-switch-lite-2',
+    },
+    {
       brand: 'sony',
       cartUrl: 'https://www.comet.it/cart/insert/PSX01802A/online',
       model: 'ps5 console',

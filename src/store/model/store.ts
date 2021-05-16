@@ -1,4 +1,10 @@
-import {Browser, PuppeteerLifeCycleEvent} from 'puppeteer';
+import {Browser, Page} from 'playwright';
+
+type PlaywrightWaitUntil =
+  | 'load'
+  | 'domcontentloaded'
+  | 'networkidle'
+  | undefined;
 
 export type Element = {
   container?: string;
@@ -246,18 +252,19 @@ export type Store = {
    * If not defined, the default range will be used: 403.
    */
   backoffStatusCodes?: StatusCodeRangeArray;
+  blockResources?: boolean;
+  currency: '£' | '$' | '€' | 'R$' | 'kr.' | '';
   disableAdBlocker?: boolean;
+  labels: Labels;
   links: Link[];
   linksBuilder?: {
-    builder: (docElement: cheerio.Cheerio, series: Series) => Link[];
+    builder: (page: Page, series: Series) => Promise<Array<Link>>;
     ttl?: number;
-    waitUntil?: PuppeteerLifeCycleEvent;
+    waitUntil?: PlaywrightWaitUntil;
     waitForSelector?: string;
     urls: Array<{series: Series; url: string | string[]}>;
   };
-  labels: Labels;
   name: string;
-  currency: '£' | '$' | '€' | 'R$' | 'kr.' | '';
   setupAction?: (browser: Browser) => void;
   /**
    * The range of status codes which considered successful, i.e. without error
@@ -266,7 +273,7 @@ export type Store = {
    * 0 -> 399 inclusive.
    */
   successStatusCodes?: StatusCodeRangeArray;
-  waitUntil?: PuppeteerLifeCycleEvent;
+  waitUntil?: PlaywrightWaitUntil;
   minPageSleep?: number;
   maxPageSleep?: number;
 

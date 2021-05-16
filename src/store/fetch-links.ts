@@ -1,11 +1,10 @@
+import {Browser} from 'playwright';
 import {Link, Series, Store} from './model';
 import {Print, logger} from '../logger';
-import {Browser} from 'puppeteer';
-import cheerio from 'cheerio';
 import {filterSeries} from './filter';
 import {usingPage} from '../util';
 
-function addNewLinks(store: Store, links: Link[], series: Series) {
+function addNewLinks(store: Store, links: Array<Link>, series: Series) {
   if (links.length === 0) {
     logger.debug(Print.message('NO STORE LINKS FOUND', series, store, true));
 
@@ -66,8 +65,7 @@ export async function fetchLinks(store: Store, browser: Browser) {
             return;
           }
 
-          const docElement = cheerio.load(html).root();
-          const links = linksBuilder.builder(docElement, series);
+          const links = await linksBuilder.builder(page, series);
 
           addNewLinks(store, links, series);
         })

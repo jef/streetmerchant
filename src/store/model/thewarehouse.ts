@@ -23,6 +23,12 @@ export const TheWarehouse: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.thewarehouse.co.nz/R2695122.html',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

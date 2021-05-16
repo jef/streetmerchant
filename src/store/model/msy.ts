@@ -21,6 +21,13 @@ export const Msy: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.msy.com.au/asus-nvidia-tuf-rtx3080-10g-gaming-10gb-rtx-3080-tuf-gaming',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',

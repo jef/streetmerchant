@@ -19,6 +19,12 @@ export const Allneeds: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://allneeds.com.au/catalog/product/view/id/4524/',
+    },
+    {
       brand: 'asus',
       model: 'strix oc white',
       series: '3080',

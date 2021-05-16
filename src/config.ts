@@ -172,7 +172,13 @@ function loadProxyList(filename: string): string[] | undefined {
   }
 }
 
+const getBrowserSelection = (browser?: string) => {
+  const validBrowsers = ['chromium', 'firefox', 'webkit'];
+  return validBrowsers.find(b => b === browser) || validBrowsers[0];
+};
+
 const browser = {
+  browserType: getBrowserSelection(process.env.BROWSER_TYPE),
   isHeadless: envOrBoolean(process.env.HEADLESS),
   isIncognito: envOrBoolean(process.env.INCOGNITO, false),
   isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
@@ -198,6 +204,7 @@ const browser = {
     5000
   ),
   open: envOrBoolean(process.env.OPEN_BROWSER),
+  randomUserAgent: envOrBoolean(process.env.USER_AGENT_RANDOMIZE, true),
   userAgent: '',
 };
 

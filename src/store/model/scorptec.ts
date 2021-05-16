@@ -15,6 +15,13 @@ export const Scorptec: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.scorptec.com.au/product/graphics-cards/nvidia/85443-rog-strix-rtx3080-10g-gaming',
+    },
+    {
       brand: 'asus',
       model: 'strix',
       series: '3080',

@@ -23,7 +23,7 @@ export const Aria: Store = {
       model: 'test:model',
       series: 'test:series',
       url:
-        'https://www.aria.co.uk/Products/Components/Graphics+Cards/NVIDIA+GeForce/GeForce+RTX+2060+Super/Gigabyte+NVIDIA+GeForce+RTX+2060+SUPER+8GB+WINDFORCE+OC+Turing+Graphics+Card+%2B+RTX+Bundle%21?productId=71541',
+        'https://www.aria.co.uk/Products/Peripherals/Mice/Gaming/LOGITECH+G203+Prodigy+6000DPI+RGB+Gaming+Mouse+?productId=67730',
     },
     {
       brand: 'amd',

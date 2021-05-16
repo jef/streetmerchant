@@ -10,6 +10,13 @@ export const BT: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://shop.bt.com/products/nintendo-switch-lite-grey-10002293-FC1S.html',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

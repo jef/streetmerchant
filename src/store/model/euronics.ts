@@ -10,6 +10,13 @@ export const Euronics: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.euronics.it/console/nintendo/switch-lite/eProd192008676/',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

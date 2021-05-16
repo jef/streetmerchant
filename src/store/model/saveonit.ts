@@ -19,6 +19,12 @@ export const SaveOnIt: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.saveonit.com.au/products/productdetails/65165506',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',

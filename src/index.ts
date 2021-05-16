@@ -1,7 +1,7 @@
 import * as Process from 'process';
 import {config} from './config'; // Needs to be loaded first
 import {startAPIServer, stopAPIServer} from './web';
-import {Browser, launch} from 'puppeteer';
+import Playwright, {Browser, PlaywrightExtra} from 'playwright-extra';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import {storeList} from './store/model';
@@ -30,46 +30,52 @@ async function restartMain() {
 async function main() {
   const args: string[] = [];
 
-  // Skip Chromium Linux Sandbox
-  // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
-  if (config.browser.isTrusted) {
-    args.push('--no-sandbox');
-    args.push('--disable-setuid-sandbox');
+  let selectedBrowser: PlaywrightExtra;
+  switch (config.browser.browserType) {
+    case 'firefox':
+      selectedBrowser = Playwright.firefox;
+      break;
+    case 'webkit':
+      selectedBrowser = Playwright.webkit;
+      break;
+    case 'chromium':
+    default:
+      selectedBrowser = Playwright.chromium;
+  }
+  logger.info(`ℹ selected browser: ${selectedBrowser.name()}`);
+
+  if (selectedBrowser.name() === 'chromium') {
+    // Skip Chromium Linux Sandbox
+    // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
+    if (config.browser.isTrusted) {
+      args.push('--no-sandbox');
+      args.push('--disable-setuid-sandbox');
+    }
+
+    // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+    // https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
+    if (config.docker) {
+      args.push('--disable-dev-shm-usage');
+      args.push('--no-sandbox');
+      args.push('--disable-setuid-sandbox');
+      args.push('--disable-gpu');
+    }
   }
 
-  // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
-  // https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
   if (config.docker) {
-    args.push('--disable-dev-shm-usage');
-    args.push('--no-sandbox');
-    args.push('--disable-setuid-sandbox');
-    args.push('--headless');
-    args.push('--disable-gpu');
     config.browser.open = false;
   }
 
-  // Add the address of the proxy server if defined
-  if (config.proxy.address) {
-    args.push(
-      `--proxy-server=${config.proxy.protocol}://${config.proxy.address}:${config.proxy.port}`
-    );
-  }
-
   if (args.length > 0) {
-    logger.info('ℹ puppeteer config: ', args);
+    logger.info('ℹ browser config: ', args);
   }
 
   await stop();
-  browser = await launch({
+  browser = await selectedBrowser.launch({
     args,
-    defaultViewport: {
-      height: config.page.height,
-      width: config.page.width,
-    },
+    proxy: {server: 'http://per-context'},
     headless: config.browser.isHeadless,
   });
-
-  config.browser.userAgent = await browser.userAgent();
 
   for (const store of storeList.values()) {
     logger.debug('store links', {meta: {links: store.links}});

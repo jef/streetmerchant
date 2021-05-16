@@ -13,6 +13,12 @@ export const Kabum: Store = {
     },
   },
   links: [
+    {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.kabum.com.br/produto/129461',
+    },
     // AMD
     {
       brand: 'amd',

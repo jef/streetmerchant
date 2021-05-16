@@ -15,6 +15,13 @@ export const Pccg: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.pccasegear.com/products/51675/asus-geforce-rtx-3080-tuf-gaming-10gb',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',

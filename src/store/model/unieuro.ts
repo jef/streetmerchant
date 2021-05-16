@@ -14,6 +14,13 @@ export const Unieuro: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.unieuro.it/online/Playstation-5/PlayStation-5-pidSONPS5DISC',
+    },
+    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',

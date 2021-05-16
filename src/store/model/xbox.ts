@@ -11,6 +11,12 @@ export const Xbox: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://www.xbox.com/en-us/configure/8WJ714N3RBTL',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',

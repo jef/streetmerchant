@@ -21,7 +21,8 @@ export const AlternateNL: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.alternate.nl/product/1516616',
+      url:
+        'https://www.alternate.nl/Logitech-G/G-PRO-draadloze-gaming-muis/html/product/1474701',
     },
     {
       brand: 'gigabyte',

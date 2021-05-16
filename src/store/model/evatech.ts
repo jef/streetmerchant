@@ -19,6 +19,13 @@ export const Evatech: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://evatech.com.au/product/6442/logitech-g603-lightspeed-wireless-optical-gaming-mouse',
+    },
+    {
       brand: 'colorful',
       model: 'igame ultra oc',
       series: '3080',

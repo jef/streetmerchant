@@ -18,6 +18,13 @@ export const HarveyNormanIE: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.harveynorman.ie/gaming/nintendo-en/nintendo-switch-lite-grey.html',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',

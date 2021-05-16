@@ -20,6 +20,13 @@ export const AComPC: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.acom-pc.de/Peripherie-Zubehoer/Eingabegeraete/Maus/Logitech-M100-Maus-optisch-3-Tasten-verkabelt-USB-Schwarz.html',
+    },
+    {
       brand: 'asus',
       model: 'strix',
       series: '3080',

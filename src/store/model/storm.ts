@@ -19,6 +19,13 @@ export const StormComputers: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url:
+        'https://www.stormcomputers.com.au/product/colorful-igame-rtx-3080-ultra/',
+    },
+    {
       brand: 'colorful',
       model: 'igame ultra oc',
       series: '3080',

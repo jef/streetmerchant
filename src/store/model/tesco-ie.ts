@@ -17,6 +17,12 @@ export const TescoIE: Store = {
   },
   links: [
     {
+      brand: 'test:brand',
+      model: 'test:model',
+      series: 'test:series',
+      url: 'https://secure.tesco.ie/groceries/Product/Details/?id=307835209',
+    },
+    {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
