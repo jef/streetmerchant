@@ -1,3 +1,4 @@
+import {unlinkSync} from 'fs';
 import {Browser, Page, HTTPResponse} from 'puppeteer';
 import {StatusCodeRangeArray, Store} from './store/model';
 import {config} from './config';
@@ -103,4 +104,12 @@ export async function getRandomUserAgent(): Promise<string> {
     topUserAgents[Math.floor(Math.random() * topUserAgents.length)];
   logger.debug('user agent', {userAgent});
   return userAgent;
+}
+
+export function deleteFile(path: string) {
+  try {
+    unlinkSync(path);
+  } catch (error: unknown) {
+    logger.error('unable to delete file', error);
+  }
 }

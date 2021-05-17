@@ -1,9 +1,16 @@
+import {existsSync, readFileSync} from 'fs';
 import {Link, Store} from '../store/model';
 import {Print, logger} from '../logger';
 import {WebClient} from '@slack/web-api';
 import {config} from '../config';
+import {DMPayload} from '.';
 
-type ClientTypes = 'service' | 'captcha';
+interface SlackBotMessage {
+  ts: string;
+  channel: never;
+}
+
+type ClientTypes = 'service' | 'dm';
 type ClientMap<T> = {
   [clientType in ClientTypes]: T;
 };
@@ -12,11 +19,11 @@ const {channel} = config.notifications.slack;
 const {pollInterval, responseTimeout, userId} = config.captchaHandler;
 const clients: ClientMap<WebClient | undefined> = {
   service: undefined,
-  captcha: undefined,
+  dm: undefined,
 };
 const tokens: ClientMap<string> = {
   service: config.notifications.slack.token,
-  captcha: config.captchaHandler.token,
+  dm: config.captchaHandler.token,
 };
 
 export function sendSlackMessage(
@@ -50,17 +57,17 @@ export function sendSlackMessage(
 }
 
 export async function sendDMAsync(
-  payload: string,
+  payload: DMPayload,
   client: WebClient = getClient()
-) {
+): Promise<SlackBotMessage | undefined> {
   if (userId && client.token) {
     logger.debug('↗ sending slack DM');
-
     try {
       const dmResult = await client.conversations.open({
         users: `${userId}`,
         return_im: false,
       });
+      logger.debug(`DM thread result: ${JSON.stringify(dmResult)}`);
 
       if (!dmResult.ok) {
         logger.error("✖ couldn't open slack DM thread", dmResult);
@@ -69,18 +76,46 @@ export async function sendDMAsync(
 
       const dmChannel = (dmResult as any).channel?.id.replace('#', '');
       logger.debug(`sending DM to channel id ${dmChannel}...`);
-      const result = await client.chat.postMessage({
-        channel: dmChannel,
-        text: payload,
-      });
-
-      if (!result.ok) {
-        logger.error("✖ couldn't send slack DM", result);
+      let result: any = undefined;
+      let out: any;
+      try {
+        if (payload.type === 'image') {
+          const image = await loadImageBuffer(payload.content);
+          const uploadResult = await client.files.upload({
+            channels: dmChannel,
+            file: image,
+          });
+          if (uploadResult.ok) {
+            const dmResult = await client.conversations.history({
+              channel: dmChannel,
+            });
+            if (dmResult.ok) {
+              const messages = (dmResult as any).messages;
+              const lastBotMessage = messages
+                .filter((m: any) => m.user !== userId)
+                .sort((a: any, b: any) => Number(b.ts) - Number(a.ts))[0];
+              result = {
+                ts: lastBotMessage.ts,
+                ok: true,
+              };
+            }
+          }
+        } else {
+          result = await client.chat.postMessage({
+            channel: dmChannel,
+            text: payload.content,
+          });
+        }
+        out = {ts: result.ts, channel: dmChannel};
+        if (!result.ok) return;
+      } catch (error: unknown) {
+        logger.error("✖ couldn't send slack DM", error);
         return;
       }
 
       logger.info('✔ slack DM sent');
-      return result as any;
+      logger.debug(`sendDM output: ${JSON.stringify(out)}`);
+      return out;
     } catch (error: unknown) {
       logger.error("✖ couldn't send slack DM", error);
     }
@@ -91,7 +126,7 @@ export async function sendDMAsync(
 }
 
 export async function getDMResponseAsync(
-  botMessage: any,
+  botMessage: SlackBotMessage,
   timeout: number,
   client: WebClient = getClient()
 ): Promise<string> {
@@ -119,15 +154,18 @@ export async function getDMResponseAsync(
         }
 
         const messages = (threadResult as any).messages;
-
+        logger.debug(`messages result: ${JSON.stringify(messages)}`);
         if (!messages.length) {
           logger.error('✖ no messages found in history');
           return finish(response);
         }
 
         const lastUserMessage = messages
-          .filter((m: any) => !Object.keys(m).includes('bot_id'))
+          .filter(
+            (m: any) => !Object.keys(m).includes('bot_id') && m.user === userId
+          )
           .sort((a: any, b: any) => Number(b.ts) - Number(a.ts))[0];
+        logger.debug(`lastUserMessage: ${JSON.stringify(lastUserMessage)}`);
         if (!lastUserMessage) {
           if (iteration >= iterations) {
             await client.chat.postMessage({
@@ -146,9 +184,7 @@ export async function getDMResponseAsync(
             name: 'white_check_mark',
             timestamp: lastUserMessage.ts,
           });
-
           logger.info(`✔ got captcha response: ${response}`);
-
           return finish(response);
         }
       } catch (error: unknown) {
@@ -160,17 +196,21 @@ export async function getDMResponseAsync(
   });
 }
 
-export async function getSlackCaptchaInputAsync(
-  payload: string,
+export async function sendDMAndGetResponseAsync(
+  payload: DMPayload,
   timeout?: number
 ): Promise<string> {
-  const captchaClient = getClient('captcha');
-  const botMessage = await sendDMAsync(payload, captchaClient);
-  return await getDMResponseAsync(
-    botMessage,
-    timeout || responseTimeout,
-    captchaClient
-  );
+  let userInput = '';
+  const dmClient = getClient('dm');
+  const botMessage = await sendDMAsync(payload, dmClient);
+  if (botMessage) {
+    userInput = await getDMResponseAsync(
+      botMessage,
+      timeout || responseTimeout,
+      dmClient
+    );
+  }
+  return userInput;
 }
 
 function getClient(clientType: ClientTypes = 'service'): WebClient {
@@ -179,4 +219,12 @@ function getClient(clientType: ClientTypes = 'service'): WebClient {
     clients[clientType] = new WebClient(token);
   }
   return clients[clientType] as WebClient;
+}
+
+async function loadImageBuffer(path: string): Promise<Buffer | undefined> {
+  let buffer = undefined;
+  if (existsSync(path)) {
+    buffer = readFileSync(path);
+  }
+  return buffer;
 }
