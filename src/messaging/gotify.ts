@@ -9,17 +9,24 @@ const {gotify} = config.notifications;
 export function sendGotifyNotification(link: Link, store: Store) {
   if (!gotify.token || !gotify.url) return;
 
-  logger.info(JSON.stringify(gotify));
-
   (async () => {
     const params = new URLSearchParams();
     params.append('title', Print.inStock(link, store));
     params.append('message', Print.productInStock(link));
-    const response = await fetch(`${gotify.url}/message?token=${gotify.token}`, {
-      method: 'POST',
-      body: params,
-    });
+    const response = await fetch(
+      `${gotify.url}/message?token=${gotify.token}`,
+      {
+        method: 'POST',
+        body: params,
+      }
+    );
 
-    logger.info(JSON.stringify(await response.json()));
+    const json = await response.json()
+
+    if (json.error) {
+      logger.error("✖ could not send gotify message", json.error);
+    } else {
+      logger.info('✔ gotify message sent');
+    }
   })();
 }
