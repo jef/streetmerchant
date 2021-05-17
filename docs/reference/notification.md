@@ -98,6 +98,7 @@ Default provider is Gmail. If you use a different email provider, you must provi
 
 | Environment variable | Description |
 |:---:|---|
+| `GOTIFY_PRIORITY` | Message Priority |
 | `GOTIFY_TOKEN` | Application token |
 | `GOTIFY_URL` | Gotify's URL, e.g. `https://push.example.com` |
 
