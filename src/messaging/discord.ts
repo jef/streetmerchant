@@ -2,12 +2,10 @@ import {Link, Store} from '../store/model';
 import Discord from 'discord.js';
 import {config} from '../config';
 import {logger} from '../logger';
+import {DMPayload} from '.';
 
 const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
 const {pollInterval, responseTimeout, token, userId} = config.captchaHandler;
-
-let clientInstance: Discord.Client | undefined;
-let dmChannelInstance: Discord.DMChannel | undefined;
 
 function getIdAndToken(webhook: string) {
   const match = /.*\/webhooks\/(\d+)\/(.+)/.exec(webhook);
@@ -97,22 +95,37 @@ export function sendDiscordMessage(link: Link, store: Store) {
 }
 
 export async function sendDMAsync(
-  payload: string
+  payload: DMPayload
 ): Promise<Discord.Message | undefined> {
   if (userId && token) {
     logger.debug('↗ sending discord DM');
+    let client = undefined;
+    let dmChannel = undefined;
     try {
-      const client = await getDiscordClientAsync();
-      const dmChannel = await getDMChannelAsync(client);
+      client = await getDiscordClientAsync();
+      dmChannel = await getDMChannelAsync(client);
       if (!dmChannel) {
         logger.error('unable to get discord DM channel');
         return;
       }
-      const result = await dmChannel.send(payload);
+      let message: string | {} = payload;
+      if (payload.type === 'image') {
+        message = {
+          files: [
+            {
+              attachment: payload.content,
+              name: payload.content,
+            },
+          ],
+        };
+      }
+      const result = await dmChannel.send(message);
       logger.info('✔ discord DM sent');
       return result;
     } catch (error: unknown) {
       logger.error("✖ couldn't send discord DM", error);
+    } finally {
+      client?.destroy();
     }
   } else {
     logger.warn("✖ couldn't send discord DM, missing configuration");
@@ -137,6 +150,7 @@ export async function getDMResponseAsync(
     let response = '';
     const intervalId = setInterval(async () => {
       const finish = (result: string) => {
+        client?.destroy();
         clearInterval(intervalId);
         resolve(result);
       };
@@ -156,7 +170,7 @@ export async function getDMResponseAsync(
           }
         } else {
           response = lastUserMessage.cleanContent;
-          lastUserMessage.react('✅');
+          await lastUserMessage.react('✅');
           logger.info(`✔ got captcha response: ${response}`);
           return finish(response);
         }
@@ -168,8 +182,8 @@ export async function getDMResponseAsync(
   });
 }
 
-export async function getDiscordCaptchaInputAsync(
-  payload: string,
+export async function sendDMAndGetResponseAsync(
+  payload: DMPayload,
   timeout?: number
 ): Promise<string> {
   const message = await sendDMAsync(payload);
@@ -177,20 +191,12 @@ export async function getDiscordCaptchaInputAsync(
     message,
     timeout || responseTimeout
   );
-  closeClient();
   return response;
 }
 
-function closeClient() {
-  if (clientInstance) {
-    clientInstance.destroy();
-    clientInstance = undefined;
-    dmChannelInstance = undefined;
-  }
-}
-
 async function getDiscordClientAsync() {
-  if (!clientInstance && token) {
+  let clientInstance = undefined;
+  if (token) {
     clientInstance = new Discord.Client();
     await clientInstance.login(token);
   }
@@ -198,7 +204,8 @@ async function getDiscordClientAsync() {
 }
 
 async function getDMChannelAsync(client?: Discord.Client) {
-  if (!dmChannelInstance && userId && client) {
+  let dmChannelInstance = undefined;
+  if (userId && client) {
     const user = await new Discord.User(client, {
       id: userId,
     }).fetch();
