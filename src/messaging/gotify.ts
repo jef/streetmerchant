@@ -21,10 +21,10 @@ export function sendGotifyNotification(link: Link, store: Store) {
       }
     );
 
-    const json = await response.json()
+    const json = await response.json();
 
     if (json.error) {
-      logger.error("✖ could not send gotify message", json.error);
+      logger.error('✖ could not send gotify message', json.error);
     } else {
       logger.info('✔ gotify message sent');
     }
