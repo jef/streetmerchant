@@ -75,7 +75,6 @@ async function loopMain() {
 }
 
 export async function launchBrowser(): Promise<Browser> {
-  console.warn('launch browser called');
   const args: string[] = [];
 
   // Skip Chromium Linux Sandbox
