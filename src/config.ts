@@ -263,6 +263,10 @@ const notifications = {
     ),
     username: envOrString(process.env.EMAIL_USERNAME),
   },
+  gotify: {
+    token: envOrString(process.env.GOTIFY_TOKEN),
+    url: envOrString(process.env.GOTIFY_URL),
+  },
   mqtt: {
     broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
     clientId: envOrString(process.env.MQTT_CLIENT_ID),

@@ -1,9 +1,11 @@
 import {Link, Store} from '../store/model';
 import {adjustPhilipsHueLights} from './philips-hue';
 import {playSound} from './sound';
+import {sendApns} from './apns';
 import {sendDesktopNotification} from './desktop';
 import {sendDiscordMessage, sendDMAsync as sendDiscordDM} from './discord';
 import {sendEmail} from './email';
+import {sendGotifyNotification} from './gotify';
 import {sendMqttMessage} from './mqtt';
 import {sendPagerDutyNotification} from './pagerduty';
 import {sendPushbulletNotification} from './pushbullet';
@@ -18,7 +20,6 @@ import {updateRedis} from './redis';
 import {activateSmartthingsSwitch} from './smartthings';
 import {sendStreamLabsAlert} from './streamlabs';
 import {sendFreeMobileAlert} from './freemobile';
-import {sendApns} from './apns';
 import {DMPayload} from '.';
 
 export function sendNotification(link: Link, store: Store) {
@@ -32,6 +33,7 @@ export function sendNotification(link: Link, store: Store) {
   // Non-priority
   activateSmartthingsSwitch();
   adjustPhilipsHueLights();
+  sendGotifyNotification(link, store);
   sendMqttMessage(link, store);
   sendPagerDutyNotification(link, store);
   sendPushbulletNotification(link, store);
