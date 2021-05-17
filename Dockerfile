@@ -1,4 +1,4 @@
-FROM node:15.14.0-alpine3.13 AS builder
+FROM node:16.1.0-alpine3.13 AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/jef/streetmerchant"
 
@@ -16,7 +16,7 @@ COPY test/ test/
 RUN npm run compile
 RUN npm prune --production
 
-FROM node:15.14.0-alpine3.13
+FROM node:16.1.0-alpine3.13
 
 RUN apk add --no-cache chromium
 
