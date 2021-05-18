@@ -264,6 +264,7 @@ const notifications = {
     username: envOrString(process.env.EMAIL_USERNAME),
   },
   gotify: {
+    priority: envOrNumber(process.env.GOTIFY_PRIORITY),
     token: envOrString(process.env.GOTIFY_TOKEN),
     url: envOrString(process.env.GOTIFY_URL),
   },
