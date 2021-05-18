@@ -4,11 +4,14 @@ export const NetonnetNO: Store = {
   currency: 'kr.',
   labels: {
     inStock: {
-      container: '#productPurchaseBoxContainer > div > button',
+      container: '[id^="BuyButton_ProductPageStandard_"]',
       text: ['Legg i handlevogn'],
     },
+    maxPrice: {
+      container: '.price-big',
+    },
     outOfStock: {
-      container: '#productPurchaseBoxContainer > div > button',
+      container: '[id^="BuyButton_ProductPageStandard_"]',
       text: ['Overvåk produktet'],
     },
   },

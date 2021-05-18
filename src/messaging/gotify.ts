@@ -13,6 +13,7 @@ export function sendGotifyNotification(link: Link, store: Store) {
     const params = new URLSearchParams();
     params.append('title', Print.inStock(link, store));
     params.append('message', Print.productInStock(link));
+    params.append('priority', gotify.priority.toString());
     const response = await fetch(
       `${gotify.url}/message?token=${gotify.token}`,
       {
