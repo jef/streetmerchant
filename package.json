@@ -57,7 +57,7 @@
     "puppeteer-extra-plugin-adblocker": "^2.11.11",
     "pushover-notifications": "^1.2.2",
     "redis": "^3.1.2",
-    "top-user-agents": "^1.0.25",
+    "top-user-agents": "^1.0.26",
     "twilio": "^3.62.0",
     "twitch": "^4.5.5",
     "twitch-auth": "^4.5.5",
