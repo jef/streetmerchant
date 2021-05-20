@@ -997,7 +997,7 @@ export const Alternate: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.alternate.de/Sony-Interactive-Entertainment/PlayStation-5-Spielkonsole/html/product/1750947',
+      url: 'https://www.alternate.de/html/product/1750947',
     },
     {
       brand: 'sony',
