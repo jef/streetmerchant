@@ -996,6 +996,12 @@ export const Alternate: Store = {
     {
       brand: 'sony',
       model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.alternate.de/html/product/1750947',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
       series: 'sonyps5de',
       url: 'https://www.alternate.de/html/product/1651221',
     },
