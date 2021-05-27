@@ -23,6 +23,6 @@ jobs:
           stale-pr-message: ${{ env.STALE_MESSAGE }}
         env:
           CLOSE_MESSAGE: 'This issue has been closed because it is stale. Reopen if necessary.'
-          EXEMPT_LABEL: 'priority: low,priority: medium, priority: high,status: help wanted,status: in progress,status: needs triage'
+          EXEMPT_LABEL: 'priority: low,priority: normal, priority: high,status: help wanted,status: in progress,status: needs triage'
           STALE_LABEL: 'status: stale'
           STALE_MESSAGE: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 10 days'

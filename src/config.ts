@@ -333,10 +333,6 @@ const notifications = {
     channel: envOrString(process.env.SLACK_CHANNEL),
     token: envOrString(process.env.SLACK_TOKEN),
   },
-  smartthings: {
-    token: envOrString(process.env.SMARTTHINGS_TOKEN),
-    device: envOrString(process.env.SMARTTHINGS_SWITCH_LABEL),
-  },
   soundPlayer: envOrString(process.env.SOUND_PLAYER),
   telegram: {
     accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
