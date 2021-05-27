@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@types/async": "^3.2.6",
-    "@types/cheerio": "^0.22.28",
+    "@types/cheerio": "^0.22.29",
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.6.1",
     "@types/node-fetch": "^2.5.10",
