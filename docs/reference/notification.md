@@ -2,7 +2,7 @@
 
 You can test your notification configuration by running `npm run test:notification`.
 
-## Apple Push Notification Service 
+## Apple Push Notification Service
 
 | Environment variable | Description |
 |---|---|
@@ -13,7 +13,7 @@ You can test your notification configuration by running `npm run test:notificati
 | `APNS_PRODUCTION` | true/false for production |
 | `APNS_TEAMID` | Apple developer's team id |
 
-Change your notification alert/payload/etc in apns.ts in the note object. 
+Change your notification alert/payload/etc in apns.ts in the note object.
 Refer to https://github.com/node-apn/node-apn for config options.
 
 ## Desktop
@@ -93,6 +93,14 @@ Default provider is Gmail. If you use a different email provider, you must provi
 | Virgin | `virgin`|
 | Virgin (CA) | `virgin-ca`|
 | Visible | `visible`|
+
+## Gotify
+
+| Environment variable | Description |
+|:---:|---|
+| `GOTIFY_PRIORITY` | Message Priority |
+| `GOTIFY_TOKEN` | Application token |
+| `GOTIFY_URL` | Gotify's URL, e.g. `https://push.example.com` |
 
 ## MQTT
 

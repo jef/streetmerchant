@@ -1,5 +1,6 @@
 import {
   Browser,
+  PageEventObject,
   Page,
   HTTPRequest,
   HTTPResponse,
@@ -22,7 +23,8 @@ import {fetchLinks} from './fetch-links';
 import {filterStoreLink} from './filter';
 import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
-import {sendNotification} from '../notification';
+import {sendNotification} from '../messaging';
+import {handleCaptchaAsync} from './captcha-handler';
 import useProxy from '@doridian/puppeteer-page-proxy';
 
 const inStock: Record<string, boolean> = {};
@@ -198,7 +200,7 @@ async function lookup(browser: Browser, store: Store) {
     let adBlockRequestHandler: any;
     let pageProxy;
     if (useAdBlock) {
-      const onProxyFunc = (event: string, handler: any) => {
+      const onProxyFunc = (event: keyof PageEventObject, handler: any) => {
         if (event !== 'request') {
           page.on(event, handler);
           return;
@@ -276,6 +278,15 @@ async function lookup(browser: Browser, store: Store) {
 
     if (pageProxy) {
       await disableBlockerInPage(pageProxy);
+    }
+
+    if (
+      store.currentProxyIndex !== undefined &&
+      store.proxyList &&
+      store.proxyList?.length > 1
+    ) {
+      const client = await page.target().createCDPSession();
+      await client.send('Network.clearBrowserCookies');
     }
 
     // Must apply backoff before closing the page, e.g. if CloudFlare is
@@ -407,7 +418,11 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
   return false;
 }
 
-async function isItemInStock(store: Store, page: Page, link: Link) {
+async function isItemInStock(
+  store: Store,
+  page: Page,
+  link: Link
+): Promise<boolean> {
   const baseOptions: Selector = {
     requireVisible: false,
     selector: store.labels.container ?? 'body',
@@ -417,8 +432,20 @@ async function isItemInStock(store: Store, page: Page, link: Link) {
   if (store.labels.captcha) {
     if (await pageIncludesLabels(page, store.labels.captcha, baseOptions)) {
       logger.warn(Print.captcha(link, store, true));
-      await delay(getSleepTime(store));
-      return false;
+      if (config.captchaHandler.service && store.labels.captchaHandler) {
+        logger.debug(`[${store.name}] captcha handler called`);
+        if (!(await handleCaptchaAsync(page, store))) {
+          logger.warn(`[${store.name}] captcha handler failed`);
+          return false;
+        } else {
+          logger.debug(`[${store.name}] captcha handler done, checking item`);
+          return await isItemInStock(store, page, link);
+        }
+      } else {
+        logger.debug(`[${store.name}] captcha handler skipped`);
+        await delay(getSleepTime(store));
+        return false;
+      }
     }
   }
 

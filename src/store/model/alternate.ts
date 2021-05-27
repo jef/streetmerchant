@@ -4,13 +4,8 @@ export const Alternate: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: 'span.d-flex > b:nth-child(1)',
-      text: [
-        'auf lager',
-        'ware neu eingetroffen',
-        'in kürze versandfertig',
-        'ware im zulauf',
-      ],
+      container: '.details-cart-button',
+      text: ['In den Warenkorb'],
     },
     maxPrice: {
       container: '.price > span:nth-child(1)',
@@ -24,6 +19,10 @@ export const Alternate: Store = {
       {
         container: 'span.d-flex > b:nth-child(1)',
         text: ['Artikel kann nicht gekauft werden'],
+      },
+      {
+        container: 'div.col-12 > div:nth-child(1)',
+        text: ['Artikel kann derzeit nicht gekauft werden'],
       },
     ],
   },
@@ -993,6 +992,12 @@ export const Alternate: Store = {
       model: 'ps5 console',
       series: 'sonyps5c',
       url: 'https://www.alternate.de/html/product/1651220',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.alternate.de/html/product/1750947',
     },
     {
       brand: 'sony',

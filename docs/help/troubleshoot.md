@@ -2,6 +2,9 @@
 
 ## Captcha issues
 
+???+ info
+    A new interactive captcha handler has been implemented. You can learn more about how to use it [here](../reference/captcha.md)! Otherwise, feel free to still try the below options.
+
 ### Option 1
 
 If you're running into problems, try running in headful mode: `HEADLESS="false"`.
