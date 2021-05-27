@@ -72,7 +72,7 @@
     "@types/node": "^15.6.1",
     "@types/node-fetch": "^2.5.10",
     "@types/node-notifier": "^8.0.0",
-    "@types/nodemailer": "^6.4.1",
+    "@types/nodemailer": "^6.4.2",
     "@types/redis": "^2.8.28",
     "@types/sinon": "^10.0.0",
     "@types/twitter": "^1.7.0",
