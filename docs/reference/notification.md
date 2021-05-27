@@ -183,15 +183,6 @@ API Documentation: [pushover.net/api](https://pushover.net/api)
 | `SLACK_CHANNEL` | Channel for posting |
 | `SLACK_TOKEN` | API token |
 
-## SmartThings
-
-Generate token at [account.smartthings.com/tokens](https://account.smartthings.com/tokens).
-
-| Environment variable | Description |
-|:---:|---|
-| `SMARTTHINGS_TOKEN` | Access token |
-| `SMARTTHINGS_SWITCH_LABEL` | Switch Label of switch to activate|
-
 ## Telegram
 
 | Environment variable | Description |
