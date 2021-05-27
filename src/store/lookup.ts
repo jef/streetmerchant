@@ -280,6 +280,15 @@ async function lookup(browser: Browser, store: Store) {
       await disableBlockerInPage(pageProxy);
     }
 
+    if (
+      store.currentProxyIndex !== undefined &&
+      store.proxyList &&
+      store.proxyList?.length > 1
+    ) {
+      const client = await page.target().createCDPSession();
+      await client.send('Network.clearBrowserCookies');
+    }
+
     // Must apply backoff before closing the page, e.g. if CloudFlare is
     // used to detect bot traffic, it introduces a 5 second page delay
     // before redirecting to the next page
