@@ -73,7 +73,7 @@
     "@types/node-notifier": "^8.0.0",
     "@types/nodemailer": "^6.4.2",
     "@types/redis": "^2.8.28",
-    "@types/sinon": "^10.0.0",
+    "@types/sinon": "^10.0.1",
     "@types/twitter": "^1.7.0",
     "c8": "^7.7.2",
     "gts": "^3.1.0",
