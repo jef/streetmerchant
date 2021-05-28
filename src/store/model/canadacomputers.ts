@@ -22,20 +22,6 @@ export const CanadaComputers: Store = {
     },
     {
       brand: 'gigabyte',
-      model: 'eagle',
-      series: '3070',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183101&language=en',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 black',
-      series: '3070',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183500&language=en',
-    },
-    {
-      brand: 'gigabyte',
       model: 'gaming oc',
       series: '3070',
       url:
@@ -175,27 +161,6 @@ export const CanadaComputers: Store = {
         'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en',
     },
     {
-      brand: 'gigabyte',
-      model: 'eagle oc',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181354&language=en',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 ultra',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181375&language=en',
-    },
-    {
-      brand: 'zotac',
-      model: 'trinity',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181420&language=en',
-    },
-    {
       brand: 'zotac',
       model: 'trinity oc',
       series: '3080',
@@ -211,31 +176,10 @@ export const CanadaComputers: Store = {
     },
     {
       brand: 'gigabyte',
-      model: 'gaming oc',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353&language=en',
-    },
-    {
-      brand: 'msi',
-      model: 'ventus 3x',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181347&language=en',
-    },
-    {
-      brand: 'gigabyte',
       model: 'aorus master',
       series: '3080',
       url:
         'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754&language=en',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 black',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181797&language=en',
     },
     {
       brand: 'gigabyte',
@@ -257,20 +201,6 @@ export const CanadaComputers: Store = {
       series: '3080',
       url:
         'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183510&language=en',
-    },
-    {
-      brand: 'gigabyte',
-      model: 'eagle oc',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=184166&language=en',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3',
-      series: '3080',
-      url:
-        'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181798&language=en',
     },
     {
       brand: 'asus',

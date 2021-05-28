@@ -98,13 +98,6 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card/15084753?intl=nosplash',
     },
     {
-      brand: 'evga',
-      model: 'xc3 ultra',
-      series: '3080',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card-english/14961449?intl=nosplash',
-    },
-    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',
@@ -187,13 +180,6 @@ export const BestBuyCa: Store = {
       series: '3070',
       url:
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-ultra-8gb-gddr6-video-card/15147122?intl=nosplash',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 black',
-      series: '3070',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-black-8gb-gddr6-video-card/15081879?intl=nosplash',
     },
     {
       brand: 'sony',

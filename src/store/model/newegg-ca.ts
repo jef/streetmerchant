@@ -266,13 +266,6 @@ export const NeweggCa: Store = {
         'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336',
     },
     {
-      brand: 'gigabyte',
-      model: 'aorus xtreme',
-      series: '3080',
-      url:
-        'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-x-10gd/p/N82E16814932345',
-    },
-    {
       brand: 'zotac',
       itemNumber: '14-950-502',
       model: 'trinity',
@@ -743,27 +736,6 @@ export const NeweggCa: Store = {
       series: '3060ti',
       url:
         'https://www.newegg.ca/asus-geforce-rtx-3060-ti-dual-rtx3060ti-8g/p/N82E16814126480',
-    },
-    {
-      brand: 'msi',
-      model: 'suprim',
-      series: '3070',
-      url:
-        'https://www.newegg.ca/msi-geforce-rtx-3070-rtx-3070-suprim-8g/p/N82E16814137623',
-    },
-    {
-      brand: 'gigabyte',
-      model: 'aorus xtreme waterforce',
-      series: '3080',
-      url:
-        'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorusx-w-10gd/p/N82E16814932372',
-    },
-    {
-      brand: 'gigabyte',
-      model: 'aorus xtreme waterforce wb',
-      series: '3080',
-      url:
-        'https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorusx-wb-10gd/p/N82E16814932371',
     },
     {
       brand: 'asus',
