@@ -42,7 +42,7 @@
     "chalk": "^4.1.1",
     "cheerio": "^1.0.0-rc.9",
     "discord.js": "^12.5.3",
-    "dotenv": "^9.0.2",
+    "dotenv": "^10.0.0",
     "messaging-api-telegram": "^1.0.4",
     "mqtt": "^4.2.6",
     "node-fetch": "^2.6.1",
