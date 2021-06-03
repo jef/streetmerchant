@@ -119,6 +119,20 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/asus-rog-strix-geforce-rtx-3080-10gb-gddr6x-video-card/14954116?intl=nosplash',
     },
     {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/15463567?intl=nosplash',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-ti-12gb-gddr6x-video-card/15530045?intl=nosplash',
+    },
+    {
       brand: 'zotac',
       model: 'trinity',
       series: '3090',
@@ -152,6 +166,13 @@ export const BestBuyCa: Store = {
       series: '3090',
       url:
         'https://www.bestbuy.ca/en-ca/product/evga-nvidia-geforce-rtx-3090-xc3-ultra-gaming-24gb-gddr6x-video-card/14967857?intl=nosplash',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3090',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3090-24gb-gddr6x-video-card/15463568?intl=nosplash',
     },
     {
       brand: 'msi',
