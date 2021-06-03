@@ -233,6 +233,7 @@ const notifications = {
       '3060ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060TI),
       3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
       3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
+      '3080ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080TI),
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
