@@ -406,6 +406,7 @@ const store = {
       '3060ti': envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
       3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
       3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
+      '3080ti': envOrNumber(process.env.MAX_PRICE_SERIES_3080TI),
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
