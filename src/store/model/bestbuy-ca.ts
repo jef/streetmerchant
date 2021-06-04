@@ -56,18 +56,11 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3060-ti-8gb-gddr6-video-card/15166285?intl=nosplash',
     },
     {
-      brand: 'zotac',
-      model: 'twin edge oc',
-      series: '3060ti',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3060-ti-twin-edge-oc-8gb-gddr6-video-card/15178452?intl=nosplash',
-    },
-    {
       brand: 'evga',
       model: 'ftw3 ultra',
       series: '3060ti',
       url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-video-card/15200164?intl=nosplash',
+        'https://www.bestbuy.ca/en-ca/product/evga-nvidia-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-video-card/15229237',
     },
     {
       brand: 'zotac',
@@ -96,13 +89,6 @@ export const BestBuyCa: Store = {
       series: '3080',
       url:
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card/15084753?intl=nosplash',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 ultra',
-      series: '3080',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card-english/14961449?intl=nosplash',
     },
     {
       brand: 'asus',
@@ -187,13 +173,6 @@ export const BestBuyCa: Store = {
       series: '3070',
       url:
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-ultra-8gb-gddr6-video-card/15147122?intl=nosplash',
-    },
-    {
-      brand: 'evga',
-      model: 'xc3 black',
-      series: '3070',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-black-8gb-gddr6-video-card/15081879?intl=nosplash',
     },
     {
       brand: 'sony',
