@@ -312,6 +312,27 @@ export const Mediamarkt: Store = {
     },
     {
       brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-returnal-marvel-s-spider-man-miles-morales-2739308.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-demon-souls-marvel-s-spider-man-miles-morales-2739307.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-digital-ps-plus-90-tage-mitgliedschaft-2739309.html',
+    },
+    {
+      brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
       url: 'https://www.mediamarkt.de/de/product/-2661939.html',
