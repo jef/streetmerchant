@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
 jobs:
   check-date:
-    name: Build and release Docker image
+    name: Check dates
     runs-on: ubuntu-latest
     outputs:
       should-run: ${{ steps.code-change.outputs.should-run }}
