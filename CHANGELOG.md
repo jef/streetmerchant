@@ -1,5 +1,59 @@
 # Changelog
 
+## [3.6.0](https://www.github.com/jef/streetmerchant/compare/v3.5.0...v3.6.0) (2021-06-17)
+
+
+### Features
+
+* add INCOGNITO to dotenv-example and volta support ([#2484](https://www.github.com/jef/streetmerchant/issues/2484)) ([b579052](https://www.github.com/jef/streetmerchant/commit/b57905291df85ee2f722e5e3a81d1cecd0ab6ee4))
+* add interactive captcha handler with Slack and Discord ([#2385](https://www.github.com/jef/streetmerchant/issues/2385)) ([409769e](https://www.github.com/jef/streetmerchant/commit/409769e6dbd3add614fcd985731bb244297a2c2d))
+* add waitUntil and waitForSelctor to linksBuilder ([#2437](https://www.github.com/jef/streetmerchant/issues/2437)) ([cac7c20](https://www.github.com/jef/streetmerchant/commit/cac7c20193caaec5d41291104e66aa01a65adceb))
+* **captcha:** add support for configurable capture type ([#2468](https://www.github.com/jef/streetmerchant/issues/2468)) ([6e614a2](https://www.github.com/jef/streetmerchant/commit/6e614a24918f38d189a3d3b70174fbd1590f78cc))
+* change max price behavior ([9b02c36](https://www.github.com/jef/streetmerchant/commit/9b02c36370aaf7fef20a90b2427273c2f7b30f00))
+* color empty stores ([#2312](https://www.github.com/jef/streetmerchant/issues/2312)) ([bbfa808](https://www.github.com/jef/streetmerchant/commit/bbfa808b820ee2d16c65dfdcecce58645f4899d0))
+* **gotify:** add priority option ([#2546](https://www.github.com/jef/streetmerchant/issues/2546)) ([32fe440](https://www.github.com/jef/streetmerchant/commit/32fe440049ce97c5683ca03276212899b2211af5))
+* **notification:** add gotify ([8f2de5d](https://www.github.com/jef/streetmerchant/commit/8f2de5dc68667f6b9f0033bed129fd6cdbd9d8a7)), closes [#2541](https://www.github.com/jef/streetmerchant/issues/2541) [#2536](https://www.github.com/jef/streetmerchant/issues/2536)
+* **notification:** add support for Free mobile ([#2285](https://www.github.com/jef/streetmerchant/issues/2285)) ([6be2e0d](https://www.github.com/jef/streetmerchant/commit/6be2e0d491646d6e88f72f67c694874b11cda03a))
+* **notifications:** add apple push notifications ([#2077](https://www.github.com/jef/streetmerchant/issues/2077)) ([6b78b2e](https://www.github.com/jef/streetmerchant/commit/6b78b2ee4445ad2b868b6f848730a474ca12d657))
+* **pushover:** ability to specify device ([#2101](https://www.github.com/jef/streetmerchant/issues/2101)) ([d03aea0](https://www.github.com/jef/streetmerchant/commit/d03aea05a7783c9cc6a18c8baf0381050c105357))
+* **pushover:** add support for sound ([#2203](https://www.github.com/jef/streetmerchant/issues/2203)) ([83ce922](https://www.github.com/jef/streetmerchant/commit/83ce922761f85a13424ed43a1961668ffc870485))
+* **series:** support for rx6700xt ([#2290](https://www.github.com/jef/streetmerchant/issues/2290)) ([113c9ce](https://www.github.com/jef/streetmerchant/commit/113c9ce19f3ed1f140eec7cd555ec373f25d256f))
+* **store:** add amd-at ([#2462](https://www.github.com/jef/streetmerchant/issues/2462)) ([441617f](https://www.github.com/jef/streetmerchant/commit/441617f6729ab61174f7bcfe287c41a34a78728f))
+* **store:** add amd-be store ([#2338](https://www.github.com/jef/streetmerchant/issues/2338)) ([6e9b1a9](https://www.github.com/jef/streetmerchant/commit/6e9b1a9640ca93f620623d53624230514fac6d40))
+* **store:** add amd-nl store ([#2072](https://www.github.com/jef/streetmerchant/issues/2072)) ([49c9e8c](https://www.github.com/jef/streetmerchant/commit/49c9e8c0dc5c3b25ce2aa20265ccd2865f229385))
+* **store:** Add AO and BT (UK) ([#2089](https://www.github.com/jef/streetmerchant/issues/2089)) ([1714e89](https://www.github.com/jef/streetmerchant/commit/1714e89af7964d06b01120fb75595ef8ec8177ba))
+* **store:** add cyberport-at ([#2463](https://www.github.com/jef/streetmerchant/issues/2463)) ([5a744b1](https://www.github.com/jef/streetmerchant/commit/5a744b1add24dd4d3c250f41382a034212d9c5b0))
+* **store:** add materiel.net (french), 35 3060ti references ([#2287](https://www.github.com/jef/streetmerchant/issues/2287)) ([0ebe745](https://www.github.com/jef/streetmerchant/commit/0ebe7451e4e4c6e46c64e3782bd51a92ce594dca))
+* **store:** add mediamarkt austria ([#1836](https://www.github.com/jef/streetmerchant/issues/1836)) ([ae8e72a](https://www.github.com/jef/streetmerchant/commit/ae8e72a73044b8311add15d2b5c10936bae16e82))
+* **store:** add MightyApe, NoelLeeming and TheWarehouse (NZ) ([#2133](https://www.github.com/jef/streetmerchant/issues/2133)) ([e2d8040](https://www.github.com/jef/streetmerchant/commit/e2d804027a3ec6a19201ef9ce35dcb4c4dee7025))
+* **store:** add multicom.no and more products to NO stores ([#2483](https://www.github.com/jef/streetmerchant/issues/2483)) ([41305f1](https://www.github.com/jef/streetmerchant/commit/41305f1ed5a81240ba7aa0dda1619d635d917371))
+
+
+### Bug Fixes
+
+* add missing tests in Dockerfile ([#2323](https://www.github.com/jef/streetmerchant/issues/2323)) ([cd6e1f6](https://www.github.com/jef/streetmerchant/commit/cd6e1f614bcaf00bc468c32a1b5a98cb51c7730f))
+* **alternate:** use button selector instead of text ([#2419](https://www.github.com/jef/streetmerchant/issues/2419)) ([35f9eb4](https://www.github.com/jef/streetmerchant/commit/35f9eb43b6cca8a92f60ba2870e60a225b4c1da6))
+* **amazon-es:** use euroFormat ([#2371](https://www.github.com/jef/streetmerchant/issues/2371)) ([4eb702b](https://www.github.com/jef/streetmerchant/commit/4eb702b9a1187c8dcf159ea991ab1049c3c44bb2))
+* **amazon:** false positives for xbox ([#2497](https://www.github.com/jef/streetmerchant/issues/2497)) ([790fe9b](https://www.github.com/jef/streetmerchant/commit/790fe9b6cf4f9627e7f3dc7acc572737a739e4cc))
+* **apns:** use when specified ([99a274d](https://www.github.com/jef/streetmerchant/commit/99a274dbea088a6bcb053b1c1bf7812d0796442a))
+* **captcha:** use Slack captcha handler token when provided ([#2460](https://www.github.com/jef/streetmerchant/issues/2460)) ([164902a](https://www.github.com/jef/streetmerchant/commit/164902a587d80f0421b44079e0616ba37a7a743f)), closes [#2428](https://www.github.com/jef/streetmerchant/issues/2428)
+* clear cookies when rotating proxies ([#2575](https://www.github.com/jef/streetmerchant/issues/2575)) ([8854ce9](https://www.github.com/jef/streetmerchant/commit/8854ce97bba7858dfc9385530e0c090200944ede))
+* **discord:** properly wait for webhooks ([#2352](https://www.github.com/jef/streetmerchant/issues/2352)) ([bc59da1](https://www.github.com/jef/streetmerchant/commit/bc59da11d512f6f55449781cb8f7f4bd1d3e7e57))
+* **docker:** disable opening browser ([d13f7f1](https://www.github.com/jef/streetmerchant/commit/d13f7f1ff91ada223e8ce7eb50d9a80030cbe668))
+* **lookup:** prevent terminal from being hidden ([#2461](https://www.github.com/jef/streetmerchant/issues/2461)) ([39fac90](https://www.github.com/jef/streetmerchant/commit/39fac90ba4feadb7e5c681db60e60a83749f5e62))
+* **microcenter:** add outOfStock label ([#2432](https://www.github.com/jef/streetmerchant/issues/2432)) ([092919a](https://www.github.com/jef/streetmerchant/commit/092919ab349edac6a8b5b4747917a1a232235da7)), closes [#2407](https://www.github.com/jef/streetmerchant/issues/2407)
+* **nodemon:** use npx with ts-node ([#2423](https://www.github.com/jef/streetmerchant/issues/2423)) ([b6ac6c5](https://www.github.com/jef/streetmerchant/commit/b6ac6c53ddc34ac35b537dd99415bbcb9eec0de7))
+* parsing prices with thousands separator and European format ([#2153](https://www.github.com/jef/streetmerchant/issues/2153)) ([61f8e3a](https://www.github.com/jef/streetmerchant/commit/61f8e3a9a03136682035881fce6d14356717d1ac))
+* **playstation:** fix inStock selector ([#2187](https://www.github.com/jef/streetmerchant/issues/2187)) ([b0efc83](https://www.github.com/jef/streetmerchant/commit/b0efc837bc554f5c8635e125b67775d8b1f8f6b3))
+* remove spaces from price ([#2482](https://www.github.com/jef/streetmerchant/issues/2482)) ([eb76f0d](https://www.github.com/jef/streetmerchant/commit/eb76f0d2b78726c4380853bd47edcf9b1302e7bb))
+* **web:** add favicon to prevent missing icon console error ([#2375](https://www.github.com/jef/streetmerchant/issues/2375)) ([2be33ac](https://www.github.com/jef/streetmerchant/commit/2be33ac6147f8f7460d108f361d954b17a335bd9))
+
+
+### Reverts
+
+* parsing prices with thousands separator and European format ([#2153](https://www.github.com/jef/streetmerchant/issues/2153)) ([91c4f12](https://www.github.com/jef/streetmerchant/commit/91c4f12308905f4e6d65341ba54ae814c8ad94d6))
+* replace euroFormat with regex ([#2131](https://www.github.com/jef/streetmerchant/issues/2131)) ([0ff8158](https://www.github.com/jef/streetmerchant/commit/0ff8158511f4f90dc26407fffa22ab0a4ad3aa0b))
+
 ## [3.5.0](https://www.github.com/jef/streetmerchant/compare/v3.4.1...v3.5.0) (2021-03-02)
 
 
