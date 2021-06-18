@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.6.0](https://www.github.com/jef/streetmerchant/compare/v3.5.0...v3.6.0) (2021-06-17)
+## [3.6.0](https://www.github.com/jef/streetmerchant/compare/v3.5.0...v3.6.0) (2021-05-27)
 
 
 ### Features
