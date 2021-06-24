@@ -13,8 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Check if code has changed with 24 hours
+        continue-on-error: true
         id: code-change
-        run: >
+        run: |
           [[ $(git rev-list --after="24 hours" --first-parent HEAD) ]] && echo "::set-output name=should-run::true"
   build-release:
     name: Build and release Docker image
