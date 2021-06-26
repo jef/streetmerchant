@@ -64,6 +64,7 @@ import {DustinHomeNO} from './dustinhome-no';
 import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
+import {Eletronicamente} from './eletronicamente';
 import {Elkjop} from './elkjop';
 import {Eprice} from './eprice';
 import {Equippr} from './equippr';
@@ -222,6 +223,7 @@ export const storeList = new Map([
   [EbGames.name, EbGames],
   [Ebuyer.name, Ebuyer],
   [Elcorteingles.name, Elcorteingles],
+  [Eletronicamente.name, Eletronicamente],
   [Elkjop.name, Elkjop],
   [Eprice.name, Eprice],
   [Equippr.name, Equippr],
