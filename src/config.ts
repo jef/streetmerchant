@@ -439,15 +439,15 @@ const store = {
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
     '3060',
     '3060ti',
-    '3070',
-    '3080',
+    // '3070',
+    '3070ti',
     '3080ti',
     '3090',
     'rx6700xt',
     'rx6800',
     'rx6800xt',
     'rx6900xt',
-    'ryzen5600',
+    //'test:series'
     'ryzen5800',
     'ryzen5900',
     'ryzen5950',
@@ -457,7 +457,7 @@ const store = {
     'xboxss',
     'xboxsx',
   ]),
-  stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
+  stores: envOrArray(process.env.STORES, ['ldlc-es']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
     let proxyList = loadProxyList(name);
