@@ -160,6 +160,7 @@ import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
 import chalk from 'chalk';
+import { UltimaInformatica } from './utlimainformatica';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
@@ -311,6 +312,7 @@ export const storeList = new Map([
   [ToysRUs.name, ToysRUs],
   [Umart.name, Umart],
   [Unieuro.name, Unieuro],
+  [UltimaInformatica.name, UltimaInformatica],
   [Very.name, Very],
   [VsGamers.name, VsGamers],
   [Vuugo.name, Vuugo],
