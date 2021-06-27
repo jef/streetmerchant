@@ -179,6 +179,7 @@ export type Model =
   | 'taichi'
   | 'taichi x oc'
   | 'trinity oc'
+  | 'trinity oc lhr'
   | 'trinity'
   | 'tuf oc'
   | 'tuf'
