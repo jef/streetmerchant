@@ -164,6 +164,7 @@ import {Zotac} from './zotac';
 import {logger} from '../../logger';
 import chalk from 'chalk';
 import { UltimaInformatica } from './utlimainformatica';
+import { XtremMedia} from './xtremmedia';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
@@ -327,6 +328,7 @@ export const storeList = new Map([
   [WellsTechnology.name, WellsTechnology],
   [Wipoid.name, Wipoid],
   [Xbox.name, Xbox],
+  [XtremMedia.name, XtremMedia],
   [Zotac.name, Zotac],
 ]);
 

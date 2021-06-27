@@ -108,6 +108,7 @@ export type Model =
   | 'gamerock'
   | 'gamerock oc'
   | 'gaming oc'
+  | 'gaming oc waterforce wb'
   | 'gaming oc pro'
   | 'gaming pro oc'
   | 'gaming pro'
