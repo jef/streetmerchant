@@ -4,15 +4,15 @@ export const LdlcEs: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: '.stock',
+      container: '#product-page-stock > div > div.content > div > span',
       text: ['stock'],
     },
     maxPrice: {
-      container: '.price .price',
+      container: '#activeOffer > div.product-info > div.wrap-aside > aside > div.price > div',
       euroFormat: true,
     },
     outOfStock: {
-      container: '.stock',
+      container: '#product-page-stock > div > div.content > div > span',
       text: ['agotado'],
     },
   },
