@@ -98,7 +98,7 @@ export const Eletronicamente: Store = {
     },
     {
       brand: 'pny',
-      model: 'xlr8 epic x',
+      model: 'xlr8 revel',
       series: '3080',
       url: 'https://www.electronicamente.com/comprar-tarjetas-graficas/34245-tarjeta-grafica-pcie-nvidia-gf-rtx-3080-gaming-10gb-ddr6-3xdp-hdmi-vcg308010tfxppb.html',
     },

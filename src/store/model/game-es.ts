@@ -33,7 +33,7 @@ export const GameES: Store = {
     },    
     {
       brand: 'pny',
-      model: 'xlr8 epic x',
+      model: 'xlr8 revel',
       series: '3090',
       url: 'https://www.game.es/COMPONENTES/TARJETA-GRAFICA/PC-GAMING/PNY-GEFORCE-RTX-3090-24GB-XLR8-EPIC-X-RGB-TRIPLE-FAN-TARJETA-GRAFICA-GAMING/V0P2XH',
     },        
