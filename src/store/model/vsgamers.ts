@@ -151,6 +151,13 @@ export const VsGamers: Store = {
         'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3080-gaming-x-trio-10g-10-gb-gddr6x',
     },
     {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3080-suprim-x-10g-gddr6x',
+    },
+    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',
@@ -170,6 +177,13 @@ export const VsGamers: Store = {
       series: '3080',
       url:
         'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3080-gaming-10g-10-gb-gddr6x',
+    },
+    {
+      brand: 'asus',
+      model: 'strix white',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-nvidia-geforce-rtx-3080-oc-10gb-gddr6x-white',
     },
     {
       brand: 'asus',
@@ -193,6 +207,20 @@ export const VsGamers: Store = {
         'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-geforce-rtx-3080-gaming-oc-10g-10-gb-gddr6x',
     },
     {
+      brand: 'gigabyte',
+      model: 'aorus xtreme',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-aorus-geforce-rtx-3080-xtreme-10gb-gddr6x',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus master',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-gigabyte-aorus-geforce-rtx-3080-10-gb-gddr6x',
+    },
+    {
       brand: 'zotac',
       model: 'trinity',
       series: '3080',
@@ -201,10 +229,96 @@ export const VsGamers: Store = {
     },
     {
       brand: 'zotac',
+      model: 'trinity oc',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac-gaming-nvidia-geforce-rtxr-3080-trinity-oc-10-gb-gddr6x',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity oc lhr',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac-gaming-geforce-rtx-3080-trinity-oc-lhr-10gb-gddr6x',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8 revel',
+      series: '3080',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-pny-nvidia-geforce-rtx-3080-10gb-gddrex',
+    },
+    // 3080ti
+    {
+      brand: 'asus',
+      model: 'strix',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-rtx-3080-ti-oc-12gb',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-tuf-gaming-geforce-rtxr-3080-ti-oc-12gb-gddr6x',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/geforce-rtxr-3080-ti-gaming-x-trio-12gb',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-geforce-rtxr-3080-ti-suprim-x-12g',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity oc',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3080ti-trinity-oc-12gb-gddr6x',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3080ti-trinity-12gb-gddr6x',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp holo',
+      series: '3080ti',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3080-ti-amp-holo-12gb-gddr6x',
+    },
+    // 3090
+    {
+      brand: 'zotac',
       model: 'trinity',
       series: '3090',
       url:
         'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3090-trinity-24-gb-gddr6x',
+    },    
+    {
+      brand: 'zotac',
+      model: 'trinity oc',
+      series: '3090',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac--geforce-rtxr-3090-trinity-oc-24-gb-gddr6x',
+    },    
+    {
+      brand: 'zotac',
+      model: 'amp holo',
+      series: '3090',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-zotac--geforce-rtx-3090-amp-core-holo-24gb-gddr6x',
     },
     {
       brand: 'asus',
@@ -228,6 +342,27 @@ export const VsGamers: Store = {
         'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3090-gaming-24g-24-gb-gddr6x',
     },
     {
+      brand: 'asus',
+      model: 'strix oc',
+      series: '3090',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix--geforce-rtxr-3090-gaming-oc-24gb-gddr6x',
+    },
+    {
+      brand: 'asus',
+      model: 'strix white',
+      series: '3090',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix-geforce-rtx-3090-24-gb-gddr6x-blanca',
+    },
+    {
+      brand: 'asus',
+      model: 'turbo',
+      series: '3090',
+      url:
+        'https://www.vsgamers.es/product/tarjeta-grafica-asus-turbo-geforce-rtx-3090-24-gb-gddr6x',
+    },
+    {
       brand: 'msi',
       model: 'ventus 3x oc',
       series: '3090',
@@ -242,11 +377,11 @@ export const VsGamers: Store = {
         'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3090-gaming-x-trio-24g-24-gb-gddr6x',
     },
     {
-      brand: 'asus',
-      model: 'strix oc',
+      brand: 'msi',
+      model: 'suprim x',
       series: '3090',
       url:
-        'https://www.vsgamers.es/product/tarjeta-grafica-asus-rog-strix--geforce-rtxr-3090-gaming-oc-24gb-gddr6x',
+        'https://www.vsgamers.es/product/tarjeta-grafica-msi-geforce-rtx-3090-suprim-x-24g-gddr6x',
     },
     {
       brand: 'gigabyte',
