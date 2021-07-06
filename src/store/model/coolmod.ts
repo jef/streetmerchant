@@ -151,7 +151,7 @@ export const Coolmod: Store = {
       url:
         'https://www.coolmod.com/zotac-gaming-geforce-rtx-3090-trinity-24gb-gddr6x-tarjeta-grafica-precio',
     },
-    // 3080ti    
+    // 3080ti
     {
       brand: 'asus',
       model: 'strix',

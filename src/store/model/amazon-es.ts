@@ -116,7 +116,7 @@ export const AmazonEs: Store = {
       model: 'gaming x trio',
       series: '3090',
       url: 'https://www.amazon.es/dp/B08HRBW6VB',
-    }, 
+    },
     {
       brand: 'msi',
       cartUrl:
@@ -124,7 +124,7 @@ export const AmazonEs: Store = {
       model: 'gaming x trio',
       series: '3090',
       url: 'https://www.amazon.es/dp/B08HM6D7TM',
-    }, 
+    },
     {
       brand: 'gigabyte',
       cartUrl:
@@ -132,7 +132,7 @@ export const AmazonEs: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '3090',
       url: 'https://www.amazon.es/dp/B08R5J94WP',
-    },    
+    },
     {
       brand: 'nvidia',
       cartUrl:
