@@ -305,14 +305,14 @@ export const VsGamers: Store = {
       series: '3090',
       url:
         'https://www.vsgamers.es/product/tarjeta-grafica-zotac-geforce-rtx-3090-trinity-24-gb-gddr6x',
-    },    
+    },
     {
       brand: 'zotac',
       model: 'trinity oc',
       series: '3090',
       url:
         'https://www.vsgamers.es/product/tarjeta-grafica-zotac--geforce-rtxr-3090-trinity-oc-24-gb-gddr6x',
-    },    
+    },
     {
       brand: 'zotac',
       model: 'amp holo',

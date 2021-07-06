@@ -21,16 +21,14 @@ export const XtremMedia: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://xtremmedia.com/Talius_Denver_500W_Negra.html',
+      url: 'https://xtremmedia.com/Talius_Denver_500W_Negra.html',
     },
     // 3090
     {
       brand: 'asus',
       model: 'ekwb',
       series: '3090',
-      url:
-        'https://xtremmedia.com/Asus_EKWB_GeForce_RTX_3090_24GB_GDDR6X.html',
+      url: 'https://xtremmedia.com/Asus_EKWB_GeForce_RTX_3090_24GB_GDDR6X.html',
     },
     {
       brand: 'asus',
@@ -192,7 +190,7 @@ export const XtremMedia: Store = {
       series: '3090',
       url:
         'https://xtremmedia.com/Zotac_GeForce_RTX_3090_Trinity_24GB_GDDR6X.html',
-    },   
+    },
     // 3080ti
     {
       brand: 'asus',
@@ -532,7 +530,6 @@ export const XtremMedia: Store = {
       url:
         'https://xtremmedia.com/Zotac_GeForce_RTX_3070Ti_Trinity_8GB_GDDR6X.html',
     },
-    
   ],
   name: 'xtremmedia',
 };

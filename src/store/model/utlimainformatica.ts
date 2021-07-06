@@ -4,15 +4,18 @@ export const UltimaInformatica: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > div.p-add-to-cart > div.product-add-to-cart > div > div.col.col-12.col-sm-auto.addMobileFixed > div > button',
+      container:
+        '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > div.p-add-to-cart > div.product-add-to-cart > div > div.col.col-12.col-sm-auto.addMobileFixed > div > button',
       text: ['Añadir al carrito'],
     },
     maxPrice: {
-      container: '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > span',
+      container:
+        '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > span',
       euroFormat: true,
     },
     outOfStock: {
-      container: '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > div.p-add-to-cart > div.product-add-to-cart > div > div.col.col-12.col-sm-auto.addMobileFixed > div > button',
+      container:
+        '#add-to-cart-or-refresh > div.product_header_container.pt-3 > div.product-prices > div:nth-child(2) > div > div.p-add-to-cart > div.product-add-to-cart > div > div.col.col-12.col-sm-auto.addMobileFixed > div > button',
       text: ['Avísame cuando esté disponible de nuevo'],
     },
   },
@@ -383,7 +386,7 @@ export const UltimaInformatica: Store = {
       series: '3080',
       url:
         'https://ultimainformatica.com/tarjetas-graficas/82611-msi-geforce-rtx-3080-ventus-3x-10g-oc-nvidia-10-gb-gddr6x-4719072762520.html',
-    },    
+    },
     {
       brand: 'gigabyte',
       model: 'gaming oc',
@@ -655,7 +658,8 @@ export const UltimaInformatica: Store = {
       brand: 'asus',
       model: 'dual',
       series: '3070',
-      url: 'https://ultimainformatica.com/tarjetas-graficas/84134-asus-dual-rtx3070-8g-nvidia-geforce-rtx-3070-8-gb-gddr6-4718017927901.html',
+      url:
+        'https://ultimainformatica.com/tarjetas-graficas/84134-asus-dual-rtx3070-8g-nvidia-geforce-rtx-3070-8-gb-gddr6-4718017927901.html',
     },
     {
       brand: 'asus',

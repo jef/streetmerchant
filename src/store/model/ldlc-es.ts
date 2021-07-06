@@ -8,7 +8,8 @@ export const LdlcEs: Store = {
       text: ['stock'],
     },
     maxPrice: {
-      container: '#activeOffer > div.product-info > div.wrap-aside > aside > div.price > div',
+      container:
+        '#activeOffer > div.product-info > div.wrap-aside > aside > div.price > div',
       euroFormat: true,
     },
     outOfStock: {
@@ -29,19 +30,19 @@ export const LdlcEs: Store = {
       model: 'tuf',
       series: '3090',
       url: 'https://www.ldlc.com/es-es/ficha/PB00369842.html',
-    },    
+    },
     {
       brand: 'asus',
       model: 'tuf oc',
       series: '3090',
       url: 'https://www.ldlc.com/es-es/ficha/PB00374911.html',
-    },   
+    },
     {
       brand: 'asus',
       model: 'gaming oc',
       series: '3090',
       url: 'https://www.ldlc.com/es-es/ficha/PB00369849.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'ftw3 ultra',
@@ -245,7 +246,7 @@ export const LdlcEs: Store = {
       model: 'trinity',
       series: '3090',
       url: 'https://www.ldlc.com/es-es/ficha/PB00370250.html',
-    },  
+    },
     // 3080ti
     {
       brand: 'asus',
@@ -662,7 +663,7 @@ export const LdlcEs: Store = {
       series: '3080',
       url: 'https://www.ldlc.com/es-es/ficha/PB00390727.html',
     },
-    // 3070ti    
+    // 3070ti
     {
       brand: 'inno3d',
       model: 'ichill x3',
@@ -675,79 +676,79 @@ export const LdlcEs: Store = {
       model: 'gaming',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386907.html',
-    },    
+    },
     {
       brand: 'asus',
       model: 'gaming oc',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386904.html',
-    },    
+    },
     {
       brand: 'asus',
       model: 'dual oc',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00384225.html',
-    },   
+    },
     {
       brand: 'asus',
       model: 'tuf oc',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00384232.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'ftw3',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386926.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'ftw3 ultra',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386925.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'xc3 black',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386030.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'xc3',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386928.html',
-    },   
+    },
     {
       brand: 'evga',
       model: 'xc3 ultra',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00386927.html',
-    },   
+    },
     {
       brand: 'gainward',
       model: 'phantom',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00385465.html',
-    },   
+    },
     {
       brand: 'gainward',
       model: 'phantom gs',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00385466.html',
-    },   
+    },
     {
       brand: 'gainward',
       model: 'phoenix',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00385462.html',
-    },   
+    },
     {
       brand: 'gainward',
       model: 'phoenix gs',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00385463.html',
-    },   
+    },
     {
       brand: 'gigabyte',
       model: 'aorus master',
@@ -891,7 +892,7 @@ export const LdlcEs: Store = {
       model: 'twin edge oc',
       series: '3070',
       url: 'https://www.ldlc.com/es-es/ficha/PB00383541.html',
-    }
+    },
   ],
   name: 'ldlc-es',
 };

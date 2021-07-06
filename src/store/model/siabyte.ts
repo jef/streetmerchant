@@ -251,7 +251,7 @@ export const Siabyte: Store = {
         'https://siabyte.com/tarjetas-graficas/924-msi-geforce-rtx-3080-suprim-x-10gb-gddr6x.html',
     },
     // 3070ti
-    // 3070    
+    // 3070
     {
       brand: 'asus',
       model: 'tuf oc',

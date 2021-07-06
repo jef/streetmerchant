@@ -164,8 +164,8 @@ import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
 import chalk from 'chalk';
-import { UltimaInformatica } from './utlimainformatica';
-import { XtremMedia} from './xtremmedia';
+import {UltimaInformatica} from './utlimainformatica';
+import {XtremMedia} from './xtremmedia';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],

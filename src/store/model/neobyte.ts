@@ -21,37 +21,32 @@ export const NeoByte: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.neobyte.es/grafica-asus-gt1030-sl-2g-brk-1647.html',
+      url: 'https://www.neobyte.es/grafica-asus-gt1030-sl-2g-brk-1647.html',
     },
     // 3090
     {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3090',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3090-gaming-oc-24gb-7275.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3090-gaming-oc-24gb-7275.html',
     },
     {
       brand: 'gigabyte',
       model: 'vision oc',
       series: '3090',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3090-vision-oc-24g-7696.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3090-vision-oc-24g-7696.html',
     },
     {
       brand: 'asus',
       model: 'tuf oc',
       series: '3090',
-      url:
-        'https://www.neobyte.es/asus-tuf-rtx-3090-oc-gaming-24gb-7279.html',
+      url: 'https://www.neobyte.es/asus-tuf-rtx-3090-oc-gaming-24gb-7279.html',
     },
     {
       brand: 'asus',
       model: 'tuf',
       series: '3090',
-      url:
-        'https://www.neobyte.es/asus-tuf-rtx-3090-gaming-24gb-7280.html',
+      url: 'https://www.neobyte.es/asus-tuf-rtx-3090-gaming-24gb-7280.html',
     },
     {
       brand: 'msi',
@@ -156,8 +151,7 @@ export const NeoByte: Store = {
       brand: 'gigabyte',
       model: 'eagle',
       series: '3080ti',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080ti-eagle-12gb-9467.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080ti-eagle-12gb-9467.html',
     },
     {
       brand: 'gigabyte',
@@ -177,30 +171,26 @@ export const NeoByte: Store = {
       brand: 'gigabyte',
       model: 'eagle oc',
       series: '3080ti',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080ti-eagle-oc-12gb-9466.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080ti-eagle-oc-12gb-9466.html',
     },
     // 3080
     {
       brand: 'gigabyte',
       model: 'eagle oc',
       series: '3080',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080-eagle-oc-10gb-7278.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080-eagle-oc-10gb-7278.html',
     },
     {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3080',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080-gaming-oc-10gb-7277.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080-gaming-oc-10gb-7277.html',
     },
     {
       brand: 'gigabyte',
       model: 'vision oc',
       series: '3080',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080-vision-oc-10g-7440.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080-vision-oc-10g-7440.html',
     },
     {
       brand: 'gigabyte',
@@ -213,8 +203,7 @@ export const NeoByte: Store = {
       brand: 'gigabyte',
       model: 'aorus xtreme',
       series: '3080',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3080-aorus-x-10gb-7840.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3080-aorus-x-10gb-7840.html',
     },
     {
       brand: 'gigabyte',
@@ -234,8 +223,7 @@ export const NeoByte: Store = {
       brand: 'asus',
       model: 'tuf oc',
       series: '3080',
-      url:
-        'https://www.neobyte.es/asus-tuf-rtx-3080-oc-gaming-10gb-7281.html',
+      url: 'https://www.neobyte.es/asus-tuf-rtx-3080-oc-gaming-10gb-7281.html',
     },
     {
       brand: 'asus',
@@ -248,8 +236,7 @@ export const NeoByte: Store = {
       brand: 'asus',
       model: 'tuf',
       series: '3080',
-      url:
-        'https://www.neobyte.es/asus-tuf-rtx-3080-gaming-10gb-7282.html',
+      url: 'https://www.neobyte.es/asus-tuf-rtx-3080-gaming-10gb-7282.html',
     },
     // 3070 Ti
     {
@@ -270,30 +257,26 @@ export const NeoByte: Store = {
       brand: 'gigabyte',
       model: 'eagle',
       series: '3070ti',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3070ti-eagle-8gb-9469.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3070ti-eagle-8gb-9469.html',
     },
     {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3070ti',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3070ti-gaming-oc-8gb-9468.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3070ti-gaming-oc-8gb-9468.html',
     },
     // 3070
     {
       brand: 'gigabyte',
       model: 'vision oc',
       series: '3070',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3070-vision-oc-8gb-7788.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3070-vision-oc-8gb-7788.html',
     },
     {
       brand: 'gigabyte',
       model: 'eagle oc',
       series: '3070',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3070-eagle-oc-8gb-7649.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3070-eagle-oc-8gb-7649.html',
     },
     {
       brand: 'gigabyte',
@@ -306,15 +289,13 @@ export const NeoByte: Store = {
       brand: 'gigabyte',
       model: 'aorus master',
       series: '3070',
-      url:
-        'https://www.neobyte.es/gigbyte-rtx-3070-aorus-master-8gb-7770.html',
+      url: 'https://www.neobyte.es/gigbyte-rtx-3070-aorus-master-8gb-7770.html',
     },
     {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3070',
-      url:
-        'https://www.neobyte.es/gigabyte-rtx-3070-gaming-oc-8gb-7484.html',
+      url: 'https://www.neobyte.es/gigabyte-rtx-3070-gaming-oc-8gb-7484.html',
     },
     {
       brand: 'asus',
@@ -327,22 +308,19 @@ export const NeoByte: Store = {
       brand: 'asus',
       model: 'dual oc',
       series: '3070',
-      url:
-        'https://www.neobyte.es/asus-dual-rtx-3070-oc-8gb-7293.html',
+      url: 'https://www.neobyte.es/asus-dual-rtx-3070-oc-8gb-7293.html',
     },
     {
       brand: 'asus',
       model: 'dual',
       series: '3070',
-      url:
-        'https://www.neobyte.es/asus-dual-rtx-3070-8gb-7294.html',
+      url: 'https://www.neobyte.es/asus-dual-rtx-3070-8gb-7294.html',
     },
     {
       brand: 'asus',
       model: 'tuf oc',
       series: '3070',
-      url:
-        'https://www.neobyte.es/asus-tuf-rtx-3070-gaming-8gb-7822.html',
+      url: 'https://www.neobyte.es/asus-tuf-rtx-3070-gaming-8gb-7822.html',
     },
     {
       brand: 'asus',
