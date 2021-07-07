@@ -440,7 +440,7 @@ const store = {
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
     '3060',
     '3060ti',
-    // '3070',
+    '3070',
     '3070ti',
     '3080ti',
     '3090',
@@ -448,7 +448,7 @@ const store = {
     'rx6800',
     'rx6800xt',
     'rx6900xt',
-    //'test:series'
+    'test:series',
     'ryzen5800',
     'ryzen5900',
     'ryzen5950',
