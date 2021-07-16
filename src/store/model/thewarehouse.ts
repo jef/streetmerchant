@@ -3,23 +3,11 @@ import {Store} from './store';
 export const TheWarehouse: Store = {
   currency: '$',
   labels: {
-    inStock: {
+    outOfStock: {
       container:
-        '#maincontent > div.container.product-detail.product-wrapper.pb-xl.pb-lg-xxxl > div > div:nth-child(2) > div.col-12.col-md-6.col-lg-5 > div > div.product-buying-box > div.cart-and-ipay.mt-md > div > div > button > span',
-      text: ['Add to Cart', 'Find in Store'],
+        '#maincontent > div.container.product-detail.product-wrapper.pb-xl.pb-lg-xxxl > div > div:nth-child(2) > div.col-12.col-md-6.col-lg-5 > div > div.product-buying-box > div.cart-and-ipay.mt-md > div > div > button:disabled',
+      text: ['Add to Cart'],
     },
-    outOfStock: [
-      {
-        container:
-          '#maincontent > div.container.product-detail.product-wrapper.pb-xl.pb-lg-xxxl > div > div:nth-child(2) > div.col-12.col-md-6.col-lg-5 > div > div.product-buying-box > div.cart-and-ipay.mt-md > div > div > button > span',
-        text: ['Out of Stock'],
-      },
-      {
-        container:
-          '#maincontent > div.container.product-detail.product-wrapper.pb-xl.pb-lg-xxxl > div > div:nth-child(2) > div.col-12.col-md-6.col-lg-5 > div > div.product-buying-box > div.cart-and-ipay.mt-md > div > div > div > div',
-        text: ['Out of Stock'],
-      },
-    ],
   },
   links: [
     {

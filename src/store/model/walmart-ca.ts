@@ -16,8 +16,7 @@ export const WalmartCa: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.walmart.ca/en/ip/sandisk-64g-ultra-sdxc-uhs-1-memory-card-80mbs-c10-u1-full-hd-sd-card-sdsdunc-064g-cw6in/6000200452075',
+      url: 'https://www.walmart.ca/en/ip/sandisk-64g-ultra-sdxc-uhs-1-memory-card-80mbs-c10-u1-full-hd-sd-card-sdsdunc-064g-cw6in/6000200452075',
     },
     {
       brand: 'sony',
@@ -29,8 +28,7 @@ export const WalmartCa: Store = {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url:
-        'https://www.walmart.ca/en/ip/playstation5-digital-edition/6000202198823',
+      url: 'https://www.walmart.ca/en/ip/playstation5-digital-edition/6000202198823',
     },
     {
       brand: 'microsoft',
@@ -48,8 +46,7 @@ export const WalmartCa: Store = {
       brand: 'corsair',
       model: '600 platinum',
       series: 'sf',
-      url:
-        'https://www.walmart.ca/en/ip/Corsair-SF-Series-SF600-600-Watt-80-PLUS-Gold-Certified-High-Performance-SFX-PSU/PRD6VH8WNKHD36Q',
+      url: 'https://www.walmart.ca/en/ip/Corsair-SF-Series-SF600-600-Watt-80-PLUS-Gold-Certified-High-Performance-SFX-PSU/PRD6VH8WNKHD36Q',
     },
   ],
   name: 'walmart-ca',
