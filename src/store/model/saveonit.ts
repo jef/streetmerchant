@@ -130,43 +130,37 @@ export const SaveOnIt: Store = {
       brand: 'asrock',
       model: 'phantom gaming',
       series: 'rx6900xt',
-      url:
-        'https://www.saveonit.com.au/product/asrock-rx6900xt-pgd-16go-rx6900xt-16g-phantom-gaming-d',
+      url: 'https://www.saveonit.com.au/product/asrock-rx6900xt-pgd-16go-rx6900xt-16g-phantom-gaming-d',
     },
     {
       brand: 'gigabyte',
       model: 'amd reference',
       series: 'rx6900xt',
-      url:
-        'https://www.saveonit.com.au/product/gigabyte-gv-r69xt-16gc-b-rx6900xt-16gb-video-card',
+      url: 'https://www.saveonit.com.au/product/gigabyte-gv-r69xt-16gc-b-rx6900xt-16gb-video-card',
     },
     {
       brand: 'amd',
       model: '5950x',
       series: 'ryzen5950',
-      url:
-        'https://www.saveonit.com.au/product/amd-ryzen-9-5950x-16-core-3-4-ghz-cpu-100-100000059wof',
+      url: 'https://www.saveonit.com.au/product/amd-ryzen-9-5950x-16-core-3-4-ghz-cpu-100-100000059wof',
     },
     {
       brand: 'amd',
       model: '5900x',
       series: 'ryzen5900',
-      url:
-        'https://www.saveonit.com.au/product/amd-ryzen-9-5900x-12-core-3-7-ghz-cpu-100-100000061wof',
+      url: 'https://www.saveonit.com.au/product/amd-ryzen-9-5900x-12-core-3-7-ghz-cpu-100-100000061wof',
     },
     {
       brand: 'amd',
       model: '5800x',
       series: 'ryzen5800',
-      url:
-        'https://www.saveonit.com.au/product/amd-ryzen-7-5800x-8-core-3-8ghz-cpu-100-100000063wof',
+      url: 'https://www.saveonit.com.au/product/amd-ryzen-7-5800x-8-core-3-8ghz-cpu-100-100000063wof',
     },
     {
       brand: 'amd',
       model: '5600x',
       series: 'ryzen5600',
-      url:
-        'https://www.saveonit.com.au/product/amd-ryzen-5-5600x-6-core-3-7-ghz-cpu-100-100000065box',
+      url: 'https://www.saveonit.com.au/product/amd-ryzen-5-5600x-6-core-3-7-ghz-cpu-100-100000065box',
     },
   ],
   name: 'saveonit',

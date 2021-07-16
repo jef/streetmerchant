@@ -13,15 +13,13 @@ export const JohnLewis: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.johnlewis.com/sony-playstation-5-dualsense-wireless-controller-white/p5192093',
+      url: 'https://www.johnlewis.com/sony-playstation-5-dualsense-wireless-controller-white/p5192093',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url:
-        'https://www.johnlewis.com/sony-playstation-5-console-with-dualsense-controller/white/p5115192',
+      url: 'https://www.johnlewis.com/sony-playstation-5-console-with-dualsense-controller/white/p5115192',
     },
   ],
   name: 'johnlewis',
