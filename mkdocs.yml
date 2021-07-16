@@ -20,8 +20,6 @@ theme:
   font:
     text: Roboto
     code: Fira Code
-  icon:
-    repo: octicons/octoface-24
   logo: assets/images/streetmerchant-logo.png
   language: en
   name: material

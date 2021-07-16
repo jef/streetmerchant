@@ -18,7 +18,7 @@ export const Amazon: Store = {
       text: ['enter the characters you see below'],
     },
     captchaHandler: {
-      image: '.a-row > img',
+      challenge: '.a-row > img',
       input: '#captchacharacters',
       submit: 'button[type="submit"]',
     },

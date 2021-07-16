@@ -7,6 +7,11 @@ export const AmazonCa: Store = {
       container: 'body',
       text: ['enter the characters you see below'],
     },
+    captchaHandler: {
+      challenge: 'img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
+    },
     inStock: {
       container: '#desktop_buybox',
       text: ['add to cart'],

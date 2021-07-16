@@ -8,6 +8,11 @@ export const AmazonFr: Store = {
       container: 'body',
       text: ['entrez les caractères que vous voyez ci-dessous'],
     },
+    captchaHandler: {
+      challenge: '.a-row > img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
+    },
     inStock: {
       container: '#desktop_buybox',
       text: ['ajouter au panier'],

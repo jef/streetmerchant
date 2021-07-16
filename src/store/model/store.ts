@@ -43,6 +43,7 @@ export type Series =
   | '3060ti'
   | '3070'
   | '3080'
+  | '3080ti'
   | '3090'
   | 'darkhero'
   | 'rx6800'
@@ -213,9 +214,10 @@ export type Link = {
 };
 
 export type CaptchaHandlerElements = {
-  image: string;
+  challenge: string;
   input: string;
   submit: string;
+  captureType?: string;
 };
 
 export type LabelQuery = Element[] | Element | string[];

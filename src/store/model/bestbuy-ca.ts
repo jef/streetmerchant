@@ -56,18 +56,11 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3060-ti-8gb-gddr6-video-card/15166285?intl=nosplash',
     },
     {
-      brand: 'zotac',
-      model: 'twin edge oc',
-      series: '3060ti',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3060-ti-twin-edge-oc-8gb-gddr6-video-card/15178452?intl=nosplash',
-    },
-    {
       brand: 'evga',
       model: 'ftw3 ultra',
       series: '3060ti',
       url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-video-card/15200164?intl=nosplash',
+        'https://www.bestbuy.ca/en-ca/product/evga-nvidia-geforce-rtx-3060-ti-ftw3-ultra-8gb-gddr6-video-card/15229237',
     },
     {
       brand: 'zotac',
@@ -98,13 +91,6 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card/15084753?intl=nosplash',
     },
     {
-      brand: 'evga',
-      model: 'xc3 ultra',
-      series: '3080',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-xc3-ultra-gaming-10gb-gddr6x-video-card-english/14961449?intl=nosplash',
-    },
-    {
       brand: 'asus',
       model: 'tuf',
       series: '3080',
@@ -117,6 +103,20 @@ export const BestBuyCa: Store = {
       series: '3080',
       url:
         'https://www.bestbuy.ca/en-ca/product/asus-rog-strix-geforce-rtx-3080-10gb-gddr6x-video-card/14954116?intl=nosplash',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/15463567?intl=nosplash',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-ti-12gb-gddr6x-video-card/15530045?intl=nosplash',
     },
     {
       brand: 'zotac',
@@ -154,6 +154,13 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/evga-nvidia-geforce-rtx-3090-xc3-ultra-gaming-24gb-gddr6x-video-card/14967857?intl=nosplash',
     },
     {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3090',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3090-24gb-gddr6x-video-card/15463568?intl=nosplash',
+    },
+    {
       brand: 'msi',
       model: 'ventus 3x oc',
       series: '3070',
@@ -189,13 +196,6 @@ export const BestBuyCa: Store = {
         'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-ultra-8gb-gddr6-video-card/15147122?intl=nosplash',
     },
     {
-      brand: 'evga',
-      model: 'xc3 black',
-      series: '3070',
-      url:
-        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3070-xc3-black-8gb-gddr6-video-card/15081879?intl=nosplash',
-    },
-    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
@@ -222,6 +222,48 @@ export const BestBuyCa: Store = {
       series: 'xboxss',
       url:
         'https://www.bestbuy.ca/en-ca/product/xbox-series-s-512gb-console-new-model-online-only/14964950',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp holo',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/zotac-nvidia-geforce-rtx-3080-ti-amp-holo-12gb-gddr6x-video-card/15507363',
+    },
+    {
+      brand: 'asus',
+      model: 'strix',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/asus-rog-strix-nvidia-geforce-rtx-3080-ti-oc-12gb-gddr6x-video-card/15493494',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x oc',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-3080-ti-ventus-3x-oc-12gb-gddr6-video-card/15524483',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-3080-ti-gaming-x-trio-12gb-gddr6-video-card/15524484',
+    },
+    {
+      brand: 'evga',
+      model: 'ftw3 ultra',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/evga-geforce-rtx-3080-ti-ftw3-ultra-12gb-gddr6x-video-card/15524485',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080ti',
+      url:
+        'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-ti-12gb-gddr6x-video-card/15530045',
     },
   ],
   name: 'bestbuy-ca',

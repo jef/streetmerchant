@@ -2,7 +2,7 @@
 
 You can test your notification configuration by running `npm run test:notification`.
 
-## Apple Push Notification Service 
+## Apple Push Notification Service
 
 | Environment variable | Description |
 |---|---|
@@ -13,7 +13,7 @@ You can test your notification configuration by running `npm run test:notificati
 | `APNS_PRODUCTION` | true/false for production |
 | `APNS_TEAMID` | Apple developer's team id |
 
-Change your notification alert/payload/etc in apns.ts in the note object. 
+Change your notification alert/payload/etc in apns.ts in the note object.
 Refer to https://github.com/node-apn/node-apn for config options.
 
 ## Desktop
@@ -36,6 +36,7 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
+| `DISCORD_NOTIFY_GROUP_3080TI` | Discord group to notify on 3080 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
@@ -93,6 +94,14 @@ Default provider is Gmail. If you use a different email provider, you must provi
 | Virgin | `virgin`|
 | Virgin (CA) | `virgin-ca`|
 | Visible | `visible`|
+
+## Gotify
+
+| Environment variable | Description |
+|:---:|---|
+| `GOTIFY_PRIORITY` | Message Priority |
+| `GOTIFY_TOKEN` | Application token |
+| `GOTIFY_URL` | Gotify's URL, e.g. `https://push.example.com` |
 
 ## MQTT
 
@@ -174,15 +183,6 @@ API Documentation: [pushover.net/api](https://pushover.net/api)
 |:---:|---|
 | `SLACK_CHANNEL` | Channel for posting |
 | `SLACK_TOKEN` | API token |
-
-## SmartThings
-
-Generate token at [account.smartthings.com/tokens](https://account.smartthings.com/tokens).
-
-| Environment variable | Description |
-|:---:|---|
-| `SMARTTHINGS_TOKEN` | Access token |
-| `SMARTTHINGS_SWITCH_LABEL` | Switch Label of switch to activate|
 
 ## Telegram
 

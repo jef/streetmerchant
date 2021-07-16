@@ -1,4 +1,4 @@
-import {Link, Store} from './store';
+import {Store} from './store';
 
 export const AmazonUk: Store = {
   backoffStatusCodes: [403, 429, 503],
@@ -7,6 +7,11 @@ export const AmazonUk: Store = {
     captcha: {
       container: 'body',
       text: ['enter the characters you see below'],
+    },
+    captchaHandler: {
+      challenge: '.a-row > img',
+      input: '#captchacharacters',
+      submit: 'button[type="submit"]',
     },
     inStock: {
       container: '#availability',

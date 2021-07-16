@@ -2,7 +2,6 @@ import {existsSync, readFileSync} from 'fs';
 import {banner} from './banner';
 import dotenv from 'dotenv';
 import path from 'path';
-import * as console from 'console';
 
 if (process.env.npm_config_conf) {
   if (
@@ -202,6 +201,7 @@ const browser = {
 };
 
 const captchaHandler = {
+  captureType: envOrString(process.env.CAPTCHA_HANDLER_CAPTURE_TYPE),
   pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5),
   responseTimeout: envOrNumber(
     process.env.CAPTCHA_HANDLER_RESPONSE_TIMEOUT,
@@ -233,6 +233,7 @@ const notifications = {
       '3060ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060TI),
       3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
       3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
+      '3080ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080TI),
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
@@ -262,6 +263,11 @@ const notifications = {
       envOrString(process.env.EMAIL_USERNAME)
     ),
     username: envOrString(process.env.EMAIL_USERNAME),
+  },
+  gotify: {
+    priority: envOrNumber(process.env.GOTIFY_PRIORITY),
+    token: envOrString(process.env.GOTIFY_TOKEN),
+    url: envOrString(process.env.GOTIFY_URL),
   },
   mqtt: {
     broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
@@ -327,10 +333,6 @@ const notifications = {
   slack: {
     channel: envOrString(process.env.SLACK_CHANNEL),
     token: envOrString(process.env.SLACK_TOKEN),
-  },
-  smartthings: {
-    token: envOrString(process.env.SMARTTHINGS_TOKEN),
-    device: envOrString(process.env.SMARTTHINGS_SWITCH_LABEL),
   },
   soundPlayer: envOrString(process.env.SOUND_PLAYER),
   telegram: {
@@ -405,6 +407,7 @@ const store = {
       '3060ti': envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
       3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
       3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
+      '3080ti': envOrNumber(process.env.MAX_PRICE_SERIES_3080TI),
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
@@ -438,6 +441,7 @@ const store = {
     '3060ti',
     '3070',
     '3080',
+    '3080ti',
     '3090',
     'rx6700xt',
     'rx6800',
