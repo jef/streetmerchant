@@ -149,7 +149,7 @@ export const Coolblue: Store = {
       model: 'ps5 console',
       series: 'sonyps5c',
       url: 'https://www.coolblue.nl/product/884069',
-    }
+    },
   ],
   name: 'coolblue',
 };
