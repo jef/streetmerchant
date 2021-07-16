@@ -1,6 +1,6 @@
 import {Store} from './store';
 
-export const Alternate: Store = {
+export const AlternateDe: Store = {
   currency: '€',
   labels: {
     inStock: {
@@ -1006,5 +1006,5 @@ export const Alternate: Store = {
       url: 'https://www.alternate.de/html/product/1651221',
     },
   ],
-  name: 'alternate',
+  name: 'alternate-de',
 };
