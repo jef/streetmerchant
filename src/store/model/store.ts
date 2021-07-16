@@ -114,6 +114,7 @@ export type Model =
   | 'gaming pro oc'
   | 'gaming pro'
   | 'gaming trio'
+  | 'gaming z trio'
   | 'gaming x trio'
   | 'gaming x'
   | 'gaming x3'

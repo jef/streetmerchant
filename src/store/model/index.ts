@@ -6,7 +6,8 @@ import {Materiel} from './materiel';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
-import {Alternate} from './alternate';
+import {AlternateDe} from './alternate-de';
+import {AlternateFr} from './alternate-fr';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
@@ -172,7 +173,8 @@ export const storeList = new Map([
   [Adorama.name, Adorama],
   [Akinformatica.name, Akinformatica],
   [Allneeds.name, Allneeds],
-  [Alternate.name, Alternate],
+  [AlternateDe.name, AlternateDe],
+  [AlternateFr.name, AlternateFr],
   [AlternateNL.name, AlternateNL],
   [Amazon.name, Amazon],
   [AmazonCa.name, AmazonCa],
