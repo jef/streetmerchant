@@ -88,7 +88,7 @@ async function getCaptchaPayloadAsync(
       break;
     case 'link':
       captchaPayload = {
-        content: await challengeElement?.evaluate(img => img.src),
+        content: await challengeElement?.evaluate(img => img.getAttribute("src")) ?? "",
         type: 'text',
       };
       break;
