@@ -18,7 +18,7 @@ export const AlternateFr: Store = {
       },
       {
         container: '#content > div:nth-child(1) > div > h1',
-        text: ['L\'article n\'est pas disponible pour le moment.'],
+        text: ["L'article·n'est·pas·disponible·pour·le·moment."],
       },
     ],
   },
