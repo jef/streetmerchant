@@ -451,6 +451,7 @@ const store = {
     'rx6800',
     'rx6800xt',
     'rx6900xt',
+    'ryzen5600',
     'ryzen5800',
     'ryzen5900',
     'ryzen5950',
