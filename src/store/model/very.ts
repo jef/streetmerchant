@@ -23,8 +23,7 @@ export const Very: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.very.co.uk/msi-geforce-gtx-1660-ti-gaming-x-6g-graphics-card/1600350984.prd',
+      url: 'https://www.very.co.uk/msi-geforce-gtx-1660-ti-gaming-x-6g-graphics-card/1600350984.prd',
     },
   ],
   linksBuilder: {
@@ -71,23 +70,19 @@ export const Very: Store = {
     urls: [
       {
         series: '3060ti',
-        url:
-          'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
+        url: 'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
       },
       {
         series: '3070',
-        url:
-          'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
+        url: 'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
       },
       {
         series: '3080',
-        url:
-          'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
+        url: 'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
       },
       {
         series: '3090',
-        url:
-          'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
+        url: 'https://www.very.co.uk/electricals/pc-components/graphics-cards/e/b/118786.end?sort=newin,0&numProducts=100',
       },
     ],
   },

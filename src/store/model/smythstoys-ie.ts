@@ -22,15 +22,13 @@ export const SmythsToysIE: Store = {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
-      url:
-        'https://www.smythstoys.com/ie/en-ie/video-games-and-tablets/xbox-gaming/xbox-series-x-%7c-s/xbox-series-x-%7c-s-consoles/xbox-series-x-1tb-console/p/192012',
+      url: 'https://www.smythstoys.com/ie/en-ie/video-games-and-tablets/xbox-gaming/xbox-series-x-%7c-s/xbox-series-x-%7c-s-consoles/xbox-series-x-1tb-console/p/192012',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url:
-        'https://www.smythstoys.com/ie/en-ie/video-games-and-tablets/playstation-5/playstation-5-consoles/playstation-5-console/p/191259',
+      url: 'https://www.smythstoys.com/ie/en-ie/video-games-and-tablets/playstation-5/playstation-5-consoles/playstation-5-console/p/191259',
     },
   ],
   name: 'smythstoys-ie',

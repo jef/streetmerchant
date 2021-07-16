@@ -21,15 +21,13 @@ export const MightyApe: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url:
-        'https://www.mightyape.co.nz/product/sony-playstation-5-console/31675007',
+      url: 'https://www.mightyape.co.nz/product/sony-playstation-5-console/31675007',
     },
     {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url:
-        'https://www.mightyape.co.nz/product/sony-playstation-5-digital-edition-console/33505481',
+      url: 'https://www.mightyape.co.nz/product/sony-playstation-5-digital-edition-console/33505481',
     },
     {
       brand: 'microsoft',
@@ -41,8 +39,7 @@ export const MightyApe: Store = {
       brand: 'microsoft',
       model: 'xbox series s',
       series: 'xboxss',
-      url:
-        'https://www.mightyape.co.nz/product/xbox-series-s-all-digital-console/33856647',
+      url: 'https://www.mightyape.co.nz/product/xbox-series-s-all-digital-console/33856647',
     },
   ],
   name: 'mightyape',
