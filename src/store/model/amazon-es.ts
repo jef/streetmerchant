@@ -18,7 +18,7 @@ export const AmazonEs: Store = {
       text: ['añadir a la cesta'],
     },
     maxPrice: {
-      container: '#priceblock_ourprice',
+      container: '#price',
       euroFormat: true,
     },
     outOfStock: [
@@ -36,6 +36,326 @@ export const AmazonEs: Store = {
       model: 'test:model',
       series: 'test:series',
       url: 'https://www.amazon.es/dp/B07PW9VBK5',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08J5F3G18&Quantity.1=1',
+      model: 'ftw3 ultra',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08J5F3G18/',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HGS1SXH&Quantity.1=1',
+      model: 'ftw3 ultra',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HGS1SXH/',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08R5WDMZC&Quantity.1=1',
+      model: 'ekwb',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08R5WDMZC/',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08KHJS572&Quantity.1=1',
+      model: 'aorus xtreme',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08KHJS572',
+    },
+    {
+      brand: 'pny',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HBQWBHH&Quantity.1=1',
+      model: 'xlr8 revel',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HBQWBHH',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HLYQ9XL&Quantity.1=1',
+      model: 'gaming oc',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HLYQ9XL',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HN51T8Q&Quantity.1=1',
+      model: 'strix oc',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HN51T8Q',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08R5WDMZC&Quantity.1=1',
+      model: 'ekwb',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08R5WDMZC',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08LTJVGYS&Quantity.1=1',
+      model: 'suprim x',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08LTJVGYS',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HRBW6VB&Quantity.1=1',
+      model: 'gaming x trio',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HRBW6VB',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HM6D7TM&Quantity.1=1',
+      model: 'gaming x trio',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HM6D7TM',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08R5J94WP&Quantity.1=1',
+      model: 'aorus xtreme waterforce wb',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08R5J94WP',
+    },
+    {
+      brand: 'nvidia',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HR6ZBYJ&Quantity.1=1',
+      model: 'founders edition',
+      series: '3090',
+      url: 'https://www.amazon.es/dp/B08HR6ZBYJ',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B09622N253&Quantity.1=1',
+      model: 'ftw3 ultra',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B09622N253',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0957WCY1M&Quantity.1=1',
+      model: 'suprim x',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B0957WCY1M',
+    },
+    {
+      brand: 'inno3d',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B096MVB4KP&Quantity.1=1',
+      model: 'ichill x4',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B096MVB4KP',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0964DB2P9&Quantity.1=1',
+      model: 'trinity',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B0964DB2P9',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0957TV4YR&Quantity.1=1',
+      model: 'gaming x trio',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B0957TV4YR',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0963TJNHG&Quantity.1=1',
+      model: 'ftw3 ultra',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B0963TJNHG',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B0979GYMHP&Quantity.1=1',
+      model: 'xc3 ultra',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B0979GYMHP',
+    },
+    {
+      brand: 'palit',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B096KTPQ9J&Quantity.1=1',
+      model: 'gamerock',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B096KTPQ9J',
+    },
+    {
+      brand: 'palit',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B096KVBBHQ&Quantity.1=1',
+      model: 'gaming pro',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B096KVBBHQ',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B095X51RHY&Quantity.1=1',
+      model: 'gaming oc',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B095X51RHY',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B095X622XV&Quantity.1=1',
+      model: 'aorus master',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B095X622XV',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B095X7V2HH&Quantity.1=1',
+      model: 'vision oc',
+      series: '3080ti',
+      url: 'https://www.amazon.es/dp/B095X7V2HH',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08D3LH86H&Quantity.1=1',
+      model: 'turbo',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08D3LH86H',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B092CYHPDJ&Quantity.1=1',
+      model: 'gaming z trio',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B092CYHPDJ',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08KGVL9JQ&Quantity.1=1',
+      model: 'amp holo',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08KGVL9JQ',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HVV2P4Z&Quantity.1=1',
+      model: 'trinity oc',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08HVV2P4Z',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08K3PDL9K&Quantity.1=1',
+      model: 'trinity oc',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08K3PDL9K',
+    },
+    {
+      brand: 'evga',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08HR55YB5&Quantity.1=1',
+      model: 'xc3',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08HR55YB5',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08VHB7598&Quantity.1=1',
+      model: 'aorus master',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08VHB7598',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08M5ZFNTT&Quantity.1=1',
+      model: 'aorus xtreme',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08M5ZFNTT',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08BL4QX75&Quantity.1=1',
+      model: 'strix white',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08BL4QX75',
+    },
+    {
+      brand: 'palit',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08QZR8S24&Quantity.1=1',
+      model: 'gamerock oc',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08QZR8S24',
+    },
+    {
+      brand: 'palit',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08MKSYYZ4&Quantity.1=1',
+      model: 'gamerock',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08MKSYYZ4',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08P5W32PC&Quantity.1=1',
+      model: 'aorus xtreme waterforce',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08P5W32PC',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08P5YGXMG&Quantity.1=1',
+      model: 'aorus xtreme waterforce wb',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08P5YGXMG',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08KHLDS72&Quantity.1=1',
+      model: 'aorus master',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08KHLDS72',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.es/gp/aws/cart/add.html?ASIN.1=B08LTKLG5K&Quantity.1=1',
+      model: 'suprim x',
+      series: '3080',
+      url: 'https://www.amazon.es/dp/B08LTKLG5K',
     },
     {
       brand: 'msi',
