@@ -16,8 +16,7 @@ export const ToysRUs: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.toysrus.ca/en/Hasbro-Gaming---Operation-Game---styles-may-vary/99D52A22.html',
+      url: 'https://www.toysrus.ca/en/Hasbro-Gaming---Operation-Game---styles-may-vary/99D52A22.html',
     },
     {
       brand: 'sony',
@@ -29,8 +28,7 @@ export const ToysRUs: Store = {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url:
-        'https://www.toysrus.ca/en/PlayStation-5-Digital-Edition/E4A019FE.html',
+      url: 'https://www.toysrus.ca/en/PlayStation-5-Digital-Edition/E4A019FE.html',
     },
     {
       brand: 'microsoft',
