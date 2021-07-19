@@ -59,7 +59,7 @@
     "top-user-agents": "^1.0.33",
     "twilio": "^3.66.0",
     "twitch": "^4.6.1",
-    "twitch-auth": "^4.6.1",
+    "twitch-auth": "^4.6.3",
     "twitch-chat-client": "^4.6.1",
     "twitter": "^1.7.1",
     "winston": "^3.3.3"
