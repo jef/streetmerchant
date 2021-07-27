@@ -25,24 +25,21 @@ export const PlayStation: Store = {
       itemNumber: '3005715',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715',
+      url: 'https://direct.playstation.com/en-us/accessories/accessory/dualsense-wireless-controller.3005715',
     },
     {
       brand: 'sony',
       itemNumber: '3005816',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url:
-        'https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816',
+      url: 'https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816',
     },
     {
       brand: 'sony',
       itemNumber: '3005817',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url:
-        'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817',
+      url: 'https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817',
     },
   ],
   name: 'playstation',
