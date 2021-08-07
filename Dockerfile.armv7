@@ -1,0 +1,46 @@
+FROM node:stretch-slim AS builder
+
+LABEL org.opencontainers.image.source="https://github.com/jef/streetmerchant"
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+WORKDIR /build
+
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+COPY tsconfig.json tsconfig.json
+RUN npm ci
+
+COPY src/ src/
+COPY test/ test/
+RUN npm run compile
+RUN npm prune --production
+
+FROM node:stretch-slim
+
+RUN apt-get update \
+	&& apt-get install -y wget gnupg2
+
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list \
+	&& wget https://dl-ssl.google.com/linux/linux_signing_key.pub \
+	&& apt-key add linux_signing_key.pub \
+	&& apt-get install -y chromium
+
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium DOCKER=true
+
+RUN addgroup --system appuser \
+    && adduser --system -gecos appuser appuser \
+    && mkdir -p /home/appuser/Downloads /app \
+  	&& chown -R appuser:appuser /home/appuser \
+  	&& chown -R appuser:appuser /app
+
+USER appuser
+
+WORKDIR /app
+
+COPY --from=builder /build/node_modules/ node_modules/
+COPY --from=builder /build/build/ build/
+COPY web/ web/
+COPY package.json package.json
+
+ENTRYPOINT ["npm", "run"]
+CMD ["start:production"]
