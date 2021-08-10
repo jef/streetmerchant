@@ -3,6 +3,7 @@ import Discord from 'discord.js';
 import {config} from '../config';
 import {logger} from '../logger';
 import {DMPayload} from '.';
+import {RawUserData} from 'discord.js/typings/rawDataTypes';
 
 const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
 const {pollInterval, responseTimeout, token, userId} = config.captchaHandler;
@@ -65,12 +66,13 @@ export function sendDiscordMessage(link: Link, store: Store) {
         const promises = [];
         for (const webhook of webhooks) {
           const {id, token} = getIdAndToken(webhook);
-          const client = new Discord.WebhookClient(id, token);
+          const client = new Discord.WebhookClient({id, token});
 
           promises.push(
             new Promise((resolve, reject) => {
               client
-                .send(notifyText.join(' '), {
+                .send({
+                  content: notifyText.join(' '),
                   embeds: [embed],
                   username: 'streetmerchant',
                 })
@@ -160,7 +162,7 @@ export async function getDMResponseAsync(
           after: botMessage?.id,
         });
         const lastUserMessage = messages
-          .filter(message => message.reference?.messageID === botMessage?.id)
+          .filter(message => message.reference?.messageId === botMessage?.id)
           .last();
         if (!lastUserMessage) {
           if (iteration >= iterations) {
@@ -197,7 +199,7 @@ export async function sendDMAndGetResponseAsync(
 async function getDiscordClientAsync() {
   let clientInstance = undefined;
   if (token) {
-    clientInstance = new Discord.Client();
+    clientInstance = new Discord.Client({} as Discord.ClientOptions);
     await clientInstance.login(token);
   }
   return clientInstance;
@@ -208,7 +210,7 @@ async function getDMChannelAsync(client?: Discord.Client) {
   if (userId && client) {
     const user = await new Discord.User(client, {
       id: userId,
-    }).fetch();
+    } as RawUserData).fetch();
     dmChannelInstance = await user.createDM();
   }
   return dmChannelInstance;
