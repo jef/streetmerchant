@@ -119,6 +119,37 @@ export const Coolblue: Store = {
       series: '3090',
       url: 'https://www.coolblue.nl/product/868735/',
     },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.coolblue.nl/en/product/873655',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.coolblue.nl/en/product/865866',
+    },
+
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.coolblue.nl/product/883789',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.coolblue.nl/product/884071',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.coolblue.nl/product/884069',
+    },
   ],
   name: 'coolblue',
 };

@@ -34,15 +34,13 @@ export const EbGames: Store = {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
-      url:
-        'https://www.ebgames.ca/Xbox%20Series%20X/Games/877779/xbox-series-x',
+      url: 'https://www.ebgames.ca/Xbox%20Series%20X/Games/877779/xbox-series-x',
     },
     {
       brand: 'microsoft',
       model: 'xbox series s',
       series: 'xboxss',
-      url:
-        'https://www.ebgames.ca/Xbox%20Series%20X/Games/877780/xbox-series-s',
+      url: 'https://www.ebgames.ca/Xbox%20Series%20X/Games/877780/xbox-series-s',
     },
   ],
   name: 'ebgames',

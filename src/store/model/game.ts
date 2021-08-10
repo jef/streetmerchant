@@ -21,8 +21,7 @@ export const Game: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.game.co.uk/en/ea-sports-fifa-21-500gb-ps4-bundle-2832947',
+      url: 'https://www.game.co.uk/en/ea-sports-fifa-21-500gb-ps4-bundle-2832947',
     },
     {
       brand: 'sony',

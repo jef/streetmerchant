@@ -4,9 +4,24 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
 jobs:
+  check-date:
+    name: Check dates
+    runs-on: ubuntu-latest
+    outputs:
+      should-run: ${{ steps.code-change.outputs.should-run }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Check if code has changed with 24 hours
+        continue-on-error: true
+        id: code-change
+        run: |
+          [[ $(git rev-list --after="24 hours" --first-parent HEAD) ]] && echo "::set-output name=should-run::true"
   build-release:
     name: Build and release Docker image
     runs-on: ubuntu-latest
+    needs: check-date
+    if: needs.check-date.outputs.should-run == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
