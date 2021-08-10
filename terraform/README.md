@@ -16,7 +16,7 @@ There's an example tfvars file to start you off; rename this with your own prefe
 
 Authenticate yourself with your own AWS account as with any aws commandline tool.
 
-If you wish, add a specific section to your aws credentials file and set that profile name in `terraform.tfvars`.
+If you wish, add a specific section to your aws credentials file and set that profile name in `terraform.tfvars`. More information on how to configure the AWS credentials file can be found in <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">here</a>.
 
 Then you can:
 
