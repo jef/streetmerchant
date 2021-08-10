@@ -7,8 +7,8 @@ export const BestBuyCa: Store = {
       container: 'div[class*="pricingContainer"]',
       euroFormat: false,
     },
-    outOfStock: {
-      container: '.addToCartButton:disabled',
+    inStock: {
+      container: '.addToCartButton:not(:disabled)',
       text: ['add to cart'],
     },
   },
