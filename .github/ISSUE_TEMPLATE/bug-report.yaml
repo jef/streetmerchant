@@ -8,7 +8,6 @@ body:
     attributes:
       value: Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: expected-behavior
     attributes:
       label: Expected Behavior
       description: What did you expect to happen?
@@ -16,7 +15,6 @@ body:
     validations:
       required: true
   - type: textarea
-    id: current-behavior
     attributes:
       label: Current Behavior
       description: What happened?
@@ -24,7 +22,6 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: operating-system
     attributes:
       label: What operating system are you seeing the problem on?
       multiple: true
@@ -32,20 +29,23 @@ body:
         - Linux
         - Windows
         - macOS
+    validations:
+      required: true
   - type: textarea
-    id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+    validations:
+      required: true
   - type: textarea
-    id: dotenv
     attributes:
       label: Configuration
       description: Please copy and paste your `dotenv`. This will be automatically formatted into code, so no need for backticks.
       render: shell
+    validations:
+      required: true
   - type: checkboxes
-    id: terms
     attributes:
       label: Code of Conduct
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/jef/streetmerchant/blob/main/CODE_OF_CONDUCT.md)
