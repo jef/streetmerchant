@@ -1,38 +1,55 @@
----
-name: "\U0001F41B Bug report"
-about: Report a bug for this project
-title: ''
-labels: ''
-assignees: ''
-
----
-
-## Expected Behavior
-
-<!-- Tell us what should happen -->
-
-## Current Behavior
-
-<!-- Tell us what happens instead of the expected behavior -->
-
-## Steps to Reproduce
-
-<!-- Provide a link to a live example, or an unambiguous set of steps to reproduce this bug. -->
-<!-- Include code to reproduce, if relevant -->
-
-## Environment
-
-- OS:
-
-<details>
-<summary>dotenv</summary>
-
-```dotenv
-# Place your dotenv within these backticks. Be sure to remove any secrets/passwords.
-```
-
-</details>
-
-## Logs
-
-<!-- Provide a brief log -->
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels:
+  - 'type: bug'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: What happened?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: What operating system are you seeing the problem on?
+      multiple: true
+      options:
+        - Linux
+        - Windows
+        - macOS
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: dotenv
+    attributes:
+      label: Configuration
+      description: Please copy and paste your `dotenv`. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/jef/streetmerchant/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
