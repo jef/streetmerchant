@@ -251,6 +251,24 @@ export const NetonnetNO: Store = {
       series: '3070',
       url: 'https://www.netonnet.no/art/datakomponenter/skjermkort/nvidia/kfa2-geforce-rtx-3070-1-click-oc-8gb/1017014.11111/',
     },
+    {
+      brand: 'asus',
+      model: 'strix oc',
+      series: '3090',
+      url: 'https://www.netonnet.no/art/datakomponenter/skjermkort/nvidia/asus-geforce-rtx-3090-rog-strix-gaming-oc-10g/1017795.11111/',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'vision oc',
+      series: '3060',
+      url: 'https://www.netonnet.no/art/datakomponenter/skjermkort/nvidia/gigabyte-geforce-rtx-3060-vision-oc-12gb/1017250.11111/',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'vision oc',
+      series: '3090',
+      url: 'https://www.netonnet.no/art/datakomponenter/skjermkort/nvidia/gigabyte-geforce-rtx-3090-vision-oc-24gb/1015516.11111/',
+    },
   ],
   name: 'netonnet-no',
 };
