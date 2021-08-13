@@ -7,6 +7,9 @@ import {RawUserData} from 'discord.js/typings/rawDataTypes';
 
 const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
 const {pollInterval, responseTimeout, token, userId} = config.captchaHandler;
+const clientOptions: Discord.ClientOptions = {
+  intents: new Discord.Intents(),
+};
 
 function getIdAndToken(webhook: string) {
   const match = /.*\/webhooks\/(\d+)\/(.+)/.exec(webhook);
@@ -66,13 +69,13 @@ export function sendDiscordMessage(link: Link, store: Store) {
         const promises = [];
         for (const webhook of webhooks) {
           const {id, token} = getIdAndToken(webhook);
-          const client = new Discord.WebhookClient({id, token});
+          const client = new Discord.WebhookClient({id, token}, clientOptions);
 
           promises.push(
             new Promise((resolve, reject) => {
               client
                 .send({
-                  content: notifyText.join(' '),
+                  content: notifyText.length ? notifyText.join(' ') : null,
                   embeds: [embed],
                   username: 'streetmerchant',
                 })
@@ -199,7 +202,7 @@ export async function sendDMAndGetResponseAsync(
 async function getDiscordClientAsync() {
   let clientInstance = undefined;
   if (token) {
-    clientInstance = new Discord.Client({} as Discord.ClientOptions);
+    clientInstance = new Discord.Client(clientOptions);
     await clientInstance.login(token);
   }
   return clientInstance;
