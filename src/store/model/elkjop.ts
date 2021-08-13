@@ -194,6 +194,62 @@ export const Elkjop: Store = {
         'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=275719&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/275719/msi-geforce-rtx-3080-suprim-x-10-gb-grafikkort',
     },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3060',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=293925&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/293925/msi-rtx-3060-gaming-x-trio-12gb-graphics-card',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '3070',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=275718&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/275718/msi-geforce-rtx-3070-suprim-x-8-gb-grafikkort',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: '3090',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=216110&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/216110/gigabyte-geforce-rtx-3090-24gb-gaming-oc',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'vision oc',
+      series: '3070',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=252773&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/252773/gigabyte-geforce-rtx-3070-vision-oc-8gb',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus master',
+      series: '3070',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=252824&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/252824/gigabyte-geforce-rtx-3070-aorus-master-8gb',
+    },
+    {
+      brand: 'gainward',
+      model: 'phantom gs',
+      series: '3090',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=266679&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/266679/geforce-rtx-3090-phantom gs',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '3060',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=293922&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/293922/asus-geforce-rtx-3060-tuf-12gb-graphics-card',
+    },
   ],
   name: 'elkjop',
 };
