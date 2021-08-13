@@ -17,7 +17,6 @@ import {sendTweet} from './twitter';
 import {sendTwilioMessage} from './twilio';
 import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
-import {activateSmartthingsSwitch} from './smartthings';
 import {sendStreamLabsAlert} from './streamlabs';
 import {sendFreeMobileAlert} from './freemobile';
 import {DMPayload} from '.';
@@ -31,7 +30,6 @@ export function sendNotification(link: Link, store: Store) {
   sendSms(link, store);
   sendApns(link, store);
   // Non-priority
-  activateSmartthingsSwitch();
   adjustPhilipsHueLights();
   sendGotifyNotification(link, store);
   sendMqttMessage(link, store);

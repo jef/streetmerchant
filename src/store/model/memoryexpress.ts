@@ -196,12 +196,6 @@ export const MemoryExpress: Store = {
       url: 'https://www.memoryexpress.com/Products/MX00114094',
     },
     {
-      brand: 'evga',
-      model: 'xc3',
-      series: '3080',
-      url: 'https://www.memoryexpress.com/Products/MX00114095',
-    },
-    {
       brand: 'asus',
       model: 'tuf oc',
       series: '3080',

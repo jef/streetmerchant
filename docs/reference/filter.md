@@ -6,6 +6,7 @@
 | `MAX_PRICE_SERIES_3060TI` | Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3070` | Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_3080TI` | Maximum price allowed for a match, applies 3080 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs |
 | `MAX_PRICE_SERIES_DARKHERO` | Maximum price allowed for a match, applies to ASUS Dark Hero motherboards |
@@ -69,6 +70,7 @@ Used with the `STORES` variable.
 | ARLT | DE | `arlt`|
 | ASUS | US | `asus` |
 | ASUS | DE | `asus-de` |
+| ASUS | ES | `asus-es` |
 | AWD-IT | UK | `awd` |
 | Azerty | NL | `azerty`|
 | B&H | US | `bandh`|
@@ -99,6 +101,7 @@ Used with the `STORES` variable.
 | EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
+| Eletronicamente | ES | `eletronicamente`|
 | Elkjop | NO | `elkjop`|
 | ePrice | IT | `eprice`|
 | Equippr | DE | `equippr`|
@@ -108,8 +111,10 @@ Used with the `STORES` variable.
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
 | Expert | DE | `expert`|
+| Extremmedia | ES | `extremmedia`|
 | Futurex | DE | `futurex`|
 | Galaxus | DE | `galaxus`|
+| Game | ES | `game-es`|
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|
 | Gamestop | DE | `gamestop-de`|
@@ -125,6 +130,7 @@ Used with the `STORES` variable.
 | Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
 | Ldlc | FR |  `ldlc`|
+| Ldlc | ES |  `ldlc-es`|
 | Mediamarkt | DE | `mediamarkt`|
 | Mediamarkt | AT | `mediamarkt-at`|
 | Medimax | DE | `medimax`|
@@ -137,6 +143,7 @@ Used with the `STORES` variable.
 | MSY | AU |  `msy`|
 | Multicom | NO |  `multicom`|
 | Mwave | AU | `mwave`|
+| Neobyte | ES | `neobyte`|
 | Netonnet | NO | `netonnet-no`|
 | Newegg | US | `newegg`|
 | Newegg | CA | `newegg-ca`|
@@ -148,6 +155,7 @@ Used with the `STORES` variable.
 | Nvidia | EU/UK | [See below](#nvidia-store-reference) |
 | Office Depot | US | `officedepot`|
 | Ollo | IT | `ollo`|
+| Opirata | ES | `opirata`|
 | Otto | DE | `otto`|
 | Overclockers | UK | `overclockers`|
 | PBTech | AU |  `pbtech`|
@@ -169,6 +177,7 @@ Used with the `STORES` variable.
 | Scan | UK | `scan`|
 | Scorptec | AU | `scorptec`|
 | ShopTo | UK | `shopto`|
+| Siabyte | ES | `siabyte`|
 | Smyths Toys | UK | `smythstoys`|
 | Smyths Toys | IE | `smythstoys-ie`|
 | Spielegrotte | DE | `spielegrotte`|
@@ -178,6 +187,7 @@ Used with the `STORES` variable.
 | TheWarehouse | NZ | `thewarehouse`|
 | TopAchat | GR | `topachat`|
 | Toys R Us | US | `toysrus` |
+| Ultimainformatica | ES | `ultimainformatica`|
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
 | Very | UK | `very`|
@@ -249,6 +259,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Nvidia RTX 3060 Ti | `3060ti` |
 | Nvidia RTX 3070 | `3070` |
 | Nvidia RTX 3080 | `3080` |
+| Nvidia RTX 3080 Ti | `3080ti` |
 | Nvidia RTX 3090 | `3090` |
 | Corsair SFX PSU | `sf` |
 | Crosshair VIII | `darkhero` |
@@ -260,7 +271,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 ## Nvidia Store Reference
 
 ???+ note
-    Use the Nvidia Store to check stock for Founders Edition cards only (3060 Ti/3070/3080/3090). For USA use `bestbuy` instead.
+    Use the Nvidia Store to check stock for Founders Edition cards only (3060 Ti/3070/3080/3080 Ti/3090). For USA use `bestbuy` instead.
 
 ???+ info
     Use the `STORE` variable for your chosen country. For example, to check for a FE card in Belgium you would use the `nvidia-fr` store.

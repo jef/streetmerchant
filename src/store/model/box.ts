@@ -23,22 +23,19 @@ export const Box: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url:
-        'https://www.box.co.uk/Gigabyte-GeForce-RTX-2080-Super-8GB-Wind_2724554.html',
+      url: 'https://www.box.co.uk/Gigabyte-GeForce-RTX-2080-Super-8GB-Wind_2724554.html',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url:
-        'https://www.box.co.uk/CFI-1015A-Sony-Playstation-5-Console_3199689.html',
+      url: 'https://www.box.co.uk/CFI-1015A-Sony-Playstation-5-Console_3199689.html',
     },
     {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url:
-        'https://www.box.co.uk/CFI-1015B-Sony-PlayStation-5-Digital-Edition-Conso_3199692.html',
+      url: 'https://www.box.co.uk/CFI-1015B-Sony-PlayStation-5-Digital-Edition-Conso_3199692.html',
     },
     {
       brand: 'microsoft',
@@ -56,8 +53,7 @@ export const Box: Store = {
       brand: 'amd',
       model: 'tuf oc',
       series: 'rx6900xt',
-      url:
-        'https://www.box.co.uk/90YV0GE0-M0NM00-ASUS-Radeon-RX-X6900XT-16GB-OC-Gaming-Gr_3561243.html',
+      url: 'https://www.box.co.uk/90YV0GE0-M0NM00-ASUS-Radeon-RX-X6900XT-16GB-OC-Gaming-Gr_3561243.html',
     },
   ],
   linksBuilder: {

@@ -115,14 +115,12 @@ async function enterCaptchaResponseAsync(
     store.labels.captchaHandler?.submit || 'button[type="submit"]';
   const result = await page.evaluate(
     (inputSelector, submitSelector, response) => {
-      const inputElement = document.querySelector<HTMLInputElement>(
-        inputSelector
-      );
+      const inputElement =
+        document.querySelector<HTMLInputElement>(inputSelector);
       if (!inputElement) return false;
       inputElement.value = response;
-      const submitElement = document.querySelector<HTMLButtonElement>(
-        submitSelector
-      );
+      const submitElement =
+        document.querySelector<HTMLButtonElement>(submitSelector);
       if (!submitElement) return false;
       submitElement.click();
       return true;
