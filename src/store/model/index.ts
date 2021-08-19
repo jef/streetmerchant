@@ -63,7 +63,6 @@ import {CyberportAt} from './cyberport-at';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {DustinHomeNO} from './dustinhome-no';
-import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
 import {Eletronicamente} from './eletronicamente';
@@ -81,6 +80,7 @@ import {Galaxus} from './galaxus';
 import {Game} from './game';
 import {GameES} from './game-es';
 import {Gamestop} from './gamestop';
+import {GamestopCA} from './gamestop-ca';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
@@ -248,6 +248,7 @@ export const storeList = new Map([
   [Game.name, Game],
   [GameES.name, GameES],
   [Gamestop.name, Gamestop],
+  [GamestopCA.name, GamestopCA],
   [GamestopDE.name, GamestopDE],
   [GamestopIE.name, GamestopIE],
   [GamestopIT.name, GamestopIT],
