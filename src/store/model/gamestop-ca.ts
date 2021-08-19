@@ -43,5 +43,5 @@ export const GamestopCA: Store = {
       url: 'https://www.gamestop.ca/Xbox%20Series%20X/Games/877780/xbox-series-s',
     },
   ],
-  name: 'ebgames',
+  name: 'gamestop-ca',
 };
