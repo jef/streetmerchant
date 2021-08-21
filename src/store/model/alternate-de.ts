@@ -820,6 +820,18 @@ export const AlternateDe: Store = {
       url: 'https://www.alternate.de/html/product/1685584',
     },
     {
+      brand: 'asrock',
+      model: 'challenger',
+      series: 'rx6700xt',
+      url: 'https://www.alternate.de/html/product/1757933',
+    },
+    {
+      brand: 'xfx',
+      model: 'merc',
+      series: 'rx6700xt',
+      url: 'https://www.alternate.de/html/product/1730305',
+    },
+    {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: 'rx6800',
