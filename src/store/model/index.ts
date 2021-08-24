@@ -101,6 +101,7 @@ import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
+import {Microsoft} from './microsoft';
 import {Msy} from './msy';
 import {Multicom} from './multicom';
 import {Mwave} from './mwave';
@@ -264,6 +265,7 @@ export const storeList = new Map([
   [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
+  [Microsoft.name, Microsoft],
   [Ldlc.name, Ldlc],
   [LdlcEs.name, LdlcEs],
   [Materiel.name, Materiel],
