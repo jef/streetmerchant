@@ -98,7 +98,6 @@ Used with the `STORES` variable.
 | DComp | AU | `dcomp`|
 | Drako | IT | `drako` |
 | DustinHome | NO | `dustinhome-no` |
-| EBGames | CA | `ebgames`|
 | eBuyer | UK | `ebuyer`|
 | El Corte Inglés | ES | `elcorteingles`|
 | Eletronicamente | ES | `eletronicamente`|
@@ -117,6 +116,7 @@ Used with the `STORES` variable.
 | Game | ES | `game-es`|
 | Game | UK | `game`|
 | Gamestop | US | `gamestop`|
+| Gamestop | CA | `gamestop-ca`|
 | Gamestop | DE | `gamestop-de`|
 | Gamestop | IE | `gamestop-ie`|
 | Gamestop | IT | `gamestop-it`|
