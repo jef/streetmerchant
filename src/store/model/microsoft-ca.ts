@@ -30,7 +30,7 @@ export const MicrosoftCA: Store = {
       model: 'xbox series s',
       series: 'xboxss',
       url: 'https://www.xbox.com/en-ca/configure/942J774TP9JN',
-    }
+    },
   ],
-  name: 'microsoft-ca'
+  name: 'microsoft-ca',
 };

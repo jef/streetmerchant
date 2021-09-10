@@ -167,7 +167,7 @@ import {logger} from '../../logger';
 import chalk from 'chalk';
 import {UltimaInformatica} from './utlimainformatica';
 import {XtremMedia} from './xtremmedia';
-import { MicrosoftCA } from './microsoft-ca';
+import {MicrosoftCA} from './microsoft-ca';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
