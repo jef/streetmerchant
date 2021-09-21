@@ -119,6 +119,24 @@ export const Arlt: Store = {
       series: 'ryzen5950',
       url: 'https://www.arlt.com/Hardware/PC-Komponenten/Prozessoren-arlt/AMD-Ryzen-9-5950X-boxed.html',
     },
+    {
+      brand: 'asus',
+      model: 'dual',
+      series: 'rx6700xt',
+      url: 'https://www.arlt.com/Gaming/Gaming-Hardware/Grafikkarten/ASUS-Radeon-RX-6700-XT-Dual.html',
+    },
+    {
+      brand: 'asus',
+      model: 'strix oc',
+      series: 'rx6700xt',
+      url: 'https://www.arlt.com/Gaming/Gaming-Hardware/Grafikkarten/ASUS-ROG-Strix-Radeon-RX-6700-XT-OC.html',
+    },
+    {
+      brand: 'sapphire',
+      model: 'nitro+',
+      series: 'rx6700xt',
+      url: 'https://www.arlt.com/Gaming/Gaming-Hardware/Grafikkarten/Sapphire-Nitro-Radeon-RX-6700-XT.html',
+    },
   ],
   name: 'arlt',
 };

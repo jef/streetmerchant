@@ -89,6 +89,12 @@ export const Equippr: Store = {
       series: '3080',
       url: 'https://www.equippr.de/evga-geforce-rtx-3080-xc3-gaming-10-gb-gddr6x-retail-2061391.html',
     },
+    {
+      brand: 'asus',
+      model: 'strix oc',
+      series: 'rx6700xt',
+      url: 'https://www.equippr.de/asus-radeon-rx-6700-xt-rog-strix-oc-12-gb-gddr6-retail-2072469.html',
+    },
   ],
   name: 'equippr',
 };
