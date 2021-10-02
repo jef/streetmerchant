@@ -16,11 +16,12 @@ function addNewLinks(store: Store, links: Link[], series: Series) {
   const newLinks = links.filter(link => !existingUrls.has(link.url));
 
   if (newLinks.length === 0) {
+    logger.debug(Print.message('NO NEW LINKS FOUND', series, store, true));
     return;
   }
 
   logger.debug(
-    Print.message(`FOUND ${newLinks.length} STORE LINKS`, series, store, true)
+    Print.message(`FOUND ${newLinks.length} NEW LINKS`, series, store, true)
   );
   logger.debug(JSON.stringify(newLinks, null, 2));
 
