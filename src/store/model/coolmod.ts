@@ -1,4 +1,5 @@
 import {Store} from './store';
+import {getProductLinksBuilder} from './helpers/card';
 
 export const Coolmod: Store = {
   currency: '€',
@@ -490,4 +491,43 @@ export const Coolmod: Store = {
     },
   ],
   name: 'coolmod',
+  linksBuilder: {
+    builder: getProductLinksBuilder({
+      productsSelector: '.productInfo.itemFiltered',
+      sitePrefix: 'https://www.coolmod.com/',
+      titleSelector: '.productName a',
+    }),
+    ttl: 1,
+    waitForSelector: '.productInfo.itemFiltered',
+    urls: [
+      {
+        series: '3060',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9678',
+      },
+      {
+        series: '3060ti',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9674',
+      },
+      {
+        series: '3070',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9675',
+      },
+      {
+        series: '3070ti',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9727',
+      },
+      {
+        series: '3080',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9676',
+      },
+      {
+        series: '3080ti',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/9728',
+      },
+      {
+        series: '3090',
+        url: 'https://www.coolmod.com/tarjetas-graficas/appliedfilters/8557',
+      },
+    ],
+  },
 };
