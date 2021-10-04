@@ -5,16 +5,16 @@ export const Coolmod: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: '.product-availability',
-      text: ['Envío'],
+      container: '#productBuyButtons',
+      text: ['COMPRAR'],
     },
     maxPrice: {
-      container: '.text-price-total',
+      container: '#normalpricenumber',
       euroFormat: true,
     },
     outOfStock: {
-      container: '.product-availability',
-      text: ['Sin Stock'],
+      container: '#productBuyButtons',
+      text: ['NO DISPONIBLE'],
     },
   },
   links: [
