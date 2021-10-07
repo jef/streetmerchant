@@ -560,11 +560,11 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
   if (!browser.isConnected()) {
-    logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
+    logger.silly(`[${store.name}] Ending this loop as browser is disposed...`);
     return;
   }
 
-  logger.debug(`[${store.name}] Starting lookup...`);
+  logger.silly(`[${store.name}] Starting lookup...`);
   try {
     await lookup(browser, store);
   } catch (error: unknown) {
@@ -572,6 +572,6 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
   }
 
   const sleepTime = getSleepTime(store);
-  logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+  logger.silly(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
   setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }

@@ -42,7 +42,7 @@ Used with the `STORES` variable.
 | Adorama | US | `adorama`|
 | Akinformatica | IT | `akinformatica`|
 | Allneeds | AU | `allneeds`|
-| Alternate | DE | `alternate`|
+| Alternate | DE | `alternate-de`|
 | Alternate | NL | `alternate-nl`|
 | Amazon | US | `amazon`|
 | Amazon | CA | `amazon-ca`|
