@@ -30,7 +30,7 @@ export const Microsoft: Store = {
       model: 'xbox series s',
       series: 'xboxss',
       url: 'https://www.xbox.com/en-us/configure/942J774TP9JN',
-    }
+    },
   ],
   name: 'microsoft',
 };
