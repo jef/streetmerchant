@@ -26,6 +26,8 @@ import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../messaging';
 import {handleCaptchaAsync} from './captcha-handler';
 import useProxy from '@doridian/puppeteer-page-proxy';
+import {promises as fs} from 'fs';
+import path from 'path';
 
 const inStock: Record<string, boolean> = {};
 
@@ -343,7 +345,11 @@ async function lookupIem(
     if (config.page.screenshot) {
       logger.debug('ℹ saving screenshot');
 
-      link.screenshot = `success-${Date.now()}.png`;
+      await fs.mkdir(config.page.screenshotDir, {recursive: true});
+      link.screenshot = path.join(
+        config.page.screenshotDir,
+        `success-${Date.now()}.png`
+      );
       await page.screenshot({path: link.screenshot});
     }
   }
