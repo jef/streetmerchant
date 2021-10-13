@@ -383,6 +383,7 @@ const page = {
   height: 1080,
   inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
   screenshot: envOrBoolean(process.env.SCREENSHOT),
+  screenshotDir: envOrString(process.env.SCREENSHOT_DIR, 'screenshots'),
   timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
   width: 1920,
 };
