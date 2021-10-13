@@ -31,7 +31,7 @@ export const NvidiaGB: Store = {
       series: '3070',
       url: 'https://www.nvidia.com/en-gb/shop/geforce/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203070&manufacturer=NVIDIA',
     },
-    {      
+    {
       brand: 'nvidia',
       model: 'founders edition',
       series: '3070ti',
