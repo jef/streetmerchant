@@ -34,8 +34,20 @@ export const NvidiaGB: Store = {
     {
       brand: 'nvidia',
       model: 'founders edition',
+      series: '3070ti',
+      url: 'https://www.nvidia.com/en-gb/shop/geforce/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203070%20Ti&manufacturer=NVIDIA',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
       series: '3080',
       url: 'https://www.nvidia.com/en-gb/shop/geforce/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203080&manufacturer=NVIDIA',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '3080ti',
+      url: 'https://www.nvidia.com/en-gb/shop/geforce/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203080%20Ti&manufacturer=NVIDIA',
     },
     {
       brand: 'nvidia',
