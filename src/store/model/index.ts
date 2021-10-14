@@ -102,6 +102,7 @@ import {MicroCenter} from './microcenter';
 import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
 import {Microsoft} from './microsoft';
+import {MicrosoftUK} from "./microsoft-uk";
 import {Msy} from './msy';
 import {Multicom} from './multicom';
 import {Mwave} from './mwave';
@@ -273,6 +274,7 @@ export const storeList = new Map([
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
   [MicrosoftCA.name, MicrosoftCA],
+  [MicrosoftUK.name, MicrosoftUK]
   [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
