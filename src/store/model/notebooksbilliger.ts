@@ -123,18 +123,6 @@ export const Notebooksbilliger: Store = {
       url: 'https://www.notebooksbilliger.de/inno3d+geforce+rtx+3070+twin+x2+oc+grafikkarte+685500',
     },
     {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3070',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3070+founders+edition+685357',
-    },
-    {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3070',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3070+founders+edition+685359',
-    },
-    {
       brand: 'gainward',
       model: 'phoenix',
       series: '3070',
@@ -213,18 +201,6 @@ export const Notebooksbilliger: Store = {
       url: 'https://www.notebooksbilliger.de/msi+geforce+rtx+3080+gaming+x+trio+10g+grafikkarte+678527',
     },
     {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3080',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+683301',
-    },
-    {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3080',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+685126',
-    },
-    {
       brand: 'palit',
       model: 'gaming pro',
       series: '3080',
@@ -265,18 +241,6 @@ export const Notebooksbilliger: Store = {
       model: 'aorus master',
       series: '3090',
       url: 'https://www.notebooksbilliger.de/gigabyte+geforce+rtx+3090+master+24gb+gddr6x+grafikkarte+683868',
-    },
-    {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3090',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+founders+edition+683300',
-    },
-    {
-      brand: 'nvidia',
-      model: 'founders edition',
-      series: '3090',
-      url: 'https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+founders+edition+685124',
     },
     {
       brand: 'palit',
