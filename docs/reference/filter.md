@@ -137,6 +137,9 @@ Used with the `STORES` variable.
 | Megekko | NL | `megekko`|
 | MemoryExpress | CA | `memoryexpress`|
 | Materiel | FR | `materiel` |
+| Microsoft | US | `microsoft` |
+| Microsoft | UK | `microsoft-uk` |
+| Microsoft | CA | `microsoft-ca` |
 | Micro Center | US | `microcenter`|
 | MightyApe | NZ | `mightyape`|
 | Mindfactory | DE | `mindfactory` |
