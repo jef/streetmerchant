@@ -220,13 +220,13 @@ export const Saturn: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.saturn.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
+      url: 'https://www.saturn.de/de/product/-2661938.html',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.saturn.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
+      url: 'https://www.saturn.de/de/product/_sony-playstation%C2%AE5-hd-kamera-2715822.html',
     },
     {
       brand: 'sony',
@@ -238,7 +238,13 @@ export const Saturn: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.saturn.de/de/product/-2661938.html',
+      url: 'https://www.saturn.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.saturn.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
     },
     {
       brand: 'sony',
@@ -272,9 +278,39 @@ export const Saturn: Store = {
     },
     {
       brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.saturn.de/de/product/_sony-playstationr5-2762011.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.saturn.de/de/product/_sony-playstation%C2%AE5-2661938.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.saturn.de/de/product/_sony-playstation%C2%AE5-dualsense%E2%84%A2-2752998.html',
+    },
+    {
+      brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
       url: 'https://www.saturn.de/de/product/-2661939.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.saturn.de/de/product/_sony-playstation%C2%AE5-digital-edition-2661939.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.saturn.de/de/product/_sony-playstation%C2%AE5-digital-edition-medienfernbedienung-2722423.html',
     },
     {
       brand: 'microsoft',

@@ -350,9 +350,39 @@ export const Mediamarkt: Store = {
     },
     {
       brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.mediamarkt.de/de/product/_sony-playstationr5-2762011.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-2661938.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-dualsense%E2%84%A2-2752998.html',
+    },
+    {
+      brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
       url: 'https://www.mediamarkt.de/de/product/-2661939.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-digital-edition-2661939.html',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-digital-edition-medienfernbedienung-2722423.html',
     },
     {
       brand: 'microsoft',
