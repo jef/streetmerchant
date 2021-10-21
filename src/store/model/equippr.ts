@@ -1,4 +1,5 @@
 import {Store} from './store';
+import {getProductLinksBuilder} from './helpers/card';
 
 export const Equippr: Store = {
   currency: '€',
@@ -97,4 +98,42 @@ export const Equippr: Store = {
     },
   ],
   name: 'equippr',
+  linksBuilder: {
+    builder: getProductLinksBuilder({
+      productsSelector: '.product--box',
+      sitePrefix: 'https://www.equippr.de/',
+      titleSelector: 'a.product--title',
+    }),
+    ttl: 1,
+    urls: [
+      {
+        series: '3060',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=67374',
+      },
+      {
+        series: '3060ti',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=66256',
+      },
+      {
+        series: '3070',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=66230',
+      },
+      {
+        series: '3070ti',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=69119',
+      },
+      {
+        series: '3080',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=66221',
+      },
+      {
+        series: '3080ti',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=69117',
+      },
+      {
+        series: '3090',
+        url: 'https://www.equippr.de/computer-elektronik/pc-komponenten/grafikkarten/nvidia-geforce-rtx/?p=1&o=8&n=120&f=66208',
+      },
+    ],
+  },
 };

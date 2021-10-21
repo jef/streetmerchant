@@ -26,6 +26,8 @@ import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../messaging';
 import {handleCaptchaAsync} from './captcha-handler';
 import useProxy from '@doridian/puppeteer-page-proxy';
+import {promises as fs} from 'fs';
+import path from 'path';
 
 const inStock: Record<string, boolean> = {};
 
@@ -343,7 +345,11 @@ async function lookupIem(
     if (config.page.screenshot) {
       logger.debug('ℹ saving screenshot');
 
-      link.screenshot = `success-${Date.now()}.png`;
+      await fs.mkdir(config.page.screenshotDir, {recursive: true});
+      link.screenshot = path.join(
+        config.page.screenshotDir,
+        `success-${Date.now()}.png`
+      );
       await page.screenshot({path: link.screenshot});
     }
   }
@@ -560,11 +566,11 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
   if (!browser.isConnected()) {
-    logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
+    logger.silly(`[${store.name}] Ending this loop as browser is disposed...`);
     return;
   }
 
-  logger.debug(`[${store.name}] Starting lookup...`);
+  logger.silly(`[${store.name}] Starting lookup...`);
   try {
     await lookup(browser, store);
   } catch (error: unknown) {
@@ -572,6 +578,6 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
   }
 
   const sleepTime = getSleepTime(store);
-  logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+  logger.silly(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
   setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }
