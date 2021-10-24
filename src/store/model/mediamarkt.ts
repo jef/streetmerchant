@@ -287,7 +287,7 @@ export const Mediamarkt: Store = {
       model: 'aorus elite',
       series: 'rx6700xt',
       url: 'https://www.mediamarkt.de/de/product/-2728671.html',
-      },
+    },
     {
       brand: 'sony',
       model: 'ps5 console',
@@ -317,7 +317,6 @@ export const Mediamarkt: Store = {
       model: 'ps5 console',
       series: 'sonyps5c',
       url: 'https://www.mediamarkt.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
-    },
     },
     {
       brand: 'sony',
