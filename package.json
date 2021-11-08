@@ -38,7 +38,7 @@
     "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
     "@parse/node-apn": "^5.0.0",
-    "@slack/web-api": "^6.3.0",
+    "@slack/web-api": "^6.4.0",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
     "discord.js": "^13.0.1",
