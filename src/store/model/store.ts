@@ -58,6 +58,7 @@ export type Series =
   | 'sonyps5c'
   | 'sonyps5de'
   | 'sf'
+  | 'zotac'
   | 'xboxsx'
   | 'xboxss';
 
@@ -226,6 +227,7 @@ export type Model =
   | 'xlr8 revel epic x'
   | 'xlr8 uprising'
   | 'xtreme'
+  | 'zotac'
   | 'qick';
 
 export type Link = {
