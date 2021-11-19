@@ -189,7 +189,7 @@ export const BestBuyCa: Store = {
     },
     {
       brand: 'microsoft',
-      model: 'xbox series x halo bundle',
+      model: 'xbox series x',
       series: 'xboxsx',
       url: 'https://www.bestbuy.ca/en-ca/product/xbox-series-x-1tb-halo-infinite-limited-edition-bundle/15679404',
     },
