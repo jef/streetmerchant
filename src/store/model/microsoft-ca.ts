@@ -21,7 +21,7 @@ export const MicrosoftCA: Store = {
     },
     {
       brand: 'microsoft',
-      model: 'xbox series x halo infinite limited edition',
+      model: 'xbox series x',
       series: 'xboxsx',
       url: 'https://www.xbox.com/en-ca/configure/8RPM8T9CK0P6',
     },
