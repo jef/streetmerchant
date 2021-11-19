@@ -28,13 +28,31 @@ export const WalmartCa: Store = {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url: 'https://www.walmart.ca/en/ip/playstation5-digital-edition/6000202198823',
+      url: 'https://www.walmart.ca/en/ip/playstation5-digital-edition-plus-playstation5-dualsense-wireless-controller-midnight-black/6000204201270',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.walmart.ca/en/ip/playstation5-digital-edition-plus-extra-dualsense-wireless-controller/6000202835809',
     },
     {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
       url: 'https://www.walmart.ca/en/ip/xbox-series-x/6000201786332',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.walmart.ca/en/ip/xbox-series-x-halo-infinite-limited-edition-bundle-plus-xbox-wireless-controller-shock-blue-for-xbox-series-xs-xbox-one-and-windows-devices/6000204126132',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.walmart.ca/en/ip/xbox-series-x-halo-infinite-limited-edition-bundle-plus-xbox-wireless-controller-pulse-red-for-xbox-series-xs-xbox-one-and-windows-devices/6000204126348',
     },
     {
       brand: 'microsoft',
