@@ -4,8 +4,8 @@ export const Amd: Store = {
   currency: '$',
   labels: {
     inStock: {
-      container: '.btn-shopping-cart',
-      text: ['add to cart'],
+      container: 'body > div',
+      text: ['Please enter your email address to proceed to the queue'],
     },
     maxPrice: {
       container: '.product-page-description h4',
