@@ -1,0 +1,9 @@
+export SHOW_ONLY_SERIES='3080,3080ti,3090'
+export HEADLESS='true'
+export STORES='amazon,bestbuy,newegg,evga,walmart,target,adorama'
+export DISCORD_NOTIFY_GROUP_3080
+export DISCRD_NOTIFY_GROUP_3080ti
+export DISCORD_NOTIFY_GROUP_3090
+export DISCORD_WEB_HOOK='https://discord.com/api/webhooks/920109202423291914/Eb0J9chMvRP86rdk3bxF2EhlMTs0zsRvdygPCqHaMzkJa0-xqUO58e2Rh68PRl_5VZSb'
+npm run start
+
