@@ -2,6 +2,21 @@
 <html>
 	<head>
 		<title>streetmerchant control</title>
+		<style>
+			body {
+				background-color: #222;
+				color: #DDD;
+				font-family: sans-serif;
+			}
+			a {
+				color: aquamarine;
+			}
+			table th {
+				width: 25vw;
+				cursor: pointer;
+				background-color: #444;
+			}
+		</style>
 		<script type="text/javascript">
 			let config;
 			let brands;
@@ -135,15 +150,26 @@
 
 				await loadScreenshots();
 			}
+
+			function selectAll(element, columnId) {
+				const list = document.querySelectorAll("#"+columnId+" input");
+				const checked = [...list].filter( el => el.checked ).length;
+				const newValue = (checked==list.length) ? false : true;
+
+				for (const htmlElement of list) {
+					htmlElement.checked = newValue;
+				}
+			}
+
 		</script>
 	</head>
 	<body onload="loadInitial();">
 		<table>
 			<tr>
-				<th>Stores</th>
-				<th>Brands</th>
-				<th>Series</th>
-				<th>Models</th>
+				<th onclick="selectAll(this, 'storeList');">Stores</th>
+				<th onclick="selectAll(this, 'brandList');">Brands</th>
+				<th onclick="selectAll(this, 'seriesList');">Series</th>
+				<th onclick="selectAll(this, 'modelList');">Models</th>
 			</tr>
 			<tr>
 				<td valign="top" id="storeList"></td>
