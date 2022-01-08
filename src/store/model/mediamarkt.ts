@@ -36,7 +36,7 @@ export const Mediamarkt: Store = {
       {
         container: '#root',
         text: ['Dieser Artikel ist bald wieder verfügbar'],
-      },      
+      },
     ],
   },
   links: [
