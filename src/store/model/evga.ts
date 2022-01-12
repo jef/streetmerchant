@@ -4,8 +4,8 @@ export const Evga: Store = {
   currency: '$',
   labels: {
     inStock: {
-      container: '',
-      text: [''],
+      container: '#EVGAContent > div > div.main-wrapper > div.main-product',
+      text: ['100-BR-0450-K1'],
     },
   },
   links: [
