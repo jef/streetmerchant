@@ -24,7 +24,7 @@ export const AmazonSg: Store = {
       },
     ],
     maxPrice: {
-      container: '#priceblock_ourprice',
+      container: '.a-text-price',
     },
   },
   links: [
