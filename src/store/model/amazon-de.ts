@@ -745,6 +745,21 @@ export const AmazonDe: Store = {
     {
       brand: 'sony',
       cartUrl:
+      
+        'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B09QG2JZYS&Quantity.1=1',
+      labels: {
+        inStock: {
+          container: '#productTitle',
+          text: ['sony playstation 5'],
+        },
+      },
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.amazon.de/dp/B09QG2JZYS',
+    },
+    {
+      brand: 'sony',
+      cartUrl:
         'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B08H98GVK8&Quantity.1=1',
       labels: {
         inStock: {
