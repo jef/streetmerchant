@@ -374,8 +374,8 @@ export const Multicom: Store = {
     },
     {
       brand: 'amd',
-      model: '5900x',
-      series: 'ryzen5900',
+      model: '5950x',
+      series: 'ryzen5950',
       url: 'https://www.multicom.no/amd-ryzen-9-5950x-34ghz-49ghz/cat-p/c/p1001484549',
     },
     {

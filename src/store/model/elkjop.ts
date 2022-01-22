@@ -252,8 +252,8 @@ export const Elkjop: Store = {
     },
     {
       brand: 'amd',
-      model: '5900x',
-      series: 'ryzen5900',
+      model: '5950x',
+      series: 'ryzen5950',
       cartUrl:
         'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=228244&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/data/pc-komponenter/prosessor-cpu/228244/amd-ryzen-9-5950x-prosessor-boks',
