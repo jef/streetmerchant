@@ -5,7 +5,7 @@ export const ProshopNO: Store = {
   labels: {
     inStock: {
       container:
-        '#siteContainer > div.site-container-fullwidth > div > div.row.site-content-table > div.col-sm-9.pull-right > div > div > div > div:nth-child(2) > div.col-xs-12.col-sm-7 > div.row.site-row-margin-top-small > div.col-md-5 > form > button',
+        '#siteContainer > div.site-container-fullwidth > div > div.row.site-content-table > div.col-sm-9.col-sm-push-3.d-flex-column > div.row.site-row-margin-top > div > div > div:nth-child(2) > div.col-xs-12.col-sm-7 > div.row.site-row-margin-top > div.col-md-5.site-row-margin-top > form > button',
       text: ['Kjøp'],
     },
     outOfStock: {
@@ -291,22 +291,10 @@ export const ProshopNO: Store = {
       url: 'https://www.proshop.no/2912456',
     },
     {
-      brand: 'palit',
-      model: 'gamerock oc',
-      series: '3070',
-      url: 'https://www.proshop.no/2914382',
-    },
-    {
-      brand: 'palit',
-      model: 'gamerock oc',
-      series: '3070',
-      url: 'https://www.proshop.no/2914381',
-    },
-    {
       brand: 'asus',
       model: 'strix',
       series: '3070',
-      url: 'https://www.proshop.no/2912910',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-3070-ROG-STRIX-V2-LHR-8GB-GDDR6-RAM-Grafikkort/2958589',
     },
     {
       brand: 'msi',
@@ -585,12 +573,6 @@ export const ProshopNO: Store = {
       url: 'https://www.proshop.no/2878406',
     },
     {
-      brand: 'palit',
-      model: 'gamerock oc',
-      series: '3090',
-      url: 'https://www.proshop.no/2911898',
-    },
-    {
       brand: 'amd',
       model: '5800x',
       series: 'ryzen5800',
@@ -704,6 +686,25 @@ export const ProshopNO: Store = {
       series: '3060',
       url: 'https://www.proshop.no/2918928',
     },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.proshop.no/Spillkonsoll/Sony-PlayStation-5-Digital-Edition-Nordic/2863627',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series s',
+      series: 'xboxss',
+      url: 'https://www.proshop.no/Spillkonsoll/Microsoft-Xbox-Series-S-512-GB-SSD/2880876',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.proshop.no/Spillkonsoll/Microsoft-Xbox-Series-X-1-TB-Nordic/2839638',
+    },
+
   ],
   name: 'proshop-no',
 };
