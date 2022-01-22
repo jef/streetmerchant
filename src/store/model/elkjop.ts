@@ -250,6 +250,54 @@ export const Elkjop: Store = {
         'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=293922&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/293922/asus-geforce-rtx-3060-tuf-12gb-graphics-card',
     },
+    {
+      brand: 'amd',
+      model: '5900x',
+      series: 'ryzen5900',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=228244&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/prosessor-cpu/228244/amd-ryzen-9-5950x-prosessor-boks',
+    },
+    {
+      brand: 'amd',
+      model: '5800x',
+      series: 'ryzen5800',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=228245&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/data/pc-komponenter/prosessor-cpu/228245/amd-ryzen-7-5800x-prosessor-boks',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=345102&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/gaming/spillkonsoll/playstation-konsoller/345102/playstation-5-digital-edition-2021',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=345097&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/gaming/spillkonsoll/playstation-konsoller/345097/playstation-5-2021',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series s',
+      series: 'xboxss',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218668&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/gaming/spillkonsoll/xbox-konsoller/218668/xbox-series-s-512gb-hvit',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      cartUrl:
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218667&Quantity=1&AddToCart=true',
+      url: 'https://www.elkjop.no/product/gaming/spillkonsoll/xbox-konsoller/218667/xbox-series-x-1-tb-sort',
+    },
   ],
   name: 'elkjop',
 };
