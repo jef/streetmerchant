@@ -21,7 +21,7 @@ export const Multicom: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.multicom.no/business/multicom-talisa-u231-133-full-hd/cat-p/c100475/p1500014708',
+      url: 'https://www.multicom.no/multicom-talisa-u235-135-ips/cat-p/c100559/p1500018225',
     },
 
     {
@@ -130,7 +130,7 @@ export const Multicom: Store = {
       brand: 'zotac',
       model: 'amp holo',
       series: '3080',
-      url: 'https://www.multicom.no/business/zotac-gaming-geforce-rtx-3080/cat-p/c100134/p1001440872',
+      url: 'https://www.multicom.no/zotac-gaming-geforce-rtx-3080/cat-p/c/p1002489641',
     },
     {
       brand: 'gigabyte',
