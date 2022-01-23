@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const NetonnetNO: Store = {
+  backoffStatusCodes: [403, 429, 503],
   currency: 'kr.',
   labels: {
     inStock: {
@@ -268,6 +269,30 @@ export const NetonnetNO: Store = {
       model: 'vision oc',
       series: '3090',
       url: 'https://www.netonnet.no/art/datakomponenter/skjermkort/nvidia/gigabyte-geforce-rtx-3090-vision-oc-24gb/1015516.11111/',
+    },
+    {
+      brand: 'amd',
+      model: '5950x',
+      series: 'ryzen5950',
+      url: 'https://www.netonnet.no/art/datakomponenter/prosessor/amdsocketam4/amd-ryzen-9-5950x-3-4-ghz/1015003.13682/',
+    },
+    {
+      brand: 'amd',
+      model: '5800x',
+      series: 'ryzen5800',
+      url: 'https://www.netonnet.no/art/datakomponenter/prosessor/amdsocketam4/amd-ryzen-7-5800x-3-8-ghz/1015001.13682/',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series s',
+      series: 'xboxss',
+      url: 'https://www.netonnet.no/art/gaming/spillogkonsoll/xbox/xbox-konsoll/microsoft-xbox-series-s/1012885.15694/',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.netonnet.no/art/gaming/spillogkonsoll/xbox/xbox-konsoll/microsoft-xbox-series-x/1011151.15694/',
     },
   ],
   name: 'netonnet-no',

@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const PowerNO: Store = {
+  backoffStatusCodes: [403, 429, 503],
   currency: 'kr.',
   labels: {
     inStock: {
@@ -416,6 +417,42 @@ export const PowerNO: Store = {
       model: 'tuf',
       series: '3090',
       url: 'https://www.power.no/data-og-tilbehoer/datakomponenter/grafikkort/asus-tuf-gaming-geforce-rtx-3090-24-gb-grafikkort/p-1115922/',
+    },
+    {
+      brand: 'amd',
+      model: '5950x',
+      series: 'ryzen5950',
+      url: 'https://www.power.no/data-og-tilbehoer/datakomponenter/prosessor/amd-ryzen-9-5950x-34-ghz-prosessor/p-1127826/?q=5950x',
+    },
+    {
+      brand: 'amd',
+      model: '5800x',
+      series: 'ryzen5800',
+      url: 'https://www.power.no/data-og-tilbehoer/datakomponenter/prosessor/amd-ryzen-7-5800x-38-ghz-prosessor/p-1127824/?q=5800x',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 digital',
+      series: 'sonyps5de',
+      url: 'https://www.power.no/gaming/playstation/playstation-konsoll/playstation-5-digital-edition/p-1101680/',
+    },
+    {
+      brand: 'sony',
+      model: 'ps5 console',
+      series: 'sonyps5c',
+      url: 'https://www.power.no/gaming/playstation/playstation-konsoll/playstation-5/p-1077687/',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series s',
+      series: 'xboxss',
+      url: 'https://www.power.no/gaming/xbox/xbox-konsoll/xbox-series-s-konsoll/p-1119850/',
+    },
+    {
+      brand: 'microsoft',
+      model: 'xbox series x',
+      series: 'xboxsx',
+      url: 'https://www.power.no/gaming/xbox/xbox-konsoll/xbox-series-x-konsoll/p-1119853/',
     },
   ],
   name: 'power-no',
