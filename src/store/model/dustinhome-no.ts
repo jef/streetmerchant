@@ -73,7 +73,7 @@ export const DustinHomeNO: Store = {
       brand: 'msi',
       model: 'gaming x trio',
       series: 'rx6800xt',
-      url: 'https://www.dustinhome.no/product/5011201937/',
+      url: 'https://www.dustinhome.no/product/5011209455/',
     },
   ],
   name: 'dustinhome-no',
