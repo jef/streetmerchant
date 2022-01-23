@@ -157,6 +157,7 @@ export type Model =
   | 'nitro+ oc se'
   | 'nitro oc se'
   | 'nitro oc'
+  | 'noctua edition oc'
   | 'oc'
   | 'pegasus'
   | 'pegasus oc'
