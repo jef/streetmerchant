@@ -300,7 +300,7 @@ export const ProshopNO: Store = {
       brand: 'asus',
       model: 'strix',
       series: '3070',
-      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-3070-ROG-STRIX-V2-LHR-8GB-GDDR6-RAM-Grafikkort/2958589',
+      url: 'https://www.proshop.no/2958589',
     },
     {
       brand: 'msi',
@@ -696,19 +696,19 @@ export const ProshopNO: Store = {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
-      url: 'https://www.proshop.no/Spillkonsoll/Sony-PlayStation-5-Digital-Edition-Nordic/2863627',
+      url: 'https://www.proshop.no/2863627',
     },
     {
       brand: 'microsoft',
       model: 'xbox series s',
       series: 'xboxss',
-      url: 'https://www.proshop.no/Spillkonsoll/Microsoft-Xbox-Series-S-512-GB-SSD/2880876',
+      url: 'https://www.proshop.no/2880876',
     },
     {
       brand: 'microsoft',
       model: 'xbox series x',
       series: 'xboxsx',
-      url: 'https://www.proshop.no/Spillkonsoll/Microsoft-Xbox-Series-X-1-TB-Nordic/2839638',
+      url: 'https://www.proshop.no/2839638',
     },
 
   ],
