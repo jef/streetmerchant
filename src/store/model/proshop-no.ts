@@ -9,6 +9,11 @@ export const ProshopNO: Store = {
         '#siteContainer > div.site-container-fullwidth > div > div.row.site-content-table > div.col-sm-9.col-sm-push-3.d-flex-column > div.row.site-row-margin-top > div > div > div:nth-child(2) > div.col-xs-12.col-sm-7 > div.row.site-row-margin-top > div.col-md-5.site-row-margin-top > form > button',
       text: ['Kjøp'],
     },
+    maxPrice: {
+      container:
+        '#siteContainer > div.site-container-fullwidth > div > div.row.site-content-table > div.col-sm-9.col-sm-push-3.d-flex-column > div.row.site-row-margin-top > div > div > div:nth-child(2) > div.col-xs-12.col-sm-7 > div.row.site-row-margin-top > div.col-md-7 > span > span.site-currency-attention',
+      euroFormat: true,
+    },
     outOfStock: {
       container: '.site-stock',
       text: ['Bestilt'],
