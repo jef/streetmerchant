@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const Elkjop: Store = {
+  backoffStatusCodes: [403, 429, 503],
   currency: 'kr.',
   labels: {
     inStock: {

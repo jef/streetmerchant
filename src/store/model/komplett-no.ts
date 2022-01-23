@@ -1,6 +1,7 @@
 import {Store} from './store';
 
 export const KomplettNO: Store = {
+  backoffStatusCodes: [403, 429, 503],
   currency: 'kr.',
   labels: {
 
