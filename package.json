@@ -68,7 +68,7 @@
     "@types/async": "^3.2.7",
     "@types/cheerio": "^0.22.30",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.4.13",
+    "@types/node": "^17.0.13",
     "@types/node-fetch": "^2.5.12",
     "@types/node-notifier": "^8.0.1",
     "@types/nodemailer": "^6.4.4",
