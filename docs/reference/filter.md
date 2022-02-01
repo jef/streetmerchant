@@ -131,6 +131,7 @@ Used with the `STORES` variable.
 | Landmark Computers | AU |  `landmark-computers`|
 | Ldlc | FR |  `ldlc`|
 | Ldlc | ES |  `ldlc-es`|
+| Ldlc | IT |  `ldlc-it`|
 | Mediamarkt | DE | `mediamarkt`|
 | Mediamarkt | AT | `mediamarkt-at`|
 | Medimax | DE | `medimax`|
