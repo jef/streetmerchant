@@ -745,7 +745,6 @@ export const AmazonDe: Store = {
     {
       brand: 'sony',
       cartUrl:
-      
         'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B09QG2JZYS&Quantity.1=1',
       labels: {
         inStock: {
