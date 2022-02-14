@@ -42,6 +42,12 @@ export const Ldlc: Store = {
       url: 'https://www.ldlc.com/fr-be/fiche/PB00369299.html',
     },
     {
+      brand: 'msi',
+      model: 'ventus 2X (LHR)',
+      series: '3050',
+      url: 'https://www.ldlc.com/fiche/PB00480344.html',
+    },
+    {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3080',
@@ -64,6 +70,12 @@ export const Ldlc: Store = {
       model: 'twin x2',
       series: '3080',
       url: 'https://www.ldlc.com/fr-be/fiche/PB00368690.html',
+    },
+    {
+      brand: 'inno3d',
+      model: 'twin x2',
+      series: '3050',
+      url: 'https://www.ldlc.com/fiche/PB00481183.html',
     },
     {
       brand: 'palit',
