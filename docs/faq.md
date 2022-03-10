@@ -41,7 +41,6 @@ npm run start
 
 You can also to [git-stash](https://git-scm.com/docs/git-stash), but we won't expand on that here.
 
-
 ## Why don't my notifications work?
 
 There is probably an [issue](https://github.com/jef/streetmerchant/issues?q=is%3Aissue+sort%3Aupdated-desc+sound+is%3Aclosed) that has [already](https://github.com/jef/streetmerchant/issues/182) [been](https://github.com/jef/streetmerchant/issues/116) [resolved](https://github.com/jef/streetmerchant/issues/155).
