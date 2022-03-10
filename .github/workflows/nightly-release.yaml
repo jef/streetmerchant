@@ -11,7 +11,7 @@ jobs:
       should-run: ${{ steps.code-change.outputs.should-run }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Check if code has changed with 24 hours
         continue-on-error: true
         id: code-change
@@ -24,7 +24,7 @@ jobs:
     if: needs.check-date.outputs.should-run == 'true'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Login into GitHub Container Registry
         run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
       - name: Build Docker image
