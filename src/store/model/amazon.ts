@@ -33,7 +33,7 @@ export const Amazon: Store = {
       },
     ],
     maxPrice: {
-      container: '#priceblock_ourprice',
+      container: '.a-offscreen',
     },
   },
   links: [
