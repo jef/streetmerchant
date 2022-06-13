@@ -1,7 +1,7 @@
 import * as Process from 'process';
 import {config} from './config'; // Needs to be loaded first
 import {startAPIServer, stopAPIServer} from './web';
-import {Browser, launch} from 'puppeteer';
+import Puppeteer, {Browser} from 'puppeteer';
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import {storeList} from './store/model';
@@ -107,7 +107,7 @@ export async function launchBrowser(): Promise<Browser> {
   }
 
   await stop();
-  const browser = await launch({
+  const browser = await Puppeteer.launch({
     args,
     defaultViewport: {
       height: config.page.height,
