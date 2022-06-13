@@ -5,7 +5,7 @@ You do not need any computer skills, smarts, or anything of that nature. You are
 ## Prerequisites
 
 - [git](https://git-scm.com/)
-- Either [Node.js 15](https://nodejs.org/en/) or [Docker (1.13.0+)](https://docs.docker.com/get-docker/) (advanced users)
+- Either [Node.js 16 (LTS)](https://nodejs.org/en/) or [Docker](https://docs.docker.com/get-docker/) (advanced users)
 
 ## Using Node.js
 
