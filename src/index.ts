@@ -1,7 +1,7 @@
 import * as Process from 'process';
 import {config} from './config'; // Needs to be loaded first
 import {startAPIServer, stopAPIServer} from './web';
-import Puppeteer, { Browser } from "puppeteer";
+import Puppeteer, {Browser} from "puppeteer";
 import {getSleepTime} from './util';
 import {logger} from './logger';
 import {storeList} from './store/model';
