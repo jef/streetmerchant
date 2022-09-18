@@ -60,6 +60,7 @@ export type Series =
   | 'sonyps5c'
   | 'sonyps5de'
   | 'sf'
+  | 'udm-pro'
   | 'udm-us'
   | 'xboxsx'
   | 'xboxss';
@@ -94,6 +95,7 @@ export type Model =
   | 'challenger pro oc'
   | 'crosshair viii'
   | 'dream machine'
+  | 'dream machine pro'
   | 'dual fan'
   | 'dual oc'
   | 'dual'

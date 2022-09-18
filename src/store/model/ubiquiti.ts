@@ -3,10 +3,12 @@ import {Store} from './store';
 export const Ubiquiti: Store = {
   currency: '$',
   labels: {
-    inStock: {
-      container: '.titleInStockBadge',
-      text: ['In Stock'],
-    },
+    inStock: [
+      {
+        container: '#titleInStockBadge',
+        text: ['In Stock'],
+      }
+    ],
     outOfStock: [
       {
         container: '.titleSoldOutBadge',
@@ -20,6 +22,12 @@ export const Ubiquiti: Store = {
       model: 'dream machine',
       series: 'udm-us',
       url: 'https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-us',
+    },
+    {
+      brand: 'ubiquiti',
+      model: 'dream machine pro',
+      series: 'udm-pro',
+      url: 'https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-pro',
     },
   ],
   name: 'ubiquiti',
