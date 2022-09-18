@@ -154,6 +154,7 @@ import {TescoIE} from './tesco-ie';
 import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
+import {Ubiquiti} from './ubiquiti';
 import {Umart} from './umart';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
@@ -328,6 +329,7 @@ export const storeList = new Map([
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
   [Umart.name, Umart],
+  [Ubiquiti.name, Ubiquiti],
   [Unieuro.name, Unieuro],
   [UltimaInformatica.name, UltimaInformatica],
   [Very.name, Very],

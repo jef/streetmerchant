@@ -30,10 +30,11 @@ export type Brand =
   | 'nvidia'
   | 'palit'
   | 'pny'
+  | 'powercolor'
   | 'sapphire'
   | 'sony'
+  | 'ubiquiti'
   | 'xfx'
-  | 'powercolor'
   | 'zotac';
 
 export type Series =
@@ -59,6 +60,7 @@ export type Series =
   | 'sonyps5c'
   | 'sonyps5de'
   | 'sf'
+  | 'udm-us'
   | 'xboxsx'
   | 'xboxss';
 
@@ -91,6 +93,7 @@ export type Model =
   | 'challenger pro'
   | 'challenger pro oc'
   | 'crosshair viii'
+  | 'dream machine'
   | 'dual fan'
   | 'dual oc'
   | 'dual'
