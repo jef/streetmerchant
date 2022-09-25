@@ -14,6 +14,10 @@ export const Ubiquiti: Store = {
         container: '.titleSoldOutBadge',
         text: ['Sold Out'],
       },
+      {
+        container: '#titleSoldOutBadge',
+        text: ['Sold Out'],
+      },
     ],
   },
   links: [
@@ -28,6 +32,12 @@ export const Ubiquiti: Store = {
       model: 'dream machine pro',
       series: 'udm-pro',
       url: 'https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-pro',
+    },
+    {
+      brand: 'ubiquiti',
+      model: 'dream router',
+      series: 'udr-us',
+      url: 'https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/dream-router',
     },
   ],
   name: 'ubiquiti',

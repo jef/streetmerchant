@@ -62,6 +62,7 @@ export type Series =
   | 'sf'
   | 'udm-pro'
   | 'udm-us'
+  | 'udr-us'
   | 'xboxsx'
   | 'xboxss';
 
@@ -96,6 +97,7 @@ export type Model =
   | 'crosshair viii'
   | 'dream machine'
   | 'dream machine pro'
+  | 'dream router'
   | 'dual fan'
   | 'dual oc'
   | 'dual'
