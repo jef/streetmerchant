@@ -10,7 +10,7 @@ export const HardwarePlanet: Store = {
       text: ['Aggiungi al carrello'],
     },
     maxPrice: {
-      container: '.product-price',
+      container: '..current-price > span',
       euroFormat: true,
     },
     outOfStock: {
@@ -23,7 +23,7 @@ export const HardwarePlanet: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.hardware-planet.it/mouse/2929-vendita-mouse-logitech-mouse-m185-optical-swift-grey-910-002238-5099206027282.html',
+      url: 'https://www.hardware-planet.it/cavi-per-ventole/74819-vendita-cavi-per-ventole-inline-cavo-alimentazione-6x-ventola-3pin-da-1x-3pin-femmina-35mainboard-supporta-6-ventole-offerta-del-mese-33436-4043718149780.html',
     },
     {
       brand: 'amd',
@@ -46,22 +46,38 @@ export const HardwarePlanet: Store = {
   ],
   linksBuilder: {
     builder: getProductLinksBuilder({
-      productsSelector: '.js-product-miniature-wrapper',
+      productsSelector: '.horizontal_mode .js-product-miniature',
       sitePrefix: 'https://www.hardware-planet.it',
-      titleSelector: '.product-title > a',
+      titleSelector: '.product_name > a',
     }),
     urls: [
       {
         series: '3060ti',
-        url: 'https://www.hardware-planet.it/module/iqitsearch/searchiqit?s=rtx+3060',
-      },
-      {
-        series: '3070',
-        url: 'https://www.hardware-planet.it/module/iqitsearch/searchiqit?s=rtx+3070',
+        url: 'https://www.hardware-planet.it/55-schede-video-nvidia?q=Processore+grafico-GeForce+RTX+3060+Ti',
       },
       {
         series: '3080',
-        url: 'https://www.hardware-planet.it/module/iqitsearch/searchiqit?s=rtx+3080',
+        url: 'https://www.hardware-planet.it/55-schede-video-nvidia?q=Processore+grafico-GeForce+RTX+3080',
+      },
+      {
+        series: '3080ti',
+        url: 'https://www.hardware-planet.it/55-schede-video-nvidia?q=Processore+grafico-GeForce+RTX+3080+Ti',
+      },
+      {
+        series: '3090',
+        url: 'https://www.hardware-planet.it/55-schede-video-nvidia?q=Processore+grafico-GeForce+RTX+3090',
+      },
+      {
+        series: 'rx6700xt',
+        url: 'https://www.hardware-planet.it/54-schede-video-ati-amd?q=Processore+grafico-Radeon+RX+6700+XT',
+      },
+      {
+        series: 'rx6800xt',
+        url: 'https://www.hardware-planet.it/54-schede-video-ati-amd?q=Processore+grafico-Radeon+RX+6800+XT',
+      },
+      {
+        series: 'rx6900xt',
+        url: 'https://www.hardware-planet.it/54-schede-video-ati-amd?q=Processore+grafico-Radeon+RX+6900+XT',
       },
     ],
   },

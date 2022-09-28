@@ -4,8 +4,8 @@ export const Evga: Store = {
   currency: '$',
   labels: {
     inStock: {
-      container: '',
-      text: [''],
+      container: '#EVGAContent > div > div.main-wrapper > div.main-product',
+      text: ['100-BR-0450-K1'],
     },
   },
   links: [
@@ -15,18 +15,6 @@ export const Evga: Store = {
       series: 'test:series',
       url: 'https://www.evga.com/products/product.aspx?pn=06G-P4-2065-KR',
     },
-/**   {
-  brand : 'evga',
-  labels : {
-    inStock: {
-         container: '#EVGAContent > div > div.main-wrapper > div.main-product',
-         text: ['100-BR-0450-K1'],
-             },
-            },
-         model: 'test:model',
-         series: 'test:series',
-          url: 'https://www.evga.com/products/feature.aspx',
- },**/
  {
   brand : 'evga',
   labels : {
