@@ -33,10 +33,10 @@ export function sendDiscordMessage(link: Link, store: Store) {
         const embed = new Discord.MessageEmbed()
           .setTitle('_**Stock alert!**_')
           .setDescription(
-            '> provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
+            'Ubiquiti is restocked :)'
           )
           .setThumbnail(
-            'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png'
+            ''
           )
           .setColor('#52b788')
           .setTimestamp();
@@ -77,7 +77,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
                 .send({
                   content: notifyText.length ? notifyText.join(' ') : null,
                   embeds: [embed],
-                  username: 'streetmerchant',
+                  username: 'Ui bot',
                 })
                 .then(resp => {
                   logger.info('✔ discord message sent resp.id: ' + resp.id);

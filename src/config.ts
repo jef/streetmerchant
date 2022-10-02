@@ -38,12 +38,11 @@ function envOrArray(
   environment: string | undefined,
   array?: string[]
 ): string[] {
-  return (
-    environment
-      ? environment.includes('\n')
-        ? environment.split('\n')
-        : environment.split(',')
-      : array ?? []
+  return (environment
+    ? environment.includes('\n')
+      ? environment.split('\n')
+      : environment.split(',')
+    : array ?? []
   ).map(s => s.trim());
 }
 
@@ -233,9 +232,7 @@ const notifications = {
       3060: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060),
       '3060ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060TI),
       3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
-      '3070ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070TI),
       3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
-      '3080ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080TI),
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
@@ -253,7 +250,6 @@ const notifications = {
       'test:series': envOrArray(process.env.DISCORD_NOTIFY_GROUP_TEST),
       xboxss: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSS),
       xboxsx: envOrArray(process.env.DISCORD_NOTIFY_GROUP_XBOXSX),
-      zotac: envOrArray(process.env.DISCORD_NOTIFY_GROUP_ZOTAC),
     },
     webhooks: envOrArray(process.env.DISCORD_WEB_HOOK),
   },
@@ -268,7 +264,6 @@ const notifications = {
     username: envOrString(process.env.EMAIL_USERNAME),
   },
   gotify: {
-    priority: envOrNumber(process.env.GOTIFY_PRIORITY),
     token: envOrString(process.env.GOTIFY_TOKEN),
     url: envOrString(process.env.GOTIFY_URL),
   },
@@ -337,6 +332,10 @@ const notifications = {
     channel: envOrString(process.env.SLACK_CHANNEL),
     token: envOrString(process.env.SLACK_TOKEN),
   },
+  smartthings: {
+    token: envOrString(process.env.SMARTTHINGS_TOKEN),
+    device: envOrString(process.env.SMARTTHINGS_SWITCH_LABEL),
+  },
   soundPlayer: envOrString(process.env.SOUND_PLAYER),
   telegram: {
     accessToken: envOrString(process.env.TELEGRAM_ACCESS_TOKEN),
@@ -384,7 +383,6 @@ const page = {
   height: 1080,
   inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
   screenshot: envOrBoolean(process.env.SCREENSHOT),
-  screenshotDir: envOrString(process.env.SCREENSHOT_DIR, 'screenshots'),
   timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
   width: 1920,
 };
@@ -407,13 +405,10 @@ const store = {
   country: envOrString(process.env.COUNTRY, 'usa'),
   maxPrice: {
     series: {
-      3050: envOrNumber(process.env.MAX_PRICE_SERIES_3050),
       3060: envOrNumber(process.env.MAX_PRICE_SERIES_3060),
       '3060ti': envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
       3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
-      '3070ti': envOrNumber(process.env.MAX_PRICE_SERIES_3070TI),
       3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
-      '3080ti': envOrNumber(process.env.MAX_PRICE_SERIES_3080TI),
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
@@ -431,7 +426,6 @@ const store = {
       'test:series': envOrNumber(process.env.MAX_PRICE_SERIES_TEST),
       xboxss: envOrNumber(process.env.MAX_PRICE_SERIES_XBOXSS),
       xboxsx: envOrNumber(process.env.MAX_PRICE_SERIES_XBOXSX),
-      zotac: envOrNumber(process.env.MAX_PRICE_SERIES_ZOTAC),
     },
   },
   microCenterLocation: envOrArray(process.env.MICROCENTER_LOCATION, ['web']),
@@ -444,28 +438,15 @@ const store = {
     };
   }),
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
-    '3060',
-    '3060ti',
-    '3070',
-    '3070ti',
-    '3080',
-    '3080ti',
-    '3090',
-    'rx6700xt',
-    'rx6800',
-    'rx6800xt',
-    'rx6900xt',
-    'ryzen5600',
-    'ryzen5800',
-    'ryzen5900',
-    'ryzen5950',
-    'sf',
-    'sonyps5c',
-    'sonyps5de',
-    'xboxss',
-    'xboxsx',
+   'ap',
+     'dreammachienepro',
+     'darkhero',
+     'camera',
+     'network',
+     'Cloud Key',
+     'switch',
   ]),
-  stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
+  stores: envOrArray(process.env.STORES, ['ubiquiti']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
     let proxyList = loadProxyList(name);

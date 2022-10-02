@@ -7,7 +7,6 @@ site_description: 🤖 The world's easiest, most powerful stock checker
 # Repository
 repo_name: jef/streetmerchant
 repo_url: https://github.com/jef/streetmerchant
-edit_uri: edit/main/docs/
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
@@ -21,20 +20,15 @@ theme:
   font:
     text: Roboto
     code: Fira Code
+  icon:
+    repo: octicons/octoface-24
   logo: assets/images/streetmerchant-logo.png
   language: en
   name: material
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    scheme: default
+    primary: indigo
+    accent: indigo
 
 # Plugins
 plugins:
@@ -47,6 +41,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/jef
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hijxf
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jeflecompte
 

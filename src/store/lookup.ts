@@ -26,8 +26,6 @@ import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../messaging';
 import {handleCaptchaAsync} from './captcha-handler';
 import useProxy from '@doridian/puppeteer-page-proxy';
-import {promises as fs} from 'fs';
-import path from 'path';
 
 const inStock: Record<string, boolean> = {};
 
@@ -282,15 +280,6 @@ async function lookup(browser: Browser, store: Store) {
       await disableBlockerInPage(pageProxy);
     }
 
-    if (
-      store.currentProxyIndex !== undefined &&
-      store.proxyList &&
-      store.proxyList?.length > 1
-    ) {
-      const client = await page.target().createCDPSession();
-      await client.send('Network.clearBrowserCookies');
-    }
-
     // Must apply backoff before closing the page, e.g. if CloudFlare is
     // used to detect bot traffic, it introduces a 5 second page delay
     // before redirecting to the next page
@@ -345,11 +334,7 @@ async function lookupIem(
     if (config.page.screenshot) {
       logger.debug('ℹ saving screenshot');
 
-      await fs.mkdir(config.page.screenshotDir, {recursive: true});
-      link.screenshot = path.join(
-        config.page.screenshotDir,
-        `success-${Date.now()}.png`
-      );
+      link.screenshot = `success-${Date.now()}.png`;
       await page.screenshot({path: link.screenshot});
     }
   }
@@ -497,17 +482,6 @@ async function isItemInStock(
     }
   }
 
-  if (store.labels.maxPrice) {
-    const maxPrice = config.store.maxPrice.series[link.series];
-
-    link.price = await getPrice(page, store.labels.maxPrice, baseOptions);
-
-    if (link.price && link.price > maxPrice && maxPrice > 0) {
-      logger.info(Print.maxPrice(link, store, maxPrice, true));
-      return false;
-    }
-  }
-
   return true;
 }
 
@@ -566,11 +540,11 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
 
 export async function tryLookupAndLoop(browser: Browser, store: Store) {
   if (!browser.isConnected()) {
-    logger.silly(`[${store.name}] Ending this loop as browser is disposed...`);
+    logger.debug(`[${store.name}] Ending this loop as browser is disposed...`);
     return;
   }
 
-  logger.silly(`[${store.name}] Starting lookup...`);
+  logger.debug(`[${store.name}] Starting lookup...`);
   try {
     await lookup(browser, store);
   } catch (error: unknown) {
@@ -578,6 +552,6 @@ export async function tryLookupAndLoop(browser: Browser, store: Store) {
   }
 
   const sleepTime = getSleepTime(store);
-  logger.silly(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
+  logger.debug(`[${store.name}] Lookup done, next one in ${sleepTime} ms`);
   setTimeout(tryLookupAndLoop, sleepTime, browser, store);
 }

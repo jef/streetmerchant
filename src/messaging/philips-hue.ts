@@ -61,9 +61,10 @@ const adjustLightsWithAPI = (hueBridge: Api) => {
       .then((allLights: any[]) => {
         allLights.forEach((light: any) => {
           logger.debug('adjusting all hue lights');
-          (
-            hueBridge.lights.setLightState(light, lightState) as Promise<any>
-          ).catch((error: Error) => {
+          (hueBridge.lights.setLightState(
+            light,
+            lightState
+          ) as Promise<any>).catch((error: Error) => {
             logger.error('Failed to adjust all lights.');
             logger.error(error);
             throw error;

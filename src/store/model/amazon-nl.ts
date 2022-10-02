@@ -23,7 +23,7 @@ export const AmazonNl: Store = {
       },
     ],
     maxPrice: {
-      container: '.a-text-price',
+      container: '#priceblock_ourprice',
       euroFormat: true,
     },
     outOfStock: [

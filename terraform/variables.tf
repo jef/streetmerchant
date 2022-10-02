@@ -38,8 +38,3 @@ variable "streetmerchant_env" {
   description = "name/value pairs for .env values"
   default = {}
 }
-
-variable "ecs_task_execution_role_name" {
-  description = "ECS task execution role name"
-  default = "myEcsTaskExecutionRole"
-}

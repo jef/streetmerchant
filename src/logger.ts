@@ -62,14 +62,14 @@ export const Print = {
         '✖ ' +
         buildProductString(link, store, true) +
         ' :: ' +
-        chalk.yellow(`STATUS CODE ERROR ${statusCode}`)
+        chalk.yellow(`BANNED`)
       );
     }
 
     return `✖ ${buildProductString(
       link,
       store
-    )} :: STATUS CODE ERROR ${statusCode}`;
+    )} :: BANNED`;
   },
   bannedSeller(link: Link, store: Store, color?: boolean): string {
     if (color) {
@@ -144,14 +144,14 @@ export const Print = {
         buildProductString(link, store, true) +
         ' :: ' +
         chalk.yellow(
-          `IN STOCK, PRICE ${link.price ?? ''} EXCEEDS LIMIT ${maxPrice}`
+          `IN STOCK, PRICE ${link.price ?? ''} Whoa, theres a price limit ${maxPrice}`
         )
       );
     }
 
     return `✖ ${buildProductString(link, store)} :: PRICE ${
       link.price ?? ''
-    } EXCEEDS LIMIT ${maxPrice}`;
+    } Whoa, theres a price limit ${maxPrice}`;
   },
   message(
     message: string,
@@ -188,11 +188,11 @@ export const Print = {
         '✖ ' +
         buildProductString(link, store, true) +
         ' :: ' +
-        chalk.red('OUT OF STOCK')
+        chalk.red('Out of Stock')
       );
     }
 
-    return `✖ ${buildProductString(link, store)} :: OUT OF STOCK`;
+    return `✖ ${buildProductString(link, store)} :: Out of stock`;
   },
   productInStock(link: Link): string {
     let productString = `Product Page: ${link.url}`;
@@ -206,11 +206,11 @@ export const Print = {
         '✖ ' +
         buildProductString(link, store, true) +
         ' :: ' +
-        chalk.yellow('RATE LIMIT EXCEEDED')
+        chalk.yellow('TOO FAST')
       );
     }
 
-    return `✖ ${buildProductString(link, store)} :: RATE LIMIT EXCEEDED`;
+    return `✖ ${buildProductString(link, store)} :: TOO FAST`;
   },
   recursionLimit(link: Link, store: Store, color?: boolean): string {
     if (color) {

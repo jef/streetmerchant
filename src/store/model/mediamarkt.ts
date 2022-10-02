@@ -33,10 +33,6 @@ export const Mediamarkt: Store = {
         container: '#root',
         text: ['Dieser Artikel ist bald wieder für Sie verfügbar'],
       },
-      {
-        container: '#root',
-        text: ['Dieser Artikel ist bald wieder verfügbar'],
-      },
     ],
   },
   links: [
@@ -281,18 +277,6 @@ export const Mediamarkt: Store = {
       url: 'https://www.mediamarkt.de/de/product/-2683226.html',
     },
     {
-      brand: 'asrock',
-      model: 'phantom gaming oc',
-      series: 'rx6700xt',
-      url: 'https://www.mediamarkt.de/de/product/-85340951.html',
-    },
-    {
-      brand: 'gigabyte',
-      model: 'aorus elite',
-      series: 'rx6700xt',
-      url: 'https://www.mediamarkt.de/de/product/-2728671.html',
-    },
-    {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
@@ -302,121 +286,35 @@ export const Mediamarkt: Store = {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-hd-kamera-2715822.html',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-hd-kamera-2715822.html',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-assassins-creed-valhalla-2715828.html',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-assassins-creed-valhalla-2715828.html',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
     },
     {
       brand: 'sony',
       model: 'ps5 console',
       series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/-2661938.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-hd-kamera-2715822.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-assassins-creed-valhalla-2715828.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-marvel-s-spider-man-miles-morales-2715827.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-ghost-of-tsushima-directors-cut-2757003.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-ps5-ratchet-clank-rift-apart-2741441.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstationr5-deathloop-death-stranding-dc-nur-online-2768018.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstationr5-death-stranding-directors-cut-nur-online-2765122.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstationr5-ghost-of-tsushima-death-stranding-dc-nur-online-2768019.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstationr5-2762011.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-2661938.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 console',
-      series: 'sonyps5c',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-dualsense%E2%84%A2-2752998.html',
+      url:
+        'https://www.mediamarkt.de/de/product/_sony-ps5-marvels-spider-man-miles-morales-ultimate-edition-2715826.html',
     },
     {
       brand: 'sony',
       model: 'ps5 digital',
       series: 'sonyps5de',
       url: 'https://www.mediamarkt.de/de/product/-2661939.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 digital',
-      series: 'sonyps5de',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-digital-edition-2661939.html',
-    },
-    {
-      brand: 'sony',
-      model: 'ps5 digital',
-      series: 'sonyps5de',
-      url: 'https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-digital-edition-medienfernbedienung-2722423.html',
     },
     {
       brand: 'microsoft',

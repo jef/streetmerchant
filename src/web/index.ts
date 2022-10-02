@@ -13,7 +13,6 @@ import {logger} from '../logger';
 
 const approot = join(__dirname, '../../../');
 const webroot = join(approot, './web');
-const screenshotDir = join(approot, config.page.screenshotDir);
 
 const contentTypeMap: Record<string, string> = {
   css: 'text/css',
@@ -142,11 +141,11 @@ function handleAPI(
           return;
         }
 
-        sendFile(response, `success-${timeStamp}.png`, screenshotDir);
+        sendFile(response, `../success-${timeStamp}.png`);
         return;
       }
 
-      readdir(screenshotDir, (error, files) => {
+      readdir(approot, (error, files) => {
         if (error) {
           sendError(response, error.message);
           return;
