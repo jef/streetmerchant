@@ -44,9 +44,9 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
-            type=raw,pattern=nightly
-            type=raw,pattern={{sha}}
-            type=raw,pattern={{version}}
+            type=raw,value=nightly
+            type=raw,value={{sha}}
+            type=raw,value={{version}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
