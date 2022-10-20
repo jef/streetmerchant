@@ -8,7 +8,7 @@ jobs:
     name: Check dates
     runs-on: ubuntu-latest
     outputs:
-      should-run: ${{ steps.code_change.outputs.should_run }}
+      should_run: ${{ steps.code_change.outputs.should_run }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -36,16 +36,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Extract metadata (tags, labels) for Docker
-        id: meta
+        id: docker_metadata
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ env.IMAGE_NAME }}
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=nightly
+            type=raw,value={{sha}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
+          labels: ${{ steps.docker_metadata.outputs.labels }}
           push: true
-          tags: |
-            type=schedule,pattern=nightly
-            type=sha
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.docker_metadata.outputs.tags }}
