@@ -2,6 +2,9 @@ name: Nightly Release
 on:
   schedule:
     - cron: '0 0 * * *'
+  pull_request:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   check_date:
@@ -40,10 +43,14 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,pattern=nightly
+            type=raw,pattern={{sha}}
+            type=raw,pattern={{version}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           labels: ${{ steps.docker_metadata.outputs.labels }}
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
