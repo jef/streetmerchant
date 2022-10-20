@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install Dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != "true"
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
       - name: Compile TypeScript
         run: npm run compile
@@ -49,5 +49,5 @@ jobs:
               - 'Dockerfile'
               - 'package*.json'
       - name: Build Docker image
-        if: steps.filter.outputs.build == "true"
+        if: steps.filter.outputs.build == 'true'
         run: docker build .

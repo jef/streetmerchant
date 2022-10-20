@@ -23,7 +23,7 @@ jobs:
     name: Build and release Docker image
     runs-on: ubuntu-latest
     needs: check-date
-    if: needs.check-date.outputs.should-run == "true"
+    if: needs.check-date.outputs.should-run == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
