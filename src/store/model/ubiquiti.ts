@@ -7,7 +7,7 @@ export const Ubiquiti: Store = {
       {
         container: '#titleInStockBadge',
         text: ['In Stock'],
-      }
+      },
     ],
     outOfStock: [
       {
