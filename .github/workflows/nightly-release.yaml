@@ -2,9 +2,6 @@ name: Nightly Release
 on:
   schedule:
     - cron: '0 0 * * *'
-  pull_request:
-    branches:
-      - main
   workflow_dispatch: {}
 jobs:
   check_date:
@@ -46,11 +43,10 @@ jobs:
           tags: |
             type=raw,value=nightly
             type=raw,value={{sha}}
-            type=raw,value={{version}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           labels: ${{ steps.docker_metadata.outputs.labels }}
-          push: false
+          push: true
           tags: ${{ steps.meta.outputs.tags }}

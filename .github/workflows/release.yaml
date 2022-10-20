@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-tag-release:
+  build_tag_release:
     name: Build, tag, and release Docker image
     runs-on: ubuntu-latest
     steps:
@@ -18,24 +18,3 @@ jobs:
           release-type: node
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Extract metadata (tags, labels) for Docker
-        id: docker_metadata
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=raw,value=latest
-            type=raw,value={{version}}
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          labels: ${{ steps.docker_metadata.outputs.labels }}
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
