@@ -8,7 +8,7 @@ jobs:
     name: Check dates
     runs-on: ubuntu-latest
     outputs:
-      should-run: ${{ steps.code_change.outputs.should_run }}
+      should_run: ${{ steps.code_change.outputs.should_run }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
