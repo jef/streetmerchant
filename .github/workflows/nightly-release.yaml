@@ -4,7 +4,7 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
 jobs:
-  check-date:
+  check_date:
     name: Check dates
     runs-on: ubuntu-latest
     outputs:
@@ -16,23 +16,34 @@ jobs:
         continue-on-error: true
         id: code-change
         run: |
-          [[ $(git rev-list --after="24 hours" --first-parent HEAD) ]] && echo "::set-output name=should-run::true"
-  build-release:
+          if [[ $(git rev-list --after="24 hours" --first-parent HEAD) ]]; then
+            echo "should-run=true" >> $GITHUB_OUTPUT
+          fi
+  build_release:
     name: Build and release Docker image
     runs-on: ubuntu-latest
     needs: check-date
-    if: needs.check-date.outputs.should-run == 'true'
+    if: needs.check-date.outputs.should-run == "true"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Login into GitHub Container Registry
-        run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-      - name: Build Docker image
-        run: |
-          docker build \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}" \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:nightly" .
-      - name: Release Docker image
-        run: |
-          docker push "ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA:0:7}"
-          docker push "ghcr.io/${GITHUB_REPOSITORY}:nightly"
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/${{ env.IMAGE_NAME }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: |
+            type=schedule,pattern=nightly
+            type=sha
+          labels: ${{ steps.meta.outputs.labels }}
