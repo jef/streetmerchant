@@ -41,14 +41,11 @@ jobs:
         id: docker_metadata
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ env.IMAGE_NAME }}
-          tags: |
-            type=schedule,pattern=nightly
-            type=sha
+          images: ghcr.io/${{ github.repository }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           labels: ${{ steps.docker_metadata.outputs.labels }}
           push: false
-          tags: ${{ steps.docker_metadata.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
