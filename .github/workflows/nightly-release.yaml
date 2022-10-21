@@ -26,8 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_date
     if: needs.check_date.outputs.should_run == 'true'
-    permissions:
-      packages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
