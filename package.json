@@ -44,7 +44,7 @@
     "discord.js": "^13.0.1",
     "dotenv": "^10.0.0",
     "messaging-api-telegram": "^1.0.4",
-    "mqtt": "^4.2.8",
+    "mqtt": "^4.3.7",
     "node-fetch": "^2.6.1",
     "node-hue-api": "^4.0.10",
     "node-notifier": "^10.0.0",
