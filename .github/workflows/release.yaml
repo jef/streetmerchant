@@ -18,4 +18,4 @@ jobs:
           release-type: node
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"refactor","section":"Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"ci","section":"Continuous Integration","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"refactor","section":"Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
