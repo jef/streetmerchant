@@ -4,7 +4,7 @@ on:
     tags:
       - 'v*'
 jobs:
-  release_build_tag_publish:
+  build_tag_publish:
     name: Create release
     runs-on: ubuntu-latest
     steps:

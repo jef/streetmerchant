@@ -1,10 +1,10 @@
-name: Release, build, tag, and publish
+name: Release
 on:
   push:
     branches:
       - main
 jobs:
-  release_build_tag_publish:
+  release:
     name: Create release
     runs-on: ubuntu-latest
     steps:
