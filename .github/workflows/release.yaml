@@ -1,16 +1,16 @@
-name: Release
+name: Release, build, tag, and publish
 on:
   push:
     branches:
       - main
 jobs:
-  release:
+  release_build_tag_publish:
     name: Create release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Setup release please
+      - name: Run release-please
         uses: google-github-actions/release-please-action@v3
         id: release
         with:
@@ -19,3 +19,27 @@ jobs:
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"refactor","section":"Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
+      - name: Login to GitHub Container Registry
+        if: steps.release.outputs.release_created == 'true'
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        if: steps.release.outputs.release_created == 'true'
+        id: docker_metadata
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=latest
+            type=raw,pattern=${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
+      - name: Build and push Docker image
+        if: steps.release.outputs.release_created == 'true'
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          labels: ${{ steps.docker_metadata.outputs.labels }}
+          push: true
+          tags: ${{ steps.docker_metadata.outputs.tags }}
