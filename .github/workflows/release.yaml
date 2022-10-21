@@ -4,8 +4,8 @@ on:
     branches:
       - main
 jobs:
-  build_tag_release:
-    name: Build, tag, and release Docker image
+  release:
+    name: Create release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

@@ -1,33 +1,36 @@
-name: Publish Docker image
+name: Publish
 on:
   push:
     tags:
       - 'v*'
 jobs:
-  publish:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Login to GitHub Container Registry
-      if: steps.release.outputs.release_created == 'true'
-      uses: docker/login-action@v2
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Extract metadata (tags, labels) for Docker
-      if: steps.release.outputs.release_created == 'true'
-      id: docker_metadata
-      uses: docker/metadata-action@v4
-      with:
-        images: ghcr.io/${{ github.repository }}
-        tags: |
-          type=raw,value=latest
-          type=semver,pattern={{version}}
-    - name: Build and push Docker image
-      if: steps.release.outputs.release_created == 'true'
-      uses: docker/build-push-action@v3
-      with:
-        context: .
-        labels: ${{ steps.docker_metadata.outputs.labels }}
-        push: true
-        tags: ${{ steps.meta.outputs.tags }}
+  build_tag_publish:
+    name: Build, tag and publish Docker image
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        if: steps.release.outputs.release_created == 'true'
+        id: docker_metadata
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=latest
+            type=semver,pattern={{version}}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          labels: ${{ steps.docker_metadata.outputs.labels }}
+          push: true
+          tags: ${{ steps.docker_metadata.outputs.tags }}
