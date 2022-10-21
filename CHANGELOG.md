@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.7.0](https://github.com/jef/streetmerchant/compare/v3.6.0...v3.7.0) (2022-10-21)
+
+
+### Features
+
+* **ci:** start using PAT ([207c760](https://github.com/jef/streetmerchant/commit/207c7605eff2a812b7488dc701d164fd2f65c1f1))
+
+
+### Bug Fixes
+
+* **ci:** update release ([4c1f23e](https://github.com/jef/streetmerchant/commit/4c1f23e68ec1d63ed9dd17c28f83444e3bb14e6f))
+
+
+### Continuous Integration
+
+* remove fetch-depth ([c21d412](https://github.com/jef/streetmerchant/commit/c21d412ed5959bd7a0a56a6dcf624ff9e6c2dac8))
+* update changelog-types ([0a8334a](https://github.com/jef/streetmerchant/commit/0a8334aa440e3e6acfbb9cfe392c72af36a391bf))
+* update naming ([5d3ca2e](https://github.com/jef/streetmerchant/commit/5d3ca2ead9e93384436948b9ef60d377b2bccf34))
+
 ## [3.6.0](https://github.com/jef/streetmerchant/compare/v3.5.0...v3.6.0) (2022-10-21)
 
 
