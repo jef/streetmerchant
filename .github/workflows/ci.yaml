@@ -14,20 +14,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.18.0
-      - name: Cache mode modules
-        id: cache-npm
+      - name: Cache node modules
+        id: cache_node_modules
         uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-node-
       - name: Install Dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        if: steps.cache_node_modules.outputs.cache-hit != 'true'
         run: npm ci
       - name: Compile TypeScript
         run: npm run compile
