@@ -2,7 +2,7 @@ name: Publish
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*.*.*'
 jobs:
   build_tag_publish:
     name: Build, tag and publish Docker image
