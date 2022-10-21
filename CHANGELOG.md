@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.1](https://github.com/jef/streetmerchant/compare/v3.7.0...v3.7.1) (2022-10-21)
+
+
+### Continuous Integration
+
+* checkout when publish ([a5c0ed8](https://github.com/jef/streetmerchant/commit/a5c0ed8d9f22169649d700c1d7d02b18cdf658d6))
+
 ## [3.7.0](https://github.com/jef/streetmerchant/compare/v3.6.0...v3.7.0) (2022-10-21)
 
 
