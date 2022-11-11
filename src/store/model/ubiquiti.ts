@@ -39,6 +39,24 @@ export const Ubiquiti: Store = {
       series: 'udr-us',
       url: 'https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/dream-router',
     },
+    {
+      brand: 'ubiquiti',
+      model: 'g4 doorbell pro',
+      series: 'g4-doorbell-pro',
+      url: 'https://store.ui.com/collections/unifi-protect/products/g4-doorbell-pro',
+    },
+    {
+      brand: 'ubiquiti',
+      model: 'network video recorder',
+      series: 'unvr',
+      url: 'https://store.ui.com/collections/unifi-protect/products/unvr',
+    },
+    {
+      brand: 'ubiquiti',
+      model: 'network video recorder pro',
+      series: 'unvr-pro',
+      url: 'https://store.ui.com/collections/unifi-protect/products/unvr-pro',
+    },
   ],
   name: 'ubiquiti',
 };
