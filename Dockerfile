@@ -1,4 +1,4 @@
-FROM node:16.18.0-alpine3.16 AS builder
+FROM node:19.1.0-alpine3.16 AS builder
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
@@ -14,7 +14,7 @@ COPY test/ test/
 RUN npm run compile
 RUN npm prune --production
 
-FROM node:16.18.0-alpine3.16
+FROM node:19.1.0-alpine3.16
 
 RUN apk add --no-cache chromium
 
