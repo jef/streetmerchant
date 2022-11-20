@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  streetmerchant:
+    image: ghcr.io/Mr-Tech-13/4090-tracker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 4090-tracker
+    env_file:
+      - dotenv

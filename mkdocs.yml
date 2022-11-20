@@ -1,0 +1,99 @@
+# Project information
+site_name: streetmerchant
+site_url: https://jef.buzz/streetmerchant
+site_author: Jef LeCompte
+site_description: 🤖 The world's easiest, most powerful stock checker
+
+# Repository
+repo_name: jef/streetmerchant
+repo_url: https://github.com/jef/streetmerchant
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2020 Jef LeCompte
+
+# Configuration
+theme:
+  custom_dir: docs/overrides
+  favicon: https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png
+  features:
+    - search.suggest
+  font:
+    text: Roboto
+    code: Fira Code
+  logo: assets/images/streetmerchant-logo.png
+  language: en
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Plugins
+plugins:
+  - git-revision-date
+  - macros
+  - search
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jef
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jeflecompte
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Reference:
+    - Application: reference/application.md
+    - Captcha: reference/captcha.md
+    - Filter: reference/filter.md
+    - Notification: reference/notification.md
+    - Proxy: reference/proxy.md
+    - Terraform: reference/terraform.md
+  - Help:
+      - General: help/general.md
+      - Troubleshoot: help/troubleshoot.md
+  - FAQ: faq.md
+  - Changelog: changelog.md
+  - About: about.md

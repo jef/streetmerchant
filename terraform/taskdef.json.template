@@ -1,0 +1,18 @@
+[
+  {
+    "name": "${name}-task",
+    "image": "ghcr.io/jef/streetmerchant:latest",
+    "cpu": ${cpu},
+    "memory": ${memory},
+    "essential": true,
+    "environment": ${environment},
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${awslogs-group}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    }
+  }
+]
