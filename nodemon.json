@@ -1,8 +1,0 @@
-{
-  "exec": "npx ts-node --files ./src/index",
-  "ext": "ts",
-  "watch": [
-    "src/",
-    "dotenv"
-  ]
-}
