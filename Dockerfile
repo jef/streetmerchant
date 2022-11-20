@@ -1,4 +1,6 @@
-FROM node:16.18.0-alpine3.16 AS builder
+FROM node:16.6.1-alpine3.13 AS builder
+
+LABEL org.opencontainers.image.source="https://github.com/Mr-Tech-13/4090-tracker"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
@@ -14,7 +16,7 @@ COPY test/ test/
 RUN npm run compile
 RUN npm prune --production
 
-FROM node:16.18.0-alpine3.16
+FROM node:16.6.1-alpine3.13
 
 RUN apk add --no-cache chromium
 

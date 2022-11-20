@@ -25,8 +25,9 @@ First and foremost, this service _will not_ automatically buy for you.
 streetmerchant runs on Node.js:
 
 ```shell
-git clone https://github.com/jef/streetmerchant.git
-cd streetmerchant && npm i && npm run start
+git clone hhttps://github.com/Mr-Tech-13/4090-tracker.git
+cd 4090-tracker && npm i && npm run start
 ```
 
 For more information and customization, visit [jef.buzz/streetmerchant/getting-started](https://jef.buzz/streetmerchant/getting-started).
+
