@@ -18,7 +18,7 @@ jobs:
         uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
