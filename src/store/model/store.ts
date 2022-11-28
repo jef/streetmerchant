@@ -49,6 +49,7 @@ export type Series =
   | '3080ti'
   | '3090'
   | 'darkhero'
+  | 'g4-doorbell-pro'
   | 'rx6800'
   | 'rx6700xt'
   | 'rx6800xt'
@@ -63,6 +64,8 @@ export type Series =
   | 'udm-pro'
   | 'udm-us'
   | 'udr-us'
+  | 'unvr'
+  | 'unvr-pro'
   | 'xboxsx'
   | 'xboxss';
 
@@ -117,6 +120,7 @@ export type Model =
   | 'ftw3 ultra'
   | 'ftw3 ultra hybrid'
   | 'ftw3 ultra hydro copper'
+  | 'g4 doorbell pro'
   | 'gamerock'
   | 'gamerock oc'
   | 'gaming oc'
@@ -159,6 +163,8 @@ export type Model =
   | 'merc'
   | 'merc core'
   | 'merc ultra'
+  | 'network video recorder'
+  | 'network video recorder pro'
   | 'nitro+'
   | 'nitro+ se'
   | 'nitro+ oc'
