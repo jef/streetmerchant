@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.8.1](https://github.com/jef/streetmerchant/compare/v3.8.0...v3.8.1) (2022-11-28)
+
+
+### Continuous Integration
+
+* fix tags ([e67a383](https://github.com/jef/streetmerchant/commit/e67a3838e195b0e6c3039546f6e48d30e291fd6a))
+* revert username ([2d702b3](https://github.com/jef/streetmerchant/commit/2d702b32b4ea370d27071f4ffa833c3c0ac8cc88))
+
 ## [3.8.0](https://github.com/jef/streetmerchant/compare/v3.7.1...v3.8.0) (2022-11-28)
 
 
