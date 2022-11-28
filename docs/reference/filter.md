@@ -263,7 +263,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Nvidia RTX 3080 | `3080` |
 | Nvidia RTX 3080 Ti | `3080ti` |
 | Nvidia RTX 3090 | `3090` |
-| Nvidia RTX 3090 | `4090` |
+| Nvidia RTX 4090 | `4090` |
 | Corsair SFX PSU | `sf` |
 | Crosshair VIII | `darkhero` |
 | Sony PS5 | `sonyps5c` |
