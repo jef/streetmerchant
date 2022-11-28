@@ -26,7 +26,7 @@ jobs:
       - name: Normalize tag name
         if: steps.release.outputs.release_created == 'true'
         id: normalize_tag
-        runs: |
+        run: |
           tag=${{ steps.release.outputs.tag_name }}
           echo "tag_name_no_v=${tag#v}"
   build_tag_publish:
