@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.8.3](https://github.com/jef/streetmerchant/compare/v3.8.2...v3.8.3) (2022-11-28)
+
+
+### Continuous Integration
+
+* give tag an output ([36771fd](https://github.com/jef/streetmerchant/commit/36771fd55539c17b7fb589b2e5811644e62916fa))
+
+
+### Miscellaneous
+
+* **docker:** remove erroneous extra copy ([9225582](https://github.com/jef/streetmerchant/commit/922558262b664da1e8f7a69a156582345f35a291))
+* ignore docs and add web to Dockerfile ([95f112c](https://github.com/jef/streetmerchant/commit/95f112c500168b389db5da5544f2d105518835ce))
+
 ## [3.8.2](https://github.com/jef/streetmerchant/compare/v3.8.1...v3.8.2) (2022-11-28)
 
 
