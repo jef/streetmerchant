@@ -41,4 +41,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/jef/streetmerchant:nightly,ghcr.io/jef/streetmerchant:${{ steps.short_sha.outputs.short_sha }}
+          tags: "ghcr.io/jef/streetmerchant:nightly,ghcr.io/jef/streetmerchant:${{ steps.short_sha.outputs.short_sha }}"

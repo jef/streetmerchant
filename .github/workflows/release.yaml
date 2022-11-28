@@ -48,4 +48,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/jef/streetmerchant:latest,ghcr.io/jef/streetmerchant:${{ needs.release.outputs.tag_name_no_v }}
+          tags: "ghcr.io/jef/streetmerchant:latest,ghcr.io/jef/streetmerchant:${{ needs.release.outputs.tag_name_no_v }}"
