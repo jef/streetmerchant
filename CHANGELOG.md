@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.8.2](https://github.com/jef/streetmerchant/compare/v3.8.1...v3.8.2) (2022-11-28)
+
+
+### Continuous Integration
+
+* quote tags ([9ce7dac](https://github.com/jef/streetmerchant/commit/9ce7dac951552d239c83e56bebadbfa22ae02110))
+
 ## [3.8.1](https://github.com/jef/streetmerchant/compare/v3.8.0...v3.8.1) (2022-11-28)
 
 
