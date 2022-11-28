@@ -23,7 +23,7 @@ jobs:
     name: Build, tag and publish Docker image
     runs-on: ubuntu-latest
     needs: check_code_change
-    if: needs.check_code_change.outputs.should_run == "true"
+    if: needs.check_code_change.outputs.should_run == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

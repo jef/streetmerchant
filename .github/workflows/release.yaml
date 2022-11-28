@@ -24,7 +24,7 @@ jobs:
           package-name: streetmerchant
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"ci","section":"Continuous Integration","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"refactor","section":"Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
       - name: Normalize tag name
-        if: steps.release.outputs.release_created == "true"
+        if: steps.release.outputs.release_created == 'true'
         id: normalize_tag
         runs: |
           tag=${{ steps.release.outputs.tag_name }}
@@ -33,7 +33,7 @@ jobs:
     name: Build, tag, and publish
     runs-on: ubuntu-latest
     needs: release
-    if: needs.release.outputs.release_created == "true"
+    if: needs.release.outputs.release_created == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
