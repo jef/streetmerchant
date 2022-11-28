@@ -15,6 +15,7 @@ RUN npm ci
 
 COPY src/ src/
 COPY test/ test/
+COPY web/ web/
 RUN npm run compile
 RUN npm prune --production
 
