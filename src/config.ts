@@ -237,6 +237,7 @@ const notifications = {
       3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
       '3080ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080TI),
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
+      4090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_4090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
       rx6700xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6700XT),
@@ -414,6 +415,7 @@ const store = {
       3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
       '3080ti': envOrNumber(process.env.MAX_PRICE_SERIES_3080TI),
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
+      4090: envOrNumber(process.env.MAX_PRICE_SERIES_4090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
       'g4-doorbell-pro': envOrNumber(

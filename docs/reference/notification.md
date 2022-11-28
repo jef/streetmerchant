@@ -38,6 +38,7 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
 | `DISCORD_NOTIFY_GROUP_3080TI` | Discord group to notify on 3080 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock |
+| `DISCORD_NOTIFY_GROUP_4090` | Discord group to notify on 4090 stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
