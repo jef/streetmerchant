@@ -336,6 +336,72 @@ for (const microCenterLocation of microCenterLocations) {
         series: 'darkhero',
         url: `https://www.microcenter.com/product/631349/asus-x570-rog-crosshair-viii-dark-hero-amd-am4-atx-motherboard/?storeid=${storeId}`,
       },
+      {
+        brand: 'asus',
+        model: 'tuf oc',
+        series: '4090',
+        url: `https://www.microcenter.com/product/654070/asus-geforce-rtx%C2%A04090-tuf-gaming-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'asus',
+        model: 'tuf',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659687/asus-geforce-rtx-4090-tuf-gaming-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'msi',
+        model: 'suprim liquid x',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659534/msi-geforce-rtx%C2%A04090-suprim-liquid-x-24g-hybrid-cooling-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'windforce',
+        series: '4090',
+        url: `https://www.microcenter.com/product/654056/gigabyte-nvidia-geforce-rtx-4090-windforce-triple-fan-24-gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'msi',
+        model: 'gaming trio',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659527/msi-nvidia-geforce-rtx-4090-gaming-trio-triple-fan-24-gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'msi',
+        model: 'gaming x trio',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659528/msi-nvidia-geforce-rtx-4090-gaming-x-trio-triple-fan-24-gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'msi',
+        model: 'suprim x',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659533/msi-geforce-rtx%C2%A04090-suprim-x-24g-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'asus',
+        model: 'strix oc',
+        series: '4090',
+        url: `https://www.microcenter.com/product/654069/asus-nvidia-geforce-rtx-4090-rog-strix-overclocked-triple-fan-24-gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'zotac',
+        model: 'trinity',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659575/zotac-nvidia-geforce-rtx-4090-trinity-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'gaming oc',
+        series: '4090',
+        url: `https://www.microcenter.com/product/654055/gigabyte-nvidia-geforce-rtx-4090-gaming-overclocked-triple-fan-24-gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
+      {
+        brand: 'zotac',
+        model: 'amp airo',
+        series: '4090',
+        url: `https://www.microcenter.com/product/659576/zotac-nvidia-geforce-rtx-4090-amp-extreme-airo-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
+      },
     ]);
   }
 }
