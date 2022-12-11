@@ -93,6 +93,7 @@ import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
 import {KomplettNO} from './komplett-no';
 import {LandmarkComputers} from './lmc';
+import {LDLCItaly} from './ldlc-italy';
 import {Mediamarkt} from './mediamarkt';
 import {MediamarktAt} from './mediamarkt-at';
 import {Medimax} from './medimax';
@@ -113,8 +114,7 @@ import {NeweggSg} from './newegg-sg';
 import {NoelLeeming} from './noelleeming';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
-import { NovoAtalho } from './novoatalho';
-import { NvidiaEN } from './nvidia-en';
+import {NovoAtalho} from './novoatalho';
 import {NvidiaDE} from './nvidia-de';
 import {NvidiaES} from './nvidia-es';
 import {NvidiaFR} from './nvidia-fr';
@@ -154,6 +154,7 @@ import {TescoIE} from './tesco-ie';
 import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
+import {Ubiquiti} from './ubiquiti';
 import {Umart} from './umart';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
@@ -263,6 +264,7 @@ export const storeList = new Map([
   [Kabum.name, Kabum],
   [KomplettNO.name, KomplettNO],
   [LandmarkComputers.name, LandmarkComputers],
+  [LDLCItaly.name, LDLCItaly],
   [Mediamarkt.name, Mediamarkt],
   [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
@@ -288,7 +290,6 @@ export const storeList = new Map([
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
   [NovoAtalho.name, NovoAtalho],
-  [NvidiaEN.name, NvidiaEN],
   [NvidiaDE.name, NvidiaDE],
   [NvidiaES.name, NvidiaES],
   [NvidiaFR.name, NvidiaFR],
@@ -328,6 +329,7 @@ export const storeList = new Map([
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
   [Umart.name, Umart],
+  [Ubiquiti.name, Ubiquiti],
   [Unieuro.name, Unieuro],
   [UltimaInformatica.name, UltimaInformatica],
   [Very.name, Very],

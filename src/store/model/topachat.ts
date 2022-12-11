@@ -73,6 +73,12 @@ export const TopAchat: Store = {
       url: 'https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_ref_est_in20005199.html',
     },
     {
+      brand: 'asus',
+      model: 'phoenix 8G (LHR)',
+      series: '3050',
+      url: 'https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_ref_est_in20012486.html',
+    },
+    {
       brand: 'gigabyte',
       model: 'gaming oc',
       series: '3080',
@@ -215,6 +221,12 @@ export const TopAchat: Store = {
       model: 'ventus 3x oc',
       series: '3090',
       url: 'https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_ref_est_in20005229.html',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 2X (LHR)',
+      series: '3050',
+      url: 'https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_ref_est_in20012331.html',
     },
     {
       brand: 'palit',

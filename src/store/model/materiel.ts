@@ -144,6 +144,12 @@ export const Materiel: Store = {
       url: 'https://www.materiel.net/produit/202011160036.html',
     },
     {
+      brand: 'inno3d',
+      model: 'twin x2',
+      series: '3050',
+      url: 'https://www.materiel.net/produit/202201170090.html',
+    },
+    {
       brand: 'kfa2',
       model: 'sg oc',
       series: '3060ti',

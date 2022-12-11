@@ -25,7 +25,7 @@ export const Ollo: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.ollo.it/apple-airpods-2nd-generation-bluetooth-stereofonico-bianco/p_759688',
+      url: 'https://www.ollo.it/trevi-dr-437-sa-lettore-mp3-8-gb-grigio/p_811410',
     },
     {
       brand: 'gainward',
