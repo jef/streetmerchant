@@ -8,6 +8,7 @@ import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
 import {AlternateDe} from './alternate-de';
 import {AlternateFr} from './alternate-fr';
+import {Alternate} from './alternate';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
@@ -63,6 +64,7 @@ import {CyberportAt} from './cyberport-at';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {DustinHomeNO} from './dustinhome-no';
+import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
 import {Eletronicamente} from './eletronicamente';
@@ -155,6 +157,8 @@ import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
 import {ToysRUs} from './toysrus';
 import {Ubiquiti} from './ubiquiti';
+import { ToysRUs } from './toysrus';
+import { ubiquiti } from './ubiquiti';
 import {Umart} from './umart';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
@@ -179,6 +183,7 @@ export const storeList = new Map([
   [Allneeds.name, Allneeds],
   [AlternateDe.name, AlternateDe],
   [AlternateFr.name, AlternateFr],
+  [Alternate.name, Alternate],
   [AlternateNL.name, AlternateNL],
   [Amazon.name, Amazon],
   [AmazonCa.name, AmazonCa],
@@ -234,6 +239,7 @@ export const storeList = new Map([
   [Dcomp.name, Dcomp],
   [Drako.name, Drako],
   [DustinHomeNO.name, DustinHomeNO],
+  [EbGames.name, EbGames],
   [Ebuyer.name, Ebuyer],
   [Elcorteingles.name, Elcorteingles],
   [Eletronicamente.name, Eletronicamente],
@@ -328,6 +334,7 @@ export const storeList = new Map([
   [TheWarehouse.name, TheWarehouse],
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
+  [ubiquiti.name, ubiquiti],
   [Umart.name, Umart],
   [Ubiquiti.name, Ubiquiti],
   [Unieuro.name, Unieuro],
