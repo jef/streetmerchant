@@ -1,0 +1,90 @@
+{
+  "name": "streetmerchant",
+  "version": "3.8.3",
+  "description": "The world's easiest, most powerful stock checker",
+  "main": "src/index.ts",
+  "scripts": {
+    "fix": "gts fix",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint",
+    "prestart": "npm run compile",
+    "start": "node build/src/index.js",
+    "start:dev": "nodemon --config nodemon.json",
+    "start:production": "node build/src/index.js",
+    "test": "c8 mocha 'build/test/**/test-*.js' --exclude 'build/test/functional/**/test-*.js'",
+    "test:notification": "npm run compile && node build/test/functional/test-notification.js",
+    "test:notification:production": "node build/test/functional/test-notification.js",
+    "test:captcha": "npm run compile && node build/test/functional/test-captcha.js",
+    "test:captcha:production": "node build/test/functional/test-captcha.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jef/streetmerchant.git"
+  },
+  "keywords": [],
+  "author": "jef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jef/streetmerchant/issues"
+  },
+  "homepage": "https://github.com/jef/streetmerchant#readme",
+  "dependencies": {
+    "@doridian/puppeteer-page-proxy": "^1.2.11",
+    "@jef/pushbullet": "^2.4.3",
+    "@parse/node-apn": "^5.0.0",
+    "@slack/web-api": "^6.3.0",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^13.0.1",
+    "dotenv": "^10.0.0",
+    "messaging-api-telegram": "^1.0.4",
+    "mqtt": "^4.2.8",
+    "node-fetch": "^2.6.1",
+    "node-hue-api": "^4.0.10",
+    "node-notifier": "^10.0.0",
+    "node-pagerduty": "^1.3.6",
+    "nodemailer": "^6.6.3",
+    "open": "8.2.1",
+    "play-sound": "^1.1.3",
+    "puppeteer": "^9.1.1",
+    "puppeteer-extra-plugin-adblocker": "^2.11.11",
+    "pushover-notifications": "^1.2.2",
+    "redis": "^3.1.2",
+    "top-user-agents": "^1.0.37",
+    "twilio": "^3.71.1",
+    "twitch": "^4.6.5",
+    "twitch-auth": "^4.6.5",
+    "twitch-chat-client": "^4.6.5",
+    "twitter": "^1.7.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.7",
+    "@types/cheerio": "^0.22.30",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.4.13",
+    "@types/node-fetch": "^2.5.12",
+    "@types/node-notifier": "^8.0.1",
+    "@types/nodemailer": "^6.4.4",
+    "@types/redis": "^2.8.31",
+    "@types/sinon": "^10.0.2",
+    "@types/twitter": "^1.7.1",
+    "c8": "^7.8.0",
+    "gts": "^3.1.0",
+    "mocha": "^9.0.3",
+    "nodemon": "^2.0.12",
+    "sinon": "^11.1.2",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.50.0"
+  },
+  "volta": {
+    "node": "16.18.0"
+  }
+}

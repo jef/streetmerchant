@@ -20,8 +20,7 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          restore-keys: ${{ runner.os }}-node-
       - name: Install Dependencies
         if: steps.cache_node_modules.outputs.cache-hit != 'true'
         run: npm ci

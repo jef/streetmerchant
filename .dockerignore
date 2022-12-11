@@ -3,4 +3,5 @@
 .vs/
 .vscode/
 build/
+docs/
 node_modules/

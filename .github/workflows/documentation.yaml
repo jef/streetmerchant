@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-deploy:
+  build_deploy:
     name: Build and publish documentation
     runs-on: ubuntu-latest
     steps:

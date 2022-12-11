@@ -4,8 +4,8 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
 jobs:
-  check_date:
-    name: Check dates
+  check_code_change:
+    name: Check code change
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.code_change.outputs.should_run }}
@@ -22,8 +22,8 @@ jobs:
   build_tag_publish:
     name: Build, tag and publish Docker image
     runs-on: ubuntu-latest
-    needs: check_date
-    if: needs.check_date.outputs.should_run == 'true'
+    needs: check_code_change
+    if: needs.check_code_change.outputs.should_run == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,20 +31,14 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: jef
-          password: ${{ secrets.DEPLOY_TOKEN }}
-      - name: Extract metadata (tags, labels) for Docker
-        id: docker_metadata
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=raw,value=nightly
-            type=raw,value={{sha}}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get short SHA
+        id: short_sha
+        run: echo "short_sha=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
-          labels: ${{ steps.docker_metadata.outputs.labels }}
           push: true
-          tags: ${{ steps.docker_metadata.outputs.tags }}
+          tags: "ghcr.io/jef/streetmerchant:nightly,ghcr.io/jef/streetmerchant:${{ steps.short_sha.outputs.short_sha }}"
