@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build_lint:
+  build-lint:
     name: Build and lint
     runs-on: ubuntu-latest
     steps:
@@ -13,23 +13,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.18.0
-      - name: Cache node modules
-        id: cache_node_modules
-        uses: actions/cache@v3
+          node-version: 16.6.1
+      - name: Setup build cache
+        uses: actions/cache@v2
         with:
-          path: node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install Dependencies
-        if: steps.cache_node_modules.outputs.cache-hit != 'true'
+          restore-keys: ${{ runner.os }}-node-
+      - name: Install dependencies
         run: npm ci
       - name: Compile TypeScript
         run: npm run compile
       - name: Run linter
         run: npm run lint
-  build_docker:
+  build-docker:
     name: Build Docker image
     runs-on: ubuntu-latest
     steps:
