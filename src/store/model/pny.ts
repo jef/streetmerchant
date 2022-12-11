@@ -67,6 +67,30 @@ export const Pny: Store = {
       series: '3090',
       url: 'https://www.pny.com/geforce-rtx-3090-xlr8-gaming-epic-x-rgb-triple-fan-p',
     },
+    {
+      brand: 'pny',
+      model: 'xlr8 verto epic x oc',
+      series: '4090',
+      url: 'https://www.pny.com/pny-geforce-rtx-4090-24gb-xlr8-rgb-triple-fan-oc',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8 verto epic x',
+      series: '4090',
+      url: 'https://www.pny.com/pny-geforce-rtx-4090-24gb-xlr8-rgb-triple-fan',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8 verto epic x',
+      series: '4080-16g',
+      url: 'https://www.pny.com/pny-geforce-rtx-4080-16gb-xlr8-gaming-verto-epic-x-rgb-triple-fan',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8 verto epic x oc',
+      series: '4080-16g',
+      url: 'https://www.pny.com/pny-geforce-rtx-4080-16gb-epic-x-argb-triple-fan-oc',
+    },
   ],
   name: 'pny',
 };
