@@ -21,7 +21,7 @@ export const AmazonDe: Store = {
       text: ['in den einkaufswagen'],
     },
     maxPrice: {
-      container: '.a-text-price',
+      container: '#priceblock_ourprice',
       euroFormat: true,
     },
     outOfStock: [

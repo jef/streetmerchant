@@ -18,7 +18,7 @@ export const AmazonEs: Store = {
       text: ['añadir a la cesta'],
     },
     maxPrice: {
-      container: '.a-text-price',
+      container: '#price',
       euroFormat: true,
     },
     outOfStock: [

@@ -33,10 +33,6 @@ export const Saturn: Store = {
         container: '#root',
         text: ['Dieser Artikel ist bald wieder für Sie verfügbar'],
       },
-      {
-        container: '#root',
-        text: ['Dieser Artikel ist bald wieder verfügbar'],
-      },
     ],
   },
   links: [

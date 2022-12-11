@@ -41,12 +41,12 @@ export const Gamestop: Store = {
       series: '3090',
       url: 'https://www.gamestop.com/video-games/pc-gaming/components/graphics-cards/products/geforce-rtx-3090-24-gb-gddr6x-suprim-x-graphic-card/11118698.html',
     },
-    {
+/**    {
       brand: 'evga',
       model: 'xc gaming',
       series: '3060',
       url: 'https://www.gamestop.com/video-games/pc-gaming/components/graphics-cards/products/geforce-rtx-3060-xc-gaming-graphics-card/11121604.html',
-    },
+    },**/
     {
       brand: 'msi',
       model: 'suprim x',

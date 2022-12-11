@@ -29,22 +29,13 @@ export function updateRedis(link: Link, store: Store) {
         updatedAt: new Date().toUTCString(),
       };
 
-      const message = JSON.stringify(value);
-      client.set(key, message, (error, success) => {
-        if (error) {
-          logger.error(`✖ couldn't update redis for key (${key})`);
-        } else {
-          logger.info('✔ redis updated');
-        }
-      });
+      const redisUpdated = client.set(key, JSON.stringify(value));
 
-      client.publish('streetmerchant', message, (error, success) => {
-        if (error) {
-          logger.error(`✖ couldn't publish to redis`);
-        } else {
-          logger.info('✔ redis message published');
-        }
-      });
+      if (redisUpdated) {
+        logger.info('✔ redis updated');
+      } else {
+        logger.error(`✖ couldn't update redis for key (${key})`);
+      }
     }
   } catch (error: unknown) {
     logger.error("✖ couldn't update redis", error);
