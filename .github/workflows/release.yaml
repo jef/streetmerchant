@@ -4,31 +4,18 @@ on:
     branches:
       - main
 jobs:
-  build-tag-release:
-    name: Build, tag, and release Docker image
+  release:
+    name: Create release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Setup release please
+      - name: Run release-please
         uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOY_TOKEN }}
           release-type: node
           changelog-path: CHANGELOG.md
           package-name: streetmerchant
-      - name: Login into GitHub Container Registry
-        if: ${{ steps.release.outputs.release_created }}
-        run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-      - name: Build Docker image
-        if: ${{ steps.release.outputs.release_created }}
-        run: |
-          docker build \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:${{ steps.release.outputs.tag_name }}" \
-          -t "ghcr.io/${GITHUB_REPOSITORY}:latest" .
-      - name: Release Docker image
-        if: ${{ steps.release.outputs.release_created }}
-        run: |
-          docker push "ghcr.io/${GITHUB_REPOSITORY}:${{ steps.release.outputs.tag_name }}"
-          docker push "ghcr.io/${GITHUB_REPOSITORY}:latest"
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"ci","section":"Continuous Integration","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"refactor","section":"Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
