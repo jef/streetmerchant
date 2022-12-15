@@ -83,6 +83,22 @@ export const Amd: Store = {
       series: 'rx6800xt',
       url: 'https://www.amd.com/en/direct-buy/5496921500/us',
     },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5716415700/us?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx7900xtx',
+      url: 'https://www.amd.com/en/direct-buy/5716415700/us',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://www.amd.com/en/direct-buy/5716415800/us?add-to-cart=true',
+      model: 'amd reference',
+      series: 'rx7900xt',
+      url: 'https://www.amd.com/en/direct-buy/5716415800/us',
+    },
   ],
   name: 'amd',
 };

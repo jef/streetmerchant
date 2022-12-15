@@ -488,6 +488,18 @@ export const BAndH: Store = {
       series: '4080-16g',
       url: 'https://www.bhphotovideo.com/c/product/1729444-REG/pny_vcg408016tfxxpb1_nvidia_geforce_rtx_4080.html',
     },
+    {
+      brand: 'xfx',
+      model: 'merc310',
+      series: 'rx7900xtx',
+      url: 'https://www.bhphotovideo.com/c/product/1739783-REG/xfx_rx_79xmercb9_radeon_rx_7900_xtx.html',
+    },
+    {
+      brand: 'pny',
+      model: 'merc310',
+      series: 'rx7900xt',
+      url: 'https://www.bhphotovideo.com/c/product/1739786-REG/xfx_rx_79tmercb9_radeon_rx_7900_xt.html',
+    },
   ],
   name: 'bandh',
 };

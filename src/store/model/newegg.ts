@@ -1600,7 +1600,199 @@ export const Newegg: Store = {
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126601',
     },
-  ],
+    {
+      brand: 'xfx',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150878',
+      model: 'merc310',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150878',
+    },
+    {
+      brand: 'sapphire',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202427',
+      model: 'radeon',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814202427',
+    },
+    {
+      brand: 'powercolor',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131810',
+      model: 'hellhound',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814131810',
+    },
+    {
+      brand: 'powercolor',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131806',
+      model: 'red devil',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814131806',
+    },
+    {
+      brand: 'xfx',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150877',
+      model: 'merc310',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150877',
+    },
+    {
+      brand: 'sapphire',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202426',
+      model: 'radeon',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814202426',
+    },
+    {
+      brand: 'xfx',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150876',
+      model: 'gaming',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150876',
+    },
+    {
+      brand: 'xfx',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150875',
+      model: 'gaming',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150875',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930081',
+      model: 'phantom gaming',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930081',
+    },
+    {
+      brand: 'powercolor',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131808',
+      model: 'hellhound',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814131808',
+    },
+    {
+      brand: 'powercolor',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814131809',
+      model: 'red devil',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814131809',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930083',
+      model: 'phantom gaming',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930083',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930084',
+      model: 'radeon',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930084',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932589',
+      model: 'radeon',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932589',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930085',
+      model: 'radeon',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930085',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126609',
+      model: 'radeon',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126609',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930079',
+      model: 'aqua',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930079',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930082',
+      model: 'tachi',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930082',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126608',
+      model: 'radeon',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126608',
+    },
+    {
+      brand: 'asrock',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814930080',
+      model: 'tachi',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814930080',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932588',
+      model: 'radeon',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932588',
+    },
+    {
+      brand: 'sapphire',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814202428',
+      model: 'nitro',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814202428',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932587',
+      model: 'gaming',
+      series: 'rx7900xtx',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932587',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932585',
+      model: 'gaming',
+      series: 'rx7900xt',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932585',
+    },
+   ],
   name: 'newegg',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
