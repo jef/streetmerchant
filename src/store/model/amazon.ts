@@ -955,6 +955,86 @@ export const Amazon: Store = {
       series: '4080-16g',
       url: 'https://www.amazon.com/dp/B0BG95T5WD',
     },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQTVQQP4&Quantity.1=1',
+      model: 'strix oc',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQTVQQP4',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQTRP2XK&Quantity.1=1',
+      model: 'strix',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQTRP2XK',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQTSV2GG&Quantity.1=1',
+      model: 'tuf oc',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQTSV2GG',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BNW9Z91T&Quantity.1=1',
+      model: 'suprim x',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BNW9Z91T',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQTNJNHL&Quantity.1=1',
+      model: 'tuf',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQTNJNHL',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BNWBJ8Z6&Quantity.1=1',
+      model: 'gaming x trio',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BNWBJ8Z6',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BNWFM7MZ&Quantity.1=1',
+      model: 'ventus 3x oc',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BNWFM7MZ',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQCZX91X&Quantity.1=1',
+      model: 'amp extreme airo',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQCZX91X',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQCZ17LH&Quantity.1=1',
+      model: 'trinity',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQCZ17LH',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0BQCVTSR3&Quantity.1=1',
+      model: 'trinity oc',
+      series: '4070ti',
+      url: 'https://www.amazon.com/dp/B0BQCVTSR3',
+    },
     
   ],
   name: 'amazon',

@@ -91,6 +91,12 @@ export const Pny: Store = {
       series: '4080-16g',
       url: 'https://www.pny.com/pny-geforce-rtx-4080-16gb-epic-x-argb-triple-fan-oc',
     },
+    {
+      brand: 'pny',
+      model: 'xlr8 verto epic x',
+      series: '4070ti',
+      url: 'https://www.zotacstore.com/us/zotac',
+    },
   ],
   name: 'pny',
 };

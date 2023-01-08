@@ -1,6 +1,6 @@
 {
   "name": "streetmerchant",
-  "version": "3.8.3",
+  "version": "3.5.0",
   "description": "The world's easiest, most powerful stock checker",
   "main": "src/index.ts",
   "scripts": {
@@ -45,6 +45,7 @@
     "dotenv": "^10.0.0",
     "messaging-api-telegram": "^1.0.4",
     "mqtt": "^4.2.8",
+    "node": "16.6.1",
     "node-fetch": "^2.6.1",
     "node-hue-api": "^4.0.10",
     "node-notifier": "^10.0.0",
@@ -85,6 +86,6 @@
     "webpack": "^5.50.0"
   },
   "volta": {
-    "node": "16.18.0"
+    "node": "16.6.1"
   }
 }

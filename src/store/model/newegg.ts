@@ -1653,7 +1653,7 @@ export const Newegg: Store = {
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150876',
       model: 'gaming',
-      series: 'rx7900xtx',
+      series: 'rx7900xt',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150876',
     },
     {
@@ -1661,7 +1661,7 @@ export const Newegg: Store = {
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814150875',
       model: 'gaming',
-      series: 'rx7900xtx',
+      series: 'rx7900xt',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814150875',
     },
     {
@@ -1791,6 +1791,78 @@ export const Newegg: Store = {
       model: 'gaming',
       series: 'rx7900xt',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932585',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137772',
+      model: 'ventus 3x oc',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137772',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137771',
+      model: 'gaming x trio',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137771',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932582',
+      model: 'aero oc',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932582',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137773',
+      model: 'ventus 3x',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137773',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137770',
+      model: 'suprim x',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137770',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=',
+      model: 'aorus master',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932583',
+      model: 'aorus elite',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932583',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137778',
+      model: 'gaming trio',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137778',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137777',
+      model: 'suprim',
+      series: '4070ti',
+      url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137777',
     },
    ],
   name: 'newegg',

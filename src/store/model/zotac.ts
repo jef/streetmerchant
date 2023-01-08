@@ -113,6 +113,24 @@ export const Zotac: Store = {
       series: '4080-16g',
       url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4080-16gb-trinity',
     },
+    {
+      brand: 'zotac',
+      model: 'amp extreme airo',
+      series: '4070ti',
+      url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4070-ti-amp-extreme-airo',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity oc',
+      series: '4070ti',
+      url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4070-ti-trinity-oc',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity',
+      series: '4070ti',
+      url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4070-ti-trinity',
+    },
   ],
   name: 'zotac',
 };

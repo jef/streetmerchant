@@ -1,11 +1,13 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
 import {Ldlc} from './ldlc';
+import {LdlcEs} from './ldlc-es';
 import {Materiel} from './materiel';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
-import {Alternate} from './alternate';
+import {AlternateDe} from './alternate-de';
+import {AlternateFr} from './alternate-fr';
 import {AlternateNL} from './alternate-nl';
 import {Amazon} from './amazon';
 import {AmazonCa} from './amazon-ca';
@@ -33,6 +35,7 @@ import {Aria} from './aria';
 import {Arlt} from './arlt';
 import {Asus} from './asus';
 import {AsusDe} from './asus-de';
+import {AsusEs} from './asus-es';
 import {Awd} from './awd';
 import {Azerty} from './azerty';
 import {BAndH} from './bandh';
@@ -60,9 +63,9 @@ import {CyberportAt} from './cyberport-at';
 import {Dcomp} from './dcomp';
 import {Drako} from './drako';
 import {DustinHomeNO} from './dustinhome-no';
-import {EbGames} from './ebgames';
 import {Ebuyer} from './ebuyer';
 import {Elcorteingles} from './elcorteingles';
+import {Eletronicamente} from './eletronicamente';
 import {Elkjop} from './elkjop';
 import {Eprice} from './eprice';
 import {Equippr} from './equippr';
@@ -75,7 +78,9 @@ import {Expert} from './expert';
 import {Futurex} from './futurex';
 import {Galaxus} from './galaxus';
 import {Game} from './game';
+import {GameES} from './game-es';
 import {Gamestop} from './gamestop';
+import {GamestopCA} from './gamestop-ca';
 import {GamestopDE} from './gamestop-de';
 import {GamestopIE} from './gamestop-ie';
 import {GamestopIT} from './gamestop-it';
@@ -96,9 +101,11 @@ import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
 import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
+import {Microsoft} from './microsoft';
 import {Msy} from './msy';
 import {Multicom} from './multicom';
 import {Mwave} from './mwave';
+import {NeoByte} from './neobyte';
 import {NetonnetNO} from './netonnet-no';
 import {Newegg} from './newegg';
 import {NeweggCa} from './newegg-ca';
@@ -106,13 +113,15 @@ import {NeweggSg} from './newegg-sg';
 import {NoelLeeming} from './noelleeming';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
-import {NovoAtalho} from './novoatalho';
+import { NovoAtalho } from './novoatalho';
+import { NvidiaEN } from './nvidia-en';
 import {NvidiaDE} from './nvidia-de';
 import {NvidiaES} from './nvidia-es';
 import {NvidiaFR} from './nvidia-fr';
 import {NvidiaGB} from './nvidia-gb';
 import {OfficeDepot} from './officedepot';
 import {Ollo} from './ollo';
+import {Opirata} from './opirata';
 import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
@@ -134,6 +143,7 @@ import {SaveOnIt} from './saveonit';
 import {Scan} from './scan';
 import {Scorptec} from './scorptec';
 import {ShopTo} from './shopto';
+import {Siabyte} from './siabyte';
 import {SmythsToys} from './smythstoys';
 import {SmythsToysIE} from './smythstoys-ie';
 import {Spielegrotte} from './spielegrotte';
@@ -143,8 +153,7 @@ import {Target} from './target';
 import {TescoIE} from './tesco-ie';
 import {TheWarehouse} from './thewarehouse';
 import {TopAchat} from './topachat';
-import { ToysRUs } from './toysrus';
-import { ubiquiti } from './ubiquiti';
+import {ToysRUs} from './toysrus';
 import {Umart} from './umart';
 import {Unieuro} from './unieuro';
 import {Very} from './very';
@@ -158,13 +167,17 @@ import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
 import chalk from 'chalk';
+import {UltimaInformatica} from './utlimainformatica';
+import {XtremMedia} from './xtremmedia';
+import {MicrosoftCA} from './microsoft-ca';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
   [Adorama.name, Adorama],
   [Akinformatica.name, Akinformatica],
   [Allneeds.name, Allneeds],
-  [Alternate.name, Alternate],
+  [AlternateDe.name, AlternateDe],
+  [AlternateFr.name, AlternateFr],
   [AlternateNL.name, AlternateNL],
   [Amazon.name, Amazon],
   [AmazonCa.name, AmazonCa],
@@ -192,6 +205,7 @@ export const storeList = new Map([
   [Arlt.name, Arlt],
   [Asus.name, Asus],
   [AsusDe.name, AsusDe],
+  [AsusEs.name, AsusEs],
   [Awd.name, Awd],
   [Azerty.name, Azerty],
   [BAndH.name, BAndH],
@@ -219,9 +233,9 @@ export const storeList = new Map([
   [Dcomp.name, Dcomp],
   [Drako.name, Drako],
   [DustinHomeNO.name, DustinHomeNO],
-  [EbGames.name, EbGames],
   [Ebuyer.name, Ebuyer],
   [Elcorteingles.name, Elcorteingles],
+  [Eletronicamente.name, Eletronicamente],
   [Elkjop.name, Elkjop],
   [Eprice.name, Eprice],
   [Equippr.name, Equippr],
@@ -234,7 +248,9 @@ export const storeList = new Map([
   [Futurex.name, Futurex],
   [Galaxus.name, Galaxus],
   [Game.name, Game],
+  [GameES.name, GameES],
   [Gamestop.name, Gamestop],
+  [GamestopCA.name, GamestopCA],
   [GamestopDE.name, GamestopDE],
   [GamestopIE.name, GamestopIE],
   [GamestopIT.name, GamestopIT],
@@ -251,15 +267,19 @@ export const storeList = new Map([
   [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
+  [Microsoft.name, Microsoft],
   [Ldlc.name, Ldlc],
+  [LdlcEs.name, LdlcEs],
   [Materiel.name, Materiel],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
+  [MicrosoftCA.name, MicrosoftCA],
   [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
   [Msy.name, Msy],
   [Multicom.name, Multicom],
   [Mwave.name, Mwave],
+  [NeoByte.name, NeoByte],
   [NetonnetNO.name, NetonnetNO],
   [Newegg.name, Newegg],
   [NeweggCa.name, NeweggCa],
@@ -268,12 +288,14 @@ export const storeList = new Map([
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
   [NovoAtalho.name, NovoAtalho],
+  [NvidiaEN.name, NvidiaEN],
   [NvidiaDE.name, NvidiaDE],
   [NvidiaES.name, NvidiaES],
   [NvidiaFR.name, NvidiaFR],
   [NvidiaGB.name, NvidiaGB],
   [OfficeDepot.name, OfficeDepot],
   [Ollo.name, Ollo],
+  [Opirata.name, Opirata],
   [Otto.name, Otto],
   [Overclockers.name, Overclockers],
   [PBTech.name, PBTech],
@@ -295,6 +317,7 @@ export const storeList = new Map([
   [Scan.name, Scan],
   [Scorptec.name, Scorptec],
   [ShopTo.name, ShopTo],
+  [Siabyte.name, Siabyte],
   [SmythsToys.name, SmythsToys],
   [SmythsToysIE.name, SmythsToysIE],
   [Spielegrotte.name, Spielegrotte],
@@ -304,9 +327,9 @@ export const storeList = new Map([
   [TheWarehouse.name, TheWarehouse],
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
-  [ubiquiti.name, ubiquiti],
   [Umart.name, Umart],
   [Unieuro.name, Unieuro],
+  [UltimaInformatica.name, UltimaInformatica],
   [Very.name, Very],
   [VsGamers.name, VsGamers],
   [Vuugo.name, Vuugo],
@@ -315,6 +338,7 @@ export const storeList = new Map([
   [WellsTechnology.name, WellsTechnology],
   [Wipoid.name, Wipoid],
   [Xbox.name, Xbox],
+  [XtremMedia.name, XtremMedia],
   [Zotac.name, Zotac],
 ]);
 

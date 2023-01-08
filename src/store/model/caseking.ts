@@ -870,6 +870,30 @@ export const Caseking: Store = {
       series: 'rx6800xt',
       url: 'https://www.caseking.de/asus-radeon-rx-6800-xt-tuf-o16g-16384-mb-gddr6-gcas-417.html',
     },
+    {
+      brand: 'gigabyte',
+      model: 'aorus elite',
+      series: 'rx7900xtx',
+      url: 'https://www.caseking.de/GIGABYTE-Aorus-Radeon-RX-7900-XTX-Elite-24G-24576-MB-GDDR6-GCGB-478.html',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: 'rx7900xtx',
+      url: 'https://www.caseking.de/GIGABYTE-Radeon-RX-7900-XTX-Gaming-OC-24G-24576-MB-GDDR6-GCGB-479.html',
+    },
+    {
+      brand: 'sapphire',
+      model: 'radeon',
+      series: 'rx7900xtx',
+      url: 'https://www.caseking.de/Sapphire-Radeon-RX-7900-XTX-Gaming-24G-24576-MB-GDDR6-GCSP-243.html',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: 'rx7900xtx',
+      url: 'https://www.caseking.de/ASUS-Radeon-RX-7900-XTX-TUF-O24G-24576-MB-GDDR6-GCAS-533.html',
+    },
   ],
   name: 'caseking',
 };
