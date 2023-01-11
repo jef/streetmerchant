@@ -65,7 +65,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@types/async": "^3.2.7",
+    "@types/async": "^3.2.16",
     "@types/cheerio": "^0.22.30",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.4.13",
