@@ -84,6 +84,36 @@ export const Zotac: Store = {
       series: '3090',
       url: 'https://store.zotac.com/zotac-gaming-geforce-rtx-3090-trinity-zt-a30900d-10p',
     },
+    {
+      brand: 'zotac',
+      model: 'trinity',
+      series: '4090',
+      url: 'https://www.zotac.com/product/graphics_card/zotac-gaming-geforce-rtx-4090-trinity',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp extreme airo',
+      series: '4090',
+      url: 'https://www.zotac.com/product/graphics_card/zotac-gaming-geforce-rtx-4090-amp-extreme-airo',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity oc',
+      series: '4090',
+      url: 'https://www.zotac.com/product/graphics_card/zotac-gaming-geforce-rtx-4090-trinity-oc',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp extreme airo',
+      series: '4080-16g',
+      url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4080-16gb-amp-extreme-airo',
+    },
+    {
+      brand: 'zotac',
+      model: 'trinity',
+      series: '4080-16g',
+      url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4080-16gb-trinity',
+    },
   ],
   name: 'zotac',
 };
