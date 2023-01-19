@@ -1,6 +1,6 @@
 {
   "name": "streetmerchant",
-  "version": "3.8.3",
+  "version": "3.9.0",
   "description": "The world's easiest, most powerful stock checker",
   "main": "src/index.ts",
   "scripts": {
