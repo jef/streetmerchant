@@ -408,6 +408,12 @@ export const ProshopDE: Store = {
       series: 'ryzen5950',
       url: 'https://www.proshop.de/2884175',
     },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.proshop.de/3108362',
+    },
   ],
   name: 'proshop-de',
 };

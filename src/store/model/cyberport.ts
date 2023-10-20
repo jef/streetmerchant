@@ -167,6 +167,12 @@ export const Cyberport: Store = {
       series: 'ryzen5950',
       url: 'https://www.cyberport.de?DEEP=2001-71l',
     },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.cyberport.de/?DEEP=2E12-3NG',
+    },
   ],
   name: 'cyberport',
 };

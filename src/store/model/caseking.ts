@@ -870,6 +870,12 @@ export const Caseking: Store = {
       series: 'rx6800xt',
       url: 'https://www.caseking.de/asus-radeon-rx-6800-xt-tuf-o16g-16384-mb-gddr6-gcas-417.html',
     },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.caseking.de/msi-geforce-rtx-4090-suprim-x-24g-24576-mb-gddr6x-gcmc-331.html',
+    },
   ],
   name: 'caseking',
 };

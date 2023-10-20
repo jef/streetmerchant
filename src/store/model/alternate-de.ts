@@ -1251,6 +1251,12 @@ export const AlternateDe: Store = {
       series: 'sonyps5de',
       url: 'https://www.alternate.de/html/product/1651221',
     },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.alternate.de/html/product/1871111',
+    },
   ],
   name: 'alternate-de',
 };

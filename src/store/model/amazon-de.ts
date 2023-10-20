@@ -784,6 +784,14 @@ export const AmazonDe: Store = {
       series: 'xboxss',
       url: 'https://www.amazon.de/dp/B087VM5XC6',
     },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://www.amazon.de/gp/aws/cart/add.html?ASIN.1=B09YCBDG6X&Quantity.1=1',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.amazon.de/dp/B09YCBDG6X',
+    },
   ],
   name: 'amazon-de',
 };

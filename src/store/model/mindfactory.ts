@@ -259,6 +259,12 @@ export const Mindfactory: Store = {
       series: 'rx6900xt',
       url: 'https://www.mindfactory.de/product_info.php/16GB-XFX-Radeon-RX-6900-XT-DDR6-Drei-Luefter-256bit_1388333.html',
     },
+    {
+      brand: 'msi',
+      model: 'suprim x',
+      series: '4090',
+      url: 'https://www.mindfactory.de/product_info.php/24GB-MSI-GeForce-RTX-4090-Suprim-X-Aktiv-PCIe-4-0-x16--Retail-_1469833.html',
+    },
     // #endregion
   ],
   name: 'mindfactory',
