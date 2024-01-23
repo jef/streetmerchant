@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.9.0](https://github.com/jef/streetmerchant/compare/v3.8.3...v3.9.0) (2023-05-15)
+
+
+### Features
+
+* add support for 4080 and more 4090 stores ([#3104](https://github.com/jef/streetmerchant/issues/3104)) ([d8915cf](https://github.com/jef/streetmerchant/commit/d8915cf3579c29d0b48fa2ec247f460b0b462e13))
+
+
+### Bug Fixes
+
+* update Target's url for PS5 Console ([#3098](https://github.com/jef/streetmerchant/issues/3098)) ([5eb7c12](https://github.com/jef/streetmerchant/commit/5eb7c126300a3d86cdafc0b73f3765fffcfdcf2d))
+
+
+### Documentation
+
+* fix badge ([bb01bed](https://github.com/jef/streetmerchant/commit/bb01bedb037d4230c85a7fe59ce40ef7e29ea5a1))
+* use main branch for badge ([8dab4bb](https://github.com/jef/streetmerchant/commit/8dab4bb1e3441493a809c603b078c69777fbd8ff))
+
+
+### Miscellaneous
+
+* remove dependabot ([850f5c8](https://github.com/jef/streetmerchant/commit/850f5c8af74efb06a93f4065b83bc71e81fa8306))
+
 ## [3.8.3](https://github.com/jef/streetmerchant/compare/v3.8.2...v3.8.3) (2022-11-28)
 
 
