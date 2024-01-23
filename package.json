@@ -37,7 +37,7 @@
   "dependencies": {
     "@doridian/puppeteer-page-proxy": "^1.2.11",
     "@jef/pushbullet": "^2.4.3",
-    "@parse/node-apn": "^5.0.0",
+    "@parse/node-apn": "^5.2.3",
     "@slack/web-api": "^6.3.0",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
@@ -57,7 +57,7 @@
     "pushover-notifications": "^1.2.2",
     "redis": "^3.1.2",
     "top-user-agents": "^1.0.37",
-    "twilio": "^3.71.1",
+    "twilio": "^4.20.1",
     "twitch": "^4.6.5",
     "twitch-auth": "^4.6.5",
     "twitch-chat-client": "^4.6.5",
