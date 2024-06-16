@@ -51,6 +51,7 @@ export type Series =
   | '3090'
   | '4080-12g'
   | '4080-16g'
+  | '4080-super'
   | '4090'
   | 'darkhero'
   | 'g4-doorbell-pro'

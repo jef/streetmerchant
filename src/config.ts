@@ -160,7 +160,7 @@ function envOrNumberMax(
   return number ?? 0;
 }
 
-function loadProxyList(filename: string): string[] | undefined {
+function loadProxyList(filename: string | undefined): string[] | undefined {
   try {
     return readFileSync(`${filename}.proxies`)
       .toString()
@@ -239,6 +239,7 @@ const notifications = {
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       '4080-12g': envOrArray(process.env.DISCORD_NOTIFY_GROUP_4080_12G),
       '4080-16g': envOrArray(process.env.DISCORD_NOTIFY_GROUP_4080_16G),
+      '4080-super': envOrArray(process.env.DISCORD_NOTIFY_GROUP_4080_SUPER),
       4090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_4090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
@@ -419,6 +420,7 @@ const store = {
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       '4080-12g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_12G),
       '4080-16g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_16G),
+      '4080-super': envOrNumber(process.env.MAX_PRICE_SERIES_4080_SUPER),
       4090: envOrNumber(process.env.MAX_PRICE_SERIES_4090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),

@@ -670,6 +670,34 @@ export const BestBuy: Store = {
       series: '4080-16g',
       url: 'https://api.bestbuy.com/click/-/6521431/pdp',
     },
+    {
+      brand: 'nvidia',
+      cartUrl: 'https://api.bestbuy.com/click/-/6570219/cart',
+      model: 'founders edition',
+      series: '4080-super',
+      url: 'https://api.bestbuy.com/click/-/6570219/pdp',
+    },
+    {
+      brand: 'msi',
+      cartUrl: 'https://api.bestbuy.com/click/-/6571812/cart',
+      model: 'ventus 3x oc',
+      series: '4080-super',
+      url: 'https://api.bestbuy.com/click/-/6571812/pdp',
+    },
+    {
+      brand: 'asus',
+      cartUrl: 'https://api.bestbuy.com/click/-/6571572/cart',
+      model: 'tuf',
+      series: '4080-super',
+      url: 'https://api.bestbuy.com/click/-/6571572/pdp',
+    },
+    {
+      brand: 'asus',
+      cartUrl: 'https://api.bestbuy.com/click/-/6571648/cart',
+      model: 'strix',
+      series: '4080-super',
+      url: 'https://api.bestbuy.com/click/-/6571648/pdp',
+    }
   ],
   name: 'bestbuy',
 };

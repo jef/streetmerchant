@@ -10,6 +10,7 @@
 | `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4080_12G` | Maximum price allowed for a match, applies 4080 12G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4080_16G` | Maximum price allowed for a match, applies 4080 16G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_4080_SUPER` | Maximum price allowed for a match, applies 4080 16G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4090` | Maximum price allowed for a match, applies 4090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs |
 | `MAX_PRICE_SERIES_DARKHERO` | Maximum price allowed for a match, applies to ASUS Dark Hero motherboards |
@@ -267,6 +268,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Nvidia RTX 3090 | `3090` |
 | Nvidia RTX 4080 12G | `4080-12g` |
 | Nvidia RTX 4080 16G | `4080-16g` |
+| Nvidia RTX 4080 SUPER | `4080-super` |
 | Nvidia RTX 4090 | `4090` |
 | Corsair SFX PSU | `sf` |
 | Crosshair VIII | `darkhero` |
