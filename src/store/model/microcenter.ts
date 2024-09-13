@@ -404,6 +404,54 @@ for (const microCenterLocation of microCenterLocations) {
         series: '4090',
         url: `https://www.microcenter.com/product/659576/zotac-nvidia-geforce-rtx-4090-amp-extreme-airo-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
       },
+      {
+        brand: 'asus',
+        model: 'strix oc white',
+        series: '4090',
+        url: `https://www.microcenter.com/product/663068/asus-nvidia-geforce-rtx-4090-rog-strix-white-rgb-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'aorus xtreme waterforce 24g',
+        series: '4090',
+        url: `https://www.microcenter.com/product/663237/gigabyte-nvidia-geforce-rtx-4090-xtreme-waterforce-rgb-overclocked-liquid-cooled-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'aorus master 24g',
+        series: '4090',
+        url: `https://www.microcenter.com/product/663238/gigabyte-nvidia-geforce-rtx-4090-aorus-master-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'pny',
+        model: 'vetro',
+        series: '4090',
+        url: `https://www.microcenter.com/product/663856/pny-nvidia-geforce-rtx-4090-verto-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'aero oc',
+        series: '4090',
+        url: `https://www.microcenter.com/product/664673/gigabyte-nvidia-geforce-rtx-4090-aero-rgb-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'gigabyte',
+        model: 'windforce v2',
+        series: '4090',
+        url: `https://www.microcenter.com/product/667906/gigabyte-nvidia-geforce-rtx-4090-windforce-v2-overclocked-triple-fan-24gb-gddr6-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'asus',
+        model: 'tuf oc',
+        series: '4090',
+        url: `https://www.microcenter.com/product/668521/asus-nvidia-geforce-rtx-4090-tuf-gaming-rgb-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
+      {
+        brand: 'msi',
+        model: 'gaming x slim',
+        series: '4090',
+        url: `https://www.microcenter.com/product/671031/msi-nvidia-geforce-rtx-4090-gaming-x-slim-overclocked-triple-fan-24gb-gddr6x-pcie-40-graphics-card/?storeid=${storeId}`,
+      },
     ]);
   }
 }
