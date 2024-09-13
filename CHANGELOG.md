@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.10.0](https://github.com/jef/streetmerchant/compare/v3.9.0...v3.10.0) (2024-09-13)
+
+
+### Features
+
+* add new microcenters locations, more 4090 GPUs, fixed incorrect URLs ([#3181](https://github.com/jef/streetmerchant/issues/3181)) ([218b0c3](https://github.com/jef/streetmerchant/commit/218b0c30757aaaa5ddc922f32e330457c0a82318))
+
+
+### Documentation
+
+* remove badges ([4388e9a](https://github.com/jef/streetmerchant/commit/4388e9a5e0cb1d1e544b5614fdba37efc2475d52))
+
 ## [3.9.0](https://github.com/jef/streetmerchant/compare/v3.8.3...v3.9.0) (2023-05-15)
 
 
