@@ -20,3 +20,25 @@ spec:
           image: registry.dev.svc.cluster.local:5000/streetmerchant:latest
           ports:
             - containerPort: 8080
+      volumeMounts:
+      - name: streetmerchant-config-vol
+        mountPath: /etc/dotenv
+  volumes:
+    - name: streetmerchant-config-vol
+      configMap:
+        name: streetmerchant-dotenv
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2022-02-18T18:52:05Z
+  name: streetmerchant-dotenv
+  namespace: app
+data:
+  dotenv: |
+    MICROCENTER_LOCATION=web, brooklyn, westbury, yonkers, flushing, rockville, north-jersey
+    PHONE_CARRIER=tmobile
+    SHOW_ONLY_BRANDS=asrock
+    SHOW_ONLY_MODELS=nova
+    SHOW_ONLY_SERIES=x870e
+    STORES=amazon, bestbuy, newegg, microcenter
