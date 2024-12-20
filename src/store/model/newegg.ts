@@ -1598,6 +1598,14 @@ export const Newegg: Store = {
       series: '4080-super',
       url: 'https://www.newegg.com/asus-geforce-rtx-4080-super-tuf-rtx4080s-16g-gaming/p/N82E16814126694?Item=N82E16814126694',
     },
+    {
+      brand: 'asrock',
+      model: 'nova',
+      series: 'x870e',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16813162163',
+      url: 'https://www.newegg.com/p/N82E16813162163'
+    }
     
 
   ],

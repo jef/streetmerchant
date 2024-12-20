@@ -53,6 +53,8 @@ export type Series =
   | '4080-16g'
   | '4080-super'
   | '4090'
+  | '5080'
+  | '5090'
   | 'darkhero'
   | 'g4-doorbell-pro'
   | 'rx6800'
@@ -72,7 +74,8 @@ export type Series =
   | 'unvr'
   | 'unvr-pro'
   | 'xboxsx'
-  | 'xboxss';
+  | 'xboxss'
+  | 'x870e';
 
 export type Model =
   | 'test:model'
@@ -264,7 +267,8 @@ export type Model =
   | 'xlr8 verto'
   | 'xlr8 uprising'
   | 'xtreme'
-  | 'qick';
+  | 'qick'
+  | 'nova';
 
 export type Link = {
   brand: Brand;

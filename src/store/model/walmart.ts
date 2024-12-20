@@ -72,6 +72,12 @@ export const Walmart: Store = {
       series: '3070',
       url: 'https://www.walmart.com/ip/804934537',
     },
+    {
+      brand: 'asrock',
+      model: 'nova',
+      series: 'x870e',
+      url: 'https://www.walmart.com/ip/ASRock-X870E-NOVA-WIFI-AM5-AMD-X870E-SATA-6Gb-s-ATX-Motherboard/12739601206'
+    }
   ],
   name: 'walmart',
 };
