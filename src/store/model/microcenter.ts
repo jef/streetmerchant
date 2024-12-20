@@ -402,6 +402,12 @@ for (const microCenterLocation of microCenterLocations) {
         series: '4090',
         url: `https://www.microcenter.com/product/659576/zotac-nvidia-geforce-rtx-4090-amp-extreme-airo-triple-fan-24gb-gddr6x-pcie-40-graphics-card${storeId}`,
       },
+      {
+        brand: 'asrock',
+        model: 'nova',
+        series: 'x870e',
+        url: `https://www.microcenter.com/product/685410/asrock-x870e-nova-wifi-amd-am5-atx-motherboard${storeId}`
+      }
     ]);
   }
 }
