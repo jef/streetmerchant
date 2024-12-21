@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: streetmerchant
-          image: registry.dev.svc.cluster.local:5000/streetmerchant:latest
+          image: registry.knstyl.com/streetmerchant:latest
           ports:
             - containerPort: 8080
           volumeMounts:
