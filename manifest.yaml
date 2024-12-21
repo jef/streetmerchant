@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           volumeMounts:
           - name: streetmerchant-config-vol
-            mountPath: /app/dotenv
+            mountPath: /app
       volumes:
         - name: streetmerchant-config-vol
           configMap:
