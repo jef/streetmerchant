@@ -20,13 +20,13 @@ spec:
           image: registry.dev.svc.cluster.local:5000/streetmerchant:latest
           ports:
             - containerPort: 8080
-      volumeMounts:
-      - name: streetmerchant-config-vol
-        mountPath: /etc/dotenv
-  volumes:
-    - name: streetmerchant-config-vol
-      configMap:
-        name: streetmerchant-dotenv
+          volumeMounts:
+          - name: streetmerchant-config-vol
+            mountPath: /apps/dotenv
+      volumes:
+        - name: streetmerchant-config-vol
+          configMap:
+            name: streetmerchant-dotenv
 ---
 apiVersion: v1
 kind: ConfigMap
