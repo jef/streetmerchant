@@ -38,4 +38,4 @@ data:
   SHOW_ONLY_MODELS: nova
   SHOW_ONLY_SERIES: x870e
   STORES: amazon, bestbuy, newegg, microcenter
-  IN_STOCK_WAIT_TIME: 120
+  IN_STOCK_WAIT_TIME: '120'
