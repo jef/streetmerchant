@@ -23,6 +23,8 @@ spec:
           envFrom:
           - configMapRef:
               name: streetmerchant-dotenv
+          - secretRef:
+              name: streetmerchant-secrets
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -32,8 +34,7 @@ metadata:
   namespace: dev
 data:
   MICROCENTER_LOCATION: web, brooklyn, westbury, yonkers, flushing, rockville, north-jersey
-  PHONE_CARRIER: tmobile
-  SHOW_ONLY_BRANDS: asrock
-  SHOW_ONLY_MODELS: nova
-  SHOW_ONLY_SERIES: x870e
+  SHOW_ONLY_BRANDS: asrock, asus
+  SHOW_ONLY_MODELS: nova, tuf, strix
+  SHOW_ONLY_SERIES: x870e, 4080-16g, 4080-super
   STORES: amazon, bestbuy, newegg, microcenter
