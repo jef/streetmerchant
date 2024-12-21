@@ -34,7 +34,8 @@ metadata:
   namespace: dev
 data:
   MICROCENTER_LOCATION: web, brooklyn, westbury, yonkers, flushing, rockville, north-jersey
-  SHOW_ONLY_BRANDS: asrock, asus
-  SHOW_ONLY_MODELS: nova, tuf, strix
-  SHOW_ONLY_SERIES: x870e, 4080-16g, 4080-super
+  SHOW_ONLY_BRANDS: asrock
+  SHOW_ONLY_MODELS: nova
+  SHOW_ONLY_SERIES: x870e
   STORES: amazon, bestbuy, newegg, microcenter
+  IN_STOCK_WAIT_TIME: 120
