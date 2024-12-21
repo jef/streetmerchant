@@ -33,7 +33,7 @@ kind: ConfigMap
 metadata:
   creationTimestamp: 2022-02-18T18:52:05Z
   name: streetmerchant-dotenv
-  namespace: app
+  namespace: dev
 data:
   dotenv: |
     MICROCENTER_LOCATION=web, brooklyn, westbury, yonkers, flushing, rockville, north-jersey
