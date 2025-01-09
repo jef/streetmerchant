@@ -5,10 +5,6 @@
   <strong>The world's easiest, most powerful stock checker</strong>
 </p>
 <p align="center">
-  <a href="https://github.com/jef/streetmerchant/actions/workflows/ci.yaml"><img src="https://img.shields.io/github/actions/workflow/status/jef/streetmerchant/ci.yaml?branch=main&label=Continuous%20Integration&logo=github&logoColor=white" /></a>
-  <a href="https://discord.gg/gbVY4vB9JF"><img src="https://img.shields.io/discord/773913070665859073?label=Discord&logo=discord&logoColor=white" /></a>
-</p>
-<p align="center">
   <em>To get started, visit <a href="https://jef.buzz/streetmerchant">jef.buzz/streetmerchant</a></em>
 </p>
 
