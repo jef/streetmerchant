@@ -697,6 +697,20 @@ export const BestBuy: Store = {
       model: 'strix',
       series: '4080-super',
       url: 'https://api.bestbuy.com/click/-/6571648/pdp',
+    },
+    {
+      brand: 'nvidia',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614151/cart',
+      model: 'founders edition',
+      series: '5090',
+      url: 'https://api.bestbuy.com/click/-/6614151/pdp',
+    },
+    {
+      brand: 'nvidia',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614153/cart',
+      model: 'founders edition',
+      series: '5080',
+      url: 'https://api.bestbuy.com/click/-/6614153/pdp',
     }
   ],
   name: 'bestbuy',
