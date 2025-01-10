@@ -8,12 +8,12 @@ export const BestBuy: Store = {
       text: ['add to cart'],
     },
     outOfStock: {
-      container: 'button.c-button.c-button-disabled[data-sku-id="54959778"][data-button-state="SOLD_OUT"]',
-      text: ['Unavailable Nearby'],
-  },
-    maxPrice: {
       container:
-        '.pricing-price',
+        'button.c-button.c-button-disabled[data-sku-id="54959778"][data-button-state="SOLD_OUT"]',
+      text: ['Unavailable Nearby'],
+    },
+    maxPrice: {
+      container: '.pricing-price',
     },
   },
   links: [
