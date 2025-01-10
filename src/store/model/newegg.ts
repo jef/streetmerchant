@@ -1590,6 +1590,22 @@ export const Newegg: Store = {
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126601',
     },
+    {
+      brand: 'sparkle',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814993013',
+      model: 'b580',
+      series: 'arc',
+      url: 'https://www.newegg.com/sparkle-intel-arc-b580-titan-oc-12gb-gddr6/p/N82E16814993013',
+    },
+    {
+      brand: 'lianli',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=2AM-000Z-000E0',
+      model: 'a3 matx wd',
+      series: 'a3-matx',
+      url: 'https://www.newegg.com/p/2AM-000Z-000E0',
+    },
   ],
   name: 'newegg',
   realTimeInventoryLookup: async (itemNumber: string) => {
