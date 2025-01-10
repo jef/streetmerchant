@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.10.0](https://github.com/jef/streetmerchant/compare/v3.9.0...v3.10.0) (2025-01-10)
+
+
+### Features
+
+* add 50xx series ([#3190](https://github.com/jef/streetmerchant/issues/3190)) ([db07796](https://github.com/jef/streetmerchant/commit/db07796ef99cc55c7ccdc67df0884b26e361c440))
+* add new microcenters locations, more 4090 GPUs, fixed incorrect URLs ([#3181](https://github.com/jef/streetmerchant/issues/3181)) ([218b0c3](https://github.com/jef/streetmerchant/commit/218b0c30757aaaa5ddc922f32e330457c0a82318))
+
+
+### Miscellaneous
+
+* update bestbuy selectors ([#3186](https://github.com/jef/streetmerchant/issues/3186)) ([810cefc](https://github.com/jef/streetmerchant/commit/810cefcd56129448d485127064478b985acb992b))
+
+
+### Continuous Integration
+
+* update pr linter ([25d556c](https://github.com/jef/streetmerchant/commit/25d556c736a90b64f4312e4a4332dbc922b71f66))
+
+
+### Documentation
+
+* remove badges ([4388e9a](https://github.com/jef/streetmerchant/commit/4388e9a5e0cb1d1e544b5614fdba37efc2475d52))
+
 ## [3.9.0](https://github.com/jef/streetmerchant/compare/v3.8.3...v3.9.0) (2023-05-15)
 
 
