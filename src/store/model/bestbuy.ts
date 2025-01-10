@@ -9,7 +9,7 @@ export const BestBuy: Store = {
     },
     outOfStock: {
       container:
-        'button.c-button.c-button-disabled [data-button-state="SOLD_OUT]',
+        'button.c-button.c-button-disabled[data-button-state="SOLD_OUT]',
       text: ['coming soon'],
     },
     maxPrice: {
