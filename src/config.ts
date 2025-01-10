@@ -464,6 +464,13 @@ const store = {
     };
   }),
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
+    '3060',
+    '3060ti',
+    '3070',
+    '3070ti',
+    '3080',
+    '3080ti',
+    '3090',
     '4090',
     '5070',
     '5070ti',
