@@ -256,7 +256,7 @@ async function lookup(browser: Browser, store: Store) {
     let statusCode = 0;
 
     try {
-      statusCode = await lookupIem(browser, store, page, link);
+      statusCode = await lookupItem(browser, store, page, link);
     } catch (error: unknown) {
       if (store.currentProxyIndex !== undefined && store.proxyList) {
         const proxy = `${store.currentProxyIndex + 1}/${
@@ -303,7 +303,7 @@ async function lookup(browser: Browser, store: Store) {
   /* eslint-enable no-await-in-loop */
 }
 
-async function lookupIem(
+async function lookupItem(
   browser: Browser,
   store: Store,
   page: Page,

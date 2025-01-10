@@ -955,6 +955,30 @@ export const Amazon: Store = {
       series: '4080-16g',
       url: 'https://www.amazon.com/dp/B0BG95T5WD',
     },
+    {
+      brand: 'lianli',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DFS88R2L&Quantity.1=1',
+      model: 'a3 matx wd',
+      series: 'a3-matx',
+      url: 'https://www.amazon.com/dp/B0DFS88R2L',
+    },
+    {
+      brand: 'sparkle',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DNMH4KQM&Quantity.1=1',
+      model: 'b580',
+      series: 'arc',
+      url: 'https://www.amazon.com/dp/B0DNMH4KQM',
+    },
+    {
+      brand: 'intel',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DPM9923G&Quantity.1=1',
+      model: 'b580',
+      series: 'arc',
+      url: 'https://www.amazon.com/dp/B0DPM9923G',
+    },
   ],
   name: 'amazon',
 };

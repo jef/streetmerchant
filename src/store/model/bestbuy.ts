@@ -4,12 +4,16 @@ export const BestBuy: Store = {
   currency: '$',
   labels: {
     inStock: {
-      container: '[data-sticky-media-gallery] .fulfillment-add-to-cart-button',
+      container: '.fulfillment-add-to-cart-button',
       text: ['add to cart'],
     },
-    maxPrice: {
+    outOfStock: {
       container:
-        '[data-sticky-media-gallery] .priceView-price .priceView-hero-price span',
+        'button.c-button.c-button-disabled [data-button-state="SOLD_OUT]',
+      text: ['coming soon'],
+    },
+    maxPrice: {
+      container: '.priceView-price',
     },
   },
   links: [
@@ -18,6 +22,20 @@ export const BestBuy: Store = {
       model: 'test:model',
       series: 'test:series',
       url: 'https://api.bestbuy.com/click/-/6258941/pdp',
+    },
+    {
+      brand: 'amd',
+      model: '7950x',
+      cartUrl: 'https://api.bestbuy.com/click/-/6519470/cart',
+      series: 'ryzen7950x',
+      url: 'https://api.bestbuy.com/click/-/6519470/pdp',
+    },
+    {
+      brand: 'amd',
+      model: '9800x3d',
+      cartUrl: 'https://api.bestbuy.com/click/-/6606318/cart',
+      series: 'ryzen9800x3d',
+      url: 'https://api.bestbuy.com/click/-/6606318/pdp',
     },
     {
       brand: 'nvidia',
@@ -665,10 +683,31 @@ export const BestBuy: Store = {
     },
     {
       brand: 'nvidia',
-      cartUrl: 'https://api.bestbuy.com/click/-/6521431/cart',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614154/cart',
       model: 'founders edition',
       series: '4080-16g',
-      url: 'https://api.bestbuy.com/click/-/6521431/pdp',
+      url: 'https://api.bestbuy.com/click/-/6614154/pdp',
+    },
+    {
+      brand: 'intel',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614154/cart',
+      model: 'b580',
+      series: 'arc',
+      url: 'https://api.bestbuy.com/click/-/6614154/pdp',
+    },
+    {
+      brand: 'nvidia',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614153/cart',
+      model: 'founders edition',
+      series: '5080',
+      url: 'https://api.bestbuy.com/click/-/6614153/pdp',
+    },
+    {
+      brand: 'nvidia',
+      // cartUrl: 'https://api.bestbuy.com/click/-/6614151/cart',
+      model: 'founders edition',
+      series: '5090',
+      url: 'https://api.bestbuy.com/click/-/6614151/pdp',
     },
   ],
   name: 'bestbuy',

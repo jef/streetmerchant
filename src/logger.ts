@@ -10,7 +10,7 @@ const prettyJson = winston.format.printf(info => {
     '::'
   )} ${info.message}`;
 
-  if (Object.keys(info.metadata).length > 0) {
+  if (Object.keys(info.metadata as object).length > 0) {
     out = `${out} ${chalk.magenta(JSON.stringify(info.metadata, null, 2))}`;
   }
 

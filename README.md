@@ -26,3 +26,4 @@ cd streetmerchant && npm i && npm run start
 ```
 
 For more information and customization, visit [jef.buzz/streetmerchant/getting-started](https://jef.buzz/streetmerchant/getting-started).
+

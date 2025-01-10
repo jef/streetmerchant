@@ -420,6 +420,12 @@ const store = {
       '4080-12g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_12G),
       '4080-16g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_16G),
       4090: envOrNumber(process.env.MAX_PRICE_SERIES_4090),
+      5070: envOrNumber(process.env.MAX_PRICE_SERIES_5070),
+      '5070ti': envOrNumber(process.env.MAX_PRICE_SERIES_5070TI),
+      5080: envOrNumber(process.env.MAX_PRICE_SERIES_5080),
+      5090: envOrNumber(process.env.MAX_PRICE_SERIES_5090),
+      arc: envOrNumber(process.env.MAX_PRICE_SERIES_ARC),
+      'a3-matx': envOrNumber(process.env.MAX_PRICE_SERIES_A3_MATX),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
       'g4-doorbell-pro': envOrNumber(
@@ -433,6 +439,8 @@ const store = {
       ryzen5800: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5800),
       ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5900),
       ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
+      ryzen7950x: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN7950X),
+      ryzen9800x3d: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9800X3D),
       sf: envOrNumber(process.env.MAX_PRICE_SERIES_CORSAIR_SF),
       sonyps5c: envOrNumber(process.env.MAX_PRICE_SERIES_SONYPS5C),
       sonyps5de: envOrNumber(process.env.MAX_PRICE_SERIES_SONYPS5DE),
@@ -456,13 +464,11 @@ const store = {
     };
   }),
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
-    '3060',
-    '3060ti',
-    '3070',
-    '3070ti',
-    '3080',
-    '3080ti',
-    '3090',
+    '4090',
+    '5070',
+    '5070ti',
+    '5080',
+    '5090',
     'g4-doorbell-pro',
     'rx6700xt',
     'rx6800',
@@ -472,6 +478,8 @@ const store = {
     'ryzen5800',
     'ryzen5900',
     'ryzen5950',
+    'ryzen7950',
+    'ryzen9800x3d',
     'sf',
     'sonyps5c',
     'sonyps5de',
@@ -486,7 +494,7 @@ const store = {
   stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
-    let proxyList = loadProxyList(name);
+    let proxyList = loadProxyList(name as string);
 
     if (!proxyList) {
       proxyList = loadProxyList('global');
