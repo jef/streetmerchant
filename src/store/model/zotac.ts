@@ -114,6 +114,51 @@ export const Zotac: Store = {
       series: '4080-16g',
       url: 'https://www.zotacstore.com/us/zotac-gaming-geforce-rtx-4080-16gb-trinity',
     },
+    {
+      brand: 'zotac',
+      model: 'solid',
+      series: '5090',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5090-solid',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid oc',
+      series: '5090',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5090-solid-oc',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp extreme infinity',
+      series: '5090',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5090-amp-extreme-infinity',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid',
+      series: '5080',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5080-solid',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid oc',
+      series: '5080',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5080-solid-oc',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp extreme infinity',
+      series: '5080',
+      url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5080-amp-extreme-infinity',
+    },
+
   ],
   name: 'zotac',
 };
+/* Copy Paste Template
+    {
+      brand: 'zotac',
+      model: '',
+      series: '',
+      url: '',
+    },
+*/
