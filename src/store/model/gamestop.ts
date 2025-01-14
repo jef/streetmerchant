@@ -137,6 +137,36 @@ export const Gamestop: Store = {
       series: 'xboxss',
       url: 'https://www.gamestop.com/video-games/xbox-series-x/consoles/products/xbox-series-s-digital-edition/B224746K.html',
     },
+    {
+      brand: 'pokemon tcg',
+      model: 'booster bundle',
+      series: 'prismatic evolutions',
+      url: 'https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-prismatic-evolutions-booster-bundle/418865.html',
+    },
+    {
+      brand: 'pokemon tcg',
+      model: 'elite trainer box',
+      series: 'prismatic evolutions',
+      url: 'https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-prismatic-evolutions-elite-trainer-box/417631.html',
+    },
+    {
+      brand: 'pokemon tcg',
+      model: 'surprise box',
+      series: 'prismatic evolutions',
+      url: 'https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-prismatic-evolutions-surprise-box-styles-may-vary/418757.html',
+    },
+    {
+      brand: 'pokemon tcg',
+      model: 'binder collection',
+      series: 'prismatic evolutions',
+      url: 'https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-prismatic-evolutions-binder-collection/417633.html',
+    },
+    {
+      brand: 'pokemon tcg',
+      model:  'mini tin',
+      series: 'prismatic evolutions',
+      url: 'https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-prismatic-evolutions-binder-collection/417633.html',
+    }
   ],
   name: 'gamestop',
   successStatusCodes: [[0, 399], 404],

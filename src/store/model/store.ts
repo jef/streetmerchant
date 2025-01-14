@@ -35,6 +35,7 @@ export type Brand =
   | 'sapphire'
   | 'sony'
   | 'ubiquiti'
+  | 'pokemon tcg'
   | 'xfx'
   | 'zotac';
 
@@ -75,7 +76,8 @@ export type Series =
   | 'unvr-pro'
   | 'xboxsx'
   | 'xboxss'
-  | 'x870e';
+  | 'x870e'
+  | 'prismatic evolutions';
 
 export type Model =
   | 'test:model'
@@ -275,7 +277,12 @@ export type Model =
   | 'xlr8 uprising'
   | 'xtreme'
   | 'qick'
-  | 'nova';
+  | 'nova'
+  | 'elite trainer box'
+  | 'booster bundle'
+  | 'binder collection'
+  | 'surprise box'
+  | 'mini tin'
 
 export type Link = {
   brand: Brand;

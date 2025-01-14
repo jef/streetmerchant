@@ -955,6 +955,30 @@ export const Amazon: Store = {
       series: '4080-16g',
       url: 'https://www.amazon.com/dp/B0BG95T5WD',
     },
+    {
+      brand: 'pokemon tcg',
+      model: 'elite trainer box',
+      series: 'prismatic evolutions',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DLPL7LC5&Quantity.1=1',
+        url: 'https://www.amazon.com/dp/B0DLPL7LC5',
+    },
+    {
+      brand: 'pokemon tcg',
+      model: 'surprise box',
+      series: 'prismatic evolutions',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DLPL7LC5&Quantity.1=1',
+        url: 'https://www.amazon.com/dp/B0DLPL7LC5',
+    },
+    {
+      brand: 'pokemon tcg',
+      model: 'binder collection',
+      series: 'prismatic evolutions',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0DLQBQ1XB&Quantity.1=1',
+        url: 'https://www.amazon.com/dp/B0DLQBQ1XB',
+    }
   ],
   name: 'amazon',
 };
