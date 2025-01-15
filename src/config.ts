@@ -242,7 +242,7 @@ const notifications = {
       4090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_4090),
       5070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_5070),
       '5070ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_5070TI),
-      5080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_5090),
+      5080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_5080),
       5090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_5090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
