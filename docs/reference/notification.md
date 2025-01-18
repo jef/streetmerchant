@@ -41,6 +41,10 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_4080_12G` | Discord group to notify on 4080 12G stock |
 | `DISCORD_NOTIFY_GROUP_4080_16G` | Discord group to notify on 4080 16G stock |
 | `DISCORD_NOTIFY_GROUP_4090` | Discord group to notify on 4090 stock |
+| `DISCORD_NOTIFY_GROUP_5070` | Discord group to notify on 5070 stock |
+| `DISCORD_NOTIFY_GROUP_5070TI` | Discord group to notify on 5070 Ti stock |
+| `DISCORD_NOTIFY_GROUP_5080` | Discord group to notify on 5080 stock |
+| `DISCORD_NOTIFY_GROUP_5090` | Discord group to notify on 5090 stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
