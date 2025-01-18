@@ -1644,7 +1644,7 @@ export const Newegg: Store = {
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137919',
       model: 'gaming trio oc',
       series: '5090',
-      url: 'https://www.newegg.com/pN82E16814137919',
+      url: 'https://www.newegg.com/p/N82E16814137919',
     },
     {
       brand: 'msi',
