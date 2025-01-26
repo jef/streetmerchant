@@ -383,7 +383,6 @@ const notifications = {
     url: envOrString(process.env.NTFY_URL, 'https://ntfy.sh'),
     topic: envOrString(process.env.NTFY_TOPIC),
     priority: envOrString(process.env.NTFY_PRIORITY),
-    tags: envOrString(process.env.NTFY_TAGS),
     title: envOrString(process.env.NTFY_TITLE),
     accessToken: envOrString(process.env.NTFY_ACCESS_TOKEN),
   },

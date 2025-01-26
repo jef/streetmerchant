@@ -14,7 +14,9 @@ export function sendNtfyAlert(link: Link, store: Store) {
       const headers: Record<string, string> = {};
 
       if (ntfy.priority) headers['Priority'] = ntfy.priority;
-      if (ntfy.tags) headers['Tags'] = ntfy.tags;
+      headers[
+        'Tags'
+      ] = `${store.name},${link.model},${link.series},${link.brand}`;
       if (ntfy.title) headers['Title'] = ntfy.title;
       if (ntfy.accessToken)
         headers['Authorization'] = `Bearer ${ntfy.accessToken}`;

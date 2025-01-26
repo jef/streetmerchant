@@ -273,6 +273,5 @@ Use the free service at [ntfy.sh](https://ntfy.sh) or host your own instance.
 | `NTFY_URL` | ntfy server URL, e.g. `https://ntfy.sh` |
 | `NTFY_TOPIC` | Topic to publish alerts to |
 | `NTFY_PRIORITY` | Message priority, e.g. max/high/default/low/min. https://docs.ntfy.sh/publish/?h=priority#message-priority |
-| `NTFY_TAGS` | Tags for the message |
 | `NTFY_TITLE` | Title of the message |
 | `NTFY_ACCESS_TOKEN` | Access token for authentication. https://docs.ntfy.sh/config/#access-tokens |
