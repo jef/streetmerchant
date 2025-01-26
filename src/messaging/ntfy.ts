@@ -25,7 +25,7 @@ export function sendNtfyAlert(link: Link, store: Store) {
         actions: [
           {
             action: 'view',
-            label: 'View Product',
+            label: 'Add to cart',
             url: link.cartUrl ?? link.url,
           },
         ],
