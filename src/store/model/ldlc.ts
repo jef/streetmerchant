@@ -265,4 +265,5 @@ export const Ldlc: Store = {
     },
   ],
   name: 'ldlc',
+  country: 'FR',
 };

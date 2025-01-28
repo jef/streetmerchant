@@ -66,4 +66,5 @@ export const AmazonDeWarehouse: Store = {
     },
   ],
   name: 'amazon-de-warehouse',
+  country: 'DE',
 };

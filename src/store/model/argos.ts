@@ -44,4 +44,5 @@ export const Argos: Store = {
     },
   ],
   name: 'argos',
+  country: 'UK',
 };

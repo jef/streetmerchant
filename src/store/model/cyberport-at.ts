@@ -121,4 +121,5 @@ export const CyberportAt: Store = {
     },
   ],
   name: 'cyberport-at',
+  country: 'AT',
 };

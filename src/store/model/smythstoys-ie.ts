@@ -32,5 +32,6 @@ export const SmythsToysIE: Store = {
     },
   ],
   name: 'smythstoys-ie',
+  country: 'IE',
   waitUntil: 'domcontentloaded',
 };

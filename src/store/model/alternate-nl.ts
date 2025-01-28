@@ -169,4 +169,5 @@ export const AlternateNL: Store = {
     },
   ],
   name: 'alternate-nl',
+  country: 'NL',
 };

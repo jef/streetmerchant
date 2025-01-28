@@ -417,4 +417,5 @@ export const AmazonIt: Store = {
     },
   ],
   name: 'amazon-it',
+  country: 'IT',
 };

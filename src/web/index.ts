@@ -1,15 +1,16 @@
-import {IncomingMessage, Server, ServerResponse, createServer} from 'http';
-import {config, setConfig} from '../config';
 import {createReadStream, readdir} from 'fs';
+import {IncomingMessage, Server, ServerResponse, createServer} from 'http';
+import {isAbsolute, join, normalize, relative} from 'path';
+import {config, setConfig} from '../config';
+import {logger} from '../logger';
 import {
   getAllBrands,
+  getAllCountries,
   getAllModels,
   getAllSeries,
   storeList,
   updateStores,
 } from '../store/model';
-import {isAbsolute, join, normalize, relative} from 'path';
-import {logger} from '../logger';
 
 const approot = join(__dirname, '../../../');
 const webroot = join(approot, './web');
@@ -124,6 +125,9 @@ function handleAPI(
       return;
     case 'stores':
       sendJSON(response, [...storeList.keys()]);
+      return;
+    case 'countries':
+      sendJSON(response, getAllCountries());
       return;
     case 'brands':
       sendJSON(response, getAllBrands());

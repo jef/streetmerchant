@@ -33,4 +33,5 @@ export const Microsoft: Store = {
     },
   ],
   name: 'microsoft',
+  country: 'US',
 };

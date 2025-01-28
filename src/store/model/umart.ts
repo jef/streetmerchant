@@ -134,4 +134,5 @@ export const Umart: Store = {
     },
   ],
   name: 'umart',
+  country: 'AU',
 };

@@ -85,4 +85,5 @@ export const Eprice: Store = {
     },
   ],
   name: 'eprice',
+  country: 'IT',
 };

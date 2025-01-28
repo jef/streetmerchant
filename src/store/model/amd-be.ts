@@ -97,4 +97,5 @@ export const AmdBe: Store = {
     },
   ],
   name: 'amd-be',
+  country: 'BE',
 };

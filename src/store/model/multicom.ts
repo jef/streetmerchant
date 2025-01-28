@@ -394,4 +394,5 @@ export const Multicom: Store = {
     },
   ],
   name: 'multicom',
+  country: 'NO',
 };

@@ -218,4 +218,5 @@ export const Opirata: Store = {
     },
   ],
   name: 'opirata',
+  country: 'ES',
 };

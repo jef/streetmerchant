@@ -116,4 +116,5 @@ export const Zotac: Store = {
     },
   ],
   name: 'zotac',
+  country: 'US',
 };

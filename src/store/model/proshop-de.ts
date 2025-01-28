@@ -410,4 +410,5 @@ export const ProshopDE: Store = {
     },
   ],
   name: 'proshop-de',
+  country: 'DE',
 };

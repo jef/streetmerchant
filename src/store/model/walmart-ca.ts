@@ -50,4 +50,5 @@ export const WalmartCa: Store = {
     },
   ],
   name: 'walmart-ca',
+  country: 'CA',
 };

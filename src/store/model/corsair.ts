@@ -33,4 +33,5 @@ export const Corsair: Store = {
     },
   ],
   name: 'corsair',
+  country: 'US',
 };

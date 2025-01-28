@@ -231,5 +231,6 @@ export const BestBuyCa: Store = {
     },
   ],
   name: 'bestbuy-ca',
+  country: 'CA',
   waitUntil: 'domcontentloaded',
 };

@@ -49,4 +49,5 @@ export const Game: Store = {
     },
   ],
   name: 'game',
+  country: 'UK',
 };

@@ -266,4 +266,5 @@ export const TopAchat: Store = {
     },
   ],
   name: 'topachat',
+  country: 'GR',
 };

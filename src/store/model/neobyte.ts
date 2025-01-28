@@ -330,4 +330,5 @@ export const NeoByte: Store = {
     },
   ],
   name: 'neobyte',
+  country: 'ES',
 };

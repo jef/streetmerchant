@@ -81,4 +81,5 @@ export const AmdNl: Store = {
     },
   ],
   name: 'amd-nl',
+  country: 'NL',
 };

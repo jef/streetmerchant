@@ -23,4 +23,5 @@ export const BT: Store = {
     },
   ],
   name: 'bt',
+  country: 'UK',
 };

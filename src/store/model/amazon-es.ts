@@ -527,4 +527,5 @@ export const AmazonEs: Store = {
     },
   ],
   name: 'amazon-es',
+  country: 'ES',
 };

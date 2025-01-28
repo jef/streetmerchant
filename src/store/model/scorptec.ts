@@ -172,4 +172,5 @@ export const Scorptec: Store = {
     },
   ],
   name: 'scorptec',
+  country: 'AU',
 };

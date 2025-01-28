@@ -872,4 +872,5 @@ export const Caseking: Store = {
     },
   ],
   name: 'caseking',
+  country: 'DE',
 };

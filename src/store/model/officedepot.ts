@@ -43,4 +43,5 @@ export const OfficeDepot: Store = {
     },
   ],
   name: 'officedepot',
+  country: 'US',
 };

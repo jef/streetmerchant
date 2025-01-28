@@ -205,4 +205,5 @@ export const AlternateFr: Store = {
     },
   ],
   name: 'alternate-fr',
+  country: 'FR',
 };

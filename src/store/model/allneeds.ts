@@ -56,4 +56,5 @@ export const Allneeds: Store = {
     },
   ],
   name: 'allneeds',
+  country: 'AU',
 };

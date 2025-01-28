@@ -32,4 +32,5 @@ export const LandmarkComputers: Store = {
     },
   ],
   name: 'landmark-computers',
+  country: 'AU',
 };

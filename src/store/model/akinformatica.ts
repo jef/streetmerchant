@@ -283,5 +283,6 @@ export const Akinformatica: Store = {
     },
   ],
   name: 'akinformatica',
+  country: 'IT',
   successStatusCodes: [[0, 399], 404],
 };

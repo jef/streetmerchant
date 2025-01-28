@@ -727,4 +727,5 @@ export const Materiel: Store = {
     },
   ],
   name: 'materiel',
+  country: 'FR',
 };

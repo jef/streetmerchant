@@ -139,4 +139,5 @@ export const Arlt: Store = {
     },
   ],
   name: 'arlt',
+  country: 'DE',
 };

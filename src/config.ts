@@ -514,6 +514,7 @@ const store = {
     'xboxss',
     'xboxsx',
   ]),
+  showOnlyCountry: envOrArray(process.env.SHOW_ONLY_COUNTRY, []),
   stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 

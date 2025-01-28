@@ -112,4 +112,5 @@ export const Rosman: Store = {
     },
   ],
   name: 'rosman',
+  country: 'AU',
 };

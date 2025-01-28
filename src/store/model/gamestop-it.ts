@@ -31,4 +31,5 @@ export const GamestopIT: Store = {
     },
   ],
   name: 'gamestop-it',
+  country: 'IT',
 };

@@ -345,4 +345,5 @@ export const VsGamers: Store = {
     },
   ],
   name: 'vsgamers',
+  country: 'ES',
 };

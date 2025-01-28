@@ -44,4 +44,5 @@ export const Target: Store = {
     },
   ],
   name: 'target',
+  country: 'US',
 };

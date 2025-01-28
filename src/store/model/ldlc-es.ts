@@ -895,4 +895,5 @@ export const LdlcEs: Store = {
     },
   ],
   name: 'ldlc-es',
+  country: 'ES',
 };

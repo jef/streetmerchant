@@ -157,6 +157,7 @@ export const Asus: Store = {
     },
   ],
   name: 'asus',
+  country: 'US',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url = 'https://store.asus.com/us/category/get_real_time_data';
     const response = await fetch(request_url, {

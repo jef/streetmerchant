@@ -23,4 +23,5 @@ export const AO: Store = {
     },
   ],
   name: 'ao',
+  country: 'UK',
 };

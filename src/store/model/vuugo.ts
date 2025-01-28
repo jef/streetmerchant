@@ -624,4 +624,5 @@ export const Vuugo: Store = {
     },
   ],
   name: 'vuugo',
+  country: 'CA',
 };

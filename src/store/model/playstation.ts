@@ -43,6 +43,7 @@ export const PlayStation: Store = {
     },
   ],
   name: 'playstation',
+  country: 'US',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
       'https://api.direct.playstation.com/commercewebservices/ps-direct-us/products/productList?fields=BASIC&productCodes=' +

@@ -132,4 +132,5 @@ export const Cpl: Store = {
     },
   ],
   name: 'cpl',
+  country: 'AU',
 };

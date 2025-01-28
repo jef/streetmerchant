@@ -57,4 +57,5 @@ export const NvidiaDE: Store = {
     },
   ],
   name: 'nvidia-de',
+  country: 'DE',
 };

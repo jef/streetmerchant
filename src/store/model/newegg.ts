@@ -1608,6 +1608,7 @@ export const Newegg: Store = {
     },
   ],
   name: 'newegg',
+  country: 'US',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
       'https://www.newegg.com/product/api/ProductRealtime?ItemNumber=' +

@@ -101,4 +101,5 @@ export const AmdUk: Store = {
     },
   ],
   name: 'amd-uk',
+  country: 'UK',
 };

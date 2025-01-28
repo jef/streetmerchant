@@ -139,5 +139,6 @@ export const Gamestop: Store = {
     },
   ],
   name: 'gamestop',
+  country: 'US',
   successStatusCodes: [[0, 399], 404],
 };

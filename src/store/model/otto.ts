@@ -93,4 +93,5 @@ export const Otto: Store = {
     },
   ],
   name: 'otto',
+  country: 'DE',
 };

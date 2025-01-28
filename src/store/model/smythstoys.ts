@@ -37,4 +37,5 @@ export const SmythsToys: Store = {
     },
   ],
   name: 'smythstoys',
+  country: 'UK',
 };

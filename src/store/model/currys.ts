@@ -116,5 +116,6 @@ export const Currys: Store = {
     ],
   },
   name: 'currys',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

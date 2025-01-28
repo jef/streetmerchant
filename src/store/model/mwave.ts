@@ -166,4 +166,5 @@ export const Mwave: Store = {
     },
   ],
   name: 'mwave',
+  country: 'AU',
 };

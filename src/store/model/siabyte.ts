@@ -335,4 +335,5 @@ export const Siabyte: Store = {
     },
   ],
   name: 'siabyte',
+  country: 'ES',
 };

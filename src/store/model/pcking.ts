@@ -249,4 +249,5 @@ export const PCKing: Store = {
     },
   ],
   name: 'pcking',
+  country: 'DE',
 };

@@ -43,4 +43,5 @@ export const MightyApe: Store = {
     },
   ],
   name: 'mightyape',
+  country: 'NZ',
 };

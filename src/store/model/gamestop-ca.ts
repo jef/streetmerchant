@@ -44,4 +44,5 @@ export const GamestopCA: Store = {
     },
   ],
   name: 'gamestop-ca',
+  country: 'CA',
 };

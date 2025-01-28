@@ -97,4 +97,5 @@ export const AmdAt: Store = {
     },
   ],
   name: 'amd-at',
+  country: 'AT',
 };

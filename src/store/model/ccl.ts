@@ -93,5 +93,6 @@ export const Ccl: Store = {
     ],
   },
   name: 'ccl',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

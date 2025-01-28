@@ -157,4 +157,5 @@ export const Megekko: Store = {
     },
   ],
   name: 'megekko',
+  country: 'NL',
 };

@@ -165,4 +165,5 @@ export const GameES: Store = {
     },
   ],
   name: 'game-es',
+  country: 'ES',
 };

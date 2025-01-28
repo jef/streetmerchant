@@ -86,5 +86,6 @@ export const Box: Store = {
     ],
   },
   name: 'box',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

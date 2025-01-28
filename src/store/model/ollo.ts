@@ -143,4 +143,5 @@ export const Ollo: Store = {
     },
   ],
   name: 'ollo',
+  country: 'IT',
 };

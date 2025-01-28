@@ -93,4 +93,5 @@ export const Amd: Store = {
     },
   ],
   name: 'amd',
+  country: 'US',
 };

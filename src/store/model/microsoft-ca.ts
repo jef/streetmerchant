@@ -33,4 +33,5 @@ export const MicrosoftCA: Store = {
     },
   ],
   name: 'microsoft-ca',
+  country: 'CA',
 };
