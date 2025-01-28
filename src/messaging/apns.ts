@@ -1,10 +1,11 @@
-import {Link, Store} from '../store/model';
-import {Print, logger} from '../logger';
 import * as apn from '@parse/node-apn';
 import {config} from '../config';
+import {logger} from '../logger';
+import {Link, Store} from '../store/model';
 
 const {apns} = config.notifications;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function sendApns(link: Link, store: Store) {
   const options = {
     token: {

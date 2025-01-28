@@ -1,7 +1,7 @@
-import {Link, Store} from './store/model';
 import chalk from 'chalk';
-import {config} from './config';
 import winston from 'winston';
+import {config} from './config';
+import {Link, Store} from './store/model';
 
 const prettyJson = winston.format.printf(info => {
   const timestamp = new Date().toLocaleTimeString();
@@ -10,7 +10,7 @@ const prettyJson = winston.format.printf(info => {
     '::'
   )} ${info.message}`;
 
-  if (Object.keys(info.metadata).length > 0) {
+  if (Object.keys(info.metadata as object).length > 0) {
     out = `${out} ${chalk.magenta(JSON.stringify(info.metadata, null, 2))}`;
   }
 

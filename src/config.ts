@@ -1,7 +1,7 @@
-import {existsSync, readFileSync} from 'fs';
-import {banner} from './banner';
 import dotenv from 'dotenv';
+import {existsSync, readFileSync} from 'fs';
 import path from 'path';
+import {banner} from './banner';
 
 if (process.env.npm_config_conf) {
   if (
@@ -405,6 +405,18 @@ const proxy = {
 if (process.env.MAX_PRICE) {
   console.warn(
     'ℹ MAX_PRICE is deprecated, please use MAX_PRICE_SERIES_{{series}}'
+  );
+}
+
+if (
+  process.env.TWITCH_ACCESS_TOKEN ||
+  process.env.TWITCH_CHANNEL ||
+  process.env.TWITCH_CLIENT_ID ||
+  process.env.TWITCH_CLIENT_SECRET ||
+  process.env.TWITCH_REFRESH_TOKEN
+) {
+  console.warn(
+    'ℹ TWITCH integrations are currently incompatible with this release'
   );
 }
 

@@ -1,9 +1,8 @@
-import {Link, Store} from '../store/model';
 import Discord from 'discord.js';
+import {DMPayload} from '.';
 import {config} from '../config';
 import {logger} from '../logger';
-import {DMPayload} from '.';
-import {RawUserData} from 'discord.js/typings/rawDataTypes';
+import {Link, Store} from '../store/model';
 
 const {notifyGroup, webhooks, notifyGroupSeries} = config.notifications.discord;
 const {pollInterval, responseTimeout, token, userId} = config.captchaHandler;
@@ -211,9 +210,7 @@ async function getDiscordClientAsync() {
 async function getDMChannelAsync(client?: Discord.Client) {
   let dmChannelInstance = undefined;
   if (userId && client) {
-    const user = await new Discord.User(client, {
-      id: userId,
-    } as RawUserData).fetch();
+    const user = await client.users.fetch(userId);
     dmChannelInstance = await user.createDM();
   }
   return dmChannelInstance;

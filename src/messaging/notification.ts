@@ -1,25 +1,25 @@
+import {DMPayload} from '.';
 import {Link, Store} from '../store/model';
-import {adjustPhilipsHueLights} from './philips-hue';
-import {playSound} from './sound';
 import {sendApns} from './apns';
 import {sendDesktopNotification} from './desktop';
-import {sendDiscordMessage, sendDMAsync as sendDiscordDM} from './discord';
+import {sendDMAsync as sendDiscordDM, sendDiscordMessage} from './discord';
 import {sendEmail} from './email';
+import {sendFreeMobileAlert} from './freemobile';
 import {sendGotifyNotification} from './gotify';
 import {sendMqttMessage} from './mqtt';
 import {sendPagerDutyNotification} from './pagerduty';
+import {adjustPhilipsHueLights} from './philips-hue';
 import {sendPushbulletNotification} from './pushbullet';
 import {sendPushoverNotification} from './pushover';
-import {sendSlackMessage, sendDMAsync as sendSlackDM} from './slack';
-import {sendSms} from './sms';
-import {sendTelegramMessage} from './telegram';
-import {sendTweet} from './twitter';
-import {sendTwilioMessage} from './twilio';
-import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
+import {sendDMAsync as sendSlackDM, sendSlackMessage} from './slack';
+import {sendSms} from './sms';
+import {playSound} from './sound';
 import {sendStreamLabsAlert} from './streamlabs';
-import {sendFreeMobileAlert} from './freemobile';
-import {DMPayload} from '.';
+import {sendTelegramMessage} from './telegram';
+import {sendTwilioMessage} from './twilio';
+// import {sendTwitchMessage} from './twitch';
+import {sendTweet} from './twitter';
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
@@ -40,7 +40,7 @@ export function sendNotification(link: Link, store: Store) {
   sendTelegramMessage(link, store);
   sendTweet(link, store);
   sendTwilioMessage(link, store);
-  sendTwitchMessage(link, store);
+  // sendTwitchMessage(link, store);
   updateRedis(link, store);
   sendStreamLabsAlert(link, store);
   sendFreeMobileAlert(link, store);
