@@ -1,5 +1,5 @@
-import {Store} from './store';
 import fetch from 'node-fetch';
+import {Store} from './store';
 
 export const Newegg: Store = {
   currency: '$',
@@ -1606,6 +1606,206 @@ export const Newegg: Store = {
       series: 'a3-matx',
       url: 'https://www.newegg.com/p/2AM-000Z-000E0',
     },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137920',
+      model: 'ventus 3x oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137920',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137916',
+      model: 'suprim liquid soc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137916',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137915',
+      model: 'suprim soc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137915',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137918',
+      model: 'vanguard soc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137918',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137919',
+      model: 'gaming trio oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137919',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137917',
+      model: 'vanguard soc launch edition',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137917',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500593',
+      model: 'amp extreme infinity',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814500593',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932756',
+      model: 'aero oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932756',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932755',
+      model: 'aorus',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932755',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137910',
+      model: 'gaming trio oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137910',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137913',
+      model: 'ventus 3x oc plus',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137913',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137909',
+      model: 'gaming trio oc white',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137909',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137908',
+      model: 'vanguard soc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137908',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137906',
+      model: 'suprim soc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137906',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137907',
+      model: 'vanguard soc launch edition',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137907',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137905',
+      model: 'suprim liquid soc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137905',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126752',
+      model: 'tuf',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814126752',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126753',
+      model: 'tuf oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814126753',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932754',
+      model: 'windforce oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932754',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126751',
+      model: 'astral oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814126751',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932753',
+      model: 'gaming oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932753',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126750',
+      model: 'astral',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814126750',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126743',
+      model: 'tuf oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814126743',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126744',
+      model: 'prime oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814126744',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126742',
+      model: 'astral oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814126742',
+    },
   ],
   name: 'newegg',
   country: 'US',
@@ -1621,3 +1821,16 @@ export const Newegg: Store = {
     );
   },
 };
+/* Copy Paste Template
+      Copy and paste the item number to the end of each link.
+      https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=itemNumber
+      https://www.newegg.com/p/itemNumber
+{
+  brand: '',
+  cartUrl:
+    'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=',
+  model: '',
+  series: '',
+  url: 'https://www.newegg.com/p/',
+},
+*/

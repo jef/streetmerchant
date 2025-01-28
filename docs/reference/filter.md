@@ -1,12 +1,5 @@
 # Filter
 
-BANNER_COLOR
-COUNTRY
-DISCORD_NOTIFY_GROUP_DARKHERO
-DISCORD_NOTIFY_GROUP_RX6700XT
-DOCKER
-
-
 | Environment variable | Description |
 |:---:|---|
 | `MAX_PRICE_SERIES_3050` | Maximum price allowed for a match, applies 3050 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
@@ -16,7 +9,6 @@ DOCKER
 | `MAX_PRICE_SERIES_3080` | Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3080TI` | Maximum price allowed for a match, applies 3080 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_3090` | Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
-| `MAX_PRICE_SERIES_4080_12G` | Maximum price allowed for a match, applies 4080 12G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4080_16G` | Maximum price allowed for a match, applies 4080 16G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4090` | Maximum price allowed for a match, applies 4090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_5070` | Maximum price allowed for a match, applies 5070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
@@ -248,26 +240,26 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 
 | Brand | Model |
 |:---:|---|
-| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `7950x`, `9800x3d`, `amd reference`, `tuf oc` |
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `7800x3d`, `7950x`, `9600x`, `9700x`, `9800x3d`, `9900x`, `9950x`, `amd reference`, `tuf oc` |
 | `asrock` | `amd reference`, `challenger`, `challenger oc`, `challenger pro`, `challenger pro oc`, `phantom gaming`, `phantom gaming oc`, `taichi`, `taichi x oc` |
-| `asus` | `amd reference`, `crosshair viii`, `dual`, `dual fan`, `dual mini`, `dual mini oc`, `dual oc`, `ekwb`, `gaming`, `gaming oc`, `ko`, `ko oc`, `phoenix 8G (LHR)`, `strix`, `strix lc`, `strix oc`, `strix oc lc`, `strix oc white`, `strix white`, `suprim x`, `tuf`, `tuf oc`, `turbo` |
+| `asus` | `amd reference`, `astral`, `astral oc`, `crosshair viii`, `dual`, `dual fan`, `dual mini`, `dual mini oc`, `dual oc`, `ekwb`, `gaming`, `gaming oc`, `ko`, `ko oc`, `phoenix 8G (LHR)`, `prime oc`, `strix`, `strix lc`, `strix oc`, `strix oc lc`, `strix oc white`, `strix white`, `suprim x`, `tuf`, `tuf oc`, `turbo` |
 | `ax` | `x3w` |
 | `colorful` | `battle-ax`, `igame advanced`, `igame advanced oc`, `igame ultra oc`, `igame vulcan oc` |
 | `corsair` | `600 gold`, `600 platinum`, `750 platinum` |
 | `evga` | `ftw3`, `ftw3 black`, `ftw3 ultra`, `ftw3 ultra hybrid`, `ftw3 ultra hydro copper`, `gaming`, `ichill x3`, `kngpn hybrid`, `xc black`, `xc gaming`, `xc3`, `xc3 black`, `xc3 ultra`, `xc3 ultra hybrid` |
 | `gainward` | `ghost`, `ghost oc`, `pegasus`, `pegasus oc`, `phantom`, `phantom gaming`, `phantom gs`, `phoenix`, `phoenix gs`, `phoenix gs oc` |
 | `galax` | `sg oc` |
-| `gigabyte` | `aero oc`, `amd reference`, `aorus`, `aorus box`, `aorus elite`, `aorus master`, `aorus master 24g`, `aorus master type-c`, `aorus w`, `aorus x wb`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce 24g`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `gaming oc pro`, `gaming oc waterforce wb`, `gaming pro`, `gaming pro oc`, `gaming x`, `master`, `turbo`, `vision`, `vision oc`, `windforce`, `windforce v2`, `xtreme` |
+| `gigabyte` | `aero oc`, `amd reference`, `aorus`, `aorus box`, `aorus elite`, `aorus master`, `aorus master 24g`, `aorus master type-c`, `aorus w`, `aorus x wb`, `aorus xtreme`, `aorus xtreme waterforce`, `aorus xtreme waterforce 24g`, `aorus xtreme waterforce wb`, `eagle`, `eagle oc`, `gaming`, `gaming oc`, `gaming oc pro`, `gaming oc waterforce wb`, `gaming pro`, `gaming pro oc`, `gaming x`, `master`, `turbo`, `vision`, `vision oc`, `windforce`, `windforce oc`, `windforce v2`, `xtreme` |
 | `inno3d` | `gaming x3`, `ice dragon super`, `ichill frostbite`, `ichill x2`, `ichill x3`, `ichill x3 red`, `ichill x4`, `twin x2`, `twin x2 oc`, `x3 oc` |
 | `intel` | `b580` |
 | `kfa2` | `dual oc`, `ex`, `ex gamer`, `ex oc`, `gaming`, `oc`, `sg`, `sg oc` |
 | `leadtek` | `hurricane` |
 | `lianli` | `a3 matx wd` |
 | `microsoft` | `xbox series s`, `xbox series x` |
-| `msi` | `amd reference`, `dual`, `gaming`, `gaming trio`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `mech 2x`, `mech 2x oc`, `strix`, `suprim`, `suprim liquid x`, `suprim x`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc`, `x trio` |
+| `msi` | `amd reference`, `dual`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `mech 2x`, `mech 2x oc`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim soc`, `suprim x`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc`, `ventus 3x oc plus`, `x trio` |
 | `nvidia` | `founders edition` |
 | `palit` | `dual`, `dual oc`, `gamerock`, `gamerock oc`, `gaming oc pro`, `gaming pro`, `gaming pro oc`, `jetstream`, `jetstream oc`, `stormx oc`, `trinity oc` |
-| `pny` | `dual`, `dual fan`, `epic x`, `gaming`, `gaming verto epic-x`, `single fan`, `uprising`, `vetro`, `xlr8`, `xlr8 epic x`, `xlr8 gaming`, `xlr8 gaming uprising epic x`, `xlr8 revel`, `xlr8 revel epic x`, `xlr8 uprising`, `xlr8 verto`, `xlr8 verto epic x`, `xlr8 verto epic x oc`, `xlr8 verto oc` |
+| `pny` | `dual`, `dual fan`, `epic x`, `epic x oc`, `gaming`, `gaming verto epic-x`, `single fan`, `triple fan`, `triple fan oc`, `uprising`, `vetro`, `xlr8`, `xlr8 epic x`, `xlr8 gaming`, `xlr8 gaming uprising epic x`, `xlr8 revel`, `xlr8 revel epic x`, `xlr8 uprising`, `xlr8 verto`, `xlr8 verto epic x`, `xlr8 verto epic x oc`, `xlr8 verto oc` |
 | `powercolor` | `amd reference`, `fighter`, `hellhound`, `hellhound white`, `red devil`, `red dragon` |
 | `sapphire` | `amd reference`, `nitro oc`, `nitro oc se`, `nitro+`, `nitro+ oc`, `nitro+ oc se`, `nitro+ se`, `pulse`, `pulse oc` |
 | `sony` | `ps5 console`, `ps5 digital` |
@@ -275,7 +267,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `test:brand` | `test:model` |
 | `ubiquiti` | `dream machine`, `dream machine pro`, `dream router`, `g4 doorbell pro`, `network video recorder`, `network video recorder pro` |
 | `xfx` | `amd reference`, `merc`, `merc core`, `merc ultra`, `qick`, `qick ultra`, `swft` |
-| `zotac` | `amp airo`, `amp extreme airo`, `amp extreme holo`, `amp holo`, `amp white`, `gaming`, `trinity`, `trinity oc`, `trinity oc lhr`, `twin edge`, `twin edge oc`, `twin edge oc white` |
+| `zotac` | `amp airo`, `amp extreme airo`, `amp extreme holo`, `amp extreme infinity`, `amp holo`, `amp white`, `gaming`, `solid`, `solid oc`, `trinity`, `trinity oc`, `trinity oc lhr`, `twin edge`, `twin edge oc`, `twin edge oc white` |
 
 ## Supported series
 
@@ -291,8 +283,13 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD Ryzen 5800X | `ryzen5800` |
 | AMD Ryzen 5900X | `ryzen5900` |
 | AMD Ryzen 5950X | `ryzen5950` |
+| AMD Ryzen 7800X3D | `ryzen7800x3d` |
 | AMD Ryzen 7950X | `ryzen7950x` |
+| AMD Ryzen 9600X | `ryzen9600x` |
+| AMD Ryzen 9700X | `ryzen9700x` |
 | AMD Ryzen 9800X3D | `ryzen9800x3d` | 
+| AMD Ryzen 9900X | `ryzen9900x` |
+| AMD Ryzen 9950X | `ryzen9950x` |
 | Corsair SFX PSU | `sf` |
 | Crosshair VIII | `darkhero` |
 | Intel Arc B580 | `arc` |
@@ -301,11 +298,14 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Nvidia RTX 3060 | `3060` |
 | Nvidia RTX 3060 Ti | `3060ti` |
 | Nvidia RTX 3070 | `3070` |
+| Nvidia RTX 3070 Ti | `3070ti` |
 | Nvidia RTX 3080 | `3080` |
 | Nvidia RTX 3080 Ti | `3080ti` |
 | Nvidia RTX 3090 | `3090` |
 | Nvidia RTX 4080 16G | `4080-16g` |
 | Nvidia RTX 4090 | `4090` |
+| Nvidia RTX 5070 | `5070` |
+| Nvidia RTX 5070 Ti | `5070ti` |
 | Nvidia RTX 5080 | `5080` |
 | Nvidia RTX 5090 | `5090` |
 | Sony PS5 | `sonyps5c` |

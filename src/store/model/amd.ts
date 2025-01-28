@@ -91,7 +91,52 @@ export const Amd: Store = {
       series: 'rx6700xt',
       url: 'https://www.amd.com/en/direct-buy/5496921400/us',
     },
+    {
+      brand: 'amd',
+      model: '9800x3d',
+      series: 'ryzen9800x3d',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-7-9800x3d-processor/',
+    },
+    {
+      brand: 'amd',
+      model: '9950x',
+      series: 'ryzen9950x',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-9-9950x-processor/',
+    },
+    {
+      brand: 'amd',
+      model: '9900x',
+      series: 'ryzen9900x',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-9-9900x-processor/',
+    },
+    {
+      brand: 'amd',
+      model: '9700x',
+      series: 'ryzen9700x',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-7-9700x-processor/',
+    },
+    {
+      brand: 'amd',
+      model: '9600x',
+      series: 'ryzen9600x',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-5-9600x-processor/',
+    },
+    {
+      brand: 'amd',
+      model: '7800x3d',
+      series: 'ryzen7800x3d',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-7-7800x3d-processor/',
+    },
   ],
   name: 'amd',
   country: 'US',
 };
+/* Copy Paste Template
+As of 01-12-2025 I cant figure out the add to cart URL. For now just copy the product page URL into the url field. -agpuperson
+    {
+      brand: 'amd',
+      model: '',
+      series: '',
+      url: '',
+    },
+*/

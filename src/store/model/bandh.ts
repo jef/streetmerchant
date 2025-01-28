@@ -479,3 +479,11 @@ export const BAndH: Store = {
   name: 'bandh',
   country: 'US',
 };
+/* Copy Paste Template
+    {
+      brand: 'pny',
+      model: '',
+      series: '',
+      url: '',
+    },
+*/
