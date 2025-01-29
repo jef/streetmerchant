@@ -697,6 +697,13 @@ export const BestBuy: Store = {
     },
     {
       brand: 'nvidia',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614154/cart',
+      model: 'founders edition',
+      series: '5070',
+      url: 'https://api.bestbuy.com/click/-/6614154/pdp',
+    },
+    {
+      brand: 'nvidia',
       cartUrl: 'https://api.bestbuy.com/click/-/6614153/cart',
       model: 'founders edition',
       series: '5080',
@@ -704,7 +711,7 @@ export const BestBuy: Store = {
     },
     {
       brand: 'nvidia',
-      // cartUrl: 'https://api.bestbuy.com/click/-/6614151/cart',
+      cartUrl: 'https://api.bestbuy.com/click/-/6614151/cart',
       model: 'founders edition',
       series: '5090',
       url: 'https://api.bestbuy.com/click/-/6614151/pdp',
@@ -712,3 +719,16 @@ export const BestBuy: Store = {
   ],
   name: 'bestbuy',
 };
+
+/* Copy Paste template
+
+Paste the SKU from the site in between both sets of /-// example: /-/sku/cart, /-/sku/pdp
+
+{
+  brand: '',
+  cartUrl: 'https://api.bestbuy.com/click/-//cart',
+  model: '',
+  series: '',
+  url: 'https://api.bestbuy.com/click/-//pdp',
+},
+*/

@@ -181,3 +181,15 @@ export const Asus: Store = {
   },
   successStatusCodes: [[0, 399], 404],
 };
+
+/* Copy Paste Template
+
+Asus depreciated item numbers, do not use. Instead just copy and paste the links like normal.
+
+{
+  brand: '',
+  model: '',
+  series: '',
+  url: '',
+},
+*/

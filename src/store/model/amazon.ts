@@ -982,3 +982,19 @@ export const Amazon: Store = {
   ],
   name: 'amazon',
 };
+
+/* Copy Paste Template
+
+Copy the product id from the amazon URL.
+For example if you have https://www.amazon.com/gp/product/B08M9R8HQY just copy B08M9R8HQY.
+Paste it after ASIN.1= in the cartUrl and at the end of /dp/ in the url.
+
+{
+  brand: '',
+  cartUrl:
+    'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=&Quantity.1=1',
+  model: '',
+  series: '',
+  url: 'https://www.amazon.com/dp/',
+},
+*/
