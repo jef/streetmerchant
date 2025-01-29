@@ -379,6 +379,13 @@ const notifications = {
     id: envOrString(process.env.FREEMOBILE_ID),
     apiKey: envOrString(process.env.FREEMOBILE_API_KEY),
   },
+  ntfy: {
+    url: envOrString(process.env.NTFY_URL, 'https://ntfy.sh'),
+    topic: envOrString(process.env.NTFY_TOPIC),
+    priority: envOrString(process.env.NTFY_PRIORITY),
+    title: envOrString(process.env.NTFY_TITLE),
+    accessToken: envOrString(process.env.NTFY_ACCESS_TOKEN),
+  },
 };
 
 const nvidia = {

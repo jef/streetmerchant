@@ -20,10 +20,12 @@ import {updateRedis} from './redis';
 import {sendStreamLabsAlert} from './streamlabs';
 import {sendFreeMobileAlert} from './freemobile';
 import {DMPayload} from '.';
+import {sendNtfyAlert} from './ntfy';
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
   playSound();
+  sendNtfyAlert(link, store);
   sendDiscordMessage(link, store);
   sendDesktopNotification(link, store);
   sendEmail(link, store);
