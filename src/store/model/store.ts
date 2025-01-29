@@ -274,6 +274,7 @@ export type Model =
   | 'twin x2'
   | 'uprising'
   | 'vanguard soc'
+  | 'vanguard'
   | 'vanguard soc launch edition'
   | 'ventus 2x oc'
   | 'ventus 2x'
