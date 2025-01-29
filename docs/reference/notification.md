@@ -241,7 +241,7 @@ Generate all Twitter keys at [developer.twitter.com](https://developer.twitter.c
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
 | `TWITTER_TWEET_TAGS` | List of hashtags to append to the tweet message, e.g.: `#nvidia #nvidiastock` |
 
-## Twitch - TEMPORARILY DEPRECATED
+## Twitch - TEMPORARILY DISABLED
 
 Instructions on how to set up tokens can be found at [d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot](https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot).
 
