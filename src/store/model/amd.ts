@@ -100,25 +100,25 @@ export const Amd: Store = {
     {
       brand: 'amd',
       model: '9950x',
-      series: 'ryzen9950',
+      series: 'ryzen9950x',
       url: 'https://shop-us-en.amd.com/amd-ryzen-9-9950x-processor/',
     },
     {
       brand: 'amd',
       model: '9900x',
-      series: 'ryzen9900',
+      series: 'ryzen9900x',
       url: 'https://shop-us-en.amd.com/amd-ryzen-9-9900x-processor/',
     },
     {
       brand: 'amd',
       model: '9700x',
-      series: 'ryzen9700',
+      series: 'ryzen9700x',
       url: 'https://shop-us-en.amd.com/amd-ryzen-7-9700x-processor/',
     },
     {
       brand: 'amd',
       model: '9600x',
-      series: 'ryzen9600',
+      series: 'ryzen9600x',
       url: 'https://shop-us-en.amd.com/amd-ryzen-5-9600x-processor/',
     },
     {
@@ -130,12 +130,16 @@ export const Amd: Store = {
   ],
   name: 'amd',
 };
+
 /* Copy Paste Template
-As of 01-12-2025 I cant figure out the add to cart URL. For now just copy the product page URL into the url field. -agpuperson
-    {
-      brand: 'amd',
-      model: '',
-      series: '',
-      url: '',
-    },
+
+As of 01-12-2025 I cant figure out the add to cart URL.
+For now just copy the product page URL into the url field. -agpuperson
+
+{
+  brand: 'amd',
+  model: '',
+  series: '',
+  url: '',
+},
 */
