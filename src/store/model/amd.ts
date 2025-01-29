@@ -131,12 +131,16 @@ export const Amd: Store = {
   name: 'amd',
   country: 'US',
 };
+
 /* Copy Paste Template
-As of 01-12-2025 I cant figure out the add to cart URL. For now just copy the product page URL into the url field. -agpuperson
-    {
-      brand: 'amd',
-      model: '',
-      series: '',
-      url: '',
-    },
+
+As of 01-12-2025 I cant figure out the add to cart URL.
+For now just copy the product page URL into the url field. -agpuperson
+
+{
+  brand: 'amd',
+  model: '',
+  series: '',
+  url: '',
+},
 */

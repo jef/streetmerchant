@@ -23,7 +23,7 @@ export const BestBuyCa: Store = {
       brand: 'msi',
       model: 'ventus 3x',
       series: '3060',
-      url: 'https://www.bestbuy.ca/en-ca/product/msi-nvidia-geforce-rtx-3060-ventus-3x-12gb-gddr6-video-card/15324508',
+      url: 'https://www.bestbuy.ca/en-ca/product/16595219',
     },
     {
       brand: 'zotac',
@@ -229,8 +229,140 @@ export const BestBuyCa: Store = {
       series: '3080ti',
       url: 'https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3080-ti-12gb-gddr6x-video-card/15530045',
     },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18931348',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18931347',
+    },
+    {
+      brand: 'asus',
+      model: 'astral oc',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/19177947',
+    },
+    {
+      brand: 'asus',
+      model: 'astral oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/19177946',
+    },
+    {
+      brand: 'asus',
+      model: 'prime',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18971064',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18969272',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938760',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming trio oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938759',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim liquid x',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938758',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim liquid soc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938757',
+    },
+    {
+      brand: 'msi',
+      model: 'vanguard soc launch edition',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938756',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938755',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim liquid x',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938754',
+    },
+    {
+      brand: 'msi',
+      model: 'vanguard',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938752',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming trio oc',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18938751',
+    },
+    {
+      brand: 'asus',
+      model: 'prime',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18934247',
+    },
+    {
+      brand: 'pny',
+      model: 'triple fan oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18934178',
+    },
+    {
+      brand: 'pny',
+      model: 'epic x oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18934177',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid',
+      series: '5090',
+      url: 'https://www.bestbuy.ca/en-ca/product/18931631',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid oc',
+      series: '5080',
+      url: 'https://www.bestbuy.ca/en-ca/product/18931629',
+    },
   ],
   name: 'bestbuy-ca',
   country: 'CA',
   waitUntil: 'domcontentloaded',
 };
+
+/*  Copy Paste Template
+
+Just paste product ID at the end of the link
+
+{
+  brand: '',
+  model: '',
+  series: '',
+  url: 'https://www.bestbuy.ca/en-ca/product/',
+},
+*/

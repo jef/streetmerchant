@@ -256,8 +256,8 @@ const notifications = {
       ryzen5800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5800),
       ryzen5900: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5900),
       ryzen5950: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5950),
-      ryzen7950X: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN7950X),
       ryzen7800x3d: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN7800X3D),
+      ryzen7950X: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN7950X),
       ryzen9800x3d: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9800X3D),
       ryzen9600x: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9600X),
       ryzen9700x: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9700X),
@@ -387,6 +387,13 @@ const notifications = {
   freemobile: {
     id: envOrString(process.env.FREEMOBILE_ID),
     apiKey: envOrString(process.env.FREEMOBILE_API_KEY),
+  },
+  ntfy: {
+    url: envOrString(process.env.NTFY_URL, 'https://ntfy.sh'),
+    topic: envOrString(process.env.NTFY_TOPIC),
+    priority: envOrString(process.env.NTFY_PRIORITY),
+    title: envOrString(process.env.NTFY_TITLE),
+    accessToken: envOrString(process.env.NTFY_ACCESS_TOKEN),
   },
 };
 

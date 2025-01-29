@@ -1821,10 +1821,13 @@ export const Newegg: Store = {
     );
   },
 };
+
 /* Copy Paste Template
-      Copy and paste the item number to the end of each link.
-      https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=itemNumber
-      https://www.newegg.com/p/itemNumber
+
+Copy and paste the item number to the end of each link.
+https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=itemNumber
+https://www.newegg.com/p/itemNumber
+
 {
   brand: '',
   cartUrl:

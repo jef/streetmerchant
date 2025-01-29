@@ -154,11 +154,12 @@ export const Zotac: Store = {
   name: 'zotac',
   country: 'US',
 };
+
 /* Copy Paste Template
-    {
-      brand: 'zotac',
-      model: '',
-      series: '',
-      url: '',
-    },
+{
+  brand: 'zotac',
+  model: '',
+  series: '',
+  url: '',
+},
 */

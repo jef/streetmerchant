@@ -720,13 +720,16 @@ export const BestBuy: Store = {
   name: 'bestbuy',
   country: 'US',
 };
+
 /* Copy Paste template
-      Paste the SKU from the site in between both sets of /-// example: /-/sku/cart, /-/sku/pdp
-    {
-      brand: '',
-      cartUrl: 'https://api.bestbuy.com/click/-//cart',
-      model: '',
-      series: '',
-      url: 'https://api.bestbuy.com/click/-//pdp',
-    },
+
+Paste the SKU from the site in between both sets of /-// example: /-/sku/cart, /-/sku/pdp
+
+{
+  brand: '',
+  cartUrl: 'https://api.bestbuy.com/click/-//cart',
+  model: '',
+  series: '',
+  url: 'https://api.bestbuy.com/click/-//pdp',
+},
 */
