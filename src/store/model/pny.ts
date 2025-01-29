@@ -190,11 +190,12 @@ export const Pny: Store = {
   ],
   name: 'pny',
 };
+
 /* Copy Paste Template
-    {
-      brand: 'pny',
-      model: '',
-      series: '',
-      url: '',
-    },
+{
+  brand: 'pny',
+  model: '',
+  series: '',
+  url: '',
+},
 */
