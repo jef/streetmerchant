@@ -354,11 +354,14 @@ export const BestBuyCa: Store = {
   waitUntil: 'domcontentloaded',
 };
 
-/*  Copy Paste Template, Just paste product ID at the end of the link
-    {
-      brand: '',
-      model: '',
-      series: '',
-      url: 'https://www.bestbuy.ca/en-ca/product/',
-    },
+/*  Copy Paste Template
+
+Just paste product ID at the end of the link
+
+{
+  brand: '',
+  model: '',
+  series: '',
+  url: 'https://www.bestbuy.ca/en-ca/product/',
+},
 */
