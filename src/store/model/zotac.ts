@@ -150,7 +150,6 @@ export const Zotac: Store = {
       series: '5080',
       url: 'https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5080-amp-extreme-infinity',
     },
-
   ],
   name: 'zotac',
 };
