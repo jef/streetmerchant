@@ -1,5 +1,31 @@
 # Changelog
 
+## [3.10.0](https://github.com/jef/streetmerchant/compare/v3.9.0...v3.10.0) (2025-01-29)
+
+
+### Features
+
+* add 50xx series ([#3190](https://github.com/jef/streetmerchant/issues/3190)) ([db07796](https://github.com/jef/streetmerchant/commit/db07796ef99cc55c7ccdc67df0884b26e361c440))
+* add 50xx series discord notification groups ([#3193](https://github.com/jef/streetmerchant/issues/3193)) ([f59d3fc](https://github.com/jef/streetmerchant/commit/f59d3fcbb0b40e0db4e0da9e8b3c60c7d7c114a4))
+* add more 50xx series, add templates for adding more links ([#3191](https://github.com/jef/streetmerchant/issues/3191)) ([ce6d084](https://github.com/jef/streetmerchant/commit/ce6d08490c11fbffaeb932ddc0c6f9262d079c4d))
+* add new microcenters locations, more 4090 GPUs, fixed incorrect URLs ([#3181](https://github.com/jef/streetmerchant/issues/3181)) ([218b0c3](https://github.com/jef/streetmerchant/commit/218b0c30757aaaa5ddc922f32e330457c0a82318))
+* add NTFY.SH agent ([#3195](https://github.com/jef/streetmerchant/issues/3195)) ([e18f231](https://github.com/jef/streetmerchant/commit/e18f2316bdc43c06c164e77019d68fd614afdc89))
+
+
+### Miscellaneous
+
+* update bestbuy selectors ([#3186](https://github.com/jef/streetmerchant/issues/3186)) ([810cefc](https://github.com/jef/streetmerchant/commit/810cefcd56129448d485127064478b985acb992b))
+
+
+### Continuous Integration
+
+* update pr linter ([25d556c](https://github.com/jef/streetmerchant/commit/25d556c736a90b64f4312e4a4332dbc922b71f66))
+
+
+### Documentation
+
+* remove badges ([4388e9a](https://github.com/jef/streetmerchant/commit/4388e9a5e0cb1d1e544b5614fdba37efc2475d52))
+
 ## [3.9.0](https://github.com/jef/streetmerchant/compare/v3.8.3...v3.9.0) (2023-05-15)
 
 
