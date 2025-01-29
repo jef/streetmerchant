@@ -11,6 +11,10 @@
 | `MAX_PRICE_SERIES_4080_12G` | Maximum price allowed for a match, applies 4080 12G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4080_16G` | Maximum price allowed for a match, applies 4080 16G series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_4090` | Maximum price allowed for a match, applies 4090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_5070` | Maximum price allowed for a match, applies 5070 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_5070TI` | Maximum price allowed for a match, applies 5070Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_5080` | Maximum price allowed for a match, applies 5080 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
+| `MAX_PRICE_SERIES_5090` | Maximum price allowed for a match, applies 5090 series cards (does not apply to these sites: Nvidia, Asus, EVGA) |
 | `MAX_PRICE_SERIES_CORSAIR_SF` | Maximum price allowed for a match, applies to Corsair PSUs |
 | `MAX_PRICE_SERIES_DARKHERO` | Maximum price allowed for a match, applies to ASUS Dark Hero motherboards |
 | `MAX_PRICE_SERIES_RYZEN5600` | Maximum price allowed for a match, applies AMD 5600 series cpus |
@@ -21,6 +25,12 @@
 | `MAX_PRICE_SERIES_RX6800` | Maximum price allowed for a match, applies AMD RX 6800 |
 | `MAX_PRICE_SERIES_RX6800XT` | Maximum price allowed for a match,applies AMD RX 6800 XT |
 | `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
+| `MAX_PRICE_SERIES_RYZEN7800X3D` | Maximum price allowed for a match, applies AMD 7800X3D |
+| `MAX_PRICE_SERIES_RYZEN9800XX3D` | Maximum price allowed for a match, applies AMD 9800XX3D |
+| `MAX_PRICE_SERIES_RYZEN9600X` | Maximum price allowed for a match, applies AMD RX 9600X |
+| `MAX_PRICE_SERIES_RYZEN9700X` | Maximum price allowed for a match, applies AMD RX 9700X |
+| `MAX_PRICE_SERIES_RYZEN9900X` | Maximum price allowed for a match, applies AMD RX 9900X |
+| `MAX_PRICE_SERIES_RYZEN9950X` | Maximum price allowed for a match, applies AMD RX 9950X |
 | `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
 | `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
 | `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies Xbox Series S |
