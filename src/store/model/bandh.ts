@@ -478,11 +478,12 @@ export const BAndH: Store = {
   ],
   name: 'bandh',
 };
+
 /* Copy Paste Template
-    {
-      brand: 'pny',
-      model: '',
-      series: '',
-      url: '',
-    },
+{
+  brand: 'pny',
+  model: '',
+  series: '',
+  url: '',
+},
 */
