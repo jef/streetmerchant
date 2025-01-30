@@ -161,6 +161,7 @@ Used with the `STORES` variable.
 | Microsoft | CA | `microsoft-ca` |
 | MightyApe | NZ | `mightyape` |
 | Mindfactory | DE | `mindfactory` |
+| MSI | US | `msi` |
 | MSY | AU |  `msy` |
 | Multicom | NO |  `multicom` |
 | Mwave | AU | `mwave` |
@@ -261,7 +262,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `leadtek` | `hurricane` |
 | `lianli` | `a3 matx wd` |
 | `microsoft` | `xbox series s`, `xbox series x` |
-| `msi` | `amd reference`, `dual`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `mech 2x`, `mech 2x oc`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim soc`, `suprim x`, `vanguard`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc`, `ventus 3x oc plus`, `x trio` |
+| `msi` | `amd reference`, `dual`, `expert`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `inspire 3x`, `lp oc`, `mech 2x`, `mech 2x oc`, `shadow 3x`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim oc`, `suprim soc`, `suprim x`, `vanguard`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 2x white oc`, `ventus 3x`, `ventus 3x e1 oc`, `ventus 3x oc`, `ventus 3x oc plus`, `x trio` |
 | `nvidia` | `founders edition` |
 | `palit` | `dual`, `dual oc`, `gamerock`, `gamerock oc`, `gaming oc pro`, `gaming pro`, `gaming pro oc`, `jetstream`, `jetstream oc`, `stormx oc`, `trinity oc` |
 | `pny` | `dual`, `dual fan`, `epic x`, `epic x oc`, `gaming`, `gaming verto epic-x`, `single fan`, `triple fan`, `triple fan oc`, `uprising`, `vetro`, `xlr8`, `xlr8 epic x`, `xlr8 gaming`, `xlr8 gaming uprising epic x`, `xlr8 revel`, `xlr8 revel epic x`, `xlr8 uprising`, `xlr8 verto`, `xlr8 verto epic x`, `xlr8 verto epic x oc`, `xlr8 verto oc` |
@@ -307,6 +308,10 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Nvidia RTX 3080 | `3080` |
 | Nvidia RTX 3080 Ti | `3080ti` |
 | Nvidia RTX 3090 | `3090` |
+| Nvidia RTX 4060 | `4060` |
+| Nvidia RTX 4070 | `4070` |
+| Nvidia RTX 4070 SUPER | `4070super` |
+| Nvidia RTX 4070 Ti | `4070ti` |
 | Nvidia RTX 4080 16G | `4080-16g` |
 | Nvidia RTX 4090 | `4090` |
 | Nvidia RTX 5070 | `5070` |
