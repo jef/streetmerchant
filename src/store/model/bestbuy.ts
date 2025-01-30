@@ -21,7 +21,7 @@ export const BestBuy: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://api.bestbuy.com/click/-/6258941/pdp',
+      url: 'https://api.bestbuy.com/click/-/6489491/pdp',
     },
     {
       brand: 'amd',
