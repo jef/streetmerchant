@@ -200,6 +200,7 @@ export type Model =
   | 'igame advanced'
   | 'igame ultra oc'
   | 'igame vulcan oc'
+  | 'inspire 3x oc'
   | 'inspire 3x'
   | 'inspire 3x oc'
   | 'jetstream'
