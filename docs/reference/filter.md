@@ -247,7 +247,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 |:---:|---|
 | `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `7800x3d`, `7950x`, `9600x`, `9700x`, `9800x3d`, `9900x`, `9950x`, `amd reference`, `tuf oc` |
 | `asrock` | `amd reference`, `challenger`, `challenger oc`, `challenger pro`, `challenger pro oc`, `phantom gaming`, `phantom gaming oc`, `taichi`, `taichi x oc` |
-| `asus` | `amd reference`, `astral`, `astral oc`, `crosshair viii`, `dual`, `dual fan`, `dual mini`, `dual mini oc`, `dual oc`, `ekwb`, `gaming`, `gaming oc`, `ko`, `ko oc`, `phoenix 8G (LHR)`, `prime oc`, `strix`, `strix lc`, `strix oc`, `strix oc lc`, `strix oc white`, `strix white`, `suprim x`, `tuf`, `tuf oc`, `turbo` |
+| `asus` | `amd reference`, `astral`, `astral oc`, `crosshair viii`, `dual`, `dual fan`, `dual mini`, `dual mini oc`, `dual oc`, `ekwb`, `gaming`, `gaming oc`, `ko`, `ko oc`, `phoenix 8G (LHR)`, `prime`, `prime oc`, `strix`, `strix lc`, `strix oc`, `strix oc lc`, `strix oc white`, `strix white`, `suprim x`, `tuf`, `tuf oc`, `turbo` |
 | `ax` | `x3w` |
 | `colorful` | `battle-ax`, `igame advanced`, `igame advanced oc`, `igame ultra oc`, `igame vulcan oc` |
 | `corsair` | `600 gold`, `600 platinum`, `750 platinum` |
@@ -261,7 +261,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `leadtek` | `hurricane` |
 | `lianli` | `a3 matx wd` |
 | `microsoft` | `xbox series s`, `xbox series x` |
-| `msi` | `amd reference`, `dual`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `mech 2x`, `mech 2x oc`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim soc`, `suprim x`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc`, `ventus 3x oc plus`, `x trio` |
+| `msi` | `amd reference`, `dual`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `mech 2x`, `mech 2x oc`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim soc`, `suprim x`, `vanguard`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 3x`, `ventus 3x oc`, `ventus 3x oc plus`, `x trio` |
 | `nvidia` | `founders edition` |
 | `palit` | `dual`, `dual oc`, `gamerock`, `gamerock oc`, `gaming oc pro`, `gaming pro`, `gaming pro oc`, `jetstream`, `jetstream oc`, `stormx oc`, `trinity oc` |
 | `pny` | `dual`, `dual fan`, `epic x`, `epic x oc`, `gaming`, `gaming verto epic-x`, `single fan`, `triple fan`, `triple fan oc`, `uprising`, `vetro`, `xlr8`, `xlr8 epic x`, `xlr8 gaming`, `xlr8 gaming uprising epic x`, `xlr8 revel`, `xlr8 revel epic x`, `xlr8 uprising`, `xlr8 verto`, `xlr8 verto epic x`, `xlr8 verto epic x oc`, `xlr8 verto oc` |
