@@ -262,4 +262,5 @@ export const Mindfactory: Store = {
     // #endregion
   ],
   name: 'mindfactory',
+  country: 'DE',
 };

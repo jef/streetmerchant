@@ -30,4 +30,5 @@ export const ArgosIE: Store = {
     },
   ],
   name: 'argos-ie',
+  country: 'IE',
 };

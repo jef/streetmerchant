@@ -419,4 +419,5 @@ export const PowerNO: Store = {
     },
   ],
   name: 'power-no',
+  country: 'NO',
 };

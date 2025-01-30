@@ -1,5 +1,5 @@
-import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
+import {Store} from './store';
 
 export const HardwarePlanet: Store = {
   backoffStatusCodes: [404, 429, 503],
@@ -82,5 +82,6 @@ export const HardwarePlanet: Store = {
     ],
   },
   name: 'hardware-planet',
+  country: 'IT',
   waitUntil: 'domcontentloaded',
 };

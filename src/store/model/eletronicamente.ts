@@ -134,4 +134,5 @@ export const Eletronicamente: Store = {
     },
   ],
   name: 'eletronicamente',
+  country: 'ES',
 };

@@ -29,4 +29,5 @@ export const AsusEs: Store = {
     },
   ],
   name: 'asus-es',
+  country: 'ES',
 };

@@ -474,4 +474,5 @@ export const MicroCenter: Store = {
   },
   links,
   name: 'microcenter',
+  country: 'US',
 };

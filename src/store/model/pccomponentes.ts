@@ -526,4 +526,5 @@ export const PCComponentes: Store = {
     },
   ],
   name: 'pccomponentes',
+  country: 'ES',
 };

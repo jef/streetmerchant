@@ -37,4 +37,5 @@ export const BpmPower: Store = {
     },
   ],
   name: 'bpm-power',
+  country: 'IT',
 };

@@ -39,4 +39,5 @@ export const Unieuro: Store = {
     },
   ],
   name: 'unieuro',
+  country: 'IT',
 };

@@ -256,4 +256,5 @@ export const ComputerAlliance: Store = {
     },
   ],
   name: 'computeralliance',
+  country: 'AU',
 };

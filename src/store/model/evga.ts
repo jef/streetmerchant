@@ -119,4 +119,5 @@ export const Evga: Store = {
     },
   ],
   name: 'evga',
+  country: 'US',
 };

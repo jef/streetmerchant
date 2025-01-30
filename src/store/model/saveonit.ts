@@ -164,4 +164,5 @@ export const SaveOnIt: Store = {
     },
   ],
   name: 'saveonit',
+  country: 'AU',
 };

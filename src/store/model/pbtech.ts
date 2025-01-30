@@ -70,4 +70,5 @@ export const PBTech: Store = {
     },
   ],
   name: 'pbtech',
+  country: 'AU',
 };

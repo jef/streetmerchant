@@ -30,4 +30,5 @@ export const TescoIE: Store = {
     },
   ],
   name: 'tesco-ie',
+  country: 'IE',
 };

@@ -309,4 +309,5 @@ export const AComPC: Store = {
     },
   ],
   name: 'acompc',
+  country: 'DE',
 };

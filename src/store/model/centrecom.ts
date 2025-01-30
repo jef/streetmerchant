@@ -74,4 +74,5 @@ export const Centrecom: Store = {
     },
   ],
   name: 'centrecom',
+  country: 'AU',
 };

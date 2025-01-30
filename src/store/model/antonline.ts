@@ -37,4 +37,5 @@ export const AntOnline: Store = {
     },
   ],
   name: 'antonline',
+  country: 'US',
 };

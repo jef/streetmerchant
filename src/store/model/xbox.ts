@@ -18,4 +18,5 @@ export const Xbox: Store = {
     },
   ],
   name: 'xbox',
+  country: 'US',
 };

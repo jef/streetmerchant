@@ -32,29 +32,46 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | Environment variable | Description |
 |:---:|---|
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify |
+| `DISCORD_NOTIFY_GROUP_3050` | Discord group to notify on 3050 stock |
 | `DISCORD_NOTIFY_GROUP_3060` | Discord group to notify on 3060 stock |
 | `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
+| `DISCORD_NOTIFY_GROUP_3070TI` | Discord group to notify on 3070 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
 | `DISCORD_NOTIFY_GROUP_3080TI` | Discord group to notify on 3080 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3090` | Discord group to notify on 3090 stock |
-| `DISCORD_NOTIFY_GROUP_4080_12G` | Discord group to notify on 4080 12G stock |
 | `DISCORD_NOTIFY_GROUP_4080_16G` | Discord group to notify on 4080 16G stock |
 | `DISCORD_NOTIFY_GROUP_4090` | Discord group to notify on 4090 stock |
 | `DISCORD_NOTIFY_GROUP_5070` | Discord group to notify on 5070 stock |
 | `DISCORD_NOTIFY_GROUP_5070TI` | Discord group to notify on 5070 Ti stock |
 | `DISCORD_NOTIFY_GROUP_5080` | Discord group to notify on 5080 stock |
 | `DISCORD_NOTIFY_GROUP_5090` | Discord group to notify on 5090 stock |
-| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
-| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
-| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
-| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
-| `DISCORD_NOTIFY_GROUP_DARKHERO` | Discord group to notify on Dark Hero stock |
+| `DISCORD_NOTIFY_GROUP_A3MATX` | Discord group to notify on Lian Li A3 mATX Case stock |
+| `DISCORD_NOTIFY_GROUP_ARC` | Discord group to notify on Intel Arc B580 stock |
 | `DISCORD_NOTIFY_GROUP_CORSAIR_SF` | Discord group to notify on Corsair SF stock |
+| `DISCORD_NOTIFY_GROUP_DARKHERO` | Discord group to notify on Dark Hero stock |
+| `DISCORD_NOTIFY_GROUP_RX6700XT` | Discord group to notify on RX 6700XT stock |
+| `DISCORD_NOTIFY_GROUP_RX6800` | Discord group to notify on RX 6800 stock |
+| `DISCORD_NOTIFY_GROUP_RX6800XT` | Discord group to notify on RX 6800XT stock |
+| `DISCORD_NOTIFY_GROUP_RX6900XT` | Discord group to notify on RX 6900XT stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on Ryzen 5600X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on Ryzen 5800X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on 5900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5900` | Discord group to notify on Ryzen 5900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on 5950X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN5950` | Discord group to notify on Ryzen 5950X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN7800X3D` | Discord group to notify on Ryzen 7800X3D stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9600X` | Discord group to notify on Ryzen 9600X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9700X` | Discord group to notify on Ryzen 9700X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9800X3D` | Discord group to notify on Ryzen 9800X3D stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9900X` | Discord group to notify on Ryzen 9900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9950X` | Discord group to notify on Ryzen 9950X stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
-| `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
+| `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
 | `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL. Can be comma separated. Use whole webhook URL |
 
@@ -224,7 +241,7 @@ Generate all Twitter keys at [developer.twitter.com](https://developer.twitter.c
 | `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret |
 | `TWITTER_TWEET_TAGS` | List of hashtags to append to the tweet message, e.g.: `#nvidia #nvidiastock` |
 
-## Twitch
+## Twitch - TEMPORARILY DISABLED
 
 Instructions on how to set up tokens can be found at [d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot](https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot).
 

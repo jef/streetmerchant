@@ -252,4 +252,5 @@ export const Elkjop: Store = {
     },
   ],
   name: 'elkjop',
+  country: 'NO',
 };

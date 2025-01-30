@@ -29,4 +29,5 @@ export const ShopTo: Store = {
     },
   ],
   name: 'shopto',
+  country: 'UK',
 };

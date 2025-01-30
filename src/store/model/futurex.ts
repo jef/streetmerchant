@@ -81,4 +81,5 @@ export const Futurex: Store = {
     },
   ],
   name: 'futurex',
+  country: 'DE',
 };

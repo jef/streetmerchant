@@ -166,4 +166,5 @@ export const Msy: Store = {
     },
   ],
   name: 'msy',
+  country: 'AU',
 };

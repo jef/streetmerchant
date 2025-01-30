@@ -762,4 +762,5 @@ export const AmazonSg: Store = {
     },
   ],
   name: 'amazon-sg',
+  country: 'SG',
 };

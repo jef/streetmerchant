@@ -74,4 +74,5 @@ export const StormComputers: Store = {
     },
   ],
   name: 'storm-computer',
+  country: 'AU',
 };

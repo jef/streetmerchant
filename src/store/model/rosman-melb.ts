@@ -112,4 +112,5 @@ export const RosmanMelb: Store = {
     },
   ],
   name: 'rosman-melb',
+  country: 'AU',
 };

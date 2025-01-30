@@ -42,4 +42,5 @@ export const Spielegrotte: Store = {
     },
   ],
   name: 'spielegrotte',
+  country: 'DE',
 };

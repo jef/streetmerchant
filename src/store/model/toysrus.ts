@@ -44,4 +44,5 @@ export const ToysRUs: Store = {
     },
   ],
   name: 'toysrus',
+  country: 'US',
 };

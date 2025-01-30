@@ -98,6 +98,7 @@ export const Equippr: Store = {
     },
   ],
   name: 'equippr',
+  country: 'DE',
   linksBuilder: {
     builder: getProductLinksBuilder({
       productsSelector: '.product--box',

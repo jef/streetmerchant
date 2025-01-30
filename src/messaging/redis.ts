@@ -1,7 +1,7 @@
-import {Link, Store} from '../store/model';
 import redis, {RedisClient} from 'redis';
 import {config} from '../config';
 import {logger} from '../logger';
+import {Link, Store} from '../store/model';
 
 const {url} = config.notifications.redis;
 let client: RedisClient;
@@ -30,7 +30,7 @@ export function updateRedis(link: Link, store: Store) {
       };
 
       const message = JSON.stringify(value);
-      client.set(key, message, (error, success) => {
+      client.set(key, message, error => {
         if (error) {
           logger.error(`✖ couldn't update redis for key (${key})`);
         } else {
@@ -38,9 +38,9 @@ export function updateRedis(link: Link, store: Store) {
         }
       });
 
-      client.publish('streetmerchant', message, (error, success) => {
+      client.publish('streetmerchant', message, error => {
         if (error) {
-          logger.error(`✖ couldn't publish to redis`);
+          logger.error("✖ couldn't publish to redis");
         } else {
           logger.info('✔ redis message published');
         }

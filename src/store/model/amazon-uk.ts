@@ -714,4 +714,5 @@ export const AmazonUk: Store = {
     },
   ],
   name: 'amazon-uk',
+  country: 'UK',
 };

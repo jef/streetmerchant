@@ -38,4 +38,5 @@ export const Comet: Store = {
     },
   ],
   name: 'comet',
+  country: 'IT',
 };

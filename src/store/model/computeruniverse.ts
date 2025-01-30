@@ -702,4 +702,5 @@ export const Computeruniverse: Store = {
     },
   ],
   name: 'computeruniverse',
+  country: 'DE',
 };

@@ -189,6 +189,7 @@ export const Pny: Store = {
     },
   ],
   name: 'pny',
+  country: 'US',
 };
 
 /* Copy Paste Template

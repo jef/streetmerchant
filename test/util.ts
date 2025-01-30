@@ -51,6 +51,7 @@ export function getTestStore(): Store {
     },
     links: storeLinks,
     name: 'test:name',
+    country: 'TEST',
   };
 
   return store;

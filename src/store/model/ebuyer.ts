@@ -120,5 +120,6 @@ export const Ebuyer: Store = {
     ],
   },
   name: 'ebuyer',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

@@ -1,8 +1,6 @@
 import {config, defaultStoreData} from '../../config';
+
 import {AComPC} from './acompc';
-import {Ldlc} from './ldlc';
-import {LdlcEs} from './ldlc-es';
-import {Materiel} from './materiel';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
@@ -92,17 +90,21 @@ import {Igamecomputer} from './igame';
 import {JohnLewis} from './johnlewis';
 import {Kabum} from './kabum';
 import {KomplettNO} from './komplett-no';
-import {LandmarkComputers} from './lmc';
+import {Ldlc} from './ldlc';
+import {LdlcEs} from './ldlc-es';
 import {LDLCItaly} from './ldlc-italy';
+import {LandmarkComputers} from './lmc';
+import {Materiel} from './materiel';
 import {Mediamarkt} from './mediamarkt';
 import {MediamarktAt} from './mediamarkt-at';
 import {Medimax} from './medimax';
 import {Megekko} from './megekko';
 import {MemoryExpress} from './memoryexpress';
 import {MicroCenter} from './microcenter';
+import {Microsoft} from './microsoft';
+import {MicrosoftCA} from './microsoft-ca';
 import {MightyApe} from './mightyape';
 import {Mindfactory} from './mindfactory';
-import {Microsoft} from './microsoft';
 import {Msy} from './msy';
 import {Multicom} from './multicom';
 import {Mwave} from './mwave';
@@ -157,6 +159,7 @@ import {ToysRUs} from './toysrus';
 import {Ubiquiti} from './ubiquiti';
 import {Umart} from './umart';
 import {Unieuro} from './unieuro';
+import {UltimaInformatica} from './utlimainformatica';
 import {Very} from './very';
 import {VsGamers} from './vsgamers';
 import {Vuugo} from './vuugo';
@@ -165,12 +168,11 @@ import {WalmartCa} from './walmart-ca';
 import {WellsTechnology} from './wellstechnology';
 import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
-import {Zotac} from './zotac';
-import {logger} from '../../logger';
-import chalk from 'chalk';
-import {UltimaInformatica} from './utlimainformatica';
 import {XtremMedia} from './xtremmedia';
-import {MicrosoftCA} from './microsoft-ca';
+import {Zotac} from './zotac';
+
+import chalk from 'chalk';
+import {logger} from '../../logger';
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
@@ -264,17 +266,17 @@ export const storeList = new Map([
   [Kabum.name, Kabum],
   [KomplettNO.name, KomplettNO],
   [LandmarkComputers.name, LandmarkComputers],
+  [Ldlc.name, Ldlc],
+  [LdlcEs.name, LdlcEs],
   [LDLCItaly.name, LDLCItaly],
+  [Materiel.name, Materiel],
   [Mediamarkt.name, Mediamarkt],
   [MediamarktAt.name, MediamarktAt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
-  [Microsoft.name, Microsoft],
-  [Ldlc.name, Ldlc],
-  [LdlcEs.name, LdlcEs],
-  [Materiel.name, Materiel],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
+  [Microsoft.name, Microsoft],
   [MicrosoftCA.name, MicrosoftCA],
   [MightyApe.name, MightyApe],
   [Mindfactory.name, Mindfactory],
@@ -328,10 +330,10 @@ export const storeList = new Map([
   [TheWarehouse.name, TheWarehouse],
   [TopAchat.name, TopAchat],
   [ToysRUs.name, ToysRUs],
-  [Umart.name, Umart],
   [Ubiquiti.name, Ubiquiti],
-  [Unieuro.name, Unieuro],
   [UltimaInformatica.name, UltimaInformatica],
+  [Umart.name, Umart],
+  [Unieuro.name, Unieuro],
   [Very.name, Very],
   [VsGamers.name, VsGamers],
   [Vuugo.name, Vuugo],
@@ -469,6 +471,14 @@ export function getAllSeries() {
 
 export function getAllModels() {
   return [...models];
+}
+
+export function getAllCountries() {
+  return Array.from(
+    new Set(
+      [...storeList].map(storeInfo => storeInfo[1]).map(store => store.country)
+    )
+  ).sort();
 }
 
 export function getStores() {

@@ -169,4 +169,5 @@ export const Cyberport: Store = {
     },
   ],
   name: 'cyberport',
+  country: 'DE',
 };

@@ -241,5 +241,6 @@ export const Drako: Store = {
     },
   ],
   name: 'drako',
+  country: 'IT',
   successStatusCodes: [[0, 399], 404],
 };

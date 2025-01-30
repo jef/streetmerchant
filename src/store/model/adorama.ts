@@ -127,4 +127,5 @@ export const Adorama: Store = {
     },
   ],
   name: 'adorama',
+  country: 'US',
 };

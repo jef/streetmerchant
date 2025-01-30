@@ -38,4 +38,5 @@ export const NoelLeeming: Store = {
     },
   ],
   name: 'noelleeming',
+  country: 'NZ',
 };

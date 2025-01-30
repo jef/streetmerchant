@@ -718,6 +718,7 @@ export const BestBuy: Store = {
     },
   ],
   name: 'bestbuy',
+  country: 'US',
 };
 
 /* Copy Paste template

@@ -85,5 +85,6 @@ export const Novatech: Store = {
     ],
   },
   name: 'novatech',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

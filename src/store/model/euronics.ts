@@ -35,4 +35,5 @@ export const Euronics: Store = {
     },
   ],
   name: 'euronics',
+  country: 'IT',
 };

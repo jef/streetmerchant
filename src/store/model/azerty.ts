@@ -187,4 +187,5 @@ export const Azerty: Store = {
     },
   ],
   name: 'azerty',
+  country: 'NL',
 };

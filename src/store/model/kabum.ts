@@ -169,4 +169,5 @@ export const Kabum: Store = {
     },
   ],
   name: 'kabum',
+  country: 'BR',
 };

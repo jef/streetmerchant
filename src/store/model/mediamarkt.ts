@@ -432,4 +432,5 @@ export const Mediamarkt: Store = {
     },
   ],
   name: 'mediamarkt',
+  country: 'DE',
 };

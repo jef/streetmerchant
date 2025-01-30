@@ -50,6 +50,7 @@ export const Coolmod: Store = {
     },
   ],
   name: 'coolmod',
+  country: 'ES',
   linksBuilder: {
     builder: getProductLinksBuilder({
       productsSelector: '.productInfo.itemFiltered',

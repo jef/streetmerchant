@@ -461,4 +461,5 @@ export const XtremMedia: Store = {
     },
   ],
   name: 'xtremmedia',
+  country: 'ES',
 };

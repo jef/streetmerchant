@@ -457,4 +457,5 @@ export const Wipoid: Store = {
     },
   ],
   name: 'wipoid',
+  country: 'ES',
 };

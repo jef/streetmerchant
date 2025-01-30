@@ -706,4 +706,5 @@ export const ProshopNO: Store = {
     },
   ],
   name: 'proshop-no',
+  country: 'NO',
 };

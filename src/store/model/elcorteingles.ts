@@ -67,4 +67,5 @@ export const Elcorteingles: Store = {
     },
   ],
   name: 'elcorteingles',
+  country: 'ES',
 };

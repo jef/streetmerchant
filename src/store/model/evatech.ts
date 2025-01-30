@@ -98,4 +98,5 @@ export const Evatech: Store = {
     },
   ],
   name: 'evatech',
+  country: 'AU',
 };

@@ -1,5 +1,5 @@
-import {Store} from './store';
 import fetch from 'node-fetch';
+import {Store} from './store';
 
 export const Asus: Store = {
   backoffStatusCodes: [403, 429, 503],
@@ -157,6 +157,7 @@ export const Asus: Store = {
     },
   ],
   name: 'asus',
+  country: 'US',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url = 'https://store.asus.com/us/category/get_real_time_data';
     const response = await fetch(request_url, {

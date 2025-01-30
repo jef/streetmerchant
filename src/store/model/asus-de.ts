@@ -83,4 +83,5 @@ export const AsusDe: Store = {
     },
   ],
   name: 'asus-de',
+  country: 'DE',
 };

@@ -48,4 +48,5 @@ export const HarrisTechnology: Store = {
     },
   ],
   name: 'harristechnology',
+  country: 'AU',
 };

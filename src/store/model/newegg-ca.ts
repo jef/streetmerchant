@@ -1007,6 +1007,7 @@ export const NeweggCa: Store = {
     },
   ],
   name: 'newegg-ca',
+  country: 'CA',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
       'https://www.newegg.ca/product/api/ProductRealtime?ItemNumber=' +

@@ -271,4 +271,5 @@ export const NetonnetNO: Store = {
     },
   ],
   name: 'netonnet-no',
+  country: 'NO',
 };

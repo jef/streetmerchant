@@ -73,4 +73,5 @@ export const DustinHomeNO: Store = {
     },
   ],
   name: 'dustinhome-no',
+  country: 'NO',
 };

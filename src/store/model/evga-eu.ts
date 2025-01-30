@@ -71,4 +71,5 @@ export const EvgaEu: Store = {
     },
   ],
   name: 'evga-eu',
+  country: 'EU',
 };

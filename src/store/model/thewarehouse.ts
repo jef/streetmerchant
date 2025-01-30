@@ -36,4 +36,5 @@ export const TheWarehouse: Store = {
     },
   ],
   name: 'thewarehouse',
+  country: 'NZ',
 };

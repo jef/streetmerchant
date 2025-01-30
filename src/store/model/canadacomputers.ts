@@ -507,5 +507,6 @@ export const CanadaComputers: Store = {
     },
   ],
   name: 'canadacomputers',
+  country: 'CA',
   waitUntil: 'domcontentloaded',
 };

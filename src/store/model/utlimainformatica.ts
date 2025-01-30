@@ -747,4 +747,5 @@ export const UltimaInformatica: Store = {
     },
   ],
   name: 'ultimainformatica',
+  country: 'ES',
 };

@@ -193,4 +193,5 @@ export const AmazonFr: Store = {
     },
   ],
   name: 'amazon-fr',
+  country: 'FR',
 };

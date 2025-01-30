@@ -981,6 +981,7 @@ export const Amazon: Store = {
     },
   ],
   name: 'amazon',
+  country: 'US',
 };
 
 /* Copy Paste Template

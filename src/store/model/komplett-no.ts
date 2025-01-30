@@ -756,4 +756,5 @@ export const KomplettNO: Store = {
     },
   ],
   name: 'komplett-no',
+  country: 'NO',
 };

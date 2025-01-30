@@ -61,5 +61,6 @@ export const Aria: Store = {
     ],
   },
   name: 'aria',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

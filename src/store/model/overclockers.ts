@@ -96,5 +96,6 @@ export const Overclockers: Store = {
     ],
   },
   name: 'overclockers',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

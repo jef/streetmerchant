@@ -487,5 +487,6 @@ export const PCDiga: Store = {
     },
   ],
   name: 'pcdiga',
+  country: 'PT',
   waitUntil: 'domcontentloaded',
 };

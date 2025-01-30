@@ -69,4 +69,5 @@ export const AmdIt: Store = {
     },
   ],
   name: 'amd-it',
+  country: 'IT',
 };

@@ -1,5 +1,5 @@
-import {Store} from './store';
 import {getProductLinksBuilder} from './helpers/card';
+import {Store} from './store';
 
 export const LDLCItaly: Store = {
   currency: '€',
@@ -78,5 +78,6 @@ export const LDLCItaly: Store = {
       },
     ],
   },
-  name: 'ldlc-italy',
+  name: 'ldlc-it',
+  country: 'IT',
 };

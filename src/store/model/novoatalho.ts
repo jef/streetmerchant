@@ -184,5 +184,6 @@ export const NovoAtalho: Store = {
     },
   ],
   name: 'novoatalho',
+  country: 'PT',
   waitUntil: 'domcontentloaded',
 };

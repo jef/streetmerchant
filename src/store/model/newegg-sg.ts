@@ -1122,6 +1122,7 @@ export const NeweggSg: Store = {
     },
   ],
   name: 'newegg-sg',
+  country: 'SG',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
       'https://www.newegg.com/global/sg-en/product/api/ProductRealtime?ItemNumber=' +

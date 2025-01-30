@@ -504,5 +504,6 @@ export const MemoryExpress: Store = {
     },
   ],
   name: 'memoryexpress',
+  country: 'CA',
   waitUntil: 'domcontentloaded',
 };

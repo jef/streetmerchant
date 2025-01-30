@@ -82,4 +82,5 @@ export const Igamecomputer: Store = {
     },
   ],
   name: 'igame-computer',
+  country: 'AU',
 };

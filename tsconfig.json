@@ -6,10 +6,8 @@
     "resolveJsonModule": true,
     "rootDir": ".",
     // todo: remove
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["DOM", "ES2021"]
   },
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ]
+  "include": ["src/**/*.ts", "test/**/*.ts"]
 }

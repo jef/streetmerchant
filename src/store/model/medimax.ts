@@ -43,4 +43,5 @@ export const Medimax: Store = {
     },
   ],
   name: 'medimax',
+  country: 'DE',
 };

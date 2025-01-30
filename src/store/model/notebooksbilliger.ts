@@ -280,4 +280,5 @@ export const Notebooksbilliger: Store = {
     },
   ],
   name: 'notebooksbilliger',
+  country: 'DE',
 };

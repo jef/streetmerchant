@@ -87,4 +87,5 @@ export const Very: Store = {
     ],
   },
   name: 'very',
+  country: 'UK',
 };

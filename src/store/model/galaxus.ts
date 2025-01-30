@@ -105,4 +105,5 @@ export const Galaxus: Store = {
     },
   ],
   name: 'galaxus',
+  country: 'DE',
 };

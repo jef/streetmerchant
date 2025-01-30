@@ -90,4 +90,5 @@ export const MediamarktAt: Store = {
     },
   ],
   name: 'mediamarkt-at',
+  country: 'AT',
 };

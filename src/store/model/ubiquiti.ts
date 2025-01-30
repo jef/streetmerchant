@@ -59,4 +59,5 @@ export const Ubiquiti: Store = {
     },
   ],
   name: 'ubiquiti',
+  country: 'US',
 };

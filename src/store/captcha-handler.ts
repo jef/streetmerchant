@@ -1,14 +1,14 @@
 import {Page} from 'puppeteer';
 import {config} from '../config';
-import {Store} from './model';
 import {logger} from '../logger';
-import {delay, deleteFile} from '../util';
 import {
+  CaptchaPayload,
+  DMPayload,
   getCaptchaInputAsync,
   sendDMAsync,
-  DMPayload,
-  CaptchaPayload,
 } from '../messaging';
+import {delay, deleteFile} from '../util';
+import {Store} from './model';
 
 const DefaultCaptureType = 'link';
 
@@ -88,7 +88,10 @@ async function getCaptchaPayloadAsync(
       break;
     case 'link':
       captchaPayload = {
-        content: await challengeElement?.evaluate(img => img.src),
+        content:
+          (await challengeElement?.evaluate(
+            img => (img as HTMLImageElement).src
+          )) || '',
         type: 'text',
       };
       break;

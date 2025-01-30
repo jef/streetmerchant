@@ -1,5 +1,5 @@
-import {Store} from './store';
 import fetch from 'node-fetch';
+import {Store} from './store';
 
 export const Newegg: Store = {
   currency: '$',
@@ -1808,6 +1808,7 @@ export const Newegg: Store = {
     },
   ],
   name: 'newegg',
+  country: 'US',
   realTimeInventoryLookup: async (itemNumber: string) => {
     const request_url =
       'https://www.newegg.com/product/api/ProductRealtime?ItemNumber=' +

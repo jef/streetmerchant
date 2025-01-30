@@ -53,4 +53,5 @@ export const AmdCa: Store = {
     },
   ],
   name: 'amd-ca',
+  country: 'CA',
 };

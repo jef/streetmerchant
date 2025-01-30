@@ -1,7 +1,7 @@
-import {existsSync, readFileSync} from 'fs';
-import {banner} from './banner';
 import dotenv from 'dotenv';
+import {existsSync, readFileSync} from 'fs';
 import path from 'path';
+import {banner} from './banner';
 
 if (process.env.npm_config_conf) {
   if (
@@ -230,6 +230,9 @@ const notifications = {
   discord: {
     notifyGroup: envOrArray(process.env.DISCORD_NOTIFY_GROUP),
     notifyGroupSeries: {
+      arc: envOrArray(process.env.DISCORD_NOTIFY_GROUP_ARC),
+      'a3-matx': envOrArray(process.env.DISCORD_NOTIFY_GROUP_A3_MATX),
+      3050: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3050),
       3060: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060),
       '3060ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3060TI),
       3070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3070),
@@ -237,7 +240,6 @@ const notifications = {
       3080: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080),
       '3080ti': envOrArray(process.env.DISCORD_NOTIFY_GROUP_3080TI),
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
-      '4080-12g': envOrArray(process.env.DISCORD_NOTIFY_GROUP_4080_12G),
       '4080-16g': envOrArray(process.env.DISCORD_NOTIFY_GROUP_4080_16G),
       4090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_4090),
       5070: envOrArray(process.env.DISCORD_NOTIFY_GROUP_5070),
@@ -255,6 +257,7 @@ const notifications = {
       ryzen5900: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5900),
       ryzen5950: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5950),
       ryzen7800x3d: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN7800X3D),
+      ryzen7950X: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN7950X),
       ryzen9800x3d: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9800X3D),
       ryzen9600x: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9600X),
       ryzen9700x: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN9700X),
@@ -421,6 +424,18 @@ if (process.env.MAX_PRICE) {
   );
 }
 
+if (
+  process.env.TWITCH_ACCESS_TOKEN ||
+  process.env.TWITCH_CHANNEL ||
+  process.env.TWITCH_CLIENT_ID ||
+  process.env.TWITCH_CLIENT_SECRET ||
+  process.env.TWITCH_REFRESH_TOKEN
+) {
+  console.warn(
+    'ℹ TWITCH integrations are currently incompatible with this release'
+  );
+}
+
 const store = {
   autoAddToCart: envOrBoolean(process.env.AUTO_ADD_TO_CART, true),
   country: envOrString(process.env.COUNTRY, 'usa'),
@@ -434,7 +449,6 @@ const store = {
       3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
       '3080ti': envOrNumber(process.env.MAX_PRICE_SERIES_3080TI),
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
-      '4080-12g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_12G),
       '4080-16g': envOrNumber(process.env.MAX_PRICE_SERIES_4080_16G),
       4090: envOrNumber(process.env.MAX_PRICE_SERIES_4090),
       5070: envOrNumber(process.env.MAX_PRICE_SERIES_5070),
@@ -458,7 +472,7 @@ const store = {
       ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
       ryzen7950x: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN7950X),
       ryzen7800x3d: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN7800X3D),
-      ryzen9800x3d: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9800XX3D),
+      ryzen9800x3d: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9800X3D),
       ryzen9600x: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9600X),
       ryzen9700x: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9700X),
       ryzen9900x: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN9900X),
@@ -525,6 +539,7 @@ const store = {
     'xboxss',
     'xboxsx',
   ]),
+  showOnlyCountry: envOrArray(process.env.SHOW_ONLY_COUNTRY, []),
   stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 

@@ -240,4 +240,5 @@ export const AmazonNl: Store = {
     },
   ],
   name: 'amazon-nl',
+  country: 'NL',
 };

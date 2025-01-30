@@ -311,4 +311,5 @@ export const AmazonCa: Store = {
     },
   ],
   name: 'amazon-ca',
+  country: 'CA',
 };

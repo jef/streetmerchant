@@ -360,4 +360,5 @@ export const Saturn: Store = {
     },
   ],
   name: 'saturn',
+  country: 'DE',
 };

@@ -1253,4 +1253,5 @@ export const AlternateDe: Store = {
     },
   ],
   name: 'alternate-de',
+  country: 'DE',
 };

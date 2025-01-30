@@ -69,4 +69,5 @@ export const WellsTechnology: Store = {
     },
   ],
   name: 'wellstechnology',
+  country: 'AU',
 };

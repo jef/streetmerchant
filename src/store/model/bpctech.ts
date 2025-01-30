@@ -148,4 +148,5 @@ export const Bpctech: Store = {
     },
   ],
   name: 'bpctech',
+  country: 'AU',
 };

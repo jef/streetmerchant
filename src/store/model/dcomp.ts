@@ -218,4 +218,5 @@ export const Dcomp: Store = {
     },
   ],
   name: 'dcomp',
+  country: 'AU',
 };

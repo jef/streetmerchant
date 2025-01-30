@@ -79,5 +79,6 @@ export const Awd: Store = {
     ],
   },
   name: 'awd',
+  country: 'UK',
   waitUntil: 'domcontentloaded',
 };

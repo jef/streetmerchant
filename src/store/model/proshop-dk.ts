@@ -626,4 +626,5 @@ export const ProshopDK: Store = {
     },
   ],
   name: 'proshop-dk',
+  country: 'DK',
 };

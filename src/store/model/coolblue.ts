@@ -152,4 +152,5 @@ export const Coolblue: Store = {
     },
   ],
   name: 'coolblue',
+  country: 'NL',
 };

@@ -497,5 +497,6 @@ export const Globaldata: Store = {
     },
   ],
   name: 'globaldata',
+  country: 'PT',
   waitUntil: 'domcontentloaded',
 };

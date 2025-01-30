@@ -152,6 +152,7 @@ export const Zotac: Store = {
     },
   ],
   name: 'zotac',
+  country: 'US',
 };
 
 /* Copy Paste Template
