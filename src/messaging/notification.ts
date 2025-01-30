@@ -7,6 +7,7 @@ import {sendEmail} from './email';
 import {sendFreeMobileAlert} from './freemobile';
 import {sendGotifyNotification} from './gotify';
 import {sendMqttMessage} from './mqtt';
+import {sendNtfyAlert} from './ntfy';
 import {sendPagerDutyNotification} from './pagerduty';
 import {adjustPhilipsHueLights} from './philips-hue';
 import {sendPushbulletNotification} from './pushbullet';
