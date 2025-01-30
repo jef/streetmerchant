@@ -7,7 +7,7 @@
     "rootDir": ".",
     // todo: remove
     "skipLibCheck": true,
-    "lib": ["DOM", "ES2022"]
+    "lib": ["DOM", "ES2021"]
   },
   "include": ["src/**/*.ts", "test/**/*.ts"]
 }
