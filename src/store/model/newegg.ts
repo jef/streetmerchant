@@ -2003,15 +2003,6 @@ export const Newegg: Store = {
       url: 'https://www.newegg.com/p/N82E16814932764',
     },
     {
-      brand: 'msi',
-      cartUrl:
-        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137929',
-      model: 'suprim soc',
-      series: '5090',
-      url: 'https://www.newegg.com/p/N82E16814137929',
-      // TODO REMOVEME
-    },
-    {
       brand: 'gigabyte',
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932763',
