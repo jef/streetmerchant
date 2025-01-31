@@ -636,7 +636,7 @@ export const BAndH: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875720-REG/gigabyte_gv_n5090aorusx_wb_32gd_geforce_rtx_5090_aorus.html',
-    },    
+    },
     {
       brand: 'gigabyte',
       model: 'aorus xtreme waterforce',
