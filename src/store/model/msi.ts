@@ -18,6 +18,13 @@ export const MSI: Store = {
   links: [
     {
       brand: 'msi',
+      model: 'vanguard soc',
+      series: '5090',
+      // "https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series/GeForce-RTX-5090-32G%20-VANGUARD-SOC",
+      url: 'https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series?product_id=2472',
+    },
+    {
+      brand: 'msi',
       model: 'gaming trio oc',
       series: '5080',
       // "https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series/GeForce-RTX-5080-16G-GAMING-TRIO-OC",
@@ -116,24 +123,10 @@ export const MSI: Store = {
     },
     {
       brand: 'msi',
-      model: 'vanguard soc',
-      series: '5080',
-      // "https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series/GeForce-RTX-5080-16G-VANGUARD-SOC",
-      url: 'https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series?product_id=2472',
-    },
-    {
-      brand: 'msi',
       model: 'vanguard soc launch edition',
       series: '5090',
       // "https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series/GeForce-RTX-5090-32G-VANGUARD-SOC-LAUNCH-EDITION",
       url: 'https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series?product_id=2471',
-    },
-    {
-      brand: 'msi',
-      model: 'ventus 3x',
-      series: '5080',
-      // "https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series/GeForce-RTX-5080-16G-VENTUS-3X",
-      url: 'https://us-store.msi.com/Graphics-Cards/NVIDIA-GPU/GeForce-RTX-50-Series?product_id=2478',
     },
     {
       brand: 'msi',

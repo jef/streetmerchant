@@ -1803,8 +1803,192 @@ export const Newegg: Store = {
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126742',
       model: 'astral oc',
-      series: '5090',
+      series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126742',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932765',
+      model: 'master ice',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932765',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500597',
+      model: 'solid',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814500597',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932761',
+      model: 'gaming oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932761',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932762',
+      model: 'windforce oc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932762',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932760',
+      model: 'master',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932760',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137946',
+      model: 'ventus 3x',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137946',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932764',
+      model: 'aorus xtreme waterforce wb',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932764',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137929',
+      model: 'suprim soc',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814137929',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932763',
+      model: 'aorus xtreme waterforce',
+      series: '5090',
+      url: 'https://www.newegg.com/p/N82E16814932763',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932757',
+      model: 'master ice',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932757',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137930',
+      model: 'ventus 3x oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137930',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137911',
+      model: 'inspire 3x oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137911',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137912',
+      model: 'ventus 3x oc white',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137912',
+    },
+    {
+      brand: 'pny',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814133898',
+      model: 'epic x',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814133898',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500596',
+      model: 'solid',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814500596',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500594',
+      model: 'solid oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814500594',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932758',
+      model: 'aorus xtreme waterforce wb',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932758',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137945',
+      model: 'ventus 3x',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137945',
+    },
+    {
+      brand: 'gigabyte',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932759',
+      model: 'aorus xtreme waterforce',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814932759',
+    },
+    {
+      brand: 'pny',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814133899',
+      model: 'triple fan oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814133899',
+    },
+    {
+      brand: 'zotac',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500595',
+      model: 'amp extreme infinity',
+      series: '5080',
+      url: 'https://www.newegg.com/p/',
+    },
+    {
+      brand: 'msi',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137914',
+      model: 'shadow 3x oc',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814137914',
+    },
+    {
+      brand: 'asus',
+      cartUrl:
+        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126776',
+      model: 'prime',
+      series: '5080',
+      url: 'https://www.newegg.com/p/N82E16814126776',
     },
   ],
   name: 'newegg',
