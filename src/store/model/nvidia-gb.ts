@@ -4,12 +4,12 @@ export const NvidiaGB: Store = {
   currency: '£',
   labels: {
     inStock: {
-      container: '.buy',
-      text: ['add to cart', 'buy now'],
+      container: 'span.buy-link-atc',
+      text: ['Buy Now', 'Add to Cart']
     },
     outOfStock: {
-      container: '.buy',
-      text: ['out of stock'],
+      container: 'span.buy-link-atc',
+      text: ['Out of Stock'],
     },
   },
   links: [
@@ -54,6 +54,24 @@ export const NvidiaGB: Store = {
       model: 'founders edition',
       series: '3090',
       url: 'https://shop.nvidia.com/en-gb/geforce/store/gpu/?page=1&limit=9&locale=en-gb&category=GPU&gpu=RTX%203090&manufacturer=NVIDIA',
+    },
+    {
+      brand: 'asus',
+      model: 'dual',
+      series: '4070',
+      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&manufacturer=ASUS&gpu=RTX%204070&',
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '5090',
+      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',    
+    },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '5080',
+      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&manufacturer=NVIDIA&gpu=RTX%205080&',    
     },
   ],
   name: 'nvidia-gb',
