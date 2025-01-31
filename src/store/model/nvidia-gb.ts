@@ -77,3 +77,12 @@ export const NvidiaGB: Store = {
   name: 'nvidia-gb',
   country: 'UK',
 };
+
+/* Copy Paste Template
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '',
+      url: '',    
+    },
+*/
