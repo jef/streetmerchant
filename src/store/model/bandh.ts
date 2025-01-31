@@ -636,7 +636,8 @@ export const BAndH: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875720-REG/gigabyte_gv_n5090aorusx_wb_32gd_geforce_rtx_5090_aorus.html',
-    },    {
+    },    
+    {
       brand: 'gigabyte',
       model: 'aorus xtreme waterforce',
       series: '5090',
@@ -659,7 +660,7 @@ export const BAndH: Store = {
       model: 'epic x oc',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1874648-REG/pny_vcg509032tfxxpb1_o_nvidia_geforce_rtx_5090.html',
-    }, 
+    },
     {
       brand: 'msi',
       model: 'ventus 3x oc',
@@ -671,7 +672,7 @@ export const BAndH: Store = {
       model: 'vanguard soc launch edition',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875470-REG/msi_g5090_32vgsl_geforce_rtx_5090_vanguard.html',
-    }, 
+    },
     {
       brand: 'msi',
       model: 'vanguard soc',
@@ -683,7 +684,7 @@ export const BAndH: Store = {
       model: 'windforce oc',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875722-REG/gigabyte_gv_n5090wf3oc_32gd_geforce_rtx_5090_windforce.html',
-    }, 
+    },
     {
       brand: 'gigabyte',
       model: 'gaming oc',
@@ -695,7 +696,7 @@ export const BAndH: Store = {
       model: 'tuf gaming',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875530-REG/asus_tuf_rtx5090_32g_gaming_geforce_rtx_5090_tuf.html',
-    }, 
+    },
     {
       brand: 'gigabyte',
       model: 'master ice',
@@ -707,7 +708,7 @@ export const BAndH: Store = {
       model: 'master',
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875717-REG/gigabyte_gv_n5090aorus_m_32gd_geforce_rtx_5090_master.html',
-    }, 
+    },
   ],
   name: 'bandh',
   country: 'US',
