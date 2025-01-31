@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.12.0](https://github.com/jef/streetmerchant/compare/v3.11.0...v3.12.0) (2025-01-31)
+
+
+### Features
+
+* add 50xx links from Newegg, Bestbuy, and B&H ([#3200](https://github.com/jef/streetmerchant/issues/3200)) ([9971622](https://github.com/jef/streetmerchant/commit/9971622bdde728453b6ce80d91d522142a88a94e))
+* add more 50-series to bestbuy; add itemnumbers to newegg ([#3208](https://github.com/jef/streetmerchant/issues/3208)) ([8f13946](https://github.com/jef/streetmerchant/commit/8f139466124ef097015bf6fc668fb680c9c5f76c))
+
+
+### Bug Fixes
+
+* Corrected label for newegg asus astral 5080 ([#3204](https://github.com/jef/streetmerchant/issues/3204)) ([8e203ea](https://github.com/jef/streetmerchant/commit/8e203ea343bf2e029e8d6ba7b8e7e82640435142))
+
+
+### Continuous Integration
+
+* remove cache to speed up ([#3205](https://github.com/jef/streetmerchant/issues/3205)) ([c60d4ca](https://github.com/jef/streetmerchant/commit/c60d4ca473f417dd315253bd88ccaac42db92044))
+
 ## [3.11.0](https://github.com/jef/streetmerchant/compare/v3.10.0...v3.11.0) (2025-01-30)
 
 
