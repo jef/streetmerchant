@@ -4,11 +4,11 @@ export const NvidiaFR: Store = {
   currency: '€',
   labels: {
     inStock: {
-      container: '.buy',
-      text: ['ajouter au panier', 'acheter maintenant'],
+      container: 'span.buy-link-atc',
+      text: ['Acheter maintenant'],
     },
     outOfStock: {
-      container: '.buy',
+      container: 'span.buy-link-atc',
       text: ['RUPTURE DE STOCK'],
     },
   },
@@ -55,7 +55,21 @@ export const NvidiaFR: Store = {
       series: '3090',
       url: 'https://shop.nvidia.com/fr-fr/geforce/store/gpu/?page=1&limit=9&locale=fr-fr&category=GPU&gpu=RTX%203090&manufacturer=NVIDIA',
     },
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '5090',
+      url: 'https://marketplace.nvidia.com/fr-fr/consumer/graphics-cards/?locale=fr-fr&page=1&limit=12&gpu=RTX%204090&manufacturer=MSI',    
+    },
   ],
   name: 'nvidia-fr',
   country: 'FR',
 };
+/* Copy Paste Template
+    {
+      brand: 'nvidia',
+      model: 'founders edition',
+      series: '',
+      url: '',    
+    },
+*/
