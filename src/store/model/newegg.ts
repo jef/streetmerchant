@@ -1803,7 +1803,7 @@ export const Newegg: Store = {
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814126742',
       model: 'astral oc',
-      series: '5090',
+      series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126742',
     },
     {
