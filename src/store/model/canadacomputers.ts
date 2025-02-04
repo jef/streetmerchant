@@ -505,6 +505,18 @@ export const CanadaComputers: Store = {
       series: 'xboxsx',
       url: 'https://www.canadacomputers.com/product_info.php?cPath=13_1860_1862&item_id=184244&language=en',
     },
+    {
+      brand: 'zotac',
+      model: 'solid',
+      series: '5080',
+      url: 'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=268152&language=en',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'windforce oc',
+      series: '5080',
+      url: 'https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=268141&language=en',
+    },
   ],
   name: 'canadacomputers',
   country: 'CA',

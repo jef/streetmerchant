@@ -323,7 +323,7 @@ export const BestBuyCa: Store = {
       brand: 'asus',
       model: 'prime',
       series: '5080',
-      url: 'https://www.bestbuy.ca/en-ca/product/18934247',
+      url: 'https://www.bestbuy.ca/en-ca/product/18971064',
     },
     {
       brand: 'pny',
