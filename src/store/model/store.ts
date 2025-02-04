@@ -134,6 +134,7 @@ export type Model =
   | 'aorus xtreme waterforce'
   | 'aorus xtreme'
   | 'aorus'
+  | 'astral lc'
   | 'astral oc'
   | 'astral'
   | 'b580'
