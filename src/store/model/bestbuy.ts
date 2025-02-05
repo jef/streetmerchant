@@ -780,13 +780,6 @@ export const BestBuy: Store = {
       url: 'https://api.bestbuy.com/click/-/6616090/pdp',
     },
     {
-      brand: 'msi',
-      cartUrl: 'https://api.bestbuy.com/click/-/6616093/cart',
-      model: 'ventus 3x oc',
-      series: '5090',
-      url: 'https://api.bestbuy.com/click/-/6616093/pdp',
-    },
-    {
       brand: 'asus',
       cartUrl: 'https://api.bestbuy.com/click/-/6614122/cart',
       model: 'tuf gaming oc',
@@ -799,13 +792,6 @@ export const BestBuy: Store = {
       model: 'prime',
       series: '5080',
       url: 'https://api.bestbuy.com/click/-/6615831/pdp',
-    },
-    {
-      brand: 'msi',
-      cartUrl: 'https://api.bestbuy.com/click/-/6616092/cart',
-      model: 'suprim soc',
-      series: '5090',
-      url: 'https://api.bestbuy.com/click/-/6616092/pdp',
     },
     {
       brand: 'asus',
@@ -836,32 +822,11 @@ export const BestBuy: Store = {
       url: 'https://api.bestbuy.com/click/-//pdp',
     },
     {
-      brand: 'msi',
-      cartUrl: 'https://api.bestbuy.com/click/-/6616095/cart',
-      model: 'suprim liquid soc',
-      series: '5090',
-      url: 'https://api.bestbuy.com/click/-/6616095/pdp',
-    },
-    {
       brand: 'gigabyte',
       cartUrl: 'https://api.bestbuy.com/click/-/6615931/cart',
       model: 'aorus master',
       series: '5090',
       url: 'https://api.bestbuy.com/click/-/6615931/pdp',
-    },
-    {
-      brand: 'msi',
-      cartUrl: 'https://api.bestbuy.com/click/-/6616096/cart',
-      model: 'vanguard soc launch edition',
-      series: '5090',
-      url: 'https://api.bestbuy.com/click/-/6616096/pdp',
-    },
-    {
-      brand: 'msi',
-      cartUrl: 'https://api.bestbuy.com/click/-/6616091/cart',
-      model: 'vanguard soc',
-      series: '5090',
-      url: 'https://api.bestbuy.com/click/-/6616091/pdp',
     },
     {
       brand: 'gigabyte',
