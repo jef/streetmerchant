@@ -25,7 +25,19 @@ export const ProshopNO: Store = {
       brand: 'asus',
       model: 'astral oc',
       series: '5090',
-      url: 'https://www.proshop.no/Kabinett-tilbehoer/DUTZO-Air-Duster-Vacuum-cleaner-2-in-1-3-speed/3205554',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5090-ROG-Astral-OC-32GB-GDDR7-RAM-Grafikkort/3331069',
+    },
+    {
+      brand: 'asus',
+      model: 'astral',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5090-ROG-Astral-32GB-GDDR7-RAM-Grafikkort/3331068',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5090-TUF-32GB-GDDR7-RAM-Grafikkort/3331066',
     },
     {
       brand: 'asus',
