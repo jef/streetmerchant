@@ -24,16 +24,16 @@ export const Elkjop: Store = {
       series: 'test:series',
       cartUrl:
         'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218425&Quantity=1&AddToCart=true',
-      url: 'https://www.elkjop.no/product/mobil-og-gps/mobiltelefon/296618/oneplus-9-pro-5g-smarttelefon-12256gb-stellar-black',
+      url: 'https://www.elkjop.no/product/mobil-nettbrett-og-smartklokker/mobiltelefon/iphone-16-pro-5g-smarttelefon-128gb-sort-titan/825109',
     },
     {
-      brand: 'pny',
-      model: 'xlr8 epic x',
-      series: '3090',
+      brand: 'asus',
+      model: 'tuf gaming oc',
+      series: '5080',
       cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=215370&Quantity=1&AddToCart=true',
-      url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/215370/pny-rtx-3090-24gb-xlr8-gaming-epic-x-rgb-3-fan-2-7slot',
-    },
+        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=883821&Quantity=1&AddToCart=true',
+        url: 'https://www.elkjop.no/product/mobil-nettbrett-og-smartklokker/mobiltelefon/iphone-16-pro-5g-smarttelefon-128gb-sort-titan/825109',
+      },
     {
       brand: 'evga',
       model: 'xc3',

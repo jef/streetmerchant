@@ -5,7 +5,7 @@ export const ProshopNO: Store = {
   labels: {
     inStock: {
       container:
-        '#siteContainer > div.site-container-fullwidth > div > div.row.site-content-table > div.col-sm-9.pull-right > div > div > div > div:nth-child(2) > div.col-xs-12.col-sm-7 > div.row.site-row-margin-top-small > div.col-md-5 > form > button',
+        '.site-product-demorelation-buybtn-container > form:nth-child(1) > button:nth-child(3)',
       text: ['Kjøp'],
     },
     outOfStock: {
@@ -13,12 +13,73 @@ export const ProshopNO: Store = {
       text: ['Bestilt'],
     },
   },
+  // 
   links: [
     {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.proshop.no/2694767',
+      url: 'https://www.proshop.no/Kabinett-tilbehoer/DUTZO-Air-Duster-Vacuum-cleaner-2-in-1-3-speed/3205554',
+    },
+    {
+      brand: 'asus',
+      model: 'astral oc',
+      series: '5090',
+      url: 'https://www.proshop.no/Kabinett-tilbehoer/DUTZO-Air-Duster-Vacuum-cleaner-2-in-1-3-speed/3205554',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5090-OC-32GB-GDDR7-RAM-Grafikkort/3331067',
+    },
+    {
+      brand: 'inno3d',
+      model: 'ichill x3',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/Inno3D-GeForce-RTX-5090-iCHILL-X3-32GB-GDDR7-RAM-Grafikkort/3332310',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid oc',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/ZOTAC-GeForce-RTX-5090-Solid-OC-32GB-GDDR7-RAM-Grafikkort/3331164',
+    },
+    {
+      brand: 'msi',
+      model: 'vanguard soc',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/MSI-GeForce-RTX-5090-Vanguard-SOC-32GB-GDDR7-RAM-Grafikkort/3331269',
+    },
+    {
+      brand: 'palit',
+      model: 'gamerock oc',
+      series: '5090',
+      url: 'https://www.proshop.no/Grafikkort/Palit-GeForce-RTX-5090-GameRock-OC-32GB-GDDR7-RAM-Grafikkort/3331211',
+    },
+    {
+      brand: 'asus',
+      model: 'prime oc',
+      series: '5080',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5080-Prime-OC-16GB-GDDR7-RAM-Grafikkort/3326547',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '5080',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5080-TUF-16GB-GDDR7-RAM-Grafikkort/3326548',
+    },
+    {
+      brand: 'asus',
+      model: 'astral',
+      series: '5080',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5080-ROG-Astral-16GB-GDDR7-RAM-Grafikkort/3326552',
+    },
+    {
+      brand: 'asus',
+      model: 'prime',
+      series: '5080',
+      url: 'https://www.proshop.no/Grafikkort/ASUS-GeForce-RTX-5080-Prime-16GB-GDDR7-RAM-Grafikkort/3326546',
     },
     {
       brand: 'msi',
