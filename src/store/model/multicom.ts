@@ -5,7 +5,7 @@ export const Multicom: Store = {
   labels: {
     inStock: {
       container:
-        '#ctl00_ContentMain_skPC_ctl00_ctl53_ctl02_btnBuy > div:nth-child(1) > span:nth-child(1)',
+        '.b-purchase__btn',
       text: ['LEGG I HANDLEVOGN'],
     },
     maxPrice: {
@@ -21,9 +21,134 @@ export const Multicom: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      url: 'https://www.multicom.no/business/multicom-talisa-u231-133-full-hd/cat-p/c100475/p1500014708',
+      url: 'https://www.multicom.no/naipo-sammenleggbart-fotmassasje-bad/cat-p/c/p1500029095',
     },
-
+    {
+      brand: 'inno3d',
+      model: 'x3 oc',
+      series: '5090',
+      url: 'https://www.multicom.no/inno3d-geforce-rtx-5090-super/cat-p/c/p1005587010',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming trio oc',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-geforce-rtx-5090-32g/cat-p/c/p1005587004',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x oc',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-geforce-rtx-5090-32g/cat-p/c/p1005587005',
+    },
+    {
+      brand: 'pny',
+      model: 'triple fan',
+      series: '5090',
+      url: 'https://www.multicom.no/pny-geforce-rtx-5090-32gb/cat-p/c/p1005586524',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim soc',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-geforce-rtx-5090-32g/cat-p/c/p1005587003',
+    },
+    {
+      brand: 'pny',
+      model: 'triple fan',
+      series: '5090',
+      url: 'https://www.multicom.no/pny-geforce-rtx-5090-32gb/cat-p/c/p1005586525',
+    },
+    {
+      brand: 'zotac',
+      model: 'amp extreme infinity',
+      series: '5090',
+      url: 'https://www.multicom.no/zotac-gaming-geforce-rtx-5090/cat-p/c/p1005587050',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid',
+      series: '5090',
+      url: 'https://www.multicom.no/zotac-gaming-geforce-rtx-5090/cat-p/c/p1005587052',
+    },
+    {
+      brand: 'zotac',
+      model: 'solid oc',
+      series: '5090',
+      url: 'https://www.multicom.no/zotac-gaming-geforce-rtx-5090/cat-p/c/p1005587051',
+    },
+    {
+      brand: 'asus',
+      model: 'astral oc',
+      series: '5090',
+      url: 'https://www.multicom.no/asus-geforce-rtx-5090-32gb/cat-p/c/p1005585146',
+    },
+    {
+      brand: 'asus',
+      model: 'astral',
+      series: '5090',
+      url: 'https://www.multicom.no/asus-geforce-rtx-5090-32gb/cat-p/c/p1005585145',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf oc',
+      series: '5090',
+      url: 'https://www.multicom.no/asus-geforce-rtx-5090-32gb/cat-p/c/p1005586387',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '5090',
+      url: 'https://www.multicom.no/asus-tuf-gaming-geforce-rtx/cat-p/c/p1005572720',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'windforce oc',
+      series: '5090',
+      url: 'https://www.multicom.no/gigabyte-geforce-rtx5090-windforce-oc/cat-p/c/p1005585142',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: '5090',
+      url: 'https://www.multicom.no/gigabyte-geforce-rtx5090-gaming-oc/cat-p/c/p1005585051',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus master',
+      series: '5090',
+      url: 'https://www.multicom.no/gigabyte-gefroce-rtx5090-aorus-master/cat-p/c/p1005585049',
+    },
+    {
+      brand: 'msi',
+      model: 'ventus 3x',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-rtx5090-ventus-3x-oc/cat-p/c/p1005579136',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim soc',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-rtx5090-suprim-soc-32gb/cat-p/c/p1005587029',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming trio oc',
+      series: '5090',
+      url: 'https://www.multicom.no/msi-rtx5090-gaming-trio-oc/cat-p/c/p1005579135',
+    },
+    {
+      brand: 'palit',
+      model: 'gamerock oc',
+      series: '5090',
+      url: 'https://www.multicom.no/palit-rtx5090-gamerock-oc-32gb/cat-p/c/p1005587042',
+    },
+    {
+      brand: 'palit',
+      model: 'gamerock',
+      series: '5090',
+      url: 'https://www.multicom.no/palit-rtx5090-gamerock-32gb-gddr7/cat-p/c/p1005587041',
+    },
     {
       brand: 'asus',
       model: 'strix oc',
