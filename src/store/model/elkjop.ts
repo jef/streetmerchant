@@ -5,8 +5,8 @@ export const Elkjop: Store = {
   labels: {
     inStock: {
       container:
-        '#product-detail-wrapper > div.col.any-5-12.M-2-5.information > div.buy-button-container.align-left.any-1-1.table-btn > div > div > div.product-price-button-wrap > div > div > span > span',
-      text: ['Legg i handlevogn'],
+        '.border-t-0 > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)',
+      text: ['Legg i handlekurv'],
     },
     maxPrice: {
       container: '.product-price-container > span:nth-child(1)',
@@ -22,32 +22,24 @@ export const Elkjop: Store = {
       brand: 'test:brand',
       model: 'test:model',
       series: 'test:series',
-      cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218425&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/mobil-nettbrett-og-smartklokker/mobiltelefon/iphone-16-pro-5g-smarttelefon-128gb-sort-titan/825109',
     },
     {
       brand: 'asus',
       model: 'tuf gaming oc',
       series: '5080',
-      cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=883821&Quantity=1&AddToCart=true',
-        url: 'https://www.elkjop.no/product/mobil-nettbrett-og-smartklokker/mobiltelefon/iphone-16-pro-5g-smarttelefon-128gb-sort-titan/825109',
+        url: 'https://www.elkjop.no/product/gaming/pc-komponenter/grafikkort-gpu/asus-geforce-rtx-5080-rog-tuf-gaming-16gb-oc-grafikkort/8838219',
       },
     {
       brand: 'evga',
       model: 'xc3',
       series: '3080',
-      cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218419&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/218419/evga-geforce-rtx-3080-xc3',
     },
     {
       brand: 'evga',
       model: 'xc3 black',
       series: '3080',
-      cartUrl:
-        'https://www.elkjop.no/INTERSHOP/web/WFS/store-elkjop-Site/no_NO/-/NOK/ViewCart-AddProductByAjax?SKU=218425&Quantity=1&AddToCart=true',
       url: 'https://www.elkjop.no/product/data/pc-komponenter/grafikkort/218425/evga-geforce-rtx-3080-xc3-black',
     },
     {
