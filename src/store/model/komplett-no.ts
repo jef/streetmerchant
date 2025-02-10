@@ -6,7 +6,7 @@ export const KomplettNO: Store = {
     inStock: {
       container:
         '.product-main-info-buy-button > div:nth-child(1) > button:nth-child(1)',
-      text: ['LEGG I HANDLEVOGN'],
+      text: ['LEGG I HANDLEKURV'],
     },
     outOfStock: {
       container:
@@ -25,7 +25,7 @@ export const KomplettNO: Store = {
       brand: 'gainward',
       model: 'phantom',
       series: '5090',
-      url: 'https://www.komplett.no/product/1307896/pc-nettbrett/nettbrett-ipad-lesebrett/nettbrett-ipad/xiaomi-redmi-pad-se-128gb-graphite-gray',
+      url: 'https://www.komplett.no/product/1318990/datautstyr/pc-komponenter/skjermkort/gainward-geforce-rtx-5090-phantom',
     },
     {
       brand: 'gigabyte',
