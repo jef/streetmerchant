@@ -20,7 +20,7 @@ RUN npm prune --production
 
 FROM node:16.18.0-alpine3.16
 
-RUN apk add --no-cache chromium
+RUN apk add --no-cache chromium npm
 
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
   DOCKER=true
@@ -39,5 +39,5 @@ COPY --from=builder /build/build/ build/
 COPY web/ web/
 COPY package.json package.json
 
-ENTRYPOINT ["npm", "run"]
+ENTRYPOINT [ "sh", "-c", "which npm && npm run" ]
 CMD ["start:production"]
