@@ -38,6 +38,7 @@ export const Newegg: Store = {
       model: 'test:model',
       series: 'test:series',
       url: 'https://www.newegg.com/western-digital-blue-500gb/p/N82E16820250087?Item=N82E16820250087',
+      itemNumber: '20-250-087',
     },
     {
       brand: 'msi',
@@ -673,6 +674,7 @@ export const Newegg: Store = {
       brand: 'microsoft',
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16868105273',
+      itemNumber: '68-105-273',
       model: 'xbox series x',
       series: 'xboxsx',
       url: 'https://www.newegg.com/p/N82E16868105273',
@@ -684,6 +686,7 @@ export const Newegg: Store = {
       model: 'xbox series s',
       series: 'xboxss',
       url: 'https://www.newegg.com/p/N82E16868105274',
+      itemNumber: '68-105-274',
     },
     {
       brand: 'asrock',
@@ -692,6 +695,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/asrock-radeon-rx-6900-xt-rx6900xt-16g/p/N82E16814930051',
+      itemNumber: '14-930-051',
     },
     {
       brand: 'gigabyte',
@@ -700,6 +704,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/gigabyte-radeon-rx-6900-xt-gv-r69xt-16gc-b/p/N82E16814932384',
+      itemNumber: '14-932-384',
     },
     {
       brand: 'msi',
@@ -708,6 +713,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/msi-radeon-rx-6900-xt-rx-6900-xt-16g/p/N82E16814137618',
+      itemNumber: '14-137-618',
     },
     {
       brand: 'powercolor',
@@ -716,6 +722,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/powercolor-radeon-rx-6900-xt-axrx-6900xt-16gbd6-m2dhc/p/N82E16814131774',
+      itemNumber: '14-131-774',
     },
     {
       brand: 'sapphire',
@@ -724,6 +731,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6900-xt-21308-01-20g/p/N82E16814202393',
+      itemNumber: '14-202-393',
     },
     {
       brand: 'asrock',
@@ -732,6 +740,7 @@ export const Newegg: Store = {
       model: 'phantom gaming',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx6900xt-pgd-16g/p/N82E16814930052',
+      itemNumber: '14-930-052',
     },
     {
       brand: 'xfx',
@@ -740,6 +749,7 @@ export const Newegg: Store = {
       model: 'merc',
       series: 'rx6900xt',
       url: 'https://www.newegg.com/xfx-radeon-rx-6900-xt-rx-69xtacud9/p/N82E16814150846',
+      itemNumber: '14-150-846',
     },
     {
       brand: 'gigabyte',
@@ -748,6 +758,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xt-16gc-b/p/N82E16814932373',
+      itemNumber: '14-932-373',
     },
     {
       brand: 'gigabyte',
@@ -756,6 +767,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/gigabyte-radeon-rx-6800-xt-gv-r68xtgaming-oc-16gd/p/N82E16814932381',
+      itemNumber: '14-932-381',
     },
     {
       brand: 'sapphire',
@@ -764,6 +776,7 @@ export const Newegg: Store = {
       model: 'pulse',
       series: 'rx6800',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6800-11305-02-20g/p/N82E16814202394',
+      itemNumber: '14-202-394',
     },
     {
       brand: 'msi',
@@ -772,6 +785,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/msi-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814137607',
+      itemNumber: '14-137-607',
     },
     {
       brand: 'sapphire',
@@ -780,6 +794,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6800-xt-21304-01-20g/p/N82E16814202388',
+      itemNumber: '14-202-388',
     },
     {
       brand: 'asrock',
@@ -788,6 +803,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx-6800-xt-16g/p/N82E16814930045',
+      itemNumber: '14-930-045',
     },
     {
       brand: 'asus',
@@ -796,6 +812,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-xt-rx6800xt-16g/p/N82E16814126472',
+      itemNumber: '14-126-472',
     },
     {
       brand: 'asus',
@@ -804,6 +821,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-rx6800-16g/p/N82E16814126473',
+      itemNumber: '14-126-473',
     },
     {
       brand: 'asrock',
@@ -812,6 +830,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-rx-6800-16g/p/N82E16814930046',
+      itemNumber: '14-930-046',
     },
     {
       brand: 'gigabyte',
@@ -820,6 +839,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800',
       url: 'https://www.newegg.com/gigabyte-radeon-rx-6800-gv-r68-16gc-b/p/N82E16814932374',
+      itemNumber: '14-932-374',
     },
     {
       brand: 'sapphire',
@@ -828,6 +848,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6800-21305-01-20g/p/N82E16814202389',
+      itemNumber: '14-202-389',
     },
     {
       brand: 'msi',
@@ -836,6 +857,7 @@ export const Newegg: Store = {
       model: 'amd reference',
       series: 'rx6800',
       url: 'https://www.newegg.com/msi-radeon-rx-6800-rx-6800-16g/p/N82E16814137608',
+      itemNumber: '14-137-608',
     },
     {
       brand: 'asrock',
@@ -844,8 +866,8 @@ export const Newegg: Store = {
       model: 'challenger',
       series: 'rx6800',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-rx6800-clp-16go/p/N82E16814930047',
+      itemNumber: '14-930-047',
     },
-
     {
       brand: 'asrock',
       cartUrl:
@@ -853,6 +875,7 @@ export const Newegg: Store = {
       model: 'phantom gaming',
       series: 'rx6800',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-rx6800-pgd-16go/p/N82E16814930048',
+      itemNumber: '14-930-048',
     },
     {
       brand: 'asrock',
@@ -861,6 +884,7 @@ export const Newegg: Store = {
       model: 'phantom gaming',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx6800xt-pgd-16go/p/N82E16814930049',
+      itemNumber: '14-930-049',
     },
     {
       brand: 'asrock',
@@ -869,6 +893,7 @@ export const Newegg: Store = {
       model: 'taichi',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asrock-radeon-rx-6800-xt-rx6800xt-tcx-16go/p/N82E16814930050',
+      itemNumber: '14-930-050',
     },
     {
       brand: 'asus',
@@ -877,6 +902,7 @@ export const Newegg: Store = {
       model: 'tuf',
       series: 'rx6800',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-tuf-rx6800-o16g-gaming/p/N82E16814126478',
+      itemNumber: '14-126-478',
     },
     {
       brand: 'asus',
@@ -885,6 +911,7 @@ export const Newegg: Store = {
       model: 'tuf',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-xt-tuf-rx6800xt-o16g-gaming/p/N82E16814126476',
+      itemNumber: '14-126-476',
     },
     {
       brand: 'asus',
@@ -893,6 +920,7 @@ export const Newegg: Store = {
       model: 'strix',
       series: 'rx6800',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-rog-strix-rx6800-o16g-gaming/p/N82E16814126477',
+      itemNumber: '14-126-477',
     },
     {
       brand: 'asus',
@@ -901,6 +929,7 @@ export const Newegg: Store = {
       model: 'strix lc',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/asus-radeon-rx-6800-xt-rog-strix-lc-rx6800xt-o16g-gaming/p/N82E16814126475',
+      itemNumber: '14-126-475',
     },
     {
       brand: 'sapphire',
@@ -909,6 +938,7 @@ export const Newegg: Store = {
       model: 'nitro+',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6800-xt-11304-02-20g/p/N82E16814202391',
+      itemNumber: '14-202-391',
     },
     {
       brand: 'sapphire',
@@ -917,6 +947,7 @@ export const Newegg: Store = {
       model: 'nitro+ se',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/sapphire-radeon-rx-6800-xt-11304-01-20g/p/N82E16814202390',
+      itemNumber: '14-202-390',
     },
     {
       brand: 'xfx',
@@ -925,6 +956,7 @@ export const Newegg: Store = {
       model: 'merc',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/xfx-radeon-rx-6800-xt-rx-68xtacbd9/p/N82E16814150844',
+      itemNumber: '14-150-844',
     },
     {
       brand: 'corsair',
@@ -933,6 +965,7 @@ export const Newegg: Store = {
       model: '750 platinum',
       series: 'sf',
       url: 'https://www.newegg.com/corsair-sf750-cp-9020186-na-750w/p/N82E16817139080',
+      itemNumber: '17-139-080',
     },
     {
       brand: 'gigabyte',
@@ -941,6 +974,7 @@ export const Newegg: Store = {
       model: 'vision oc',
       series: '3060',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-gv-n3060vision-oc-12gd/p/N82E16814932401',
+      itemNumber: '14-932-401',
     },
     {
       brand: 'gigabyte',
@@ -949,6 +983,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3060',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-gv-n3060eagle-12gd/p/N82E16814932399',
+      itemNumber: '14-932-399',
     },
     {
       brand: 'gigabyte',
@@ -957,6 +992,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3060',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-gv-n3060eagle-12gd/p/N82E16814932399',
+      itemNumber: '14-932-399',
     },
     {
       brand: 'gigabyte',
@@ -965,6 +1001,7 @@ export const Newegg: Store = {
       model: 'aorus',
       series: '3060',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-gv-n3060aorus-e-12gd/p/N82E16814932400',
+      itemNumber: '14-932-400',
     },
     {
       brand: 'gigabyte',
@@ -973,6 +1010,7 @@ export const Newegg: Store = {
       model: 'eagle oc',
       series: '3060',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-gv-n3060eagle-oc-12gd/p/N82E16814932403',
+      itemNumber: '14-932-403',
     },
     {
       brand: 'evga',
@@ -981,6 +1019,7 @@ export const Newegg: Store = {
       model: 'xc black',
       series: '3060',
       url: 'https://www.newegg.com/evga-geforce-rtx-3060-12g-p5-3655-kr/p/N82E16814487538',
+      itemNumber: '14-487-538',
     },
     {
       brand: 'evga',
@@ -989,6 +1028,7 @@ export const Newegg: Store = {
       model: 'xc gaming',
       series: '3060',
       url: 'https://www.newegg.com/evga-geforce-rtx-3060-12g-p5-3657-kr/p/N82E16814487539',
+      itemNumber: '14-487-539',
     },
     {
       brand: 'msi',
@@ -997,6 +1037,7 @@ export const Newegg: Store = {
       model: 'gaming x trio',
       series: '3060',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-gaming-x-trio-12g/p/N82E16814137629',
+      itemNumber: '14-137-629',
     },
     {
       brand: 'msi',
@@ -1005,6 +1046,7 @@ export const Newegg: Store = {
       model: 'gaming x',
       series: '3060',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-gaming-x-12g/p/N82E16814137630',
+      itemNumber: '14-137-630',
     },
     {
       brand: 'msi',
@@ -1013,6 +1055,7 @@ export const Newegg: Store = {
       model: 'ventus 3x',
       series: '3060',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-3x-12g-oc/p/N82E16814137631',
+      itemNumber: '14-137-631',
     },
     {
       brand: 'msi',
@@ -1021,6 +1064,7 @@ export const Newegg: Store = {
       model: 'ventus 2x oc',
       series: '3060',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-2x-12g-oc/p/N82E16814137632',
+      itemNumber: '14-137-632',
     },
     {
       brand: 'msi',
@@ -1029,6 +1073,7 @@ export const Newegg: Store = {
       model: 'ventus 2x',
       series: '3060',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-2x-12g/p/N82E16814137638',
+      itemNumber: '14-137-638',
     },
     {
       brand: 'asus',
@@ -1037,6 +1082,7 @@ export const Newegg: Store = {
       model: 'tuf oc',
       series: '3060',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-tuf-rtx3060-o12g-gaming/p/N82E16814126491',
+      itemNumber: '14-126-491',
     },
     {
       brand: 'asus',
@@ -1045,6 +1091,7 @@ export const Newegg: Store = {
       model: 'strix oc',
       series: '3060',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-rog-strix-rtx3060-o12g-gaming/p/N82E16814126492',
+      itemNumber: '14-126-492',
     },
     {
       brand: 'asus',
@@ -1053,6 +1100,7 @@ export const Newegg: Store = {
       model: 'dual',
       series: '3060',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-dual-rtx3060-12g/p/N82E16814126493',
+      itemNumber: '14-126-493',
     },
     {
       brand: 'zotac',
@@ -1061,6 +1109,7 @@ export const Newegg: Store = {
       model: 'twin edge oc',
       series: '3060',
       url: 'https://www.newegg.com/zotac-geforce-rtx-3060-zt-a30600h-10m/p/N82E16814500508',
+      itemNumber: '14-500-508',
     },
     {
       brand: 'zotac',
@@ -1069,6 +1118,7 @@ export const Newegg: Store = {
       model: 'twin edge',
       series: '3060',
       url: 'https://www.newegg.com/zotac-geforce-rtx-3060-zt-a30600e-10m/p/N82E16814500509',
+      itemNumber: '14-500-509',
     },
     {
       brand: 'zotac',
@@ -1077,6 +1127,7 @@ export const Newegg: Store = {
       model: 'twin edge',
       series: '3060',
       url: 'https://www.newegg.com/zotac-geforce-rtx-3060-zt-a30600e-10m/p/N82E16814500509',
+      itemNumber: '14-500-509',
     },
     {
       brand: 'corsair',
@@ -1085,6 +1136,7 @@ export const Newegg: Store = {
       model: '600 platinum',
       series: 'sf',
       url: 'https://www.newegg.com/corsair-sf-series-sf600-cp-9020182-na-600w/p/N82E16817139242',
+      itemNumber: '17-139-242',
     },
     {
       brand: 'asus',
@@ -1093,6 +1145,7 @@ export const Newegg: Store = {
       model: 'strix',
       series: '3060ti',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-ti-rog-strix-rtx3060ti-o8g-gaming/p/N82E16814126470',
+      itemNumber: '14-126-470',
     },
     {
       brand: 'msi',
@@ -1101,6 +1154,7 @@ export const Newegg: Store = {
       model: 'gaming x trio',
       series: '3060ti',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-ti-rtx-3060-ti-gaming-x-trio/p/N82E16814137611',
+      itemNumber: '14-137-611',
     },
     {
       brand: 'zotac',
@@ -1109,6 +1163,7 @@ export const Newegg: Store = {
       model: 'twin edge oc',
       series: '3060ti',
       url: 'https://www.newegg.com/zotac-geforce-rtx-3060-ti-zt-a30610h-10m/p/N82E16814500507',
+      itemNumber: '14-500-507',
     },
     {
       brand: 'asus',
@@ -1117,6 +1172,7 @@ export const Newegg: Store = {
       model: 'tuf',
       series: '3060ti',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-ti-tuf-rtx3060ti-o8g-gaming/p/N82E16814126471',
+      itemNumber: '14-126-471',
     },
     {
       brand: 'evga',
@@ -1125,6 +1181,7 @@ export const Newegg: Store = {
       model: 'xc3',
       series: '3060ti',
       url: 'https://www.newegg.com/evga-geforce-rtx-3060-ti-08g-p5-3663-kr/p/N82E16814487535',
+      itemNumber: '14-487-535',
     },
     {
       brand: 'asus',
@@ -1133,6 +1190,7 @@ export const Newegg: Store = {
       model: 'dual',
       series: '3060ti',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-ti-dual-rtx3060ti-o8g/p/N82E16814126468',
+      itemNumber: '14-126-468',
     },
     {
       brand: 'msi',
@@ -1141,6 +1199,7 @@ export const Newegg: Store = {
       model: 'ventus 2x oc',
       series: '3060ti',
       url: 'https://www.newegg.com/msi-geforce-rtx-3060-ti-rtx-3060-ti-ventus-2x-oc/p/N82E16814137612',
+      itemNumber: '14-137-612',
     },
     {
       brand: 'evga',
@@ -1149,6 +1208,7 @@ export const Newegg: Store = {
       model: 'ftw3 ultra',
       series: '3060ti',
       url: 'https://www.newegg.com/evga-geforce-rtx-3060-ti-08g-p5-3667-kr/p/N82E16814487537',
+      itemNumber: '14-487-537',
     },
     {
       brand: 'gigabyte',
@@ -1157,6 +1217,7 @@ export const Newegg: Store = {
       model: 'aorus',
       series: '3060ti',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-ti-gv-n306taorus-m-8gd/p/N82E16814932375',
+      itemNumber: '14-932-375',
     },
     {
       brand: 'gigabyte',
@@ -1165,6 +1226,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: '3060ti',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-ti-gv-n306tgamingoc-pro-8gd/p/N82E16814932376',
+      itemNumber: '14-932-376',
     },
     {
       brand: 'gigabyte',
@@ -1173,6 +1235,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3060ti',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-ti-gv-n306teagle-8gd/p/N82E16814932379',
+      itemNumber: '14-932-379',
     },
     {
       brand: 'gigabyte',
@@ -1181,6 +1244,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: '3060ti',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-ti-gv-n306tgaming-oc-8gd/p/N82E16814932377',
+      itemNumber: '14-932-377',
     },
     {
       brand: 'zotac',
@@ -1189,6 +1253,7 @@ export const Newegg: Store = {
       model: 'twin edge',
       series: '3060ti',
       url: 'https://www.newegg.com/zotac-geforce-rtx-3060-ti-zt-a30610e-10m/p/N82E16814500506',
+      itemNumber: '14-500-506',
     },
     {
       brand: 'gigabyte',
@@ -1197,6 +1262,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3060ti',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3060-ti-gv-n306teagle-oc-8gd/p/N82E16814932378',
+      itemNumber: '14-932-378',
     },
     {
       brand: 'asus',
@@ -1205,6 +1271,7 @@ export const Newegg: Store = {
       model: 'gaming',
       series: '3060ti',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-ti-ko-rtx3060ti-o8g-gaming/p/N82E16814126474',
+      itemNumber: '14-126-474',
     },
     {
       brand: 'asus',
@@ -1213,6 +1280,7 @@ export const Newegg: Store = {
       model: 'dual',
       series: '3060ti',
       url: 'https://www.newegg.com/asus-geforce-rtx-3060-ti-dual-rtx3060ti-8g/p/N82E16814126480',
+      itemNumber: '14-126-480',
     },
     {
       brand: 'msi',
@@ -1221,6 +1289,7 @@ export const Newegg: Store = {
       model: 'suprim x',
       series: '3070',
       url: 'https://www.newegg.com/msi-geforce-rtx-3070-rtx-3070-suprim-x-8g/p/N82E16814137620',
+      itemNumber: '14-137-620',
     },
     {
       brand: 'msi',
@@ -1229,6 +1298,7 @@ export const Newegg: Store = {
       model: 'suprim',
       series: '3070',
       url: 'https://www.newegg.com/msi-geforce-rtx-3070-rtx-3070-suprim-8g/p/N82E16814137623',
+      itemNumber: '14-137-623',
     },
     {
       brand: 'gigabyte',
@@ -1237,6 +1307,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme',
       series: '3080',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorus-x-10gd/p/N82E16814932345',
+      itemNumber: '14-932-345',
     },
     {
       brand: 'gigabyte',
@@ -1245,6 +1316,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce',
       series: '3080',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorusx-w-10gd/p/N82E16814932372',
+      itemNumber: '14-932-372',
     },
     {
       brand: 'gigabyte',
@@ -1253,6 +1325,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '3080',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorusx-wb-10gd/p/N82E16814932371',
+      itemNumber: '14-932-371',
     },
     {
       brand: 'asus',
@@ -1261,6 +1334,7 @@ export const Newegg: Store = {
       model: 'strix white',
       series: '3080',
       url: 'https://www.newegg.com/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-white/p/N82E16814126483',
+      itemNumber: '14-126-483',
     },
     {
       brand: 'msi',
@@ -1269,6 +1343,7 @@ export const Newegg: Store = {
       model: 'suprim x',
       series: '3080',
       url: 'https://www.newegg.com/msi-geforce-rtx-3080-rtx3080-suprim-x-10g/p/N82E16814137609',
+      itemNumber: '14-137-609',
     },
     {
       brand: 'gigabyte',
@@ -1277,6 +1352,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3080',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080eagle-10gd/p/N82E16814932367',
+      itemNumber: '14-932-367',
     },
     {
       brand: 'asus',
@@ -1285,6 +1361,7 @@ export const Newegg: Store = {
       model: 'ekwb',
       series: '3090',
       url: 'https://www.newegg.com/asus-geforce-rtx-3090-rtx3090-24g-ek/p/N82E16814126485',
+      itemNumber: '14-126-485',
     },
     {
       brand: 'gigabyte',
@@ -1293,6 +1370,7 @@ export const Newegg: Store = {
       model: 'aorus master',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorus-m-24gd/p/N82E16814932341',
+      itemNumber: '14-932-341',
     },
     {
       brand: 'gigabyte',
@@ -1301,6 +1379,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorusx-w-24gd/p/N82E16814932387',
+      itemNumber: '14-932-387',
     },
     {
       brand: 'asus',
@@ -1309,6 +1388,7 @@ export const Newegg: Store = {
       model: 'tuf oc',
       series: '3090',
       url: 'https://www.newegg.com/asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454',
+      itemNumber: '14-126-454',
     },
     {
       brand: 'gigabyte',
@@ -1317,6 +1397,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorusx-wb-24gd/p/N82E16814932386',
+      itemNumber: '14-932-386',
     },
     {
       brand: 'gigabyte',
@@ -1325,6 +1406,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorus-x-24gd/p/N82E16814932340',
+      itemNumber: '14-932-340',
     },
     {
       brand: 'gigabyte',
@@ -1333,6 +1415,7 @@ export const Newegg: Store = {
       model: 'vision oc',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090vision-oc-24gd/p/N82E16814932365',
+      itemNumber: '14-932-365',
     },
     {
       brand: 'asus',
@@ -1341,6 +1424,7 @@ export const Newegg: Store = {
       model: 'strix white',
       series: '3090',
       url: 'https://www.newegg.com/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-white/p/N82E16814126482',
+      itemNumber: '14-126-482',
     },
     {
       brand: 'msi',
@@ -1349,6 +1433,7 @@ export const Newegg: Store = {
       model: 'suprim x',
       series: '3090',
       url: 'https://www.newegg.com/msi-geforce-rtx-3090-rtx3090-suprim-x-24g/p/N82E16814137610',
+      itemNumber: '14-137-610',
     },
     {
       brand: 'gigabyte',
@@ -1357,6 +1442,7 @@ export const Newegg: Store = {
       model: 'eagle',
       series: '3090',
       url: 'https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090eagle-24gd/p/N82E16814932366',
+      itemNumber: '14-932-366',
     },
     {
       brand: 'powercolor',
@@ -1365,6 +1451,7 @@ export const Newegg: Store = {
       model: 'red devil',
       series: 'rx6800xt',
       url: 'https://www.newegg.com/powercolor-radeon-rx-6800-xt-axrx-6800xt-16gbd6-2dhce-oc/p/N82E16814131767',
+      itemNumber: '14-131-767',
     },
     {
       brand: 'powercolor',
@@ -1373,6 +1460,7 @@ export const Newegg: Store = {
       model: 'red devil',
       series: 'rx6800',
       url: 'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-2dhce-oc/p/N82E16814131770',
+      itemNumber: '14-131-770',
     },
     {
       brand: 'powercolor',
@@ -1381,6 +1469,7 @@ export const Newegg: Store = {
       model: 'red dragon',
       series: 'rx6800',
       url: 'https://www.newegg.com/powercolor-radeon-rx-6800-axrx-6800-16gbd6-3dhr-oc/p/N82E16814131773',
+      itemNumber: '14-131-773',
     },
     {
       brand: 'asus',
@@ -1389,6 +1478,7 @@ export const Newegg: Store = {
       model: 'crosshair viii',
       series: 'darkhero',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16813119362',
+      itemNumber: '13-119-362',
     },
     {
       brand: 'asus',
@@ -1461,6 +1551,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932561',
+      itemNumber: '14-932-561',
     },
     {
       brand: 'gigabyte',
@@ -1469,6 +1560,7 @@ export const Newegg: Store = {
       model: 'eagle oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932562',
+      itemNumber: '14-932-562',
     },
     {
       brand: 'msi',
@@ -1477,6 +1569,7 @@ export const Newegg: Store = {
       model: 'gaming x trio',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137766',
+      itemNumber: '14-137-766',
     },
     {
       brand: 'msi',
@@ -1485,6 +1578,7 @@ export const Newegg: Store = {
       model: 'ventus 3x oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137765',
+      itemNumber: '14-137-765',
     },
     {
       brand: 'asus',
@@ -1493,6 +1587,7 @@ export const Newegg: Store = {
       model: 'strix oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126597',
+      itemNumber: '14-126-597',
     },
     {
       brand: 'pny',
@@ -1501,6 +1596,7 @@ export const Newegg: Store = {
       model: 'xlr8 verto',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814133843',
+      itemNumber: '14-133-843',
     },
     {
       brand: 'pny',
@@ -1509,6 +1605,7 @@ export const Newegg: Store = {
       model: 'xlr8 verto oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814133844',
+      itemNumber: '14-133-844',
     },
     {
       brand: 'gigabyte',
@@ -1517,6 +1614,7 @@ export const Newegg: Store = {
       model: 'aorus',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932559',
+      itemNumber: '14-932-559',
     },
     {
       brand: 'gigabyte',
@@ -1525,6 +1623,7 @@ export const Newegg: Store = {
       model: 'aero oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932560',
+      itemNumber: '14-932-560',
     },
     {
       brand: 'zotac',
@@ -1533,6 +1632,7 @@ export const Newegg: Store = {
       model: 'amp extreme airo',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814500541',
+      itemNumber: '14-500-541',
     },
     {
       brand: 'gigabyte',
@@ -1541,6 +1641,7 @@ export const Newegg: Store = {
       model: 'aorus w',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932558',
+      itemNumber: '14-932-558',
     },
     {
       brand: 'zotac',
@@ -1549,6 +1650,7 @@ export const Newegg: Store = {
       model: 'trinity',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814500542',
+      itemNumber: '14-500-542',
     },
     {
       brand: 'msi',
@@ -1557,6 +1659,7 @@ export const Newegg: Store = {
       model: 'ventus 3x',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137768',
+      itemNumber: '14-137-768',
     },
     {
       brand: 'msi',
@@ -1565,6 +1668,7 @@ export const Newegg: Store = {
       model: 'suprim x',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814137767',
+      itemNumber: '14-137-767',
     },
     {
       brand: 'gigabyte',
@@ -1573,6 +1677,7 @@ export const Newegg: Store = {
       model: 'aorus x wb',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814932557',
+      itemNumber: '14-932-557',
     },
     {
       brand: 'zotac',
@@ -1581,6 +1686,7 @@ export const Newegg: Store = {
       model: 'trinity oc',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814500543',
+      itemNumber: '14-500-543',
     },
     {
       brand: 'asus',
@@ -1589,6 +1695,7 @@ export const Newegg: Store = {
       model: 'strix',
       series: '4080-16g',
       url: 'https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16814126601',
+      itemNumber: '14-126-601',
     },
     {
       brand: 'sparkle',
@@ -1597,6 +1704,7 @@ export const Newegg: Store = {
       model: 'b580',
       series: 'arc',
       url: 'https://www.newegg.com/sparkle-intel-arc-b580-titan-oc-12gb-gddr6/p/N82E16814993013',
+      itemNumber: '14-993-013',
     },
     {
       brand: 'lianli',
@@ -1613,6 +1721,7 @@ export const Newegg: Store = {
       model: 'ventus 3x oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137920',
+      itemNumber: '14-137-920',
     },
     {
       brand: 'msi',
@@ -1621,6 +1730,7 @@ export const Newegg: Store = {
       model: 'suprim liquid soc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137916',
+      itemNumber: '14-137-916',
     },
     {
       brand: 'msi',
@@ -1629,6 +1739,7 @@ export const Newegg: Store = {
       model: 'suprim soc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137915',
+      itemNumber: '14-137-915',
     },
     {
       brand: 'msi',
@@ -1637,6 +1748,7 @@ export const Newegg: Store = {
       model: 'vanguard soc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137918',
+      itemNumber: '14-137-918',
     },
     {
       brand: 'msi',
@@ -1645,6 +1757,7 @@ export const Newegg: Store = {
       model: 'gaming trio oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137919',
+      itemNumber: '14-137-919',
     },
     {
       brand: 'msi',
@@ -1653,6 +1766,7 @@ export const Newegg: Store = {
       model: 'vanguard soc launch edition',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137917',
+      itemNumber: '14-137-917',
     },
     {
       brand: 'zotac',
@@ -1661,6 +1775,7 @@ export const Newegg: Store = {
       model: 'amp extreme infinity',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814500593',
+      itemNumber: '14-500-593',
     },
     {
       brand: 'gigabyte',
@@ -1669,6 +1784,7 @@ export const Newegg: Store = {
       model: 'aero oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932756',
+      itemNumber: '14-932-756',
     },
     {
       brand: 'gigabyte',
@@ -1677,6 +1793,7 @@ export const Newegg: Store = {
       model: 'aorus',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932755',
+      itemNumber: '14-932-755',
     },
     {
       brand: 'msi',
@@ -1685,6 +1802,7 @@ export const Newegg: Store = {
       model: 'gaming trio oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137910',
+      itemNumber: '14-137-910',
     },
     {
       brand: 'msi',
@@ -1693,6 +1811,7 @@ export const Newegg: Store = {
       model: 'ventus 3x oc plus',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137913',
+      itemNumber: '14-137-913',
     },
     {
       brand: 'msi',
@@ -1701,6 +1820,7 @@ export const Newegg: Store = {
       model: 'gaming trio oc white',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137909',
+      itemNumber: '14-137-909',
     },
     {
       brand: 'msi',
@@ -1709,6 +1829,7 @@ export const Newegg: Store = {
       model: 'vanguard soc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137908',
+      itemNumber: '14-137-908',
     },
     {
       brand: 'msi',
@@ -1717,6 +1838,7 @@ export const Newegg: Store = {
       model: 'suprim soc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137906',
+      itemNumber: '14-137-906',
     },
     {
       brand: 'msi',
@@ -1725,6 +1847,7 @@ export const Newegg: Store = {
       model: 'vanguard soc launch edition',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137907',
+      itemNumber: '14-137-907',
     },
     {
       brand: 'msi',
@@ -1733,6 +1856,7 @@ export const Newegg: Store = {
       model: 'suprim liquid soc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137905',
+      itemNumber: '14-137-905',
     },
     {
       brand: 'asus',
@@ -1741,6 +1865,7 @@ export const Newegg: Store = {
       model: 'tuf',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814126752',
+      itemNumber: '14-126-752',
     },
     {
       brand: 'asus',
@@ -1749,6 +1874,7 @@ export const Newegg: Store = {
       model: 'tuf oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814126753',
+      itemNumber: '14-126-753',
     },
     {
       brand: 'gigabyte',
@@ -1757,6 +1883,7 @@ export const Newegg: Store = {
       model: 'windforce oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932754',
+      itemNumber: '14-932-754',
     },
     {
       brand: 'asus',
@@ -1765,6 +1892,7 @@ export const Newegg: Store = {
       model: 'astral oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814126751',
+      itemNumber: '14-126-751',
     },
     {
       brand: 'gigabyte',
@@ -1773,6 +1901,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932753',
+      itemNumber: '14-932-753',
     },
     {
       brand: 'asus',
@@ -1781,6 +1910,7 @@ export const Newegg: Store = {
       model: 'astral',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814126750',
+      itemNumber: '14-126-750',
     },
     {
       brand: 'asus',
@@ -1789,6 +1919,7 @@ export const Newegg: Store = {
       model: 'tuf oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126743',
+      itemNumber: '14-126-743',
     },
     {
       brand: 'asus',
@@ -1797,6 +1928,7 @@ export const Newegg: Store = {
       model: 'prime oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126744',
+      itemNumber: '14-126-744',
     },
     {
       brand: 'asus',
@@ -1805,6 +1937,7 @@ export const Newegg: Store = {
       model: 'astral oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126742',
+      itemNumber: '14-126-742',
     },
     {
       brand: 'gigabyte',
@@ -1813,6 +1946,7 @@ export const Newegg: Store = {
       model: 'master ice',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814932765',
+      itemNumber: '14-932-765',
     },
     {
       brand: 'zotac',
@@ -1821,6 +1955,7 @@ export const Newegg: Store = {
       model: 'solid',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814500597',
+      itemNumber: '14-500-597',
     },
     {
       brand: 'gigabyte',
@@ -1829,6 +1964,7 @@ export const Newegg: Store = {
       model: 'gaming oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814932761',
+      itemNumber: '14-932-761',
     },
     {
       brand: 'gigabyte',
@@ -1837,6 +1973,7 @@ export const Newegg: Store = {
       model: 'windforce oc',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814932762',
+      itemNumber: '14-932-762',
     },
     {
       brand: 'gigabyte',
@@ -1845,7 +1982,9 @@ export const Newegg: Store = {
       model: 'master',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814932760',
+      itemNumber: '14-932-760',
     },
+
     {
       brand: 'msi',
       cartUrl:
@@ -1853,6 +1992,7 @@ export const Newegg: Store = {
       model: 'ventus 3x',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814137946',
+      itemNumber: '14-137-946',
     },
     {
       brand: 'gigabyte',
@@ -1863,20 +2003,13 @@ export const Newegg: Store = {
       url: 'https://www.newegg.com/p/N82E16814932764',
     },
     {
-      brand: 'msi',
-      cartUrl:
-        'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814137929',
-      model: 'suprim soc',
-      series: '5090',
-      url: 'https://www.newegg.com/p/N82E16814137929',
-    },
-    {
       brand: 'gigabyte',
       cartUrl:
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814932763',
       model: 'aorus xtreme waterforce',
       series: '5090',
       url: 'https://www.newegg.com/p/N82E16814932763',
+      itemNumber: '14-932-763',
     },
     {
       brand: 'gigabyte',
@@ -1885,6 +2018,7 @@ export const Newegg: Store = {
       model: 'master ice',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932757',
+      itemNumber: '14-932-757',
     },
     {
       brand: 'msi',
@@ -1893,6 +2027,7 @@ export const Newegg: Store = {
       model: 'ventus 3x oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137930',
+      itemNumber: '14-137-930',
     },
     {
       brand: 'msi',
@@ -1901,6 +2036,7 @@ export const Newegg: Store = {
       model: 'inspire 3x oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137911',
+      itemNumber: '14-137-911',
     },
     {
       brand: 'msi',
@@ -1909,6 +2045,7 @@ export const Newegg: Store = {
       model: 'ventus 3x oc white',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137912',
+      itemNumber: '14-137-912',
     },
     {
       brand: 'pny',
@@ -1917,6 +2054,7 @@ export const Newegg: Store = {
       model: 'epic x',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814133898',
+      itemNumber: '14-133-898',
     },
     {
       brand: 'zotac',
@@ -1925,6 +2063,7 @@ export const Newegg: Store = {
       model: 'solid',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814500596',
+      itemNumber: '14-500-596',
     },
     {
       brand: 'zotac',
@@ -1933,6 +2072,7 @@ export const Newegg: Store = {
       model: 'solid oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814500594',
+      itemNumber: '14-500-594',
     },
     {
       brand: 'gigabyte',
@@ -1941,6 +2081,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce wb',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932758',
+      itemNumber: '14-932-758',
     },
     {
       brand: 'msi',
@@ -1949,6 +2090,7 @@ export const Newegg: Store = {
       model: 'ventus 3x',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137945',
+      itemNumber: '14-137-945',
     },
     {
       brand: 'gigabyte',
@@ -1957,6 +2099,7 @@ export const Newegg: Store = {
       model: 'aorus xtreme waterforce',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814932759',
+      itemNumber: '14-932-759',
     },
     {
       brand: 'pny',
@@ -1965,6 +2108,7 @@ export const Newegg: Store = {
       model: 'triple fan oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814133899',
+      itemNumber: '14-133-899',
     },
     {
       brand: 'zotac',
@@ -1972,7 +2116,8 @@ export const Newegg: Store = {
         'https://secure.newegg.com/Shopping/AddtoCart.aspx?Submit=ADD&ItemList=N82E16814500595',
       model: 'amp extreme infinity',
       series: '5080',
-      url: 'https://www.newegg.com/p/',
+      url: 'https://www.newegg.com/p/N82E16814500595',
+      itemNumber: '14-500-595',
     },
     {
       brand: 'msi',
@@ -1981,6 +2126,7 @@ export const Newegg: Store = {
       model: 'shadow 3x oc',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814137914',
+      itemNumber: '14-137-914',
     },
     {
       brand: 'asus',
@@ -1989,6 +2135,7 @@ export const Newegg: Store = {
       model: 'prime',
       series: '5080',
       url: 'https://www.newegg.com/p/N82E16814126776',
+      itemNumber: '14-126-776',
     },
   ],
   name: 'newegg',
@@ -2019,5 +2166,6 @@ https://www.newegg.com/p/itemNumber
   model: '',
   series: '',
   url: 'https://www.newegg.com/p/',
+  itemNumber: 'XX-XXX-XXX'
 },
 */
