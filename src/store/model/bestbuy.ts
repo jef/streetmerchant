@@ -572,14 +572,14 @@ export const BestBuy: Store = {
     {
       brand: 'xfx',
       cartUrl: 'https://api.bestbuy.com/click/-/6621077/cart',
-      model: 'quic',
+      model: 'qick',
       series: 'rx9070',
       url: 'https://api.bestbuy.com/click/-/6621077/pdp',
     },
     {
       brand: 'xfx',
       cartUrl: 'https://api.bestbuy.com/click/-/6621078/cart',
-      model: 'quic',
+      model: 'qick',
       series: 'rx9070',
       url: 'https://api.bestbuy.com/click/-/6621078/pdp',
     },
