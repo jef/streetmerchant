@@ -27,6 +27,8 @@
 | `MAX_PRICE_SERIES_RX6800` | Maximum price allowed for a match, applies AMD RX 6800 |
 | `MAX_PRICE_SERIES_RX6800XT` | Maximum price allowed for a match,applies AMD RX 6800 XT |
 | `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
+| `MAX_PRICE_SERIES_RX9070` | Maximum price allowed for a match, applies AMD RX 9070|
+| `MAX_PRICE_SERIES_RX9070XT` | Maximum price allowed for a match, applies AMD RX 9070 XT |
 | `MAX_PRICE_SERIES_RYZEN7800X3D` | Maximum price allowed for a match, applies AMD 7800X3D |
 | `MAX_PRICE_SERIES_RYZEN7950X` | Maximum price allowed for a match, applies to AMD Ryzen 9 7950X CPU |
 | `MAX_PRICE_SERIES_RYZEN9800X3D` | Maximum price allowed for a match, applies AMD 9800X3D |
@@ -285,6 +287,8 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD RX 6800 | `rx6800` |
 | AMD RX 6800XT | `rx6800xt` |
 | AMD RX 6900XT | `rx6900xt` |
+| AMD RX 9070 | `rx9070` |
+| AMD RX 9070XT | `rx9070xt` |
 | AMD Ryzen 5600X | `ryzen5600` |
 | AMD Ryzen 5800X | `ryzen5800` |
 | AMD Ryzen 5900X | `ryzen5900` |
