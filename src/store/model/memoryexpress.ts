@@ -502,6 +502,18 @@ export const MemoryExpress: Store = {
       series: 'rx6900xt',
       url: 'https://www.memoryexpress.com/Products/MX00115051',
     },
+    {
+      brand: 'gigabyte',
+      model: 'windforce oc',
+      series: '5080',
+      url: 'https://www.memoryexpress.com/Products/MX00132482',
+    },
+    {
+      brand: 'asus',
+      model: 'prime',
+      series: '5080',
+      url: 'https://www.memoryexpress.com/Products/MX00132529',
+    },
   ],
   name: 'memoryexpress',
   country: 'CA',
