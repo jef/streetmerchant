@@ -555,7 +555,7 @@ export const BestBuy: Store = {
       series: 'rx6900xt',
       url: 'https://api.bestbuy.com/click/-/6445157/pdp',
     },
-        {
+      {
       brand: 'gigabyte',
       cartUrl: 'https://api.bestbuy.com/click/-/6617867/cart',
       model: 'gaming oc',
