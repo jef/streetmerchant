@@ -361,7 +361,7 @@ export const BAndH: Store = {
       series: 'ryzen5600',
       url: 'https://www.bhphotovideo.com/c/product/1598377-REG/amd_100_100000065box_ryzen_5_5600x_3_7.html',
     },
-        {
+    {
       brand: 'asus',
       model: 'prime oc',
       series: 'rx9070',
