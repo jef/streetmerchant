@@ -17,7 +17,8 @@ export function sendPushoverNotification(link: Link, store: Store) {
     const message: PushoverMessage =
       pushover.priority < 2
         ? {
-            message: link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url,
+            message:
+              link.cartUrl && config.store.autoAddToCart ? link.cartUrl : link.url,
             priority: pushover.priority,
             sound: pushover.sound,
             title: Print.inStock(link, store),
@@ -26,7 +27,8 @@ export function sendPushoverNotification(link: Link, store: Store) {
           }
         : {
             expire: pushover.expire,
-            message: link.cartUrl ? link.cartUrl : link.url,
+            message:
+              link.cartUrl && config.store.autoAddToCart  ? link.cartUrl : link.url,
             priority: pushover.priority,
             sound: pushover.sound,
             retry: pushover.retry,
