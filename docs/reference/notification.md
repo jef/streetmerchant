@@ -54,6 +54,8 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_RX6800` | Discord group to notify on RX 6800 stock |
 | `DISCORD_NOTIFY_GROUP_RX6800XT` | Discord group to notify on RX 6800XT stock |
 | `DISCORD_NOTIFY_GROUP_RX6900XT` | Discord group to notify on RX 6900XT stock |
+| `DISCORD_NOTIFY_GROUP_RX9070` | Discord group to notify on RX 9070 stock |
+| `DISCORD_NOTIFY_GROUP_RX9070XT` | Discord group to notify on RX 9070XT stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on Ryzen 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
