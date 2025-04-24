@@ -39,7 +39,7 @@ export function getTestStore(): Store {
         text: ['Rickrolling'],
       },
       captchaHandler: {
-        challenge: 'img.thumbimage',
+        challenge: 'figure[typeof="mw:File/Thumb"] a img.mw-file-element',
         input: '#searchInput',
         submit: 'body',
         captureType: 'image',
