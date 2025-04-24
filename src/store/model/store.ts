@@ -70,6 +70,8 @@ export type Series =
   | 'rx6800'
   | 'rx6800xt'
   | 'rx6900xt'
+  | 'rx9070'
+  | 'rx9070xt'
   | 'ryzen5600'
   | 'ryzen5800'
   | 'ryzen5900'
