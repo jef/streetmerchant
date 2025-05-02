@@ -127,6 +127,22 @@ export const Amd: Store = {
       series: 'ryzen7800x3d',
       url: 'https://shop-us-en.amd.com/amd-ryzen-7-7800x3d-processor/',
     },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://shop-us-en.amd.com/cart.php?action=add&product_id=172',
+      model: '9900x3d',
+      series: 'ryzen9900x3d',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-9-9900x3d-processor/',
+    },
+    {
+      brand: 'amd',
+      cartUrl:
+        'https://shop-us-en.amd.com/cart.php?action=add&product_id=173',
+      model: '9950x3d',
+      series: 'ryzen9950x3d',
+      url: 'https://shop-us-en.amd.com/amd-ryzen-9-9950x3d-processor/',
+    },
   ],
   name: 'amd',
   country: 'US',

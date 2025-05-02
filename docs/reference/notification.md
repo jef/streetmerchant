@@ -69,7 +69,9 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_RYZEN9700X` | Discord group to notify on Ryzen 9700X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9800X3D` | Discord group to notify on Ryzen 9800X3D stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9900X` | Discord group to notify on Ryzen 9900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9900X3D` | Discord group to notify on Ryzen 9900X3D stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9950X` | Discord group to notify on Ryzen 9950X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9950X3D` | Discord group to notify on Ryzen 9950X3D stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
