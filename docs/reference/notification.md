@@ -72,6 +72,7 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_RYZEN9950X` | Discord group to notify on Ryzen 9950X stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
+| `DISCORD_NOTIFY_GROUP_SWITCH2` | Discord group to notify on Nintendo Switch 2 stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
 | `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |

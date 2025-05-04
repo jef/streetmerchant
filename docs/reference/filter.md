@@ -38,6 +38,7 @@
 | `MAX_PRICE_SERIES_RYZEN9950X` | Maximum price allowed for a match, applies AMD RX 9950X |
 | `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
 | `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_SWITCH2` | Maximum price allowed for a match, applies to Nintendo Switch 2 |
 | `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies Xbox Series S |
 | `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies Xbox Series X |
 | `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` |
@@ -265,6 +266,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `lianli` | `a3 matx wd` |
 | `microsoft` | `xbox series s`, `xbox series x` |
 | `msi` | `amd reference`, `dual`, `expert`, `gaming`, `gaming trio`, `gaming trio oc`, `gaming trio oc white`, `gaming x`, `gaming x slim`, `gaming x trio`, `gaming z trio`, `inspire 3x`, `inspire 3x oc`, `lp oc`, `mech 2x`, `mech 2x oc`, `shadow 3x`, `shadow 3x oc`, `strix`, `suprim`, `suprim liquid soc`, `suprim liquid x`, `suprim oc`, `suprim soc`, `suprim x`, `vanguard`, `vanguard soc`, `vanguard soc launch edition`, `ventus 2X (LHR)`, `ventus 2x`, `ventus 2x oc`, `ventus 2x white oc`, `ventus 3x`, `ventus 3x e1 oc`, `ventus 3x oc`, `ventus 3x oc plus`, `ventus 3x oc white`, `x trio` |
+| `nintendo` | `switch 2`, `switch 2 bundle` |
 | `nvidia` | `founders edition` |
 | `palit` | `dual`, `dual oc`, `gamerock`, `gamerock oc`, `gaming oc pro`, `gaming pro`, `gaming pro oc`, `jetstream`, `jetstream oc`, `stormx oc`, `trinity oc` |
 | `pny` | `aorus xtreme waterforce`, `dual`, `dual fan`, `epic x`, `epic x oc`, `gaming`, `gaming verto epic-x`, `single fan`, `suprim liquid soc`, `triple fan`, `triple fan oc`, `uprising`, `vetro`, `xlr8`, `xlr8 epic x`, `xlr8 gaming`, `xlr8 gaming uprising epic x`, `xlr8 revel`, `xlr8 revel epic x`, `xlr8 uprising`, `xlr8 verto`, `xlr8 verto epic x`, `xlr8 verto epic x oc`, `xlr8 verto oc` |
@@ -304,6 +306,7 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | Crosshair VIII | `darkhero` |
 | Intel Arc B580 | `arc` |
 | Lian Li A3-mATX | `a3-matx` |
+| Nintendo Switch 2 | `switch2` |
 | Nvidia RTX 3050 | `3050` |
 | Nvidia RTX 3060 | `3060` |
 | Nvidia RTX 3060 Ti | `3060ti` |

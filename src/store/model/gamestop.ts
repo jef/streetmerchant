@@ -137,6 +137,18 @@ export const Gamestop: Store = {
       series: 'xboxss',
       url: 'https://www.gamestop.com/video-games/xbox-series-x/consoles/products/xbox-series-s-digital-edition/B224746K.html',
     },
+    {
+      brand: 'nintendo',
+      model: 'switch 2',
+      series: 'switch2',
+      url: 'https://www.gamestop.com/consoles-hardware/nintendo-switch/consoles/products/nintendo-switch-2/424543.html',
+    },
+    {
+      brand: 'nintendo',
+      model: 'switch 2 bundle',
+      series: 'switch2',
+      url: 'https://www.gamestop.com/consoles-hardware/nintendo-switch-2/products/nintendo-switch-2-console-and-mario-kart-world-bundle/424542.html',
+    },
   ],
   name: 'gamestop',
   country: 'US',
