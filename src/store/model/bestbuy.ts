@@ -38,6 +38,20 @@ export const BestBuy: Store = {
       url: 'https://api.bestbuy.com/click/-/6606318/pdp',
     },
     {
+      brand: 'amd',
+      model: '9900x3d',
+      cartUrl: 'https://api.bestbuy.com/click/-/6621940/cart',
+      series: 'ryzen9900x3d',
+      url: 'https://api.bestbuy.com/click/-/6621940/pdp',
+    },
+    {
+      brand: 'amd',
+      model: '9950x3d',
+      cartUrl: 'https://api.bestbuy.com/click/-/6621941/cart',
+      series: 'ryzen9950x3d',
+      url: 'https://api.bestbuy.com/click/-/6621941/pdp',
+    },
+    {
       brand: 'nvidia',
       cartUrl: 'https://api.bestbuy.com/click/-/6429442/cart',
       model: 'founders edition',
