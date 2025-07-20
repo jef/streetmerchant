@@ -72,6 +72,18 @@ export const Walmart: Store = {
       series: '3070',
       url: 'https://www.walmart.com/ip/804934537',
     },
+    {
+      brand: 'nintendo',
+      model: 'switch 2',
+      series: 'switch2',
+      url: 'https://www.walmart.com/ip/15949610846',
+    },
+    {
+      brand: 'nintendo',
+      model: 'switch 2 bundle',
+      series: 'switch2',
+      url: 'https://www.walmart.com/ip/15928868255',
+    },
   ],
   name: 'walmart',
   country: 'US',
