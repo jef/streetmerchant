@@ -35,7 +35,9 @@
 | `MAX_PRICE_SERIES_RYZEN9600X` | Maximum price allowed for a match, applies AMD RX 9600X |
 | `MAX_PRICE_SERIES_RYZEN9700X` | Maximum price allowed for a match, applies AMD RX 9700X |
 | `MAX_PRICE_SERIES_RYZEN9900X` | Maximum price allowed for a match, applies AMD RX 9900X |
+| `MAX_PRICE_SERIES_RYZEN9900X3D` | Maximum price allowed for a match, applies AMD RX 9900X3D |
 | `MAX_PRICE_SERIES_RYZEN9950X` | Maximum price allowed for a match, applies AMD RX 9950X |
+| `MAX_PRICE_SERIES_RYZEN9950X3D` | Maximum price allowed for a match, applies AMD RX 9950X3D |
 | `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
 | `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
 | `MAX_PRICE_SERIES_SWITCH2` | Maximum price allowed for a match, applies to Nintendo Switch 2 |
@@ -249,7 +251,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 
 | Brand | Model |
 |:---:|---|
-| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `7800x3d`, `7950x`, `9600x`, `9700x`, `9800x3d`, `9900x`, `9950x`, `amd reference`, `tuf oc` |
+| `amd` | `5600x`, `5800x`, `5900x`, `5950x`, `7800x3d`, `7950x`, `9600x`, `9700x`, `9800x3d`, `9900x`, `9900x3d`, `9950x`, `9950x3d`, `amd reference`, `tuf oc` |
 | `asrock` | `amd reference`, `challenger`, `challenger oc`, `challenger pro`, `challenger pro oc`, `phantom gaming`, `phantom gaming oc`, `taichi`, `taichi x oc` |
 | `asus` | `amd reference`, `astral`, `astral lc`, `astral oc`, `crosshair viii`, `dual`, `dual fan`, `dual mini`, `dual mini oc`, `dual oc`, `ekwb`, `gaming`, `gaming oc`, `ko`, `ko oc`, `phoenix 8G (LHR)`, `prime`, `prime oc`, `strix`, `strix lc`, `strix oc`, `strix oc lc`, `strix oc white`, `strix white`, `suprim x`, `tuf`, `tuf gaming`, `tuf gaming oc`, `tuf oc`, `turbo` |
 | `ax` | `x3w` |
@@ -301,7 +303,9 @@ Used with the `SHOW_ONLY_SERIES` variable.
 | AMD Ryzen 9700X | `ryzen9700x` |
 | AMD Ryzen 9800X3D | `ryzen9800x3d` | 
 | AMD Ryzen 9900X | `ryzen9900x` |
+| AMD Ryzen 9900X3D | `ryzen9900x3d` |
 | AMD Ryzen 9950X | `ryzen9950x` |
+| AMD Ryzen 9950X3D | `ryzen9950x3d` |
 | Corsair SFX PSU | `sf` |
 | Crosshair VIII | `darkhero` |
 | Intel Arc B580 | `arc` |
