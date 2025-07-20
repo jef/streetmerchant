@@ -136,8 +136,7 @@ export const Amd: Store = {
     },
     {
       brand: 'amd',
-      cartUrl:
-        'https://shop-us-en.amd.com/cart.php?action=add&product_id=173',
+      cartUrl: 'https://shop-us-en.amd.com/cart.php?action=add&product_id=173',
       model: '9950x3d',
       series: 'ryzen9950x3d',
       url: 'https://shop-us-en.amd.com/amd-ryzen-9-9950x3d-processor/',
