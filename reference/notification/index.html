@@ -1,0 +1,2065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="🤖 The world's easiest, most powerful stock checker">
+      
+      
+        <meta name="author" content="Jef LeCompte">
+      
+      
+        <link rel="canonical" href="https://jef.buzz/streetmerchant/reference/notification/">
+      
+      
+        <link rel="prev" href="../filter/">
+      
+      
+        <link rel="next" href="../proxy/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Notification - streetmerchant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  
+    
+  
+
+  
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="streetmerchant - Notification" />
+  <meta property="og:description" content="🤖 The world's easiest, most powerful stock checker" />
+  <meta property="og:url" content="https://jef.buzz/streetmerchant/reference/notification/" />
+  <meta property="og:image" content="https://jef.buzz/streetmerchant//assets/images/streetmerchant-github.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="streetmerchant" class="md-header__button md-logo" aria-label="streetmerchant" data-md-component="logo">
+      
+  <img src="../../assets/images/streetmerchant-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            streetmerchant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jef/streetmerchant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jef/streetmerchant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="streetmerchant" class="md-nav__button md-logo" aria-label="streetmerchant" data-md-component="logo">
+      
+  <img src="../../assets/images/streetmerchant-logo.png" alt="logo">
+
+    </a>
+    streetmerchant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jef/streetmerchant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jef/streetmerchant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../captcha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Captcha
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Notification
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notification
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apple-push-notification-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apple Push Notification Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-and-sms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email and SMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email and SMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-carriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported carriers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotify
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagerduty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PagerDuty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philips-hue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Philips Hue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushbullet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushbullet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twilio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twilio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twitch-temporarily-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitch - TEMPORARILY DISABLED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamlabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      StreamLabs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#free-mobile-sms-notifications-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free mobile SMS notifications API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTFY.sh
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Help
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Help
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/troubleshoot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshoot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apple-push-notification-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apple Push Notification Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-and-sms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email and SMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email and SMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-carriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported carriers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotify
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagerduty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PagerDuty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philips-hue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Philips Hue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushbullet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushbullet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twilio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twilio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twitch-temporarily-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitch - TEMPORARILY DISABLED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamlabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      StreamLabs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#free-mobile-sms-notifications-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free mobile SMS notifications API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTFY.sh
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="notification">Notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h1>
+<p>You can test your notification configuration by running <code>npm run test:notification</code>.</p>
+<h2 id="apple-push-notification-service">Apple Push Notification Service<a class="headerlink" href="#apple-push-notification-service" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APNS_AUTHKEY</code></td>
+<td>Path to authkey on users machine</td>
+</tr>
+<tr>
+<td><code>APNS_BUNDLEID</code></td>
+<td>iOS app bundle id</td>
+</tr>
+<tr>
+<td><code>APNS_DEVICETOKEN</code></td>
+<td>iOS device token</td>
+</tr>
+<tr>
+<td><code>APNS_KEYID</code></td>
+<td>Apple developer's key id</td>
+</tr>
+<tr>
+<td><code>APNS_PRODUCTION</code></td>
+<td>true/false for production</td>
+</tr>
+<tr>
+<td><code>APNS_TEAMID</code></td>
+<td>Apple developer's team id</td>
+</tr>
+</tbody>
+</table>
+<p>Change your notification alert/payload/etc in apns.ts in the note object.
+Refer to https://github.com/node-apn/node-apn for config options.</p>
+<h2 id="desktop">Desktop<a class="headerlink" href="#desktop" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DESKTOP_NOTIFICATIONS</code></td>
+<td>Display desktop notifications using <a href="https://www.npmjs.com/package/node-notifier">node-notifier</a>.</td>
+</tr>
+<tr>
+<td><code>PLAY_SOUND</code></td>
+<td>Play this sound notification if a product is found. Relative path accepted, valid formats: wav, mp3, flac, E.g.: <code>path/to/notification.wav</code>, <a href="https://notificationsounds.com/">free sounds available</a></td>
+</tr>
+<tr>
+<td><code>SOUND_PLAYER</code></td>
+<td>Override the default sound player using the specified executable.</td>
+</tr>
+</tbody>
+</table>
+<details class="attention" open="open">
+<summary>Attention</summary>
+<p>If you're on Windows, you must have the proper library to run.</p>
+</details>
+<h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP</code></td>
+<td>Discord group you would like to notify</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3050</code></td>
+<td>Discord group to notify on 3050 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3060</code></td>
+<td>Discord group to notify on 3060 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3060TI</code></td>
+<td>Discord group to notify on 3060 Ti stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3070</code></td>
+<td>Discord group to notify on 3070 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3070TI</code></td>
+<td>Discord group to notify on 3070 Ti stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3080</code></td>
+<td>Discord group to notify on 3080 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3080TI</code></td>
+<td>Discord group to notify on 3080 Ti stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_3090</code></td>
+<td>Discord group to notify on 3090 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_4080_16G</code></td>
+<td>Discord group to notify on 4080 16G stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_4090</code></td>
+<td>Discord group to notify on 4090 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_5070</code></td>
+<td>Discord group to notify on 5070 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_5070TI</code></td>
+<td>Discord group to notify on 5070 Ti stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_5080</code></td>
+<td>Discord group to notify on 5080 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_5090</code></td>
+<td>Discord group to notify on 5090 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_A3MATX</code></td>
+<td>Discord group to notify on Lian Li A3 mATX Case stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_ARC</code></td>
+<td>Discord group to notify on Intel Arc B580 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_CORSAIR_SF</code></td>
+<td>Discord group to notify on Corsair SF stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_DARKHERO</code></td>
+<td>Discord group to notify on Dark Hero stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX6700XT</code></td>
+<td>Discord group to notify on RX 6700XT stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX6800</code></td>
+<td>Discord group to notify on RX 6800 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX6800XT</code></td>
+<td>Discord group to notify on RX 6800XT stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX6900XT</code></td>
+<td>Discord group to notify on RX 6900XT stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX9070</code></td>
+<td>Discord group to notify on RX 9070 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RX9070XT</code></td>
+<td>Discord group to notify on RX 9070XT stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5600</code></td>
+<td>Discord group to notify on 5600X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5600</code></td>
+<td>Discord group to notify on Ryzen 5600X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5800</code></td>
+<td>Discord group to notify on 5800X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5800</code></td>
+<td>Discord group to notify on Ryzen 5800X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5900</code></td>
+<td>Discord group to notify on 5900X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5900</code></td>
+<td>Discord group to notify on Ryzen 5900X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5950</code></td>
+<td>Discord group to notify on 5950X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN5950</code></td>
+<td>Discord group to notify on Ryzen 5950X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN7800X3D</code></td>
+<td>Discord group to notify on Ryzen 7800X3D stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9600X</code></td>
+<td>Discord group to notify on Ryzen 9600X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9700X</code></td>
+<td>Discord group to notify on Ryzen 9700X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9800X3D</code></td>
+<td>Discord group to notify on Ryzen 9800X3D stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9900X</code></td>
+<td>Discord group to notify on Ryzen 9900X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9900X3D</code></td>
+<td>Discord group to notify on Ryzen 9900X3D stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9950X</code></td>
+<td>Discord group to notify on Ryzen 9950X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_RYZEN9950X3D</code></td>
+<td>Discord group to notify on Ryzen 9950X3D stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_SONYPS5C</code></td>
+<td>Discord group to notify on Sony PS5 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_SONYPS5DE</code></td>
+<td>Discord group to notify on Sony PS5 Digital stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_SWITCH2</code></td>
+<td>Discord group to notify on Nintendo Switch 2 stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_XBOXSS</code></td>
+<td>Discord group to notify on Xbox Series S stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_XBOXSX</code></td>
+<td>Discord group to notify on Xbox Series X stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_NOTIFY_GROUP_TEST</code></td>
+<td>Discord group to notify on test stock</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DISCORD_WEB_HOOK</code></td>
+<td>Discord Web Hook URL. Can be comma separated. Use whole webhook URL</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>All groups can be comma separated. <code>DISCORD_NOTIFY_GROUP</code> is always used if set.</p>
+<ul>
+<li>If you're using a role, please use <code>&lt;@&amp;2834729847239842&gt;</code></li>
+<li>If you're using a user, please use <code>&lt;@2834729847239842&gt;</code></li>
+</ul>
+</details>
+<h2 id="email-and-sms">Email and SMS<a class="headerlink" href="#email-and-sms" title="Permanent link">&para;</a></h2>
+<p>Default provider is Gmail. If you use a different email provider, you must provide SMTP settings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>EMAIL_PASSWORD</code></td>
+<td>Email password. (See below for Gmail MFA users)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>EMAIL_TO</code></td>
+<td>Destination Email. Defaults to username if not set. Can be comma separated</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>EMAIL_USERNAME</code></td>
+<td>Email address</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHONE_CARRIER</code></td>
+<td><a href="#supported-carriers">Supported carriers</a> for SMS. E.g.: <code>att</code> or <code>att,verizon,google</code>, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHONE_NUMBER</code></td>
+<td>10 digit phone number(s). E.g.: <code>1234567890</code> or <code>1234567890,0987654321,11112223333</code>, email configuration required</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SMTP_ADDRESS</code></td>
+<td>IP Address or FQDN of SMTP server</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SMTP_PORT</code></td>
+<td>TCP Port number on which the smtp server is listening for connections. Default: <code>25</code></td>
+</tr>
+</tbody>
+</table>
+<details class="attention" open="open">
+<summary>Attention</summary>
+<p>If you use Gmail and have multi-factor authentication (MFA), you will need to create an <a href="https://myaccount.google.com/apppasswords">app password</a> and use this instead of your Gmail password.</p>
+</details>
+<h3 id="supported-carriers">Supported carriers<a class="headerlink" href="#supported-carriers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Carrier</th>
+<th style="text-align: center;">Environment variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AT&amp;T</td>
+<td style="text-align: center;"><code>att</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AT&amp;T Prepaid</td>
+<td style="text-align: center;"><code>attgo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Bell</td>
+<td style="text-align: center;"><code>bell</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Fido</td>
+<td style="text-align: center;"><code>fido</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Google</td>
+<td style="text-align: center;"><code>google</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Koodo</td>
+<td style="text-align: center;"><code>koodo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Mint</td>
+<td style="text-align: center;"><code>mint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Rogers</td>
+<td style="text-align: center;"><code>rogers</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sprint</td>
+<td style="text-align: center;"><code>sprint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Telus</td>
+<td style="text-align: center;"><code>telus</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">T-Mobile</td>
+<td style="text-align: center;"><code>tmobile</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">USCC</td>
+<td style="text-align: center;"><code>uscc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Verizon</td>
+<td style="text-align: center;"><code>verizon</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Virgin</td>
+<td style="text-align: center;"><code>virgin</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Virgin (CA)</td>
+<td style="text-align: center;"><code>virgin-ca</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Visible</td>
+<td style="text-align: center;"><code>visible</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>GOTIFY_PRIORITY</code></td>
+<td>Message Priority</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>GOTIFY_TOKEN</code></td>
+<td>Application token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>GOTIFY_URL</code></td>
+<td>Gotify's URL, e.g. <code>https://push.example.com</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mqtt">MQTT<a class="headerlink" href="#mqtt" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>MQTT_BROKER_ADDRESS</code></td>
+<td>IP address or URL of MQTT Broker, e.g.: <code>192.168.1.xxx</code> or <code>broker.hivemq.com</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_BROKER_PORT</code></td>
+<td>Network port of MQTT Broker. Default: <code>1883</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_CLIENT_ID</code></td>
+<td>Unique Client ID (only if required by MQTT Broker), typically not required when only publishing alerts</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_PASSWORD</code></td>
+<td>MQTT password - only use with MQTT brokers on private networks, if required. Will not be sent over public networks for safety</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_QOS</code></td>
+<td>QoS level for published alerts to broker (https://www.npmjs.com/package/mqtt#about-qos). Default: <code>0</code>, Can be <code>0</code>, <code>1</code>, or <code>2</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_TOPIC</code></td>
+<td>Topic to publish alerts to. Can include <code>%store%</code>, <code>%series%</code>, <code>%brand%</code>, <code>%model%</code> for dynamic topics. Default: <code>streetmerchant/alert</code>. E.g.: <code>nv-alert/%store%/%series%/%brand%/%model%/alert</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MQTT_USERNAME</code></td>
+<td>MQTT username - (only if required by MQTT Broker)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pagerduty">PagerDuty<a class="headerlink" href="#pagerduty" title="Permanent link">&para;</a></h2>
+<p>Obtained in PagerDuty - <Service you want to use> - Integrations</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>PAGERDUTY_INTEGRATION_KEY</code></td>
+<td>PagerDuty Events API v2 Integration Key.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PAGERDUTY_SEVERITY</code></td>
+<td>Severity of PagerDuty events</td>
+</tr>
+</tbody>
+</table>
+<h2 id="philips-hue">Philips Hue<a class="headerlink" href="#philips-hue" title="Permanent link">&para;</a></h2>
+<p>Generate required keys using <a href="https://developers.meethue.com/develop/get-started-2/">instructions</a>. This will be used for both LAN and cloud access over the official Remote Hue API.</p>
+<p>For cloud only usage, instructions to generate are located <a href="https://developers.meethue.com/develop/hue-api/remote-authentication/">here</a>.</p>
+<blockquote>
+<p><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f449.svg" title=":point_right:" /> Here's a <a href="https://vimeo.com/476083242">video demonstration</a>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_API_KEY</code></td>
+<td>Hue Bridge API Key</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_LAN_BRIDGE_IP</code></td>
+<td>LAN IP Address of your Hue Bridge. LAN only, e.g. <code>192.168.x.x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_LIGHT_IDS</code></td>
+<td>Light IDs. All lights if not supplied. Can be comma separated, e.g.: <code>1,2</code>. See Hue App -&gt; About for IDs</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_LIGHT_COLOR</code></td>
+<td>Color in RGB Format. Nvidia green if not supplied. Can be comma separated, e.g.: <code>255,255,255</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_LIGHT_PATTERN</code></td>
+<td>Lights will flash for 30 seconds if <code>blink</code> is given</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_CLOUD_ACCESS_TOKEN</code></td>
+<td>Cloud Access Token. Cloud only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_CLOUD_REFRESH_TOKEN</code></td>
+<td>Cloud Refresh Token. Cloud only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_CLOUD_CLIENT_ID</code></td>
+<td>Cloud Client ID. Cloud only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PHILIPS_HUE_CLOUD_CLIENT_SECRET</code></td>
+<td>Cloud Client Secret. Cloud only</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">&para;</a></h2>
+<p>Generate token at <a href="https://pushbullet.com/#settings/account">pushbullet.com/#settings/account</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>PUSHBULLET</code></td>
+<td>API key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">&para;</a></h2>
+<p>Generate token at <a href="https://pushover.net/apps/build">pushover.net/apps/build</a>.</p>
+<p>API Documentation: <a href="https://pushover.net/api">pushover.net/api</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_EXPIRE</code></td>
+<td>How many seconds your notification will continue to be retried for (every <code>PUSHOVER_RETRY</code> seconds)</td>
+<td>false</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_DEVICE</code></td>
+<td>Devices to send notificaiton to. Blank will send to all registered devices.</td>
+<td>false</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_PRIORITY</code></td>
+<td>Message priority</td>
+<td>false</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_RETRY</code></td>
+<td>How often (in seconds) the Pushover servers will send the same notification to the user</td>
+<td>false</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_SOUND</code></td>
+<td>Message sound</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_TOKEN</code></td>
+<td>Application API token</td>
+<td>true</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUSHOVER_USER</code></td>
+<td>User key</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><code>PUSHOVER_EXPIRE</code> and <code>PUSHOVER_RETRY</code> are only used when <code>PUSHOVER_PRIORITY="2"</code></p>
+</details>
+<h2 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>REDIS_URL</code></td>
+<td>Connection string in format (redis://[username]:[password]@[host][:port]/[database-id]) (redis://localhost:6379/1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>SLACK_CHANNEL</code></td>
+<td>Channel for posting</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SLACK_TOKEN</code></td>
+<td>API token</td>
+</tr>
+</tbody>
+</table>
+<h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>TELEGRAM_ACCESS_TOKEN</code></td>
+<td>Access token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TELEGRAM_CHAT_ID</code></td>
+<td>Chat ID. Can be comma separated, e.g.: <code>123456789,987654321</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="twilio">Twilio<a class="headerlink" href="#twilio" title="Permanent link">&para;</a></h2>
+<p>Token generation can be found at <a href="https://twilio.com/console">twilio.com/console</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>TWILIO_ACCOUNT_SID</code></td>
+<td>Account SID</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWILIO_AUTH_TOKEN</code></td>
+<td>Auth Token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWILIO_FROM_NUMBER</code></td>
+<td>Provided phone number to send messages from</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWILIO_TO_NUMBER</code></td>
+<td>Mobile number to send SMS to</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Include country codes in phone numbers. Example: <code>+4401234567890</code></p>
+</details>
+<h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h2>
+<p>Generate all Twitter keys at <a href="https://developer.twitter.com">developer.twitter.com</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>TWITTER_ACCESS_TOKEN_KEY</code></td>
+<td>Twitter Token Key</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITTER_ACCESS_TOKEN_SECRET</code></td>
+<td>Twitter Token Secret</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITTER_CONSUMER_KEY</code></td>
+<td>Twitter Consumer Key</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITTER_CONSUMER_SECRET</code></td>
+<td>Twitter Consumer Secret</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITTER_TWEET_TAGS</code></td>
+<td>List of hashtags to append to the tweet message, e.g.: <code>#nvidia #nvidiastock</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="twitch-temporarily-disabled">Twitch - TEMPORARILY DISABLED<a class="headerlink" href="#twitch-temporarily-disabled" title="Permanent link">&para;</a></h2>
+<p>Instructions on how to set up tokens can be found at <a href="https://d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot">d-fischer.github.io/twitch-chat-client/docs/examples/basic-bot</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>TWITCH_CLIENT_ID</code></td>
+<td>Twitch client ID</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITCH_CLIENT_SECRET</code></td>
+<td>Twitch client secret</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITCH_ACCESS_TOKEN</code></td>
+<td>Twitch access token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITCH_REFRESH_TOKEN</code></td>
+<td>Twitch refresh token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>TWITCH_CHANNEL</code></td>
+<td>Twitch channel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="streamlabs">StreamLabs<a class="headerlink" href="#streamlabs" title="Permanent link">&para;</a></h2>
+<p>Instructions on how to set up tokens can be found at <a href="https://dev.streamlabs.com/docs/register-your-application">dev.streamlabs.com</a>.
+You don't need to submit your application for review, just whitelist yourself!</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>STREAMLABS_ACCESS_TOKEN</code></td>
+<td>StreamLabs access token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>STREAMLABS_TYPE</code></td>
+<td>StreamLabs alert type</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>STREAMLABS_IMAGE</code></td>
+<td>Custom image to display. Leave it blank for default</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>STREAMLABS_SOUND</code></td>
+<td>Custom image to play. Leave it blank for default</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>STREAMLABS_DURATION</code></td>
+<td>StreamLabs alert duration (in milliseconds)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="free-mobile-sms-notifications-api">Free mobile SMS notifications API<a class="headerlink" href="#free-mobile-sms-notifications-api" title="Permanent link">&para;</a></h2>
+<p>For the customers of Free carrier.</p>
+<p>Activate the notification service at mobile.free.fr/account/mes-options (option "Notifications par SMS").
+Copy the API key generated with the service activation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>FREEMOBILE_ID</code></td>
+<td>User ID to log into mobile.free.fr</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>FREEMOBILE_API_KEY</code></td>
+<td>API key generated with your notification option activation</td>
+</tr>
+</tbody>
+</table>
+<p>Note: here you do not need to give neither your password nor phone number.</p>
+<h2 id="ntfysh">NTFY.sh<a class="headerlink" href="#ntfysh" title="Permanent link">&para;</a></h2>
+<p>You can send notifications using NTFY.sh, which supports various features like priority, tags, and action buttons.
+Use the free service at <a href="https://ntfy.sh">ntfy.sh</a> or host your own instance.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>NTFY_URL</code></td>
+<td>ntfy server URL, e.g. <code>https://ntfy.sh</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>NTFY_TOPIC</code></td>
+<td>Topic to publish alerts to</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>NTFY_PRIORITY</code></td>
+<td>Message priority, e.g. max/high/default/low/min, I recommend to use the numbers instead of the string values for the priority. https://docs.ntfy.sh/publish/?h=priority#message-priority</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>NTFY_TITLE</code></td>
+<td>Title of the message</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>NTFY_ACCESS_TOKEN</code></td>
+<td>Access token for authentication. https://docs.ntfy.sh/config/#access-tokens</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-07-20
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2020 Jef LeCompte
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jef" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jeflecompte" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tables.js"></script>
+      
+    
+  </body>
+</html>

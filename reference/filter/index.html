@@ -1,0 +1,2481 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="🤖 The world's easiest, most powerful stock checker">
+      
+      
+        <meta name="author" content="Jef LeCompte">
+      
+      
+        <link rel="canonical" href="https://jef.buzz/streetmerchant/reference/filter/">
+      
+      
+        <link rel="prev" href="../captcha/">
+      
+      
+        <link rel="next" href="../notification/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Filter - streetmerchant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  
+    
+  
+
+  
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="streetmerchant - Filter" />
+  <meta property="og:description" content="🤖 The world's easiest, most powerful stock checker" />
+  <meta property="og:url" content="https://jef.buzz/streetmerchant/reference/filter/" />
+  <meta property="og:image" content="https://jef.buzz/streetmerchant//assets/images/streetmerchant-github.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#filter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="streetmerchant" class="md-header__button md-logo" aria-label="streetmerchant" data-md-component="logo">
+      
+  <img src="../../assets/images/streetmerchant-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            streetmerchant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Filter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jef/streetmerchant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jef/streetmerchant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="streetmerchant" class="md-nav__button md-logo" aria-label="streetmerchant" data-md-component="logo">
+      
+  <img src="../../assets/images/streetmerchant-logo.png" alt="logo">
+
+    </a>
+    streetmerchant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jef/streetmerchant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jef/streetmerchant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../captcha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Captcha
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Filter
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filter
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported stores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported stores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#micro-center-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro Center stores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-brands-and-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported brands and models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-store-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nvidia Store Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Help
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Help
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/troubleshoot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshoot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported stores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported stores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#micro-center-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro Center stores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-brands-and-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported brands and models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-store-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nvidia Store Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3050</code></td>
+<td>Maximum price allowed for a match, applies 3050 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3060</code></td>
+<td>Maximum price allowed for a match, applies 3060 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3060TI</code></td>
+<td>Maximum price allowed for a match, applies 3060 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3070</code></td>
+<td>Maximum price allowed for a match, applies 3070 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3080</code></td>
+<td>Maximum price allowed for a match, applies 3080 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3080TI</code></td>
+<td>Maximum price allowed for a match, applies 3080 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_3090</code></td>
+<td>Maximum price allowed for a match, applies 3090 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_4080_16G</code></td>
+<td>Maximum price allowed for a match, applies 4080 16G series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_4090</code></td>
+<td>Maximum price allowed for a match, applies 4090 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_5070</code></td>
+<td>Maximum price allowed for a match, applies 5070 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_5070TI</code></td>
+<td>Maximum price allowed for a match, applies 5070 Ti series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_5080</code></td>
+<td>Maximum price allowed for a match, applies 5080 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_5090</code></td>
+<td>Maximum price allowed for a match, applies 5080 series cards (does not apply to these sites: Nvidia, Asus, EVGA)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_A3_MATX</code></td>
+<td>Maximum price allowed for a match, applies to Lian Li A3-mATX Mini Tower Case</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_ARC</code></td>
+<td>Maximum price allowed for a match, applies to Intel Arc B580</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_CORSAIR_SF</code></td>
+<td>Maximum price allowed for a match, applies to Corsair PSUs</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_DARKHERO</code></td>
+<td>Maximum price allowed for a match, applies to ASUS Dark Hero motherboards</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN5600</code></td>
+<td>Maximum price allowed for a match, applies AMD 5600 series cpus</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN5800</code></td>
+<td>Maximum price allowed for a match, applies AMD 5800 series cpus</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN5900</code></td>
+<td>Maximum price allowed for a match, applies AMD 5900 series cpus</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN5950</code></td>
+<td>Maximum price allowed for a match, applies AMD 5950 series cpus</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX6700XT</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 6700 XT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX6800</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 6800</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX6800XT</code></td>
+<td>Maximum price allowed for a match,applies AMD RX 6800 XT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX6900XT</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 6900 XT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX9070</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9070</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RX9070XT</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9070 XT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN7800X3D</code></td>
+<td>Maximum price allowed for a match, applies AMD 7800X3D</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN7950X</code></td>
+<td>Maximum price allowed for a match, applies to AMD Ryzen 9 7950X CPU</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9800X3D</code></td>
+<td>Maximum price allowed for a match, applies AMD 9800X3D</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9600X</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9600X</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9700X</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9700X</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9900X</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9900X</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9900X3D</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9900X3D</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9950X</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9950X</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_RYZEN9950X3D</code></td>
+<td>Maximum price allowed for a match, applies AMD RX 9950X3D</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_SONYPS5C</code></td>
+<td>Maximum price allowed for a match, applies PS5 console</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_SONYPS5DE</code></td>
+<td>Maximum price allowed for a match, applies PS5 digital edition</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_SWITCH2</code></td>
+<td>Maximum price allowed for a match, applies to Nintendo Switch 2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_XBOXSS</code></td>
+<td>Maximum price allowed for a match, applies Xbox Series S</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_XBOXSX</code></td>
+<td>Maximum price allowed for a match, applies Xbox Series X</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MAX_PRICE_SERIES_TEST</code></td>
+<td>Maximum price allowed for a match, applies <code>test:series</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MICROCENTER_LOCATION</code></td>
+<td>Specific MicroCenter location(s) to search. Comma separated, e.g.: <code>marietta,duluth</code>, default: <code>web</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SHOW_ONLY_BRANDS</code></td>
+<td>Filter to show specified brands. Comma separated, e.g.: <code>evga,zotac</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SHOW_ONLY_MODELS</code></td>
+<td>Filter to show specified models. Comma separated, can include series. E.g.: <code>founders edition:3090,rog strix</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SHOW_ONLY_SERIES</code></td>
+<td>Filter to show specified series. Comma separated, e.g.: <code>3080,ryzen5900</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>STORES</code></td>
+<td><a href="#supported-stores">Supported stores</a> you want to be scraped. Default: <code>amazon,bestbuy</code>. Comma separated, can include <code>PAGE_SLEEP_MIN</code> and <code>PAGE_SLEEP_MAX</code> values. E.g.: <code>amazon:10000:30000,bestbuy,newegg:50000:80000</code>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SHOW_ONLY_COUNTRY</code></td>
+<td><INCOMPLETE IMPLEMENTATION> Filter to show specific country stores. Comma separated, e.g.: <code>US,CA</code></td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>For <code>MAX_PRICE_SERIES_*</code> variables: Use whole numbers only (no currency symbol is required). Avoid using any commas or decimal points. Example: <code>1234</code>. Merchandise found above this price will be skipped.</p>
+</details>
+<h2 id="supported-stores">Supported stores<a class="headerlink" href="#supported-stores" title="Permanent link">&para;</a></h2>
+<p>Used with the <code>STORES</code> variable.</p>
+<table>
+<thead>
+<tr>
+<th>Stores</th>
+<th>Country</th>
+<th>Environment variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AComPC</td>
+<td>DE</td>
+<td><code>acompc</code></td>
+</tr>
+<tr>
+<td>Adorama</td>
+<td>US</td>
+<td><code>adorama</code></td>
+</tr>
+<tr>
+<td>Akinformatica</td>
+<td>IT</td>
+<td><code>akinformatica</code></td>
+</tr>
+<tr>
+<td>Allneeds</td>
+<td>AU</td>
+<td><code>allneeds</code></td>
+</tr>
+<tr>
+<td>Alternate</td>
+<td>DE</td>
+<td><code>alternate-de</code></td>
+</tr>
+<tr>
+<td>Alternate</td>
+<td>FR</td>
+<td><code>alternate-fr</code></td>
+</tr>
+<tr>
+<td>Alternate</td>
+<td>NL</td>
+<td><code>alternate-nl</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>US</td>
+<td><code>amazon</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>CA</td>
+<td><code>amazon-ca</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>DE</td>
+<td><code>amazon-de</code></td>
+</tr>
+<tr>
+<td>Amazon Warehouse</td>
+<td>DE</td>
+<td><code>amazon-de-warehouse</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>ES</td>
+<td><code>amazon-es</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>FR</td>
+<td><code>amazon-fr</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>IT</td>
+<td><code>amazon-it</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>NL</td>
+<td><code>amazon-nl</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>SG</td>
+<td><code>amazon-sg</code></td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>UK</td>
+<td><code>amazon-uk</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>US</td>
+<td><code>amd</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>AT</td>
+<td><code>amd-at</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>BE</td>
+<td><code>amd-be</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>CA</td>
+<td><code>amd-ca</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>DE</td>
+<td><code>amd-de</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>IT</td>
+<td><code>amd-it</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>NL</td>
+<td><code>amd-nl</code></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>UK</td>
+<td><code>amd-uk</code></td>
+</tr>
+<tr>
+<td>AntOnline</td>
+<td>US</td>
+<td><code>antonline</code></td>
+</tr>
+<tr>
+<td>AO</td>
+<td>UK</td>
+<td><code>ao</code></td>
+</tr>
+<tr>
+<td>Argos</td>
+<td>UK</td>
+<td><code>argos</code></td>
+</tr>
+<tr>
+<td>Argos</td>
+<td>IE</td>
+<td><code>argos-ie</code></td>
+</tr>
+<tr>
+<td>Aria PC</td>
+<td>UK</td>
+<td><code>aria</code></td>
+</tr>
+<tr>
+<td>ARLT</td>
+<td>DE</td>
+<td><code>arlt</code></td>
+</tr>
+<tr>
+<td>ASUS</td>
+<td>US</td>
+<td><code>asus</code></td>
+</tr>
+<tr>
+<td>ASUS</td>
+<td>DE</td>
+<td><code>asus-de</code></td>
+</tr>
+<tr>
+<td>ASUS</td>
+<td>ES</td>
+<td><code>asus-es</code></td>
+</tr>
+<tr>
+<td>AWD-IT</td>
+<td>UK</td>
+<td><code>awd</code></td>
+</tr>
+<tr>
+<td>Azerty</td>
+<td>NL</td>
+<td><code>azerty</code></td>
+</tr>
+<tr>
+<td>B&amp;H</td>
+<td>US</td>
+<td><code>bandh</code></td>
+</tr>
+<tr>
+<td>Best Buy</td>
+<td>US</td>
+<td><code>bestbuy</code></td>
+</tr>
+<tr>
+<td>Best Buy</td>
+<td>CA</td>
+<td><code>bestbuy-ca</code></td>
+</tr>
+<tr>
+<td>Box</td>
+<td>UK</td>
+<td><code>box</code></td>
+</tr>
+<tr>
+<td>BPCTech</td>
+<td>AU</td>
+<td><code>bpctech</code></td>
+</tr>
+<tr>
+<td>BPM-Power</td>
+<td>IT</td>
+<td><code>bpm-power</code></td>
+</tr>
+<tr>
+<td>BT</td>
+<td>UK</td>
+<td><code>bt</code></td>
+</tr>
+<tr>
+<td>CanadaComputers</td>
+<td>CA</td>
+<td><code>canadacomputers</code></td>
+</tr>
+<tr>
+<td>Caseking</td>
+<td>DE</td>
+<td><code>caseking</code></td>
+</tr>
+<tr>
+<td>CCL</td>
+<td>UK</td>
+<td><code>ccl</code></td>
+</tr>
+<tr>
+<td>Centrecom</td>
+<td>AU</td>
+<td><code>centrecom</code></td>
+</tr>
+<tr>
+<td>Comet</td>
+<td>IT</td>
+<td><code>comet</code></td>
+</tr>
+<tr>
+<td>ComputerAlliance</td>
+<td>AU</td>
+<td><code>computeralliance</code></td>
+</tr>
+<tr>
+<td>Computeruniverse</td>
+<td>DE</td>
+<td><code>computeruniverse</code></td>
+</tr>
+<tr>
+<td>Coolblue</td>
+<td>NL</td>
+<td><code>coolblue</code></td>
+</tr>
+<tr>
+<td>Coolmod</td>
+<td>ES</td>
+<td><code>coolmod</code></td>
+</tr>
+<tr>
+<td>Corsair</td>
+<td>US</td>
+<td><code>corsair</code></td>
+</tr>
+<tr>
+<td>Corsair</td>
+<td>UK</td>
+<td><code>corsair-uk</code></td>
+</tr>
+<tr>
+<td>CPL</td>
+<td>AU</td>
+<td><code>cpl</code></td>
+</tr>
+<tr>
+<td>Currys</td>
+<td>UK</td>
+<td><code>currys</code></td>
+</tr>
+<tr>
+<td>Cyberport</td>
+<td>DE</td>
+<td><code>cyberport</code></td>
+</tr>
+<tr>
+<td>Cyberport</td>
+<td>AT</td>
+<td><code>cyberport-at</code></td>
+</tr>
+<tr>
+<td>DComp</td>
+<td>AU</td>
+<td><code>dcomp</code></td>
+</tr>
+<tr>
+<td>Drako</td>
+<td>IT</td>
+<td><code>drako</code></td>
+</tr>
+<tr>
+<td>DustinHome</td>
+<td>NO</td>
+<td><code>dustinhome-no</code></td>
+</tr>
+<tr>
+<td>eBuyer</td>
+<td>UK</td>
+<td><code>ebuyer</code></td>
+</tr>
+<tr>
+<td>El Corte Inglés</td>
+<td>ES</td>
+<td><code>elcorteingles</code></td>
+</tr>
+<tr>
+<td>Eletronicamente</td>
+<td>ES</td>
+<td><code>eletronicamente</code></td>
+</tr>
+<tr>
+<td>Elkjop</td>
+<td>NO</td>
+<td><code>elkjop</code></td>
+</tr>
+<tr>
+<td>ePrice</td>
+<td>IT</td>
+<td><code>eprice</code></td>
+</tr>
+<tr>
+<td>Equippr</td>
+<td>DE</td>
+<td><code>equippr</code></td>
+</tr>
+<tr>
+<td>Euronics</td>
+<td>IT</td>
+<td><code>euronics</code></td>
+</tr>
+<tr>
+<td>Euronics</td>
+<td>DE</td>
+<td><code>euronics-de</code></td>
+</tr>
+<tr>
+<td>Evatech</td>
+<td>AU</td>
+<td><code>evatech</code></td>
+</tr>
+<tr>
+<td>EVGA</td>
+<td>US</td>
+<td><code>evga</code></td>
+</tr>
+<tr>
+<td>EVGA</td>
+<td>EU</td>
+<td><code>evga-eu</code></td>
+</tr>
+<tr>
+<td>Expert</td>
+<td>DE</td>
+<td><code>expert</code></td>
+</tr>
+<tr>
+<td>Extremmedia</td>
+<td>ES</td>
+<td><code>extremmedia</code></td>
+</tr>
+<tr>
+<td>Futurex</td>
+<td>DE</td>
+<td><code>futurex</code></td>
+</tr>
+<tr>
+<td>Galaxus</td>
+<td>DE</td>
+<td><code>galaxus</code></td>
+</tr>
+<tr>
+<td>Game</td>
+<td>ES</td>
+<td><code>game-es</code></td>
+</tr>
+<tr>
+<td>Game</td>
+<td>UK</td>
+<td><code>game</code></td>
+</tr>
+<tr>
+<td>Gamestop</td>
+<td>US</td>
+<td><code>gamestop</code></td>
+</tr>
+<tr>
+<td>Gamestop</td>
+<td>CA</td>
+<td><code>gamestop-ca</code></td>
+</tr>
+<tr>
+<td>Gamestop</td>
+<td>DE</td>
+<td><code>gamestop-de</code></td>
+</tr>
+<tr>
+<td>Gamestop</td>
+<td>IE</td>
+<td><code>gamestop-ie</code></td>
+</tr>
+<tr>
+<td>Gamestop</td>
+<td>IT</td>
+<td><code>gamestop-it</code></td>
+</tr>
+<tr>
+<td>Globaldata</td>
+<td>PT</td>
+<td><code>globaldata</code></td>
+</tr>
+<tr>
+<td>Hardware Planet</td>
+<td>IT</td>
+<td></td>
+</tr>
+<tr>
+<td>HarrisTechnology</td>
+<td>AU</td>
+<td><code>harristechnology</code></td>
+</tr>
+<tr>
+<td>Harvey Normans</td>
+<td>IE</td>
+<td><code>harveynorman-ie</code></td>
+</tr>
+<tr>
+<td>iGame Computer</td>
+<td>AU</td>
+<td><code>igame-computer</code></td>
+</tr>
+<tr>
+<td>John Lewis</td>
+<td>UK</td>
+<td><code>johnlewis</code></td>
+</tr>
+<tr>
+<td>Kabum</td>
+<td>BR</td>
+<td><code>kabum</code></td>
+</tr>
+<tr>
+<td>Komplett</td>
+<td>NO</td>
+<td><code>komplett-no</code></td>
+</tr>
+<tr>
+<td>Landmark Computers</td>
+<td>AU</td>
+<td><code>landmark-computers</code></td>
+</tr>
+<tr>
+<td>Ldlc</td>
+<td>FR</td>
+<td><code>ldlc</code></td>
+</tr>
+<tr>
+<td>Ldlc</td>
+<td>ES</td>
+<td><code>ldlc-es</code></td>
+</tr>
+<tr>
+<td>Ldlc</td>
+<td>IT</td>
+<td><code>ldlc-it</code></td>
+</tr>
+<tr>
+<td>Mediamarkt</td>
+<td>DE</td>
+<td><code>mediamarkt</code></td>
+</tr>
+<tr>
+<td>Mediamarkt</td>
+<td>AT</td>
+<td><code>mediamarkt-at</code></td>
+</tr>
+<tr>
+<td>Medimax</td>
+<td>DE</td>
+<td><code>medimax</code></td>
+</tr>
+<tr>
+<td>Megekko</td>
+<td>NL</td>
+<td><code>megekko</code></td>
+</tr>
+<tr>
+<td>MemoryExpress</td>
+<td>CA</td>
+<td><code>memoryexpress</code></td>
+</tr>
+<tr>
+<td>Materiel</td>
+<td>FR</td>
+<td><code>materiel</code></td>
+</tr>
+<tr>
+<td>Micro Center</td>
+<td>US</td>
+<td><code>microcenter</code></td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>US</td>
+<td><code>microsoft</code></td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>CA</td>
+<td><code>microsoft-ca</code></td>
+</tr>
+<tr>
+<td>MightyApe</td>
+<td>NZ</td>
+<td><code>mightyape</code></td>
+</tr>
+<tr>
+<td>Mindfactory</td>
+<td>DE</td>
+<td><code>mindfactory</code></td>
+</tr>
+<tr>
+<td>MSI</td>
+<td>US</td>
+<td><code>msi</code></td>
+</tr>
+<tr>
+<td>MSY</td>
+<td>AU</td>
+<td><code>msy</code></td>
+</tr>
+<tr>
+<td>Multicom</td>
+<td>NO</td>
+<td><code>multicom</code></td>
+</tr>
+<tr>
+<td>Mwave</td>
+<td>AU</td>
+<td><code>mwave</code></td>
+</tr>
+<tr>
+<td>Neobyte</td>
+<td>ES</td>
+<td><code>neobyte</code></td>
+</tr>
+<tr>
+<td>Netonnet</td>
+<td>NO</td>
+<td><code>netonnet-no</code></td>
+</tr>
+<tr>
+<td>Newegg</td>
+<td>US</td>
+<td><code>newegg</code></td>
+</tr>
+<tr>
+<td>Newegg</td>
+<td>CA</td>
+<td><code>newegg-ca</code></td>
+</tr>
+<tr>
+<td>Newegg</td>
+<td>SG</td>
+<td><code>newegg-sg</code></td>
+</tr>
+<tr>
+<td>NoelLeeming</td>
+<td>NZ</td>
+<td><code>noelleeming</code></td>
+</tr>
+<tr>
+<td>Notebooksbilliger</td>
+<td>DE</td>
+<td><code>notebooksbilliger</code></td>
+</tr>
+<tr>
+<td>Novatech</td>
+<td>UK</td>
+<td><code>novatech</code></td>
+</tr>
+<tr>
+<td>Novo Atalho</td>
+<td>PT</td>
+<td><code>novoatalho</code></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td>EU/UK</td>
+<td><a href="#nvidia-store-reference">See below</a></td>
+</tr>
+<tr>
+<td>Office Depot</td>
+<td>US</td>
+<td><code>officedepot</code></td>
+</tr>
+<tr>
+<td>Ollo</td>
+<td>IT</td>
+<td><code>ollo</code></td>
+</tr>
+<tr>
+<td>Opirata</td>
+<td>ES</td>
+<td><code>opirata</code></td>
+</tr>
+<tr>
+<td>Otto</td>
+<td>DE</td>
+<td><code>otto</code></td>
+</tr>
+<tr>
+<td>Overclockers</td>
+<td>UK</td>
+<td><code>overclockers</code></td>
+</tr>
+<tr>
+<td>PBTech</td>
+<td>AU</td>
+<td><code>pbtech</code></td>
+</tr>
+<tr>
+<td>PCByte</td>
+<td>AU</td>
+<td><code>pcbyte</code></td>
+</tr>
+<tr>
+<td>PCCG</td>
+<td>AU</td>
+<td><code>pccg</code></td>
+</tr>
+<tr>
+<td>PCComponentes</td>
+<td>ES</td>
+<td><code>pccomponentes</code></td>
+</tr>
+<tr>
+<td>PCDiga</td>
+<td>PT</td>
+<td><code>pcdiga</code></td>
+</tr>
+<tr>
+<td>PCKing</td>
+<td>DE</td>
+<td><code>pcking</code></td>
+</tr>
+<tr>
+<td>PlayStation</td>
+<td>US</td>
+<td><code>playstation</code></td>
+</tr>
+<tr>
+<td>PNY</td>
+<td>US</td>
+<td><code>pny</code></td>
+</tr>
+<tr>
+<td>Power</td>
+<td>NO</td>
+<td><code>power-no</code></td>
+</tr>
+<tr>
+<td>Proshop</td>
+<td>DE</td>
+<td><code>proshop-de</code></td>
+</tr>
+<tr>
+<td>Proshop</td>
+<td>DK</td>
+<td><code>proshop-dk</code></td>
+</tr>
+<tr>
+<td>Proshop</td>
+<td>NO</td>
+<td><code>proshop-no</code></td>
+</tr>
+<tr>
+<td>Rosman</td>
+<td>AU</td>
+<td><code>rosman</code></td>
+</tr>
+<tr>
+<td>Rosman-Melb</td>
+<td>AU</td>
+<td><code>rosman-melb</code></td>
+</tr>
+<tr>
+<td>Saturn</td>
+<td>DE</td>
+<td><code>saturn</code></td>
+</tr>
+<tr>
+<td>Save On It</td>
+<td>AU</td>
+<td><code>saveonit</code></td>
+</tr>
+<tr>
+<td>Scan</td>
+<td>UK</td>
+<td><code>scan</code></td>
+</tr>
+<tr>
+<td>Scorptec</td>
+<td>AU</td>
+<td><code>scorptec</code></td>
+</tr>
+<tr>
+<td>ShopTo</td>
+<td>UK</td>
+<td><code>shopto</code></td>
+</tr>
+<tr>
+<td>Siabyte</td>
+<td>ES</td>
+<td><code>siabyte</code></td>
+</tr>
+<tr>
+<td>Smyths Toys</td>
+<td>UK</td>
+<td><code>smythstoys</code></td>
+</tr>
+<tr>
+<td>Smyths Toys</td>
+<td>IE</td>
+<td><code>smythstoys-ie</code></td>
+</tr>
+<tr>
+<td>Spielegrotte</td>
+<td>DE</td>
+<td><code>spielegrotte</code></td>
+</tr>
+<tr>
+<td>Storm Computers</td>
+<td>AU</td>
+<td><code>storm-computer</code></td>
+</tr>
+<tr>
+<td>Target</td>
+<td>US</td>
+<td><code>target</code></td>
+</tr>
+<tr>
+<td>Tesco</td>
+<td>IE</td>
+<td><code>tesco-ie</code></td>
+</tr>
+<tr>
+<td>TheWarehouse</td>
+<td>NZ</td>
+<td><code>thewarehouse</code></td>
+</tr>
+<tr>
+<td>TopAchat</td>
+<td>GR</td>
+<td><code>topachat</code></td>
+</tr>
+<tr>
+<td>Toys R Us</td>
+<td>US</td>
+<td><code>toysrus</code></td>
+</tr>
+<tr>
+<td>Ultimainformatica</td>
+<td>ES</td>
+<td><code>ultimainformatica</code></td>
+</tr>
+<tr>
+<td>Umart</td>
+<td>AU</td>
+<td><code>umart</code></td>
+</tr>
+<tr>
+<td>Unieuro</td>
+<td>IT</td>
+<td><code>unieuro</code></td>
+</tr>
+<tr>
+<td>Very</td>
+<td>UK</td>
+<td><code>very</code></td>
+</tr>
+<tr>
+<td>Versus Gamers</td>
+<td>ES</td>
+<td><code>vsgamers</code></td>
+</tr>
+<tr>
+<td>Vuugo</td>
+<td>CA</td>
+<td><code>vuugo</code></td>
+</tr>
+<tr>
+<td>Walmart</td>
+<td>US</td>
+<td><code>walmart</code></td>
+</tr>
+<tr>
+<td>Walmart</td>
+<td>CA</td>
+<td><code>walmart-ca</code></td>
+</tr>
+<tr>
+<td>Wells Technology</td>
+<td>AU</td>
+<td><code>wellstechnology</code></td>
+</tr>
+<tr>
+<td>Wipoid</td>
+<td>ES</td>
+<td><code>wipoid</code></td>
+</tr>
+<tr>
+<td>Xbox</td>
+<td>US</td>
+<td><code>xbox</code></td>
+</tr>
+<tr>
+<td>Xtremmedia</td>
+<td>ES</td>
+<td><code>xtremmedia</code></td>
+</tr>
+<tr>
+<td>Zotac</td>
+<td>US</td>
+<td><code>zotac</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="micro-center-stores">Micro Center stores<a class="headerlink" href="#micro-center-stores" title="Permanent link">&para;</a></h3>
+<p>Used with the <code>MICROCENTER_LOCATION</code> variable.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Before using <code>web</code>, please review <a href="https://github.com/jef/streetmerchant/issues/442#issuecomment-703297393">this issue comment</a>.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brooklyn</code></td>
+<td><code>brentwood</code></td>
+<td><code>cambridge</code></td>
+<td><code>chicago</code></td>
+</tr>
+<tr>
+<td><code>columbus</code></td>
+<td><code>dallas</code></td>
+<td><code>denver</code></td>
+<td><code>duluth</code></td>
+</tr>
+<tr>
+<td><code>fairfax</code></td>
+<td><code>flushing</code></td>
+<td><code>houston</code></td>
+<td><code>madison-heights</code></td>
+</tr>
+<tr>
+<td><code>marietta</code></td>
+<td><code>mayfield-heights</code></td>
+<td><code>north-jersey</code></td>
+<td><code>overland-park</code></td>
+</tr>
+<tr>
+<td><code>parkville</code></td>
+<td><code>rockville</code></td>
+<td><code>sharonville</code></td>
+<td><code>st-davids</code></td>
+</tr>
+<tr>
+<td><code>st-louis-park</code></td>
+<td><code>tustin</code></td>
+<td><code>westbury</code></td>
+<td><code>westmont</code></td>
+</tr>
+<tr>
+<td><code>yonkers</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-brands-and-models">Supported brands and models<a class="headerlink" href="#supported-brands-and-models" title="Permanent link">&para;</a></h2>
+<p>Used with the <code>SHOW_ONLY_BRANDS</code> and <code>SHOW_ONLY_MODELS</code> variables.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Brand</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>amd</code></td>
+<td><code>5600x</code>, <code>5800x</code>, <code>5900x</code>, <code>5950x</code>, <code>7800x3d</code>, <code>7950x</code>, <code>9600x</code>, <code>9700x</code>, <code>9800x3d</code>, <code>9900x</code>, <code>9900x3d</code>, <code>9950x</code>, <code>9950x3d</code>, <code>amd reference</code>, <code>tuf oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>asrock</code></td>
+<td><code>amd reference</code>, <code>challenger</code>, <code>challenger oc</code>, <code>challenger pro</code>, <code>challenger pro oc</code>, <code>phantom gaming</code>, <code>phantom gaming oc</code>, <code>taichi</code>, <code>taichi x oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>asus</code></td>
+<td><code>amd reference</code>, <code>astral</code>, <code>astral lc</code>, <code>astral oc</code>, <code>crosshair viii</code>, <code>dual</code>, <code>dual fan</code>, <code>dual mini</code>, <code>dual mini oc</code>, <code>dual oc</code>, <code>ekwb</code>, <code>gaming</code>, <code>gaming oc</code>, <code>ko</code>, <code>ko oc</code>, <code>phoenix 8G (LHR)</code>, <code>prime</code>, <code>prime oc</code>, <code>strix</code>, <code>strix lc</code>, <code>strix oc</code>, <code>strix oc lc</code>, <code>strix oc white</code>, <code>strix white</code>, <code>suprim x</code>, <code>tuf</code>, <code>tuf gaming</code>, <code>tuf gaming oc</code>, <code>tuf oc</code>, <code>turbo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ax</code></td>
+<td><code>x3w</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>colorful</code></td>
+<td><code>battle-ax</code>, <code>igame advanced</code>, <code>igame advanced oc</code>, <code>igame ultra oc</code>, <code>igame vulcan oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>corsair</code></td>
+<td><code>600 gold</code>, <code>600 platinum</code>, <code>750 platinum</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>evga</code></td>
+<td><code>ftw3</code>, <code>ftw3 black</code>, <code>ftw3 ultra</code>, <code>ftw3 ultra hybrid</code>, <code>ftw3 ultra hydro copper</code>, <code>gaming</code>, <code>ichill x3</code>, <code>kngpn hybrid</code>, <code>xc black</code>, <code>xc gaming</code>, <code>xc3</code>, <code>xc3 black</code>, <code>xc3 ultra</code>, <code>xc3 ultra hybrid</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>gainward</code></td>
+<td><code>ghost</code>, <code>ghost oc</code>, <code>pegasus</code>, <code>pegasus oc</code>, <code>phantom</code>, <code>phantom gaming</code>, <code>phantom gs</code>, <code>phoenix</code>, <code>phoenix gs</code>, <code>phoenix gs oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>galax</code></td>
+<td><code>sg oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>gigabyte</code></td>
+<td><code>aero oc</code>, <code>aero oc sff</code>, <code>amd reference</code>, <code>aorus</code>, <code>aorus box</code>, <code>aorus elite</code>, <code>aorus master</code>, <code>aorus master 24g</code>, <code>aorus master type-c</code>, <code>aorus w</code>, <code>aorus x wb</code>, <code>aorus xtreme</code>, <code>aorus xtreme waterforce</code>, <code>aorus xtreme waterforce 24g</code>, <code>aorus xtreme waterforce wb</code>, <code>eagle</code>, <code>eagle oc</code>, <code>gaming</code>, <code>gaming oc</code>, <code>gaming oc pro</code>, <code>gaming oc waterforce wb</code>, <code>gaming pro</code>, <code>gaming pro oc</code>, <code>gaming x</code>, <code>master</code>, <code>master ice</code>, <code>turbo</code>, <code>vision</code>, <code>vision oc</code>, <code>windforce</code>, <code>windforce oc</code>, <code>windforce oc sff</code>, <code>windforce v2</code>, <code>xtreme</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>inno3d</code></td>
+<td><code>gaming x3</code>, <code>ice dragon super</code>, <code>ichill frostbite</code>, <code>ichill x2</code>, <code>ichill x3</code>, <code>ichill x3 red</code>, <code>ichill x4</code>, <code>twin x2</code>, <code>twin x2 oc</code>, <code>x3 oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>intel</code></td>
+<td><code>b580</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>kfa2</code></td>
+<td><code>dual oc</code>, <code>ex</code>, <code>ex gamer</code>, <code>ex oc</code>, <code>gaming</code>, <code>oc</code>, <code>sg</code>, <code>sg oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>leadtek</code></td>
+<td><code>hurricane</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>lianli</code></td>
+<td><code>a3 matx wd</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>microsoft</code></td>
+<td><code>xbox series s</code>, <code>xbox series x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>msi</code></td>
+<td><code>amd reference</code>, <code>dual</code>, <code>expert</code>, <code>gaming</code>, <code>gaming trio</code>, <code>gaming trio oc</code>, <code>gaming trio oc white</code>, <code>gaming x</code>, <code>gaming x slim</code>, <code>gaming x trio</code>, <code>gaming z trio</code>, <code>inspire 3x</code>, <code>inspire 3x oc</code>, <code>lp oc</code>, <code>mech 2x</code>, <code>mech 2x oc</code>, <code>shadow 3x</code>, <code>shadow 3x oc</code>, <code>strix</code>, <code>suprim</code>, <code>suprim liquid soc</code>, <code>suprim liquid x</code>, <code>suprim oc</code>, <code>suprim soc</code>, <code>suprim x</code>, <code>vanguard</code>, <code>vanguard soc</code>, <code>vanguard soc launch edition</code>, <code>ventus 2X (LHR)</code>, <code>ventus 2x</code>, <code>ventus 2x oc</code>, <code>ventus 2x white oc</code>, <code>ventus 3x</code>, <code>ventus 3x e1 oc</code>, <code>ventus 3x oc</code>, <code>ventus 3x oc plus</code>, <code>ventus 3x oc white</code>, <code>x trio</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>nintendo</code></td>
+<td><code>switch 2</code>, <code>switch 2 bundle</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>nvidia</code></td>
+<td><code>founders edition</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>palit</code></td>
+<td><code>dual</code>, <code>dual oc</code>, <code>gamerock</code>, <code>gamerock oc</code>, <code>gaming oc pro</code>, <code>gaming pro</code>, <code>gaming pro oc</code>, <code>jetstream</code>, <code>jetstream oc</code>, <code>stormx oc</code>, <code>trinity oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>pny</code></td>
+<td><code>aorus xtreme waterforce</code>, <code>dual</code>, <code>dual fan</code>, <code>epic x</code>, <code>epic x oc</code>, <code>gaming</code>, <code>gaming verto epic-x</code>, <code>single fan</code>, <code>suprim liquid soc</code>, <code>triple fan</code>, <code>triple fan oc</code>, <code>uprising</code>, <code>vetro</code>, <code>xlr8</code>, <code>xlr8 epic x</code>, <code>xlr8 gaming</code>, <code>xlr8 gaming uprising epic x</code>, <code>xlr8 revel</code>, <code>xlr8 revel epic x</code>, <code>xlr8 uprising</code>, <code>xlr8 verto</code>, <code>xlr8 verto epic x</code>, <code>xlr8 verto epic x oc</code>, <code>xlr8 verto oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>powercolor</code></td>
+<td><code>amd reference</code>, <code>fighter</code>, <code>hellhound</code>, <code>hellhound white</code>, <code>red devil</code>, <code>red dragon</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>sapphire</code></td>
+<td><code>amd reference</code>, <code>nitro oc</code>, <code>nitro oc se</code>, <code>nitro+</code>, <code>nitro+ oc</code>, <code>nitro+ oc se</code>, <code>nitro+ se</code>, <code>pulse</code>, <code>pulse oc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>sony</code></td>
+<td><code>ps5 console</code>, <code>ps5 digital</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>sparkle</code></td>
+<td><code>b580</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>test:brand</code></td>
+<td><code>test:model</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ubiquiti</code></td>
+<td><code>dream machine</code>, <code>dream machine pro</code>, <code>dream router</code>, <code>g4 doorbell pro</code>, <code>network video recorder</code>, <code>network video recorder pro</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>xfx</code></td>
+<td><code>amd reference</code>, <code>merc</code>, <code>merc core</code>, <code>merc ultra</code>, <code>qick</code>, <code>qick ultra</code>, <code>swft</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>zotac</code></td>
+<td><code>amp airo</code>, <code>amp extreme airo</code>, <code>amp extreme holo</code>, <code>amp extreme infinity</code>, <code>amp holo</code>, <code>amp white</code>, <code>gaming</code>, <code>solid</code>, <code>solid oc</code>, <code>trinity</code>, <code>trinity oc</code>, <code>trinity oc lhr</code>, <code>twin edge</code>, <code>twin edge oc</code>, <code>twin edge oc white</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-series">Supported series<a class="headerlink" href="#supported-series" title="Permanent link">&para;</a></h2>
+<p>Used with the <code>SHOW_ONLY_SERIES</code> variable.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Series</th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AMD RX 6700XT</td>
+<td style="text-align: center;"><code>rx6700xt</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD RX 6800</td>
+<td style="text-align: center;"><code>rx6800</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD RX 6800XT</td>
+<td style="text-align: center;"><code>rx6800xt</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD RX 6900XT</td>
+<td style="text-align: center;"><code>rx6900xt</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD RX 9070</td>
+<td style="text-align: center;"><code>rx9070</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD RX 9070XT</td>
+<td style="text-align: center;"><code>rx9070xt</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 5600X</td>
+<td style="text-align: center;"><code>ryzen5600</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 5800X</td>
+<td style="text-align: center;"><code>ryzen5800</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 5900X</td>
+<td style="text-align: center;"><code>ryzen5900</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 5950X</td>
+<td style="text-align: center;"><code>ryzen5950</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 7800X3D</td>
+<td style="text-align: center;"><code>ryzen7800x3d</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 7950X</td>
+<td style="text-align: center;"><code>ryzen7950x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9600X</td>
+<td style="text-align: center;"><code>ryzen9600x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9700X</td>
+<td style="text-align: center;"><code>ryzen9700x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9800X3D</td>
+<td style="text-align: center;"><code>ryzen9800x3d</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9900X</td>
+<td style="text-align: center;"><code>ryzen9900x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9900X3D</td>
+<td style="text-align: center;"><code>ryzen9900x3d</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9950X</td>
+<td style="text-align: center;"><code>ryzen9950x</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">AMD Ryzen 9950X3D</td>
+<td style="text-align: center;"><code>ryzen9950x3d</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Corsair SFX PSU</td>
+<td style="text-align: center;"><code>sf</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Crosshair VIII</td>
+<td style="text-align: center;"><code>darkhero</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Intel Arc B580</td>
+<td style="text-align: center;"><code>arc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Lian Li A3-mATX</td>
+<td style="text-align: center;"><code>a3-matx</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nintendo Switch 2</td>
+<td style="text-align: center;"><code>switch2</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3050</td>
+<td style="text-align: center;"><code>3050</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3060</td>
+<td style="text-align: center;"><code>3060</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3060 Ti</td>
+<td style="text-align: center;"><code>3060ti</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3070</td>
+<td style="text-align: center;"><code>3070</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3070 Ti</td>
+<td style="text-align: center;"><code>3070ti</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3080</td>
+<td style="text-align: center;"><code>3080</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3080 Ti</td>
+<td style="text-align: center;"><code>3080ti</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 3090</td>
+<td style="text-align: center;"><code>3090</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4060</td>
+<td style="text-align: center;"><code>4060</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4070</td>
+<td style="text-align: center;"><code>4070</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4070 SUPER</td>
+<td style="text-align: center;"><code>4070super</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4070 Ti</td>
+<td style="text-align: center;"><code>4070ti</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4080 16G</td>
+<td style="text-align: center;"><code>4080-16g</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 4090</td>
+<td style="text-align: center;"><code>4090</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 5070</td>
+<td style="text-align: center;"><code>5070</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 5070 Ti</td>
+<td style="text-align: center;"><code>5070ti</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 5080</td>
+<td style="text-align: center;"><code>5080</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nvidia RTX 5090</td>
+<td style="text-align: center;"><code>5090</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sony PS5</td>
+<td style="text-align: center;"><code>sonyps5c</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sony PS5 Digital Edition</td>
+<td style="text-align: center;"><code>sonyps5de</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Ubiquiti G4 Doorbell Pro</td>
+<td style="text-align: center;"><code>g4-doorbell-pro</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Unifi Dream Machine</td>
+<td style="text-align: center;"><code>udm-us</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Unifi Dream Machine Pro</td>
+<td style="text-align: center;"><code>udm-pro</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Unifi Dream Router</td>
+<td style="text-align: center;"><code>udm-us</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Unifi Network Video Recorder</td>
+<td style="text-align: center;"><code>unvr</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Unifi Network Video Recorder Pro</td>
+<td style="text-align: center;"><code>unvr-pro</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Xbox Series S</td>
+<td style="text-align: center;"><code>xboxss</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">Xbox Series X</td>
+<td style="text-align: center;"><code>xboxsx</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nvidia-store-reference">Nvidia Store Reference<a class="headerlink" href="#nvidia-store-reference" title="Permanent link">&para;</a></h2>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Use the Nvidia Store to check stock for Founders Edition cards only (3060 Ti/3070/3080/3080 Ti/3090/4090). For USA use <code>bestbuy</code> instead.</p>
+</details>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Use the <code>STORE</code> variable for your chosen country. For example, to check for a FE card in Belgium you would use the <code>nvidia-fr</code> store.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Country</th>
+<th style="text-align: center;">Store</th>
+<th style="text-align: center;">Retailer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Austria</td>
+<td style="text-align: center;"><code>nvidia-de</code></td>
+<td style="text-align: center;">NBB</td>
+</tr>
+<tr>
+<td style="text-align: center;">Belgium</td>
+<td style="text-align: center;"><code>nvidia-fr</code></td>
+<td style="text-align: center;">LDLC</td>
+</tr>
+<tr>
+<td style="text-align: center;">France</td>
+<td style="text-align: center;"><code>nvidia-fr</code></td>
+<td style="text-align: center;">LDLC</td>
+</tr>
+<tr>
+<td style="text-align: center;">Germany</td>
+<td style="text-align: center;"><code>nvidia-de</code></td>
+<td style="text-align: center;">NBB</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ireland</td>
+<td style="text-align: center;"><code>nvidia-gb</code></td>
+<td style="text-align: center;">Scan</td>
+</tr>
+<tr>
+<td style="text-align: center;">Luxembourg</td>
+<td style="text-align: center;"><code>nvidia-fr</code></td>
+<td style="text-align: center;">LDLC</td>
+</tr>
+<tr>
+<td style="text-align: center;">Spain</td>
+<td style="text-align: center;"><code>nvidia-es</code></td>
+<td style="text-align: center;">LDLC</td>
+</tr>
+<tr>
+<td style="text-align: center;">United Kingdom</td>
+<td style="text-align: center;"><code>nvidia-gb</code></td>
+<td style="text-align: center;">Scan</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-07-20
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2020 Jef LeCompte
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jef" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jeflecompte" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tables.js"></script>
+      
+    
+  </body>
+</html>
