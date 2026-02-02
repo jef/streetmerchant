@@ -40,7 +40,8 @@ export type Brand =
   | 'sparkle'
   | 'ubiquiti'
   | 'xfx'
-  | 'zotac';
+  | 'zotac'
+  | 'lenovo';
 
 export type Series =
   | 'test:series'
@@ -96,7 +97,8 @@ export type Series =
   | 'unvr-pro'
   | 'unvr'
   | 'xboxss'
-  | 'xboxsx';
+  | 'xboxsx'
+  | 'legiongo2';
 
 export type Model =
   | 'test:model'
@@ -336,7 +338,9 @@ export type Model =
   | 'xlr8 verto oc'
   | 'xlr8 verto'
   | 'xlr8'
-  | 'xtreme';
+  | 'xtreme'
+  | 'legion go 2 1tb'
+  | 'legion go 2 2tb';
 
 export type Link = {
   brand: Brand;
