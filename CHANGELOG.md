@@ -1,5 +1,37 @@
 # Changelog
 
+## [3.12.0](https://github.com/jef/streetmerchant/compare/v3.11.0...v3.12.0) (2025-07-20)
+
+
+### Features
+
+* add 5080 series products to various canadian retailers ([#3215](https://github.com/jef/streetmerchant/issues/3215)) ([1632ef5](https://github.com/jef/streetmerchant/commit/1632ef5b6be90c8da834b490b350f443acd91ccb))
+* add 5090 links (Amazon, Asus, Best Buy, Micro Center) ([#3217](https://github.com/jef/streetmerchant/issues/3217)) ([3416266](https://github.com/jef/streetmerchant/commit/34162660d7b31350414d581ea56c32dfaa6d0a47))
+* add 50xx links from Newegg, Bestbuy, and B&H ([#3200](https://github.com/jef/streetmerchant/issues/3200)) ([9971622](https://github.com/jef/streetmerchant/commit/9971622bdde728453b6ce80d91d522142a88a94e))
+* add AMD RX 9070 & RX 9070 XT ([#3230](https://github.com/jef/streetmerchant/issues/3230)) ([ac49e8a](https://github.com/jef/streetmerchant/commit/ac49e8a1fead305e06b8e4a86c62783dff0e2714))
+* add more 50-series to bestbuy; add itemnumbers to newegg ([#3208](https://github.com/jef/streetmerchant/issues/3208)) ([8f13946](https://github.com/jef/streetmerchant/commit/8f139466124ef097015bf6fc668fb680c9c5f76c))
+* add Nintendo Switch 2 ([#3235](https://github.com/jef/streetmerchant/issues/3235)) ([125291c](https://github.com/jef/streetmerchant/commit/125291c3b63dd66696276692b0a8d3152a17da68))
+* add Ryzen 9900X3D and 9950X3D processors ([#3236](https://github.com/jef/streetmerchant/issues/3236)) ([4423452](https://github.com/jef/streetmerchant/commit/4423452f58a3c95621bb7518b34ffc915b4e425b))
+
+
+### Bug Fixes
+
+* Corrected label for newegg asus astral 5080 ([#3204](https://github.com/jef/streetmerchant/issues/3204)) ([8e203ea](https://github.com/jef/streetmerchant/commit/8e203ea343bf2e029e8d6ba7b8e7e82640435142))
+* notifications to respect add to cart config ([#3229](https://github.com/jef/streetmerchant/issues/3229)) ([68db9e2](https://github.com/jef/streetmerchant/commit/68db9e29b5eb1f064ca54346d914c340ab5e8dc3))
+* rickroll selector is broken for captcha test ([#3207](https://github.com/jef/streetmerchant/issues/3207)) ([d02ae7f](https://github.com/jef/streetmerchant/commit/d02ae7fd81e1cbb2b26856cbcb3b5f61473f4cbc))
+* update selector for newegg product price ([#3221](https://github.com/jef/streetmerchant/issues/3221)) ([72e26b4](https://github.com/jef/streetmerchant/commit/72e26b42f5d41872a665f69fe273cea9864240cf))
+
+
+### Continuous Integration
+
+* remove cache to speed up ([#3205](https://github.com/jef/streetmerchant/issues/3205)) ([c60d4ca](https://github.com/jef/streetmerchant/commit/c60d4ca473f417dd315253bd88ccaac42db92044))
+* remove stale workflow ([995d2f8](https://github.com/jef/streetmerchant/commit/995d2f83ac94d83f7c25b45c1cc3d5cbebff8129))
+
+
+### Documentation
+
+* fix typos in heroku ([#3228](https://github.com/jef/streetmerchant/issues/3228)) ([30cb888](https://github.com/jef/streetmerchant/commit/30cb888aea89d0edbed6eec99cc7ecdee4661c5d))
+
 ## [3.11.0](https://github.com/jef/streetmerchant/compare/v3.10.0...v3.11.0) (2025-01-30)
 
 

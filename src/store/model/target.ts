@@ -42,6 +42,18 @@ export const Target: Store = {
       series: 'xboxss',
       url: 'https://www.target.com/p/xbox-series-s-console/-/A-80790842',
     },
+    {
+      brand: 'nintendo',
+      model: 'switch 2',
+      series: 'switch2',
+      url: 'https://www.target.com/p/nintendo-switch-2-console/-/A-94693225',
+    },
+    {
+      brand: 'nintendo',
+      model: 'switch 2 bundle',
+      series: 'switch2',
+      url: 'https://www.target.com/p/nintendo-switch-2-console-mario-kart-world-bundle/-/A-94693226',
+    },
   ],
   name: 'target',
   country: 'US',

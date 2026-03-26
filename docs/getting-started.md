@@ -142,7 +142,7 @@ docker-compose down
      <pre><code>  const args: string[] = [
         '--no-sandbox',
         '--disable-setuid-sandbox'
-     c];</code></pre>                
+     ];</code></pre>                
 #### Setting up Heroku
 ```shell
 # To start
@@ -174,7 +174,7 @@ Back to the terminal that you left open.
 3. Then type `git add .`
 4. Once that finishes paste `git commit -am "COMMITMESSAGE"`, replacing `COMMITMESSAGE` with whatever commit message you'd like. This doesn't matter much.
 5. The last thing to do in the terminal is to push your repo to Heroku
-    1. Paste `git push heroku master`
+    1. Paste `git push heroku main`
         1. This will take a while
 #### Final steps
 1. On your Heroku app, click on the tab `Resources`

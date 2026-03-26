@@ -54,6 +54,8 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_RX6800` | Discord group to notify on RX 6800 stock |
 | `DISCORD_NOTIFY_GROUP_RX6800XT` | Discord group to notify on RX 6800XT stock |
 | `DISCORD_NOTIFY_GROUP_RX6900XT` | Discord group to notify on RX 6900XT stock |
+| `DISCORD_NOTIFY_GROUP_RX9070` | Discord group to notify on RX 9070 stock |
+| `DISCORD_NOTIFY_GROUP_RX9070XT` | Discord group to notify on RX 9070XT stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5600` | Discord group to notify on Ryzen 5600X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN5800` | Discord group to notify on 5800X stock |
@@ -67,9 +69,12 @@ Refer to https://github.com/node-apn/node-apn for config options.
 | `DISCORD_NOTIFY_GROUP_RYZEN9700X` | Discord group to notify on Ryzen 9700X stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9800X3D` | Discord group to notify on Ryzen 9800X3D stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9900X` | Discord group to notify on Ryzen 9900X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9900X3D` | Discord group to notify on Ryzen 9900X3D stock |
 | `DISCORD_NOTIFY_GROUP_RYZEN9950X` | Discord group to notify on Ryzen 9950X stock |
+| `DISCORD_NOTIFY_GROUP_RYZEN9950X3D` | Discord group to notify on Ryzen 9950X3D stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5C` | Discord group to notify on Sony PS5 stock |
 | `DISCORD_NOTIFY_GROUP_SONYPS5DE` | Discord group to notify on Sony PS5 Digital stock |
+| `DISCORD_NOTIFY_GROUP_SWITCH2` | Discord group to notify on Nintendo Switch 2 stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSS` | Discord group to notify on Xbox Series S stock |
 | `DISCORD_NOTIFY_GROUP_XBOXSX` | Discord group to notify on Xbox Series X stock |
 | `DISCORD_NOTIFY_GROUP_TEST` | Discord group to notify on test stock |

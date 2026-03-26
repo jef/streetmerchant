@@ -362,6 +362,48 @@ export const BAndH: Store = {
       url: 'https://www.bhphotovideo.com/c/product/1598377-REG/amd_100_100000065box_ryzen_5_5600x_3_7.html',
     },
     {
+      brand: 'asus',
+      model: 'prime oc',
+      series: 'rx9070',
+      url: 'https://www.bhphotovideo.com/c/product/1872843-REG/asus_prime_rx9070_o16g_radeon_rx_9070_prime.html',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf gaming oc',
+      series: 'rx9070',
+      url: 'https://www.bhphotovideo.com/c/product/1872845-REG/asus_tuf_rx9070_o16g_gaming_radeon_rx_9070_tuf.html',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: 'rx9070',
+      url: 'https://www.bhphotovideo.com/c/product/1872783-REG/gigabyte_gv_r9070gaming_oc_16gd_radeon_rx_9070_gaming.html',
+    },
+    {
+      brand: 'asus',
+      model: 'prime oc',
+      series: 'rx9070xt',
+      url: 'https://www.bhphotovideo.com/c/product/1872844-REG/asus_prime_rx9070xt_o16g_radeon_rx_9070_xt.html',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf gaming',
+      series: 'rx9070xt',
+      url: 'https://www.bhphotovideo.com/c/product/1872846-REG/asus_tuf_rx9070xt_o16g_gaming_radeon_rx_9070_xt.html',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'aorus elite',
+      series: 'rx9070xt',
+      url: 'https://www.bhphotovideo.com/c/product/1872784-REG/gigabyte_gv_r9070xtaorus_e_16gd_radeon_rx_9070_xt.html',
+    },
+    {
+      brand: 'gigabyte',
+      model: 'gaming oc',
+      series: 'rx9070xt',
+      url: 'https://www.bhphotovideo.com/c/product/1872785-REG/gigabyte_gv_r9070xtgaming_oc_16gd_radeon_rx_9070_xt.html',
+    },
+    {
       brand: 'corsair',
       model: '750 platinum',
       series: 'sf',
