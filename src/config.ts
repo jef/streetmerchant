@@ -3,23 +3,35 @@ import {existsSync, readFileSync} from 'fs';
 import path from 'path';
 import {banner} from './banner';
 
-if (process.env.npm_config_conf) {
-  if (
-    existsSync(path.resolve(__dirname, '../../' + process.env.npm_config_conf))
-  ) {
-    dotenv.config({
-      path: path.resolve(__dirname, '../../' + process.env.npm_config_conf),
-    });
-  } else {
-    dotenv.config({path: path.resolve(__dirname, '../../.env')});
+export function getActiveConfigPath() {
+  if (process.env.npm_config_conf) {
+    const configuredPath = path.resolve(
+      __dirname,
+      '../../' + process.env.npm_config_conf
+    );
+    if (existsSync(configuredPath)) {
+      return configuredPath;
+    }
+
+    return path.resolve(__dirname, '../../.env');
   }
-} else if (existsSync(path.resolve(__dirname, '../../dotenv'))) {
-  dotenv.config({path: path.resolve(__dirname, '../../dotenv')});
-} else if (existsSync(path.resolve(__dirname, '../dotenv'))) {
-  dotenv.config({path: path.resolve(__dirname, '../dotenv')});
-} else {
-  dotenv.config({path: path.resolve(__dirname, '../../.env')});
+
+  const rootDotenv = path.resolve(__dirname, '../../dotenv');
+  if (existsSync(rootDotenv)) {
+    return rootDotenv;
+  }
+
+  const buildDotenv = path.resolve(__dirname, '../dotenv');
+  if (existsSync(buildDotenv)) {
+    return buildDotenv;
+  }
+
+  return path.resolve(__dirname, '../../.env');
 }
+
+export const activeConfigPath = getActiveConfigPath();
+
+dotenv.config({path: activeConfigPath});
 
 console.info(
   banner.render(
@@ -414,6 +426,8 @@ const nvidia = {
 const page = {
   height: 1080,
   inStockWaitTime: envOrNumber(process.env.IN_STOCK_WAIT_TIME),
+  lookupThreads: envOrNumber(process.env.LOOKUP_THREADS, 1),
+  randomizeLookupOrder: envOrBoolean(process.env.RANDOMIZE_LOOKUP_ORDER, false),
   screenshot: envOrBoolean(process.env.SCREENSHOT),
   screenshotDir: envOrString(process.env.SCREENSHOT_DIR, 'screenshots'),
   timeout: envOrNumber(process.env.PAGE_TIMEOUT, 30000),
