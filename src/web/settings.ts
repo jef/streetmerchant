@@ -116,4 +116,3 @@ export function writeSettingsRaw(raw: string) {
     values,
   };
 }
-

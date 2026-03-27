@@ -55,14 +55,18 @@ export function getSelectedSeriesMatrix() {
 
 export function initializeStatusMap() {
   const selectedSeries = getSelectedSeriesMatrix();
-  const selectedStores = getSelectedStoreEntries().map(([storeName]) => storeName);
+  const selectedStores = getSelectedStoreEntries().map(
+    ([storeName]) => storeName
+  );
 
   for (const storeName of selectedStores) {
     const links = getFilteredLinksForStore(storeName);
 
     for (const series of selectedSeries) {
       const key = getKey(storeName, series);
-      const supportedLinks = links.filter((link: Link) => link.series === series);
+      const supportedLinks = links.filter(
+        (link: Link) => link.series === series
+      );
       const existing = statusMap.get(key);
 
       statusMap.set(key, {
@@ -132,7 +136,9 @@ export function markStatusResult(
 export function getMatrixStatus() {
   initializeStatusMap();
 
-  const selectedStores = getSelectedStoreEntries().map(([storeName]) => storeName);
+  const selectedStores = getSelectedStoreEntries().map(
+    ([storeName]) => storeName
+  );
   const selectedSeries = getSelectedSeriesMatrix();
 
   return {

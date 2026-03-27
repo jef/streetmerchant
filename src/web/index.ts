@@ -198,7 +198,9 @@ function handleAPI(
             sendJSON(response, result);
             return;
           } catch (error: unknown) {
-            logger.warn(`Could not update settings: ${(error as Error).message}`);
+            logger.warn(
+              `Could not update settings: ${(error as Error).message}`
+            );
             sendError(response, 'Could not update settings', 400);
             return;
           }
