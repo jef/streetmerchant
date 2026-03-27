@@ -60,9 +60,11 @@ function nextProxy(store: Store) {
   }
 
   logger.debug(
-    `â„¹ [${store.name}] Next proxy index: ${store.currentProxyIndex} / Count: ${
-      store.proxyList.length
-    } (${store.proxyList[store.currentProxyIndex]})`
+    `ℹ [${store.name}] Next proxy index: ${
+      store.currentProxyIndex
+    } / Count: ${store.proxyList.length} (${
+      store.proxyList[store.currentProxyIndex]
+    })`
   );
 
   return store.proxyList[store.currentProxyIndex];
@@ -238,7 +240,9 @@ async function processLink(browser: Browser, store: Store, link: Link) {
   } catch (error: unknown) {
     markStatusResult(store.name, link, 'error');
     if (store.currentProxyIndex !== undefined && store.proxyList) {
-      const proxyLabel = `${store.currentProxyIndex + 1}/${store.proxyList.length}`;
+      const proxyLabel = `${store.currentProxyIndex + 1}/${
+        store.proxyList.length
+      }`;
       logger.error(
         `âœ– [${proxyLabel}] [${store.name}] ${link.brand} ${link.series} ${
           link.model
@@ -327,12 +331,8 @@ async function lookup(browser: Browser, store: Store) {
   const workers = Array.from(
     {length: Math.min(concurrency, links.length)},
     async () => {
-      while (true) {
+      while (nextIndex < links.length) {
         const currentIndex = nextIndex++;
-        if (currentIndex >= links.length) {
-          return;
-        }
-
         await processLink(browser, store, links[currentIndex]);
       }
     }
