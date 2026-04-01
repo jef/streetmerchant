@@ -1,11 +1,11 @@
 import {Store} from './store';
 
 export const NvidiaGB: Store = {
-  currency: '£',
+  currency: 'Â£',
   labels: {
     inStock: {
       container: 'span.buy-link-atc',
-      text: ['Buy Now', 'Add to Cart']
+      text: ['Buy Now', 'Add to Cart'],
     },
     outOfStock: {
       container: 'span.buy-link-atc',
@@ -65,13 +65,13 @@ export const NvidiaGB: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5090',
-      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',    
+      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',
     },
     {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5080',
-      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&manufacturer=NVIDIA&gpu=RTX%205080&',    
+      url: 'https://marketplace.nvidia.com/en-gb/consumer/graphics-cards/?locale=en-gb&page=1&limit=12&manufacturer=NVIDIA&gpu=RTX%205080&',
     },
   ],
   name: 'nvidia-gb',
@@ -83,6 +83,6 @@ export const NvidiaGB: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '',
-      url: '',    
+      url: '',
     },
 */

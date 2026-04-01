@@ -1,7 +1,7 @@
 import {Store} from './store';
 
 export const NvidiaFR: Store = {
-  currency: '€',
+  currency: 'â‚¬',
   labels: {
     inStock: {
       container: 'span.buy-link-atc',
@@ -59,13 +59,13 @@ export const NvidiaFR: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5090',
-      url: 'https://marketplace.nvidia.com/fr-fr/consumer/graphics-cards/?locale=fr-fr&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',    
+      url: 'https://marketplace.nvidia.com/fr-fr/consumer/graphics-cards/?locale=fr-fr&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',
     },
     {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5080',
-      url: 'https://marketplace.nvidia.com/fr-fr/consumer/graphics-cards/?locale=fr-fr&page=1&limit=12&gpu=RTX%205080&manufacturer=NVIDIA',    
+      url: 'https://marketplace.nvidia.com/fr-fr/consumer/graphics-cards/?locale=fr-fr&page=1&limit=12&gpu=RTX%205080&manufacturer=NVIDIA',
     },
   ],
   name: 'nvidia-fr',
@@ -76,6 +76,6 @@ export const NvidiaFR: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '',
-      url: '',    
+      url: '',
     },
 */
