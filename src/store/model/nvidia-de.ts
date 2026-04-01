@@ -1,7 +1,7 @@
 import {Store} from './store';
 
 export const NvidiaDE: Store = {
-  currency: 'â‚¬',
+  currency: '€',
   labels: {
     inStock: {
       container: 'span.buy-link-atc',
@@ -9,7 +9,7 @@ export const NvidiaDE: Store = {
     },
     outOfStock: {
       container: 'span.buy-link-atc',
-      text: ['DERZEIT NICHT VERFÃœGBAR'],
+      text: ['DERZEIT NICHT VERFÃƒÅ“GBAR'],
     },
   },
   links: [

@@ -1,7 +1,7 @@
 import {Store} from './store';
 
 export const NvidiaFR: Store = {
-  currency: 'â‚¬',
+  currency: '€',
   labels: {
     inStock: {
       container: 'span.buy-link-atc',
