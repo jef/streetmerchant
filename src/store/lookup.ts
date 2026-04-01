@@ -60,7 +60,7 @@ function nextProxy(store: Store) {
   }
 
   logger.debug(
-    `ℹ [${store.name}] Next proxy index: ${
+    `[INFO] [${store.name}] Next proxy index: ${
       store.currentProxyIndex
     } / Count: ${store.proxyList.length} (${
       store.proxyList[store.currentProxyIndex]
@@ -244,13 +244,13 @@ async function processLink(browser: Browser, store: Store, link: Link) {
         store.proxyList.length
       }`;
       logger.error(
-        `âœ– [${proxyLabel}] [${store.name}] ${link.brand} ${link.series} ${
+        `[ERROR] [${proxyLabel}] [${store.name}] ${link.brand} ${link.series} ${
           link.model
         } - ${(error as Error).message}`
       );
     } else {
       logger.error(
-        `âœ– [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
+        `[ERROR] [${store.name}] ${link.brand} ${link.series} ${link.model} - ${
           (error as Error).message
         }`
       );
@@ -383,7 +383,7 @@ async function lookupIem(
     }
 
     if (config.page.screenshot) {
-      logger.debug('â„¹ saving screenshot');
+      logger.debug('[INFO] saving screenshot');
 
       await fs.mkdir(config.page.screenshotDir, {recursive: true});
       link.screenshot = path.join(
@@ -602,7 +602,7 @@ async function runCaptchaDeterrent(browser: Browser, store: Store, page: Page) {
 
     if (!isStatusCodeInRange(statusCode, successStatusCodes)) {
       logger.warn(
-        `âœ– [${store.name}] - Failed to navigate to anti-captcha target: ${link.url}`
+        `[ERROR] [${store.name}] - Failed to navigate to anti-captcha target: ${link.url}`
       );
     }
   }
