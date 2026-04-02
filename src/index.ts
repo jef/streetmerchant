@@ -6,31 +6,46 @@ import {getSleepTime} from './util';
 import {logger} from './logger';
 import {storeList} from './store/model';
 import {tryLookupAndLoop} from './store';
+import {setRestartBotHandler} from './runtime-control';
 
 let browser: Browser | undefined;
+let runGeneration = 0;
+
+function shuffleArray<T>(items: T[]): T[] {
+  const shuffled = [...items];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
 
 async function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Schedules a restart of the bot
- */
-async function restartMain() {
+async function scheduleRestart(generation: number) {
   if (config.restartTime > 0) {
     await sleep(config.restartTime);
-    await stop();
-    loopMain();
+    if (generation !== runGeneration) {
+      return;
+    }
+
+    await restartBot();
   }
 }
 
-/**
- * Starts the bot.
- */
-async function main() {
+async function startBot(startApiServer: boolean) {
+  const generation = ++runGeneration;
   browser = await launchBrowser();
+  void scheduleRestart(generation);
 
-  for (const store of storeList.values()) {
+  const stores = config.page.randomizeLookupOrder
+    ? shuffleArray([...storeList.values()])
+    : [...storeList.values()];
+
+  for (const store of stores) {
     logger.debug('store links', {meta: {links: store.links}});
     if (store.setupAction !== undefined) {
       store.setupAction(browser);
@@ -39,18 +54,30 @@ async function main() {
     setTimeout(tryLookupAndLoop, getSleepTime(store), browser, store);
   }
 
-  await startAPIServer();
+  if (startApiServer) {
+    await startAPIServer();
+  }
 }
 
-async function stop() {
-  await stopAPIServer();
+async function stopBot() {
+  runGeneration++;
 
   if (browser) {
-    // Use temporary swap variable to avoid any race condition
     const browserTemporary = browser;
     browser = undefined;
     await browserTemporary.close();
   }
+}
+
+async function stop() {
+  await stopAPIServer();
+  await stopBot();
+}
+
+export async function restartBot() {
+  logger.info('Restarting streetmerchant bot');
+  await stopBot();
+  await startBot(false);
 }
 
 async function stopAndExit() {
@@ -58,16 +85,12 @@ async function stopAndExit() {
   Process.exit(0);
 }
 
-/**
- * Will continually run until user interferes.
- */
 async function loopMain() {
   try {
-    restartMain();
-    await main();
+    await startBot(true);
   } catch (error: unknown) {
     logger.error(
-      '✖ something bad happened, resetting streetmerchant in 5 seconds',
+      'âœ– something bad happened, resetting streetmerchant in 5 seconds',
       error
     );
     setTimeout(loopMain, 5000);
@@ -77,15 +100,11 @@ async function loopMain() {
 export async function launchBrowser(): Promise<Browser> {
   const args: string[] = [];
 
-  // Skip Chromium Linux Sandbox
-  // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#setting-up-chrome-linux-sandbox
   if (config.browser.isTrusted) {
     args.push('--no-sandbox');
     args.push('--disable-setuid-sandbox');
   }
 
-  // https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
-  // https://stackoverflow.com/questions/48230901/docker-alpine-with-node-js-and-chromium-headless-puppeter-failed-to-launch-c
   if (config.docker) {
     args.push('--disable-dev-shm-usage');
     args.push('--no-sandbox');
@@ -95,7 +114,6 @@ export async function launchBrowser(): Promise<Browser> {
     config.browser.open = false;
   }
 
-  // Add the address of the proxy server if defined
   if (config.proxy.address) {
     args.push(
       `--proxy-server=${config.proxy.protocol}://${config.proxy.address}:${config.proxy.port}`
@@ -103,11 +121,11 @@ export async function launchBrowser(): Promise<Browser> {
   }
 
   if (args.length > 0) {
-    logger.info('ℹ puppeteer config: ', args);
+    logger.info('â„¹ puppeteer config: ', args);
   }
 
-  await stop();
-  const browser = await Puppeteer.launch({
+  await stopBot();
+  const launchedBrowser = await Puppeteer.launch({
     args,
     defaultViewport: {
       height: config.page.height,
@@ -116,10 +134,12 @@ export async function launchBrowser(): Promise<Browser> {
     headless: config.browser.isHeadless,
   });
 
-  config.browser.userAgent = await browser.userAgent();
+  config.browser.userAgent = await launchedBrowser.userAgent();
 
-  return browser;
+  return launchedBrowser;
 }
+
+setRestartBotHandler(restartBot);
 
 void loopMain();
 

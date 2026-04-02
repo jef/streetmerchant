@@ -54,6 +54,9 @@
 ???+ note
     For `MAX_PRICE_SERIES_*` variables: Use whole numbers only (no currency symbol is required). Avoid using any commas or decimal points. Example: `1234`. Merchandise found above this price will be skipped.
 
+???+ info
+    When `WEB_PORT` is enabled, the web dashboard can update `STORES`, `SHOW_ONLY_SERIES`, and `SHOW_ONLY_MODELS` from the browser. Those changes are also written back to the active `dotenv` file.
+
 ## Supported stores
 
 Used with the `STORES` variable.
@@ -122,7 +125,7 @@ Used with the `STORES` variable.
 | Drako | IT | `drako` |
 | DustinHome | NO | `dustinhome-no` |
 | eBuyer | UK | `ebuyer` |
-| El Corte Inglés | ES | `elcorteingles` |
+| El Corte Ingles | ES | `elcorteingles` |
 | Eletronicamente | ES | `eletronicamente` |
 | Elkjop | NO | `elkjop` |
 | ePrice | IT | `eprice` |

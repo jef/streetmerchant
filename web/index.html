@@ -1,189 +1,1117 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>streetmerchant control</title>
-		<style>
-			body {
-				background-color: #222;
-				color: #DDD;
-				font-family: sans-serif;
-			}
-			a {
-				color: aquamarine;
-			}
-			table th {
-				width: 25vw;
-				cursor: pointer;
-				background-color: #444;
-			}
-		</style>
-		<script type="text/javascript">
-			let config;
-			let brands;
-			let stores;
-			let series;
-			let models;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>streetmerchant</title>
+    <style>
+      :root {
+        --bg: #040507;
+        --panel: #090b10;
+        --panel-2: #0d1017;
+        --line: rgba(255, 255, 255, 0.08);
+        --text: #f4f7fb;
+        --muted: #8c95a3;
+        --checking: #d6d9df;
+        --checking-bg: rgba(214, 217, 223, 0.09);
+        --out: #ff4f7d;
+        --out-bg: rgba(255, 79, 125, 0.12);
+        --in: #6bffb1;
+        --in-bg: rgba(107, 255, 177, 0.14);
+        --idle: #667084;
+        --idle-bg: rgba(102, 112, 132, 0.14);
+        --unsupported: #4e5563;
+        --unsupported-bg: rgba(78, 85, 99, 0.16);
+      }
 
-			function renderList(id, elements, selectionArray, subfield) {
-				const list = document.getElementById(id);
-				list.innerHTML = '';
-				for (const element of elements) {
-					const name = `${id}_${element}`;
-					const htmlElement = document.createElement('input');
-					htmlElement.type = 'checkbox';
-					htmlElement.value = element;
-					htmlElement.innerHTML = element;
-					htmlElement.name = name;
-					htmlElement.id = name;
-					if (selectionArray.length === 0) {
-						htmlElement.checked = true;
-					} else if (subfield && selectionArray.find(obj => element === obj[subfield])) {
-						htmlElement.checked = true;
-					} else if (selectionArray.includes(element)) {
-						htmlElement.checked = true;
-					}
-					list.appendChild(htmlElement);
-					const htmlLabelElement = document.createElement('label');
-					htmlLabelElement.setAttribute('for', name);
-					htmlLabelElement.innerText = element;
-					list.appendChild(htmlLabelElement);
-					list.appendChild(document.createElement('br'));
-				}
-			}
+      * {
+        box-sizing: border-box;
+      }
 
-			function listToArray(id, subfield) {
-				const list = document.getElementById(id);
-				const resArray = [];
-				let allSelected = true;
-				for (const htmlElement of list.childNodes) {
-					if (htmlElement.checked) {
-						let obj;
-						if (subfield) {
-							obj = {};
-							obj[subfield] = htmlElement.value;
-							if (id === 'modelList') {
-								obj['series'] = '';
-							}
-						} else {
-							obj = htmlElement.value
-						}
-						resArray.push(obj);
-					} else {
-						allSelected = false;
-					}
-				}
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(circle at top center, rgba(58, 81, 132, 0.12), transparent 34%),
+          linear-gradient(180deg, #07090d 0%, var(--bg) 100%);
+        color: var(--text);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+      }
 
-				if (allSelected) {
-					return [];
-				}
-				return resArray;
-			}
+      body {
+        padding: 12px;
+      }
 
-			async function onReceiveConfig(resp) {
-				config = await resp.json();
+      .shell {
+        width: 100%;
+        height: calc(100vh - 24px);
+        max-width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 12px;
+      }
 
-				renderList('storeList', stores, config.store.stores, 'name');
-				renderList('brandList', brands, config.store.showOnlyBrands);
-				renderList('seriesList', series, config.store.showOnlySeries);
-				renderList('modelList', models, config.store.showOnlyModels, 'name');
-			}
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: end;
+      }
 
-			async function setConfig() {
-				if (!config) {
-					throw new Error('Config not loaded yet');
-				}
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
 
-				config.store.stores = listToArray('storeList', 'name');
-				config.store.showOnlyBrands = listToArray('brandList');
-				config.store.showOnlySeries = listToArray('seriesList');
-				config.store.showOnlyModels = listToArray('modelList', 'name');
+      .hero p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        max-width: 62rem;
+        line-height: 1.35;
+      }
 
-				const resp = await fetch('/api/config', {
-					method: 'PUT',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify(config)
-				});
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+      }
 
-				await onReceiveConfig(resp);
+      .badge {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 0.92rem;
+        white-space: nowrap;
+      }
 
-				alert('Saved!');
-			}
+      .menu-shell {
+        position: relative;
+      }
 
-			async function loadScreenshots() {
-				const respScreenshots = await fetch('/api/screenshots');
-				const screenshots = await respScreenshots.json();
+      .menu-button {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font: inherit;
+        cursor: pointer;
+      }
 
-				const screenshotContainer = document.getElementById('screenshots');
-				screenshotContainer.innerHTML = '';
+      .menu-button:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
 
-				for (const screenshot of screenshots) {
-					const htmlElement = document.createElement('a');
-					htmlElement.href = `/api/screenshots/${screenshot}`;
-					htmlElement.target = '_blank';
-					htmlElement.innerText = screenshot;
-					screenshotContainer.appendChild(htmlElement);
-					screenshotContainer.appendChild(document.createElement('br'));
-				}
-			}
+      .menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        width: 320px;
+        max-height: min(68vh, 760px);
+        display: none;
+        grid-template-rows: auto auto 1fr auto;
+        background: rgba(12, 15, 22, 0.98);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 26px 60px rgba(0, 0, 0, 0.42);
+        overflow: hidden;
+        z-index: 30;
+      }
 
-			async function loadConfig() {
-				const resp = await fetch('/api/config');
-				await onReceiveConfig(resp);
-			}
+      .menu.open {
+        display: grid;
+      }
 
-			async function loadInitial() {
-				const respStores = await fetch('/api/stores');
-				stores = await respStores.json();
+      .menu-head {
+        padding: 14px 16px 10px;
+        border-bottom: 1px solid var(--line);
+      }
 
-				const respBrands = await fetch('/api/brands');
-				brands = await respBrands.json();
+      .menu-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
 
-				const respSeries = await fetch('/api/series');
-				series = await respSeries.json();
+      .menu-title strong {
+        font-size: 0.96rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
 
-				const respModels = await fetch('/api/models');
-				models = await respModels.json();
+      .menu-title span {
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
 
-				await loadConfig();
+      .menu-search {
+        width: 100%;
+        margin-top: 10px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font: inherit;
+      }
 
-				await loadScreenshots();
-			}
+      .menu-toolbar {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+      }
 
-			function selectAll(element, columnId) {
-				const list = document.querySelectorAll("#"+columnId+" input");
-				const checked = [...list].filter( el => el.checked ).length;
-				const newValue = (checked==list.length) ? false : true;
+      .menu-toolbar button,
+      .menu-foot button {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font: inherit;
+      }
 
-				for (const htmlElement of list) {
-					htmlElement.checked = newValue;
-				}
-			}
+      .menu-list {
+        overflow: auto;
+        padding: 8px;
+      }
 
-		</script>
-	</head>
-	<body onload="loadInitial();">
-		<table>
-			<tr>
-				<th onclick="selectAll(this, 'storeList');">Stores</th>
-				<th onclick="selectAll(this, 'brandList');">Brands</th>
-				<th onclick="selectAll(this, 'seriesList');">Series</th>
-				<th onclick="selectAll(this, 'modelList');">Models</th>
-			</tr>
-			<tr>
-				<td valign="top" id="storeList"></td>
-				<td valign="top" id="brandList"></td>
-				<td valign="top" id="seriesList"></td>
-				<td valign="top" id="modelList"></td>
-			</tr>
-		</table>
+      .menu-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 10px;
+        border-radius: 10px;
+        color: var(--text);
+      }
 
-		<br />
-		<input type="button" onclick="setConfig();" value="Save" />
+      .menu-option:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
 
-		<br /><br /><br /><br />
-		<b>Screenshots (<a href="javascript:loadScreenshots();">Refresh</a>)</b>
-		<div id="screenshots"></div>
-	</body>
+      .menu-option input {
+        accent-color: var(--in);
+      }
+
+      .menu-foot {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 16px;
+        border-top: 1px solid var(--line);
+      }
+
+      .settings-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.62);
+        z-index: 50;
+        padding: 24px;
+      }
+
+      .settings-overlay.open {
+        display: flex;
+      }
+
+      .settings-modal {
+        width: min(980px, 100%);
+        height: min(82vh, 860px);
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        background: rgba(12, 15, 22, 0.99);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+      }
+
+      .settings-header,
+      .settings-footer {
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .settings-footer {
+        border-bottom: 0;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .settings-header strong {
+        display: block;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .settings-header span,
+      .settings-note {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .settings-path {
+        padding: 12px 18px;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.88rem;
+        word-break: break-all;
+      }
+
+      .settings-editor {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: none;
+        resize: none;
+        background: #0a0d13;
+        color: #f4f7fb;
+        padding: 18px;
+        font: 13px/1.45 Consolas, "Courier New", monospace;
+      }
+
+      .settings-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .settings-actions button {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 10px;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .panel {
+        background: linear-gradient(180deg, rgba(13, 16, 23, 0.98), rgba(9, 11, 16, 0.98));
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+        min-height: 0;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .swatch {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+      }
+
+      .matrix-wrap {
+        overflow: hidden;
+        padding: 12px;
+        min-height: 0;
+      }
+
+      .matrix-stage {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      table {
+        width: 100%;
+        height: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: fixed;
+        background: rgba(255, 255, 255, 0.01);
+      }
+
+      thead th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: rgba(9, 11, 16, 0.98);
+        border-bottom: 1px solid var(--line);
+      }
+
+      th,
+      td {
+        padding: 10px 8px;
+        border-right: 1px solid rgba(255, 255, 255, 0.04);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        text-align: center;
+      }
+
+      th:first-child,
+      td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background: rgba(9, 11, 16, 0.98);
+      }
+
+      th:first-child {
+        z-index: 3;
+      }
+
+      .corner {
+        width: var(--label-col-width, 150px);
+        min-width: var(--label-col-width, 150px);
+        text-align: left;
+        font-size: var(--header-font-size, 0.82rem);
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .store-head {
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        font-size: var(--header-font-size, 0.95rem);
+      }
+
+      .series-label {
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        width: var(--label-col-width, 150px);
+        min-width: var(--label-col-width, 150px);
+        font-size: var(--series-font-size, 0.95rem);
+      }
+
+      .cell {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 10px;
+        padding: 6px 5px;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+        border: 1px solid transparent;
+      }
+
+      .cell:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.14);
+      }
+
+      .cell.checking {
+        color: var(--checking);
+        background: var(--checking-bg);
+      }
+
+      .cell.out_of_stock {
+        color: var(--out);
+        background: var(--out-bg);
+      }
+
+      .cell.in_stock {
+        color: var(--in);
+        background: var(--in-bg);
+      }
+
+      .cell.idle,
+      .cell.error {
+        color: var(--idle);
+        background: var(--idle-bg);
+      }
+
+      .cell.unsupported {
+        color: var(--unsupported);
+        background: var(--unsupported-bg);
+      }
+
+      .cell-label {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cell-text {
+        line-height: 1;
+        font-size: var(--cell-font-size, 0.95rem);
+      }
+
+      .cell-meta {
+        font-size: var(--meta-font-size, 0.68rem);
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 auto 5px;
+        border-radius: 999px;
+        background: currentColor;
+        box-shadow: 0 0 16px currentColor;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .action-status {
+        color: var(--muted);
+      }
+
+      .empty {
+        padding: 28px 18px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .meta {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      let pollHandle;
+      let resizeHandle;
+      let currentConfig;
+      let currentSettings;
+      let allStores = [];
+      let allSeries = [];
+      let allModels = [];
+      const openMenus = new Set();
+
+      function statusLabel(status) {
+        switch (status) {
+          case "checking":
+            return "checking";
+          case "out_of_stock":
+            return "out of stock";
+          case "in_stock":
+            return "in stock";
+          case "unsupported":
+            return "---";
+          case "error":
+            return "error";
+          default:
+            return "idle";
+        }
+      }
+
+      function formatTime(value) {
+        if (!value) {
+          return "";
+        }
+
+        return new Date(value).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+      }
+
+      function renderSummary(data) {
+        document.getElementById("storesCount").innerText = `${data.summary.selectedStores} stores`;
+        document.getElementById("seriesCount").innerText = `${data.summary.selectedSeries} series`;
+        document.getElementById("updatedAt").innerText = `Updated ${formatTime(data.generatedAt)}`;
+      }
+
+      function setMenuSummary(id, total, selected) {
+        const node = document.querySelector(`[data-menu-count="${id}"]`);
+        if (!node) {
+          return;
+        }
+
+        node.innerText = selected === total ? "All selected" : `${selected}/${total} selected`;
+      }
+
+      function isSelected(listId, value) {
+        if (!currentConfig) {
+          return true;
+        }
+
+        switch (listId) {
+          case "stores":
+            return (
+              currentConfig.store.stores.length === 0 ||
+              currentConfig.store.stores.some(entry => entry.name === value)
+            );
+          case "series":
+            return (
+              currentConfig.store.showOnlySeries.length === 0 ||
+              currentConfig.store.showOnlySeries.includes(value)
+            );
+          case "models":
+            return (
+              currentConfig.store.showOnlyModels.length === 0 ||
+              currentConfig.store.showOnlyModels.some(entry => entry.name === value)
+            );
+          default:
+            return true;
+        }
+      }
+
+      function getSourceForList(listId) {
+        switch (listId) {
+          case "stores":
+            return allStores;
+          case "series":
+            return allSeries;
+          case "models":
+            return allModels;
+          default:
+            return [];
+        }
+      }
+
+      function getVisibleRows(listId) {
+        return [...document.querySelectorAll(`[data-menu-list="${listId}"] .menu-option`)].filter(
+          row => row.style.display !== "none"
+        );
+      }
+
+      function updateMenuCount(listId) {
+        const inputs = [...document.querySelectorAll(`[data-menu-list="${listId}"] input[type="checkbox"]`)];
+        const checked = inputs.filter(input => input.checked).length;
+        setMenuSummary(listId, inputs.length, checked);
+      }
+
+      function renderMenuOptions(listId) {
+        const list = document.querySelector(`[data-menu-list="${listId}"]`);
+        const source = getSourceForList(listId);
+        list.innerHTML = "";
+
+        for (const value of source) {
+          const label = document.createElement("label");
+          label.className = "menu-option";
+          label.dataset.value = String(value).toLowerCase();
+
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.value = value;
+          input.checked = isSelected(listId, value);
+          input.addEventListener("change", () => updateMenuCount(listId));
+
+          const text = document.createElement("span");
+          text.innerText = value;
+
+          label.appendChild(input);
+          label.appendChild(text);
+          list.appendChild(label);
+        }
+
+        updateMenuCount(listId);
+      }
+
+      function applySearch(listId, value) {
+        const search = value.trim().toLowerCase();
+        const rows = document.querySelectorAll(`[data-menu-list="${listId}"] .menu-option`);
+        for (const row of rows) {
+          row.style.display = row.dataset.value.includes(search) ? "" : "none";
+        }
+      }
+
+      function selectVisible(listId, checked) {
+        for (const row of getVisibleRows(listId)) {
+          const input = row.querySelector('input[type="checkbox"]');
+          input.checked = checked;
+        }
+        updateMenuCount(listId);
+      }
+
+      function selectAll(listId, checked) {
+        const inputs = document.querySelectorAll(`[data-menu-list="${listId}"] input[type="checkbox"]`);
+        for (const input of inputs) {
+          input.checked = checked;
+        }
+        updateMenuCount(listId);
+      }
+
+      function collectSelection(listId) {
+        const inputs = [...document.querySelectorAll(`[data-menu-list="${listId}"] input[type="checkbox"]`)];
+        const selected = inputs.filter(input => input.checked).map(input => input.value);
+        return selected.length === inputs.length ? [] : selected;
+      }
+
+      function closeMenus() {
+        for (const id of openMenus) {
+          const menu = document.querySelector(`[data-menu="${id}"]`);
+          if (menu) {
+            menu.classList.remove("open");
+          }
+        }
+        openMenus.clear();
+      }
+
+      function cancelMenus() {
+        renderMenus();
+        closeMenus();
+      }
+
+      function toggleMenu(id) {
+        const menu = document.querySelector(`[data-menu="${id}"]`);
+        const isOpen = menu.classList.contains("open");
+        closeMenus();
+        if (!isOpen) {
+          menu.classList.add("open");
+          openMenus.add(id);
+        }
+      }
+
+      async function loadConfigState() {
+        const response = await fetch("/api/config");
+        currentConfig = await response.json();
+      }
+
+      async function loadSettingsState() {
+        const response = await fetch("/api/settings");
+        currentSettings = await response.json();
+      }
+
+      async function loadFilterSources() {
+        const [storesResponse, seriesResponse, modelsResponse] = await Promise.all([
+          fetch("/api/stores"),
+          fetch("/api/series"),
+          fetch("/api/models"),
+        ]);
+
+        allStores = await storesResponse.json();
+        allSeries = await seriesResponse.json();
+        allModels = await modelsResponse.json();
+      }
+
+      function renderMenus() {
+        renderMenuOptions("stores");
+        renderMenuOptions("series");
+        renderMenuOptions("models");
+      }
+
+      async function saveFilters() {
+        if (!currentConfig) {
+          return;
+        }
+
+        const selectedStores = collectSelection("stores");
+        const selectedSeries = collectSelection("series");
+        const selectedModels = collectSelection("models");
+
+        const effectiveStores = selectedStores.length ? selectedStores : allStores;
+
+        currentConfig.store.stores = effectiveStores.map(name => {
+          const existing = currentConfig.store.stores.find(entry => entry.name === name);
+          return existing ?? {name};
+        });
+        currentConfig.store.showOnlySeries = selectedSeries;
+        currentConfig.store.showOnlyModels = selectedModels.map(name => ({
+          name,
+          series: "",
+        }));
+
+        const response = await fetch("/api/config", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(currentConfig),
+        });
+
+        currentConfig = await response.json();
+        await fetch("/api/settings", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            values: {
+              STORES: effectiveStores.join(","),
+              SHOW_ONLY_SERIES: (selectedSeries.length ? selectedSeries : allSeries).join(","),
+              SHOW_ONLY_MODELS: (selectedModels.length ? selectedModels : []).join(","),
+            },
+          }),
+        });
+        await loadSettingsState();
+        closeMenus();
+        await loadMatrix();
+        renderMenus();
+      }
+
+      function openSettings() {
+        if (!currentSettings) {
+          return;
+        }
+
+        document.getElementById("settingsPath").innerText = currentSettings.filePath;
+        document.getElementById("settingsEditor").value = currentSettings.raw;
+        document.getElementById("settingsOverlay").classList.add("open");
+      }
+
+      function closeSettings() {
+        document.getElementById("settingsOverlay").classList.remove("open");
+      }
+
+      async function saveSettings() {
+        const raw = document.getElementById("settingsEditor").value;
+        const response = await fetch("/api/settings", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({raw}),
+        });
+
+        currentSettings = await response.json();
+        document.getElementById("settingsPath").innerText = currentSettings.filePath;
+        document.getElementById("settingsEditor").value = currentSettings.raw;
+        await loadConfigState();
+        await loadFilterSources();
+        renderMenus();
+        closeSettings();
+      }
+
+      async function restartBot() {
+        const status = document.getElementById("actionStatus");
+        status.innerText = "Restarting bot...";
+
+        const response = await fetch("/api/control/restart", {
+          method: "POST",
+        });
+
+        if (!response.ok) {
+          status.innerText = "Restart failed";
+          return;
+        }
+
+        status.innerText = "Bot restarted";
+        await loadMatrix();
+      }
+
+      function buildCell(cell) {
+        const anchor = document.createElement(cell.url ? "a" : "div");
+        anchor.className = `cell ${cell.status}`;
+        if (cell.url) {
+          anchor.href = cell.url;
+          anchor.target = "_blank";
+          anchor.rel = "noreferrer";
+        }
+
+        const content = document.createElement("div");
+        content.className = "cell-label";
+
+        const dot = document.createElement("div");
+        dot.className = "dot";
+        content.appendChild(dot);
+
+        const text = document.createElement("div");
+        text.className = "cell-text";
+        text.innerText = statusLabel(cell.status);
+        content.appendChild(text);
+
+        const meta = document.createElement("div");
+        meta.className = "cell-meta";
+        meta.innerText =
+          cell.status === "unsupported"
+            ? ""
+            : cell.lastUpdatedAt
+              ? `${cell.productCount} item${cell.productCount === 1 ? "" : "s"} • ${formatTime(cell.lastUpdatedAt)}`
+              : `${cell.productCount} item${cell.productCount === 1 ? "" : "s"}`;
+        content.appendChild(meta);
+
+        anchor.appendChild(content);
+        return anchor;
+      }
+
+      function applyMatrixSizing(storeCount, seriesCount) {
+        const matrix = document.getElementById("matrix");
+        if (!matrix) {
+          return;
+        }
+
+        const width = matrix.clientWidth || 1200;
+        const height = matrix.clientHeight || 700;
+        const safeStoreCount = Math.max(storeCount, 1);
+        const safeSeriesCount = Math.max(seriesCount, 1);
+
+        const labelColWidth = Math.max(92, Math.min(180, Math.floor(width * 0.12)));
+        const cellWidth = Math.max(
+          78,
+          Math.floor((width - labelColWidth - 8) / safeStoreCount)
+        );
+        const rowHeight = Math.max(
+          40,
+          Math.floor((height - 58) / (safeSeriesCount + 1))
+        );
+
+        const headerFontSize = Math.max(10, Math.min(20, Math.floor(cellWidth * 0.16)));
+        const seriesFontSize = Math.max(13, Math.min(24, Math.floor(rowHeight * 0.36)));
+        const cellFontSize = Math.max(10, Math.min(22, Math.floor(Math.min(cellWidth, rowHeight) * 0.18)));
+        const metaFontSize = Math.max(0, Math.min(12, Math.floor(cellFontSize * 0.62)));
+
+        matrix.style.setProperty("--label-col-width", `${labelColWidth}px`);
+        matrix.style.setProperty("--header-font-size", `${headerFontSize}px`);
+        matrix.style.setProperty("--series-font-size", `${seriesFontSize}px`);
+        matrix.style.setProperty("--cell-font-size", `${cellFontSize}px`);
+        matrix.style.setProperty("--meta-font-size", `${metaFontSize}px`);
+        matrix.style.setProperty("--row-height", `${rowHeight}px`);
+        matrix.style.setProperty("--cell-width", `${cellWidth}px`);
+      }
+
+      function renderMatrix(data) {
+        renderSummary(data);
+
+        const root = document.getElementById("matrix");
+        root.innerHTML = "";
+
+        if (!data.stores.length || !data.series.length) {
+          const empty = document.createElement("div");
+          empty.className = "empty";
+          empty.innerText =
+            "No selected store/series combinations are available. Adjust STORES or SHOW_ONLY_SERIES and reload.";
+          root.appendChild(empty);
+          return;
+        }
+
+        const stage = document.createElement("div");
+        stage.className = "matrix-stage";
+        applyMatrixSizing(data.stores.length, data.series.length);
+
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const headRow = document.createElement("tr");
+
+        const corner = document.createElement("th");
+        corner.className = "corner";
+        corner.innerText = "Series \\ Store";
+        headRow.appendChild(corner);
+
+        for (const store of data.stores) {
+          const th = document.createElement("th");
+          th.className = "store-head";
+          th.innerText = store;
+          th.style.width = "var(--cell-width)";
+          headRow.appendChild(th);
+        }
+
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+
+        for (const row of data.cells) {
+          const tr = document.createElement("tr");
+          tr.style.height = "var(--row-height)";
+          const label = document.createElement("th");
+          label.className = "series-label";
+          label.innerText = row.series;
+          tr.appendChild(label);
+
+          for (const cell of row.stores) {
+            const td = document.createElement("td");
+            td.style.width = "var(--cell-width)";
+            td.appendChild(buildCell(cell));
+            tr.appendChild(td);
+          }
+
+          tbody.appendChild(tr);
+        }
+
+        table.appendChild(tbody);
+        stage.appendChild(table);
+        root.appendChild(stage);
+      }
+
+      async function loadMatrix() {
+        const response = await fetch("/api/matrix");
+        const data = await response.json();
+        renderMatrix(data);
+      }
+
+      async function startPolling() {
+        await loadConfigState();
+        await loadSettingsState();
+        await loadFilterSources();
+        renderMenus();
+        await loadMatrix();
+        if (pollHandle) {
+          clearInterval(pollHandle);
+        }
+        pollHandle = setInterval(loadMatrix, 500);
+
+        if (!resizeHandle) {
+          resizeHandle = () => loadMatrix();
+          window.addEventListener("resize", resizeHandle);
+          window.addEventListener("click", event => {
+            if (!event.target.closest(".menu-shell")) {
+              cancelMenus();
+            }
+          });
+        }
+      }
+    </script>
+  </head>
+  <body onload="startPolling();">
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <h1>streetmerchant</h1>
+        </div>
+        <div class="meta">
+          <div class="menu-shell">
+            <button class="menu-button" onclick="openSettings();">⚙</button>
+          </div>
+          <div class="menu-shell">
+            <button class="menu-button" onclick="restartBot();">Restart</button>
+          </div>
+          <div class="menu-shell">
+            <button class="menu-button" onclick="toggleMenu('stores');">Stores</button>
+            <div class="menu" data-menu="stores" onclick="event.stopPropagation();">
+              <div class="menu-head">
+                <div class="menu-title">
+                  <strong>Stores</strong>
+                  <span data-menu-count="stores">All selected</span>
+                </div>
+                <input class="menu-search" placeholder="Search stores" oninput="applySearch('stores', this.value);" />
+              </div>
+              <div class="menu-toolbar">
+                <button onclick="selectAll('stores', true);">All</button>
+                <button onclick="selectAll('stores', false);">None</button>
+                <button onclick="selectVisible('stores', true);">Visible</button>
+              </div>
+              <div class="menu-list" data-menu-list="stores"></div>
+              <div class="menu-foot">
+                <button onclick="cancelMenus();">Cancel</button>
+                <button onclick="saveFilters();">Apply</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-shell">
+            <button class="menu-button" onclick="toggleMenu('series');">Series</button>
+            <div class="menu" data-menu="series" onclick="event.stopPropagation();">
+              <div class="menu-head">
+                <div class="menu-title">
+                  <strong>Series</strong>
+                  <span data-menu-count="series">All selected</span>
+                </div>
+                <input class="menu-search" placeholder="Search series" oninput="applySearch('series', this.value);" />
+              </div>
+              <div class="menu-toolbar">
+                <button onclick="selectAll('series', true);">All</button>
+                <button onclick="selectAll('series', false);">None</button>
+                <button onclick="selectVisible('series', true);">Visible</button>
+              </div>
+              <div class="menu-list" data-menu-list="series"></div>
+              <div class="menu-foot">
+                <button onclick="cancelMenus();">Cancel</button>
+                <button onclick="saveFilters();">Apply</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-shell">
+            <button class="menu-button" onclick="toggleMenu('models');">Models</button>
+            <div class="menu" data-menu="models" onclick="event.stopPropagation();">
+              <div class="menu-head">
+                <div class="menu-title">
+                  <strong>Models</strong>
+                  <span data-menu-count="models">All selected</span>
+                </div>
+                <input class="menu-search" placeholder="Search models" oninput="applySearch('models', this.value);" />
+              </div>
+              <div class="menu-toolbar">
+                <button onclick="selectAll('models', true);">All</button>
+                <button onclick="selectAll('models', false);">None</button>
+                <button onclick="selectVisible('models', true);">Visible</button>
+              </div>
+              <div class="menu-list" data-menu-list="models"></div>
+              <div class="menu-foot">
+                <button onclick="cancelMenus();">Cancel</button>
+                <button onclick="saveFilters();">Apply</button>
+              </div>
+            </div>
+          </div>
+          <div class="badge" id="storesCount">0 stores</div>
+          <div class="badge" id="seriesCount">0 series</div>
+          <div class="badge" id="updatedAt">Updated --:--:--</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="legend">
+          <div class="legend-item"><span class="swatch" style="background: var(--checking);"></span> checking</div>
+          <div class="legend-item"><span class="swatch" style="background: var(--out);"></span> out of stock</div>
+          <div class="legend-item"><span class="swatch" style="background: var(--in);"></span> in stock</div>
+          <div class="legend-item"><span class="swatch" style="background: var(--idle);"></span> idle or error</div>
+          <div class="legend-item"><span class="swatch" style="background: var(--unsupported);"></span> unsupported</div>
+        </div>
+
+        <div class="matrix-wrap" id="matrix"></div>
+      </section>
+
+      <div class="footer">
+        <div>Cells open the latest product or cart URL when one is available.</div>
+        <div class="action-status" id="actionStatus">Refresh cadence: every second.</div>
+      </div>
+    </div>
+    <div class="settings-overlay" id="settingsOverlay" onclick="closeSettings();">
+      <div class="settings-modal" onclick="event.stopPropagation();">
+        <div class="settings-header">
+          <strong>Environment Settings</strong>
+          <span>Edit the active dotenv file used by the running app.</span>
+        </div>
+        <div class="settings-path" id="settingsPath"></div>
+        <textarea class="settings-editor" id="settingsEditor" spellcheck="false"></textarea>
+        <div class="settings-footer">
+          <div class="settings-note">File changes are persisted. Some settings may need a restart to fully take effect.</div>
+          <div class="settings-actions">
+            <button onclick="closeSettings();">Cancel</button>
+            <button onclick="saveSettings();">Save File</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

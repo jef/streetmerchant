@@ -11,6 +11,13 @@ import {
   storeList,
   updateStores,
 } from '../store/model';
+import {getMatrixStatus, initializeStatusMap} from './status';
+import {
+  readSettingsFile,
+  writeSettingsRaw,
+  writeSettingsValues,
+} from './settings';
+import {restartBot} from '../runtime-control';
 
 const approot = join(__dirname, '../../../');
 const webroot = join(approot, './web');
@@ -112,6 +119,7 @@ function handleAPI(
           try {
             setConfig(JSON.parse(data.join('')));
             updateStores();
+            initializeStatusMap();
           } catch {
             logger.warn('Could not setup config');
           }
@@ -137,6 +145,70 @@ function handleAPI(
       return;
     case 'models':
       sendJSON(response, getAllModels());
+      return;
+    case 'matrix':
+      sendJSON(response, getMatrixStatus());
+      return;
+    case 'control':
+      if (urlComponents[2] === 'restart' && request.method === 'POST') {
+        restartBot()
+          .then(() => sendJSON(response, {ok: true}))
+          .catch((error: unknown) => {
+            logger.warn(`Could not restart bot: ${(error as Error).message}`);
+            sendError(response, 'Could not restart bot', 500);
+          });
+        return;
+      }
+
+      sendError(response, 'No control route found for path', 400);
+      return;
+    case 'settings':
+      if (request.method === 'PUT') {
+        const data: string[] = [];
+        request.on('data', chunk => {
+          data.push(chunk);
+        });
+        request.on('end', () => {
+          try {
+            const payload = JSON.parse(data.join(''));
+            const result =
+              typeof payload.raw === 'string'
+                ? writeSettingsRaw(payload.raw)
+                : writeSettingsValues(payload.values ?? {});
+
+            if (result.values.LOOKUP_THREADS !== undefined) {
+              setConfig({
+                page: {
+                  ...config.page,
+                  lookupThreads: Number(result.values.LOOKUP_THREADS) || 1,
+                },
+              });
+            }
+
+            if (result.values.RANDOMIZE_LOOKUP_ORDER !== undefined) {
+              setConfig({
+                page: {
+                  ...config.page,
+                  randomizeLookupOrder:
+                    result.values.RANDOMIZE_LOOKUP_ORDER === 'true',
+                },
+              });
+            }
+
+            sendJSON(response, result);
+            return;
+          } catch (error: unknown) {
+            logger.warn(
+              `Could not update settings: ${(error as Error).message}`
+            );
+            sendError(response, 'Could not update settings', 400);
+            return;
+          }
+        });
+        return;
+      }
+
+      sendJSON(response, readSettingsFile());
       return;
     case 'screenshots':
       if (urlComponents.length >= 3) {
@@ -193,6 +265,7 @@ let server: Server | undefined;
 export async function startAPIServer() {
   await stopAPIServer();
   if (process.env.WEB_PORT) {
+    initializeStatusMap();
     server = createServer(requestListener);
     server.listen(Number(process.env.WEB_PORT));
   }

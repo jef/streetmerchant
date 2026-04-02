@@ -9,8 +9,8 @@ export const NvidiaDE: Store = {
     },
     outOfStock: {
       container: 'span.buy-link-atc',
-      text: ['DERZEIT NICHT VERFÜGBAR'],
-    },    
+      text: ['DERZEIT NICHT VERFÃƒÅ“GBAR'],
+    },
   },
   links: [
     {
@@ -59,13 +59,13 @@ export const NvidiaDE: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5080',
-      url: 'https://marketplace.nvidia.com/de-de/consumer/graphics-cards/?locale=de-de&page=1&limit=12&gpu=RTX%205080&manufacturer=NVIDIA',    
+      url: 'https://marketplace.nvidia.com/de-de/consumer/graphics-cards/?locale=de-de&page=1&limit=12&gpu=RTX%205080&manufacturer=NVIDIA',
     },
     {
       brand: 'nvidia',
       model: 'founders edition',
       series: '5090',
-      url: 'https://marketplace.nvidia.com/de-de/consumer/graphics-cards/?locale=de-de&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',    
+      url: 'https://marketplace.nvidia.com/de-de/consumer/graphics-cards/?locale=de-de&page=1&limit=12&gpu=RTX%205090&manufacturer=NVIDIA',
     },
   ],
   name: 'nvidia-de',
@@ -76,6 +76,6 @@ export const NvidiaDE: Store = {
       brand: 'nvidia',
       model: 'founders edition',
       series: '',
-      url: '',    
+      url: '',
     },
 */
