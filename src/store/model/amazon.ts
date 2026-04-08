@@ -1131,6 +1131,14 @@ export const Amazon: Store = {
       series: '5090',
       url: 'https://www.amazon.com/dp/B0DS2Z8854',
     },
+    {
+      brand: 'lenovo',
+      cartUrl:
+        'https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=B0FYR2V7ZB&Quantity.1=1',
+      model: 'legion go 2 2tb',
+      series: 'legiongo2',
+      url: 'https://www.amazon.com/dp/B0FYR2V7ZB',
+    },
   ],
   name: 'amazon',
   country: 'US',

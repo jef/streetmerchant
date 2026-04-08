@@ -751,6 +751,12 @@ export const BAndH: Store = {
       series: '5090',
       url: 'https://www.bhphotovideo.com/c/product/1875717-REG/gigabyte_gv_n5090aorus_m_32gd_geforce_rtx_5090_master.html',
     },
+    {
+      brand: 'lenovo',
+      model: 'legion go 2 2tb',
+      series: 'legiongo2',
+      url: 'https://www.bhphotovideo.com/c/product/1920305-REG/lenovo_83n0000aus_legion_go_2_handheld.html',
+    },
   ],
   name: 'bandh',
   country: 'US',
