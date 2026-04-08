@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.13.0](https://github.com/jef/streetmerchant/compare/v3.12.0...v3.13.0) (2026-04-08)
+
+
+### Features
+
+* Better Web GUI with bot controls ([#3250](https://github.com/jef/streetmerchant/issues/3250)) ([2d59237](https://github.com/jef/streetmerchant/commit/2d592371d971271e37f6ac0df76f5f8ad3b72d1f))
+
 ## [3.12.0](https://github.com/jef/streetmerchant/compare/v3.11.0...v3.12.0) (2025-07-20)
 
 
