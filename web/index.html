@@ -53,6 +53,7 @@
         display: grid;
         grid-template-rows: auto auto 1fr auto;
         gap: 12px;
+        min-width: 0;
       }
 
       .hero {
@@ -310,6 +311,7 @@
         border-radius: 20px;
         box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
         min-height: 0;
+        min-width: 0;
         display: grid;
         grid-template-rows: auto 1fr;
       }
@@ -337,79 +339,80 @@
       }
 
       .matrix-wrap {
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         padding: 12px;
         min-height: 0;
+        min-width: 0;
       }
 
       .matrix-stage {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
+        min-width: 0;
+        display: grid;
+        gap: 12px;
       }
 
-      table {
-        width: 100%;
-        height: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-        table-layout: fixed;
-        background: rgba(255, 255, 255, 0.01);
+      .series-card {
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.018);
+        min-width: 0;
       }
 
-      thead th {
-        position: sticky;
-        top: 0;
-        z-index: 2;
-        background: rgba(9, 11, 16, 0.98);
-        border-bottom: 1px solid var(--line);
+      .series-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       }
 
-      th,
-      td {
-        padding: 10px 8px;
-        border-right: 1px solid rgba(255, 255, 255, 0.04);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        text-align: center;
-      }
-
-      th:first-child,
-      td:first-child {
-        position: sticky;
-        left: 0;
-        z-index: 1;
-        background: rgba(9, 11, 16, 0.98);
-      }
-
-      th:first-child {
-        z-index: 3;
-      }
-
-      .corner {
-        width: var(--label-col-width, 150px);
-        min-width: var(--label-col-width, 150px);
-        text-align: left;
-        font-size: var(--header-font-size, 0.82rem);
-        color: var(--muted);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .store-head {
-        text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-        font-size: var(--header-font-size, 0.95rem);
-      }
-
-      .series-label {
-        text-align: left;
+      .series-name {
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 0.03em;
-        width: var(--label-col-width, 150px);
-        min-width: var(--label-col-width, 150px);
         font-size: var(--series-font-size, 0.95rem);
+      }
+
+      .series-count {
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+
+      .store-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--cell-min-width, 138px)), 1fr));
+        gap: 8px;
+        padding: 10px;
+        min-width: 0;
+      }
+
+      .store-tile {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 6px;
+        min-width: 0;
+        min-height: var(--cell-height, 86px);
+        border: 1px solid rgba(255, 255, 255, 0.045);
+        border-radius: 8px;
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.018);
+      }
+
+      .store-name {
+        min-width: 0;
+        color: var(--muted);
+        font-size: var(--header-font-size, 0.76rem);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1.15;
+        text-transform: uppercase;
+        overflow-wrap: anywhere;
       }
 
       .cell {
@@ -417,8 +420,9 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        min-height: 100%;
-        border-radius: 10px;
+        min-width: 0;
+        min-height: 52px;
+        border-radius: 8px;
         padding: 6px 5px;
         text-decoration: none;
         font-weight: 700;
@@ -465,17 +469,22 @@
         gap: 3px;
         align-items: center;
         justify-content: center;
+        min-width: 0;
       }
 
       .cell-text {
         line-height: 1;
         font-size: var(--cell-font-size, 0.95rem);
+        overflow-wrap: anywhere;
+        text-align: center;
       }
 
       .cell-meta {
         font-size: var(--meta-font-size, 0.68rem);
         font-weight: 500;
         color: var(--muted);
+        text-align: center;
+        overflow-wrap: anywhere;
       }
 
       .dot {
@@ -873,32 +882,21 @@
         }
 
         const width = matrix.clientWidth || 1200;
-        const height = matrix.clientHeight || 700;
-        const safeStoreCount = Math.max(storeCount, 1);
         const safeSeriesCount = Math.max(seriesCount, 1);
 
-        const labelColWidth = Math.max(92, Math.min(180, Math.floor(width * 0.12)));
-        const cellWidth = Math.max(
-          78,
-          Math.floor((width - labelColWidth - 8) / safeStoreCount)
-        );
-        const rowHeight = Math.max(
-          40,
-          Math.floor((height - 58) / (safeSeriesCount + 1))
-        );
-
-        const headerFontSize = Math.max(10, Math.min(20, Math.floor(cellWidth * 0.16)));
-        const seriesFontSize = Math.max(13, Math.min(24, Math.floor(rowHeight * 0.36)));
-        const cellFontSize = Math.max(10, Math.min(22, Math.floor(Math.min(cellWidth, rowHeight) * 0.18)));
+        const cellMinWidth = Math.max(112, Math.min(156, Math.floor(width / 8)));
+        const cellHeight = Math.max(78, Math.min(112, Math.floor(180 / safeSeriesCount)));
+        const headerFontSize = Math.max(10, Math.min(13, Math.floor(cellMinWidth * 0.08)));
+        const seriesFontSize = Math.max(13, Math.min(20, Math.floor(width * 0.018)));
+        const cellFontSize = Math.max(11, Math.min(15, Math.floor(cellMinWidth * 0.095)));
         const metaFontSize = Math.max(0, Math.min(12, Math.floor(cellFontSize * 0.62)));
 
-        matrix.style.setProperty("--label-col-width", `${labelColWidth}px`);
+        matrix.style.setProperty("--cell-min-width", `${cellMinWidth}px`);
+        matrix.style.setProperty("--cell-height", `${cellHeight}px`);
         matrix.style.setProperty("--header-font-size", `${headerFontSize}px`);
         matrix.style.setProperty("--series-font-size", `${seriesFontSize}px`);
         matrix.style.setProperty("--cell-font-size", `${cellFontSize}px`);
         matrix.style.setProperty("--meta-font-size", `${metaFontSize}px`);
-        matrix.style.setProperty("--row-height", `${rowHeight}px`);
-        matrix.style.setProperty("--cell-width", `${cellWidth}px`);
       }
 
       function renderMatrix(data) {
@@ -920,48 +918,43 @@
         stage.className = "matrix-stage";
         applyMatrixSizing(data.stores.length, data.series.length);
 
-        const table = document.createElement("table");
-        const thead = document.createElement("thead");
-        const headRow = document.createElement("tr");
-
-        const corner = document.createElement("th");
-        corner.className = "corner";
-        corner.innerText = "Series \\ Store";
-        headRow.appendChild(corner);
-
-        for (const store of data.stores) {
-          const th = document.createElement("th");
-          th.className = "store-head";
-          th.innerText = store;
-          th.style.width = "var(--cell-width)";
-          headRow.appendChild(th);
-        }
-
-        thead.appendChild(headRow);
-        table.appendChild(thead);
-
-        const tbody = document.createElement("tbody");
-
         for (const row of data.cells) {
-          const tr = document.createElement("tr");
-          tr.style.height = "var(--row-height)";
-          const label = document.createElement("th");
-          label.className = "series-label";
-          label.innerText = row.series;
-          tr.appendChild(label);
+          const card = document.createElement("section");
+          card.className = "series-card";
 
-          for (const cell of row.stores) {
-            const td = document.createElement("td");
-            td.style.width = "var(--cell-width)";
-            td.appendChild(buildCell(cell));
-            tr.appendChild(td);
+          const heading = document.createElement("div");
+          heading.className = "series-heading";
+
+          const label = document.createElement("div");
+          label.className = "series-name";
+          label.innerText = row.series;
+          heading.appendChild(label);
+
+          const count = document.createElement("div");
+          count.className = "series-count";
+          count.innerText = `${row.stores.length} stores`;
+          heading.appendChild(count);
+
+          const grid = document.createElement("div");
+          grid.className = "store-grid";
+
+          for (const [index, cell] of row.stores.entries()) {
+            const tile = document.createElement("div");
+            tile.className = "store-tile";
+
+            const storeName = document.createElement("div");
+            storeName.className = "store-name";
+            storeName.innerText = data.stores[index] ?? "";
+
+            tile.appendChild(storeName);
+            tile.appendChild(buildCell(cell));
+            grid.appendChild(tile);
           }
 
-          tbody.appendChild(tr);
+          card.appendChild(heading);
+          card.appendChild(grid);
+          stage.appendChild(card);
         }
-
-        table.appendChild(tbody);
-        stage.appendChild(table);
         root.appendChild(stage);
       }
 
